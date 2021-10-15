@@ -1,2 +1,3 @@
 # wcmp2
-WIS Core Metadata Profile 2.*
+
+WMO Core Metadata Profile 2
