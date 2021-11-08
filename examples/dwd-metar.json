@@ -1,0 +1,147 @@
+{
+    "id": "urn:x-wmo:md:int.wmo.wis::SADL35EDZO",
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                47.2747,
+                5.865
+            ],
+            [
+                47.2747,
+                15.0338
+            ],
+            [
+                55.0565,
+                15.0338
+            ],
+            [
+                55.0565,
+                5.865
+            ],
+            [
+                47.2747,
+                5.865
+            ]
+        ]
+    },
+    "properties": {
+        "recordCreated": "2017-05-26T06:44:07Z",
+        "recordUpdated": "2021-08-23T12:30:00Z",
+        "type": "dataset (http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ScopeCode)",
+        "title": "GTS Bulletin: Meteorological Aviation Routine Weather Report (METAR) Germany, surface observation airport",
+        "description": "(Should be changed to human description)...The SADL35 TTAAii Data Designators decode as: T1 (S): Surface data T1T2 (SA): Aviation routine reports A1A2 (DL): Germany (The bulletin collects reports from stations: EDHA;EDHI;HAMBURG-FINKENWERDER ;EDHK;KIEL-HOLTENAU ;EDJA;MEMMINGEN ALLGAU ;EDMO;OBERPFAFFENHOFEN ;EDOP;SCHWERIN PARCHIM ;EDTD;DONAUESCHINGEN-VILLINGEN ;EDTL;LAHR ;EDTY;SCHWAEBISCH HALL ;EDVE;BRAUNSCHWEIG WOLFSBURG ;EDXW;WESTERLAND SYLT ;EDZO;)",
+        "keywords": [
+            "ceiling",
+            "cloud",
+            "dewpoint",
+            "pressure",
+            "temperature",
+            "visibility",
+            "weather",
+            "wind"
+        ],
+        "keywordsCodespace": "http://codes.wmo.int/306/4678",
+        "language": "en",
+        "externalID": "urn:x-wmo:md:int.wmo.wis::SADL35EDZO",
+        "created": "2013-07-01T00:00:00Z",
+        "updated": "2017-05-26T00:00:00Z",
+        "publisher": [
+            {
+                "individial-name": "Kai-Thorsten Wirt",
+                "organizationName": "Deutscher Wetterdienst",
+                "positionName": "RTH FOCAL POINT",
+                "contactInfo": [
+                    {
+                        "phone": "+49 (0) 69 8062-2546"
+                    }
+                ],
+                "address": [
+                    {
+                        "delivery-point": "Frankfurter Stra\u00c3\u0178e 135",
+                        "city": "Offenbach",
+                        "postal-code": "63067",
+                        "country": "Germany"
+                    }
+                ],
+                "onlineResource": "http://www.dwd.de"
+            }
+        ],
+        "themes": [
+            {
+                "concepts": [
+                    "meteorology",
+                    "weatherObservations"
+                ],
+                "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_theme"
+            },
+            {
+                "concepts": [
+                    "EDHA",
+                    "EDHI",
+                    "EDHK",
+                    "EDJA",
+                    "EDMO",
+                    "EDOP",
+                    "EDTD",
+                    "EDTL",
+                    "EDTY",
+                    "EDVE",
+                    "EDXW",
+                    "EDZO"
+                ],
+                "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_place"
+            },
+            {
+                "concepts": [
+                    "GlobalExchange"
+                ],
+                "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_dataCentre"
+            }
+        ],
+        "formats": [
+            "http://codes.wmo.int/wmdr/DataFormat/_FM-15-metar"
+        ],
+        "contactPoint": "gisc@dwd.de",
+        "license": "http://codes.wmo.int/wmdr/DataPolicy/_WMOOther",
+        "rights": "access",
+        "extent": [
+            {
+                "spatial": {
+                    "bbox": [
+                        5.865,
+                        47.2747,
+                        15.0338,
+                        55.0565
+                    ],
+                    "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+                },
+                "temporal": {
+                    "interval": [
+                        [
+                            "2013-07-01Z",
+                            null
+                        ]
+                    ],
+                    "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+                }
+            }
+        ],
+        "association": [
+            {
+                "protocol": "https",
+                "directDownloadURL": "false",
+                "title": "WMO Information System Metadata Catalogue GISC Offenbach, view Metadata and download data",
+                "href": "https://gisc.dwd.de/wisportal/#SearchPlace:q?pid=urn:x-wmo:md:int.wmo.wis::SADL35EDZO"
+            },
+            {
+                "protocol": "amqps",
+                "title": "WIS Message System GISC Offenbach",
+                "broker": "https://oflkd013.dwd.de",
+                "exchange": "wisof",
+                "topic/routing_key": "v03/wis/de/offenbach/surface/aviation/metar/de"
+            }
+        ]
+    }
+}

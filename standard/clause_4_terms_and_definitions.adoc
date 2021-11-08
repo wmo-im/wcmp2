@@ -1,0 +1,114 @@
+== Terms and definitions
+
+This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this Standard and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+term name::
+text of the definition
+
+term name::
+text of the definition
+
+=== Abbreviated terms
+
+.Symbols and abbreviated terms
+|===
+|Abbreviation |Term
+
+|AMQP
+|Advanced Message Queuing Protocol
+
+|API
+|Application Programming Interface
+
+|DCAT
+|Data Catalog Vocabulary
+
+|DCPC
+|Data Collection and Production Centres
+
+|GIS
+|Geographic Information System
+
+|GISC
+|Global Information System Centre
+
+|GTS
+|Global Telecommunication System
+
+|HTML
+|Hypertext Markup Language
+
+|HTTP
+|Hypertext Transfer Protocol
+
+|HTTPS
+|Hypertext Transfer Protocol Secure
+
+|ISO
+|Internatioal Organization for Standardization
+
+|JSON
+|JavaScript Object Notation
+
+|MQTT
+|Message Queuing Telemetry Transport
+
+|NC
+|National Centre
+
+|NWP
+|Numerical Weather Prediction
+
+|OAI-PMH
+|Open Archives Initiative Protocol for Metadata Harvesting
+
+|OARec
+|OGC API - Records
+
+|OGC
+|Open Geospatial Consortium
+
+|REST
+|Representational State Transfer
+
+|ROA
+|Resource-oriented architecture
+
+|S3
+|Simple Storage Service
+
+|SEO
+|Search engine optimization
+
+|SOA
+|Service-oriented architecture
+
+|SRU
+|Search/Retrieval via URL
+
+|STAC
+|SpatioTemporal Asset Catalog
+
+|URL
+|Uniform Resource Locator
+
+|W3C
+|World Wide Web Consortium
+
+|WCMP
+|WMO Core Metadata Profile
+
+|WIS
+|WMO Information System
+
+|WMO
+|World Meteorological Organization
+
+|XML
+|eXtensible Markup Language
+
+|===

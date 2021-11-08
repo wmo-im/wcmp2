@@ -1,0 +1,80 @@
+== Standards
+
+The standards put forth in this pilot are a clean break from WIS 1.0 standards (OAI-PMH, SRU, ISO 19115/19139)
+in order to lower the barrier to entry/implementation for a vast range of users/actors.  The WIS 1.0 standards
+for search and metadata, applying a Service-Oriented Architecture (SOA), while applicable for their purpose at
+the time, present the following challenges in current web architecture:
+
+* complex machinery and service provisioning is required for crawling/traversing resources
+* challenging for web developers to implement
+* challenging for mainstream Web integration
+
+Current web architecture is primarily rooted in Representational State Transfer (REST) footnote:[https://datatracker.ietf.org/doc/html/rfc7231]
+which has the following features:
+
+* HTTP verbs (GET/PUT/POST/DELETE/OPTIONS/PATCH)
+* HTTP status codes (200, 201, 404, etc.)
+* URIs to identify resources
+* Content negotiation (media types)
+* Stateless
+
+REST puts a focus on Resource Oriented Architecture (ROA).  In addition, resources can have numerous representations
+(raw data, webpage, etc.)depending.
+
+The following standards are well positioned to meet WIS 2.0 principles, consistent with current web architecture
+and RESTful design patterns.
+
+=== Data
+
+Although this pilot is primarily focused on discovery metadata, it is important to outline core baseline
+standards that are used and / or extended throughout this pilot.
+
+==== GeoJSON
+
+GeoJSON (RFC 7946 footnote:[https://datatracker.ietf.org/doc/html/rfc7946]) is a format for
+encoding a variety of geographic data structures footnote:[https://geojson.org].  In the
+geospatial community, GeoJSON typically represents vector (or feature) data.  GeoJSON is a dialect
+of JSON footnote:[https://www.json.org].
+
+GeoJSON is an extremely popular and widely used format in GIS appliations, web applications,
+mobile apps.  GeoJSON also serves as a baseline for the development of downstream models and
+extensions, as described below.
+
+=== Metadata
+
+==== STAC (Catalog, Collection, Item)
+
+The SpatioTemporal Asset Catalog (STAC) footnote:[https://stacspec.org] specification provides a common language to describe a range of geospatial information, so it can more easily be indexed and discovered. A 'spatiotemporal asset' is any file that represents information about the earth captured in a certain space and time. 
+
+The core STAC specification provides the following metadata models:
+
+* Item: the lowest granularity of STAC metadata (we can imagine metadata about a single file)
+* Catalog: a list of Items or child Catalogs
+* Collection: collection level metadata
+
+=== APIs
+
+==== OpenAPI
+
+The OpenAPI Specification (OAS) defines a standard, programming language-agnostic interface description for HTTP APIs, which allows both humans and computers to discover and understand the capabilities of a service without requiring access to source code, additional documentation, or inspection of network traffic. When properly defined via OpenAPI, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. Similar to what interface descriptions have done for lower-level programming, the OpenAPI Specification removes guesswork in calling a service footnote:[https://www.openapis.org].
+
+==== OGC API - Records
+
+OGC API - Records footnote:[https://ogcapi.ogc.org/records] (OARec) offers the capability to create, modify, and query metadata on the Web. The draft specification enables the discovery of geospatial resources by standardizing the way collections of descriptive information about the resources (metadata) are exposed. The draft specification also enables the discovery and sharing of related resources that may be referenced from geospatial resources or their metadata by standardizing the way all kinds of records are exposed and managed.
+
+Consistent with all OGC API standards, OARec will provide core and extension functionality, to allow for modular specification development.
+
+The primary unit of information in OARec is the Record, which is based on GeoJSON and provides a set of properties informed by catalogue schemas in earlier OGC CSW specifications and DCAT.  The OARec Record is extensible and can be profiled.
+
+==== STAC API
+
+STAC also provides an API specification that enables search of STAC items via OpenAPI, following OGC API - Features.
+
+
+=== Considerations
+
+- WMO is conservative - it would be easier to adopt if STAC is endorsed as an OGC Community Standard
+- WMO likes stable standards; need to think about how we would manage evolution of the spec
+- WMO would likely snapshot a version of the STAC standard
+
+Recommendation: mint versions of OARec and STAC and their relevant extensions for the WIS 2.0 architecture

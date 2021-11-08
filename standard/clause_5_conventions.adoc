@@ -1,0 +1,18 @@
+== Conventions
+This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+
+=== Identifiers
+The normative provisions in this Standard are denoted by the URI
+
+http://wis.wmo.int/spec/wcmp/2.0
+
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+
+=== Examples
+
+Examples provided in this specification are encoded as GeoJSON.
+
+=== Schema
+
+OpenAPI 3.0 Schema objects are used throughout this specificiation to define the structure of resources. These schema are typically represented using YAML encoding for the ease of the user.
+

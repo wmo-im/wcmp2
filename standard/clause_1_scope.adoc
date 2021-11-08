@@ -1,0 +1,19 @@
+== Scope
+
+This document defines the content, structure, and encoding of discovery metadata published
+as part of a WIS 2.0 catalogue.
+
+The metadata standard defined herein is an informal extension of the International Standard
+OGC API - Records - Part 1: Core.  This metadata standard shall be referred to as the WMO
+Core Metadata Profile (WCMP).
+
+WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core,
+and can represent a number of different resources, including:
+
+* data (NWP model output, observation collections, products)
+* data APIs and data reduction services
+* processes (analytics, etc.)
+
+This specification defines the conformance requirements for the WMO Core Metadata
+Profile.  Annex A defines the abstract test suite. Annex B provides normative inforamtion
+on codelists.
