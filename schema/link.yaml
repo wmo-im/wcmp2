@@ -1,21 +1,17 @@
-{
-    "allOf": [
-        {
-            "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml"
-        }
-    ],
-    "properties": {
-        "vhost": {
-            "type": "string",
-            "description": "TODO"
-        },
-        "exchange": {
-            "type": "string",
-            "description": "TODO"
-        },
-        "wmo:topic": {
-            "type": "string",
-            "description": "TODO"
-        }
-    }
-}
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml
+title: WCMP2 link object definition
+description: WCMP2 link object definition
+
+allOf:
+  - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+properties:
+  vhost:
+    type: string
+    description: TODO
+  exchange:
+    type: string
+    description: TODO
+  wmo:topic:
+    type: string
+    description: TODO
