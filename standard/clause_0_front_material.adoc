@@ -87,12 +87,12 @@ Common meteorological data types include:
 
 
 
-[big]*ii.    Keywords*
+[big]*v.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
 wmo, wis 2.0, weather, climate, water, metadata, discovery, search
 
-[big]*iv.    Security Considerations*
+[big]*vi.    Security Considerations*
 
 No security considerations have been made for this Standard.
