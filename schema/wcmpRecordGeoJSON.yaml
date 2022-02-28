@@ -1,5 +1,5 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecord.yaml
+$id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml
 title: WCMP2 discovery metadata record definition
 description: WCMP2 discovery metadata record definition
 
