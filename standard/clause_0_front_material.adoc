@@ -11,7 +11,7 @@ WCMP documents provide descriptive information for discovery of WMO resources.  
 limited to, data (NWP models, observations, forecasts and warnings, etc.), services/APIs, and processes.
 
 WCMP documents shall be encoded in GeoJSON (RFC 7946 footnote:[https://datatracker.ietf.org/doc/html/rfc7946]) as
-defined this specification, and shall be made available as HTTP crawlable files, or via API provisionig as defined
+defined this specification, and shall be made available as HTTP crawlable files, or via API provisioning as defined
 by OGC API - Records.
 
 Weather/climate/water data is by nature geospatial, and temporal.  The W3C Data on the Web Best
