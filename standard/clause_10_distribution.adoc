@@ -1,6 +1,11 @@
 == Data Distribution
 
-Additionally, a record may contain both *links* and *properties.associations* properties.  The following provides an example of using associations for related resources of a record, as both traditional link relations as well as API resources via URI templates.
+The distribution part of ISO19115 provides information about where users can get data, the formats available, and the services for downloading/ordering the data.
+The distribution part of OGC API REC is similar and is defined in the associations using the *properties.associations* property.
+
+An association can be a link relation or an API resource using a URI template.
+
+The following provides an example of using associations for related resources of a record, as both traditional link relations as well as API resources via URI templates.
 
 ==== Example of the property associations title expressed in JSON
 
@@ -57,4 +62,115 @@ Additionally, a record may contain both *links* and *properties.associations* pr
  }
  ...
 }
+....
+
+
+== Data Distribution for Collection discovery and presentation
+
+The typical user journey for a WMO WIS2 user would be to go to the WIS discovery web catalogue and search for a "dataset", some type of data then find them and access the corresponding cosen service providing access to the data. It could be the WIS2 "datalake" containing all the datasets under the WMO Core policy or a service provided a given organisation for the rest of the collections (datasets). One discovery record ("dataset") can be made accessible from different services and the user should make an educated choice based on some usual criteria:
+
+* service information: type of service, periodicity, .....
+* format
+
+This information is not present in the metadata and it should possible to provide it.
+
+In the same way there are some templated associated it is proposed to add as optional information and "information" property at the service level.
+This information would contain some descriptive information related to the service and information about the available datasets formats:
+
+....
+{
+            "rel": "item",
+            "type": "image/png",
+            "title": "Eumetview",
+            "href": "https://geo.woudc.org/ows?service=WMS&version=1.3.0&request=GetMap&crs={crs}&bbox={bbox}&layers=stations&width={width}&height={height}&format=image/png",
+            "templated": true,
+            "variables": {
+               "crs": {
+                  "description": "...",
+                  "type": "string",
+                  "enum": [ "EPSG:4326", "EPSG:3857" ]
+               },
+               "bbox": {
+                  "description": "...",
+                  "type": "array",
+                  "items": {
+                     "type": "number",
+                     "format": "double"
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+               },
+               "width": {
+                  "description": "...",
+                  "type": "number",
+                  "format": "integer",
+                  "minimum": 600,
+                  "maximum": 5000
+               },
+               "height": {
+                  "description": "...",
+                  "type": "number",
+                  "format": "integer",
+                  "minimum": 600,
+                  "maximum": 5000
+               }
+            }
+},
+{
+    "rel": "service",
+    "type": "datastore",
+    "title": "EUMETSAT Datastore",
+    "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
+    "information" : { 
+    	"formats": [
+    		"Native" : { "description"      : "This is sent in a compressed Submission Information Package (SIP) by default.", 
+    			        "typical filename" : "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+    			        "typical filesize" : "60 MB",
+    			        "number of files"  : "288 per day",
+    			        "documentation"    :   {
+												 "rel": "alternate",
+												 "type": "text/html",
+												 "title": "SIP documentation and tools",
+												 "href": "https://www.eumetsat.int/formats#SIP"
+												}
+    		          }
+    	]
+    }	
+},
+{
+    "rel": "service",
+    "type": "eumetcast",
+    "title": "Subscribe to this product",
+    "href": "https://eoportal.eumetsat.int/userMgmt/protected/welcome.faces",
+    "information" : {
+    	"channel" : ["EUMETSAT Data Channel 5" ],
+    	"formats" : [
+    		"Native" : { "description"      : "This is sent in a compressed Submission Information Package (SIP) by default.", 
+    			        "typical filename" : "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+    			        "typical filesize" : "60 MB",
+    			        "number of files"  : "288 per day",
+    			        "documentation"    :   {
+												 "rel": "alternate",
+												 "type": "text/html",
+												 "title": "This document as HTML",
+												 "href": "https://woudc.org/data/dataset_info.php?id=totalozone"
+												}
+    		},
+    	    "links"   : [
+    			{
+						 "rel": "alternate",
+						 "type": "text/html",
+						 "title": "EUMETCast Information",
+						 "href": "https://www.eumetsat.int/eumetcast"
+				},
+				{
+						 "rel": "alternate",
+						 "type": "text/html",
+						 "title": "Reception Station Recommendations",
+						 "href": "https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/695763106/Reception+Station+Recommendations"
+				}
+			]
+    	]
+    }
+}	
 ....
