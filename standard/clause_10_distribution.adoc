@@ -67,15 +67,15 @@ The following provides an example of using associations for related resources of
 
 == Data Distribution for Collection discovery and presentation
 
-The typical user journey for a WMO WIS2 user would be to go to the WIS discovery web catalogue and search for a "dataset", some type of data then find them and access the corresponding cosen service providing access to the data. It could be the WIS2 "datalake" containing all the datasets under the WMO Core policy or a service provided a given organisation for the rest of the collections (datasets). One discovery record ("dataset") can be made accessible from different services and the user should make an educated choice based on some usual criteria:
+The typical user journey for a WMO WIS2 user would be to go to the WIS discovery web catalogue and search for a "dataset" or some type of data then find them and access the corresponding chosen service providing access to the data. It could be the WIS2 "datalake" containing all the datasets under the WMO Core policy or a service provided by a given organisation for other collections (datasets) as WMO Core/Recommended or other. One discovery record ("dataset") can be made accessible from different services and the user should make an educated choice to get the data based on some usual criteria:
 
 * service information: type of service, periodicity, .....
 * format
 
 This information is not present in the metadata and it should possible to provide it.
 
-In the same way there are some templated associated it is proposed to add as optional information and "information" property at the service level.
-This information would contain some descriptive information related to the service and information about the available datasets formats:
+In the same way that there are some templated URL associated, it is proposed to add as optional information an "information" property at the service level.
+This information would contain some descriptive information related to the service and information about the available datasets formats. Below is an example for some EUMETSAT services.
 
 ....
 {
@@ -128,11 +128,11 @@ This information would contain some descriptive information related to the servi
     			        "typical filesize" : "60 MB",
     			        "number of files"  : "288 per day",
     			        "documentation"    :   {
-												 "rel": "alternate",
-												 "type": "text/html",
-												 "title": "SIP documentation and tools",
-												 "href": "https://www.eumetsat.int/formats#SIP"
-												}
+							   "rel": "alternate",
+							   "type": "text/html",
+							   "title": "SIP documentation and tools",
+							   "href": "https://www.eumetsat.int/formats#SIP"
+							}
     		          }
     	]
     }	
@@ -150,25 +150,25 @@ This information would contain some descriptive information related to the servi
     			        "typical filesize" : "60 MB",
     			        "number of files"  : "288 per day",
     			        "documentation"    :   {
-												 "rel": "alternate",
-												 "type": "text/html",
-												 "title": "This document as HTML",
-												 "href": "https://woudc.org/data/dataset_info.php?id=totalozone"
-												}
+							  "rel": "alternate",
+							  "type": "text/html",
+							  "title": "This document as HTML",
+							  "href": "https://woudc.org/data/dataset_info.php?id=totalozone"
+							}
     		},
-    	    "links"   : [
-    			{
-						 "rel": "alternate",
-						 "type": "text/html",
-						 "title": "EUMETCast Information",
-						 "href": "https://www.eumetsat.int/eumetcast"
-				},
-				{
-						 "rel": "alternate",
-						 "type": "text/html",
-						 "title": "Reception Station Recommendations",
-						 "href": "https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/695763106/Reception+Station+Recommendations"
-				}
+    	 "links"   : [
+    			    {
+				"rel": "alternate",
+				"type": "text/html",
+				"title": "EUMETCast Information",
+				"href": "https://www.eumetsat.int/eumetcast"
+			     },
+			     {
+				"rel": "alternate",
+				"type": "text/html",
+				"title": "Reception Station Recommendations",
+				"href": "https://eumetsatspace.atlassian.net/wiki/spaces/DSEC/pages/695763106/Reception+Station+Recommendations"
+			     }
 			]
     	]
     }
