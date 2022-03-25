@@ -152,8 +152,8 @@ This information would contain some descriptive information related to the servi
     			        "documentation"    :   {
 							  "rel": "alternate",
 							  "type": "text/html",
-							  "title": "This document as HTML",
-							  "href": "https://woudc.org/data/dataset_info.php?id=totalozone"
+							  "title": "MSG Native format documentation",
+							  "href": "https://www.eumetsat.int/media/8295"
 							}
     		},
     	 "links"   : [
