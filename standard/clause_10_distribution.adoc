@@ -195,6 +195,7 @@ There is a need for defining additional associations.
 The Pub/Sub MQTT based WIS2 service needs to be introduced and templated:
 
 TODO add a potential template as needed.
+Also add information regarding the product production frequency.
 ....
 {
       "protocol": "mqtt",
