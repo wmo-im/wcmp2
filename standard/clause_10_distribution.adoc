@@ -1,6 +1,6 @@
 == Data Distribution
 
-The distribution part of ISO19115 provides information about where users can get data, the formats available, and the services for downloading/ordering the data.
+The distribution part of ISO19115 provides information regarding how to access the data: Information related to the services for downloading/ordering the data is available, in addition there is some information related to the formats available and associated data access information.
 The distribution part of OGC API REC is similar and is defined in the associations using the *properties.associations* property.
 
 An association can be a link relation or an API resource using a URI template.
