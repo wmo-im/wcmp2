@@ -16,7 +16,10 @@ All requirements and conformance tests that appear in this document are denoted 
 
 Examples provided in this specification are encoded as GeoJSON.
 
-=== Schema
+=== Schema representation
 
-OpenAPI 3.0 Schema objects are used throughout this specificiation to define the structure of resources. These schema are typically represented using YAML encoding for the ease of the user.
+JSON Schema footnote:[https://json-schema.org] objects are used throughout this specificiation to define the structure
+of metadata records. These schema / objects are also typically represented using YAML footnote:[https://en.wikipedia.org/wiki/YAML].
+YAML is a superset of JSON, and in this specification are regarded as equivalent.
 
+Metadata record instances are always defined as JSON.
