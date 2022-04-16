@@ -18,9 +18,6 @@ text of the definition
 |===
 |Abbreviation |Term
 
-|AMQP
-|Advanced Message Queuing Protocol
-
 |API
 |Application Programming Interface
 
@@ -35,9 +32,6 @@ text of the definition
 
 |GISC
 |Global Information System Centre
-
-|GTS
-|Global Telecommunication System
 
 |HTML
 |Hypertext Markup Language
@@ -63,9 +57,6 @@ text of the definition
 |NWP
 |Numerical Weather Prediction
 
-|OAI-PMH
-|Open Archives Initiative Protocol for Metadata Harvesting
-
 |OARec
 |OGC API - Records
 
@@ -86,12 +77,6 @@ text of the definition
 
 |SOA
 |Service-oriented architecture
-
-|SRU
-|Search/Retrieval via URL
-
-|STAC
-|SpatioTemporal Asset Catalog
 
 |URL
 |Uniform Resource Locator
