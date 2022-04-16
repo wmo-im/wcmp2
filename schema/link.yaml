@@ -6,12 +6,6 @@ description: WCMP2 link object definition
 allOf:
   - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
 properties:
-  vhost:
-    type: string
-    description: TODO
-  exchange:
-    type: string
-    description: TODO
   wmo:topic:
     type: string
-    description: TODO
+    description: the PubSub subscription topic
