@@ -1,0 +1,44 @@
+[[ats_core_identifier]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/identifier
+subject:: /req/core/identifier
+test-purpose:: Validate that a WCMP record has a valid identifier.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of an `+id+` property in the WCMP record.
+--
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+In the WCMP record's `+id+` property, check that there are four tokens, delimited by `+:+`.
+--
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the first three tokens are equal to `+['urn', 'x-wmo', 'md']+`.
+--
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is is a citation authority based on the data provider.
+--
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the firth token (the local identifier) has no spaces or accented characters.
+--
+=====
+====

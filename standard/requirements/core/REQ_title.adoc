@@ -1,0 +1,7 @@
+[[req_core_title]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/title*
+^|A |A WCMP record SHALL provide a `+properties.title+` property.
+
+|===

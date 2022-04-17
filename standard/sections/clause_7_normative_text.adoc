@@ -1,0 +1,57 @@
+== The WMO Core Metadata Profile Record
+
+A WCMP record provides descriptive information about a dataset made available
+through WIS 2.0.
+
+=== Conformance Class Core
+
+The WCMP Core Conformance Class provides requirements to articulate the required elements
+of a WCMP discovery metadata record.
+
+include::../requirements/requirements_class_core.adoc[]
+
+==== Validation
+
+The WCMP record schema is based on the schema defined as part of OGC API - Records - Part 1:
+Core: Requirements Class: Record Core and the associated information model.  WCMP records which
+are valid to WCMP are therefore valid to the OGC API - Records record schema.
+
+include::../requirements/core/REQ_validation.adoc[]
+
+==== Identifier
+
+A WCMP record utilizes the OARec `+id+` property to provide a unique identifier
+to a dataset collection.  A record identifier is essential for querying and identifying
+records within the GDC.
+
+include::../requirements/core/REQ_identifier.adoc[]
+
+==== Conformance
+
+A WCMP record leverages the OGC API `+conformsTo+` property to identify the conformance classes
+that apply to the record.  WCMP conformance identification is valuable for content/version
+detection and handling.
+
+include::../requirements/core/REQ_conformance.adoc[]
+
+==== Type
+
+WCMP records can provide descriptive information about a number of different resource types, such as
+dataset or services.
+
+include::../requirements/core/REQ_type.adoc[]
+
+==== Title
+
+A WCMP record's `+properties.title+` property is a human-readable name given to a given dataset collection.
+
+include::../requirements/core/REQ_title.adoc[]
+
+==== Description
+
+A WCMP record can have a `+properties.description+` property, which is a free-text summary description of the
+resource the provider wishes to make discoverable. TODO: this is now a SHALL
+
+include::../requirements/core/REQ_description.adoc[]
+
+

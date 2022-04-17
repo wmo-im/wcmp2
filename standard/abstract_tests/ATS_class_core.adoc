@@ -1,0 +1,28 @@
+[[ats_core]]
+[conformance_class_core]
+====
+[%metadata]
+label:: http://www.wmo.int/spec/wcmp/2.0/conf/core
+subject:: Requirements Class "core"
+classification:: Target Type:Discovery Metadata
+====
+
+==== Validation
+
+include::./core/ATS_test_validation.adoc[]
+
+==== Identifier
+
+include::./core/ATS_test_identifier.adoc[]
+
+==== Conformance
+
+include::./core/ATS_test_conformance.adoc[]
+
+==== Type
+
+include::./core/ATS_test_type.adoc[]
+
+==== Title
+
+include::./core/ATS_test_title.adoc[]

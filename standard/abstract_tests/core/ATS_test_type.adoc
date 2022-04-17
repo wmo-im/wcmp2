@@ -1,0 +1,16 @@
+[[ats_core_type]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/type
+subject:: /req/core/type
+test-purpose:: Validate that a WCMP record provides valid resource type information.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a valid `+properties.type+` property in the WCMP record.
+--
+=====
+====

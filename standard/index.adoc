@@ -35,32 +35,34 @@ toc::[]
 <<<
 
 
-include::clause_0_front_material.adoc[]
+include::sections/clause_0_front_material.adoc[]
 
-include::clause_1_scope.adoc[]
+include::sections/clause_1_scope.adoc[]
 
-include::clause_2_conformance.adoc[]
+include::sections/clause_2_conformance.adoc[]
 
-include::clause_3_references.adoc[]
+include::sections/clause_3_references.adoc[]
 
-include::clause_4_terms_and_definitions.adoc[]
+include::sections/clause_4_terms_and_definitions.adoc[]
 
-include::clause_5_conventions.adoc[]
+include::sections/clause_5_conventions.adoc[]
 
-include::clause_6_overview.adoc[]
+include::sections/clause_6_informative_text.adoc[]
 
-include::clause_7_identification.adoc[]
+include::sections/clause_7_normative_text.adoc[]
 
-include::clause_8_extents.adoc[]
+include::sections/clause_7_identification.adoc[]
 
-include::clause_9_data_policy.adoc[]
+include::sections/clause_8_extents.adoc[]
 
-include::clause_10_distribution.adoc[]
+include::sections/clause_9_data_policy.adoc[]
 
-include::annex_a_ats.adoc[]
+include::sections/clause_10_distribution.adoc[]
 
-include::annex_b_codelists.adoc[]
+include::sections/annex_a_ats.adoc[]
 
-include::annex_c_bibliography.adoc[]
+include::sections/annex_b_codelists.adoc[]
 
-include::annex_d_revision_history.adoc[]
+include::sections/annex_c_bibliography.adoc[]
+
+include::sections/annex_d_revision_history.adoc[]

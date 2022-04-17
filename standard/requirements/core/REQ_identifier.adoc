@@ -1,0 +1,11 @@
+[[req_core_identifier]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/identifier*
+^|A |A WCMP record SHALL have an identifier.
+^|B |A WCMP record identifier SHALL have a the following notation: `+urn:x-wmo:md:{citation_authority}:{local_identifier}+`.
+^|C |A WCMP record identifier SHALL contain a citation authority based on the Internet domain name of the data provider (e.g. `+gov.noaa+`, `+edu.ucar.ncar+`, `+cn.gov.cma+`, `+ca.gc.ec.msc+`, `+uk.gov.metoffice+`).
+^|D |A WCMP record identifier SHALL contain a local identifier as defined by the data provider.  The lcoal identifier SHALL NOT have spaces or special/accented characters.
+
+|===
+

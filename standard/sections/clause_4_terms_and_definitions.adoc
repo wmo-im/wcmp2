@@ -27,6 +27,9 @@ text of the definition
 |DCPC
 |Data Collection and Production Centres
 
+|GDC
+|Global Discovery Catalogue
+
 |GIS
 |Geographic Information System
 
