@@ -1,0 +1,8 @@
+[[req_core_providers]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/providers*
+^|A |A WCMP record SHALL provide a `+properties.providers+` property.
+^|B |A WCMP record `+properties.providers+` property SHALL provide at least TWO providers based on the metadata point of contact and the originator of the data (TODO: valdiation required roles) (TODO: codelist?).
+
+|===

@@ -54,4 +54,31 @@ resource the provider wishes to make discoverable. TODO: this is now a SHALL
 
 include::../requirements/core/REQ_description.adoc[]
 
+==== Themes and Topic Hierarchy
 
+A WCMP record has a `+properties.themes+` property, which is a knowledge organization system used to classify
+the data that the record is describing.  A WCMP can have one or more themes.  The WIS Topic Hierarchy is put
+forth as a specific theme/concept.
+
+include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
+
+TODO: should we add a RECOMMENDATION for keywords?
+
+==== Providers
+
+A WCMP record can be one or more providers as part of the `+properties.providers+` property.  These elements
+provide contact information based on the role of the provider.
+
+include::../requirements/core/REQ_providers.adoc[]
+
+==== Record Creation Date
+
+A WCMP record has a `+properties.recordCreated+` property, which describes the date that the record was created.
+
+include::../requirements/core/REQ_record_creation_date.adoc[]
+
+==== Record Update Date
+
+A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was changed.
+
+include::../requirements/core/REQ_record_update_date.adoc[]

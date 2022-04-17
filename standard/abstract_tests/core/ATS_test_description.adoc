@@ -1,0 +1,16 @@
+[[ats_core_description]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/description
+subject:: /req/core/description
+test-purpose:: Validate that a WCMP record provides a description property.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.description+` property in the WCMP record.
+--
+=====
+====

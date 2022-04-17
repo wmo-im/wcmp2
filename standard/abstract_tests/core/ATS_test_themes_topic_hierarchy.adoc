@@ -1,0 +1,27 @@
+[[ats_core_themes_topic_hierarchy]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/themes_topic_hierarchy
+subject:: /req/core/themes_topic_hierarchy
+test-purpose:: Validate that a WCMP record provides a themes property based on the WIS Topic Hierarchy.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.themes+` property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Within `+properties.themes+`, check for one theme with a scheme value of `+http://www.wmo.int/spec/wis-topics/1.0+`.
+--
+
+[.component,class=step]
+--
+Within the theme based on the WIS Topic Hierarchy scheme, check that all values are valid topic hierarchies.
+--
+
+=====
+====

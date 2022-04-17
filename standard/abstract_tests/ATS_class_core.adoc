@@ -26,3 +26,23 @@ include::./core/ATS_test_type.adoc[]
 ==== Title
 
 include::./core/ATS_test_title.adoc[]
+
+==== Description
+
+include::./core/ATS_test_description.adoc[]
+
+==== Themes and Topic Hierarchy
+
+include::./core/ATS_test_themes_topic_hierarchy.adoc[]
+
+==== Providers
+
+include::./core/ATS_test_providers.adoc[]
+
+==== Record Creation Date
+
+include::./core/ATS_test_record_creation_date.adoc[]
+
+==== Record Update Date
+
+include::./core/ATS_test_record_update_date.adoc[]

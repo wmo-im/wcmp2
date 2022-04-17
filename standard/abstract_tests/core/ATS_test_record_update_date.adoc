@@ -1,0 +1,17 @@
+[[ats_core_record_update_date]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/record_update_date
+subject:: /req/core/record_update_date
+test-purpose:: Validate that a WCMP record provides a record update date.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.recordUpdated+` property in the WCMP record.
+--
+
+=====
+====
