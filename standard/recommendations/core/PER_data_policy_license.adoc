@@ -1,0 +1,6 @@
+[[per_core_data_policy_license]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/core/data_policy_license*
+^|A |A WCMP record MAY provide multiple licenses by way of the `+links+` section with the appropriate link relations footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] (such as `+license+`).
+|===

@@ -6,7 +6,21 @@ description: WCMP2 discovery metadata record definition
 allOf:
   - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml
 properties:
+  required:
+    - id
+    - conformsTo
+    - geometry
+    - properties
   properties:
+    required:
+      - type
+      - title
+      - description
+      - themes
+      - providers
+      - recordCreated
+      - recordUpdated
+      - license
     properties:
       associations:
         items:
