@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/validation*
-^|A |Each WCMP record shall validate without error against the WCMP schema defined in Annex A (TODO: point to correct schema/annex).
+^|A |Each WCMP record SHALL validate without error against the WCMP schema defined in Annex A (TODO: point to correct schema/annex).
 |===
 
