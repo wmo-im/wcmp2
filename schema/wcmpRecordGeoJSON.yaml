@@ -22,6 +22,9 @@ properties:
       - recordUpdated
       - license
     properties:
+      version:
+        type: string
+        description: The version or edition of a given dataset or product.
       associations:
         items:
           $ref: link.yaml
