@@ -24,4 +24,4 @@ properties:
     properties:
       associations:
         items:
-          $ref: link.yaml
+          $ref: distribution.yaml

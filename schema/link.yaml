@@ -6,6 +6,29 @@ description: WCMP2 link object definition
 allOf:
   - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
 properties:
+  distribution information:
+    type: object
+    description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
+	properties: 
+      available_formats: 
+        type: array 
+        items: 
+           type: object
+           description: 
+              type: string
+              description: the individual format description to allow building the portal information
+           number of files: 
+              type: string
+              description: typically 300 per day or 4 per hour
+           typical filesize:
+              type: string
+              description: size of a typical individual file in MB, GB, ...
+           typical filename:
+              description: one example of filename
+           documentation links:
+              type: object
+              description: links to the associated documentation available for this format when applicable
+              $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
   wmo:topic:
     type: string
-    description: the PubSub subscription topic
+    description: the PubSub subscription topic (ie. wis2/a/cache/CAN/MSC/data/core/weather/surface-weather-observations/landFixed)
