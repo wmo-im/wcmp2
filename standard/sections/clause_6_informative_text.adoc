@@ -110,7 +110,7 @@ The OGC Records - API - Part 1: Core specification:
 
 === The WIS 2.0 Global Discovery Catalogue
 
-The GDC will provide a central search endpoint, enabling users users to traverse, browse and search
+The GDC will provide a central search endpoint, enabling users to traverse, browse and search
 data holdings in WIS 2.0.  Key search predicate capabilities include:
 
 * spatial
