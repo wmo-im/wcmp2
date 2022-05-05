@@ -24,11 +24,20 @@ properties:
               type: string
               description: size of a typical individual file in MB, GB, ...
            typical filename:
+              type: string
               description: one example of filename
-           documentation links:
+           product samples:
               type: object
+              description: Links of sample products that can be freely accessed by users to get a "feel" of the product 
+              items:
+                type: object
+                $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+           documentation links:
+              type: array
               description: links to the associated documentation available for this format when applicable
-              $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+              items:
+                type: object
+                $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
   wmo:topic:
     type: string
     description: the PubSub subscription topic (ie. wis2/a/cache/CAN/MSC/data/core/weather/surface-weather-observations/landFixed)
