@@ -1,0 +1,17 @@
+[[ats_core_record_creation_date]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/record_creation_date
+subject:: /req/core/record_creation_date
+test-purpose:: Validate that a WCMP record provides a record creation date.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.recordCreated+` property in the WCMP record.
+--
+
+=====
+====

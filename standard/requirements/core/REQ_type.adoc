@@ -1,0 +1,8 @@
+[[req_core_type]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/type*
+^|A |A WCMP record SHALL provide a `+properties.type+` property.
+^|A |A WCMP record's `+properties.type+` property SHALL provide a valid resource type from the WCMP codelists.
+
+|===

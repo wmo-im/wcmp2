@@ -1,0 +1,134 @@
+== The WMO Core Metadata Profile Record
+
+A WCMP record provides descriptive information about a dataset made available
+through WIS 2.0.
+
+=== Conformance Class Core
+
+The WCMP Core Conformance Class provides requirements to articulate the required elements
+of a WCMP discovery metadata record.
+
+include::../requirements/requirements_class_core.adoc[]
+
+==== Validation
+
+The WCMP record schema is based on the schema defined as part of OGC API - Records - Part 1:
+Core: Requirements Class: Record Core and the associated information model.  WCMP records which
+are valid to WCMP are therefore valid to the OGC API - Records record schema.
+
+include::../requirements/core/REQ_validation.adoc[]
+
+==== Identifier
+
+A WCMP record utilizes the OARec `+id+` property to provide a unique identifier
+to a dataset collection.  A record identifier is essential for querying and identifying
+records within the GDC.
+
+include::../requirements/core/REQ_identifier.adoc[]
+
+==== Conformance
+
+A WCMP record leverages the OGC API `+conformsTo+` property to identify the conformance classes
+that apply to the record.  WCMP conformance identification is valuable for content/version
+detection and handling.
+
+include::../requirements/core/REQ_conformance.adoc[]
+
+==== Type
+
+WCMP records can provide descriptive information about a number of different resource types, such as
+dataset or services.
+
+include::../requirements/core/REQ_type.adoc[]
+
+==== Title
+
+A WCMP record's `+properties.title+` property is a human-readable name given to a given dataset collection.
+
+include::../requirements/core/REQ_title.adoc[]
+
+==== Description
+
+A WCMP record can have a `+properties.description+` property, which is a free-text summary description of the
+resource the provider wishes to make discoverable.
+
+include::../requirements/core/REQ_description.adoc[]
+
+==== Keywords
+
+A WCMP record can have has a `+properties.keywords+` property, typically represented using keywords, tags, key
+phrases, or classification codes.
+
+include::../recommendations/core/REC_keywords.adoc[]
+
+==== Themes and Topic Hierarchy
+
+A WCMP record has a `+properties.themes+` property, which is a knowledge organization system used to classify
+the data that the record is describing.  A WCMP can have one or more themes.  The WIS Topic Hierarchy is put
+forth as a specific theme/concept.
+
+include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
+
+==== Providers
+
+A WCMP record can be one or more providers as part of the `+properties.providers+` property.  These elements
+provide contact information based on the role of the provider.
+
+include::../requirements/core/REQ_providers.adoc[]
+
+=== Version
+
+Datasets can typically be versioned by an organization (version of an NWP model, processing chain/workflow, etc.).  Data
+providers may choose to make this information available to the user when providing multiple versions of a dataset
+over time.
+
+include::../recommendations/core/PER_version.adoc[]
+
+=== Digital Object Identifier
+
+A digital object identifier (DOI) is a persistent identifier or handle used to identify various objects uniquely,
+and is widely in scientific publications.
+
+include::../recommendations/core/PER_doi.adoc[]
+include::../recommendations/core/REC_doi.adoc[]
+
+==== Record Creation Date
+
+A WCMP record has a `+properties.recordCreated+` property, which describes the date that the record was created.
+
+include::../requirements/core/REQ_record_creation_date.adoc[]
+
+==== Record Update Date
+
+A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was changed.
+
+include::../requirements/core/REQ_record_update_date.adoc[]
+
+==== Data Policy - License
+
+Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/ckeditor/files/Cg-Ext2021-d04-1-WMO-UNIFIED-POLICY-FOR-THE-INTERNATIONAL-approved_en_0.pdf?4pv38FtU6R4fDNtwqOxjBCndLIfntWeR] (TODO: change to more permanent URL?), exchanged data
+is expressed as `+core+` or `+recommended+`.  Additionally, `+other+` shall be used to accommodate other regulations
+(e.g. ICAO Annex 3 – Meteorological Services for International Air Navigation). To avoid uncertainty, where there
+are no limitations, the category `+NoLimitation+` can be used. (TODO: can this be license: null)?
+
+[horizontal]
+_Note_:: 
+1. _Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061) footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257]
+2. _The WIS 2 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
+not be cached by the Global Cache.  They will be provided directly by WIS 2 Nodes, eventually having further conditions._
+
+WMO data policy is considered to be a *legal constraint applying to both usage and access*.
+
+If additional licenses apply, data providers can use the value `+various+`, and articulate the various
+licenses in the `+links+` property.
+
+include::../requirements/core/REQ_data_policy_license.adoc[]
+include::../recommendations/core/REC_data_policy_license.adoc[]
+include::../recommendations/core/PER_data_policy_license.adoc[]
+
+==== Data Policy - Rights
+
+A WCMP record has a `+properties.rights+` property, providing a statement that concerns all rights not addressed
+by the license such as a copyright statement.
+
+include::../recommendations/core/REC_data_policy_rights.adoc[]

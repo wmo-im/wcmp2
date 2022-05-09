@@ -1,0 +1,16 @@
+[[ats_core_validation]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/validation
+subject:: /req/core/validation
+test-purpose:: Validate that a WCMP record is valid to the authoritative WCMP schema.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Run JSON Schema validation on the WCMP record against the WCMP authoritative schema
+--
+=====
+====

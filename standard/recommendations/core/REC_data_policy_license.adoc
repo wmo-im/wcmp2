@@ -1,0 +1,7 @@
+[[rec_core_data_policy_license]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/data_policy_license*
+^|A |A WCMP record SHOULD describe additional conditions not addressed by `+properties.license+` with the `+properties.rights+` property.
+^|B |When a WCMP record's license information is available via a URI, the record SHOULD make the link available in the `+links+` section with the appropriate link relations footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] (such as `+license+`).
+|===

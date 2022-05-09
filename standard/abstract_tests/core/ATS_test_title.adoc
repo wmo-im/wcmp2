@@ -1,0 +1,16 @@
+[[ats_core_title]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/core/title
+subject:: /req/core/title
+test-purpose:: Validate that a WCMP record provides a title property.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.title+` property in the WCMP record.
+--
+=====
+====
