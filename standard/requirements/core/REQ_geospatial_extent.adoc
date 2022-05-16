@@ -1,0 +1,6 @@
+[[req_core_geospatial_extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/geospatial_extent*
+^|A |A WCMP record SHALL provide at least ONE `+properties.extent.spatial.bbox+` item property using the coordinate reference system WGS 84 longitude/latitude.
+|===

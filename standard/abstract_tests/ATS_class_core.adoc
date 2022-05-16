@@ -34,6 +34,14 @@ include::./core/ATS_test_description.adoc[]
 
 include::./core/ATS_test_themes_topic_hierarchy.adoc[]
 
+==== Geospatial Extent
+
+include::./core/ATS_test_geospatial_extent.adoc[]
+
+==== Temporal Extent
+
+include::./core/ATS_test_temporal_extent.adoc[]
+
 ==== Providers
 
 include::./core/ATS_test_providers.adoc[]

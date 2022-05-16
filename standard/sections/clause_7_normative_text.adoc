@@ -69,6 +69,38 @@ forth as a specific theme/concept.
 
 include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
 
+==== Geospatial Extent
+
+A WCMP record has a `+properties.extent.spatial.bbox+` item property, which provides the ability to list 1..n 
+minimum bounding geometries for a given dataset collection, where:
+
+* minx: westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, less than or equal to maxx
+* miny: southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, less than or equal to maxy
+* maxx: easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, greater than or equal to minx
+* maxy: northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, greater than or equal to miny
+
+This property also facilitates catalogue searches with spatial predicate (within extent, etc.).
+
+TODO: resolve https://github.com/opengeospatial/ogcapi-records/issues/168
+
+include::../requirements/core/REQ_geospatial_extent.adoc[]
+include::../recommendations/core/REC_geospatial_extent.adoc[]
+include::../recommendations/core/PER_geospatial_extent.adoc[]
+
+==== Temporal Extent
+
+A WCMP record has a `+properties.extent.spatial.temporal+` item property, which provides the ability to list 1..n
+temporal extents as time instants or time periods.  Temporal extents can be fully bound or open in either direction
+(e.g. until or before.  A temporal definition also includes resolution to be able express the granularity to
+which a given dataset's data is measured/generated/reported.
+
+include::../requirements/core/REQ_temporal_extent.adoc[]
+include::../recommendations/core/REC_temporal_extent.adoc[]
+
 ==== Providers
 
 A WCMP record can be one or more providers as part of the `+properties.providers+` property.  These elements
