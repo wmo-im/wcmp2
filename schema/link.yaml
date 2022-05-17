@@ -10,7 +10,7 @@ properties:
     type: object
     description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
 	properties: 
-      available_formats: 
+      available formats: 
         type: array 
         items: 
            type: object
