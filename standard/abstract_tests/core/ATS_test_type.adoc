@@ -1,5 +1,4 @@
 [[ats_core_type]]
-[abstract_test]
 ====
 [%metadata]
 label:: /conf/core/type

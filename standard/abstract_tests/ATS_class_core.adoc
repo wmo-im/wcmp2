@@ -1,5 +1,4 @@
 [[ats_core]]
-[conformance_class_core]
 ====
 [%metadata]
 label:: http://www.wmo.int/spec/wcmp/2.0/conf/core

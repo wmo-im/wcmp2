@@ -1,5 +1,4 @@
 [[ats_core_themes_topic_hierarchy]]
-[abstract_test]
 ====
 [%metadata]
 label:: /conf/core/themes_topic_hierarchy

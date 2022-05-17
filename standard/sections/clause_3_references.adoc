@@ -1,9 +1,11 @@
 == References
 
-* OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2021) footnote:[https://docs.ogc.org/DRAFTS/20-004.html]
-* IETF: RFC-7946 The GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc7231]
+* [[ogcapi-records]] OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2021) footnote:[https://docs.ogc.org/DRAFTS/20-004.html]
+* [[rfc7946]] IETF: RFC-7946 The GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc7946]
+* [[rfc8259]] IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Formathe GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc8259]
 * W3C/OGC: Spatial Data on the Web Best Practices, W3C Working Group Note (2017) footnote:[https://www.w3.org/TR/sdw-bp]
 * W3C: Data on the Web Best Practices, W3C Recommendation (2017) footnote:[https://www.w3.org/TR/dwbp]
 * W3C: Data Catalog Vocabulary, W3C Recommendation (2014) footnote:[https://www.w3.org/TR/vocab-dcat]
 * IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
 * Linux Foundation: SPDX License List (2021) footnote:[https://spdx.org/licenses]
+* [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]

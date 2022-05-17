@@ -1,5 +1,4 @@
 [[ats_core_record_creation_date]]
-[abstract_test]
 ====
 [%metadata]
 label:: /conf/core/record_creation_date

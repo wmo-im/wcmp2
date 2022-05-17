@@ -54,7 +54,7 @@ common meteorological data types:
 
 [[metadata-discovery-workflow]]
 .Discovery metadata workflow
-image::../images/metadata-discovery-workflow.png[Discovery metadata workflow]
+image::images/metadata-discovery-workflow.png[Discovery metadata workflow]
 
 Common meteorological data types include:
 

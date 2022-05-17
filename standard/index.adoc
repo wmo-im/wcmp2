@@ -51,14 +51,6 @@ include::sections/clause_6_informative_text.adoc[]
 
 include::sections/clause_7_normative_text.adoc[]
 
-include::sections/clause_7_identification.adoc[]
-
-include::sections/clause_8_extents.adoc[]
-
-include::sections/clause_9_data_policy.adoc[]
-
-include::sections/clause_10_distribution.adoc[]
-
 include::sections/annex_a_ats.adoc[]
 
 include::sections/annex_b_codelists.adoc[]

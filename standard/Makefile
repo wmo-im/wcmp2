@@ -1,15 +1,18 @@
 FILE_BASENAME=wcmp2
 
 html:
-	asciidoctor --trace -o ${FILE_BASENAME}.html index.adoc
+	asciidoctor --verbose --trace -o ${FILE_BASENAME}.html index.adoc
 
 pdf:
-	asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o ${FILE_BASENAME}.pdf index.adoc
+	asciidoctor --verbose --trace -r asciidoctor-pdf --trace -b pdf -o ${FILE_BASENAME}.pdf index.adoc
 
 docx:
-	asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output ${FILE_BASENAME}.docx
+	asciidoctor --verbose --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output ${FILE_BASENAME}.docx
 
 linkcheck:
-	find . -name "???.adoc" -exec asciidoc-link-check -p -c ./asciidoc-link-check-config.json {} \;
+	find . -name "*.adoc" -exec asciidoc-link-check -p -c ./asciidoc-link-check-config.json {} \;
 
-.PHONY: html pdf docx linkcheck
+clean:
+	rm -f wcmp2.html wcmp2.pdf wcmp2.docx
+
+.PHONY: html pdf docx linkcheck clean

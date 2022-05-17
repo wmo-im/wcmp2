@@ -93,7 +93,7 @@ means to access and interrogate the metadata vary as described below.
   metadata harvesters
 * optionally provide lower granularity metadata (i.e. products) in JSON for traversal
 * optionally augment all metadata by providing alternate representations in HTML with SEO constructs
-  such as schema.org footnote:[https://schemas.org] and/or JSON-LD footnote:[https://json-ld.org]
+  such as schema.org footnote:[https://schema.org] and/or JSON-LD footnote:[https://json-ld.org]
 * register a basic catalogue landing page to GISC for harvest/ingest
 
 ===== API provisioning
