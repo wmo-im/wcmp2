@@ -40,4 +40,4 @@ properties:
                 $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
   wmo:topic:
     type: string
-    description: the PubSub subscription topic (ie. wis2/a/cache/CAN/MSC/data/core/weather/surface-weather-observations/landFixed)
+    description: the PubSub subscription topic

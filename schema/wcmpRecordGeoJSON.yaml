@@ -27,4 +27,4 @@ properties:
         description: The version or edition of a given dataset or product.
       associations:
         items:
-          $ref: distribution.yaml
+          $ref: link.yaml

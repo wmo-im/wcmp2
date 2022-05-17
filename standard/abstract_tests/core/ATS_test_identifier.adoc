@@ -1,5 +1,4 @@
 [[ats_core_identifier]]
-[abstract_test]
 ====
 [%metadata]
 label:: /conf/core/identifier
@@ -30,7 +29,8 @@ In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that 
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the firth token (the local identifier) has no spaces or accented characters.
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fifth token (the local identifier) has no spaces or accented characters.
 --
 =====
 ====
+
