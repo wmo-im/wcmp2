@@ -1,5 +1,4 @@
 [[ats_core_geospatial_extent]]
-[abstract_test]
 ====
 [%metadata]
 label:: /conf/core/geospatial_extent
@@ -18,6 +17,5 @@ Check for the existence of at least one `+properties.extent.spatial.bbox+` item 
 --
 Check that `+properties.extent.spatial.crs+` property exists and is equal to `+http://www.opengis.net/def/crs/OGC/1.3/CRS84+`.
 --
-
 =====
 ====

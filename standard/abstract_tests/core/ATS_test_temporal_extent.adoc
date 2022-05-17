@@ -1,5 +1,4 @@
 [[ats_core_temporal_extent]]
-[abstract_test]
 ====
 [%metadata]
 label:: /conf/core/temporal_extent
