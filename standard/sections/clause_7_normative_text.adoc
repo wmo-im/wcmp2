@@ -132,3 +132,10 @@ A WCMP record has a `+properties.rights+` property, providing a statement that c
 by the license such as a copyright statement.
 
 include::../recommendations/core/REC_data_policy_rights.adoc[]
+
+==== Distribution Information
+
+A WCMP record has to provide some distribution information regarding how to access and retrieve the data products (TODO check terminology to use the same all along the document). This information is specified by the Distribution information.
+
+include::../requirements/core/REQ_distribution.adoc[]
+include::../recommendations/core/REC_distribution.adoc[]

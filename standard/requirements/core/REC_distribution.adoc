@@ -1,0 +1,8 @@
+[[rec_core_distribution]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/distribution*
+^|A |A WCMP record SHOULD describe addition distribution information with `+properties.distribution information+` property.
+^|B |A WCMP record's `+properties.distribution information+` property SHOULD be an object containing the following descriptive information regarding the data access service.
+^|C |When a WCMP record's rights information is available via a URI, the record SHOULD make the link available in the `+links+` section with the appropriate link relations footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] (such as `+copyright+`).
+|===

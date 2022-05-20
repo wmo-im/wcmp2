@@ -1,0 +1,7 @@
+[[req_core_distribution]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/distribution*
+^|A |A WCMP record SHALL provide a `+properties.associations+` property 
+^|B |A WCMP record `+properties.associations+` property SHALL provide at least one link for accessing the data in one of the supported formats. 
+|===

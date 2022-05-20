@@ -2,7 +2,12 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/distribution*
-^|A |A WCMP record SHOULD describe addition distribution information with `+properties.distribution information+` property.
-^|B |A WCMP record's `+properties.distribution information+` property SHOULD be an object containing the following descriptive information regarding the data access service.
-^|C |When a WCMP record's rights information is available via a URI, the record SHOULD make the link available in the `+links+` section with the appropriate link relations footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] (such as `+copyright+`).
+^|A |A WCMP record SHOULD describe additional distribution information with `+properties.distribution information+` property to qualify a given service link. This information should be used to build the discovery information and allow the user finding and choosing the appropriate service for accessing the data.
+^|B |Using the `+properties.distribution information.available format+` property a WMCP record SHOULD describe the different formats that can be retrieved using the service link.
+^|C |The `+properties.distribution information.available format.description+` should describe the associated format.
+^|D |The `+properties.distribution information.available format.typical filename+` should describe the filenames that are going to be retrieved frmo the service link.
+^|E |The `+properties.distribution information.available format.typical filesize+` should describe the typical filesize that are going to be retrieved from the service link.
+^|F |The `+properties.distribution information.available format.typical number of files+` should describe the typical number of files received during a given period (day, month, ...) when using the service link. It should follow the pattern X per day, X per month.
+^|G |The `+properties.distribution information.available format.documentation+` should be a `+link+` for accessing the documentation associated to the format.
+^|H |The `+properties.distribution information.available format.product samples+` should be an array of direct links to representative samples of the data.
 |===
