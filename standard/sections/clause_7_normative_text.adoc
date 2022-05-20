@@ -92,19 +92,19 @@ and is widely in scientific publications.
 include::../recommendations/core/PER_doi.adoc[]
 include::../recommendations/core/REC_doi.adoc[]
 
-==== Record Creation Date
+=== Record Creation Date
 
 A WCMP record has a `+properties.recordCreated+` property, which describes the date that the record was created.
 
 include::../requirements/core/REQ_record_creation_date.adoc[]
 
-==== Record Update Date
+=== Record Update Date
 
 A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was changed.
 
 include::../requirements/core/REQ_record_update_date.adoc[]
 
-==== Data Policy - License
+=== Data Policy - License
 
 Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/ckeditor/files/Cg-Ext2021-d04-1-WMO-UNIFIED-POLICY-FOR-THE-INTERNATIONAL-approved_en_0.pdf?4pv38FtU6R4fDNtwqOxjBCndLIfntWeR] (TODO: change to more permanent URL?), exchanged data
 is expressed as `+core+` or `+recommended+`.  Additionally, `+other+` shall be used to accommodate other regulations
@@ -126,14 +126,14 @@ include::../requirements/core/REQ_data_policy_license.adoc[]
 include::../recommendations/core/REC_data_policy_license.adoc[]
 include::../recommendations/core/PER_data_policy_license.adoc[]
 
-==== Data Policy - Rights
+=== Data Policy - Rights
 
 A WCMP record has a `+properties.rights+` property, providing a statement that concerns all rights not addressed
 by the license such as a copyright statement.
 
 include::../recommendations/core/REC_data_policy_rights.adoc[]
 
-==== Distribution Information
+=== Distribution Information
 
 A WCMP record has to provide some distribution information regarding how to access and retrieve the data products (TODO check terminology to use the same all along the document). This information is specified by the Distribution information.
 
