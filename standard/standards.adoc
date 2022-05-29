@@ -1,7 +1,7 @@
 == Standards
 
-The standards put forth in this pilot are a clean break from WIS 1.0 standards (OAI-PMH, SRU, ISO 19115/19139)
-in order to lower the barrier to entry/implementation for a vast range of users/actors.  The WIS 1.0 standards
+The standards put forth in this pilot are a clean break from the initial WIS standards (OAI-PMH, SRU, ISO 19115/19139)
+in order to lower the barrier to entry/implementation for a vast range of users/actors.  The initial WIS standards
 for search and metadata, applying a Service-Oriented Architecture (SOA), while applicable for their purpose at
 the time, present the following challenges in current web architecture:
 

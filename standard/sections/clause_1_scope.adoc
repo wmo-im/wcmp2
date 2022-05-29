@@ -15,5 +15,5 @@ and can represent a number of different resources, including:
 * processes (analytics, etc.)
 
 This specification defines the conformance requirements for the WMO Core Metadata
-Profile.  Annex A defines the abstract test suite. Annex B provides normative inforamtion
+Profile.  Annex A defines the abstract test suite. Annex B provides normative information
 on codelists.

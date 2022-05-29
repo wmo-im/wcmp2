@@ -36,7 +36,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 
 ==== Type
 
-WCMP records can provide descriptive information about a number of different resource types, such as
+WCMP records provide descriptive information about a number of different resource types, such as
 dataset or services.
 
 include::../requirements/core/REQ_type.adoc[]
@@ -49,7 +49,7 @@ include::../requirements/core/REQ_title.adoc[]
 
 ==== Description
 
-A WCMP record can have a `+properties.description+` property, which is a free-text summary description of the
+A WCMP record has a `+properties.description+` property, which is a free-text summary description of the
 resource the provider wishes to make discoverable.
 
 include::../requirements/core/REQ_description.adoc[]
@@ -93,7 +93,7 @@ include::../recommendations/core/PER_geospatial_extent.adoc[]
 
 ==== Temporal Extent
 
-A WCMP record has a `+properties.extent.spatial.temporal+` item property, which provides the ability to list 1..n
+A WCMP record has a `+properties.extent.temporal+` item property, which provides the ability to list 1..n
 temporal extents as time instants or time periods.  Temporal extents can be fully bound or open in either direction
 (e.g. until or before.  A temporal definition also includes resolution to be able express the granularity to
 which a given dataset's data is measured/generated/reported.
@@ -146,8 +146,8 @@ are no limitations, the category `+NoLimitation+` can be used. (TODO: can this b
 [horizontal]
 _Note_:: 
 1. _Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061) footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257]
-2. _The WIS 2 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
-not be cached by the Global Cache.  They will be provided directly by WIS 2 Nodes, eventually having further conditions._
+2. _The WIS 2.0 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
+not be cached by the Global Cache.  They will be provided directly by WIS 2.0 Nodes, eventually having further conditions._
 
 WMO data policy is considered to be a *legal constraint applying to both usage and access*.
 
