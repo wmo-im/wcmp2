@@ -1,6 +1,6 @@
-[[rec_core_geospatial_extent]]
+[[rec_core_geospatial_extent_point]]
 [width="90%",cols="2,6a"]
 |===
-^|*Recommendation {counter:rec-id}* |*/rec/core/geospatial_extent*
+^|*Recommendation {counter:rec-id}* |*/rec/core/geospatial_extent_point*
 ^|A |For dataset collections based on a geometry without a calculated area (i.e. single station point), a WCMP record SHOULD provide the extent with min values being equal to maximum values (i.e. minx=maxx, miny=maxy).
 |===

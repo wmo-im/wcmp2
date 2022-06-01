@@ -88,7 +88,8 @@ This property also facilitates catalogue searches with spatial predicate (within
 TODO: resolve https://github.com/opengeospatial/ogcapi-records/issues/168
 
 include::../requirements/core/REQ_geospatial_extent.adoc[]
-include::../recommendations/core/REC_geospatial_extent.adoc[]
+include::../recommendations/core/REC_geospatial_extent-brevity.adoc[]
+include::../recommendations/core/REC_geospatial_extent-point.adoc[]
 include::../recommendations/core/PER_geospatial_extent.adoc[]
 
 ==== Temporal Extent

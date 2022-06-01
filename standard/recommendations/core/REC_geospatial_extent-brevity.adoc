@@ -1,0 +1,6 @@
+[[rec_core_geospatial_extent_brevity]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/geospatial_extent_brevity*
+^|A |A WCMP record SHOULD keep the number of geospatial extents to a minimum given the scope and purpose of high level resource discovery.
+|===
