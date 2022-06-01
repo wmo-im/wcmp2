@@ -1,0 +1,6 @@
+[[req_core_temporal_extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/temporal_extent*
+^|A |A WCMP record SHALL provide at least ONE `+properties.extent.interval+` item property using the Gregorian calendar.
+|===

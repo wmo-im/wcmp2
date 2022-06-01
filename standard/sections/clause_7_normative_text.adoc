@@ -36,7 +36,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 
 ==== Type
 
-WCMP records can provide descriptive information about a number of different resource types, such as
+WCMP records provide descriptive information about a number of different resource types, such as
 dataset or services.
 
 include::../requirements/core/REQ_type.adoc[]
@@ -49,7 +49,7 @@ include::../requirements/core/REQ_title.adoc[]
 
 ==== Description
 
-A WCMP record can have a `+properties.description+` property, which is a free-text summary description of the
+A WCMP record has a `+properties.description+` property, which is a free-text summary description of the
 resource the provider wishes to make discoverable.
 
 include::../requirements/core/REQ_description.adoc[]
@@ -68,6 +68,39 @@ the data that the record is describing.  A WCMP can have one or more themes.  Th
 forth as a specific theme/concept.
 
 include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
+
+==== Geospatial Extent
+
+A WCMP record has a `+properties.extent.spatial.bbox+` item property, which provides the ability to list 1..n 
+minimum bounding geometries for a given dataset collection, where:
+
+* minx: westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, less than or equal to maxx
+* miny: southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, less than or equal to maxy
+* maxx: easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, greater than or equal to minx
+* maxy: northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, greater than or equal to miny
+
+This property also facilitates catalogue searches with spatial predicate (within extent, etc.).
+
+TODO: resolve https://github.com/opengeospatial/ogcapi-records/issues/168
+
+include::../requirements/core/REQ_geospatial_extent.adoc[]
+include::../recommendations/core/REC_geospatial_extent-brevity.adoc[]
+include::../recommendations/core/REC_geospatial_extent-point.adoc[]
+include::../recommendations/core/PER_geospatial_extent.adoc[]
+
+==== Temporal Extent
+
+A WCMP record has a `+properties.extent.temporal+` item property, which provides the ability to list 1..n
+temporal extents as time instants or time periods.  Temporal extents can be fully bound or open in either direction
+(e.g. until or before.  A temporal definition also includes resolution to be able express the granularity to
+which a given dataset's data is measured/generated/reported.
+
+include::../requirements/core/REQ_temporal_extent.adoc[]
+include::../recommendations/core/REC_temporal_extent.adoc[]
 
 ==== Providers
 
@@ -114,8 +147,8 @@ are no limitations, the category `+NoLimitation+` can be used. (TODO: can this b
 [horizontal]
 _Note_:: 
 1. _Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061) footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257]
-2. _The WIS 2 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
-not be cached by the Global Cache.  They will be provided directly by WIS 2 Nodes, eventually having further conditions._
+2. _The WIS 2.0 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
+not be cached by the Global Cache.  They will be provided directly by WIS 2.0 Nodes, eventually having further conditions._
 
 WMO data policy is considered to be a *legal constraint applying to both usage and access*.
 

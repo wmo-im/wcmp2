@@ -1,16 +1,16 @@
-$schema: https://json-schema.org/draft/2020-12/schema
-$id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
 title: WCMP2 discovery metadata record definition
 description: WCMP2 discovery metadata record definition
-
 allOf:
-  - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml
+  - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml'
+required:
+  - id
+  - conformsTo
+  - geometry
+  - properties
+  - links
 properties:
-  required:
-    - id
-    - conformsTo
-    - geometry
-    - properties
   properties:
     required:
       - type
@@ -25,6 +25,6 @@ properties:
       version:
         type: string
         description: The version or edition of a given dataset or product.
-      associations:
-        items:
-          $ref: link.yaml
+    links:
+      items:
+        $ref: link.yaml
