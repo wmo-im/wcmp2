@@ -1,0 +1,22 @@
+[[ats_core_temporal_extent]]
+====
+[%metadata]
+label:: /conf/core/temporal_extent
+subject:: /req/core/temporal_extent
+test-purpose:: Validate that a WCMP record provides a valid temporal extent property.
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Check for the existence of at least one `+properties.extent.temporal.interval+` item property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Check that `+properties.extent.temporal.trs+` property exists and is equal to `+http://www.opengis.net/def/uom/ISO-8601/0/Gregorian+`.
+--
+
+=====
+====

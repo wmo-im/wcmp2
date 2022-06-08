@@ -20,12 +20,12 @@ provide guidelines on how to best enable spatiotemporal data to lower the barrie
 and linked data.  This also aligns with the FAIR data principles (Findable, Accessible, Interoperable,
 Reusable) footnote:[https://en.wikipedia.org/wiki/FAIR_data].
 
-[big]*v.    Keywords*
+[big]*ii.    Keywords*
 
 The following are keywords to be used by search engines and document catalogues.
 
 wmo, wis 2.0, weather, climate, water, metadata, discovery, search
 
-[big]*vi.    Security Considerations*
+[big]*iii.    Security Considerations*
 
 No security considerations have been made for this Standard.
