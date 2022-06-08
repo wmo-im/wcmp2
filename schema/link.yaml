@@ -32,7 +32,7 @@ properties:
               items:
                 type: object
                 $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-           documentationLinks:
+           documentation:
               type: array
               description: links to the associated documentation available for this format when applicable
               items:

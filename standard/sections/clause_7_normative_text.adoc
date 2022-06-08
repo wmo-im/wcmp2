@@ -174,19 +174,112 @@ A WCMP record has to provide some information regarding how to access and retrie
 
 ==== Examples
 
-===== Adding the MQTT information
+- Adding the MQTT information
 
 Below is an example of the MQTT information added in the record:
 
 [source,json]
 ----
 {
-    "rel"  : "WMO-PubSub",
-    "type" : "service",
-    "title": "WIS2 MQTT information",
-    "href" : "mqtt://wis2box:wis2box@mosquitto/",
-    "topic": "wis2/mytopic"
+...
+    "associations": [
+        {
+            "rel": "search",
+            "type": "text/html",
+            "title": "WOUDC - Data - Station List",
+            "href": "https://woudc.org/data/stations"
+        },
+        {
+            "rel"  : "WMO-PubSub",
+            "type" : "application/json",
+            "title": "WIS2 MQTT information",
+            "href" : "mqtt://wis2box:wis2box@mosquitto/",
+            "topic": "wis2/mytopic"
+        }
+...
+----
+
+- Example with the mandatory distribution information
+
+Below is provided an example of a WMS service providing access to images.
+
+[source,json]
+----
+{
+            "rel": "item",
+            "type": "image/png",  <== What about the type when multiple types are available ?
+            "title": "Eumetview",
+            "href": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
+            "templated": true,
+            "variables": {
+               "crs": {
+                  "description": "...",
+                  "type": "string",
+                  "enum": [ "EPSG:4326", "EPSG:3857" ]
+               },
+               "bbox": {
+                  "description": "...",   <= don't we need the bbox extent here ?
+                  "type": "array",
+                  "items": {
+                     "type": "number",
+                     "format": "double"
+                  },
+                  "minItems": 4,
+                  "maxItems": 4
+               },
+               "width": {
+                  "description": "...",
+                  "type": "number",
+                  "format": "integer",
+                  "minimum": 600,
+                  "maximum": 5000
+               },
+               "height": {
+                  "description": "...",
+                  "type": "number",
+                  "format": "integer",
+                  "minimum": 600,
+                  "maximum": 5000
+               },
+	       "format": {
+	          "description": "...".
+		      "type": "string",
+		      "enum": [ "image/geotiff", "image/geotiff8", "image/gif", "image/jpeg", "image/png; mode=8bit" ]
+	       }
+	       "sample request": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
+            }
 }
+----
+
+- Example with the complete distribution information
+
+Additional distribution information is added to allow creating more comprehensive discovery services. Below is an example of such distribution information.
+
+[source,json]
+----
+{
+    "rel": "service",
+    "type": "datastore",
+    "title": "EUMETSAT Datastore",
+    "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
+    "distributionInformation" : {
+    	"availableFormats": [
+    		 "Native" : { "description"      : "This is sent in a compressed Submission Information Package (SIP) by default.",
+    			          "numberOfFiles"    : "288 per day",
+    			          "typicalFilesize"  : "60 MB",
+    			          "typicalFilename"  : "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+                          "productSamples    : "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
+    			          "documentation"    :   {
+							   "rel": "alternate",
+							   "type": "text/html",
+							   "title": "SIP documentation and tools",
+							   "href": "https://www.eumetsat.int/formats#SIP"
+					      }
+    		            }
+    	]
+    }
+}
+
 ----
 
 include::../requirements/core/REQ_distribution.adoc[]
