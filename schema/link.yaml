@@ -6,38 +6,39 @@ description: WCMP2 link object definition
 allOf:
   - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
 properties:
-  distribution information:
+  distributionInformation:
     type: object
     description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
 	properties: 
-      available formats: 
+      availableFormats: 
         type: array 
         items: 
            type: object
            description: 
               type: string
               description: the individual format description to allow building the portal information
-           number of files: 
+           numberOFiles: 
               type: string
               description: typically 300 per day or 4 per hour
-           typical filesize:
+           typicalFilesize:
               type: string
               description: size of a typical individual file in MB, GB, ...
-           typical filename:
+           typicalFilename:
               type: string
               description: one example of filename
-           product samples:
+           productSamples:
               type: object
               description: Links of sample products that can be freely accessed by users to get a "feel" of the product 
               items:
                 type: object
                 $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-           documentation links:
+           documentationLinks:
               type: array
               description: links to the associated documentation available for this format when applicable
               items:
                 type: object
                 $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-  wmo topic:
-    type: string
-    description: the PubSub subscription topic relative path
+  wmoTopic:
+     type: string
+  wmoBroker:
+     type: string

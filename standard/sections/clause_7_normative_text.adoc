@@ -168,7 +168,26 @@ include::../recommendations/core/REC_data_policy_rights.adoc[]
 
 === Distribution Information
 
-A WCMP record has to provide some distribution information regarding how to access and retrieve the data products (TODO check terminology to use the same all along the document). This information is specified by the Distribution information.
+==== Overview
+
+A WCMP record has to provide some information regarding how to access and retrieve the data products. This information is specified by the Distribution information and is defined as one of more links to the corresponding data access service. 
+
+==== Examples
+
+===== Adding the MQTT information
+
+Below is an example of the MQTT information added in the record:
+
+[source,json]
+----
+{
+    "rel"  : "WMO-PubSub",
+    "type" : "service",
+    "title": "WIS2 MQTT information",
+    "href" : "mqtt://wis2box:wis2box@mosquitto/",
+    "topic": "wis2/mytopic"
+}
+----
 
 include::../requirements/core/REQ_distribution.adoc[]
 include::../recommendations/core/REC_distribution.adoc[]
