@@ -281,5 +281,6 @@ Additional distribution information is added to allow creating more comprehensiv
 
 ----
 
+
 include::../requirements/core/REQ_distribution.adoc[]
 include::../recommendations/core/REC_distribution.adoc[]
