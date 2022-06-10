@@ -170,7 +170,7 @@ include::../recommendations/core/REC_data_policy_rights.adoc[]
 
 ==== Overview
 
-A WCMP record has to provide some information regarding how to access and retrieve the data products. This information is specified by the Distribution information and is defined as one of more links to the corresponding data access service. 
+A WCMP record provides information regarding how to access and retrieve data and products. This information is specified by defining one or more links to corresponding data access services.
 
 ==== Examples
 
@@ -189,11 +189,11 @@ Below is an example of the MQTT information added in the record:
             "href": "https://woudc.org/data/stations"
         },
         {
-            "rel"  : "WMO-PubSub",
+            "rel"  : "data",
             "type" : "application/json",
-            "title": "WIS2 MQTT information",
-            "href" : "mqtt://wis2box:wis2box@mosquitto/",
-            "topic": "wis2/mytopic"
+            "title": "WIS2 notification service",
+            "href" : "mqtt://example.org",
+            "wmo:topic": "wis2/mytopic"
         }
      ]
 ----

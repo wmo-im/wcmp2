@@ -19,16 +19,16 @@ properties:
               description: the individual format description to allow building the portal information
            numberOFiles: 
               type: string
-              description: typically 300 per day or 4 per hour
+              description: typical number of files disseminated by the distribution mechanism over a period of time
            typicalFilesize:
               type: string
-              description: size of a typical individual file in MB, GB, ...
+              description: size of a typical individual file (e.g. KB, MB, GB)
            typicalFilename:
               type: string
-              description: one example of filename
+              description: example filename
            productSamples:
               type: object
-              description: Links of sample products that can be freely accessed by users to get a "feel" of the product 
+              description: links of sample products that can be openly accessed by users to provide a better understanding of the product
               items:
                 type: object
                 $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
