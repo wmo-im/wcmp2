@@ -4,5 +4,6 @@
 ^|*Requirement {counter:req-id}* |*/req/core/distribution*
 ^|A |A WCMP record SHALL define a `+properties.associations+` property 
 ^|B |A WCMP record `+properties.associations+` property SHALL contain at least one link to the data access service allowing users to download the data in one of the supported formats. 
-^|C |A WCMP record `+properties.associations+` property SHALL contain the MQTT topic information under which the data publication notifications will accessibel from the WIS2 Global Broker. The define topic name shall follow the topic ierarchy defined in (TODO add the reference to the topcic hierarchy documentation).
+^|C |A WCMP record `+properties.associations+` property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will accessible from the WIS2 Global Broker. The define topic name shall follow the topic ierarchy defined in (TODO add the reference to the topcic hierarchy documentation).
+^|D |A WCMP record `+properties.associations+` property SHALL contain a Web Accessible Folder (WAF) or an API link for non real-time data (typically climate records).
 |===
