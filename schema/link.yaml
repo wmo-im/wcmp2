@@ -6,7 +6,7 @@ description: WCMP 2 link object definition
 allOf:
   - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
 properties:
-  distributionInformation:
+  distribution:
     type: object
     description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
     properties:
@@ -42,7 +42,5 @@ properties:
                 items:
                   type: object
                   $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-  wmoTopic:
-     type: string
-  wmoBroker:
+  wmo:topic:
      type: string
