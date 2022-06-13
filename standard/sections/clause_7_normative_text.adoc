@@ -109,7 +109,7 @@ provide contact information based on the role of the provider.
 
 include::../requirements/core/REQ_providers.adoc[]
 
-=== Version
+==== Version
 
 Datasets can typically be versioned by an organization (version of an NWP model, processing chain/workflow, etc.).  Data
 providers may choose to make this information available to the user when providing multiple versions of a dataset
@@ -117,7 +117,7 @@ over time.
 
 include::../recommendations/core/PER_version.adoc[]
 
-=== Digital Object Identifier
+==== Digital Object Identifier
 
 A digital object identifier (DOI) is a persistent identifier or handle used to identify various objects uniquely,
 and is widely in scientific publications.
@@ -125,19 +125,19 @@ and is widely in scientific publications.
 include::../recommendations/core/PER_doi.adoc[]
 include::../recommendations/core/REC_doi.adoc[]
 
-=== Record Creation Date
+==== Record Creation Date
 
 A WCMP record has a `+properties.recordCreated+` property, which describes the date that the record was created.
 
 include::../requirements/core/REQ_record_creation_date.adoc[]
 
-=== Record Update Date
+==== Record Update Date
 
 A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was changed.
 
 include::../requirements/core/REQ_record_update_date.adoc[]
 
-=== Data Policy - License
+==== Data Policy - License
 
 Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/ckeditor/files/Cg-Ext2021-d04-1-WMO-UNIFIED-POLICY-FOR-THE-INTERNATIONAL-approved_en_0.pdf?4pv38FtU6R4fDNtwqOxjBCndLIfntWeR] (TODO: change to more permanent URL?), exchanged data
 is expressed as `+core+` or `+recommended+`.  Additionally, `+other+` shall be used to accommodate other regulations
@@ -159,94 +159,102 @@ include::../requirements/core/REQ_data_policy_license.adoc[]
 include::../recommendations/core/REC_data_policy_license.adoc[]
 include::../recommendations/core/PER_data_policy_license.adoc[]
 
-=== Data Policy - Rights
+==== Data Policy - Rights
 
 A WCMP record has a `+properties.rights+` property, providing a statement that concerns all rights not addressed
 by the license such as a copyright statement.
 
 include::../recommendations/core/REC_data_policy_rights.adoc[]
 
-=== Distribution Information
+==== Distribution Information
 
-==== Overview
+===== Overview
 
-A WCMP record provides information regarding how to access and retrieve data and products. This information is specified by defining one or more links to corresponding data access services.
+A WCMP record provides information regarding how to access and retrieve data and products. This information is specified by defining a `+links+` array property, with one or more objects to corresponding data access services.
 
-==== Examples
+===== Examples
 
 - *_Adding the MQTT information_*
 
-Below is an example of the MQTT information added in the record:
+Below is an example of two link objects, providing both search and MQTT subscription information:
 
 [source,json]
 ----
-{
-    "associations": [
-        {
-            "rel": "search",
-            "type": "text/html",
-            "title": "WOUDC - Data - Station List",
-            "href": "https://woudc.org/data/stations"
-        },
-        {
-            "rel"  : "data",
-            "type" : "application/json",
-            "title": "WIS2 notification service",
-            "href" : "mqtt://example.org",
-            "wmo:topic": "wis2/mytopic"
-        }
-     ]
+"links": [
+  {
+    "rel": "search",
+    "type": "text/html",
+    "title": "WOUDC - Data - Station List",
+    "href": "https://woudc.org/data/stations"
+  },
+  {
+    "rel"  : "data",
+    "type" : "application/json",
+    "title": "WIS2 notification service",
+    "href" : "mqtt://example.org",
+    "wmo:topic": "wis2/mytopic"
+  }
+]
 ----
 
 - *_Example with the mandatory distribution information_*
 
-Below is provided an example of a WMS service providing access to images.
+Below is provided an example link object of a WMS service providing API access to images:
 
 [source,json]
 ----
 {
-            "rel": "item",
-            "type": "image/png",  <== What about the type when multiple types are available ?
-            "title": "Eumetview",
-            "href": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
-            "templated": true,
-            "variables": {
-               "crs": {
-                  "description": "...",
-                  "type": "string",
-                  "enum": [ "EPSG:4326", "EPSG:3857" ]
-               },
-               "bbox": {
-                  "description": "...",   <= don't we need the bbox extent here ?
-                  "type": "array",
-                  "items": {
-                     "type": "number",
-                     "format": "double"
-                  },
-                  "minItems": 4,
-                  "maxItems": 4
-               },
-               "width": {
-                  "description": "...",
-                  "type": "number",
-                  "format": "integer",
-                  "minimum": 600,
-                  "maximum": 5000
-               },
-               "height": {
-                  "description": "...",
-                  "type": "number",
-                  "format": "integer",
-                  "minimum": 600,
-                  "maximum": 5000
-               },
-	       "format": {
-	          "description": "...",
-		      "type": "string",
-		      "enum": [ "image/geotiff", "image/geotiff8", "image/gif", "image/jpeg", "image/png; mode=8bit" ]
-	       },
-	       "sample request": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
-            }
+  "rel": "item",
+  "type": "image/png",
+  "title": "Eumetview",
+  "href": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
+  "templated": true,
+  "variables": {
+    "crs": {
+      "description": "...",
+      "type": "string",
+      "enum": [
+        "EPSG:4326",
+        "EPSG:3857"
+      ]
+    },
+    "bbox": {
+      "description": "...",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "format": "double"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "width": {
+      "description": "...",
+      "type": "number",
+      "format": "integer",
+      "minimum": 600,
+      "maximum": 5000
+    },
+    "height": {
+      "description": "...",
+      "type": "number",
+      "format": "integer",
+      "minimum": 600,
+      "maximum": 5000
+    },
+    "format": {
+      "description": "...",
+      "type": "string",
+      "enum": [
+        "image/geotiff",
+        "image/geotiff8",
+        "image/gif",
+        "image/jpeg",
+        "image/png; mode=8bit"
+      ]
+    },
+    "sampleRequest": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
+  }
 }
 ----
 
@@ -257,30 +265,32 @@ Additional distribution information is added to allow creating more comprehensiv
 [source,json]
 ----
 {
-    "rel": "service",
-    "type": "datastore",
-    "title": "EUMETSAT Datastore",
-    "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
-    "distributionInformation" : {
-    	"availableFormats": [
-    		 "Native" : { "description"      : "This is sent in a compressed Submission Information Package (SIP) by default.",
-    			          "numberOfFiles"    : "288 per day",
-    			          "typicalFilesize"  : "60 MB",
-    			          "typicalFilename"  : "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-                          "productSamples"   : "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
-    			          "documentation"    :   {
-							   "rel": "alternate",
-							   "type": "text/html",
-							   "title": "SIP documentation and tools",
-							   "href": "https://www.eumetsat.int/formats#SIP"
-					      }
-    		            }
-    	]
-    }
+  "rel": "service",
+  "type": "text/html",
+  "title": "EUMETSAT Datastore",
+  "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
+  "distribution": {
+    "availableFormats": [
+      {
+        "name": "native",
+        "description": "This is sent in a compressed Submission Information Package (SIP) by default.",
+        "numberOfFiles": "288 per day",
+        "typicalFilesize": "60 MB",
+        "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+        "productSamples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+        "documentation": {
+          "rel": "alternate",
+          "type": "text/html",
+          "title": "SIP documentation and tools",
+          "href": "https://www.eumetsat.int/formats#SIP"
+        }
+      }
+    ]
+  }
 }
-
 ----
 
 
-include::../requirements/core/REQ_distribution.adoc[]
+include::../requirements/core/REQ_links.adoc[]
 include::../recommendations/core/REC_distribution.adoc[]
+include::../recommendations/core/REC_links.adoc[]

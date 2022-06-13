@@ -1,0 +1,35 @@
+[[ats_core_links]]
+====
+[%metadata]
+label:: /conf/core/links
+subject:: /req/core/links
+test-purpose:: Validate that a WCMP record provides a link property.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a single `+links+` array property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Check that the `+links+` property provides a minimum of one link object.
+--
+
+[.component,class=step]
+--
+For a link object describing real-time data, check that the `+href+` property starts with the `+mqtt+` or `+mqtts+` protocol, AND that `+wmo:topic+` is additionally defined.
+--
+
+[.component,class=step]
+--
+For a link object describing archived (NOT real-time) data made available via API, check that the `+rel+` property is a recognized API service type as defined by IANA or OGC.
+--
+
+[.component,class=step]
+--
+For a link object describing archived (NOT real-time) data made available via Web Accessible Folder, check that the `+rel+` property is a recognized API service type as defined by IANA or OGC.
+--
+=====
+====

@@ -2,12 +2,12 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/distribution*
-^|A |A WCMP record SHOULD describe additional distribution information with `+properties.distributionInformation+` property to qualify a given service link. This information should be used to build the discovery information and allow the user finding and choosing the appropriate service for accessing the data.
-^|B |Using the `+properties.distributionInformation.available format+` property a WMCP record SHOULD describe the different formats that can be retrieved using the service link.
-^|C |The `+properties.distributionInformation.availableFormat.description+` should describe the associated format.
-^|D |The `+properties.distributionInformation.availableFormat.typicalFilename+` should describe the filenames that are going to be retrieved frmo the service link.
-^|E |The `+properties.distributionInformation.availableFormat.typicalFilesize+` should describe the typical filesize that are going to be retrieved from the service link.
-^|F |The `+properties.distributionInformation.availableFormat.numberOfFiles+` should describe the typical number of files received during a given period (day, month, ...) when using the service link. It should follow the pattern X per day, X per month.
-^|G |The `+properties.distributionInformation.availableFormat.documentation+` should be a `+link+` for accessing the documentation associated to the format.
-^|H |The `+properties.distributionInformation.availableFormat.productSamples+` should be an array of direct links to representative samples of the data.
+^|A |A WCMP record SHOULD describe additional distribution information with the `+properties.distribution+` property to qualify a given service link. This information SHOULD be used to build the discovery information and allow the user finding and choosing the appropriate service for accessing the data.
+^|B |The `+properties.distribution.availableFormat+` property SHOULD describe the different formats that can be retrieved using the service link.
+^|C |The `+properties.distribution.availableFormat.description+` SHOULD describe the associated format.
+^|D |The `+properties.distribution.availableFormat.typicalFilename+` SHOULD describe the filenames that are going to be retrieved frmo the service link.
+^|E |The `+properties.distribution.availableFormat.typicalFilesize+` SHOULD describe the typical filesize that are going to be retrieved from the service link.
+^|F |The `+properties.distribution.availableFormat.numberOfFiles+` SHOULD describe the typical number of files received during a given period (day, month, ...) when using the service link. It SHOULD follow the pattern X per day, X per month.
+^|G |The `+properties.distribution.availableFormat.documentation+` SHOULD be a `+link+` for accessing the documentation associated to the format.
+^|H |The `+properties.distribution.availableFormat.productSamples+` SHOULD be an array of direct links to representative samples of the data.
 |===

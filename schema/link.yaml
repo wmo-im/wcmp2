@@ -1,7 +1,7 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml
-title: WCMP2 link object definition
-description: WCMP2 link object definition
+title: WCMP 2 link object definition
+description: WCMP 2 link object definition
 
 allOf:
   - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
@@ -9,35 +9,39 @@ properties:
   distributionInformation:
     type: object
     description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
-	properties: 
+    properties:
       availableFormats: 
         type: array 
         items: 
            type: object
-           description: 
-              type: string
-              description: the individual format description to allow building the portal information
-           numberOFiles: 
-              type: string
-              description: typical number of files disseminated by the distribution mechanism over a period of time
-           typicalFilesize:
-              type: string
-              description: size of a typical individual file (e.g. KB, MB, GB)
-           typicalFilename:
-              type: string
-              description: example filename
-           productSamples:
-              type: object
-              description: links of sample products that can be openly accessed by users to provide a better understanding of the product
-              items:
+           properties:
+             name:
+                type: string
+                description: available format short name.
+             description:
+                type: string
+                description: the individual format description to allow building the portal information
+             numberOFiles:
+                type: string
+                description: typical number of files disseminated by the distribution mechanism over a period of time
+             typicalFilesize:
+                type: string
+                description: size of a typical individual file (e.g. KB, MB, GB)
+             typicalFilename:
+                type: string
+                description: example filename
+             productSamples:
                 type: object
-                $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-           documentation:
-              type: array
-              description: links to the associated documentation available for this format when applicable
-              items:
-                type: object
-                $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+                description: links of sample products that can be openly accessed by users to provide a better understanding of the product
+                items:
+                  type: object
+                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+             documentation:
+                type: array
+                description: links to the associated documentation available for this format when applicable
+                items:
+                  type: object
+                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
   wmoTopic:
      type: string
   wmoBroker:

@@ -50,8 +50,8 @@ if __name__ == '__main__':
         instance = json.load(fh1)
         schema = yaml.load(fh2, Loader=yaml.SafeLoader)
 
-        print("Schema loaded as json = {}".format(schema))
-        print("Instance loaded as json = {}".format(instance)) 
+        print(f'Schema loaded as JSON: {schema}')
+        print(f'Instance loaded as JSON: {instance}')
 
         try:
             validate_json(instance, schema, schema_dir)
