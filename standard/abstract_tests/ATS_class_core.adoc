@@ -53,3 +53,15 @@ include::./core/ATS_test_record_creation_date.adoc[]
 ==== Record Update Date
 
 include::./core/ATS_test_record_update_date.adoc[]
+
+==== Data Policy - License
+
+TODO
+
+==== Data Policy - Rights
+
+TODO
+
+=== Links
+
+include::./core/ATS_test_links.adoc[]
