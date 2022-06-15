@@ -1,0 +1,230 @@
+{
+    "id": "urn:x-wmo:md:ca.gc.ec.msc:nwp.msc_nwp_gdps",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:nwp.msc_nwp_gdps",
+        "externalIds": [
+            {
+                "scheme": "default",
+                "value": "urn:x-wmo:md:ca.gc.ec.msc:nwp.msc_nwp_gdps"
+            }
+        ],
+        "title": "Global Deterministic Prediction System",
+        "description": "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.",
+        "themes": [
+            {
+                "concepts": [
+                    "Prediction",
+                    "Global",
+                    "Deterministic"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather forecasts",
+                    "Precipitation",
+                    "Air temperature",
+                    "Humidity",
+                    "Snow",
+                    "Wind",
+                    "Meteorological data"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather and Climate"
+                ]
+            },
+            {
+                "concepts": [
+                    "International"
+                ]
+            },
+            {
+                "concepts": [
+                    "Atmosphere"
+                ]
+            },
+            {
+                "concepts": [
+                    "weatherForecasts",
+                    "meteorology"
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+            }
+        ],
+        "providers": [
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    }
+                ]
+            },
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "distributor"
+                    }
+                ]
+            }
+        ],
+        "language": "en",
+        "type": "dataset",
+        "extent": {
+            "spatial": {
+                "bbox": [
+                    [
+                        -180,
+                        -90,
+                        180,
+                        90
+                    ]
+                ],
+                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            },
+            "temporal": {
+                "interval": [
+                    "1963-10-01",
+                    null
+                ],
+                "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+            }
+        },
+        "created": "1991-03-12",
+        "recordUpdated": "2022-06-17",
+        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
+        "formats": [
+            "WMS",
+            "GRIB2"
+        ]
+    },
+    "links": [
+        {
+            "rel": "download",
+            "href": "https://dd.weather.gc.ca/model_gem_global/",
+            "type": "text/html",
+            "title": "MSC Datamart"
+        },
+        {
+            "rel": "download",
+            "href": "https://dd.meteo.gc.ca/model_gem_global/",
+            "type": "text/html",
+            "title": "MSC Datamart"
+        },
+        {
+            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
+            "type": "image/png",
+            "title": "Air temperature [\u00b0C]"
+        },
+        {
+            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "href": "https://geo.weather.gc.ca/geomet?lang=fr&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
+            "type": "image/png",
+            "title": "Air temperature [\u00b0C]"
+        },
+        {
+            "rel": "OASIS:AMQP",
+            "href": "amqps://dd.weather.gc.ca/model_gem_global.#",
+            "type": "application/json",
+            "title": "MSC Datamart AMQP"
+        },
+        {
+            "rel": "OASIS:AMQP",
+            "href": "amqps://dd.meteo.gc.ca/model_gem_global.#",
+            "type": "application/json",
+            "title": "MSC Datamart AMQP"
+        }
+    ]
+}
