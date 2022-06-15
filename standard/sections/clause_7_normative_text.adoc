@@ -26,7 +26,7 @@ records within the GDC.
 
 [source,json]
 ----
-"id": urn:x-wmo:md:ca.gc.ec.msc:observations.swob"
+"id": "urn:x-wmo:md:ca.gc.ec.msc:observations.swob"
 ----
 
 include::../requirements/core/REQ_identifier.adoc[]
@@ -282,14 +282,14 @@ include::../requirements/core/REQ_record_update_date.adoc[]
 
 ==== Data Policy - License
 
-Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://ane4bf-datap1.s3-eu-west-1.amazonaws.com/wmocms/s3fs-public/ckeditor/files/Cg-Ext2021-d04-1-WMO-UNIFIED-POLICY-FOR-THE-INTERNATIONAL-approved_en_0.pdf?4pv38FtU6R4fDNtwqOxjBCndLIfntWeR] (TODO: change to more permanent URL?), exchanged data
+Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data
 is expressed as `+core+` or `+recommended+`.  Additionally, `+other+` shall be used to accommodate other regulations
 (e.g. ICAO Annex 3 – Meteorological Services for International Air Navigation). To avoid uncertainty, where there
 are no limitations, the category `+NoLimitation+` can be used. (TODO: can this be license: null)?
 
 [horizontal]
 _Note_:: 
-1. _Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061) footnote:[https://library.wmo.int/doc_num.php?explnum_id=10257]
+1. _Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]
 2. _The WIS 2.0 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
 not be cached by the Global Cache.  They will be provided directly by WIS 2.0 Nodes, eventually having further conditions._
 
