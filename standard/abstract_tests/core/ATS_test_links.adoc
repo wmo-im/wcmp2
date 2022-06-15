@@ -31,5 +31,11 @@ For a link object describing archived (NOT real-time) data made available via AP
 --
 For a link object describing archived (NOT real-time) data made available via Web Accessible Folder, check that the `+rel+` property is a recognized API service type as defined by IANA or OGC.
 --
+
+[.component,class=step]
+--
+For a link object with access control (defined by the `+security+` object), check that the `+security+` property contains a `+description+` property with instructions on how to obtain access.
+--
+
 =====
 ====

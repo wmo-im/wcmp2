@@ -588,6 +588,25 @@ Additional distribution information is added to allow creating more comprehensiv
 }
 ----
 
+WCMP record links may also provide links to services which implement access control in support of authentication and authorization.  In
+secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
+example demonstrates how to express access control using HTTP Basic Authentication for a given data access service.
+
+[source,json]
+----
+{
+    "rel": "download",
+    "type": "application/json",
+    "title": "link to WAF endpoint",
+    "href": "https://example.org/data/secure-data",
+    "security": {
+      "type": "http",
+      "scheme": "basic",
+      "description": "please contact the data provider for accessing this secured resource"
+    }
+}
+----
+
 include::../requirements/core/REQ_links.adoc[]
 include::../recommendations/core/REC_distribution.adoc[]
 include::../recommendations/core/REC_links.adoc[]
