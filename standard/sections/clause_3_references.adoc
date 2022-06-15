@@ -9,3 +9,4 @@
 * IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
 * Linux Foundation: SPDX License List (2021) footnote:[https://spdx.org/licenses]
 * [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
+* [[openapi]] OpenAPI Specification 3.1.0 (2022) footnote:[https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md]
