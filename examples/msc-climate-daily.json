@@ -179,34 +179,35 @@
     },
     "links": [
         {
-            "rel": "download",
-            "href": "https://dd.weather.gc.ca/climate/observations/daily/csv/",
-            "type": "text/html",
-            "title": "MSC Datamart"
-        },
-        {
-            "rel": "download",
-            "href": "https://dd.meteo.gc.ca/climate/observations/daily/csv/",
-            "type": "text/html",
-            "title": "MSC Datamart"
-        },
-        {
-            "rel": "OASIS:AMQP",
-            "href": "amqps://dd.weather.gc.ca/climate.observations.daily.csv.#",
+            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
+            "href": "https://api.weather.gc.ca/collections/climate-stations/items",
             "type": "application/json",
-            "title": "MSC Datamart AMQP"
+            "title": "Climate stations associated with this dataset"
         },
         {
-            "rel": "OASIS:AMQP",
-            "href": "amqps://dd.meteo.gc.ca/climate.observations.daily.csv.#",
-            "type": "application/json",
-            "title": "MSC Datamart AMQP"
+            "rel": "download",
+            "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
+            "type": "text/html",
+            "title": "Raw data download (CSV files)"
         },
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/climate-daily/items",
             "type": "application/json",
-            "title": "climate-daily"
-        }
+            "title": "Climate daily data access API interface"
+        },
+        {
+            "rel": "related",
+            "href": "https://eccc-msc.github.io/open-data/msc-data/climate_obs/readme_climateobs_en",
+            "type": "text/html",
+            "title": "Documentation"
+        },
+        {
+            "rel": "OASIS:MQTT",
+            "href": "mqtt://example.org:8883"
+            "wmo:topic": "wis2/CAN/eccc-msc/data/core/climate/observation",
+            "type": "application/json",
+            "title": "Data notifications"
+        },
     ]
 }
