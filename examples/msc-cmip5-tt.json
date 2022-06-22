@@ -208,6 +208,13 @@
             "href": "https://api.weather.gc.ca/collections/climate:cmip5:projected:annual:P20Y-Avg",
             "type": "application/json",
             "title": "OGC API endpoint"
+        },
+        {
+            "rel": "download",
+            "href": "https://dd.weather.gc.ca/climate/cmip5/netcdf/scenarios/RCP8.5/annual/avg_20years",
+            "type": "text/html",
+            "hreflang": "en",
+            "title": "Raw data download (NetCDF files)"
         }
     ]
 }
