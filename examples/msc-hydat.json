@@ -197,7 +197,7 @@
         },
         {
             "rel": "OASIS:MQTT",
-            "href": "mqtt://example.org:8883"
+            "href": "mqtt://example.org:8883",
             "wmo:topic": "wis2/CAN/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"
