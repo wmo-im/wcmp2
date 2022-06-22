@@ -1,0 +1,213 @@
+{
+    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
+    "conformsTo": [
+        "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
+    ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -142,
+                    28
+                ],
+                [
+                    -142,
+                    82
+                ],
+                [
+                    -52,
+                    82
+                ],
+                [
+                    -52,
+                    28
+                ],
+                [
+                    -142,
+                    28
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
+        "externalIds": [
+            {
+                "scheme": "default",
+                "value": "urn:x-wmo:md:ca.gc.ec.msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5"
+            }
+        ],
+        "title": "CMIP5 (Annual) - Projected average change in Air Temperature for 2081-2100 (50th percentile)",
+        "description": "Seasonal and annual multi-model ensembles of projected change (also known as anomalies) in mean temperature (\u00b0C) based on an ensemble of twenty-nine Coupled Model Intercomparison Project Phase 5 (CMIP5) global climate models are available for 1901-2100. Projected change in mean temperature (\u00b0C) is with respect to the reference period of 1986-2005. The 5th, 25th, 50th, 75th and 95th percentiles of the ensembles of projected change in mean temperature change are available for the historical time period, 1901-2005, and for emission scenarios, RCP2.6, RCP4.5 and RCP8.5, for 2006-2100. Twenty-year average changes in mean temperature (\u00b0C) for four time periods (2021-2040; 2041-2060; 2061-2080; 2081-2100), with respect to the reference period of 1986-2005, for RCP2.6, RCP4.5 and RCP8.5 are also available in a range of formats. The median projected change across the ensemble of CMIP5 climate models is provided. Note: Projections among climate models can vary because of differences in their underlying representation of earth system processes. Thus, the use of a multi-model ensemble approach has been demonstrated in recent scientific literature to likely provide better projected climate change information.",
+        "themes": [
+            {
+                "concepts": [
+                    "Projections",
+                    "climate",
+                    "climate change",
+                    "percentiles",
+                    "ensembles",
+                    "climate model",
+                    "temperature",
+                    "cmip5",
+                    "anomaly"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather forecasts",
+                    "Precipitation",
+                    "Air temperature",
+                    "Humidity",
+                    "Snow",
+                    "Wind",
+                    "Meteorological data"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather and Climate"
+                ]
+            },
+            {
+                "concepts": [
+                    "Atmosphere"
+                ]
+            },
+            {
+                "concepts": [
+                    "climatology"
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+            }
+        ],
+        "providers": [
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    }
+                ]
+            },
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "distributor"
+                    }
+                ]
+            }
+        ],
+        "language": "en",
+        "type": "dataset",
+        "extent": {
+            "spatial": {
+                "bbox": [
+                    [
+                        -142,
+                        28,
+                        -52,
+                        82
+                    ]
+                ],
+                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            }
+        },
+        "created": "2018-01-01",
+        "recordUpdated": "2018-09-06",
+        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
+        "formats": [
+            "WMS",
+            "SQL"
+        ]
+    },
+    "links": [
+        {
+            "rel": "search",
+            "href": "https://climate-change.canada.ca/climate-data/#/cmip5-data",
+            "type": "text/html",
+            "hreflang": "en",
+            "title": "Climate data extraction tool"
+        },
+        {
+            "rel": "related",
+            "href": "https://data.ec.gc.ca/data/climate/scientificknowledge/projected-temperature-change-based-on-cmip5-multi-model-ensembles/CMIP5_-_READ_ME_Technical_Doc_EN.pdf",
+            "type": "application/pdf",
+            "hreflang": "en",
+            "title": "Documentation"
+        },
+        {
+            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities&layer=CMIP5.TT.RCP85.YEAR.2081-2100_PCTL50",
+            "type": "image/png",
+            "title": "CMIP5.TT.RCP85.YEAR.2081-2100_PCTL50"
+        },
+        {
+            "rel": "collection",
+            "href": "https://api.weather.gc.ca/collections/climate:cmip5:projected:annual:P20Y-Avg",
+            "type": "application/json",
+            "title": "OGC API endpoint"
+        }
+    ]
+}
