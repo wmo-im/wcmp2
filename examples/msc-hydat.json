@@ -185,39 +185,22 @@
     "links": [
         {
             "rel": "download",
-            "href": "https://dd.weather.gc.ca/hydrometric/csv/",
+            "href": "https://dd.meteo.gc.ca/hydrometric/csv",
             "type": "text/html",
-            "title": "MSC Datamart"
-        },
-        {
-            "rel": "download",
-            "href": "https://dd.meteo.gc.ca/hydrometric/csv/",
-            "type": "text/html",
-            "title": "MSC Datamart"
+            "title": "Raw data download (CSV files)"
         },
         {
             "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
-            "href": "https://geo.weather.gc.ca/geomet-climate/?lang=E&service=WMS&request=GetCapabilities",
+            "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities",
             "type": "image/png",
             "title": "HYDROMETRIC.STATIONS"
         },
         {
-            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
-            "href": "https://geo.weather.gc.ca/geomet-climate/?lang=F&service=WMS&request=GetCapabilities",
-            "type": "image/png",
-            "title": "HYDROMETRIC.STATIONS"
-        },
-        {
-            "rel": "OASIS:AMQP",
-            "href": "amqps://dd.weather.gc.ca/hydrometric.csv.#",
+            "rel": "OASIS:MQTT",
+            "href": "mqtt://example.org:8883"
+            "wmo:topic": "wis2/CAN/eccc-msc/data/core/hydrology",
             "type": "application/json",
-            "title": "MSC Datamart AMQP"
-        },
-        {
-            "rel": "OASIS:AMQP",
-            "href": "amqps://dd.meteo.gc.ca/hydrometric.csv.#",
-            "type": "application/json",
-            "title": "MSC Datamart AMQP"
+            "title": "Data notifications"
         },
         {
             "rel": "items",

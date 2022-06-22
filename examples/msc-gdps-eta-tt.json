@@ -192,13 +192,7 @@
     "links": [
         {
             "rel": "download",
-            "href": "https://dd.weather.gc.ca/model_gem_global/",
-            "type": "text/html",
-            "title": "MSC Datamart"
-        },
-        {
-            "rel": "download",
-            "href": "https://dd.meteo.gc.ca/model_gem_global/",
+            "href": "https://dd.weather.gc.ca/model_gem_global",
             "type": "text/html",
             "title": "MSC Datamart"
         },
@@ -209,22 +203,11 @@
             "title": "Air temperature [\u00b0C]"
         },
         {
-            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
-            "href": "https://geo.weather.gc.ca/geomet?lang=fr&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
-            "type": "image/png",
-            "title": "Air temperature [\u00b0C]"
-        },
-        {
-            "rel": "OASIS:AMQP",
-            "href": "amqps://dd.weather.gc.ca/model_gem_global.#",
+            "rel": "OASIS:MQTT",
+            "wmo:topic": "wis2/CAN/eccc-msc/data/core/weather/nwp/global",
+            "href": "mqtt://example.org:8883",
             "type": "application/json",
-            "title": "MSC Datamart AMQP"
-        },
-        {
-            "rel": "OASIS:AMQP",
-            "href": "amqps://dd.meteo.gc.ca/model_gem_global.#",
-            "type": "application/json",
-            "title": "MSC Datamart AMQP"
+            "title": "Data notifications"
         }
     ]
 }
