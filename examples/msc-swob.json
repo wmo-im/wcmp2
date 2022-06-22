@@ -1,7 +1,7 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily",
+    "id": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
     "type": "Feature",
     "geometry": {
@@ -10,43 +10,57 @@
             [
                 [
                     -142,
-                    52
+                    28
                 ],
                 [
                     -142,
-                    84
+                    82
                 ],
                 [
                     -52,
-                    84
+                    82
                 ],
                 [
                     -52,
-                    52
+                    28
                 ],
                 [
                     -142,
-                    52
+                    28
                 ]
             ]
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily",
+        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob",
         "externalIds": [
             {
                 "scheme": "default",
-                "value": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily"
+                "value": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob"
             }
         ],
-        "title": "Daily Climate Observations",
-        "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
+        "title": "Surface Weather Observations",
+        "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
         "themes": [
             {
                 "concepts": [
-                    "Climate",
-                    "Climate archives",
-                    "Climate change"
+                    "Hydrology",
+                    "Streamflow",
+                    "Discharge",
+                    "Water level",
+                    "Water quantity",
+                    "Sediment concentration"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather forecasts",
+                    "Precipitation",
+                    "Air temperature",
+                    "Humidity",
+                    "Snow",
+                    "Wind",
+                    "Meteorological data"
                 ]
             },
             {
@@ -56,7 +70,7 @@
             },
             {
                 "concepts": [
-                    "National (CA)"
+                    "International"
                 ]
             },
             {
@@ -66,7 +80,6 @@
             },
             {
                 "concepts": [
-                    "climatology",
                     "weatherObservations"
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
@@ -155,57 +168,51 @@
                 "bbox": [
                     [
                         -142,
-                        52,
+                        28,
                         -52,
-                        84
+                        82
                     ]
                 ],
                 "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-            },
-            "temporal": {
-                "interval": [
-                    "1840",
-                    null
-                ],
-                "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
             }
         },
-        "created": "1840",
-        "recordUpdated": "2022-06-17",
+        "recordUpdated": "2022-06-22",
         "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
         "formats": [
-            "CSV"
+            "SQL",
+            "WMS"
         ]
     },
     "links": [
         {
             "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
-            "href": "https://api.weather.gc.ca/collections/climate-stations/items",
-            "type": "application/json",
+            "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
+            "type": "text/csv",
             "title": "Stations associated with this dataset"
         },
         {
             "rel": "download",
-            "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
+            "href": "https://dd.weather.gc.ca/observations/swob-ml",
             "type": "text/html",
+            "hreflang": "en",
             "title": "Raw data download (CSV files)"
         },
         {
             "rel": "items",
-            "href": "https://api.weather.gc.ca/collections/climate-daily/items",
+            "href": "https://api.weather.gc.ca/collections/swob-realtime/items",
             "type": "application/json",
-            "title": "Climate daily data access API interface"
+            "title": "Data access API interface"
         },
         {
             "rel": "related",
-            "href": "https://eccc-msc.github.io/open-data/msc-data/climate_obs/readme_climateobs_en",
+            "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
             "type": "text/html",
             "title": "Documentation"
         },
         {
             "rel": "OASIS:MQTT",
             "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/CAN/eccc-msc/data/core/climate/observations",
+            "wmo:topic": "wis2/CAN/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
         }
