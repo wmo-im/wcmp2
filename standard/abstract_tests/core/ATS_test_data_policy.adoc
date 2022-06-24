@@ -1,0 +1,26 @@
+[[ats_core_data_policy]]
+====
+[%metadata]
+label:: /conf/core/data_policy
+subject:: /req/core/data_policy
+test-purpose:: Validate that a WCMP record provides information about data policy and if applicable additional information about licensing and/or rights.
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.wmo:dataPolicy+` property in the WCMP record.
+--
+[.component,class=step]
+--
+Check that `+properties.wmo:dataPolicy+` has an element `+name+` that is equal to `+"core"+` or `+recommended+`.
+--
+[.component,class=step]
+--
+If `+properties.wmo:dataPolicy.name+` is equal to `+"recommended"+`, check for the existance of a `+properties.wmo:dataPolicy.additionalConditions+` element containing at least one object with a `+name+` property.
+--
+[.component,class=step]
+--
+Check that `+properties.wmo:dataPolicy.additionaConditions.conditions+` is `+none+`.  If the value is not `+none+`, then check for the existence of a `+properties.wmo:dataPolicy.additionalConditions.scheme+` property.
+--
+=====
+====

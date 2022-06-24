@@ -54,13 +54,9 @@ include::./core/ATS_test_record_creation_date.adoc[]
 
 include::./core/ATS_test_record_update_date.adoc[]
 
-==== Data Policy - License
+==== WMO Data Policy
 
-TODO
-
-==== Data Policy - Rights
-
-TODO
+include::./core/ATS_test_data_policy.adoc[]
 
 === Links
 

@@ -1,8 +1,0 @@
-[[rec_core_data_policy_rights]]
-[width="90%",cols="2,6a"]
-|===
-^|*Recommendation {counter:rec-id}* |*/rec/core/data_policy_rights*
-^|A |A WCMP record SHOULD describe additional conditions with the `+properties.rights+` property.
-^|B |A WCMP record's `+properties.rights+` property SHOULD be descriptive text.
-^|C |When a WCMP record's rights information is available via a URI, the record SHOULD make the link available in the `+links+` section with the appropriate link relations footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] (such as `+copyright+`).
-|===
