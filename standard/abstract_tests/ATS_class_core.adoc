@@ -22,6 +22,10 @@ include::./core/ATS_test_conformance.adoc[]
 
 include::./core/ATS_test_type.adoc[]
 
+==== Geometry
+
+include::./core/ATS_test_geometry.adoc[]
+
 ==== Title
 
 include::./core/ATS_test_title.adoc[]

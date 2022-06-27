@@ -1,0 +1,21 @@
+[[ats_core_geometry]]
+====
+[%metadata]
+label:: /conf/core/geometry
+subject:: /req/core/geometry
+test-purpose:: Validate that a WCMP record provides a valid geometry property.
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Check for the existence of one `+geometry+` property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Check that `+geometry+` property is a valid GeoJSON geometry.
+--
+=====
+====

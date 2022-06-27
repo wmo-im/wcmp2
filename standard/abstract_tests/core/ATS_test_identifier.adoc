@@ -24,7 +24,7 @@ In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that 
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is is a citation authority based on the data provider.
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is is a citation authority based on the data publisher.
 --
 
 [.component,class=step]

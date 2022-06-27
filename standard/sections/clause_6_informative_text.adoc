@@ -39,9 +39,8 @@ most efficient way possible
 JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and
 metadata harvesters
 * the browser as the catalogue: here, browsers utilize mass market search engines as the gateway to low barrier
-discovery.  This pattern works without a dedicated WIS catalogue per se, and also means discovery metadata would not
-need to be duplicated/harvested across each GISC, with the idea that search engines will harvest from the closest
-point to the authoritative source
+discovery.  This pattern may work by way of the Global Discovery Catalogue and the Global Cache, with the idea that
+search engines can index from the authoritative source
 
 ==== Granularity
 
@@ -58,21 +57,21 @@ image::images/metadata-discovery-workflow.png[Discovery metadata workflow]
 
 Common meteorological data types include:
 
-* collection (model): NWP model (OARec record metadata).  Example: Canadian Global Deterministic Prediction System
-** collection (variable): NWP model output by forecast variable (including vertical levels) (discovery metadata record).
+* collection (model): NWP model (discovery metadata record).  Example: Canadian Global Deterministic Prediction System
+** collection (variable): NWP model output by forecast variable (including vertical levels) (child discovery metadata record).
    Example: Canada GDPS air temperature
-** product options:
+** access options:
 *** API endpoint to interrogate the data/variable
 *** x/y/z/t (granule) (STAC Item with link to actual data asset)
 
 * collection (observations): surface weather observations (discovery metadata record)
 ** station metadata as WIGOS metadata via WMO OSCAR/Surface
-** product options:
+** access options:
 *** API endpoint to interrogate the data
 *** x/y/z/t (granule) (STAC Item, with link to actual data asset)
 
 * collection (product): METAR (discovery metadata record)
-** product options:
+** access options:
 *** API endpoint to interrogate the data
 *** product: single message (granule) (STAC Item with link to actual data asset)
 
@@ -86,7 +85,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 * As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing
 * As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality
 * As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city
-* As a web developer I would like to access to a search API that provides easy to read documentation, examples, and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly
+* As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly
 * As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow
 
 The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:

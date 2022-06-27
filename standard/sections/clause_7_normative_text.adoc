@@ -21,7 +21,7 @@ include::../requirements/core/REQ_validation.adoc[]
 ==== Identifier
 
 A WCMP record utilizes the OARec `+id+` property to provide a unique identifier
-to a dataset collection.  A record identifier is essential for querying and identifying
+to a dataset.  A record identifier is essential for querying and identifying
 records within the GDC.
 
 [source,json]
@@ -46,9 +46,9 @@ detection and handling.
 
 include::../requirements/core/REQ_conformance.adoc[]
 
-==== Type
+==== Properties Type
 
-WCMP records can provide descriptive information about a number of different resource types, such as
+WCMP records provide descriptive information about a number of different resource types, such as
 dataset or services.
 
 [source,json]
@@ -58,9 +58,48 @@ dataset or services.
 
 include::../requirements/core/REQ_type.adoc[]
 
+==== Geometry
+
+WCMP records provide descriptive information regarding the spatial properties of a dataset.  Spatial
+information provides a useful indicator of the location of the dataset and facilitates searching the
+Global Discovery Catalogue with spatial predicates.
+
+[source,json]
+----
+"geometry": {
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [
+                -142,
+                28
+            ],
+            [
+                -142,
+                82
+            ],
+            [
+                -52,
+                82
+            ],
+            [
+                -52,
+                28
+            ],
+            [
+                -142,
+                28
+            ]
+        ]
+    ]
+}
+----
+
+include::../requirements/core/REQ_geometry.adoc[]
+
 ==== Title
 
-A WCMP record's `+properties.title+` property is a human-readable name for a given dataset collection.
+A WCMP record's `+properties.title+` property is a human-readable name for a given dataset.
 
 [source,json]
 ----
@@ -71,7 +110,7 @@ include::../requirements/core/REQ_title.adoc[]
 
 ==== Description
 
-A WCMP record can have a `+properties.description+` property, which is a free-text summary description of the
+A WCMP record have a `+properties.description+` property, which is a free-text summary description of the
 resource the provider wishes to make discoverable.
 
 [source,json]
@@ -83,7 +122,7 @@ include::../requirements/core/REQ_description.adoc[]
 
 ==== Keywords
 
-A WCMP record can have has a `+properties.keywords+` property, typically represented using keywords, tags, key
+A WCMP record should have a `+properties.keywords+` property, typically represented using keywords, tags, key
 phrases, or classification codes.
 
 [source,json]
@@ -119,7 +158,7 @@ include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
 ==== Geospatial Extent
 
 A WCMP record has a `+properties.extent.spatial.bbox+` item property, which provides the ability to list 1..n 
-minimum bounding geometries for a given dataset collection, where:
+minimum bounding geometries for a given dataset, where:
 
 * minx: westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
 signed number between -180 and 180, less than or equal to maxx
@@ -160,8 +199,8 @@ include::../recommendations/core/PER_geospatial_extent.adoc[]
 
 A WCMP record has a `+properties.extent.temporal+` item property, which provides the ability to list 1..n
 temporal extents as time instants or time periods.  Temporal extents can be fully bound or open in either direction
-(e.g. until or before.  A temporal definition also includes resolution to be able express the granularity to
-which a given dataset's data is measured/generated/reported.
+(e.g. until or before.  A `+properties.extent.temporal.resolution+` property is able express the temporal granularity
+at which a given dataset's data is measured/generated/reported.
 
 [source,json]
 ----
