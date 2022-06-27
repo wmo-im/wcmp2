@@ -45,7 +45,7 @@ search engines can index from the authoritative source
 ==== Granularity
 
 In order to provide discovery metadata of value, it is important to clarify the granularity levels of which providers
-are to provide describing their data/products/services.  Articulating granularity will reduce catalogue "pollution"
+are to provide describing their data/services.  Articulating granularity will reduce catalogue "pollution"
 and bring the user closer to the data via their search criteria.
 
 The <<metadata-discovery-workflow>> below illustrates example metadata publiciation and discovery workflows against
@@ -70,10 +70,10 @@ Common meteorological data types include:
 *** API endpoint to interrogate the data
 *** x/y/z/t (granule) (STAC Item, with link to actual data asset)
 
-* collection (product): METAR (discovery metadata record)
+* collection (climate archive): climate daily station data (discovery metadata record)
 ** access options:
 *** API endpoint to interrogate the data
-*** product: single message (granule) (STAC Item with link to actual data asset)
+*** single observation (granule) (STAC Item with link to actual data asset)
 
 === User stories
 
@@ -92,7 +92,7 @@ The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2
 
 * As an everyday user, I would like to find easy to understand and precise weather data so that I can plan to have people over for an outdoor BBQ on a nice day
 * As a smart home owner, I would like access to frequently updated data so that I can keep my smart home monitoring up to date
-* As a weather specialist, I would like to access weather data in native data formats and subscribe to product updates, so that I can provide tailor made weather services to my users
+* As a weather specialist, I would like to access weather data in native data formats and subscribe to data updates, so that I can provide tailor made weather services to my users
 
 Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for low barrier, ubiquitous and
 efficient discovery, visualization, access of weather/climate/water (real-time, near real-time, archive, etc.) data.

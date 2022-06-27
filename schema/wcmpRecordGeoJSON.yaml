@@ -53,7 +53,7 @@ properties:
               - name
       version:
         type: string
-        description: The version or edition of a given dataset or product.
+        description: The version or edition of a given dataset.
     links:
       items:
         $ref: link.yaml

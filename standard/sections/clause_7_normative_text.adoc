@@ -392,7 +392,7 @@ include::../recommendations/core/REC_data_policy_conditions.adoc[]
 
 ===== Overview
 
-A WCMP record provides information regarding how to access and retrieve data and products. This information is specified by defining a `+links+` array property, with one or more objects to corresponding data access services.
+A WCMP record provides information regarding how to access and retrieve data. This information is specified by defining a `+links+` array property, with one or more objects to corresponding data access services.
 
 ===== Examples
 
@@ -499,7 +499,7 @@ Additional distribution information is added to allow creating more comprehensiv
         "numberOfFiles": "288 per day",
         "typicalFilesize": "60 MB",
         "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-        "productSamples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+        "samples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
         "documentation": {
           "rel": "alternate",
           "type": "text/html",

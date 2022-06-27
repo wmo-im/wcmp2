@@ -2,6 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/version*
-^|A |A WCMP record MAY provide a `+properties.version+` property to describe the version
-of a given dataset or product.
+^|A |A WCMP record MAY provide a `+properties.version+` property to describe the version of a given dataset.
 |===
