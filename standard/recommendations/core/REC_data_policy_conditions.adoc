@@ -1,0 +1,8 @@
+[[rec_core_data_policy_conditions]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/data_policy_conditions*
+^|A |A WCMP record's `+properties.wmo:dataPolicy.additionalConditions+` SHOULD provide more provider-specific context to the conditions by adding an external URL in a `+properties.wmo:dataPolicy.additionalConditions.link+` object.
+^|B |The `+properties.wmo:dataPolicy.additionalConditions.scheme+` property SHOULD be used for conditions which are based on a codelist of controlled vocabulary.
+^|C |A WCMP record's `+properties.wmo:dataPolicy.additionalConditions+` SHOULD contain a `+properties.wmo:dataPolicy.additionalConditions.link.title+` property to provide additional human-readable information about the external URL.
+|===

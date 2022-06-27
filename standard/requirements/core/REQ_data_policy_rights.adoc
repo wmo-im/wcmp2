@@ -1,8 +1,0 @@
-[[req_core_data_policy_rights]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/core/data_policy_rights*
-^|A |A WCMP record SHALL provide ONE  `+properties.rights+` property.
-^|B |A WCMP record's `+properties.rights+` property SHALL be defined using the data policy codelist.
-
-|===

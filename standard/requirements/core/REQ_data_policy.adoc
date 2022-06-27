@@ -1,0 +1,8 @@
+[[req_core_data_policy]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/data_policy*
+^|A |A WCMP record SHALL provide exactly one `+properties.wmo:dataPolicy+` property.
+^|B |A WCMP record's `+properties.wmo:dataPolicy+` property SHALL have exactly one `+name+` item which SHALL be either `+core+` or `+recommended+`.
+^|C |If a WCMP record's `+properties.wmo:dataPolicy.name+` is equal to `+recommended+`, a `+properties.wmo:dataPolicy.additionalConditions+` item SHALL be provided.
+|===

@@ -48,7 +48,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 
 ==== Type
 
-WCMP records provide descriptive information about a number of different resource types, such as
+WCMP records can provide descriptive information about a number of different resource types, such as
 dataset or services.
 
 [source,json]
@@ -71,7 +71,7 @@ include::../requirements/core/REQ_title.adoc[]
 
 ==== Description
 
-A WCMP record has a `+properties.description+` property, which is a free-text summary description of the
+A WCMP record can have a `+properties.description+` property, which is a free-text summary description of the
 resource the provider wishes to make discoverable.
 
 [source,json]
@@ -280,38 +280,74 @@ A WCMP record has a `+properties.recordUpdated+` property, which describes the d
 
 include::../requirements/core/REQ_record_update_date.adoc[]
 
-==== Data Policy - License
+==== WMO Data Policy
 
 Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data
-is expressed as `+core+` or `+recommended+`.  Additionally, `+other+` shall be used to accommodate other regulations
-(e.g. ICAO Annex 3 – Meteorological Services for International Air Navigation). To avoid uncertainty, where there
-are no limitations, the category `+NoLimitation+` can be used. (TODO: can this be license: null)?
+are expressed as `+core+` or `+recommended+`.
 
-[horizontal]
-_Note_:: 
-1. _Further information on the description of data policy is provided in the Guide to the WMO Information System (WMO-No. 1061) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]
-2. _The WIS 2.0 Global Cache will only cache data classified as `+core+`.  Data classified as `+recommended+` and `+other+` will
-not be cached by the Global Cache.  They will be provided directly by WIS 2.0 Nodes, eventually having further conditions._
+include::../requirements/core/REQ_data_policy.adoc[]
 
-WMO data policy is considered to be a *legal constraint applying to both usage and access*.
+If the resource is classified as `+recommended+`, it needs to be addressed if any additional conditions apply.  Conditions on use
+are essential by the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be addressed.
 
-If additional licenses apply, data providers can use the value `+various+`, and articulate the various
-licenses in the `+links+` property.
+include::../requirements/core/REQ_data_policy_conditions.adoc[]
 
-TODO: add example
+.Example: Core Data
+[source,json]
+----
+"wmo:dataPolicy": {
+    "name": "core"
+}
+----
 
-include::../requirements/core/REQ_data_policy_license.adoc[]
-include::../recommendations/core/REC_data_policy_license.adoc[]
-include::../recommendations/core/PER_data_policy_license.adoc[]
+.Example: Recommended Data with no additional conditions
+[source,json]
+----
+"wmo:dataPolicy": {
+    "name": "recommended",
+    "additionalConditions": [
+        {
+            "name": "none"
+        }
+    ]
+}
+----
 
-==== Data Policy - Rights
+.Example: Recommended Data with additional conditions
+[source,json]
+----
+"wmo:dataPolicy": {
+    "name": "recommended",
+    "additionalConditions": [
+        {
+            "name": "copyright",
+            "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+        }
+    ]
+}
+----
 
-A WCMP record has a `+properties.rights+` property, providing a statement that concerns all rights not addressed
-by the license such as a copyright statement.
+For having the most detailed information about data policy and additional conditions it is useful to add provider-specific context.
+include::../recommendations/core/REC_data_policy_conditions.adoc[]
 
-TODO: add example
+.Example: Recommended Data with additional conditions and provider-specific context
+[source,json]
+----
+"wmo:dataPolicy": {
+    "name": "recommended",
+    "additionalConditions": [
+        {
+            "name": "license",
+            "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode",
+            "link": {
+                "href": "https://www.eumetsat.int/eumetsat-data-licensing",
+                "title": "EUMETSAT DATA LICENSING"
+            }
+        }
+    ]
+}
+----
 
-include::../recommendations/core/REC_data_policy_rights.adoc[]
 
 ==== Distribution Information
 
