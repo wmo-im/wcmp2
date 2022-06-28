@@ -10,7 +10,7 @@ Core Metadata Profile (WCMP).
 WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core,
 and can represent a number of different resources, including:
 
-* data (NWP model output, observation collections, products)
+* data (NWP model output, observation collections)
 * data APIs and data reduction services
 * processes (analytics, etc.)
 

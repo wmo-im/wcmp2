@@ -1,0 +1,6 @@
+[[req_core_geometry]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/geometry*
+^|A |A WCMP record SHALL provide ONE `+geometry+` property to convey the spatial properties of a dataset.
+|===

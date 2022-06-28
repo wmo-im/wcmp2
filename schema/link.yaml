@@ -30,9 +30,9 @@ properties:
              typicalFilename:
                 type: string
                 description: example filename
-             productSamples:
+             samples:
                 type: object
-                description: links of sample products that can be openly accessed by users to provide a better understanding of the product
+                description: links of samples that can be openly accessed by users to provide a better understanding of the data
                 items:
                   type: object
                   $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
