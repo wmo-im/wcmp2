@@ -31,13 +31,6 @@
         ]
     },
     "properties": {
-       "identifier": "urn:x-wmo:md:us.noaa.nws.ncep:nwp.gfs_1deg",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:us.noaa.nws.ncep:nwp.gfs_1deg"
-            }
-        ],
         "recordCreated": "2022-06-23T18:36:00Z",
         "recordUpdated": "2022-06-23T18:36:00Z",
         "type": "dataset",
@@ -87,7 +80,6 @@
         ],
         "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
-        "externalID": "urn:x-wmo:md:us.noaa.nws.ncep:nwp.gfs_1deg",
         "created": "2022-06-23T18:36:00Z",
         "updated": "2022-06-23T18:36:00Z",
         "themes": [

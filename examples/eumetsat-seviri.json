@@ -39,7 +39,6 @@
         ],
         "keywordsCodespace": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode",
         "language": "en",
-        "externalID": "EO:EUM:DAT:MSG:HRSEVIRI",
         "created": "2009-03-23T00:00:00Z",
         "updated": "now",
         "publisher": [

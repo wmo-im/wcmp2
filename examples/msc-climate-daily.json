@@ -32,13 +32,6 @@
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily"
-            }
-        ],
         "title": "Daily Climate Observations",
         "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
         "themes": [

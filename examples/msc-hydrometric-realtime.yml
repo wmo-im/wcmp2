@@ -32,13 +32,6 @@
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:hydrometric.realtime",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:ca.gc.ec.msc:hydrometric.realtime"
-            }
-        ],
         "title": "Real-time hydrometric data",
         "description": "Real-time water level and flow (discharge) data collected at over 2100 hydrometric stations across Canada (last 30 days).",
         "themes": [

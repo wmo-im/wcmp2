@@ -4,7 +4,6 @@
          "http://wis.wmo.int/spec/wcmp/2.0"
     ],
     "type": "Feature",
-    "Itemtype": "Record",
     "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -31,13 +30,6 @@
         ]
     },
     "properties": {
-       "identifier": "urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354"
-            }
-        ],
         "recordCreated": "2019-05-15T00:00:00Z",
         "recordUpdated": "2019-05-15T00:00:00Z",
         "type": "dataset",
@@ -52,7 +44,6 @@
         ],
         "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
-        "externalID": "urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
         "created": "2019-05-15T00:00:00Z",
         "updated": "2019-05-15T00:00:00Z",
         "themes": [
@@ -122,8 +113,7 @@
                 "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
                 "type": "text/octet-stream",
                 "title": "GISC Beijing Cache",
-            },
-
+            }
         ]
     }
 }

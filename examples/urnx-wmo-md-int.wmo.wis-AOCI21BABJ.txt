@@ -12,13 +12,6 @@
         ]
     },
     "properties": {
-       "identifier": "urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:int.wmo.wis::AOCI21BABJ"
-            }
-        ],
         "recordCreated": "2014-09-10T00:00:00Z",
         "recordUpdated": "2014-09-10T00:00:00Z",
         "type": "dataset",
@@ -29,7 +22,6 @@
         ],
         "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
-        "externalID": "urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
         "created": "2014-09-10T00:00:00Z",
         "updated": "2014-09-10T00:00:00Z",
         "themes": [
