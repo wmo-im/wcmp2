@@ -32,13 +32,6 @@
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:nwp.msc_nwp_gdps",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:ca.gc.ec.msc:nwp.msc_nwp_gdps"
-            }
-        ],
         "title": "Global Deterministic Prediction System",
         "description": "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.",
         "themes": [

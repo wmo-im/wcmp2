@@ -32,13 +32,6 @@
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob-realtime",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob-realtime"
-            }
-        ],
         "title": "Surface Weather Observations",
         "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
         "themes": [
