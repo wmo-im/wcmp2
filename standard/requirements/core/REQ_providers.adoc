@@ -3,6 +3,6 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/providers*
 ^|A |A WCMP record SHALL provide a `+properties.providers+` property.
-^|B |A WCMP record `+properties.providers+` property SHALL provide at least TWO providers based on the metadata point of contact and the originator of the data (TODO: validation required roles) (TODO: codelist?).  Providers are defined as either a URI or inline.
+^|B |A WCMP record `+properties.providers+` property SHALL provide at least TWO providers (as multiple provider objects or a single provider object with multiple roles) based on the metadata point of contact and the originator of the data (TODO: validation required roles) (TODO: codelist?).  Providers are defined as either a URI or inline.
 
 |===
