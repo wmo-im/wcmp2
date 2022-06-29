@@ -3,6 +3,6 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/themes_topic_hierarchy*
 ^|A |A WCMP record SHALL provide a `+properties.themes+` property.
-^|B |A WCMP record `+properties.theme+` SHALL provide ONE theme based on the WIS Topic Hierarchy (additional themes are permitted based on other vocabularies).
+^|B |A WCMP record `+properties.theme+` SHALL provide ONE theme based on the WIS 2 Topic Hierarchy (additional themes are permitted based on other vocabularies).
 
 |===

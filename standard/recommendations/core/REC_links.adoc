@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/links*
-^|A |When a WCMP record's rights information is available via a URI, the record SHOULD make the link available in the `+links+` property with the appropriate link relation footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] (such as `+copyright+`)
+^|A |When a WCMP record's provides a link object to a broker, the `+wmo:topic+` property SHOULD be consistent to the WIS 2 topic as specified in a `+properties.themes+` object.
 |===

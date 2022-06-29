@@ -3,7 +3,7 @@
 [%metadata]
 label:: /conf/core/themes_topic_hierarchy
 subject:: /req/core/themes_topic_hierarchy
-test-purpose:: Validate that a WCMP record provides a themes property based on the WIS Topic Hierarchy.
+test-purpose:: Validate that a WCMP record provides a themes property based on the WIS 2 Topic Hierarchy.
 
 [.component,class=test method]
 =====
@@ -19,7 +19,7 @@ Within `+properties.themes+`, check for one theme with a scheme value of `+http:
 
 [.component,class=step]
 --
-Within the theme based on the WIS Topic Hierarchy scheme, check that all values are valid topic hierarchies.
+Within the theme based on the WIS 2 Topic Hierarchy scheme, check that all values are valid topic hierarchies.
 --
 
 =====
