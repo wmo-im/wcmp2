@@ -199,7 +199,7 @@ include::../recommendations/core/PER_geospatial_extent.adoc[]
 
 A WCMP record has a `+properties.extent.temporal+` item property, which provides the ability to list 1..n
 temporal extents as time instants or time periods.  Temporal extents can be fully bound or open in either direction
-(e.g. until or before.  A `+properties.extent.temporal.resolution+` property is able express the temporal granularity
+(e.g. until or before).  A `+properties.extent.temporal.resolution+` property is able express the temporal granularity
 at which a given dataset's data is measured/generated/reported.
 
 [source,json]
@@ -321,7 +321,7 @@ include::../requirements/core/REQ_record_update_date.adoc[]
 
 ==== WMO Data Policy
 
-Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data
+Based on the WMO Unified Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021))) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data
 are expressed as `+core+` or `+recommended+`.
 
 include::../requirements/core/REQ_data_policy.adoc[]
