@@ -60,7 +60,7 @@ include::../requirements/core/REQ_type.adoc[]
 
 ==== Geometry
 
-WCMP records provide descriptive information regarding the spatial properties of a dataset.  Spatial
+WCMP records provide descriptive information regarding the spatial properties of a dataset. Spatial
 information provides a useful indicator of the location of the dataset and facilitates searching the
 Global Discovery Catalogue with spatial predicates.
 
@@ -71,24 +71,24 @@ Global Discovery Catalogue with spatial predicates.
     "coordinates": [
         [
             [
-                -142,
-                28
+                -142.23,
+                28.0123
             ],
             [
-                -142,
-                82
+                -142.23,
+                82.456
             ],
             [
-                -52,
-                82
+                -52.16,
+                82.456
             ],
             [
-                -52,
-                28
+                -52.16,
+                28.0123
             ],
             [
-                -142,
-                28
+                -142.23,
+                28.0123
             ]
         ]
     ]
@@ -223,7 +223,7 @@ include::../recommendations/core/REC_temporal_extent.adoc[]
 
 ==== Providers
 
-A WCMP record has providers defined as part of the `+properties.providers+` property.  These elements
+A WCMP record has providers defined as part of the `+properties.providers+` property. These elements
 provide contact information based on the role of the provider.
 
 [source,json]
@@ -330,12 +330,11 @@ include::../requirements/core/REQ_record_update_date.adoc[]
 ==== WMO Data Policy
 
 Based on the WMO Unified Data Policy Resolution (Res.1) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data
-are expressed as `+core+` or `+recommended+`.
+are classified as `+core+` or `+recommended+`.
 
 include::../requirements/core/REQ_data_policy.adoc[]
 
-If the resource is classified as `+recommended+`, it needs to be addressed if any additional conditions apply.  Conditions on use
-are essential by the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be addressed.
+If the resource is classified as `+recommended+`, it needs to be indicated if any additional conditions apply.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
 
 include::../requirements/core/REQ_data_policy_conditions.adoc[]
 
