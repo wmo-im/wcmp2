@@ -60,7 +60,7 @@
                 "concepts": [
                     "Global",
                     "Prediction"
-					"Medium-range"
+		    "Medium-range"
                 ]
             },
         ],
