@@ -22,9 +22,13 @@ include::./core/ATS_test_conformance.adoc[]
 
 include::./core/ATS_test_type.adoc[]
 
-==== Geometry
+==== Geospatial Extent
 
-include::./core/ATS_test_geometry.adoc[]
+include::./core/ATS_test_extent_geospatial.adoc[]
+
+==== Temporal Extent
+
+include::./core/ATS_test_extent_temporal.adoc[]
 
 ==== Title
 
@@ -37,14 +41,6 @@ include::./core/ATS_test_description.adoc[]
 ==== Themes and Topic Hierarchy
 
 include::./core/ATS_test_themes_topic_hierarchy.adoc[]
-
-==== Geospatial Extent
-
-include::./core/ATS_test_geospatial_extent.adoc[]
-
-==== Temporal Extent
-
-include::./core/ATS_test_temporal_extent.adoc[]
 
 ==== Providers
 

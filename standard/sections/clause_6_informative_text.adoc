@@ -112,7 +112,7 @@ The OGC Records - API - Part 1: Core specification:
 The GDC will provide a central search endpoint, enabling users to traverse, browse and search
 data holdings in WIS 2.0.  Key search predicate capabilities include:
 
-* spatial
+* geospatial
 * temporal (time instant or time period)
 * equality predicates (i.e. `+property=value+`).
 * full-text (`+q=+`)

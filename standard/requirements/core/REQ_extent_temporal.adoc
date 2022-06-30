@@ -1,0 +1,7 @@
+[[req_core_extent_temporal]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/extent_temporal*
+^|A |A WCMP record SHALL provide ONE `+time+` item property using the Gregorian calendar.
+^|B |A WCMP record SHALL provide the value of `+null+` when a conformant time cannot be derived.
+|===

@@ -1,0 +1,37 @@
+[[ats_core_extent_geospatial]]
+====
+[%metadata]
+label:: /conf/core/extent_geospatial
+subject:: /req/core/extent_geospatial
+test-purpose:: Validate that a WCMP record provides a valid geometry property.
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Check for the existence of one `+geometry+` property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Check that all `+geometry+` value data types are integers or floats.
+--
+
+[.component,class=step]
+--
+Check that `+geometry+` longitudinal values are between -180 and 180.
+--
+
+[.component,class=step]
+--
+Check that `+geometry+` latitudinal values are between -90 and 90.
+--
+
+[.component,class=step]
+--
+Check that `+geometry+` property is a valid GeoJSON geometry.
+--
+
+=====
+====

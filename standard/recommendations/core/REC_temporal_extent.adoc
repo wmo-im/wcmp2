@@ -1,6 +1,0 @@
-[[rec_core_temporal_extent]]
-[width="90%",cols="2,6a"]
-|===
-^|*Recommendation {counter:rec-id}* |*/rec/core/temporal_extent*
-^|A |For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (`+properties.extent.temporal.resolution+`) as an ISO 8601 duration (e.g. `+P1D+`).
-|===
