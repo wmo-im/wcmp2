@@ -4,6 +4,6 @@
 ^|*Requirement {counter:req-id}* |*/req/core/links*
 ^|A |A WCMP record SHALL define a `+links+` property.
 ^|B |A WCMP record `+links+` property SHALL contain at least one link to the data access service allowing users to download the data in one of the supported formats.
-^|C |A WCMP record `+links+` property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will accessible from the WIS2 Global Broker. The define topic name shall follow the topic hierarchy defined in (TODO add the reference to the topic hierarchy documentation).
+^|C |A WCMP record `+links+` property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will accessible from the WIS 2 Global Broker. The topic shall follow the WIS 2 topic hierarchy defined in (TODO add the reference to the topic hierarchy documentation).
 ^|D |A WCMP record `+links+` property SHALL contain a Web Accessible Folder (WAF) OR an API link for non real-time data (e.g. climate records, hydrometric data archives).
 |===
