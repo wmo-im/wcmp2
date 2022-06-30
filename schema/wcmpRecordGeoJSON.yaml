@@ -8,6 +8,7 @@ required:
   - id
   - conformsTo
   - geometry
+  - time
   - properties
   - links
 properties:
@@ -23,37 +24,39 @@ properties:
       - wmo:dataPolicy
     properties:
       wmo:dataPolicy:
-          type: object
-          description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
-          properties:
-              name:
+        type: object
+        description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
+        properties:
+          name:
+            type: string
+            description: The WMO Unified Data Policy identifier (`core` or `recommended`).
+            enum:
+              - core
+              - recommended
+          additionalConditions:
+            type: array
+            items:
+              type: object
+              description: Additional conditions applied to recommended data
+              properties:
+                name:
                   type: string
-                  description: The WMO Unified Data Policy identifier (`core` or `recommended`).
-                  enum:
-                      - core
-                      - recommended
-              additionalConditions:
-                  type: array
-                  items:
-                      type: object
-                      description: Additional conditions applied to recommended data
-                      properties:
-                          name:
-                              type: string
-                              description: Name of additional condition, from a codelist, or the string value `none` if there are no additional conditions on a recommended dataset.
-                          scheme:
-                              type: string
-                              description: codelist or controlled vocabulary to which the condition applies to.
-                          link:
-                              $ref: link.yaml
-                      required:
-                          - name
-                  minItems: 1
-          required:
-              - name
+                  description: Name of additional condition, from a codelist, or the string value `none` if there are no additional conditions on a recommended dataset.
+                scheme:
+                  type: string
+                  description: codelist or controlled vocabulary to which the condition applies to.
+                link:
+                  $ref: link.yaml
+              required:
+                - name
+            minItems: 1
+        required:
+          - name
       version:
         type: string
         description: The version or edition of a given dataset.
+      extent:
+        $ref: 'https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/standard/openapi/schemas/collections/extent.yaml'
     links:
       items:
         $ref: link.yaml

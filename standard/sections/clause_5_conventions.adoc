@@ -12,6 +12,12 @@ All requirements and conformance tests that appear in this document are denoted 
 
 Examples provided in this specification are encoded as GeoJSON.
 
+Complete examples can be found at https://schemas.wmo.int/wcmp/2.0/examples
+
+=== Schemas
+
+The WCMP 2.0 schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml 
+
 === Schema representation
 
 JSON Schema footnote:[https://json-schema.org] objects are used throughout this specificiation to define the structure
