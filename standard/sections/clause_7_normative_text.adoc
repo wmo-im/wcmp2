@@ -120,7 +120,7 @@ advertising broker services.
 "themes": [
   {
     "concepts": [
-      "wis2/CA/ECCC-MSC/data/core/weather/surface-based-observations"
+      "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
     ],
     "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
 ----
@@ -455,7 +455,7 @@ Below is an example of two link objects, providing both search and MQTT subscrip
     "type" : "application/json",
     "title": "WIS 2 notification service",
     "href" : "mqtts://broker.example.org",
-    "wmo:topic": "cache/a/wis2/CA/ECCC-MSC/data/core/weather/surface-based-observations"
+    "wmo:topic": "cache/a/wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]
 ----
