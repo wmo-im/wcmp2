@@ -1,0 +1,6 @@
+[[per_core_extent_temporal]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/core/extent_temporal*
+^|A |A WCMP record MAY provide multiple `+properties.extent.temporal+` item properties in order to express additional temporal extents in other temporal reference systems.
+|===

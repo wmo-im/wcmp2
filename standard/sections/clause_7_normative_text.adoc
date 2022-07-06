@@ -58,45 +58,6 @@ dataset or services.
 
 include::../requirements/core/REQ_type.adoc[]
 
-==== Geometry
-
-WCMP records provide descriptive information regarding the spatial properties of a dataset.  Spatial
-information provides a useful indicator of the location of the dataset and facilitates searching the
-Global Discovery Catalogue with spatial predicates.
-
-[source,json]
-----
-"geometry": {
-    "type": "Polygon",
-    "coordinates": [
-        [
-            [
-                -142.23,
-                28.0123
-            ],
-            [
-                -142.23,
-                82.456
-            ],
-            [
-                -52.16,
-                82.456
-            ],
-            [
-                -52.16,
-                28.0123
-            ],
-            [
-                -142.23,
-                28.0123
-            ]
-        ]
-    ]
-}
-----
-
-include::../requirements/core/REQ_geometry.adoc[]
-
 ==== Title
 
 A WCMP record's `+properties.title+` property is a human-readable name for a given dataset.
@@ -159,17 +120,56 @@ advertising broker services.
 "themes": [
   {
     "concepts": [
-      "wis2/CA/ECCC-MSC/data/core/weather/surface-based-observations"
+      "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
     ],
     "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
 ----
 
 include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
 
-==== Geospatial Extent
+==== Geospatial and Temporal Extents
 
-A WCMP record has a `+properties.extent.spatial.bbox+` item property, which provides the ability to list 1..n 
-minimum bounding geometries for a given dataset, where:
+===== Geospatial Extent
+
+WCMP records provide descriptive information regarding the geospatial properties of a dataset.  Geospatial
+extents provide a useful indicator of the location of the dataset and facilitates searching the
+Global Discovery Catalogue with geospatial predicates.
+
+[source,json]
+----
+"geometry": {
+    "type": "Polygon",
+    "coordinates": [[
+            [-142.23, 28.0123],
+            [-142.23, 82.456],
+            [-52.16, 82.456],
+            [-52.16, 28.0123],
+            [-142.23, 28.0123]
+    ]]
+}
+----
+
+[source,json]
+----
+"geometry": {
+    "type": "Point",
+    "coordinates": [-79.381710, 43.651890]
+}
+----
+
+[source,json]
+----
+"geometry": null
+----
+
+include::../requirements/core/REQ_extent_geospatial.adoc[]
+include::../recommendations/core/REC_extent_geospatial_point.adoc[]
+
+===== Additional Geospatial Extents
+
+A WCMP record is able to communicate additional extents (for example, for non-geographic data, or multiple
+temporal extents) via the `+properties.extent+` property.  The `+properties.extent.spatial.bbox+` property
+provides the ability to list 1..n minimum bounding geometries for a given dataset, where:
 
 * minx: westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
 signed number between -180 and 180, less than or equal to maxx
@@ -180,39 +180,63 @@ signed number between -180 and 180, greater than or equal to minx
 * maxy: northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
 signed number between -90 and 90, greater than or equal to miny
 
-This property also facilitates catalogue searches with spatial predicate (within extent, etc.).
-
-TODO: resolve https://github.com/opengeospatial/ogcapi-records/issues/168
+This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
 
 [source,json]
 ----
 "extent": {
   "spatial": {
     "bbox": [
-      [
-        -142,
-        42,
-        -52,
-        84
-      ]
+      [-142, 42, -52, 84]
     ],
     "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
   }
 }
 ----
 
-include::../requirements/core/REQ_geospatial_extent.adoc[]
-include::../recommendations/core/REC_geospatial_extent-brevity.adoc[]
-include::../recommendations/core/REC_geospatial_extent-point.adoc[]
-include::../recommendations/core/PER_geospatial_extent.adoc[]
+include::../recommendations/core/PER_extent_geospatial.adoc[]
 
+====== Temporal Extent
 
-==== Temporal Extent
+WCMP records provide descriptive information regarding the temporal properties of a dataset.  Temporal
+extents provide a useful indicator of the date/time period of the dataset and facilitates searching the
+Global Discovery Catalogue with temporal predicates.
 
-A WCMP record has a `+properties.extent.temporal+` item property, which provides the ability to list 1..n
-temporal extents as time instants or time periods.  Temporal extents can be fully bound or open in either direction
-(e.g. until or before.  A `+properties.extent.temporal.resolution+` property is able express the temporal granularity
-at which a given dataset's data is measured/generated/reported.
+[source,json]
+----
+"time": {
+  "date": "2021-10-30"
+}
+----
+
+[source,json]
+----
+"time": {
+  "timestamp": "2021-10-30T11:11:11Z"
+}
+----
+
+[source,json]
+----
+"time": {
+  "interval" : ["2020-10-30", "2021-10-30"],
+  "resolution": "P1D"
+}
+----
+
+[source,json]
+----
+"time": null
+----
+
+include::../requirements/core/REQ_extent_temporal.adoc[]
+include::../recommendations/core/REC_extent_temporal.adoc[]
+
+===== Additional Temporal Extents
+
+A WCMP record is able to communicate additional time instants or periods via the `+properties.extent.temporal+` item property.
+Temporal extents can be fully bound or open in either direction (e.g. until or before.  A `+properties.extent.temporal.resolution+`
+property is able express the temporal granularity at which a given dataset's data is measured/generated/reported.
 
 [source,json]
 ----
@@ -230,8 +254,7 @@ at which a given dataset's data is measured/generated/reported.
 }
 ----
 
-include::../requirements/core/REQ_temporal_extent.adoc[]
-include::../recommendations/core/REC_temporal_extent.adoc[]
+include::../recommendations/core/PER_extent_temporal.adoc[]
 
 ==== Providers
 
@@ -432,7 +455,7 @@ Below is an example of two link objects, providing both search and MQTT subscrip
     "type" : "application/json",
     "title": "WIS 2 notification service",
     "href" : "mqtts://broker.example.org",
-    "wmo:topic": "cache/a/wis2/CA/ECCC-MSC/data/core/weather/surface-based-observations"
+    "wmo:topic": "cache/a/wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]
 ----
