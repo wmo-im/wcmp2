@@ -35,7 +35,7 @@ We consider the following:
 
 * flexible metadata publishing mechanisms: providers need to be able to publish discovery metadata in the easiest and
 most efficient way possible
-* basic, HTTPS crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
+* basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
 JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and
 metadata harvesters
 * the browser as the catalogue: here, browsers utilize mass market search engines as the gateway to low barrier
