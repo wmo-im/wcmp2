@@ -23,11 +23,12 @@ jobs:
         uses: actions/checkout@v3
       - name: build KPI documentation
         run: |
-          mkdir -p /tmp/wcmp2 \
+          mkdir -p /tmp/wcmp2/standard/images \
           && cd standard \
           && asciidoctor --trace -o /tmp/wcmp2/${FILE_BASENAME}.html index.adoc \
           && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/${FILE_BASENAME}.docx \
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/${FILE_BASENAME}.pdf index.adoc \
+          && cp images/*.png /tmp/wcmp2/standard/images
           && cd ..
       - name: checkout gh-pages branch
         uses: actions/checkout@v3
