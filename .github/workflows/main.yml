@@ -1,11 +1,9 @@
 name: WCMP2 specification
 
-#on:
-#  push:
-#    paths:
-#    - 'standard/**'
-
-on: [pull_request]
+on:
+  push:
+    paths:
+    - 'standard/**'
 
 env:
   FILE_BASENAME: wcmp2-DRAFT
