@@ -356,7 +356,7 @@ include::../requirements/core/REQ_record_creation_date.adoc[]
 
 ==== Record Update Date
 
-A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was changed.
+A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was last updated.
 
 [source,json]
 ----

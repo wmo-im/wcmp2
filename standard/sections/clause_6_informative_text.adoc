@@ -114,7 +114,7 @@ data holdings in WIS 2.0.  Key search predicate capabilities include:
 
 * geospatial
 * temporal (time instant or time period)
-* equality predicates (i.e. `+property=value+`).
+* equality predicates (i.e. `+property=value+`) for any defined property
 * full-text (`+q=+`)
 
 Given the WIS 2.0 principles, use cases, OGC API - Records - Part 1: Core, and the WIS 2.0 Global Discovery
