@@ -1,0 +1,28 @@
+name: Test WCMP2 specification build
+
+on:
+  pull_request:
+    paths:
+    - 'standard/**'
+
+env:
+  FILE_BASENAME: wcmp2-DRAFT
+
+jobs:
+  build-wcmp2:
+    name: Generate KPI documentation
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y \
+          && sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
+      - name: checkout repository
+        uses: actions/checkout@v3
+      - name: build KPI documentation
+        run: |
+          mkdir -p /tmp/wcmp2/standard/images \
+          && cd standard \
+          && asciidoctor --trace -o /tmp/wcmp2/standard/${FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/standard/${FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/${FILE_BASENAME}.pdf index.adoc
