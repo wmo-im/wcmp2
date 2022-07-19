@@ -6,7 +6,7 @@ on:
     - 'standard/**'
 
 env:
-  FILE_BASENAME: wcmp2-DRAFT
+  FILE_BASENAME: wcmp2-DRAFT-${{ github.base_ref }}
 
 jobs:
   build-wcmp2:
@@ -25,4 +25,21 @@ jobs:
           && cd standard \
           && asciidoctor --trace -o /tmp/wcmp2/standard/${FILE_BASENAME}.html index.adoc \
           && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/standard/${FILE_BASENAME}.docx \
-          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/${FILE_BASENAME}.pdf index.adoc
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/${FILE_BASENAME}.pdf index.adoc \
+          && cd ..
+      - name: checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - name: update gh-pages branch and publish
+        run: |
+          git checkout gh-pages
+          git config --global user.email "tomkralidis@gmail.com"
+          git config --global user.name "Tom Kralidis"
+          rm -rf standard
+          mv -f /tmp/wcmp2/* .
+          git add .
+          git commit -am "update WMCP 2 build"
+          git push
+          echo "Document located at: https://wmo-im.github.io/wcmp2/standard/${FILE_BASENAME}.docx"
+          echo "Document located at: https://wmo-im.github.io/wcmp2/standard/${FILE_BASENAME}.pdf"
