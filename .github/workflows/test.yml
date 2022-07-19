@@ -1,14 +1,12 @@
 name: Test WCMP2 specification build
 
-#on:
-#  pull_request:
-#    paths:
-#    - 'standard/**'
-
-on: [pull_request]
+on:
+  pull_request:
+    paths:
+    - 'standard/**'
 
 env:
-  FILE_BASENAME: wcmp2-DRAFT-${{ github.head_ref }}
+  FILE_BASENAME: wcmp2-DRAFT-pull-request-${{ github.head_ref }}
 
 jobs:
   build-wcmp2:
@@ -38,7 +36,7 @@ jobs:
           git checkout gh-pages
           git config --global user.email "tomkralidis@gmail.com"
           git config --global user.name "Tom Kralidis"
-          rm -rf standard
+          rm -rf "standard/wcmp2-DRAFT-pull-request-*"
           mv -f /tmp/wcmp2/* .
           git add .
           git commit -am "update WMCP 2 build"
