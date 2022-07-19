@@ -8,7 +8,7 @@ name: Test WCMP2 specification build
 on: [pull_request]
 
 env:
-  FILE_BASENAME: wcmp2-DRAFT-{{ github.head_ref }}
+  FILE_BASENAME: wcmp2-DRAFT-${{ github.head_ref }}
 
 jobs:
   build-wcmp2:
