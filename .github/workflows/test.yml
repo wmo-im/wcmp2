@@ -36,7 +36,7 @@ jobs:
           git checkout gh-pages
           git config --global user.email "tomkralidis@gmail.com"
           git config --global user.name "Tom Kralidis"
-          mv -f "standard/wcmp2-DRAFT.*" /tmp/wcmp2/ 2>/dev/null
+#          mv -f "standard/wcmp2-DRAFT.*" /tmp/wcmp2/ 2>/dev/null
           rm -rf standard
           mv -f /tmp/wcmp2/* .
           git add .
