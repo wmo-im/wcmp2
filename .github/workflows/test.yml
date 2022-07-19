@@ -1,12 +1,14 @@
 name: Test WCMP2 specification build
 
-on:
-  pull_request:
-    paths:
-    - 'standard/**'
+#on:
+#  pull_request:
+#    paths:
+#    - 'standard/**'
+
+on: [pull_request]
 
 env:
-  FILE_BASENAME: wcmp2-DRAFT-${{ github.base_ref }}
+  FILE_BASENAME: wcmp2-DRAFT-${GITHUB_REF##*/}
 
 jobs:
   build-wcmp2:
