@@ -14,6 +14,9 @@ and can represent a number of different resources, including:
 * data APIs and data reduction services
 * processes (analytics, etc.)
 
+WCMP discovery metadata provides description at the granularity level of a dataset.  Station, instrument
+and observation metadata are supported as part of the WIGOS Metadata Standard footnote:[https://library.wmo.int/doc_num.php?explnum_id=10109].
+
 This specification defines the conformance requirements for the WMO Core Metadata
 Profile.  Annex A defines the abstract test suite. Annex B provides normative information
 on codelists.
