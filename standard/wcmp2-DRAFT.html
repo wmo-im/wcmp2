@@ -515,7 +515,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_granularity">6.1.3. Granularity</a></li>
 </ul>
 </li>
-<li><a href="#_user_stories">6.2. User stories</a></li>
+<li><a href="#_user_stories">6.2. User stories</a>
+<ul class="sectlevel3">
+<li><a href="#_domain_specialist">6.2.1. Domain specialist</a></li>
+<li><a href="#_mass_market">6.2.2. Mass market</a></li>
+<li><a href="#_developers">6.2.3. Developers</a></li>
+</ul>
+</li>
 <li><a href="#_ogc_api_records_part_1_core">6.3. OGC API - Records - Part 1: Core</a></li>
 <li><a href="#_the_wis_2_0_global_discovery_catalogue">6.4. The WIS 2.0 Global Discovery Catalogue</a></li>
 <li><a href="#_mass_market_considerations">6.5. Mass market considerations</a></li>
@@ -745,14 +751,6 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 <div class="paragraph">
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">term name</dt>
-<dd>
-<p>text of the definition</p>
-</dd>
-</dl>
 </div>
 <div class="sect2">
 <h3 id="_abbreviated_terms"><a class="anchor" href="#_abbreviated_terms"></a>4.1. Abbreviated terms</h3>
@@ -1123,6 +1121,8 @@ Example: Canada GDPS air temperature</p>
 <p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>, the following user stories provide a
 description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective:</p>
 </div>
+<div class="sect3">
+<h4 id="_domain_specialist"><a class="anchor" href="#_domain_specialist"></a>6.2.1. Domain specialist</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1132,19 +1132,33 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 <p>As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant/useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. That should work for unprocessed outputs of a prediction model or a satellite as well as for services that offer more sophisticated access to the data, e.g. tailing</p>
 </li>
 <li>
-<p>As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing</p>
+<p>As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow</p>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mass_market"><a class="anchor" href="#_mass_market"></a>6.2.2. Mass market</h4>
+<div class="ulist">
+<ul>
 <li>
-<p>As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality</p>
+<p>As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing</p>
 </li>
 <li>
 <p>As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city</p>
 </li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_developers"><a class="anchor" href="#_developers"></a>6.2.3. Developers</h4>
+<div class="ulist">
+<ul>
 <li>
-<p>As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly</p>
+<p>As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality</p>
 </li>
 <li>
-<p>As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow</p>
+<p>As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly</p>
 </li>
 </ul>
 </div>
@@ -1167,6 +1181,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 <div class="paragraph">
 <p>Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for low barrier, ubiquitous and
 efficient discovery, visualization, access of weather/climate/water (real-time, near real-time, archive, etc.) data.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1207,7 +1222,7 @@ data holdings in WIS 2.0.  Key search predicate capabilities include:</p>
 <p>temporal (time instant or time period)</p>
 </li>
 <li>
-<p>equality predicates (i.e. <code>property=value</code>) for any defined property</p>
+<p>equality predicates (i.e. <code>property=value</code>) for any defined discovery metadata property</p>
 </li>
 <li>
 <p>full-text (<code>q=</code>)</p>
@@ -2576,6 +2591,26 @@ resource identification using the DOI framework.</p>
 </tr>
 </tbody>
 </table>
+<table id="per_core_links" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/core/links</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record links property MAY additionally contain a Web Accessible Folder (WAF) OR an API link for real-time data.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -3385,7 +3420,7 @@ resource identification using the DOI framework.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-11 01:32:59 UTC
+Last updated 2022-08-11 01:51:33 UTC
 </div>
 </div>
 </body>
