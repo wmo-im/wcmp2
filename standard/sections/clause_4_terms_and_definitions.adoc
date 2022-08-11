@@ -6,9 +6,6 @@ This document also uses terms defined in the OGC Standard for Modular specificat
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-term name::
-text of the definition
-
 === Abbreviated terms
 
 .Symbols and abbreviated terms
