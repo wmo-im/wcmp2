@@ -18,6 +18,36 @@ are valid to WCMP are therefore valid to the OGC API - Records record schema.
 
 include::../requirements/core/REQ_validation.adoc[]
 
+==== Granularity
+
+A WCMP record provides a description at the granularity of a dataset, which facilitates clearer
+cataloguing and discovery workflow, in combination with data services or APIs, which provide
+access/query/filter at a lower level of granularity (parameter, variable, spatiotemporal extents).
+
+[source,json]
+"themes": [
+  {
+    "concepts": [
+      "Temperature",
+      "Relative humidity",
+      "u-component of Wind",
+      "v-component of Wind"
+    ],
+    "scheme": "http://codes.wmo.int/grib2/codeflag/_4.2"
+----
+
+[source,json]
+"themes": [
+  {
+    "concepts": [
+      "Temperature/air temperature",
+      "Dewpoint temperature"
+    ],
+    "scheme": "http://codes.wmo.int/bufr4/b"
+----
+
+include::../recommendations/core/REQ_granularity.adoc[]
+
 ==== Identifier
 
 A WCMP record utilizes the OARec `+id+` property to provide a unique identifier
@@ -100,7 +130,7 @@ phrases, or classification codes.
 
 include::../recommendations/core/REC_keywords.adoc[]
 
-==== Themes and Topic Hierarchy
+==== Themes and Topic Hierarchy [[themes]]
 
 A WCMP record has a `+properties.themes+` property, which is a knowledge organization system used to classify
 the data that the record is describing.  A WCMP can have one or more themes.  The WIS 2 Topic Hierarchy is put
@@ -432,7 +462,7 @@ include::../recommendations/core/REC_data_policy_conditions.adoc[]
 ----
 
 
-==== Distribution Information
+==== Distribution Information [[distribution]]
 
 ===== Overview
 
