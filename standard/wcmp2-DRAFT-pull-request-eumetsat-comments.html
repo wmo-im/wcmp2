@@ -727,6 +727,9 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <li>
 <p><a id="json-schema"></a> IETF: JSON Schema (2022) <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
 </li>
+<li>
+<p><a id="wis2-topic-hierarchy"></a> WMO: WIS2 Topic Hierarchy (2022) <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup></p>
+</li>
 </ul>
 </div>
 </div>
@@ -919,8 +922,8 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <div class="sect2">
 <h3 id="_schema_representation"><a class="anchor" href="#_schema_representation"></a>5.4. Schema representation</h3>
 <div class="paragraph">
-<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup> objects are used throughout this specificiation to define the structure
-of metadata records. These schema / objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup>.
+<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup> objects are used throughout this specificiation to define the structure
+of metadata records. These schema / objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup>.
 YAML is a superset of JSON, and in this specification are regarded as equivalent.</p>
 </div>
 <div class="paragraph">
@@ -1117,13 +1120,13 @@ Example: Canada GDPS air temperature</p>
 <div class="sect2">
 <h3 id="_user_stories"><a class="anchor" href="#_user_stories"></a>6.2. User stories</h3>
 <div class="paragraph">
-<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup>, the following user stories provide a
+<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>, the following user stories provide a
 description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>As an NWP center operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business</p>
+<p>As an NWP centre operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business</p>
 </li>
 <li>
 <p>As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant/useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. That should work for unprocessed outputs of a prediction model or a satellite as well as for services that offer more sophisticated access to the data, e.g. tailing</p>
@@ -1146,7 +1149,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 </ul>
 </div>
 <div class="paragraph">
-<p>The following WIS 2.0 marketing video <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup> adds the following user stories:</p>
+<p>The following WIS 2.0 marketing video <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup> adds the following user stories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1327,7 +1330,7 @@ records within the GDC.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:ca.gc.ec.msc:observations.swob"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:CAN:eccc-msc:observations.swob"</code></pre>
 </div>
 </div>
 <table id="req_core_identifier" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1351,17 +1354,23 @@ records within the GDC.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record identifier SHALL have a the following notation: <code>urn:x-wmo:md:{citation_authority}:{local_identifier}</code>.</p>
+<p>A WCMP record identifier SHALL have a the following notation: <code>urn:x-wmo:md:{country}:{centre_id}:{local_identifier}</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record identifier SHALL contain a citation authority based on the Internet domain name of the data publisher (e.g. <code>gov.noaa</code>, <code>edu.ucar.ncar</code>, <code>cn.gov.cma</code>, <code>ca.gc.ec.msc</code>, <code>uk.gov.metoffice</code>).</p>
+<p>A WCMP record identifier SHALL contain a <code>country</code> based on the associated vocabulary as specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record identifier SHALL contain a <code>centre_id</code> based on the associated vocabulary as specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WCMP record identifier SHALL contain a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or special/accented characters.</p>
 </div></div></td>
@@ -2139,7 +2148,7 @@ resource identification using the DOI framework.</p>
 <div class="sect3">
 <h4 id="_wmo_data_policy"><a class="anchor" href="#_wmo_data_policy"></a>7.1.15. WMO Data Policy</h4>
 <div class="paragraph">
-<p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.</p>
+<p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.</p>
 </div>
 <table id="req_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2663,7 +2672,7 @@ resource identification using the DOI framework.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, check that there are four tokens, delimited by <code>:</code>.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, check that there are <strong>six</strong> tokens, delimited by <code>:</code>.</p>
 </div>
 </div>
 </div>
@@ -2677,7 +2686,14 @@ resource identification using the DOI framework.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fourth token is is a citation authority based on the data publisher.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fourth token is is a country based on the WIS Topic Hierarchy and controlled vocabulary.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fifth token is is a centre id based on the WIS Topic Hierarchy and controlled vocabulary.</p>
 </div>
 </div>
 </div>
@@ -3349,24 +3365,27 @@ resource identification using the DOI framework.</p>
 <a href="#_footnoteref_20">20</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_21">
-<a href="#_footnoteref_21">21</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
+<a href="#_footnoteref_21">21</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
 </div>
 <div class="footnote" id="_footnotedef_22">
-<a href="#_footnoteref_22">22</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
+<a href="#_footnoteref_22">22</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_23">
-<a href="#_footnoteref_23">23</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
+<a href="#_footnoteref_23">23</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
 </div>
 <div class="footnote" id="_footnotedef_24">
-<a href="#_footnoteref_24">24</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
+<a href="#_footnoteref_24">24</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
 </div>
 <div class="footnote" id="_footnotedef_25">
-<a href="#_footnoteref_25">25</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_25">25</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
+</div>
+<div class="footnote" id="_footnotedef_26">
+<a href="#_footnoteref_26">26</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-11 01:11:49 UTC
+Last updated 2022-08-11 01:27:41 UTC
 </div>
 </div>
 </body>
