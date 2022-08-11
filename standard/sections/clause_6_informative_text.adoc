@@ -138,7 +138,7 @@ Given the WIS 2.0 principles, use cases, OGC API - Records - Part 1: Core, and t
 Catalogue, WCMP provides a standards-based, clear and well-defined information model to facilitate the
 management and discovery of data within WIS 2.0.
 
-=== Mass market considerations ===
+=== Mass market considerations
 
 Given WIS 2.0 principle 11 (publishing metadata in a way that can be indexed by commercial search engines),
 WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
