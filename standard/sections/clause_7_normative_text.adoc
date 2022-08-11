@@ -25,6 +25,7 @@ cataloguing and discovery workflow, in combination with data services or APIs, w
 access/query/filter at a lower level of granularity (parameter, variable, spatiotemporal extents).
 
 [source,json]
+----
 "themes": [
   {
     "concepts": [
@@ -37,6 +38,7 @@ access/query/filter at a lower level of granularity (parameter, variable, spatio
 ----
 
 [source,json]
+----
 "themes": [
   {
     "concepts": [
