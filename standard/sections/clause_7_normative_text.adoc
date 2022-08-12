@@ -48,7 +48,7 @@ access/query/filter at a lower level of granularity (parameter, variable, spatio
     "scheme": "http://codes.wmo.int/bufr4/b"
 ----
 
-include::../recommendations/core/REQ_granularity.adoc[]
+include::../recommendations/core/REC_granularity.adoc[]
 
 ==== Identifier
 
