@@ -7,12 +7,12 @@ The metadata standard defined herein is an informal extension of the Internation
 OGC API - Records - Part 1: Core.  This metadata standard shall be referred to as the WMO
 Core Metadata Profile (WCMP).
 
-WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core,
-and can represent a number of different resources, including:
+WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core.
 
-* data (NWP model output, observation collections)
-* data APIs and data reduction services
-* processes (analytics, etc.)
+The core purpose of WCMP is to describe **datasets**.  While WCMP is able to describe any
+resource (datasets, APIs and data reduction services, processes, analytics, etc.), they key
+component for international data exchange is data.  Services and APIs operating on resources
+may be represented as part of their own metadata, or associated thorugh WCMP links.
 
 WCMP discovery metadata provides description at the granularity level of a dataset.  Station, instrument
 and observation metadata are supported as part of the WIGOS Metadata Standard footnote:[https://library.wmo.int/doc_num.php?explnum_id=10109].

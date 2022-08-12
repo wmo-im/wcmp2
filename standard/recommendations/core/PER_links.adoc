@@ -1,0 +1,6 @@
+[[per_core_links]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/core/links*
+^|A |A WCMP record links property MAY additionally contain a Web Accessible Folder (WAF) OR an API link for real-time data.
+|===

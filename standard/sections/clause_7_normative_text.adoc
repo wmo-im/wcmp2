@@ -58,7 +58,7 @@ records within the GDC.
 
 [source,json]
 ----
-"id": "urn:x-wmo:md:ca.gc.ec.msc:observations.swob"
+"id": "urn:x-wmo:md:CAN:eccc-msc:observations.swob"
 ----
 
 include::../requirements/core/REQ_identifier.adoc[]
@@ -591,3 +591,4 @@ Additional distribution information is added to allow creating more comprehensiv
 include::../requirements/core/REQ_links.adoc[]
 include::../recommendations/core/REC_distribution.adoc[]
 include::../recommendations/core/REC_links.adoc[]
+include::../recommendations/core/PER_links.adoc[]

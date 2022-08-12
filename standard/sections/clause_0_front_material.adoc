@@ -28,4 +28,7 @@ wmo, wis 2.0, weather, climate, water, metadata, discovery, search
 
 [big]*iii.    Security Considerations*
 
+Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data are classified as `+core+` or `+recommended+`.  Core data is considered fully open and unrestricted with
+no security considerations.  Recommended data may have access control defined.
+
 No security considerations have been made for this Standard.

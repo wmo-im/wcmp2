@@ -14,7 +14,7 @@ Check for the existence of an `+id+` property in the WCMP record.
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, check that there are four tokens, delimited by `+:+`.
+In the WCMP record's `+id+` property, check that there are **six** tokens, delimited by `+:+`.
 --
 
 [.component,class=step]
@@ -24,7 +24,12 @@ In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that 
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is is a citation authority based on the data publisher.
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is is a country based on the WIS Topic Hierarchy and controlled vocabulary.
+--
+
+[.component,class=step]
+--
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fifth token is is a centre id based on the WIS Topic Hierarchy and controlled vocabulary.
 --
 
 [.component,class=step]

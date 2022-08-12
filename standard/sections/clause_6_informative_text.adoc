@@ -97,13 +97,21 @@ Common meteorological data types include:
 As part of requirements gathering footnote:[https://github.com/wmo-im/wcmp/issues/107], the following user stories provide a
 description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective:
 
-* As an NWP center operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business
+==== Domain specialist
+
+* As an NWP centre operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business
 * As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant/useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. That should work for unprocessed outputs of a prediction model or a satellite as well as for services that offer more sophisticated access to the data, e.g. tailing
-* As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing
-* As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality
-* As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city
-* As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly
 * As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow
+
+==== Mass market
+
+* As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing
+* As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city
+
+==== Developers
+
+* As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality
+* As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly
 
 The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:
 
@@ -131,9 +139,15 @@ data holdings in WIS 2.0.  Key search predicate capabilities include:
 
 * geospatial
 * temporal (time instant or time period)
-* equality predicates (i.e. `+property=value+`) for any defined property
+* equality predicates (i.e. `+property=value+`) for any defined discovery metadata property
 * full-text (`+q=+`)
 
 Given the WIS 2.0 principles, use cases, OGC API - Records - Part 1: Core, and the WIS 2.0 Global Discovery
 Catalogue, WCMP provides a standards-based, clear and well-defined information model to facilitate the
 management and discovery of data within WIS 2.0.
+
+=== Mass market considerations
+
+Given WIS 2.0 principle 11 (publishing metadata in a way that can be indexed by commercial search engines),
+WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
+structured data discovery, search and relevant/rich results.
