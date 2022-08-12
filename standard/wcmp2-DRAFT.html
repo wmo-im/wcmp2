@@ -515,9 +515,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_granularity">6.1.3. Granularity</a></li>
 </ul>
 </li>
-<li><a href="#_user_stories">6.2. User stories</a></li>
+<li><a href="#_user_stories">6.2. User stories</a>
+<ul class="sectlevel3">
+<li><a href="#_domain_specialist">6.2.1. Domain specialist</a></li>
+<li><a href="#_mass_market">6.2.2. Mass market</a></li>
+<li><a href="#_developers">6.2.3. Developers</a></li>
+</ul>
+</li>
 <li><a href="#_ogc_api_records_part_1_core">6.3. OGC API - Records - Part 1: Core</a></li>
 <li><a href="#_the_wis_2_0_global_discovery_catalogue">6.4. The WIS 2.0 Global Discovery Catalogue</a></li>
+<li><a href="#_mass_market_considerations">6.5. Mass market considerations</a></li>
 </ul>
 </li>
 <li><a href="#_the_wmo_core_metadata_profile_record">7. The WMO Core Metadata Profile Record</a>
@@ -614,6 +621,10 @@ Reusable) <sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#
 <p><strong class="big">iii.    Security Considerations</strong></p>
 </div>
 <div class="paragraph">
+<p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.  Core data is considered fully open and unrestricted with
+no security considerations.  Recommended data may have access control defined.</p>
+</div>
+<div class="paragraph">
 <p>No security considerations have been made for this Standard.</p>
 </div>
 </div>
@@ -631,25 +642,17 @@ OGC API - Records - Part 1: Core.  This metadata standard shall be referred to a
 Core Metadata Profile (WCMP).</p>
 </div>
 <div class="paragraph">
-<p>WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core,
-and can represent a number of different resources, including:</p>
+<p>WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>data (NWP model output, observation collections)</p>
-</li>
-<li>
-<p>data APIs and data reduction services</p>
-</li>
-<li>
-<p>processes (analytics, etc.)</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>The core purpose of WCMP is to describe <strong>datasets</strong>.  While WCMP is able to describe any
+resource (datasets, APIs and data reduction services, processes, analytics, etc.), they key
+component for international data exchange is data.  Services and APIs operating on resources
+may be represented as part of their own metadata, or associated thorugh WCMP links.</p>
 </div>
 <div class="paragraph">
 <p>WCMP discovery metadata provides description at the granularity level of a dataset.  Station, instrument
-and observation metadata are supported as part of the WIGOS Metadata Standard <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>.</p>
+and observation metadata are supported as part of the WIGOS Metadata Standard <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>.</p>
 </div>
 <div class="paragraph">
 <p>This specification defines the conformance requirements for the WMO Core Metadata
@@ -706,34 +709,37 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a id="ogcapi-records"></a> OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2021) <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p>
+<p><a id="ogcapi-records"></a> OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2021) <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
 </li>
 <li>
-<p><a id="ogcapi-features"></a> OGC: OGC 17-069r, OGC API - Features - Part 1: Core 1.0 (2022) <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
+<p><a id="ogcapi-features"></a> OGC: OGC 17-069r, OGC API - Features - Part 1: Core 1.0 (2022) <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p>
 </li>
 <li>
-<p><a id="rfc7946"></a> IETF: RFC-7946 The GeoJSON Format (2016) <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p>
+<p><a id="rfc7946"></a> IETF: RFC-7946 The GeoJSON Format (2016) <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup></p>
 </li>
 <li>
-<p><a id="rfc8259"></a> IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Formathe GeoJSON Format (2016) <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup></p>
+<p><a id="rfc8259"></a> IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Formathe GeoJSON Format (2016) <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup></p>
 </li>
 <li>
-<p>W3C/OGC: Spatial Data on the Web Best Practices, W3C Working Group Note (2017) <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup></p>
+<p>W3C/OGC: Spatial Data on the Web Best Practices, W3C Working Group Note (2017) <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup></p>
 </li>
 <li>
-<p>W3C: Data on the Web Best Practices, W3C Recommendation (2017) <sup class="footnote">[<a id="_footnoteref_16" class="footnote" href="#_footnotedef_16" title="View footnote.">16</a>]</sup></p>
+<p>W3C: Data on the Web Best Practices, W3C Recommendation (2017) <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup></p>
 </li>
 <li>
-<p>W3C: Data Catalog Vocabulary, W3C Recommendation (2014) <sup class="footnote">[<a id="_footnoteref_17" class="footnote" href="#_footnotedef_17" title="View footnote.">17</a>]</sup></p>
+<p>W3C: Data Catalog Vocabulary, W3C Recommendation (2014) <sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup></p>
 </li>
 <li>
-<p>IANA: Link Relation Types (2020) <sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup></p>
+<p>IANA: Link Relation Types (2020) <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup></p>
 </li>
 <li>
-<p>Linux Foundation: SPDX License List (2021) <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup></p>
+<p>Linux Foundation: SPDX License List (2021) <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
 </li>
 <li>
-<p><a id="json-schema"></a> IETF: JSON Schema (2022) <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
+<p><a id="json-schema"></a> IETF: JSON Schema (2022) <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup></p>
+</li>
+<li>
+<p><a id="wis2-topic-hierarchy"></a> WMO: WIS2 Topic Hierarchy (2022) <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -750,14 +756,6 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 <div class="paragraph">
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">term name</dt>
-<dd>
-<p>text of the definition</p>
-</dd>
-</dl>
 </div>
 <div class="sect2">
 <h3 id="_abbreviated_terms"><a class="anchor" href="#_abbreviated_terms"></a>4.1. Abbreviated terms</h3>
@@ -927,8 +925,8 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <div class="sect2">
 <h3 id="_schema_representation"><a class="anchor" href="#_schema_representation"></a>5.4. Schema representation</h3>
 <div class="paragraph">
-<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup> objects are used throughout this specificiation to define the structure
-of metadata records. These schema / objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup>.
+<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup> objects are used throughout this specificiation to define the structure
+of metadata records. These schema / objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup>.
 YAML is a superset of JSON, and in this specification are regarded as equivalent.</p>
 </div>
 <div class="paragraph">
@@ -1151,36 +1149,52 @@ common meteorological data types:</p>
 <div class="sect2">
 <h3 id="_user_stories"><a class="anchor" href="#_user_stories"></a>6.2. User stories</h3>
 <div class="paragraph">
-<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup>, the following user stories provide a
+<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup>, the following user stories provide a
 description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective:</p>
 </div>
+<div class="sect3">
+<h4 id="_domain_specialist"><a class="anchor" href="#_domain_specialist"></a>6.2.1. Domain specialist</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>As an NWP center operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business</p>
+<p>As an NWP centre operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business</p>
 </li>
 <li>
 <p>As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant/useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. That should work for unprocessed outputs of a prediction model or a satellite as well as for services that offer more sophisticated access to the data, e.g. tailing</p>
-</li>
-<li>
-<p>As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing</p>
-</li>
-<li>
-<p>As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality</p>
-</li>
-<li>
-<p>As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city</p>
-</li>
-<li>
-<p>As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly</p>
 </li>
 <li>
 <p>As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow</p>
 </li>
 </ul>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_mass_market"><a class="anchor" href="#_mass_market"></a>6.2.2. Mass market</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing</p>
+</li>
+<li>
+<p>As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_developers"><a class="anchor" href="#_developers"></a>6.2.3. Developers</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality</p>
+</li>
+<li>
+<p>As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly</p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
-<p>The following WIS 2.0 marketing video <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup> adds the following user stories:</p>
+<p>The following WIS 2.0 marketing video <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup> adds the following user stories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1198,6 +1212,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 <div class="paragraph">
 <p>Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for low barrier, ubiquitous and
 efficient discovery, visualization, access of weather/climate/water (real-time, near real-time, archive, etc.) data.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -1238,7 +1253,7 @@ data holdings in WIS 2.0.  Key search predicate capabilities include:</p>
 <p>temporal (time instant or time period)</p>
 </li>
 <li>
-<p>equality predicates (i.e. <code>property=value</code>) for any defined property</p>
+<p>equality predicates (i.e. <code>property=value</code>) for any defined discovery metadata property</p>
 </li>
 <li>
 <p>full-text (<code>q=</code>)</p>
@@ -1249,6 +1264,14 @@ data holdings in WIS 2.0.  Key search predicate capabilities include:</p>
 <p>Given the WIS 2.0 principles, use cases, OGC API - Records - Part 1: Core, and the WIS 2.0 Global Discovery
 Catalogue, WCMP provides a standards-based, clear and well-defined information model to facilitate the
 management and discovery of data within WIS 2.0.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mass_market_considerations"><a class="anchor" href="#_mass_market_considerations"></a>6.5. Mass market considerations</h3>
+<div class="paragraph">
+<p>Given WIS 2.0 principle 11 (publishing metadata in a way that can be indexed by commercial search engines),
+WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
+structured data discovery, search and relevant/rich results.</p>
 </div>
 </div>
 </div>
@@ -1388,7 +1411,7 @@ records within the GDC.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:ca.gc.ec.msc:observations.swob"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:CAN:eccc-msc:observations.swob"</code></pre>
 </div>
 </div>
 <table id="req_core_identifier" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1412,17 +1435,23 @@ records within the GDC.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record identifier SHALL have a the following notation: <code>urn:x-wmo:md:{citation_authority}:{local_identifier}</code>.</p>
+<p>A WCMP record identifier SHALL have a the following notation: <code>urn:x-wmo:md:{country}:{centre_id}:{local_identifier}</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record identifier SHALL contain a citation authority based on the Internet domain name of the data publisher (e.g. <code>gov.noaa</code>, <code>edu.ucar.ncar</code>, <code>cn.gov.cma</code>, <code>ca.gc.ec.msc</code>, <code>uk.gov.metoffice</code>).</p>
+<p>A WCMP record identifier SHALL contain a <code>country</code> based on the associated vocabulary as specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record identifier SHALL contain a <code>centre_id</code> based on the associated vocabulary as specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WCMP record identifier SHALL contain a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or special/accented characters.</p>
 </div></div></td>
@@ -2200,7 +2229,7 @@ resource identification using the DOI framework.</p>
 <div class="sect3">
 <h4 id="_wmo_data_policy"><a class="anchor" href="#_wmo_data_policy"></a>7.1.16. WMO Data Policy</h4>
 <div class="paragraph">
-<p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.</p>
+<p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.</p>
 </div>
 <table id="req_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2628,6 +2657,26 @@ resource identification using the DOI framework.</p>
 </tr>
 </tbody>
 </table>
+<table id="per_core_links" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/core/links</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record links property MAY additionally contain a Web Accessible Folder (WAF) OR an API link for real-time data.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -2724,7 +2773,7 @@ resource identification using the DOI framework.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, check that there are four tokens, delimited by <code>:</code>.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, check that there are <strong>six</strong> tokens, delimited by <code>:</code>.</p>
 </div>
 </div>
 </div>
@@ -2738,7 +2787,14 @@ resource identification using the DOI framework.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fourth token is is a citation authority based on the data publisher.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fourth token is is a country based on the WIS Topic Hierarchy and controlled vocabulary.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fifth token is is a centre id based on the WIS Topic Hierarchy and controlled vocabulary.</p>
 </div>
 </div>
 </div>
@@ -3377,57 +3433,63 @@ resource identification using the DOI framework.</p>
 <a href="#_footnoteref_9">9</a>. <a href="https://en.wikipedia.org/wiki/FAIR_data" class="bare">https://en.wikipedia.org/wiki/FAIR_data</a>
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=10109" class="bare">https://library.wmo.int/doc_num.php?explnum_id=10109</a>
+<a href="#_footnoteref_10">10</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 <div class="footnote" id="_footnotedef_11">
-<a href="#_footnoteref_11">11</a>. <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>
+<a href="#_footnoteref_11">11</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=10109" class="bare">https://library.wmo.int/doc_num.php?explnum_id=10109</a>
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. <a href="https://docs.opengeospatial.org/is/17-069r4/17-069r4.html" class="bare">https://docs.opengeospatial.org/is/17-069r4/17-069r4.html</a>
+<a href="#_footnoteref_12">12</a>. <a href="https://docs.ogc.org/DRAFTS/20-004.html" class="bare">https://docs.ogc.org/DRAFTS/20-004.html</a>
 </div>
 <div class="footnote" id="_footnotedef_13">
-<a href="#_footnoteref_13">13</a>. <a href="https://datatracker.ietf.org/doc/html/rfc7946" class="bare">https://datatracker.ietf.org/doc/html/rfc7946</a>
+<a href="#_footnoteref_13">13</a>. <a href="https://docs.opengeospatial.org/is/17-069r4/17-069r4.html" class="bare">https://docs.opengeospatial.org/is/17-069r4/17-069r4.html</a>
 </div>
 <div class="footnote" id="_footnotedef_14">
-<a href="#_footnoteref_14">14</a>. <a href="https://datatracker.ietf.org/doc/html/rfc8259" class="bare">https://datatracker.ietf.org/doc/html/rfc8259</a>
+<a href="#_footnoteref_14">14</a>. <a href="https://datatracker.ietf.org/doc/html/rfc7946" class="bare">https://datatracker.ietf.org/doc/html/rfc7946</a>
 </div>
 <div class="footnote" id="_footnotedef_15">
-<a href="#_footnoteref_15">15</a>. <a href="https://www.w3.org/TR/sdw-bp" class="bare">https://www.w3.org/TR/sdw-bp</a>
+<a href="#_footnoteref_15">15</a>. <a href="https://datatracker.ietf.org/doc/html/rfc8259" class="bare">https://datatracker.ietf.org/doc/html/rfc8259</a>
 </div>
 <div class="footnote" id="_footnotedef_16">
-<a href="#_footnoteref_16">16</a>. <a href="https://www.w3.org/TR/dwbp" class="bare">https://www.w3.org/TR/dwbp</a>
+<a href="#_footnoteref_16">16</a>. <a href="https://www.w3.org/TR/sdw-bp" class="bare">https://www.w3.org/TR/sdw-bp</a>
 </div>
 <div class="footnote" id="_footnotedef_17">
-<a href="#_footnoteref_17">17</a>. <a href="https://www.w3.org/TR/vocab-dcat" class="bare">https://www.w3.org/TR/vocab-dcat</a>
+<a href="#_footnoteref_17">17</a>. <a href="https://www.w3.org/TR/dwbp" class="bare">https://www.w3.org/TR/dwbp</a>
 </div>
 <div class="footnote" id="_footnotedef_18">
-<a href="#_footnoteref_18">18</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
+<a href="#_footnoteref_18">18</a>. <a href="https://www.w3.org/TR/vocab-dcat" class="bare">https://www.w3.org/TR/vocab-dcat</a>
 </div>
 <div class="footnote" id="_footnotedef_19">
-<a href="#_footnoteref_19">19</a>. <a href="https://spdx.org/licenses" class="bare">https://spdx.org/licenses</a>
+<a href="#_footnoteref_19">19</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
 </div>
 <div class="footnote" id="_footnotedef_20">
-<a href="#_footnoteref_20">20</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
+<a href="#_footnoteref_20">20</a>. <a href="https://spdx.org/licenses" class="bare">https://spdx.org/licenses</a>
 </div>
 <div class="footnote" id="_footnotedef_21">
 <a href="#_footnoteref_21">21</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_22">
-<a href="#_footnoteref_22">22</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
+<a href="#_footnoteref_22">22</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
 </div>
 <div class="footnote" id="_footnotedef_23">
-<a href="#_footnoteref_23">23</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
+<a href="#_footnoteref_23">23</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_24">
-<a href="#_footnoteref_24">24</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
+<a href="#_footnoteref_24">24</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
 </div>
 <div class="footnote" id="_footnotedef_25">
-<a href="#_footnoteref_25">25</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_25">25</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
+</div>
+<div class="footnote" id="_footnotedef_26">
+<a href="#_footnoteref_26">26</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
+</div>
+<div class="footnote" id="_footnotedef_27">
+<a href="#_footnoteref_27">27</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-08-12 16:24:27 UTC
+Last updated 2022-08-12 17:12:14 UTC
 </div>
 </div>
 </body>
