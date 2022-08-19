@@ -1,7 +1,7 @@
 :title: WMO Core Metadata Profile specification
 :titletext: {title}
-:version: 2.0.0-alpha2
-:copyright: Copyright © 2021 World Meteorological Organization (WMO)
+:version: 2.0.0-alpha3
+:copyright: Copyright © 2022 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
 :lang: en
