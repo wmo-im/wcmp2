@@ -30,16 +30,11 @@ WIS 2.0 puts forth the following principles (those focused on discovery metadata
 
 The following describes envisioned workflows of WIS 2.0 in the context of metadata search and harvesting.
 
-We consider the following:
-
-* flexible metadata publishing mechanisms: providers need to be able to publish discovery metadata in the easiest and
-most efficient way possible
-* basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
-JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and
-metadata harvesters
-* the browser as the catalogue: here, browsers utilize mass market search engines as the gateway to low barrier
-discovery.  This pattern may work by way of the Global Discovery Catalogue and the Global Cache, with the idea that
-search engines can index from the authoritative source
+* Flexible metadata publishing mechanisms so providers can publish discovery metadata in the easiest and most efficient way possible.
+* Basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
+JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and metadata harvesters.
+* The browser as the catalogue. Browsers utilize mass market search engines as the gateway to low barrier
+discovery.  This pattern may work by way of the Global Discovery Catalogue and the Global Cache, with the idea that search engines can index from the authoritative source.
 
 ==== Granularity
 
