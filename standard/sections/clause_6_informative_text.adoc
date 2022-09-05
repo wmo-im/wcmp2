@@ -15,17 +15,16 @@ functionality.  Users will be able to search from a web browser, whereas machine
 
 WIS 2.0 puts forth the following principles (those focused on discovery metadata are in **bold**):
 
-* *Principle 1: WIS 2.0 adopts Web technologies and leverages industry best practices and open standards*
-* *Principle 2: WIS 2.0 uses Uniform Resource Locators (URL) to identify resources*
-* *Principle 3: WIS 2.0 prioritizes use of public telecommunications networks (i.e. Internet) when publishing digital resources*
-* *Principle 4: WIS2.0 requires provision of Web service(s) to access or interact with digital resources (e.g. data, information, products) published using WIS*
-* Principle 5: WIS 2.0 encourages NCs and DCPCs to provide 'data reduction' services via WIS that process 'big data' to create results or products that are small enough to be conveniently downloaded and used by those with minimal technical infrastructure
-* *Principle 6: WIS 2.0 will add open standard messaging protocols that use the publish-subscribe message pattern to the list of data exchange mechanisms approved for use within WIS and GTS*
-* Principle 7: WIS 2.0 will require all services that provide real-time distribution of messages to cache/store the messages for a minimum of 24 hours, and allow users to request cached messages for download
-* Principle 8: WIS 2.0 will adopt direct data exchange between provider and consumer
-* Principle 9: WIS 2.0 will phase out the use of routing tables and bulletin headers
-* *Principle 10: WIS 2.0 will provide a Catalogue containing metadata that describes both data and the service(s) provided to access that data*
-* *Principle 11: WIS 2.0 encourages data providers to publish metadata describing their data and Web services in a way that can be indexed by commercial search engines*
+* *(1) WIS 2.0 adopts Web technology and leverages industry best practices and open standards.*
+* *(2) WIS 2.0 uses Uniform Resource Locators (URL) to identify resources (i.e., Web pages, data, metadata, APIs) use.*
+* *(3) WIS 2.0 prioritizes the use of public telecommunications networks (i.e. Internet) when publishing digital resources.*
+* *(4) WIS 2.0 requires provision of Web service(s) to access or interact with digital resources (e.g. data, information, products) published using WIS.*
+* (5) WIS 2.0 encourages NCs and DCPCs to provide 'data reduction' services via WIS that process 'big data' to create results or products that are small enough to be conveniently downloaded and used by those with minimal technical infrastructure.
+* *(6) WIS 2.0 adds open standard messaging protocols that use the publish-subscribe message pattern to the list of data exchange mechanisms approved for use within WIS and GTS.*
+* (7) WIS 2.0 requires all services that provide real-time distribution of messages (containing data or notifications about data availability) to cache/store the messages for a minimum of 24 hours and allow users to request cached messages for download.
+* (8) WIS 2.0 adopts direct data-exchange between provider and consumer and phases out the use of routing tables and bulletin headers.
+* *(9) WIS 2.0 provides a catalogue containing metadata that describes both data and the service(s) provided to access that data.*
+* *(10) WIS 2.0 encourages data providers to publish metadata describing their data and Web services in a way that can be indexed by commercial search engines.*
 
 ==== Discovery metadata design considerations
 
