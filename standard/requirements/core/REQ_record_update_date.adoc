@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/record_update_date*
-^|A |A WCMP record SHALL provide a `+properties.recordUpdated+` property.
+^|A |A WCMP record SHOULD provide a `+properties.recordUpdated+` property.
 
 |===

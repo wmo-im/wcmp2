@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/distribution*
-^|A |A WCMP record SHOULD describe additional distribution information with the `+properties.distribution+` property to qualify a given service link. This information SHOULD be used to build the discovery information and allow the user finding and choosing the appropriate service for accessing the data.
+^|A |A WCMP record SHOULD describe additional distribution information with the `+properties.distribution+` property to qualify a given service link. This information SHOULD be used to build the discovery information and allow the user to find and choose the appropriate service for accessing the data.
 ^|B |The `+properties.distribution.availableFormat+` property SHOULD describe the different formats that can be retrieved using the service link.
 ^|C |The `+properties.distribution.availableFormat.description+` SHOULD describe the associated format.
 ^|D |The `+properties.distribution.availableFormat.typicalFilename+` SHOULD describe the filenames that are going to be retrieved from the service link.

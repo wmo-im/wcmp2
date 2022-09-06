@@ -2,7 +2,7 @@
 
 === Overview
 
-The initial WIS Technical Specifications were developed using service-oriented architecture (SOA) principles.  It featured
+The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured
 complex ISO 19115/19139-based XML for metadata. Since that time, authoritative
 groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design
 patterns as well as mass market encodings such as JSON and HTML.
@@ -105,7 +105,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 ==== Developers
 
 * As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes a reality.
-* As a web developer I would like to access a search API that provides easy-to-read documentation, examples, and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly.
+* As a web developer, I would like to access a search API that provides easy-to-read documentation, examples, and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly.
 
 The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:
 

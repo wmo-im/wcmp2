@@ -12,17 +12,16 @@ include::../requirements/requirements_class_core.adoc[]
 
 ==== Validation
 
-The WCMP record schema is based on the schema defined as part of OGC API - Records - Part 1:
-Core: Requirements Class: Record Core and the associated information model.  WCMP records which
-are valid to WCMP are therefore valid to the OGC API - Records record schema.
+The WCMP record schema is based on the schema defined as part of _OGC API - Records - Part 1: Core: Requirements Class: Record Core_ and the associated information model.  WCMP records which
+are valid to WCMP 2.0 schema are therefore valid to the _OGC API - Records_ record schema.
 
 include::../requirements/core/REQ_validation.adoc[]
 
 ==== Granularity
 
-A WCMP record provides a description at the granularity of a dataset, which facilitates clearer
+A WCMP record provides a description at the granularity of a dataset, which facilitates clear
 cataloguing and discovery workflow, in combination with data services or APIs, which provide
-access/query/filter at a lower level of granularity (parameter, variable, spatiotemporal extents).
+access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).
 
 [source,json]
 ----
@@ -34,7 +33,7 @@ access/query/filter at a lower level of granularity (parameter, variable, spatio
       "u-component of Wind",
       "v-component of Wind"
     ],
-    "scheme": "http://codes.wmo.int/grib2/codeflag/_4.2"
+    "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
 ----
 
 [source,json]
@@ -80,15 +79,13 @@ include::../requirements/core/REQ_conformance.adoc[]
 
 ==== Properties Type
 
-WCMP records provide descriptive information about a number of different resource types, such as
+WCMP records provide descriptive information about different resource types, such as
 dataset or services.
 
 [source,json]
 ----
 "type": "dataset"
 ----
-
-TODO: create and refer to WCMP2 codelist?
 
 include::../requirements/core/REQ_type.adoc[]
 
@@ -106,11 +103,11 @@ include::../requirements/core/REQ_title.adoc[]
 ==== Description
 
 A WCMP record has a `+properties.description+` property, which is a free-text summary description of the
-resource the provider wishes to make discoverable.
+dataset.
 
 [source,json]
 ----
-"description": "Surface observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)"
+"description": "Surface observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)."
 ----
 
 include::../requirements/core/REQ_description.adoc[]
@@ -204,16 +201,16 @@ include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
 
 A WCMP record is able to communicate additional extents (for example, for non-geographic data, or multiple
 temporal extents) via the `+properties.extent+` property.  The `+properties.extent.spatial.bbox+` property
-provides the ability to list 1..n minimum bounding geometries for a given dataset, where:
+provides the ability to list 1 to many minimum bounding geometries for a given dataset, where:
 
-* minx: westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, less than or equal to maxx
-* miny: southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, less than or equal to maxy
-* maxx: easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, greater than or equal to minx
-* maxy: northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, greater than or equal to miny
+* *minx* is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, less than or equal to *maxx*.
+* *miny* is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, less than or equal to *maxy*.
+* *maxx* is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, greater than or equal to *minx*.
+* *maxy* is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, greater than or equal to *miny*.
 
 This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
 
@@ -270,8 +267,8 @@ include::../recommendations/core/REC_extent_temporal.adoc[]
 ===== Additional Temporal Extents
 
 A WCMP record is able to communicate additional time instants or periods via the `+properties.extent.temporal+` item property.
-Temporal extents can be fully bound or open in either direction (e.g. until or before.  A `+properties.extent.temporal.resolution+`
-property is able express the temporal granularity at which a given dataset's data is measured/generated/reported.
+Temporal extents can be fully bound or open in either direction (e.g. until or before).  A `+properties.extent.temporal.resolution+`
+property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
 [source,json]
 ----
@@ -301,14 +298,13 @@ provide contact information based on the role of the provider.
 "providers": [
   {
     "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-    "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
     "positionName": "National Inquiry Response Team",
     "contactInfo": {
       "phone": {
         "office": "+01-819-997-2800"
       },
       "email": {
-        "office": "+01-506-451-6010"
+        "office":"enviroinfo@ec.gc.ca"
       },
       "address": {
         "office": {
@@ -602,7 +598,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
     "security": {
       "type": "http",
       "scheme": "basic",
-      "description": "please contact the data provider for accessing this secured resource"
+      "description": "Please contact the data provider for accessing this secured resource."
     }
 }
 ----

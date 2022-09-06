@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/doi*
-^|A |A WCMP record SHOULD provide DOI references via an item in the `+properties.externalIds+` array property, where the value of `+scheme+` fixed to `+doi+`, and the value of `+value+` being a permalink of the full DOI with `+prefix/suffix+` (example `https://dx.doi.org/10.14287/10000001`).
+^|A |A WCMP record SHOULD provide DOI references via an item in the `+properties.externalIds+` array property, where the value of `+scheme+` is fixed to `+doi+`, and the value of `+value+` being a permalink of the full DOI with `+prefix/suffix+` (example `https://dx.doi.org/10.14287/10000001`).
 |===
