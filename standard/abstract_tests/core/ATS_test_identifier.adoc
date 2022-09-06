@@ -24,7 +24,7 @@ In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that 
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is is a country based on the WIS Topic Hierarchy and controlled vocabulary.
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the fourth token is a country based on the WIS Topic Hierarchy and controlled vocabulary.
 --
 
 [.component,class=step]
