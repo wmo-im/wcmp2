@@ -93,28 +93,28 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 
 ==== Domain specialist
 
-* As an NWP centre operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business
-* As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant/useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. That should work for unprocessed outputs of a prediction model or a satellite as well as for services that offer more sophisticated access to the data, e.g. tailing
-* As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow
+* As an NWP centre operator, I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my databases, so that I can concentrate on my core business.
+* As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant or useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. 
+* As a GIS professional, I would like to search for weather, climate and water data from my GIS desktop support tool so that I can integrate forecast data into my workflow.
 
 ==== Mass market
 
-* As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing
-* As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city
+* As an entrepreneur (start-up) that provides (wants to provide) tailored weather information, I want to find services (free or commercial) that provide meteorological data in the cloud, or even better, a service that provides customizable processing of such data to build my own service on top of it. I also want to be able to find out if a new service becomes available or if an existing one changes its abilities so that my company can keep on advancing.
+* As a user, I would like to search for real-time observations for a given time and geographical area of interest, so that I can have up-to-date information on weather for my city.
 
 ==== Developers
 
-* As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality
-* As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly
+* As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes a reality.
+* As a web developer I would like to access a search API that provides easy-to-read documentation, examples, and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly.
 
 The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:
 
-* As an everyday user, I would like to find easy to understand and precise weather data so that I can plan to have people over for an outdoor BBQ on a nice day
-* As a smart home owner, I would like access to frequently updated data so that I can keep my smart home monitoring up to date
-* As a weather specialist, I would like to access weather data in native data formats and subscribe to data updates, so that I can provide tailor made weather services to my users
+* As an everyday user, I would like to find easy-to-understand and precise weather data so that I can plan to have people over for an outdoor BBQ on a nice day.
+* As a smart home owner, I would like access to frequently updated data so that I can keep my smart home monitoring up to date.
+* As a weather specialist, I would like to access weather data in native data formats and subscribe to data updates, so that I can provide tailor-made weather services to my users.
 
-Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for low barrier, ubiquitous and
-efficient discovery, visualization, access of weather/climate/water (real-time, near real-time, archive, etc.) data.
+Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for a low barrier, ubiquitous and
+efficient discovery, visualization, and access of weather, climate, water (real-time, near real-time, archive, etc.) data.
 
 === OGC API - Records - Part 1: Core
 
