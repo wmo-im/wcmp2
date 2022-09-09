@@ -20,12 +20,12 @@ The WCMP 2.0 schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmpRecordG
 
 === Schema representation
 
-JSON Schema footnote:[https://json-schema.org] objects are used throughout this specificiation to define the structure
-of metadata records. These schema / objects are also typically represented using YAML footnote:[https://en.wikipedia.org/wiki/YAML].
-YAML is a superset of JSON, and in this specification are regarded as equivalent.
+JSON Schema footnote:[https://json-schema.org] objects are used throughout this standard to define the structure
+of metadata records. These schema objects are also typically represented using YAML footnote:[https://en.wikipedia.org/wiki/YAML].
+YAML is a superset of JSON, and in this standard are regarded as equivalent.
 
 Metadata record instances are always defined as JSON.
 
 === Use of HTTPS
 
-For simplicity, this document in general only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS." In fact, most servers are expected to use HTTPS, not HTTP.
+For simplicity, this document only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS." In fact, most servers are expected to use HTTPS, not HTTP.

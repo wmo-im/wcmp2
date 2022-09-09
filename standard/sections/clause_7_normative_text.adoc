@@ -12,8 +12,7 @@ include::../requirements/requirements_class_core.adoc[]
 
 ==== Validation
 
-The WCMP record schema is based on the schema defined as part of _OGC API - Records - Part 1: Core: Requirements Class: Record Core_ and the associated information model.  WCMP records which
-are valid to WCMP 2.0 schema are therefore valid to the _OGC API - Records_ record schema.
+The WCMP record schema is based on  _OGC API - Records - Part 1: Core: Requirements Class: Record Core_ schema and the associated information model.  WCMP records compliant with WCMP 2.0 schema are therefore compliant with the _OGC API - Records_ record schema.
 
 include::../requirements/core/REQ_validation.adoc[]
 
@@ -34,6 +33,8 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
       "v-component of Wind"
     ],
     "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
+  }
+]
 ----
 
 [source,json]
@@ -45,6 +46,8 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
       "Dewpoint temperature"
     ],
     "scheme": "http://codes.wmo.int/bufr4/b"
+  }
+]
 ----
 
 include::../recommendations/core/REC_granularity.adoc[]
@@ -102,20 +105,18 @@ include::../requirements/core/REQ_title.adoc[]
 
 ==== Description
 
-A WCMP record has a `+properties.description+` property, which is a free-text summary description of the
-dataset.
+A WCMP record has a `+properties.description+` property, which is a free-text summary description of the dataset.
 
 [source,json]
 ----
-"description": "Surface observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)."
+"description": "Surface observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station or for the stations of specific provinces and territories (last 30 days)."
 ----
 
 include::../requirements/core/REQ_description.adoc[]
 
 ==== Keywords
 
-A WCMP record should have a `+properties.keywords+` property, typically represented using keywords, tags, key
-phrases, or classification codes.
+A WCMP record should have a `+properties.keywords+` property, typically represented using keywords, tags, key phrases, or classification codes.
 
 [source,json]
 ----
@@ -131,9 +132,8 @@ include::../recommendations/core/REC_keywords.adoc[]
 
 ==== Themes and Topic Hierarchy [[themes]]
 
-A WCMP record has a `+properties.themes+` property, which is a knowledge organization system used to classify
-the data that the record is describing.  A WCMP can have one or more themes.  The WIS 2 Topic Hierarchy is put
-forth as a specific theme/concept, and is consistent with the topic as defined in distribution links
+A WCMP record has a `+properties.themes+` property, which is a knowledge organization system used to classify the data.  A WCMP record can have one or more themes.  The WIS2 Topic Hierarchy is put
+forth as a specific theme/concept and is consistent with the topic as defined in distribution links
 advertising broker services.
 
 [source,json]
@@ -144,6 +144,8 @@ advertising broker services.
       "weather"
     ],
     "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
+  }
+]
 ----
 
 [source,json]
@@ -154,6 +156,8 @@ advertising broker services.
       "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
     ],
     "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+  }
+]
 ----
 
 include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
@@ -199,7 +203,7 @@ include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
 
 ===== Additional Geospatial Extents
 
-A WCMP record is able to communicate additional extents (for example, for non-geographic data, or multiple
+A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
 temporal extents) via the `+properties.extent+` property.  The `+properties.extent.spatial.bbox+` property
 provides the ability to list 1 to many minimum bounding geometries for a given dataset, where:
 
@@ -266,8 +270,8 @@ include::../recommendations/core/REC_extent_temporal.adoc[]
 
 ===== Additional Temporal Extents
 
-A WCMP record is able to communicate additional time instants or periods via the `+properties.extent.temporal+` item property.
-Temporal extents can be fully bound or open in either direction (e.g. until or before).  A `+properties.extent.temporal.resolution+`
+A WCMP record can communicate additional time instants or periods via the `+properties.extent.temporal+` item property.
+Temporal extents can be fully bound or open in either direction (e.g., until or before).  A `+properties.extent.temporal.resolution+`
 property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
 [source,json]
@@ -342,9 +346,7 @@ include::../requirements/core/REQ_providers.adoc[]
 
 ==== Version
 
-Datasets can typically be versioned by an organization (version of an NWP model, processing chain/workflow, etc.).  Data
-providers may choose to make this information available to the user when providing multiple versions of a dataset
-over time.
+Datasets may be versioned by an organization (version of an NWP model, processing chain/workflow, etc.), and data providers can make this information available when there are multiple versions of a dataset over time.
 
 [source,json]
 ----
@@ -355,8 +357,7 @@ include::../recommendations/core/PER_version.adoc[]
 
 ==== Digital Object Identifier
 
-A digital object identifier (DOI) is a persistent identifier or handle used to identify various objects uniquely,
-and is widely used in scientific publications.
+A digital object identifier (DOI) is a persistent identifier or handle used to identify various objects uniquely and is widely used in scientific publications.
 
 [source,json]
 ----
@@ -399,7 +400,7 @@ Based on the WMO Unified Data Policy for the International Exchange of Earth Sys
 
 include::../requirements/core/REQ_data_policy.adoc[]
 
-If the resource is classified as `+recommended+`, it needs to be indicated if any additional conditions apply.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
+Indicate additional conditions that apply when the resource is classified as `+recommended+`.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
 
 include::../requirements/core/REQ_data_policy_conditions.adoc[]
 
@@ -438,7 +439,7 @@ include::../requirements/core/REQ_data_policy_conditions.adoc[]
 }
 ----
 
-For having the most detailed information about data policy and additional conditions it is useful to add provider-specific details.
+It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
 include::../recommendations/core/REC_data_policy_conditions.adoc[]
 
 .Example: Recommended Data with additional conditions and provider-specific details:
@@ -470,7 +471,7 @@ A WCMP record provides information regarding how to access and retrieve data and
 
 - *_Adding the MQTT information_*
 
-Below is an example of two link objects, providing both search and MQTT subscription information:
+Below is an example of two link objects providing both search and MQTT subscription information:
 
 [source,json]
 ----
@@ -554,7 +555,7 @@ Below is provided an example link object of a WMS service providing API access t
 
 - *_Example with the complete distribution information_*
 
-Additional distribution information is added to allow creating more comprehensive discovery services. Below is an example of such distribution information.
+Additional distribution information is added to allow more comprehensive discovery services. Below is an example of such distribution information.
 
 [source,json]
 ----
@@ -584,7 +585,7 @@ Additional distribution information is added to allow creating more comprehensiv
 }
 ----
 
-WCMP record links may also provide links to services which implement access control in support of authentication and authorization.  In
+WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
 example demonstrates how to express access control using HTTP Basic Authentication for a given data access service.
 

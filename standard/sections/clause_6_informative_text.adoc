@@ -2,14 +2,10 @@
 
 === Overview
 
-The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured
-complex ISO 19115/19139-based XML for metadata. Since that time, authoritative
-groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design
-patterns as well as mass market encodings such as JSON and HTML.
+The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured complex ISO 19115/19139-based XML for metadata. Since then, authoritative
+groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.
 
-Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search,
-discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable
-functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
+Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
 
 ==== WIS 2.0
 
@@ -142,6 +138,6 @@ management and discovery of data within WIS 2.0.
 
 === Mass market considerations
 
-Given WIS 2.0 principle 11 (publishing metadata in a way that can be indexed by commercial search engines),
+Given WIS 2.0 principle 10 (publishing metadata in a way that commercial search engines can index),
 WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
-structured data discovery, search and relevant/rich results.
+structured data discovery, search, and relevant results.

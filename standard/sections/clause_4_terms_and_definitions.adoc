@@ -4,7 +4,7 @@ This document uses the terms defined in https://portal.ogc.org/public_ogc/direct
 
 This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
 
-For the purposes of this document, the following additional terms and definitions apply.
+The following additional terms and definitions also apply.
 
 === Abbreviated terms
 
@@ -40,7 +40,7 @@ For the purposes of this document, the following additional terms and definition
 |Hypertext Transfer Protocol Secure
 
 |ISO
-|Internatioal Organization for Standardization
+|International Organization for Standardization
 
 |JSON
 |JavaScript Object Notation

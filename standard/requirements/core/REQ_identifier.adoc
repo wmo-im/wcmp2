@@ -4,8 +4,8 @@
 ^|*Requirement {counter:req-id}* |*/req/core/identifier*
 ^|A |A WCMP record SHALL have an identifier via the `+id+` property.
 ^|B |A WCMP record identifier SHALL have the following notation: `+urn:x-wmo:md:{country}:{centre_id}:{local_identifier}+`.
-^|C |A WCMP record identifier SHALL contain a ``country`` based on the associated vocabulary as specified in the WIS <<wis2-topic-hierarchy, topic hierarchy>>.
-^|D |A WCMP record identifier SHALL contain a ``centre_id`` based on the associated vocabulary as specified in the WIS <<wis2-topic-hierarchy, topic hierarchy>>.
-^|E |A WCMP record identifier SHALL contain a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or special/accented characters.
+^|C |A WCMP record identifier SHALL include a ``country`` based on the associated vocabulary as specified in the WIS <<wis2-topic-hierarchy, topic hierarchy>>.
+^|D |A WCMP record identifier SHALL include a ``centre_id`` based on the associated vocabulary specified in the WIS <<wis2-topic-hierarchy, topic hierarchy>>.
+^|E |A WCMP record identifier SHALL include a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or special or accented characters.
 |===
 

@@ -1,24 +1,20 @@
 [big]*i.     Abstract*
 
-Discovery and search is a key component to WIS 2.0.  Providing quality discovery metadata leveraging industry
-standards, best practices and architecture helps lower the barrier to and extend the reach of weather, climate,
-and water data.
+Discovery and search are key components of WIS 2.0.  Quality discovery metadata that leverages industry
+standards, best practices, and architecture helps lower the barrier to and extend the reach of weather/climate/water data.
 
-This document defines the content, structure and encoding for the WMO Core Metadata Profile (WCMP).  This standard is
-defined as an informal profile/extension of the OGC API - Records Standard footnote:[https://ogcapi.ogc.org/records].
+This document defines the content, structure, and encoding for the WMO Core Metadata Profile (WCMP).  This standard is a profile and extension of the OGC API - Records standard footnote:[https://ogcapi.ogc.org/records].
 
 WCMP documents provide descriptive information for discovery of WMO resources.  WMO resources include, but are not
 limited to, data (NWP models, observations, forecasts and warnings, etc.), services/APIs, and processes.
 
 WCMP documents shall be encoded in GeoJSON (RFC 7946 footnote:[https://datatracker.ietf.org/doc/html/rfc7946]) as
-defined in this specification, and shall be made available as HTTP crawlable files, or via API provisioning as defined
+defined in this specification and shall be made available as HTTP crawlable files or via API provisioning as defined
 by OGC API - Records.
 
-Weather/climate/water data is by nature geospatial, and temporal.  The W3C Data on the Web Best
-Practices footnote:[https://www.w3.org/TR/dwbp] and Spatial Data on the Web Best Practices footnote:[https://www.w3.org/TR/sdw-bp]
-provide guidelines on how to best enable spatiotemporal data to lower the barrier for users, search engine optimization
-and linked data.  This also aligns with the FAIR data principles (Findable, Accessible, Interoperable,
-Reusable) footnote:[https://en.wikipedia.org/wiki/FAIR_data].
+Weather/climate/water data is by nature geospatial and temporal.  The W3C Data on the Web Best
+Practices footnote:[https://www.w3.org/TR/dwbp] and Spatial Data on the Web Best Practices footnote:[https://www.w3.org/TR/sdw-bp] publications
+provide guidelines on how to best enable spatiotemporal data to lower the barrier for users, search engine optimization, and linked data.  This also aligns with the FAIR data principles (Findable, Accessible, Interoperable, Reusable) footnote:[https://en.wikipedia.org/wiki/FAIR_data].
 
 [big]*ii.    Keywords*
 
@@ -28,7 +24,6 @@ wmo, wis 2.0, weather, climate, water, metadata, discovery, search
 
 [big]*iii.    Security Considerations*
 
-Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data are classified as `+core+` or `+recommended+`.  Core data is considered fully open and unrestricted with
-no security considerations.  Recommended data may have access control defined.
+Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data are classified as `+core+` or `+recommended+`.  Core data is considered fully open and unrestricted with no security considerations.  Recommended data may have access control defined.
 
-No security considerations have been made for this Standard.
+No security considerations have been made for this standard.
