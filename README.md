@@ -3,3 +3,4 @@
 # wcmp2
 
 WMO Core Metadata Profile 2
+* View drafts: https://wmo-im.github.io/wcmp2/
