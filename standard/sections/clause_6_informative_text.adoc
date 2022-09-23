@@ -38,24 +38,6 @@ In order to provide discovery metadata of value, it is important to clarify the 
 are to provide describing their data/services.  Articulating the level of granularity will reduce catalogue "pollution"
 and bring the user closer to the data via their search criteria.
 
-The following table provides an overview of granularity level and targets for various data types.
-
-[cols="1,1"]
-|===
-|Dataset metadata
-|WCMP
-
-|Station metadata
-|WMDR
-
-|Instrument metadata
-|WMDR
-
-|Observation metadata
-|WMDR
-|===
-
-
 The <<metadata-discovery-workflow>> below illustrates example metadata publication and discovery workflows against
 common meteorological data types:
 
