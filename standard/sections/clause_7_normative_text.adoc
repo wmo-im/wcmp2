@@ -205,7 +205,7 @@ include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
 
 A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
 temporal extents) via the `+properties.extent+` property.  The `+properties.extent.spatial.bbox+` property
-provides the ability to list 1 to many minimum bounding geometries for a given dataset, where:
+provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
 * *minx* is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
 signed number between -180 and 180, less than or equal to *maxx*.
