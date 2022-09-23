@@ -457,7 +457,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-09-21</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-09-23</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-alpha3</p></td>
@@ -1414,7 +1414,7 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>When  dataset properties (parameters, variables, spatiotemporal extents) are made available via a data service or API, a WCMP record SHOULD provide templated links to facilitate easier data queryies and filtering. See the <a href="#distribution">Distribution Information</a> section.</p>
+<p>When  dataset properties (parameters, variables, spatiotemporal extents) are made available via a data service or API, a WCMP record SHOULD provide templated links to facilitate easier data queries and filtering. See the <a href="#distribution">Distribution Information</a> section.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1826,7 +1826,7 @@ Global Discovery Catalogue with geospatial predicates.</p>
 <div class="paragraph">
 <p>A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
 temporal extents) via the <code>properties.extent</code> property.  The <code>properties.extent.spatial.bbox</code> property
-provides the ability to list 1 to many minimum bounding geometries for a given dataset, where:</p>
+provides the ability to list one to many minimum bounding geometries for a given dataset, where:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2232,7 +2232,7 @@ resource identification using the DOI framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide a <code>properties.recordUpdated</code> property.</p>
+<p>A WCMP record SHALL provide a <code>properties.recordUpdated</code> property.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2293,7 +2293,7 @@ resource identification using the DOI framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy.additionalConditions</code> SHALL enumerate 1 to many objects to describe the conditions for the resource.</p>
+<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy.additionalConditions</code> SHALL enumerate one to many objects to describe the conditions for the resource.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2596,7 +2596,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record <code>links</code> property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will be accessible from the WIS 2 Global Broker. The topic shall follow the WIS 2 topic hierarchy.</p>
+<p>A WCMP record <code>links</code> property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS 2 topic hierarchy.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2739,7 +2739,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </dd>
 <dt class="hdlist1">classification</dt>
 <dd>
-<p>Target Type: Discovery Metadata</p>
+<p>Target Type:Discovery Metadata</p>
 </dd>
 </dl>
 </div>
@@ -3537,7 +3537,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-21 14:28:08 UTC
+Last updated 2022-09-23 09:35:07 UTC
 </div>
 </div>
 </body>
