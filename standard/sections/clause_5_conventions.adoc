@@ -26,6 +26,15 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.
 
 Metadata record instances are always defined as JSON.
 
+==== Properties
+
+A JSON **property** represents a key-value pair, where the key is the name of the property and the value is a standard JSON data type.
+
+[source,json]
+----
+"myPropertyName": "test123"
+----
+
 === Use of HTTPS
 
 For simplicity, this document only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS." In fact, most servers are expected to use HTTPS, not HTTP.
