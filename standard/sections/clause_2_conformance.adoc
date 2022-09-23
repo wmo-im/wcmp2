@@ -1,26 +1,21 @@
 == Conformance
 
-TODO: WMO techregs for discovery, and how this document meets those techregs
-
 Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document.
 
-OGC API - Records provides a record metadata model in support of resource discovery.  This specification is an
-as an extension of OGC API - Records - Part 1: Core.  Conformance to this specification requires demonstrated conformance
-to the applicable Conformance Classes of OGC API - Records - Part 1: Core.
+_OGC API - Records_ (OARec) provides a record metadata model in support of resource discovery.  This standard is an extension of _OGC API - Records - Part 1: Core_.  Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of _OGC API - Records - Part 1: Core_.
 
 Authors of discovery metadata records published within the WIS 2.0 discovery catalogue are required to comply with the
 WMO Core Metadata Profile (WCMP).  WCMP discovery metadata shall therefore be compliant with OGC API - Records - Part 1:
 Core: Requirements Class: Record Core.
 
-The WMO Secretariat shall publish guidance material to assist authors of WCMP discovery metadata in maintaining
-consistency betweeen metadata records, as well as quality assessment and reporting.
+WMO shall publish guidance material to assist authors of WCMP discovery metadata for maintaining
+consistency across multiple metadata records and perform quality assessment and reporting.
 
-This specification identifies one (1) Conformance Class.  This Conformance Class defines TODO: (x) Requirements,
-which define the functional requirements of the specification
+This standard identifies one Conformance Class which defines the functional requirements.
 
-The mandatory Conformance Classes for WCMP are:
+The mandatory Conformance Class for WCMP is:
 
-* "WMO Core Metadata Profile Core": This conformance class inherits from OGC API — Records — Part 1: Core:
-Requirements Class: Record Core which defines the requirements for a catalogue record.  The requirements
+* "WMO Core Metadata Profile Core": This conformance class inherits from _OGC API — Records — Part 1: Core:
+Requirements Class: Record Core_ which defines the requirements for a catalogue record.  The requirements
 specified in the Requirements Class “Record Core" are mandatory for all implementations of WMCP.
 The requirements are specified in Chapter 7 and in Annex A.2 in more detail.

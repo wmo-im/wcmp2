@@ -15,12 +15,12 @@ Check for the existence of one `+time+` item property in the WCMP record.
 
 [.component,class=step]
 --
-Check that `+time+` object is one of `+date+` string, `+timestamp+` string, `+interval+` array, or `+null+.
+Check that the `+time+` object is one of `+date+` string, `+timestamp+` string, `+interval+` array, or `+null+`.
 --
 
 [.component,class=step]
 --
-Check that all non-null `+time+` values are valid RFC3339 representations, or `+..+` for an open ended extent.
+Check that all non-null `+time+` values are valid RFC3339 representations, or `+..+` for an open-ended extent.
 --
 
 =====

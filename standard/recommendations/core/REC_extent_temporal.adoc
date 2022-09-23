@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/extent_temporal*
-^|A |For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (`+time.resolution+`) as a valid ISO 8601 duration (e.g. `+P1D+`).
+^|A |For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (`+time.resolution+`) as a valid ISO 8601 duration (e.g., `+P1D+`).
 |===

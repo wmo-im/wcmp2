@@ -9,7 +9,7 @@ test-purpose:: Validate that a WCMP record is valid to the authoritative WCMP sc
 =====
 [.component,class=step]
 --
-Run JSON Schema validation on the WCMP record against the WCMP authoritative schema
+Run JSON Schema validation on the WCMP record against the WCMP authoritative schema.
 --
 =====
 ====

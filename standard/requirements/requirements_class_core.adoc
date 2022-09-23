@@ -12,3 +12,4 @@
 |Pre-conditions |
 The record conforms to OGC API - Records - Core: Part 1: Requirements Class: Record Core
 |===
+◊

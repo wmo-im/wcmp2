@@ -3,20 +3,15 @@
 This document defines the content, structure, and encoding of discovery metadata published
 as part of a WIS 2.0 catalogue.
 
-The metadata standard defined herein is an informal extension of the International Standard
-OGC API - Records - Part 1: Core.  This metadata standard shall be referred to as the WMO
-Core Metadata Profile (WCMP).
+The WMO Core Metadata Profile (WCMP) standard defined herein is an extension of the International Standard _OGC API - Records - Part 1: Core_.
 
-WCMP discovery metadata records shall be encoded as GeoJSON as defined in OGC API - Records - Part 1: Core.
+WCMP discovery metadata records shall be encoded as GeoJSON as defined in _OGC API - Records - Part 1: Core_.
 
-The core purpose of WCMP is to describe **datasets**.  While WCMP is able to describe any
-resource (datasets, APIs and data reduction services, processes, analytics, etc.), they key
+The primary purpose of WCMP is to describe **datasets**.  While WCMP can describe any
+resource (datasets, APIs and data reduction services, processes, analytics, etc.), the key
 component for international data exchange is data.  Services and APIs operating on resources
-may be represented as part of their own metadata, or associated thorugh WCMP links.
+may be represented as part of their own metadata or associated through WCMP links.
 
-WCMP discovery metadata provides description at the granularity level of a dataset.  Station, instrument
-and observation metadata are supported as part of the WIGOS Metadata Standard footnote:[https://library.wmo.int/doc_num.php?explnum_id=10109].
+WCMP discovery metadata record provides descriptions at the granularity level of a dataset.  Station, instrument and observation metadata are supported by the _WIGOS Metadata Standard (WMO-No. 1192)_ footnote:[https://library.wmo.int/doc_num.php?explnum_id=10109].
 
-This specification defines the conformance requirements for the WMO Core Metadata
-Profile.  Annex A defines the abstract test suite. Annex B provides normative information
-on codelists.
+This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on codelists.

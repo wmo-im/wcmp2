@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/extent_geospatial*
-^|A |A WCMP record MAY provide multiple `+properties.extent.spatial.bbox+` item properties in order to express additional geospatial extents in other coordinate reference systems.
+^|A |A WCMP record MAY provide multiple `+properties.extent.spatial.bbox+` item properties to express additional geospatial extents in other coordinate reference systems.
 |===

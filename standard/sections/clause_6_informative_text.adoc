@@ -2,45 +2,35 @@
 
 === Overview
 
-The initial WIS Technical Specifications were developed using service-oriented architecture (SOA) principles.  It featured
-complex ISO 19115/19139-based XML for metadata. Since that time, authoritative
-groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design
-patterns as well as mass market encodings such as JSON and HTML.
+The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured complex ISO 19115/19139-based XML for metadata. Since then, authoritative
+groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.
 
-Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search,
-discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable
-functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
+Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
 
 ==== WIS 2.0
 
 WIS 2.0 puts forth the following principles (those focused on discovery metadata are in **bold**):
 
-* *Principle 1: WIS 2.0 adopts Web technologies and leverages industry best practices and open standards*
-* *Principle 2: WIS 2.0 uses Uniform Resource Locators (URL) to identify resources*
-* *Principle 3: WIS 2.0 prioritizes use of public telecommunications networks (i.e. Internet) when publishing digital resources*
-* *Principle 4: WIS2.0 requires provision of Web service(s) to access or interact with digital resources (e.g. data, information, products) published using WIS*
-* Principle 5: WIS 2.0 encourages NCs and DCPCs to provide 'data reduction' services via WIS that process 'big data' to create results or products that are small enough to be conveniently downloaded and used by those with minimal technical infrastructure
-* *Principle 6: WIS 2.0 will add open standard messaging protocols that use the publish-subscribe message pattern to the list of data exchange mechanisms approved for use within WIS and GTS*
-* Principle 7: WIS 2.0 will require all services that provide real-time distribution of messages to cache/store the messages for a minimum of 24 hours, and allow users to request cached messages for download
-* Principle 8: WIS 2.0 will adopt direct data exchange between provider and consumer
-* Principle 9: WIS 2.0 will phase out the use of routing tables and bulletin headers
-* *Principle 10: WIS 2.0 will provide a Catalogue containing metadata that describes both data and the service(s) provided to access that data*
-* *Principle 11: WIS 2.0 encourages data providers to publish metadata describing their data and Web services in a way that can be indexed by commercial search engines*
+* *(1) WIS 2.0 adopts Web technology and leverages industry best practices and open standards.*
+* *(2) WIS 2.0 uses Uniform Resource Locators (URL) to identify resources (i.e., Web pages, data, metadata, APIs) use.*
+* *(3) WIS 2.0 prioritizes the use of public telecommunications networks (i.e. Internet) when publishing digital resources.*
+* *(4) WIS 2.0 requires provision of Web service(s) to access or interact with digital resources (e.g. data, information, products) published using WIS.*
+* (5) WIS 2.0 encourages NCs and DCPCs to provide 'data reduction' services via WIS that process 'big data' to create results or products that are small enough to be conveniently downloaded and used by those with minimal technical infrastructure.
+* *(6) WIS 2.0 adds open standard messaging protocols that use the publish-subscribe message pattern to the list of data exchange mechanisms approved for use within WIS and GTS.*
+* (7) WIS 2.0 requires all services that provide real-time distribution of messages (containing data or notifications about data availability) to cache/store the messages for a minimum of 24 hours and allow users to request cached messages for download.
+* (8) WIS 2.0 adopts direct data-exchange between provider and consumer and phases out the use of routing tables and bulletin headers.
+* *(9) WIS 2.0 provides a catalogue containing metadata that describes both data and the service(s) provided to access that data.*
+* *(10) WIS 2.0 encourages data providers to publish metadata describing their data and Web services in a way that can be indexed by commercial search engines.*
 
 ==== Discovery metadata design considerations
 
 The following describes envisioned workflows of WIS 2.0 in the context of metadata search and harvesting.
 
-We consider the following:
-
-* flexible metadata publishing mechanisms: providers need to be able to publish discovery metadata in the easiest and
-most efficient way possible
-* basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
-JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and
-metadata harvesters
-* the browser as the catalogue: here, browsers utilize mass market search engines as the gateway to low barrier
-discovery.  This pattern may work by way of the Global Discovery Catalogue and the Global Cache, with the idea that
-search engines can index from the authoritative source
+* Flexible metadata publishing mechanisms so providers can publish discovery metadata in the easiest and most efficient way possible.
+* Basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
+JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and metadata harvesters.
+* The browser as the catalogue. Browsers utilize mass market search engines as the gateway to low barrier
+discovery.  This pattern may work by way of the Global Discovery Catalogue and the Global Cache, with the idea that search engines can index from the authoritative source.
 
 ==== Granularity
 
@@ -99,28 +89,28 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 
 ==== Domain specialist
 
-* As an NWP centre operator I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my vast databases so that I can concentrate on my core business
-* As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant/useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. That should work for unprocessed outputs of a prediction model or a satellite as well as for services that offer more sophisticated access to the data, e.g. tailing
-* As a GIS professional, I would like to search for weather/climate/water data from my GIS Desktop support tool so that I can integrate forecast data into my workflow
+* As an NWP centre operator, I want to quickly and easily publish information about the data that my centre provides and update it as needed in a (semi)automated way using the information that I already have in my databases, so that I can concentrate on my core business.
+* As the leader of a forecasting team of a national meteorological institution, I would like to be able to find more sources of data that might be relevant or useful for the work of my team, notably NWP and satellite imagery so that we could further improve our predictions. 
+* As a GIS professional, I would like to search for weather, climate and water data from my GIS desktop support tool so that I can integrate forecast data into my workflow.
 
 ==== Mass market
 
-* As an entrepreneur (start-up) that provides (wants to provide) tailored weather information I want to be able to find services (free or commercial) that provide meteorological data in a cloud or even better, provide customizable processing of such data - to be able to build my own service on top of it. And I want to be able to find out if a new such service appears or if an existing one changes its abilities so that my company can keep on advancing
-* As a user I would like to search for real-time observations for a given time and geographical area of interest so that I can have up to date information on weather for my city
+* As an entrepreneur (start-up) that provides (wants to provide) tailored weather information, I want to find services (free or commercial) that provide meteorological data in the cloud, or even better, a service that provides customizable processing of such data to build my own service on top of it. I also want to be able to find out if a new service becomes available or if an existing one changes its abilities so that my company can keep on advancing.
+* As a user, I would like to search for real-time observations for a given time and geographical area of interest, so that I can have up-to-date information on weather for my city.
 
 ==== Developers
 
-* As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes reality
-* As a web developer I would like to access to a search API that provides easy to read documentation, examples and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly
+* As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes a reality.
+* As a web developer, I would like to access a search API that provides easy-to-read documentation, examples, and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly.
 
 The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:
 
-* As an everyday user, I would like to find easy to understand and precise weather data so that I can plan to have people over for an outdoor BBQ on a nice day
-* As a smart home owner, I would like access to frequently updated data so that I can keep my smart home monitoring up to date
-* As a weather specialist, I would like to access weather data in native data formats and subscribe to data updates, so that I can provide tailor made weather services to my users
+* As an everyday user, I would like to find easy-to-understand and precise weather data so that I can plan to have people over for an outdoor BBQ on a nice day.
+* As a smart home owner, I would like access to frequently updated data so that I can keep my smart home monitoring up to date.
+* As a weather specialist, I would like to access weather data in native data formats and subscribe to data updates, so that I can provide tailor-made weather services to my users.
 
-Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for low barrier, ubiquitous and
-efficient discovery, visualization, access of weather/climate/water (real-time, near real-time, archive, etc.) data.
+Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for a low barrier, ubiquitous and
+efficient discovery, visualization, and access of weather, climate, water (real-time, near real-time, archive, etc.) data.
 
 === OGC API - Records - Part 1: Core
 
@@ -148,6 +138,6 @@ management and discovery of data within WIS 2.0.
 
 === Mass market considerations
 
-Given WIS 2.0 principle 11 (publishing metadata in a way that can be indexed by commercial search engines),
+Given WIS 2.0 principle 10 (publishing metadata in a way that commercial search engines can index),
 WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
-structured data discovery, search and relevant/rich results.
+structured data discovery, search, and relevant results.
