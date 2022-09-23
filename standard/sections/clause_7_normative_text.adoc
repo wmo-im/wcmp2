@@ -5,10 +5,90 @@ through WIS 2.0.
 
 === Conformance Class Core
 
+==== Overview
+
 The WCMP Core Conformance Class provides requirements to articulate the required elements
 of a WCMP discovery metadata record.
 
 include::../requirements/requirements_class_core.adoc[]
+
+
+The table below provides an overview of the set of properties that may be included in a WCMP record.
+
+
+.WCMP record core properties
+|===
+|Property|Requirement|Description
+
+|``id``
+|**required**
+|A unique identifier to the dataset
+
+|``conformsTo``
+|**required**
+|The version of WCMP associated that the record conforms to
+
+|``properties.title``
+|**required**
+|A human-readable name for a given dataset
+
+|``properties.description``
+|**required**
+|A free-text summary description of the dataset
+
+|``properties.keywords``
+|**required**
+|Keywords, tags, key phrases, or classification codes
+
+|``properties.themes``
+|**required**
+|Classifiers, categories and controlled vocabularies
+
+|``geometry``
+|**required**
+|Geospatial location associated with the dataset, in a geographic coordinate reference system
+
+|``properties.extent.spatial``
+|optional
+|Additional geospatial extents in other coordinate reference systems
+
+|``time``
+|**required**
+|Temporal extent associated with a dataset
+
+|``properties.extent.temporal``
+|optional
+|Additional time instants or periods
+
+|``properties.providers``
+|**required**
+|Contact information for the dataset
+
+|``properties.version``
+|optional
+|Version or edition of the dataset
+
+|``properties.externalIds``
+|optional
+|Persistent identifiers or handles for the dataset
+
+|``properties.recordCreated``
+|**required**
+|The date that the record was created
+
+|``properties.recordUpdated``
+|**required**
+|The date that the record was updated
+
+|``properties.wmo:dataPolicy``
+|**required**
+|WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]
+
+|``links``
+|**required**
+|Online linkages to data retrieval or additional resources associated with the dataset
+
+|===
 
 ==== Validation
 
