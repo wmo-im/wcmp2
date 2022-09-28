@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.10">
 <meta name="author" content="= 2.0.0-DRAFT-2022-09-28">
+<meta name="copyright" content="Copyright © 2022 World Meteorological Organization (WMO)">
 <title>WMO Core Metadata Profile (WCMP) Version 2</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -437,7 +438,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article">
+<body class="book">
 <div id="header">
 <h1>WMO Core Metadata Profile (WCMP) Version 2</h1>
 <div class="details">
@@ -448,12 +449,108 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div style="page-break-after: always;"></div>
-<!-- toc disabled -->
+<div id="toc" class="toc">
+<div id="toctitle" class="title">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_scope">1. Scope</a></li>
+<li><a href="#_conformance">2. Conformance</a></li>
+<li><a href="#_references">3. References</a></li>
+<li><a href="#_terms_and_definitions">4. Terms and definitions</a>
+<ul class="sectlevel2">
+<li><a href="#_abbreviated_terms">4.1. Abbreviated terms</a></li>
+</ul>
+</li>
+<li><a href="#_conventions">5. Conventions</a>
+<ul class="sectlevel2">
+<li><a href="#_identifiers">5.1. Identifiers</a></li>
+<li><a href="#_examples">5.2. Examples</a></li>
+<li><a href="#_schemas">5.3. Schemas</a></li>
+<li><a href="#_schema_representation">5.4. Schema representation</a>
+<ul class="sectlevel3">
+<li><a href="#_properties">5.4.1. Properties</a></li>
+</ul>
+</li>
+<li><a href="#_use_of_https">5.5. Use of HTTPS</a></li>
+</ul>
+</li>
+<li><a href="#_introduction">6. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_overview">6.1. Overview</a>
+<ul class="sectlevel3">
+<li><a href="#_wis_2_0">6.1.1. WIS 2.0</a></li>
+<li><a href="#_discovery_metadata_design_considerations">6.1.2. Discovery metadata design considerations</a></li>
+<li><a href="#_granularity">6.1.3. Granularity</a></li>
+</ul>
+</li>
+<li><a href="#_user_stories">6.2. User stories</a>
+<ul class="sectlevel3">
+<li><a href="#_domain_specialist">6.2.1. Domain specialist</a></li>
+<li><a href="#_mass_market">6.2.2. Mass market</a></li>
+<li><a href="#_developers">6.2.3. Developers</a></li>
+</ul>
+</li>
+<li><a href="#_ogc_api_records_part_1_core">6.3. OGC API - Records - Part 1: Core</a></li>
+<li><a href="#_the_wis_2_0_global_discovery_catalogue">6.4. The WIS 2.0 Global Discovery Catalogue</a></li>
+<li><a href="#_mass_market_considerations">6.5. Mass market considerations</a></li>
+</ul>
+</li>
+<li><a href="#_the_wmo_core_metadata_profile_record">7. The WMO Core Metadata Profile Record</a>
+<ul class="sectlevel2">
+<li><a href="#_conformance_class_core">7.1. Conformance Class Core</a>
+<ul class="sectlevel3">
+<li><a href="#_overview_2">7.1.1. Overview</a></li>
+<li><a href="#_validation">7.1.2. Validation</a></li>
+<li><a href="#_granularity_2">7.1.3. Granularity</a></li>
+<li><a href="#_identifier">7.1.4. Identifier</a></li>
+<li><a href="#_conformance_2">7.1.5. Conformance</a></li>
+<li><a href="#_properties_type">7.1.6. Properties Type</a></li>
+<li><a href="#_title">7.1.7. Title</a></li>
+<li><a href="#_description">7.1.8. Description</a></li>
+<li><a href="#_keywords">7.1.9. Keywords</a></li>
+<li><a href="#themes">7.1.10. Themes and Topic Hierarchy</a></li>
+<li><a href="#_geospatial_and_temporal_extents">7.1.11. Geospatial and Temporal Extents</a></li>
+<li><a href="#_providers">7.1.12. Providers</a></li>
+<li><a href="#_version">7.1.13. Version</a></li>
+<li><a href="#_digital_object_identifier">7.1.14. Digital Object Identifier</a></li>
+<li><a href="#_record_creation_date">7.1.15. Record Creation Date</a></li>
+<li><a href="#_record_update_date">7.1.16. Record Update Date</a></li>
+<li><a href="#_wmo_data_policy">7.1.17. WMO Data Policy</a></li>
+<li><a href="#distribution">7.1.18. Distribution Information</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a>
+<ul class="sectlevel2">
+<li><a href="#_conformance_class_core_2">A.1. Conformance Class: Core</a>
+<ul class="sectlevel3">
+<li><a href="#_validation_2">A.1.1. Validation</a></li>
+<li><a href="#_identifier_2">A.1.2. Identifier</a></li>
+<li><a href="#_conformance_3">A.1.3. Conformance</a></li>
+<li><a href="#_type">A.1.4. Type</a></li>
+<li><a href="#_geospatial_extent_2">A.1.5. Geospatial Extent</a></li>
+<li><a href="#_temporal_extent_2">A.1.6. Temporal Extent</a></li>
+<li><a href="#_title_2">A.1.7. Title</a></li>
+<li><a href="#_description_2">A.1.8. Description</a></li>
+<li><a href="#_themes_and_topic_hierarchy">A.1.9. Themes and Topic Hierarchy</a></li>
+<li><a href="#_providers_2">A.1.10. Providers</a></li>
+<li><a href="#_record_creation_date_2">A.1.11. Record Creation Date</a></li>
+<li><a href="#_record_update_date_2">A.1.12. Record Update Date</a></li>
+<li><a href="#_wmo_data_policy_2">A.1.13. WMO Data Policy</a></li>
+</ul>
+</li>
+<li><a href="#_links">A.2. Links</a></li>
+</ul>
+</li>
+<li><a href="#Codelists">Annex B: Codelists</a></li>
+<li><a href="#Bibliography">Annex C: Bibliography</a></li>
+</ul>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_scope">Scope</h2>
+<h2 id="_scope"><a class="anchor" href="#_scope"></a>1. Scope</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document defines the content, structure, and encoding of discovery metadata published
@@ -480,7 +577,7 @@ may be represented as part of their own metadata or associated through WCMP link
 </div>
 </div>
 <div class="sect1">
-<h2 id="_conformance">Conformance</h2>
+<h2 id="_conformance"><a class="anchor" href="#_conformance"></a>2. Conformance</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document.</p>
@@ -516,7 +613,7 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_references">References</h2>
+<h2 id="_references"><a class="anchor" href="#_references"></a>3. References</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -561,7 +658,7 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_terms_and_definitions">Terms and definitions</h2>
+<h2 id="_terms_and_definitions"><a class="anchor" href="#_terms_and_definitions"></a>4. Terms and definitions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this Standard and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
@@ -573,7 +670,7 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <p>The following additional terms and definitions also apply.</p>
 </div>
 <div class="sect2">
-<h3 id="_abbreviated_terms">Abbreviated terms</h3>
+<h3 id="_abbreviated_terms"><a class="anchor" href="#_abbreviated_terms"></a>4.1. Abbreviated terms</h3>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Symbols and abbreviated terms</caption>
 <colgroup>
@@ -705,13 +802,13 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_conventions">Conventions</h2>
+<h2 id="_conventions"><a class="anchor" href="#_conventions"></a>5. Conventions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of JSON schema, or special notes regarding how to read the document.</p>
 </div>
 <div class="sect2">
-<h3 id="_identifiers">Identifiers</h3>
+<h3 id="_identifiers"><a class="anchor" href="#_identifiers"></a>5.1. Identifiers</h3>
 <div class="paragraph">
 <p>The normative provisions in this Standard are denoted by the URI:</p>
 </div>
@@ -723,7 +820,7 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples">Examples</h3>
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>5.2. Examples</h3>
 <div class="paragraph">
 <p>Examples provided in this specification are encoded as GeoJSON.</p>
 </div>
@@ -732,13 +829,13 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_schemas">Schemas</h3>
+<h3 id="_schemas"><a class="anchor" href="#_schemas"></a>5.3. Schemas</h3>
 <div class="paragraph">
 <p>The WCMP 2.0 schema can be found at <a href="https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml" class="bare">https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml</a></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_schema_representation">Schema representation</h3>
+<h3 id="_schema_representation"><a class="anchor" href="#_schema_representation"></a>5.4. Schema representation</h3>
 <div class="paragraph">
 <p>JSON Schema <sup class="footnote">[<a id="_footnoteref_14" class="footnote" href="#_footnotedef_14" title="View footnote.">14</a>]</sup> objects are used throughout this standard to define the structure
 of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_15" class="footnote" href="#_footnotedef_15" title="View footnote.">15</a>]</sup>.
@@ -748,7 +845,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 <p>Metadata record instances are always defined as JSON.</p>
 </div>
 <div class="sect3">
-<h4 id="_properties">Properties</h4>
+<h4 id="_properties"><a class="anchor" href="#_properties"></a>5.4.1. Properties</h4>
 <div class="paragraph">
 <p>A JSON <strong>property</strong> represents a key-value pair, where the key is the name of the property and the value is a standard JSON data type.</p>
 </div>
@@ -760,7 +857,7 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_use_of_https">Use of HTTPS</h3>
+<h3 id="_use_of_https"><a class="anchor" href="#_use_of_https"></a>5.5. Use of HTTPS</h3>
 <div class="paragraph">
 <p>For simplicity, this document only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS." In fact, most servers are expected to use HTTPS, not HTTP.</p>
 </div>
@@ -768,10 +865,10 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introduction">Introduction</h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>6. Introduction</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_overview">Overview</h3>
+<h3 id="_overview"><a class="anchor" href="#_overview"></a>6.1. Overview</h3>
 <div class="paragraph">
 <p>The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured complex ISO 19115/19139-based XML for metadata. Since then, authoritative
 groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.</p>
@@ -780,7 +877,7 @@ groups such as W3C and OGC have moved to adopt a more resource-oriented architec
 <p>Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.</p>
 </div>
 <div class="sect3">
-<h4 id="_wis_2_0">WIS 2.0</h4>
+<h4 id="_wis_2_0"><a class="anchor" href="#_wis_2_0"></a>6.1.1. WIS 2.0</h4>
 <div class="paragraph">
 <p>WIS 2.0 puts forth the following principles (those focused on discovery metadata are in <strong>bold</strong>):</p>
 </div>
@@ -820,7 +917,7 @@ groups such as W3C and OGC have moved to adopt a more resource-oriented architec
 </div>
 </div>
 <div class="sect3">
-<h4 id="_discovery_metadata_design_considerations">Discovery metadata design considerations</h4>
+<h4 id="_discovery_metadata_design_considerations"><a class="anchor" href="#_discovery_metadata_design_considerations"></a>6.1.2. Discovery metadata design considerations</h4>
 <div class="paragraph">
 <p>The following describes envisioned workflows of WIS 2.0 in the context of metadata search and harvesting.</p>
 </div>
@@ -841,7 +938,7 @@ discovery.  This pattern may work by way of the Global Discovery Catalogue and t
 </div>
 </div>
 <div class="sect3">
-<h4 id="_granularity">Granularity</h4>
+<h4 id="_granularity"><a class="anchor" href="#_granularity"></a>6.1.3. Granularity</h4>
 <div class="paragraph">
 <p>In order to provide discovery metadata of value, it is important to clarify the granularity levels of which providers
 are to provide describing their data/services.  Articulating the level of granularity will reduce catalogue "pollution"
@@ -933,13 +1030,13 @@ common meteorological data types:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_user_stories">User stories</h3>
+<h3 id="_user_stories"><a class="anchor" href="#_user_stories"></a>6.2. User stories</h3>
 <div class="paragraph">
-<p>As part of requirements gathering footnote, the following user stories provide a
+<p>As part of requirements gathering, the following user stories provide a
 description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective.</p>
 </div>
 <div class="sect3">
-<h4 id="_domain_specialist">Domain specialist</h4>
+<h4 id="_domain_specialist"><a class="anchor" href="#_domain_specialist"></a>6.2.1. Domain specialist</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -955,7 +1052,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 </div>
 </div>
 <div class="sect3">
-<h4 id="_mass_market">Mass market</h4>
+<h4 id="_mass_market"><a class="anchor" href="#_mass_market"></a>6.2.2. Mass market</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -968,7 +1065,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 </div>
 </div>
 <div class="sect3">
-<h4 id="_developers">Developers</h4>
+<h4 id="_developers"><a class="anchor" href="#_developers"></a>6.2.3. Developers</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1002,7 +1099,7 @@ efficient discovery, visualization, and access of weather, climate, water (real-
 </div>
 </div>
 <div class="sect2">
-<h3 id="_ogc_api_records_part_1_core">OGC API - Records - Part 1: Core</h3>
+<h3 id="_ogc_api_records_part_1_core"><a class="anchor" href="#_ogc_api_records_part_1_core"></a>6.3. OGC API - Records - Part 1: Core</h3>
 <div class="paragraph">
 <p>The OGC Records - API - Part 1: Core specification:</p>
 </div>
@@ -1025,7 +1122,7 @@ federation and cross catalogue discovery functionality</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_wis_2_0_global_discovery_catalogue">The WIS 2.0 Global Discovery Catalogue</h3>
+<h3 id="_the_wis_2_0_global_discovery_catalogue"><a class="anchor" href="#_the_wis_2_0_global_discovery_catalogue"></a>6.4. The WIS 2.0 Global Discovery Catalogue</h3>
 <div class="paragraph">
 <p>The GDC will provide a central search endpoint, enabling users to traverse, browse and search
 data holdings in WIS 2.0.  Key search predicate capabilities include:</p>
@@ -1053,7 +1150,7 @@ management and discovery of data within WIS 2.0.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_mass_market_considerations">Mass market considerations</h3>
+<h3 id="_mass_market_considerations"><a class="anchor" href="#_mass_market_considerations"></a>6.5. Mass market considerations</h3>
 <div class="paragraph">
 <p>Given WIS 2.0 principle 10 (publishing metadata in a way that commercial search engines can index),
 WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
@@ -1063,16 +1160,16 @@ structured data discovery, search, and relevant results.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_the_wmo_core_metadata_profile_record">The WMO Core Metadata Profile Record</h2>
+<h2 id="_the_wmo_core_metadata_profile_record"><a class="anchor" href="#_the_wmo_core_metadata_profile_record"></a>7. The WMO Core Metadata Profile Record</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A WCMP record provides descriptive information about a dataset made available
 through WIS 2.0.</p>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_core">Conformance Class Core</h3>
+<h3 id="_conformance_class_core"><a class="anchor" href="#_conformance_class_core"></a>7.1. Conformance Class Core</h3>
 <div class="sect3">
-<h4 id="_overview_2">Overview</h4>
+<h4 id="_overview_2"><a class="anchor" href="#_overview_2"></a>7.1.1. Overview</h4>
 <div class="paragraph">
 <p>The WCMP Core Conformance Class provides requirements to articulate the required elements
 of a WCMP discovery metadata record.</p>
@@ -1231,7 +1328,7 @@ of a WCMP discovery metadata record.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_validation">Validation</h4>
+<h4 id="_validation"><a class="anchor" href="#_validation"></a>7.1.2. Validation</h4>
 <div class="paragraph">
 <p>The WCMP record schema is based on  <em>OGC API - Records - Part 1: Core: Requirements Class: Record Core</em> schema and the associated information model.  WCMP records compliant with WCMP 2.0 schema are therefore compliant with the <em>OGC API - Records</em> record schema.</p>
 </div>
@@ -1269,7 +1366,7 @@ of a WCMP discovery metadata record.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_granularity_2">Granularity</h4>
+<h4 id="_granularity_2"><a class="anchor" href="#_granularity_2"></a>7.1.3. Granularity</h4>
 <div class="paragraph">
 <p>A WCMP record provides a description at the granularity of a dataset, which facilitates clear
 cataloguing and discovery workflow, in combination with data services or APIs, which provide
@@ -1343,7 +1440,7 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
 </table>
 </div>
 <div class="sect3">
-<h4 id="_identifier">Identifier</h4>
+<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>7.1.4. Identifier</h4>
 <div class="paragraph">
 <p>A WCMP record utilizes the OARec <code>id</code> property to provide a unique identifier
 to a dataset.  A record identifier is essential for querying and identifying
@@ -1400,7 +1497,7 @@ records within the GDC.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_conformance_2">Conformance</h4>
+<h4 id="_conformance_2"><a class="anchor" href="#_conformance_2"></a>7.1.5. Conformance</h4>
 <div class="paragraph">
 <p>A WCMP record leverages the OGC API <code>conformsTo</code> property to identify the conformance classes
 that apply to the record.  WCMP conformance identification is valuable for content/version
@@ -1441,7 +1538,7 @@ detection and handling.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_type">Properties Type</h4>
+<h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.6. Properties Type</h4>
 <div class="paragraph">
 <p>WCMP records provide descriptive information about different resource types, such as
 dataset or services.</p>
@@ -1479,7 +1576,7 @@ dataset or services.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_title">Title</h4>
+<h4 id="_title"><a class="anchor" href="#_title"></a>7.1.7. Title</h4>
 <div class="paragraph">
 <p>A WCMP record&#8217;s <code>properties.title</code> property is a human-readable name for a given dataset.</p>
 </div>
@@ -1510,7 +1607,7 @@ dataset or services.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_description">Description</h4>
+<h4 id="_description"><a class="anchor" href="#_description"></a>7.1.8. Description</h4>
 <div class="paragraph">
 <p>A WCMP record has a <code>properties.description</code> property, which is a free-text summary description of the dataset.</p>
 </div>
@@ -1541,7 +1638,7 @@ dataset or services.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_keywords">Keywords</h4>
+<h4 id="_keywords"><a class="anchor" href="#_keywords"></a>7.1.9. Keywords</h4>
 <div class="paragraph">
 <p>A WCMP record should have a <code>properties.keywords</code> property, typically represented using keywords, tags, key phrases, or classification codes.</p>
 </div>
@@ -1577,7 +1674,7 @@ dataset or services.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="themes">Themes and Topic Hierarchy</h4>
+<h4 id="themes"><a class="anchor" href="#themes"></a>7.1.10. Themes and Topic Hierarchy</h4>
 <div class="paragraph">
 <p>A WCMP record has a <code>properties.themes</code> property, which is a knowledge organization system used to classify the data.  A WCMP record can have one or more themes.  The WIS2 Topic Hierarchy is put
 forth as a specific theme/concept and is consistent with the topic as defined in distribution links
@@ -1635,9 +1732,9 @@ advertising broker services.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_geospatial_and_temporal_extents">Geospatial and Temporal Extents</h4>
+<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.11. Geospatial and Temporal Extents</h4>
 <div class="sect4">
-<h5 id="_geospatial_extent">Geospatial Extent</h5>
+<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.11.1. Geospatial Extent</h5>
 <div class="paragraph">
 <p>WCMP records provide descriptive information regarding the geospatial properties of a dataset.  Geospatial
 extents provide a useful indicator of the location of the dataset and facilitates searching the
@@ -1744,7 +1841,7 @@ Global Discovery Catalogue with geospatial predicates.</p>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_additional_geospatial_extents">Additional Geospatial Extents</h5>
+<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.11.2. Additional Geospatial Extents</h5>
 <div class="paragraph">
 <p>A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
 temporal extents) via the <code>properties.extent</code> property.  The <code>properties.extent.spatial.bbox</code> property
@@ -1806,7 +1903,7 @@ signed number between -90 and 90, greater than or equal to <strong>miny</strong>
 </tbody>
 </table>
 <div class="sect5">
-<h6 id="_temporal_extent">Temporal Extent</h6>
+<h6 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>Temporal Extent</h6>
 <div class="paragraph">
 <p>WCMP records provide descriptive information regarding the temporal properties of a dataset.  Temporal
 extents provide a useful indicator of the date/time period of the dataset and facilitates searching the
@@ -1888,7 +1985,7 @@ Global Discovery Catalogue with temporal predicates.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_additional_temporal_extents">Additional Temporal Extents</h5>
+<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.11.3. Additional Temporal Extents</h5>
 <div class="paragraph">
 <p>A WCMP record can communicate additional time instants or periods via the <code>properties.extent.temporal</code> item property.
 Temporal extents can be fully bound or open in either direction (e.g., until or before).  A <code>properties.extent.temporal.resolution</code>
@@ -1933,7 +2030,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_providers">Providers</h4>
+<h4 id="_providers"><a class="anchor" href="#_providers"></a>7.1.12. Providers</h4>
 <div class="paragraph">
 <p>A WCMP record has one or more providers listed as part of the <code>properties.providers</code> property. These elements
 provide contact information based on the role of the provider.</p>
@@ -2011,7 +2108,7 @@ provide contact information based on the role of the provider.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_version">Version</h4>
+<h4 id="_version"><a class="anchor" href="#_version"></a>7.1.13. Version</h4>
 <div class="paragraph">
 <p>Datasets may be versioned by an organization (version of an NWP model, processing chain/workflow, etc.), and data providers can make this information available when there are multiple versions of a dataset over time.</p>
 </div>
@@ -2042,7 +2139,7 @@ provide contact information based on the role of the provider.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_digital_object_identifier">Digital Object Identifier</h4>
+<h4 id="_digital_object_identifier"><a class="anchor" href="#_digital_object_identifier"></a>7.1.14. Digital Object Identifier</h4>
 <div class="paragraph">
 <p>A digital object identifier (DOI) is a persistent identifier or handle used to identify various objects uniquely and is widely used in scientific publications.</p>
 </div>
@@ -2099,7 +2196,7 @@ resource identification using the DOI framework.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_record_creation_date">Record Creation Date</h4>
+<h4 id="_record_creation_date"><a class="anchor" href="#_record_creation_date"></a>7.1.15. Record Creation Date</h4>
 <div class="paragraph">
 <p>A WCMP record has a <code>properties.recordCreated</code> property, which describes the date that the record was created.</p>
 </div>
@@ -2130,7 +2227,7 @@ resource identification using the DOI framework.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_record_update_date">Record Update Date</h4>
+<h4 id="_record_update_date"><a class="anchor" href="#_record_update_date"></a>7.1.16. Record Update Date</h4>
 <div class="paragraph">
 <p>A WCMP record has a <code>properties.recordUpdated</code> property, which describes the date that the record was last updated.</p>
 </div>
@@ -2161,7 +2258,7 @@ resource identification using the DOI framework.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_wmo_data_policy">WMO Data Policy</h4>
+<h4 id="_wmo_data_policy"><a class="anchor" href="#_wmo_data_policy"></a>7.1.17. WMO Data Policy</h4>
 <div class="paragraph">
 <p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_18" class="footnote" href="#_footnotedef_18" title="View footnote.">18</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.</p>
 </div>
@@ -2328,15 +2425,15 @@ resource identification using the DOI framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribution">Distribution Information</h4>
+<h4 id="distribution"><a class="anchor" href="#distribution"></a>7.1.18. Distribution Information</h4>
 <div class="sect4">
-<h5 id="_overview_3">Overview</h5>
+<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.18.1. Overview</h5>
 <div class="paragraph">
 <p>A WCMP record provides information regarding how to access and retrieve data and products.  This information is specified by defining a <code>links</code> array property, with one or more objects to corresponding data access services.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_examples_2">Examples</h5>
+<h5 id="_examples_2"><a class="anchor" href="#_examples_2"></a>7.1.18.2. Examples</h5>
 <div class="ulist">
 <ul>
 <li>
@@ -2643,10 +2740,10 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect1">
-<h2 id="_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</h2>
+<h2 id="_conformance_class_abstract_test_suite_normative"><a class="anchor" href="#_conformance_class_abstract_test_suite_normative"></a>Annex A: Conformance Class Abstract Test Suite (Normative)</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_conformance_class_core_2">Conformance Class: Core</h3>
+<h3 id="_conformance_class_core_2"><a class="anchor" href="#_conformance_class_core_2"></a>A.1. Conformance Class: Core</h3>
 <div id="ats_core" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2668,7 +2765,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_validation_2">Validation</h4>
+<h4 id="_validation_2"><a class="anchor" href="#_validation_2"></a>A.1.1. Validation</h4>
 <div id="ats_core_validation" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2702,7 +2799,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_identifier_2">Identifier</h4>
+<h4 id="_identifier_2"><a class="anchor" href="#_identifier_2"></a>A.1.2. Identifier</h4>
 <div id="ats_core_identifier" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2771,7 +2868,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_conformance_3">Conformance</h4>
+<h4 id="_conformance_3"><a class="anchor" href="#_conformance_3"></a>A.1.3. Conformance</h4>
 <div id="ats_core_conformance" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2812,7 +2909,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_type">Type</h4>
+<h4 id="_type"><a class="anchor" href="#_type"></a>A.1.4. Type</h4>
 <div id="ats_core_type" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2846,7 +2943,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_geospatial_extent_2">Geospatial Extent</h4>
+<h4 id="_geospatial_extent_2"><a class="anchor" href="#_geospatial_extent_2"></a>A.1.5. Geospatial Extent</h4>
 <div id="ats_core_extent_geospatial" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2908,7 +3005,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_temporal_extent_2">Temporal Extent</h4>
+<h4 id="_temporal_extent_2"><a class="anchor" href="#_temporal_extent_2"></a>A.1.6. Temporal Extent</h4>
 <div id="ats_core_extent_temporal" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2956,7 +3053,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_title_2">Title</h4>
+<h4 id="_title_2"><a class="anchor" href="#_title_2"></a>A.1.7. Title</h4>
 <div id="ats_core_title" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -2990,7 +3087,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_description_2">Description</h4>
+<h4 id="_description_2"><a class="anchor" href="#_description_2"></a>A.1.8. Description</h4>
 <div id="ats_core_description" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3024,7 +3121,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_themes_and_topic_hierarchy">Themes and Topic Hierarchy</h4>
+<h4 id="_themes_and_topic_hierarchy"><a class="anchor" href="#_themes_and_topic_hierarchy"></a>A.1.9. Themes and Topic Hierarchy</h4>
 <div id="ats_core_themes_topic_hierarchy" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3072,7 +3169,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_providers_2">Providers</h4>
+<h4 id="_providers_2"><a class="anchor" href="#_providers_2"></a>A.1.10. Providers</h4>
 <div id="ats_core_providers" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3113,7 +3210,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_record_creation_date_2">Record Creation Date</h4>
+<h4 id="_record_creation_date_2"><a class="anchor" href="#_record_creation_date_2"></a>A.1.11. Record Creation Date</h4>
 <div id="ats_core_record_creation_date" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3147,7 +3244,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_record_update_date_2">Record Update Date</h4>
+<h4 id="_record_update_date_2"><a class="anchor" href="#_record_update_date_2"></a>A.1.12. Record Update Date</h4>
 <div id="ats_core_record_update_date" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3181,7 +3278,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_wmo_data_policy_2">WMO Data Policy</h4>
+<h4 id="_wmo_data_policy_2"><a class="anchor" href="#_wmo_data_policy_2"></a>A.1.13. WMO Data Policy</h4>
 <div id="ats_core_data_policy" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3237,7 +3334,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect2">
-<h3 id="_links">Links</h3>
+<h3 id="_links"><a class="anchor" href="#_links"></a>A.2. Links</h3>
 <div id="ats_core_links" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3308,13 +3405,13 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect1">
-<h2 id="Codelists">Annex B: Codelists</h2>
+<h2 id="Codelists"><a class="anchor" href="#Codelists"></a>Annex B: Codelists</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="Bibliography">Annex C: Bibliography</h2>
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex C: Bibliography</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -3397,7 +3494,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-09-28 15:36:21 UTC
+Last updated 2022-09-28 15:56:28 UTC
 </div>
 </div>
 </body>
