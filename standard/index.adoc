@@ -1,42 +1,13 @@
 :title: WMO Core Metadata Profile (WCMP) Version 2
 :titletext: {title}
 :version: 2.0.0-DRAFT-{docdate}
-:copyright: Copyright © 2022 World Meteorological Organization (WMO)
-:doctype: book
-:encoding: utf-8
-:lang: en
-:toc:
-:toc-placement!:
-:toclevels: 3
-:sectnums:
-:sectnumlevels: 4
-:sectanchors:
-
 
 = {title}
-
-<<<
-[cols = "<",frame = "none",grid = "none"]
-|===
-|{set:cellbgcolor:#FFFFFF}
-|[big]*World Meteorological Organization*
-|Date: {docdate}
-|Version: {version}
-|Document location: TBD
-|Document status: DRAFT
-|Task Team on WIS Metadata (TT-WISMD)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/expert-team-metadata-0]
-|Expert Team on Metadata Standards (ET-Metadata)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-national-representatives/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/et-metadata]
-|Standing Committee on Information Management and Technology (SC-IMT)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt]
-|Commission for Observation, Infrastructure and Information Systems (INFCOM)footnote:[https://community.wmo.int/governance/commission-membership/infcom]
-|{copyright}
-|===
+= {version}
 
 <<<
 toc::[]
 <<<
-
-
-include::sections/clause_0_front_material.adoc[]
 
 include::sections/clause_1_scope.adoc[]
 
@@ -58,4 +29,3 @@ include::sections/annex_b_codelists.adoc[]
 
 include::sections/annex_c_bibliography.adoc[]
 
-include::sections/annex_d_revision_history.adoc[]

@@ -10,5 +10,5 @@
 * IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
 * Linux Foundation: SPDX License List (2021) footnote:[https://spdx.org/licenses]
 * [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
-* [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
+* [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://community.wmo.int/wis2-topic-hierarchy]
 * [[openapi]] OpenAPI Specification 3.1.0 (2022) footnote:[https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md]
