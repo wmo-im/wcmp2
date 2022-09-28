@@ -28,6 +28,10 @@ The table below provides an overview of the set of properties that may be includ
 |**required**
 |The version of WCMP associated that the record conforms to
 
+|``properties.type``
+|**required**
+|The resource type described by the record
+
 |``properties.title``
 |**required**
 |A human-readable name for a given dataset
