@@ -13,7 +13,7 @@
 :sectanchors:
 
 = {title}
-= {version}
+{version}
 
 <<<
 toc::[]
