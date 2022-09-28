@@ -1,6 +1,16 @@
 :title: WMO Core Metadata Profile (WCMP) Version 2
 :titletext: {title}
 :version: 2.0.0-DRAFT-{docdate}
+:copyright: Copyright © 2022 World Meteorological Organization (WMO)
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc:
+:toc-placement!:
+:toclevels: 3
+:sectnums:
+:sectnumlevels: 4
+:sectanchors:
 
 = {title}
 = {version}

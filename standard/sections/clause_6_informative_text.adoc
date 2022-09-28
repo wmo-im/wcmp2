@@ -66,7 +66,7 @@ Common meteorological data types include:
 
 === User stories
 
-As part of requirements gathering footnote, the following user stories provide a
+As part of requirements gathering, the following user stories provide a
 description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective.
 
 ==== Domain specialist
