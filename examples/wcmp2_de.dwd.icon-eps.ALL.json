@@ -20,10 +20,10 @@
 	"properties": {
 		"type": "dataset",
 		"title": "ICON-EPS GRIB data",
-		"description": "ICON-EPS 0.5° x 0.5° regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, varios level, various threshold",
+		"description": "ICON-EPS 0.5° x 0.5° regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, various level, various threshold",
 		"themes": [
 			{
-				"concepts": ["wis2/DEU/dwd/data/core/weather/?"],
+				"concepts": ["wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"],
 				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
 			},
         	{
@@ -71,14 +71,21 @@
 		"recordCreated": "2018-08-19T08:10:00Z", 
 		"recordUpdated": "2022-03-15T09:26:00Z",
 		"wmo:dataPolicy": {
-			"name": "core", 
+			"name": "core" 
 		},
 		"links": [
 			{
 				"rel": "download",
 				"type": "text/html",
 				"title": "Open Data Server DWD",
-				"href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib",
+				"href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+			},
+			{
+				"rel": "subscribe",
+				"type": "application/json",
+				"title": "Message Broker DWD",
+				"href": "mqtts://everyone:everyone@wis2.dwd.de:8883/",
+				"wmo:topic": "origin/v04/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
 			}
 		],
 		"keywords": ["CLCH","CLCL","CLCM","CLCT","cloud","MSLP","Probability of temperature anomalies","cape","dew point","geopotential height","maximum temperature 2m","minimum temperature 2m","precipitation","snow","snowfall","soil temperature","temperature","wind gusts 10m","wind speed","wind speed 10m"],
