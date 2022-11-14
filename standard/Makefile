@@ -13,6 +13,6 @@ linkcheck:
 	find . -name "*.adoc" -exec asciidoc-link-check -p -c ./asciidoc-link-check-config.json {} \;
 
 clean:
-	rm -f wcmp2.html wcmp2.pdf wcmp2.docx
+	rm -f ${FILE_BASENAME}.html ${FILE_BASENAME}.pdf ${FILE_BASENAME}.docx
 
 .PHONY: html pdf docx linkcheck clean
