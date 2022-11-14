@@ -12,7 +12,7 @@ env:
 
 jobs:
   build-wcmp2:
-    name: Generate KPI documentation
+    name: Generate documentation
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
@@ -21,7 +21,7 @@ jobs:
           && sudo apt-get install -y asciidoctor ruby-asciidoctor-pdf pandoc
       - name: checkout repository
         uses: actions/checkout@v3
-      - name: build KPI documentation
+      - name: build documentation
         run: |
           mkdir -p /tmp/wcmp2/standard/images \
           && cd standard \
