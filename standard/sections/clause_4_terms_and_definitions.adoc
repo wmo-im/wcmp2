@@ -39,6 +39,9 @@ The following additional terms and definitions also apply.
 |HTTPS
 |Hypertext Transfer Protocol Secure
 
+|IETF
+|Internet Engineering Task Force
+ 
 |ISO
 |International Organization for Standardization
 
