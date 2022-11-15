@@ -39,6 +39,9 @@ The following additional terms and definitions also apply.
 |HTTPS
 |Hypertext Transfer Protocol Secure
 
+|IANA
+|Internet Assigned Numbers Authority
+ 
 |IETF
 |Internet Engineering Task Force
  
