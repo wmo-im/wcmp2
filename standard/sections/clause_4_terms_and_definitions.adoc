@@ -41,7 +41,7 @@ The following additional terms and definitions also apply.
 
 |IANA
 |Internet Assigned Numbers Authority
- 
+
 |IETF
 |Internet Engineering Task Force
  
