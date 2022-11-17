@@ -85,7 +85,7 @@ The table below provides an overview of the set of properties that may be includ
 |The date that the record was created
 
 |``properties.recordUpdated``
-|**required**
+|optional
 |The date that the record was updated
 
 |``properties.wmo:dataPolicy``
@@ -575,7 +575,7 @@ include::../requirements/core/REQ_record_creation_date.adoc[]
 
 A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was last updated.
 
-include::../requirements/core/REQ_record_update_date.adoc[]
+include::../recommendations/core/REC_record_update_date.adoc[]
 
 .Example
 

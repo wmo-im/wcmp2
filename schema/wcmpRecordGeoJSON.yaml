@@ -20,7 +20,6 @@ properties:
       - themes
       - providers
       - recordCreated
-      - recordUpdated
       - wmo:dataPolicy
     properties:
       wmo:dataPolicy:
