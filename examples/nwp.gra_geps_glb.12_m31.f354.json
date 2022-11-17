@@ -1,9 +1,13 @@
 {
     "id": "urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
-    "conformsTo": [
+    "type": "Feature",
+	"conformsTo": [
          "http://wis.wmo.int/spec/wcmp/2.0"
     ],
-    "type": "Feature",
+	"time": {
+		"interval": ["2019",null],
+		"resolution": "PT12H"
+	},   
     "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -30,61 +34,55 @@
         ]
     },
     "properties": {
-        "recordCreated": "2019-05-15T00:00:00Z",
-        "recordUpdated": "2019-05-15T00:00:00Z",
-        "type": "dataset",
+		"type": "dataset",
         "title": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members)",
         "description": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members) in grib2 format are provided. Base Time is 1200UTC. Forecast step is 354-hour. GRAPES_GEPS is a global ensemble prediction model (31-members) with 50km horizontal resolution, 60 levels in the vertical with top at 3 hPa and forcast length up to 15 days. Initial perturbation: Singular Vectors；Perturbation of physics:Stochastically perturbed physics tendencies (SPPT) scheme and Stochastic kinetic energy backscatter (SKEB) scheme.",
-        "keywords": [
-            "NWP",
-            "GRAPES_EPS",
-            "Tropopause",
-            "ensemble",
-            "meteorology",
-        ],
-        "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
         "created": "2019-05-15T00:00:00Z",
         "updated": "2019-05-15T00:00:00Z",
-        "themes": [
-           {
-                "concepts": [
-                    "Global",
-                    "Prediction"
-		    "Medium-range"
-                ]
-            },
+		"formats": ["GRIB2"],
+		"themes": [
+           	{
+				"concepts": ["wis2/CHN/CMA-GISC/data/core/weather/analysis"],
+				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+			},
+        	{
+        		"concepts": ["meteorology"],
+        		"scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+        	}
+        
         ],
         "providers": {
             {
                 "name": "National Meteorological Information Center, CMA",
                 "contactInfo": [
-                    {
-                        "phone": "86-10-68407485"
-                    },
-                    {
-                        "email": "gaof@cma.gov.cn"
-                    },
+					"email": {
+							"work": "zhuting@cma.gov.cn"
+                        },
+                    "address": [
+						{
+							"deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
+							"city": "Beijing",
+							"state": "Beijing",
+							"postalCode": "100081",
+							"country": "CHINA"
+						}
+					],
+					"url": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354"
+					"phone": "86-10-58993021"
                 ],
-                "address": {
-                    {
-                        "deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
-                        "city": "Beijing",
-                        "state": "Beijing",
-                        "postalCode": "100081",
-                        "country": "CHINA"
-                    }
-                },
-                "onlineResource": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354"
+				"roles": [
+					{
+						"name": "pointOfContact"
+					},
+					{
+						"name": "originator"
+					}
+				]
             },
-            "contactInstructions": "email", 
         },
-        "formats": [
-            "GRIB2"
-        ],
-        "contactPoint": "gaof@cma.gov.cn",
-        "license": "http://codes.wmo.int/wmdr/DataPolicy/_noLimitation",
-        "rights": "access",
+		"recordCreated": "2019-05-15T00:00:00Z",
+        "recordUpdated": "2019-05-15T00:00:00Z",
         "extent": [
             {
                 "spatial": {
