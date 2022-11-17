@@ -185,7 +185,11 @@ include::../requirements/core/REQ_type.adoc[]
 
 [source,json]
 ----
-"type": "dataset"
+"properties": {
+  ...
+  "type": "dataset"
+  ...
+}
 ----
 
 ==== Properties / Title
