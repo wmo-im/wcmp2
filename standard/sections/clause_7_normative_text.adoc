@@ -177,7 +177,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 ==== Properties Type
 
 WCMP records provide descriptive information about different resource types, such as
-dataset or services.
+datasets and their associated services.
 
 include::../requirements/core/REQ_type.adoc[]
 
