@@ -678,7 +678,7 @@ secure data use cases, a user needs to be able to detect access controlled data 
 include::../requirements/core/REQ_links.adoc[]
 include::../recommendations/core/REC_links.adoc[]
 
-example demonstrates how to express access control using HTTP Basic Authentication for a given data access service.
+.Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 
 .Example
 
