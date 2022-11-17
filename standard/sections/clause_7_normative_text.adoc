@@ -174,7 +174,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 ]
 ----
 
-==== Properties Type
+==== Properties / Type
 
 WCMP records provide descriptive information about different resource types, such as
 datasets and their associated services.
@@ -673,7 +673,7 @@ include::../recommendations/core/REC_data_policy_conditions.adoc[]
 A WCMP record provides information regarding how to access and retrieve data and products.  This information is specified by defining a `+links+` array property, with one or more objects to corresponding data access services.
 
 WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
-secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
+secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.
 
 include::../requirements/core/REQ_links.adoc[]
 include::../recommendations/core/REC_links.adoc[]

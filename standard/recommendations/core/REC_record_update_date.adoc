@@ -1,7 +1,7 @@
 [[rec_core_record_update_date]]
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:rec-id}* |*/rec/core/record_update_date*
+^|*Recommendation {counter:rec-id}* |*/rec/core/record_update_date*
 ^|A |A WCMP record SHOULD provide a `+properties.recordUpdated+` property when a record has been updated since its initial creation.
 
 |===
