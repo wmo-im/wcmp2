@@ -1,8 +1,14 @@
 {
     "id": "urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
     "type": "Feature",
-   “Itemtype”: “Record”,
-    "geometry": {
+    "conformsTo": [
+		"http://wis.wmo.int/spec/wcmp/2.0"
+	],
+	"time": {
+		"interval": ["2014",null],
+		"resolution": "PT12H"
+	},   
+   "geometry": {
         "type": "Point",
         "coordinates": [
             [
@@ -12,62 +18,64 @@
         ]
     },
     "properties": {
-        "recordCreated": "2014-09-10T00:00:00Z",
-        "recordUpdated": "2014-09-10T00:00:00Z",
-        "type": "dataset",
-        "title": "AOCI21 Ozone level observation - antarctic area ; available from BABJ(PEKING (BEIJING)) at WEEKLY ",
-        "description": "AOCI21 - Ozone level observation - antarctic area. GTS Priority level: 3. Included stations: (89573, Zhongshan). Format: FM 94-IX(Refer to WMO No.306 - Manual on Codes). The AOCI21 Data Designator decodes as follow: T1(A):Analyses;T1T2(AO):Ozone layer;A1A2(CI):China.(Refer to WMO No.386 - Manual on the GTS). Related words: meteorology;meteorological.",
-        "keywords": [
-            "WEEKLY",
-        ],
-        "keywordsCodespace": "http://codes.wmo.int/306/4678",
+		"type": "dataset",
+        "title": "AOCI21 Ozone level observation",
+        "description": "AOCI21 - Ozone level observation , antarctic area. Included stations: (89573, Zhongshan). The AOCI21 Data Designator decodes as follow: T1(A):Analyses;T1T2(AO):Ozone layer;A1A2(CI):China.(Refer to WMO No.386 - Manual on the GTS). Related words: meteorology;meteorological.",
         "language": "en",
         "created": "2014-09-10T00:00:00Z",
         "updated": "2014-09-10T00:00:00Z",
+		"formats": ["txt"],
         "themes": [
-           {
-                "concepts": [
-                    "Antarctic area",
-                    "GlobalExchange"
-                ]
-            },
+           	{
+				"concepts": ["wis2/CHN/CMA-GISC/data/core/weather/observation"],
+				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+			},
+        	{
+        		"concepts": ["meteorology"],
+        		"scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+        	}
+        
         ],
-        "providers": {
+        "providers": [
             {
                 "name": "National Meteorological Information Center, CMA",
                 "contactInfo": [
-                    {
-                        "phone": "86-10-58993021"
-                    },
-                    {
-                        "email": "zhuting@cma.gov.cn"
-                    },
+					"email": {
+							"work": "zhuting@cma.gov.cn"
+                        },
+                    "address": [
+						{
+							"deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
+							"city": "Beijing",
+							"state": "Beijing",
+							"postalCode": "100081",
+							"country": "CHINA"
+						}
+					],
+					"url": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ"
+					"phone": "86-10-58993021"
                 ],
-                "address": {
-                    {
-                        "deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
-                        "city": "Beijing",
-                        "state": "Beijing",
-                        "postalCode": "100081",
-                        "country": "CHINA"
-                    }
-                },
-                "onlineResource": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ"
+				"roles": [
+					{
+						"name": "pointOfContact"
+					},
+					{
+						"name": "originator"
+					}
+				]
             },
-            "contactInstructions": "email", 
-        },
-        "formats": [
-            "TXT"
         ],
-        "contactPoint": "zhuting@cma.gov.cn",
-        "license": "http://codes.wmo.int/wmdr/DataPolicy/_WMOEssential",
-        "rights": "access",
+		"recordCreated": "2014-09-10T00:00:00Z",
+		"recordUpdated": "2014-09-10T00:00:00Z",
+		"wmo:dataPolicy": {
+			"name": "core" 
+		},
         "extent": [
             {
                 "spatial": {
                     "bbox": [
                        76.366667,
-		      -69.366667
+						-69.366667
                     ],
                     "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
                 },
