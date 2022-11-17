@@ -1,7 +1,0 @@
-[[per_core_doi]]
-[width="90%",cols="2,6a"]
-|===
-^|*Permission {counter:per-id}* |*/per/core/doi*
-^|A |A WCMP record MAY provide a Digital Object Identifier (DOI) as a means to cite research or
-resource identification using the DOI framework.
-|===

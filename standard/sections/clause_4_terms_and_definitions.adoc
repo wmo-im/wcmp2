@@ -15,11 +15,17 @@ The following additional terms and definitions also apply.
 |API
 |Application Programming Interface
 
+|ARK
+|Archival Resource Key
+
 |DCAT
 |Data Catalog Vocabulary
 
 |DCPC
 |Data Collection and Production Centres
+
+|DOI
+|Digital Object Identifier
 
 |GDC
 |Global Discovery Catalogue
