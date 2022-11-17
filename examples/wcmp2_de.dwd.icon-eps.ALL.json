@@ -1,110 +1,172 @@
 {
-	"id": "urn:x-wmo:md:DEU:dwd:icon-eps.ALL", 
-	"type": "Feature",
-	"conformsTo": [
-		"http://wis.wmo.int/spec/wcmp/2.0"
-	],
-	"time": {
-		"interval": [
-			["R/T00Z","PT180H"],
-			["R/T12Z","PT180H"]
-		],
-		"resolution": "PT6H"
-	},
-	"geometry": {
-		"type": "Polygon",
-		"coordinates": [
-			[-180,-90], [-180,90],[180,90],[180,-90],[-180,-90]
-		]
-	},
-	"properties": {
-		"type": "dataset",
-		"title": "ICON-EPS GRIB data",
-		"description": "ICON-EPS 0.5° x 0.5° regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, various level, various threshold",
-		"themes": [
-			{
-				"concepts": ["wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"],
-				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-			},
-        	{
-        		"concepts": ["meteorology"],
-        		"scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
-        	},
-        	{
-        		"concepts": ["Meteorological geographical features"],
-        		"scheme": "https://inspire.ec.europa.eu/theme/mf"
-        	},
-        	{
-        		"concepts": ["FM 92 GRIB edition 2"],
-        		"scheme": "http://codes.wmo.int/codeform"
-        	}
-		],
-		"providers": [
-			{
-				"name": "Deutscher Wetterdienst",
+    "id": "urn:x-wmo:md:DEU:dwd:icon-eps.ALL",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "time": {
+        "interval": [
+            [
+                "R/T00Z",
+                "PT180H"
+            ],
+            [
+                "R/T12Z",
+                "PT180H"
+            ]
+        ],
+        "resolution": "PT6H"
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                -180,
+                -90
+            ],
+            [
+                -180,
+                90
+            ],
+            [
+                180,
+                90
+            ],
+            [
+                180,
+                -90
+            ],
+            [
+                -180,
+                -90
+            ]
+        ]
+    },
+    "properties": {
+        "type": "dataset",
+        "title": "ICON-EPS GRIB data",
+        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, various level, various threshold",
+        "themes": [
+            {
+                "concepts": [
+                    "wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+            },
+            {
+                "concepts": [
+                    "meteorology"
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            },
+            {
+                "concepts": [
+                    "Meteorological geographical features"
+                ],
+                "scheme": "https://inspire.ec.europa.eu/theme/mf"
+            },
+            {
+                "concepts": [
+                    "FM 92 GRIB edition 2"
+                ],
+                "scheme": "http://codes.wmo.int/codeform"
+            }
+        ],
+        "providers": [
+            {
+                "name": "Deutscher Wetterdienst",
                 "positionName": "Michael Denhard",
-                "contactInfo": 
-                    {
-                        "email": {
-							"work": "gisc@dwd.de"
-                        },
-                        "address": [
-							{
-								"deliveryPoint": "Frankfurter Straße 135",
-								"city": "Offenbach",
-								"postal-code": "63067",
-								"country": "Germany"
-							}
-						],
-						"url": "http://www.dwd.de/wmc"
+                "contactInfo": {
+                    "email": {
+                        "work": "gisc@dwd.de"
                     },
-				"roles": [
-					{
-						"name": "pointOfContact"
-					},
-					{
-						"name": "originator"
-					}
-				]
-			}
-		],
-		"recordCreated": "2018-08-19T08:10:00Z", 
-		"recordUpdated": "2022-03-15T09:26:00Z",
-		"wmo:dataPolicy": {
-			"name": "core" 
-		},
-		"links": [
-			{
-				"rel": "download",
-				"type": "text/html",
-				"title": "Open Data Server DWD",
-				"href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
-			},
-			{
-				"rel": "subscribe",
-				"type": "application/json",
-				"title": "Message Broker DWD",
-				"href": "mqtts://everyone:everyone@wis2.dwd.de:8883/",
-				"wmo:topic": "origin/v04/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
-			}
-		],
-		"keywords": ["CLCH","CLCL","CLCM","CLCT","cloud","MSLP","Probability of temperature anomalies","cape","dew point","geopotential height","maximum temperature 2m","minimum temperature 2m","precipitation","snow","snowfall","soil temperature","temperature","wind gusts 10m","wind speed","wind speed 10m"],
+                    "address": [
+                        {
+                            "deliveryPoint": "Frankfurter Stra\u00dfe 135",
+                            "city": "Offenbach",
+                            "postal-code": "63067",
+                            "country": "Germany"
+                        }
+                    ],
+                    "url": "http://www.dwd.de/wmc"
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    },
+                    {
+                        "name": "originator"
+                    }
+                ]
+            }
+        ],
+        "recordCreated": "2018-08-19T08:10:00Z",
+        "recordUpdated": "2022-03-15T09:26:00Z",
+        "wmo:dataPolicy": {
+            "name": "core"
+        },
+        "links": [
+            {
+                "rel": "download",
+                "type": "text/html",
+                "title": "Open Data Server DWD",
+                "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+            },
+            {
+                "rel": "subscribe",
+                "type": "application/json",
+                "title": "Message Broker DWD",
+                "href": "mqtts://everyone:everyone@wis2.dwd.de:8883/",
+                "wmo:topic": "origin/v04/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+            }
+        ],
+        "keywords": [
+            "CLCH",
+            "CLCL",
+            "CLCM",
+            "CLCT",
+            "cloud",
+            "MSLP",
+            "Probability of temperature anomalies",
+            "cape",
+            "dew point",
+            "geopotential height",
+            "maximum temperature 2m",
+            "minimum temperature 2m",
+            "precipitation",
+            "snow",
+            "snowfall",
+            "soil temperature",
+            "temperature",
+            "wind gusts 10m",
+            "wind speed",
+            "wind speed 10m"
+        ],
         "extent": {
-			"spatial": { 	
-				"bbox": [[-180,-90,180,90]],
-        		"resolution": "0.5*0.5",
-        		"crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        	}
-		},
-		"externalIds": [
-			{
-				"scheme": "DWD",
-				"value": "de.dwd.icon-eps.ALL"
-			}
-		],
-		"language": "eng",
-		"created": "2018-04-22Z", 
-		"updated": "2018-04-23Z",
-		"formats": ["GRIB2"]
-	}
+            "spatial": {
+                "bbox": [
+                    [
+                        -180,
+                        -90,
+                        180,
+                        90
+                    ]
+                ],
+                "resolution": "0.5*0.5",
+                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            }
+        },
+        "externalIds": [
+            {
+                "scheme": "DWD",
+                "value": "de.dwd.icon-eps.ALL"
+            }
+        ],
+        "language": "eng",
+        "created": "2018-04-22Z",
+        "updated": "2018-04-23Z",
+        "formats": [
+            "GRIB2"
+        ]
+    }
 }
