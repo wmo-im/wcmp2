@@ -18,13 +18,13 @@
         ]
     },
     "properties": {
-		"type": "dataset",
+	"type": "dataset",
         "title": "AOCI21 Ozone level observation",
         "description": "AOCI21 - Ozone level observation , antarctic area. Included stations: (89573, Zhongshan). The AOCI21 Data Designator decodes as follow: T1(A):Analyses;T1T2(AO):Ozone layer;A1A2(CI):China.(Refer to WMO No.386 - Manual on the GTS). Related words: meteorology;meteorological.",
         "language": "en",
         "created": "2014-09-10T00:00:00Z",
         "updated": "2014-09-10T00:00:00Z",
-		"formats": ["txt"],
+	"formats": ["txt"],
         "themes": [
            	{
 				"concepts": ["wis2/CHN/CMA-GISC/data/core/weather/observation"],
@@ -65,11 +65,11 @@
 				]
             },
         ],
-		"recordCreated": "2014-09-10T00:00:00Z",
-		"recordUpdated": "2014-09-10T00:00:00Z",
-		"wmo:dataPolicy": {
-			"name": "core" 
-		},
+	"recordCreated": "2014-09-10T00:00:00Z",
+	"recordUpdated": "2014-09-10T00:00:00Z",
+	"wmo:dataPolicy": {
+		"name": "core" 
+	},
         "extent": [
             {
                 "spatial": {
