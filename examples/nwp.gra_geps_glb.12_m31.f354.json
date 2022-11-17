@@ -34,7 +34,7 @@
         ]
     },
     "properties": {
-		"type": "dataset",
+	"type": "dataset",
         "title": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members)",
         "description": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members) in grib2 format are provided. Base Time is 1200UTC. Forecast step is 354-hour. GRAPES_GEPS is a global ensemble prediction model (31-members) with 50km horizontal resolution, 60 levels in the vertical with top at 3 hPa and forcast length up to 15 days. Initial perturbation: Singular Vectors；Perturbation of physics:Stochastically perturbed physics tendencies (SPPT) scheme and Stochastic kinetic energy backscatter (SKEB) scheme.",
         "language": "en",
@@ -81,7 +81,7 @@
 				]
             },
         },
-		"recordCreated": "2019-05-15T00:00:00Z",
+	"recordCreated": "2019-05-15T00:00:00Z",
         "recordUpdated": "2019-05-15T00:00:00Z",
         "extent": [
             {
