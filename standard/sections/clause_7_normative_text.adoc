@@ -24,6 +24,10 @@ The table below provides an overview of the set of properties that may be includ
 |**required**
 |A unique identifier to the dataset
 
+|``type``
+|**required**
+|A fixed value denoting the record as a GeoJSON ``Feature``
+
 |``conformsTo``
 |**required**
 |The version of WCMP associated that the record conforms to
@@ -81,7 +85,7 @@ The table below provides an overview of the set of properties that may be includ
 |The date that the record was created
 
 |``properties.recordUpdated``
-|**required**
+|optional
 |The date that the record was updated
 
 |``properties.wmo:dataPolicy``
@@ -105,6 +109,10 @@ include::../requirements/core/REQ_validation.adoc[]
 A WCMP record provides a description at the granularity of a dataset, which facilitates clear
 cataloguing and discovery workflow, in combination with data services or APIs, which provide
 access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).
+
+include::../recommendations/core/REC_granularity.adoc[]
+
+.Examples
 
 [source,json]
 ----
@@ -134,26 +142,30 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
 ]
 ----
 
-include::../recommendations/core/REC_granularity.adoc[]
-
 ==== Identifier
 
 A WCMP record utilizes the OARec `+id+` property to provide a unique identifier
 to a dataset.  A record identifier is essential for querying and identifying
 records within the GDC.
 
+include::../requirements/core/REQ_identifier.adoc[]
+
+.Example
+
 [source,json]
 ----
 "id": "urn:x-wmo:md:CAN:eccc-msc:observations.swob"
 ----
-
-include::../requirements/core/REQ_identifier.adoc[]
 
 ==== Conformance
 
 A WCMP record leverages the OGC API `+conformsTo+` property to identify the conformance classes
 that apply to the record.  WCMP conformance identification is valuable for content/version
 detection and handling.
+
+include::../requirements/core/REQ_conformance.adoc[]
+
+.Example
 
 [source,json]
 ----
@@ -162,89 +174,121 @@ detection and handling.
 ]
 ----
 
-include::../requirements/core/REQ_conformance.adoc[]
-
-==== Properties Type
+==== Properties / Type
 
 WCMP records provide descriptive information about different resource types, such as
-dataset or services.
-
-[source,json]
-----
-"type": "dataset"
-----
+datasets and their associated services.
 
 include::../requirements/core/REQ_type.adoc[]
 
-==== Title
+.Example
+
+[source,json]
+----
+"properties": {
+  ...
+  "type": "dataset"
+  ...
+}
+----
+
+==== Properties / Title
 
 A WCMP record's `+properties.title+` property is a human-readable name for a given dataset.
 
-[source,json]
-----
-"title": "Surface weather observations"
-----
-
 include::../requirements/core/REQ_title.adoc[]
 
-==== Description
+.Example
+
+[source,json]
+----
+"properties": {
+  ...
+  "title": "Surface weather observations"
+  ...
+}
+----
+
+==== Properties / Description
 
 A WCMP record has a `+properties.description+` property, which is a free-text summary description of the dataset.
 
-[source,json]
-----
-"description": "Surface observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station or for the stations of specific provinces and territories (last 30 days)."
-----
+.Example
 
 include::../requirements/core/REQ_description.adoc[]
 
-==== Keywords
+[source,json]
+----
+"properties": {
+  ...
+  "description": "Surface observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station or for the stations of specific provinces and territories (last 30 days)."
+  ...
+}
+----
+
+==== Properties / Keywords
 
 A WCMP record should have a `+properties.keywords+` property, typically represented using keywords, tags, key phrases, or classification codes.
 
-[source,json]
-----
-"keywords": [
-  "surface",
-  "observations",
-  "weather",
-  "real-time"
-]
-----
-
 include::../recommendations/core/REC_keywords.adoc[]
 
-==== Themes and Topic Hierarchy [[themes]]
+.Example
+
+[source,json]
+----
+"properties": {
+  ...
+  "keywords": [
+    "surface",
+    "observations",
+    "weather",
+    "real-time"
+  ]
+  ...
+}
+----
+
+==== Properties / Themes and Topic Hierarchy [[themes]]
 
 A WCMP record has a `+properties.themes+` property, which is a knowledge organization system used to classify the data.  A WCMP record can have one or more themes.  The WIS2 Topic Hierarchy is put
 forth as a specific theme/concept and is consistent with the topic as defined in distribution links
 advertising broker services.
 
-[source,json]
-----
-"themes": [
-  {
-    "concepts": [
-      "weather"
-    ],
-    "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
-  }
-]
-----
-
-[source,json]
-----
-"themes": [
-  {
-    "concepts": [
-      "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
-    ],
-    "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-  }
-]
-----
-
 include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
+
+.Examples
+
+[source,json]
+----
+"properties": {
+  ...
+  "themes": [
+    {
+      "concepts": [
+        "weather"
+      ],
+      "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
+    }
+  ]
+  ...
+}
+----
+
+[source,json]
+----
+"properties": {
+  ...
+  "themes": [
+    {
+      "concepts": [
+        "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
+      ],
+      "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+    }
+  ]
+  ...
+}
+----
 
 ==== Geospatial and Temporal Extents
 
@@ -253,6 +297,12 @@ include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
 WCMP records provide descriptive information regarding the geospatial properties of a dataset.  Geospatial
 extents provide a useful indicator of the location of the dataset and facilitates searching the
 Global Discovery Catalogue with geospatial predicates.
+
+include::../requirements/core/REQ_extent_geospatial.adoc[]
+include::../recommendations/core/REC_extent_geospatial_point.adoc[]
+include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
+
+.Examples
 
 [source,json]
 ----
@@ -281,11 +331,7 @@ Global Discovery Catalogue with geospatial predicates.
 "geometry": null
 ----
 
-include::../requirements/core/REQ_extent_geospatial.adoc[]
-include::../recommendations/core/REC_extent_geospatial_point.adoc[]
-include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
-
-===== Additional Geospatial Extents
+===== Properties / Additional Geospatial Extents
 
 A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
 temporal extents) via the `+properties.extent+` property.  The `+properties.extent.spatial.bbox+` property
@@ -302,25 +348,36 @@ signed number between -90 and 90, greater than or equal to *miny*.
 
 This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
 
+include::../recommendations/core/PER_extent_geospatial.adoc[]
+
+.Example
+
 [source,json]
 ----
-"extent": {
-  "spatial": {
-    "bbox": [
-      [-142, 42, -52, 84]
-    ],
-    "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+"properties": {
+  ...
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [-142, 42, -52, 84]
+      ],
+      "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+    }
   }
+  ...
 }
 ----
 
-include::../recommendations/core/PER_extent_geospatial.adoc[]
-
-====== Temporal Extent
+===== Temporal Extent
 
 WCMP records provide descriptive information regarding the temporal properties of a dataset.  Temporal
 extents provide a useful indicator of the date/time period of the dataset and facilitates searching the
 Global Discovery Catalogue with temporal predicates.
+
+include::../requirements/core/REQ_extent_temporal.adoc[]
+include::../recommendations/core/REC_extent_temporal.adoc[]
+
+.Examples
 
 [source,json]
 ----
@@ -349,136 +406,193 @@ Global Discovery Catalogue with temporal predicates.
 "time": null
 ----
 
-include::../requirements/core/REQ_extent_temporal.adoc[]
-include::../recommendations/core/REC_extent_temporal.adoc[]
-
-===== Additional Temporal Extents
+===== Properties / Additional Temporal Extents
 
 A WCMP record can communicate additional time instants or periods via the `+properties.extent.temporal+` item property.
 Temporal extents can be fully bound or open in either direction (e.g., until or before).  A `+properties.extent.temporal.resolution+`
 property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
+include::../recommendations/core/PER_extent_temporal.adoc[]
+
+.Example
+
 [source,json]
 ----
-"extent": {
-  "temporal": {
-    "interval": [
-      [
-        "1924-08-18",
-        null
-      ]
-    ],
-    "resolution": "P1H",
-    "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+"properties": {
+  ...
+  "extent": {
+    "temporal": {
+      "interval": [
+        [
+          "1924-08-18",
+          null
+        ]
+      ],
+      "resolution": "P1H",
+      "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+    }
   }
+  ...
 }
 ----
 
-include::../recommendations/core/PER_extent_temporal.adoc[]
-
-==== Providers
+==== Properties / Providers
 
 A WCMP record has one or more providers listed as part of the `+properties.providers+` property. These elements
 provide contact information based on the role of the provider.
 
+include::../requirements/core/REQ_providers.adoc[]
+
+.Examples
+
 [source,json]
 ----
-"providers": [
-  {
-    "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-    "positionName": "National Inquiry Response Team",
-    "contactInfo": {
-      "phone": {
-        "office": "+01-819-997-2800"
-      },
-      "email": {
-        "office":"enviroinfo@ec.gc.ca"
-      },
-      "address": {
-        "office": {
-          "deliveryPoint": "77 Westmorland Street, suite 260",
-          "city": "Fredericton",
-          "administrativeArea": "NB",
-          "postalCode": "E3B 6Z4",
-          "country": "Canada"
+"properties": {
+  ...
+  "providers": [
+    {
+      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+      "positionName": "National Inquiry Response Team",
+      "contactInfo": {
+        "phone": {
+          "office": "+01-819-997-2800"
         },
-        "onlineResource": {
+        "email": {
+          "office":"enviroinfo@ec.gc.ca"
+        },
+        "address": {
+          "office": {
+            "deliveryPoint": "77 Westmorland Street, suite 260",
+            "city": "Fredericton",
+            "administrativeArea": "NB",
+            "postalCode": "E3B 6Z4",
+            "country": "Canada"
+          },
+          "onlineResource": {
+            "href": "https://www.canada.ca/en/environment-climate-change.html"
+          }
+        },
+        "hoursOfService": "0700h - 1500h EST",
+        "contactInstructions": "email",
+        "url": {
+          "rel": "canonical",
+          "type": "text/html",
           "href": "https://www.canada.ca/en/environment-climate-change.html"
         }
       },
-      "hoursOfService": "0700h - 1500h EST",
-      "contactInstructions": "email",
-      "url": {
-        "rel": "canonical",
-        "type": "text/html",
-        "href": "https://www.canada.ca/en/environment-climate-change.html"
-      }
-    },
-    "roles": [
-      {
-        "name": "pointOfContact"
-      },
-      {
-        "name": "originator"
-      }
-    ]
-  }
-]
+      "roles": [
+        {
+          "name": "pointOfContact"
+        },
+        {
+          "name": "originator"
+        }
+      ]
+    }
+  ]
+  ...
+}
 ----
 
-include::../requirements/core/REQ_providers.adoc[]
+Note that a provider can also be specified by using a URL:
 
-==== Version
+[source,json]
+----
+"properties": {
+  ...
+  "providers": [
+      "https://example.org/contact"
+  ]
+  ...
+}
+----
+
+==== Properties / Version
 
 Datasets may be versioned by an organization (version of an NWP model, processing chain/workflow, etc.), and data providers can make this information available when there are multiple versions of a dataset over time.
 
-[source,json]
-----
-"version": "0.1.0"
-----
-
 include::../recommendations/core/PER_version.adoc[]
 
-==== Digital Object Identifier
-
-A digital object identifier (DOI) is a persistent identifier or handle used to identify various objects uniquely and is widely used in scientific publications.
+.Example
 
 [source,json]
 ----
-"externalIds": [
-  {
-    "scheme": "doi",
-    "value": "https://dx.doi.org/10.14287/10000001"
-  }
-]
+"properties": {
+  ...
+  "version": "0.1.0"
+  ...
+}
 ----
 
-include::../recommendations/core/PER_doi.adoc[]
-include::../recommendations/core/REC_doi.adoc[]
+==== Properties / Persistent Identifiers
 
-==== Record Creation Date
+A persistent (or handle) identifier is used to provide a long lasting reference to a digital resource.  Persistent identifiers
+are commonly used in scientific publications.
+
+Examples of persistent identifiers include, but are not limited to:
+
+* Digital Object Identifiers (DOI) footnote:[https://doi.org]
+* Archival Resource Key (ARK) footnote:[https://arks.org]
+* Handle footnote:[https://handle.net]
+
+include::../recommendations/core/REC_pids.adoc[]
+include::../recommendations/core/PER_pids.adoc[]
+
+.Example
+
+[source,json]
+----
+"properties": {
+  ...
+  "externalIds": [{
+    "scheme": "doi",
+    "value": "https://dx.doi.org/10.14287/10000001"
+  }, {
+    "scheme": "hdl",
+    "value": "2381/12775"
+  }, {
+    "scheme": "ark",
+    "value": "ark:/13030/tf5p30086k"
+  } ]
+  ...
+}
+----
+
+==== Properties / Record Creation Date
 
 A WCMP record has a `+properties.recordCreated+` property, which describes the date that the record was created.
 
-[source,json]
-----
-"recordCreated": "2021-06-12T23:45:24Z"
-----
-
 include::../requirements/core/REQ_record_creation_date.adoc[]
 
-==== Record Update Date
+.Example
+
+[source,json]
+----
+"properties": {
+  ...
+  "recordCreated": "2021-06-12T23:45:24Z"
+  ...
+}
+----
+
+==== Properties / Record Update Date
 
 A WCMP record has a `+properties.recordUpdated+` property, which describes the date that the record was last updated.
 
+include::../recommendations/core/REC_record_update_date.adoc[]
+
+.Example
+
 [source,json]
 ----
-"recordUpdated": "2022-06-12T18:52:39Z"
+"properties": {
+  ...
+  "recordUpdated": "2022-06-12T18:52:39Z"
+  ...
+}
 ----
 
-include::../requirements/core/REQ_record_update_date.adoc[]
-
-==== WMO Data Policy
+==== Properties / WMO Data Policy
 
 Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data are classified as `+core+` or `+recommended+`.
 
@@ -489,37 +603,46 @@ Indicate additional conditions that apply when the resource is classified as `+r
 include::../requirements/core/REQ_data_policy_conditions.adoc[]
 
 .Example: Core Data
+
 [source,json]
 ----
-"wmo:dataPolicy": {
+"properties": {
+  ...
+  "wmo:dataPolicy": {
     "name": "core"
+  }
+  ...
 }
 ----
 
 .Example: Recommended Data with no additional conditions
 [source,json]
 ----
-"wmo:dataPolicy": {
+"properties": {
+  ...
+  "wmo:dataPolicy": {
     "name": "recommended",
-    "additionalConditions": [
-        {
-            "name": "none"
-        }
-    ]
+    "additionalConditions": [{
+        "name": "none"
+    }]
+  }
+  ...
 }
 ----
 
 .Example: Recommended Data with additional conditions
 [source,json]
 ----
-"wmo:dataPolicy": {
+"properties": {
+  ...
+  "wmo:dataPolicy": {
     "name": "recommended",
-    "additionalConditions": [
-        {
-            "name": "copyright",
-            "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
-        }
-    ]
+    "additionalConditions": [{
+      "name": "copyright",
+      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
+    }]
+  }
+  ...
 }
 ----
 
@@ -529,18 +652,20 @@ include::../recommendations/core/REC_data_policy_conditions.adoc[]
 .Example: Recommended Data with additional conditions and provider-specific details:
 [source,json]
 ----
-"wmo:dataPolicy": {
+"properties": {
+  ...
+  "wmo:dataPolicy": {
     "name": "recommended",
-    "additionalConditions": [
-        {
-            "name": "license",
-            "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode",
-            "link": {
-                "href": "https://www.eumetsat.int/eumetsat-data-licensing",
-                "title": "EUMETSAT DATA LICENSING"
-            }
-        }
-    ]
+    "additionalConditions": [{
+      "name": "license",
+      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode",
+      "link": {
+        "href": "https://www.eumetsat.int/eumetsat-data-licensing",
+        "title": "EUMETSAT DATA LICENSING"
+      }
+    }]
+  }
+  ...
 }
 ----
 
@@ -551,11 +676,32 @@ include::../recommendations/core/REC_data_policy_conditions.adoc[]
 
 A WCMP record provides information regarding how to access and retrieve data and products.  This information is specified by defining a `+links+` array property, with one or more objects to corresponding data access services.
 
-===== Examples
+WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
+secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.
 
-- *_Adding the MQTT information_*
+include::../requirements/core/REQ_links.adoc[]
+include::../recommendations/core/REC_links.adoc[]
 
-Below is an example of two link objects providing both search and MQTT subscription information:
+.Example a link object expressing access control using HTTP Basic Authentication for a given data access service
+
+.Example
+
+[source,json]
+----
+"links": [{
+  "rel": "download",
+  "type": "application/json",
+  "title": "link to WAF endpoint",
+  "href": "https://example.org/data/secure-data",
+  "security": {
+    "type": "http",
+    "scheme": "basic",
+    "description": "Please contact the data provider for accessing this secured resource."
+  }
+}]
+----
+
+.Example: two link objects providing both search and MQTT subscription information
 
 [source,json]
 ----
@@ -571,18 +717,34 @@ Below is an example of two link objects providing both search and MQTT subscript
     "type" : "application/json",
     "title": "WIS 2 notification service",
     "href" : "mqtts://broker.example.org",
-    "wmo:topic": "cache/a/wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
+    "wmo:topic": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]
 ----
 
-- *_Example with the mandatory distribution information_*
+include::../recommendations/core/PER_links.adoc[]
 
-Below is provided an example link object of a WMS service providing API access to images:
+.Example: a link object providing an API capability
 
 [source,json]
 ----
-{
+"links": [
+  {
+    "rel": "http://www.opengis.net/def/interface/ogcapi-features",
+    "type": "application/json",
+    "title": "OGC API - Features service",
+    "href": "https://example.org/api"
+  }
+]
+----
+
+include::../recommendations/core/REC_distribution.adoc[]
+
+.Example: a link object of a WMS service providing API access to images:
+
+[source,json]
+----
+"links": [{
   "rel": "item",
   "type": "image/png",
   "title": "Eumetview",
@@ -634,61 +796,81 @@ Below is provided an example link object of a WMS service providing API access t
     },
     "sampleRequest": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
   }
-}
+}]
 ----
-
-- *_Example with the complete distribution information_*
 
 Additional distribution information is added to allow more comprehensive discovery services. Below is an example of such distribution information.
 
+.Example with the complete distribution information
+
 [source,json]
 ----
-{
+"links": [{
   "rel": "service",
   "type": "text/html",
   "title": "EUMETSAT Datastore",
   "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
   "distribution": {
-    "availableFormats": [
-      {
-        "name": "native",
-        "description": "This is sent in a compressed Submission Information Package (SIP) by default.",
-        "numberOfFiles": "288 per day",
-        "typicalFilesize": "60 MB",
-        "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-        "samples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-        "documentation": {
-          "rel": "alternate",
-          "type": "text/html",
-          "title": "SIP documentation and tools",
-          "href": "https://www.eumetsat.int/formats#SIP"
-        }
+    "availableFormats": [{
+      "name": "native",
+      "description": "This is sent in a compressed Submission Information Package (SIP) by default.",
+      "numberOfFiles": "288 per day",
+      "typicalFilesize": "60 MB",
+      "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+      "samples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+      "documentation": {
+        "rel": "alternate",
+        "type": "text/html",
+        "title": "SIP documentation and tools",
+        "href": "https://www.eumetsat.int/formats#SIP"
       }
-    ]
+    }]
   }
-}
+}]
 ----
 
 WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
 example demonstrates how to express access control using HTTP Basic Authentication for a given data access service.
 
+.Example
+
 [source,json]
 ----
-{
-    "rel": "download",
-    "type": "application/json",
-    "title": "link to WAF endpoint",
-    "href": "https://example.org/data/secure-data",
-    "security": {
-      "type": "http",
-      "scheme": "basic",
-      "description": "Please contact the data provider for accessing this secured resource."
-    }
+"links": [{
+  "rel": "download",
+  "type": "application/json",
+  "title": "link to WAF endpoint",
+  "href": "https://example.org/data/secure-data",
+  "security": {
+    "type": "http",
+    "scheme": "basic",
+    "description": "Please contact the data provider for accessing this secured resource."
+  }
+}]
+----
+
+==== Additional Properties
+
+A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
+record.  Additional properties do not break compliance to WCMP.
+
+include::../recommendations/core/PER_additional_properties.adoc[]
+
+.Example
+
+[source,json]
+----
+"properties": {
+  ...
+  "approvalStatus": "approved"
+  "_comment": {
+    "validationErrors": [
+      "error 1",
+      "error 2"
+    ]
+  }
+  ...
 }
 ----
 
-include::../requirements/core/REQ_links.adoc[]
-include::../recommendations/core/REC_distribution.adoc[]
-include::../recommendations/core/REC_links.adoc[]
-include::../recommendations/core/PER_links.adoc[]

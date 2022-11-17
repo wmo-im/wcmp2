@@ -50,10 +50,6 @@ include::./core/ATS_test_providers.adoc[]
 
 include::./core/ATS_test_record_creation_date.adoc[]
 
-==== Record Update Date
-
-include::./core/ATS_test_record_update_date.adoc[]
-
 ==== WMO Data Policy
 
 include::./core/ATS_test_data_policy.adoc[]

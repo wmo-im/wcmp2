@@ -35,7 +35,7 @@ discovery.  This pattern may work by way of the Global Discovery Catalogue and t
 ==== Granularity
 
 In order to provide discovery metadata of value, it is important to clarify the granularity levels of which providers
-are to provide describing their data/services.  Articulating the level of granularity will reduce catalogue "pollution"
+are to provide describing their data and associated services.  Articulating the level of granularity will reduce catalogue "pollution"
 and bring the user closer to the data via their search criteria.
 
 The <<metadata-discovery-workflow>> below illustrates example metadata publication and discovery workflows against
