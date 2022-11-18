@@ -56,13 +56,13 @@ The table below provides an overview of the set of properties that may be includ
 |**required**
 |Geospatial location associated with the dataset, in a geographic coordinate reference system
 
-|``additionalExtents.spatial``
-|optional
-|Additional geospatial extents in other coordinate reference systems
-
 |``time``
 |**required**
 |Temporal extent associated with a dataset
+
+|``additionalExtents.spatial``
+|optional
+|Additional geospatial extents in other coordinate reference systems
 
 |``additionalExtents.temporal``
 |optional
