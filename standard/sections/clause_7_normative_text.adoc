@@ -98,7 +98,7 @@ The table below provides an overview of the set of properties that may be includ
 
 |``properties.*``
 |optional
-|Additional properties as required.
+|Additional properties as required
 
 |===
 
