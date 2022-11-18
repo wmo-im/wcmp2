@@ -54,8 +54,8 @@ properties:
       version:
         type: string
         description: The version or edition of a given dataset.
-      extent:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
+    additionalExtents:
+      $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
     links:
       items:
         $ref: link.yaml

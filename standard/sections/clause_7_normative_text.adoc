@@ -56,15 +56,15 @@ The table below provides an overview of the set of properties that may be includ
 |**required**
 |Geospatial location associated with the dataset, in a geographic coordinate reference system
 
-|``properties.extent.spatial``
-|optional
-|Additional geospatial extents in other coordinate reference systems
-
 |``time``
 |**required**
 |Temporal extent associated with a dataset
 
-|``properties.extent.temporal``
+|``additionalExtents.spatial``
+|optional
+|Additional geospatial extents in other coordinate reference systems
+
+|``additionalExtents.temporal``
 |optional
 |Additional time instants or periods
 
@@ -95,6 +95,10 @@ The table below provides an overview of the set of properties that may be includ
 |``links``
 |**required**
 |Online linkages to data retrieval or additional resources associated with the dataset
+
+|``properties.*``
+|optional
+|Additional properties as required
 
 |===
 
@@ -331,10 +335,10 @@ include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
 "geometry": null
 ----
 
-===== Properties / Additional Geospatial Extents
+===== Additional Geospatial Extents
 
 A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
-temporal extents) via the `+properties.extent+` property.  The `+properties.extent.spatial.bbox+` property
+temporal extents) via the `+additionalExtents+` property.  The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
 * *minx* is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
@@ -354,17 +358,13 @@ include::../recommendations/core/PER_extent_geospatial.adoc[]
 
 [source,json]
 ----
-"properties": {
-  ...
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [-142, 42, -52, 84]
-      ],
-      "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-    }
+"additionalExtents": {
+  "spatial": {
+    "bbox": [
+      [-142, 42, -52, 84]
+    ],
+    "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
   }
-  ...
 }
 ----
 
@@ -401,15 +401,26 @@ include::../recommendations/core/REC_extent_temporal.adoc[]
 }
 ----
 
+[source, json]
+----
+"time": {
+  "interval": [
+    ["R/T00Z", "PT180H"],
+    ["R/T12Z", "PT180H"]
+  ],
+  "resolution": "PT6H"
+}
+----
+
 [source,json]
 ----
 "time": null
 ----
 
-===== Properties / Additional Temporal Extents
+===== Additional Temporal Extents
 
-A WCMP record can communicate additional time instants or periods via the `+properties.extent.temporal+` item property.
-Temporal extents can be fully bound or open in either direction (e.g., until or before).  A `+properties.extent.temporal.resolution+`
+A WCMP record can communicate additional time instants or periods via the `+additionalExtents+` item property.
+Temporal extents can be fully bound or open in either direction (e.g., until or before).  A `+additionalExtents.temporal.resolution+`
 property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
 include::../recommendations/core/PER_extent_temporal.adoc[]
@@ -418,21 +429,17 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 
 [source,json]
 ----
-"properties": {
-  ...
-  "extent": {
-    "temporal": {
-      "interval": [
-        [
-          "1924-08-18",
-          null
-        ]
-      ],
-      "resolution": "P1H",
-      "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
-    }
+"additionalExtents": {
+  "temporal": {
+    "interval": [
+      [
+        "1924-08-18",
+        null
+      ]
+    ],
+    "resolution": "P1H",
+    "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
   }
-  ...
 }
 ----
 
