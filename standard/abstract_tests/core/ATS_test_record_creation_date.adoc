@@ -9,7 +9,7 @@ test-purpose:: Validate that a WCMP record provides a record creation date.
 =====
 [.component,class=step]
 --
-Check for the existence of a `+properties.recordCreated+` property in the WCMP record.
+Check for the existence of one and only one `+properties.recordCreated+` property in the WCMP record.
 --
 
 =====

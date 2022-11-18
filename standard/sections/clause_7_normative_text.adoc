@@ -549,7 +549,7 @@ include::../recommendations/core/PER_pids.adoc[]
 
 ==== Properties / Record Creation Date
 
-The `+recordCreated+` property is the date that the WCMP metadata record was created.
+The `+recordCreated+` property is a single date that the WCMP metadata record was created.
 
 include::../requirements/core/REQ_record_creation_date.adoc[]
 
