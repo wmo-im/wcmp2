@@ -457,10 +457,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-11-17</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-11-18</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2022-11-17</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2022-11-18</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1376,17 +1376,17 @@ of a WCMP discovery metadata record.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Geospatial location associated with the dataset, in a geographic coordinate reference system</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.extent.spatial</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional geospatial extents in other coordinate reference systems</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>time</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Temporal extent associated with a dataset</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.extent.temporal</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>additionalExtents.spatial</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional geospatial extents in other coordinate reference systems</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>additionalExtents.temporal</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional time instants or periods</p></td>
 </tr>
@@ -1424,6 +1424,11 @@ of a WCMP discovery metadata record.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>links</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online linkages to data retrieval or additional resources associated with the dataset</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.*</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional properties as required</p></td>
 </tr>
 </tbody>
 </table>
@@ -1975,10 +1980,10 @@ Global Discovery Catalogue with geospatial predicates.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_properties_additional_geospatial_extents"><a class="anchor" href="#_properties_additional_geospatial_extents"></a>7.1.11.2. Properties / Additional Geospatial Extents</h5>
+<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.11.2. Additional Geospatial Extents</h5>
 <div class="paragraph">
 <p>A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
-temporal extents) via the <code>properties.extent</code> property.  The <code>properties.extent.spatial.bbox</code> property
+temporal extents) via the <code>additionalExtents</code> property.  The <code>additionalExtents.spatial.bbox</code> property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:</p>
 </div>
 <div class="ulist">
@@ -2019,7 +2024,7 @@ signed number between -90 and 90, greater than or equal to <strong>miny</strong>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record MAY provide multiple <code>properties.extent.spatial.bbox</code> item properties to express additional geospatial extents in other coordinate reference systems.</p>
+<p>A WCMP record MAY provide multiple <code>additionalExtents.spatial.bbox</code> item properties to express additional geospatial extents in other coordinate reference systems.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2027,17 +2032,13 @@ signed number between -90 and 90, greater than or equal to <strong>miny</strong>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
-  ...
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [-142, 42, -52, 84]
-      ],
-      "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-    }
+<pre class="highlight"><code class="language-json" data-lang="json">"additionalExtents": {
+  "spatial": {
+    "bbox": [
+      [-142, 42, -52, 84]
+    ],
+    "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
   }
-  ...
 }</code></pre>
 </div>
 </div>
@@ -2120,15 +2121,26 @@ Global Discovery Catalogue with temporal predicates.</p>
 </div>
 <div class="listingblock">
 <div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+  "interval": [
+    ["R/T00Z", "PT180H"],
+    ["R/T12Z", "PT180H"]
+  ],
+  "resolution": "PT6H"
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"time": null</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_properties_additional_temporal_extents"><a class="anchor" href="#_properties_additional_temporal_extents"></a>7.1.11.4. Properties / Additional Temporal Extents</h5>
+<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.11.4. Additional Temporal Extents</h5>
 <div class="paragraph">
-<p>A WCMP record can communicate additional time instants or periods via the <code>properties.extent.temporal</code> item property.
-Temporal extents can be fully bound or open in either direction (e.g., until or before).  A <code>properties.extent.temporal.resolution</code>
+<p>A WCMP record can communicate additional time instants or periods via the <code>additionalExtents</code> item property.
+Temporal extents can be fully bound or open in either direction (e.g., until or before).  A <code>additionalExtents.temporal.resolution</code>
 property is able express the temporal granularity at which a given dataset&#8217;s data is measured, generated, or reported.</p>
 </div>
 <table id="per_core_extent_temporal" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -2146,7 +2158,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record MAY provide multiple <code>properties.extent.temporal</code> item properties to express additional temporal extents in other temporal reference systems.</p>
+<p>A WCMP record MAY provide multiple <code>additionalExtents.temporal</code> item properties to express additional temporal extents in other temporal reference systems.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2154,21 +2166,17 @@ property is able express the temporal granularity at which a given dataset&#8217
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
-  ...
-  "extent": {
-    "temporal": {
-      "interval": [
-        [
-          "1924-08-18",
-          null
-        ]
-      ],
-      "resolution": "P1H",
-      "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
-    }
+<pre class="highlight"><code class="language-json" data-lang="json">"additionalExtents": {
+  "temporal": {
+    "interval": [
+      [
+        "1924-08-18",
+        null
+      ]
+    ],
+    "resolution": "P1H",
+    "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
   }
-  ...
 }</code></pre>
 </div>
 </div>
@@ -3797,7 +3805,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-17 13:59:30 UTC
+Last updated 2022-11-18 11:50:23 UTC
 </div>
 </div>
 </body>
