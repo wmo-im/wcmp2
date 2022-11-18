@@ -56,7 +56,7 @@ The table below provides an overview of the set of properties that may be includ
 |**required**
 |Geospatial location associated with the dataset, in a geographic coordinate reference system
 
-|``properties.extent.spatial``
+|``additionalExtents.spatial``
 |optional
 |Additional geospatial extents in other coordinate reference systems
 
@@ -64,7 +64,7 @@ The table below provides an overview of the set of properties that may be includ
 |**required**
 |Temporal extent associated with a dataset
 
-|``properties.extent.temporal``
+|``additionalExtents.temporal``
 |optional
 |Additional time instants or periods
 
@@ -95,6 +95,10 @@ The table below provides an overview of the set of properties that may be includ
 |``links``
 |**required**
 |Online linkages to data retrieval or additional resources associated with the dataset
+
+|``properties.*``
+|optional
+|Additional properties as required.
 
 |===
 
@@ -394,6 +398,17 @@ include::../recommendations/core/REC_extent_temporal.adoc[]
 "time": {
   "interval" : ["2020-10-30", "2021-10-30"],
   "resolution": "P1D"
+}
+----
+
+[source, json]
+----
+"time": {
+  "interval": [
+    ["R/T00Z", "PT180H"],
+    ["R/T12Z", "PT180H"]
+  ],
+  "resolution": "PT6H"
 }
 ----
 
