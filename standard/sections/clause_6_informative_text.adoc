@@ -38,6 +38,10 @@ In order to provide discovery metadata of value, it is important to clarify the 
 are to provide describing their data and associated services.  Articulating the level of granularity will reduce catalogue "pollution"
 and bring the user closer to the data via their search criteria.
 
+A WCMP record provides a description at the granularity of a dataset, which facilitates clear
+cataloguing and discovery workflow, in combination with data services or APIs, which provide
+access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).
+
 The <<metadata-discovery-workflow>> below illustrates example metadata publication and discovery workflows against
 common meteorological data types:
 
