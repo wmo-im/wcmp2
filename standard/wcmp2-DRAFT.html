@@ -457,10 +457,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-11-18</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-11-24</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2022-11-18</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2022-11-24</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1362,7 +1362,7 @@ of a WCMP discovery metadata record.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.keywords</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Keywords, tags, key phrases, or classification codes</p></td>
 </tr>
 <tr>
@@ -1549,8 +1549,8 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
 <div class="sect3">
 <h4 id="_identifier"><a class="anchor" href="#_identifier"></a>7.1.4. Identifier</h4>
 <div class="paragraph">
-<p>A WCMP record utilizes the OARec <code>id</code> property to provide a unique identifier
-to a dataset.  A record identifier is essential for querying and identifying
+<p>The <code>id</code> property is a unique identifier
+of the dataset.  A record identifier is essential for querying and identifying
 records within the GDC.</p>
 </div>
 <table id="req_core_identifier" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1607,9 +1607,8 @@ records within the GDC.</p>
 <div class="sect3">
 <h4 id="_conformance_2"><a class="anchor" href="#_conformance_2"></a>7.1.5. Conformance</h4>
 <div class="paragraph">
-<p>A WCMP record leverages the OGC API <code>conformsTo</code> property to identify the conformance classes
-that apply to the record.  WCMP conformance identification is valuable for content/version
-detection and handling.</p>
+<p>The <code>conformsTo</code> property to identifies the version ofthe WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
+detection and handling of content.</p>
 </div>
 <table id="req_core_conformance" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1649,8 +1648,7 @@ detection and handling.</p>
 <div class="sect3">
 <h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.6. Properties / Type</h4>
 <div class="paragraph">
-<p>WCMP records provide descriptive information about different resource types, such as
-datasets and their associated services.</p>
+<p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from [codelist]. Most metadata records will be set to <code>dataset</code>.</p>
 </div>
 <table id="req_core_type" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1692,7 +1690,7 @@ datasets and their associated services.</p>
 <div class="sect3">
 <h4 id="_properties_title"><a class="anchor" href="#_properties_title"></a>7.1.7. Properties / Title</h4>
 <div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.title</code> property is a human-readable name for a given dataset.</p>
+<p>The <code>title</code> property is a human-readable name of the dataset.</p>
 </div>
 <table id="req_core_title" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1728,7 +1726,7 @@ datasets and their associated services.</p>
 <div class="sect3">
 <h4 id="_properties_description"><a class="anchor" href="#_properties_description"></a>7.1.8. Properties / Description</h4>
 <div class="paragraph">
-<p>A WCMP record has a <code>properties.description</code> property, which is a free-text summary description of the dataset.</p>
+<p>The <code>description</code> property is a free-text summary of the dataset.</p>
 </div>
 <table id="req_core_description" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 3. Example</caption>
@@ -1764,7 +1762,7 @@ datasets and their associated services.</p>
 <div class="sect3">
 <h4 id="_properties_keywords"><a class="anchor" href="#_properties_keywords"></a>7.1.9. Properties / Keywords</h4>
 <div class="paragraph">
-<p>A WCMP record should have a <code>properties.keywords</code> property, typically represented using keywords, tags, key phrases, or classification codes.</p>
+<p>The <code>keywords</code> property is a list keywords, tags, specific phrases, or classification codes associated with the dataset, but are not referenced to a particular vocabulary or knowledge organization system.</p>
 </div>
 <table id="rec_core_keywords" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1805,8 +1803,7 @@ datasets and their associated services.</p>
 <div class="sect3">
 <h4 id="themes"><a class="anchor" href="#themes"></a>7.1.10. Properties / Themes and Topic Hierarchy</h4>
 <div class="paragraph">
-<p>A WCMP record has a <code>properties.themes</code> property, which is a knowledge organization system used to classify the data.  A WCMP record can have one or more themes.  The WIS2 Topic Hierarchy is put
-forth as a specific theme/concept and is consistent with the topic as defined in distribution links
+<p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A WCMP metadata record can have one or more themes.  The WIS2 Topic Hierarchy is a required concept and and it should be consistent with the topic as defined in distribution links
 advertising broker services.</p>
 </div>
 <table id="req_core_themes_topic_hierarchy" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1874,9 +1871,9 @@ advertising broker services.</p>
 <div class="sect4">
 <h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.11.1. Geospatial Extent</h5>
 <div class="paragraph">
-<p>WCMP records provide descriptive information regarding the geospatial properties of a dataset.  Geospatial
-extents provide a useful indicator of the location of the dataset and facilitates searching the
-Global Discovery Catalogue with geospatial predicates.</p>
+<p>The <code>geometry</code> property is the general bounding spatial extent of the dataset in the geographic coordinate system.
+Geospatial bounding
+extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.</p>
 </div>
 <table id="req_core_extent_geospatial" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1982,27 +1979,27 @@ Global Discovery Catalogue with geospatial predicates.</p>
 <div class="sect4">
 <h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.11.2. Additional Geospatial Extents</h5>
 <div class="paragraph">
-<p>A WCMP record can communicate additional extents (for example, for non-geographic data or multiple
-temporal extents) via the <code>additionalExtents</code> property.  The <code>additionalExtents.spatial.bbox</code> property
+<p>The <code>additionalExtents.spatial</code> property is for other geospatial extents associated with the dataset, for example, non-geographic data or for describing multiple sub-areas of a dataset.
+The <code>additionalExtents.spatial.bbox</code> property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>minx</strong> is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, less than or equal to <strong>maxx</strong>.</p>
+<p>minx is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, less than or equal to maxx.</p>
 </li>
 <li>
-<p><strong>miny</strong> is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, less than or equal to <strong>maxy</strong>.</p>
+<p>miny is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, less than or equal to maxy.</p>
 </li>
 <li>
-<p><strong>maxx</strong> is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, greater than or equal to <strong>minx</strong>.</p>
+<p>maxx is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, greater than or equal to minx.</p>
 </li>
 <li>
-<p><strong>maxy</strong> is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, greater than or equal to <strong>miny</strong>.</p>
+<p>maxy is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, greater than or equal to miny.</p>
 </li>
 </ul>
 </div>
@@ -2046,9 +2043,8 @@ signed number between -90 and 90, greater than or equal to <strong>miny</strong>
 <div class="sect4">
 <h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.11.3. Temporal Extent</h5>
 <div class="paragraph">
-<p>WCMP records provide descriptive information regarding the temporal properties of a dataset.  Temporal
-extents provide a useful indicator of the date/time period of the dataset and facilitates searching the
-Global Discovery Catalogue with temporal predicates.</p>
+<p>The <code>time</code> property describes the general bounding extent of the dataset and the temporal resolution.
+Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC.</p>
 </div>
 <table id="req_core_extent_temporal" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2139,8 +2135,10 @@ Global Discovery Catalogue with temporal predicates.</p>
 <div class="sect4">
 <h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.11.4. Additional Temporal Extents</h5>
 <div class="paragraph">
-<p>A WCMP record can communicate additional time instants or periods via the <code>additionalExtents</code> item property.
-Temporal extents can be fully bound or open in either direction (e.g., until or before).  A <code>additionalExtents.temporal.resolution</code>
+<p>The <code>additionalExtents.temporal</code> property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems.</p>
+</div>
+<div class="paragraph">
+<p>Temporal extents can be fully bound or open in either direction (e.g., until or before).  An <code>additionalExtents.temporal.resolution</code>
 property is able express the temporal granularity at which a given dataset&#8217;s data is measured, generated, or reported.</p>
 </div>
 <table id="per_core_extent_temporal" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -2185,8 +2183,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 <div class="sect3">
 <h4 id="_properties_providers"><a class="anchor" href="#_properties_providers"></a>7.1.12. Properties / Providers</h4>
 <div class="paragraph">
-<p>A WCMP record has one or more providers listed as part of the <code>properties.providers</code> property. These elements
-provide contact information based on the role of the provider.</p>
+<p>The <code>providers</code> property is the contact information and <code>role</code> of the dataset providers.</p>
 </div>
 <table id="req_core_providers" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2282,7 +2279,7 @@ provide contact information based on the role of the provider.</p>
 <div class="sect3">
 <h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.13. Properties / Version</h4>
 <div class="paragraph">
-<p>Datasets may be versioned by an organization (version of an NWP model, processing chain/workflow, etc.), and data providers can make this information available when there are multiple versions of a dataset over time.</p>
+<p>The <code>version</code> property is the version of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.</p>
 </div>
 <table id="per_core_version" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2318,8 +2315,8 @@ provide contact information based on the role of the provider.</p>
 <div class="sect3">
 <h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.14. Properties / Persistent Identifiers</h4>
 <div class="paragraph">
-<p>A persistent (or handle) identifier is used to provide a long lasting reference to a digital resource.  Persistent identifiers
-are commonly used in scientific publications.</p>
+<p>The <code>externalIds</code> property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers
+are commonly used for scientific publications and datasets.</p>
 </div>
 <div class="paragraph">
 <p>Examples of persistent identifiers include, but are not limited to:</p>
@@ -2401,7 +2398,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.15. Properties / Record Creation Date</h4>
 <div class="paragraph">
-<p>A WCMP record has a <code>properties.recordCreated</code> property, which describes the date that the record was created.</p>
+<p>The <code>recordCreated</code> property is the date that the WCMP metadata record was created.</p>
 </div>
 <table id="req_core_record_creation_date" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2437,7 +2434,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.16. Properties / Record Update Date</h4>
 <div class="paragraph">
-<p>A WCMP record has a <code>properties.recordUpdated</code> property, which describes the date that the record was last updated.</p>
+<p>The <code>recordUpdated</code> property is the date that the WCMP metadata record was last updated.</p>
 </div>
 <table id="rec_core_record_update_date" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2473,7 +2470,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO Data Policy</h4>
 <div class="paragraph">
-<p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.</p>
+<p>The <code>dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.</p>
 </div>
 <table id="req_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2508,7 +2505,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Indicate additional conditions that apply when the resource is classified as <code>recommended</code>.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.</p>
+<p>The <code>additionalConditions</code> property are access and license details that apply when the dataset is classified as <code>recommended</code>.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.</p>
 </div>
 <table id="req_core_data_policy_conditions" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2652,11 +2649,11 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect4">
 <h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.18.1. Overview</h5>
 <div class="paragraph">
-<p>A WCMP record provides information regarding how to access and retrieve data and products.  This information is specified by defining a <code>links</code> array property, with one or more objects to corresponding data access services.</p>
+<p>The <code>links</code> property describes URLs and APIs for accessing or subscribing to the dataset.</p>
 </div>
 <div class="paragraph">
 <p>WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
-secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.</p>
+secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.</p>
 </div>
 <table id="req_core_distribution" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2790,6 +2787,9 @@ secure data use cases, a user needs to be able to detect access controlled data 
   }
 ]</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>The <code>distribution</code> property provides information about the format of the dataset, associated documentation and representative examples of the dataset.</p>
 </div>
 <table id="rec_core_distribution" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -3805,7 +3805,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-18 11:50:23 UTC
+Last updated 2022-11-24 13:32:21 UTC
 </div>
 </div>
 </body>
