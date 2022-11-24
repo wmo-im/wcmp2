@@ -1,4 +1,0 @@
-[appendix]
-:appendix-caption: Annex
-[[Codelists]]
-= Codelists
