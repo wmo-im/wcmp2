@@ -1,0 +1,210 @@
+{
+    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -142,
+                    52
+                ],
+                [
+                    -142,
+                    84
+                ],
+                [
+                    -52,
+                    84
+                ],
+                [
+                    -52,
+                    52
+                ],
+                [
+                    -142,
+                    52
+                ]
+            ]
+        ]
+    },
+    "time": {
+        "interval" : ["1840", null],
+        "resolution": "P1D"
+    },
+    "properties": {
+        "title": "Daily Climate Observations",
+        "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
+        "themes": [
+            {
+                "concepts": [
+                    "Climate",
+                    "Climate archives",
+                    "Climate change"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather and Climate"
+                ]
+            },
+            {
+                "concepts": [
+                    "National (CA)"
+                ]
+            },
+            {
+                "concepts": [
+                    "Atmosphere"
+                ]
+            },
+            {
+                "concepts": [
+                    "climatology",
+                    "weatherObservations"
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+            }
+        ],
+        "providers": [
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    }
+                ]
+            },
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "distributor"
+                    }
+                ]
+            }
+        ],
+        "language": "en",
+        "type": "dataset",
+        "extent": {
+            "spatial": {
+                "bbox": [
+                    [
+                        -142,
+                        52,
+                        -52,
+                        84
+                    ]
+                ],
+                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            },
+            "temporal": {
+                "interval": [
+                    "1840",
+                    null
+                ],
+                "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+            }
+        },
+        "created": "1840",
+        "recordUpdated": "2022-06-17",
+        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
+        "formats": [
+            "CSV"
+        ]
+    },
+    "links": [
+        {
+            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
+            "href": "https://api.weather.gc.ca/collections/climate-stations/items",
+            "type": "application/json",
+            "title": "Stations associated with this dataset"
+        },
+        {
+            "rel": "download",
+            "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
+            "type": "text/html",
+            "title": "Raw data download (CSV files)"
+        },
+        {
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/climate-daily/items",
+            "type": "application/json",
+            "title": "Climate daily data access API interface"
+        },
+        {
+            "rel": "related",
+            "href": "https://eccc-msc.github.io/open-data/msc-data/climate_obs/readme_climateobs_en",
+            "type": "text/html",
+            "title": "Documentation"
+        },
+        {
+            "rel": "OASIS:MQTT",
+            "href": "mqtt://example.org:8883",
+            "wmo:topic": "wis2/CAN/eccc-msc/data/core/climate/observations",
+            "type": "application/json",
+            "title": "Data notifications"
+        }
+    ]
+}
