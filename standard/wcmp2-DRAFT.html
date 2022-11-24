@@ -579,9 +579,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_links">A.2. Links</a></li>
 </ul>
 </li>
-<li><a href="#Codelists">Annex B: Codelists</a></li>
-<li><a href="#Bibliography">Annex C: Bibliography</a></li>
-<li><a href="#_revision_history">Annex D: Revision History</a></li>
+<li><a href="#schemas">Annex B: Schemas (Normative)</a>
+<ul class="sectlevel2">
+<li><a href="#_wmo_core_metadata_profile_schema">B.1. WMO Core Metadata Profile Schema</a></li>
+</ul>
+</li>
+<li><a href="#examples">Annex C: Examples (Informative)</a>
+<ul class="sectlevel2">
+<li><a href="#_wmo_core_metadata_profile_examples">C.1. WMO Core Metadata Profile Examples</a></li>
+</ul>
+</li>
+<li><a href="#Codelists">Annex D: Codelists</a></li>
+<li><a href="#Bibliography">Annex E: Bibliography</a></li>
+<li><a href="#_revision_history">Annex F: Revision History</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -1511,7 +1521,7 @@ access, queries, and filters at a lower level of granularity (parameter, variabl
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>When  dataset properties (parameters, variables, spatiotemporal extents) are made available via a data service or API, a WCMP record SHOULD provide templated links to facilitate easier data queries and filtering. See the <a href="#distribution">Distribution Information</a> section.</p>
+<p>When dataset properties (parameters, variables, spatiotemporal extents) are made available via a data service or API, a WCMP record SHOULD provide templated links to facilitate easier data queries and filtering. See the <a href="#distribution">Distribution Information</a> section.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3245,21 +3255,21 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that all <code>geometry</code> value data types are integers or floats.</p>
+<p>Check that all <code>geometry</code> coordinate value data types are integers or floats.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that <code>geometry</code> longitudinal values are between -180 and 180.</p>
+<p>Check that <code>geometry</code> coordinate longitudinal values are between -180 and 180.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that <code>geometry</code> latitudinal values are between -90 and 90.</p>
+<p>Check that <code>geometry</code> coordinate latitudinal values are between -90 and 90.</p>
 </div>
 </div>
 </div>
@@ -3642,13 +3652,501 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="Codelists"><a class="anchor" href="#Codelists"></a>Annex B: Codelists</h2>
+<h2 id="schemas"><a class="anchor" href="#schemas"></a>Annex B: Schemas (Normative)</h2>
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The schema document will only be published on <code>schemas.wmo.int</code> once the standard has been approved.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_wmo_core_metadata_profile_schema"><a class="anchor" href="#_wmo_core_metadata_profile_schema"></a>B.1. WMO Core Metadata Profile Schema</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: 'https://json-schema.org/draft/2020-12/schema'
+$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
+title: WCMP 2 discovery metadata record definition
+description: WCMP 2 discovery metadata record definition
+allOf:
+  - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml'
+required:
+  - id
+  - conformsTo
+  - geometry
+  - time
+  - properties
+  - links
+properties:
+  properties:
+    required:
+      - type
+      - title
+      - description
+      - themes
+      - providers
+      - recordCreated
+      - wmo:dataPolicy
+    properties:
+      wmo:dataPolicy:
+        type: object
+        description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
+        properties:
+          name:
+            type: string
+            description: The WMO Unified Data Policy identifier (`core` or `recommended`).
+            enum:
+              - core
+              - recommended
+          additionalConditions:
+            type: array
+            items:
+              type: object
+              description: Additional conditions applied to recommended data
+              properties:
+                name:
+                  type: string
+                  description: Name of additional condition, from a codelist, or the string value `none` if there are no additional conditions on a recommended dataset.
+                scheme:
+                  type: string
+                  description: codelist or controlled vocabulary to which the condition applies to.
+                link:
+                  $ref: link.yaml
+              required:
+                - name
+            minItems: 1
+        required:
+          - name
+      version:
+        type: string
+        description: The version or edition of a given dataset.
+    additionalExtents:
+      $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
+    links:
+      items:
+        $ref: link.yaml</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="examples"><a class="anchor" href="#examples"></a>Annex C: Examples (Informative)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_wmo_core_metadata_profile_examples"><a class="anchor" href="#_wmo_core_metadata_profile_examples"></a>C.1. WMO Core Metadata Profile Examples</h3>
+<div class="listingblock">
+<div class="title">Example: observations: Canadian Hourly Surface Weather Observations</div>
+<div class="content">
+<pre>{
+    "id": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob-realtime",
+    "conformsTo": [
+        "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
+    ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -142,
+                    28
+                ],
+                [
+                    -142,
+                    82
+                ],
+                [
+                    -52,
+                    82
+                ],
+                [
+                    -52,
+                    28
+                ],
+                [
+                    -142,
+                    28
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "title": "Surface Weather Observations",
+        "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
+        "themes": [
+            {
+                "concepts": [
+                    "Hydrology",
+                    "Streamflow",
+                    "Discharge",
+                    "Water level",
+                    "Water quantity",
+                    "Sediment concentration"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather forecasts",
+                    "Precipitation",
+                    "Air temperature",
+                    "Humidity",
+                    "Snow",
+                    "Wind",
+                    "Meteorological data"
+                ]
+            },
+            {
+                "concepts": [
+                    "Weather and Climate"
+                ]
+            },
+            {
+                "concepts": [
+                    "International"
+                ]
+            },
+            {
+                "concepts": [
+                    "Atmosphere"
+                ]
+            },
+            {
+                "concepts": [
+                    "weatherObservations"
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+            }
+        ],
+        "providers": [
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    }
+                ]
+            },
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
+                "positionName": "National Inquiry Response Team",
+                "contactInfo": {
+                    "phone": {
+                        "office": "+01-819-997-2800"
+                    },
+                    "email": {
+                        "office": "+01-506-451-6010"
+                    },
+                    "address": {
+                        "office": {
+                            "deliveryPoint": "77 Westmorland Street, suite 260",
+                            "city": "Fredericton",
+                            "administrativeArea": "NB",
+                            "postalCode": "E3B 6Z4",
+                            "country": "Canada"
+                        },
+                        "onlineResource": {
+                            "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        }
+                    },
+                    "hoursOfService": "0700h - 1500h EST",
+                    "contactInstructions": "email",
+                    "url": {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                },
+                "roles": [
+                    {
+                        "name": "distributor"
+                    }
+                ]
+            }
+        ],
+        "language": "en",
+        "type": "dataset",
+        "extent": {
+            "spatial": {
+                "bbox": [
+                    [
+                        -142,
+                        28,
+                        -52,
+                        82
+                    ]
+                ],
+                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            }
+        },
+        "recordUpdated": "2022-06-22",
+        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
+        "formats": [
+            "SQL",
+            "WMS"
+        ]
+    },
+    "links": [
+        {
+            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
+            "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
+            "type": "text/csv",
+            "title": "Stations associated with this dataset"
+        },
+        {
+            "rel": "download",
+            "href": "https://dd.weather.gc.ca/observations/swob-ml",
+            "type": "text/html",
+            "hreflang": "en",
+            "title": "Raw data download (CSV files)"
+        },
+        {
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/swob-realtime/items",
+            "type": "application/json",
+            "title": "Data access API interface"
+        },
+        {
+            "rel": "related",
+            "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
+            "type": "text/html",
+            "title": "Documentation"
+        },
+        {
+            "rel": "OASIS:MQTT",
+            "href": "mqtt://example.org:8883",
+            "wmo:topic": "wis2/CAN/eccc-msc/data/core/weather/observations/surface-land/landFixed",
+            "type": "application/json",
+            "title": "Data notifications"
+        }
+    ]
+}</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example: NWP: ICON-EPS GRIB data</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "id": "urn:x-wmo:md:DEU:dwd:icon-eps.ALL",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "time": {
+        "interval": [
+            [
+                "R/T00Z",
+                "PT180H"
+            ],
+            [
+                "R/T12Z",
+                "PT180H"
+            ]
+        ],
+        "resolution": "PT6H"
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                -180,
+                -90
+            ],
+            [
+                -180,
+                90
+            ],
+            [
+                180,
+                90
+            ],
+            [
+                180,
+                -90
+            ],
+            [
+                -180,
+                -90
+            ]
+        ]
+    },
+    "additionalExtents": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ],
+            "resolution": "0.5*0.5",
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        }
+    },
+    "properties": {
+        "type": "dataset",
+        "title": "ICON-EPS GRIB data",
+        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, various level, various threshold",
+        "themes": [
+            {
+                "concepts": [
+                    "wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+            },
+            {
+                "concepts": [
+                    "meteorology"
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            },
+            {
+                "concepts": [
+                    "Meteorological geographical features"
+                ],
+                "scheme": "https://inspire.ec.europa.eu/theme/mf"
+            },
+            {
+                "concepts": [
+                    "FM 92 GRIB edition 2"
+                ],
+                "scheme": "http://codes.wmo.int/codeform"
+            }
+        ],
+        "providers": [
+            {
+                "name": "Deutscher Wetterdienst",
+                "positionName": "Michael Denhard",
+                "contactInfo": {
+                    "email": {
+                        "work": "gisc@dwd.de"
+                    },
+                    "address": [
+                        {
+                            "deliveryPoint": "Frankfurter Stra\u00dfe 135",
+                            "city": "Offenbach",
+                            "postal-code": "63067",
+                            "country": "Germany"
+                        }
+                    ],
+                    "url": "http://www.dwd.de/wmc"
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    },
+                    {
+                        "name": "originator"
+                    }
+                ]
+            }
+        ],
+        "recordCreated": "2018-08-19T08:10:00Z",
+        "recordUpdated": "2022-03-15T09:26:00Z",
+        "wmo:dataPolicy": {
+            "name": "core"
+        },
+        "links": [
+            {
+                "rel": "download",
+                "type": "text/html",
+                "title": "Open Data Server DWD",
+                "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+            },
+            {
+                "rel": "subscribe",
+                "type": "application/json",
+                "title": "Message Broker DWD",
+                "href": "mqtts://everyone:everyone@wis2.dwd.de:8883/",
+                "wmo:topic": "origin/v04/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+            }
+        ],
+        "keywords": [
+            "CLCH",
+            "CLCL",
+            "CLCM",
+            "CLCT",
+            "cloud",
+            "MSLP",
+            "Probability of temperature anomalies",
+            "cape",
+            "dew point",
+            "geopotential height",
+            "maximum temperature 2m",
+            "minimum temperature 2m",
+            "precipitation",
+            "snow",
+            "snowfall",
+            "soil temperature",
+            "temperature",
+            "wind gusts 10m",
+            "wind speed",
+            "wind speed 10m"
+        ],
+        "externalIds": [
+            {
+                "scheme": "DWD",
+                "value": "de.dwd.icon-eps.ALL"
+            }
+        ],
+        "language": "eng",
+        "created": "2018-04-22Z",
+        "updated": "2018-04-23Z",
+        "formats": [
+            "GRIB2"
+        ]
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="Codelists"><a class="anchor" href="#Codelists"></a>Annex D: Codelists</h2>
 <div class="sectionbody">
 
 </div>
 </div>
 <div class="sect1">
-<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex C: Bibliography</h2>
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex E: Bibliography</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -3672,7 +4170,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex D: Revision History</h2>
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex F: Revision History</h2>
 <div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -3805,7 +4303,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-24 13:32:21 UTC
+Last updated 2022-11-24 14:24:11 UTC
 </div>
 </div>
 </body>
