@@ -15,17 +15,17 @@ Check for the existence of one `+geometry+` property in the WCMP record.
 
 [.component,class=step]
 --
-Check that all `+geometry+` value data types are integers or floats.
+Check that all `+geometry.coordinates+` value data types are integers or floats.
 --
 
 [.component,class=step]
 --
-Check that `+geometry+` longitudinal values are between -180 and 180.
+Check that `+geometry.coordinates+` longitudinal values are between -180 and 180.
 --
 
 [.component,class=step]
 --
-Check that `+geometry+` latitudinal values are between -90 and 90.
+Check that `+geometry.coordinates+` latitudinal values are between -90 and 90.
 --
 
 [.component,class=step]
