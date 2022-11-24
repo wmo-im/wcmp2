@@ -1,0 +1,17 @@
+[[examples]]
+[appendix]
+:appendix-caption: Annex
+== Examples (Informative)
+
+=== WMO Core Metadata Profile Examples
+
+.Example: observations: Canadian Hourly Surface Weather Observations
+----
+include::../../examples/msc-swob-realtime.json[]
+----
+
+.Example: NWP: ICON-EPS GRIB data
+[source,json]
+----
+include::../../examples/wcmp2_de.dwd.icon-eps.ALL.json[]
+----

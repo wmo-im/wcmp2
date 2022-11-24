@@ -1,0 +1,14 @@
+[[schemas]]
+[appendix]
+:appendix-caption: Annex
+== Schemas (Normative)
+
+NOTE: The schema document will only be published on `schemas.wmo.int` once the standard has been approved.
+
+=== WMO Core Metadata Profile Schema
+
+[source,yaml]
+----
+include::../../schema/wcmpRecordGeoJSON.yaml[]
+----
+
