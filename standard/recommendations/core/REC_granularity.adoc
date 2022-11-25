@@ -2,8 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/granularity*
-^|A |A WCMP record SHOULD provide a high level description of a dataset to facilitate simple information search queries.
-^|B |A WCMP record SHOULD provide enough information to facilitate further interaction with a dataset (parameters, variables, spatiotemporal dimensions) as part of an associated service or capability.
-^|C |A WCMP record SHOULD describe dataset parameters and variables as themes/concepts with an associated vocabulary <<themes>>.
-^|D |When dataset properties (parameters, variables, spatiotemporal extents) are made available via a data service or API, a WCMP record SHOULD provide templated links to facilitate easier data queries and filtering. See the <<distribution>> section.
+^|A |A WCMP record SHOULD describe dataset parameters and variables as themes/concepts with an associated vocabulary.
 |===

@@ -108,44 +108,6 @@ The WCMP record schema is based on  _OGC API - Records - Part 1: Core: Requireme
 
 include::../requirements/core/REQ_validation.adoc[]
 
-==== Granularity
-
-A WCMP record provides a description at the granularity of a dataset, which facilitates clear
-cataloguing and discovery workflow, in combination with data services or APIs, which provide
-access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).
-
-include::../recommendations/core/REC_granularity.adoc[]
-
-.Examples
-
-[source,json]
-----
-"themes": [
-  {
-    "concepts": [
-      "Temperature",
-      "Relative humidity",
-      "u-component of Wind",
-      "v-component of Wind"
-    ],
-    "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
-  }
-]
-----
-
-[source,json]
-----
-"themes": [
-  {
-    "concepts": [
-      "Temperature/air temperature",
-      "Dewpoint temperature"
-    ],
-    "scheme": "http://codes.wmo.int/bufr4/b"
-  }
-]
-----
-
 ==== Identifier
 
 The `+id+` property is a unique identifier
@@ -250,15 +212,15 @@ include::../recommendations/core/REC_keywords.adoc[]
 }
 ----
 
-==== Properties / Themes and Topic Hierarchy [[themes]]
+==== Properties / Themes and Topic Hierarchy
 
 The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A WCMP metadata record can have one or more themes.  The WIS2 Topic Hierarchy is a required concept and and it should be consistent with the topic as defined in distribution links
 advertising broker services.
 
 include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
+include::../recommendations/core/REC_granularity.adoc[]
 
 .Examples
-
 [source,json]
 ----
 "properties": {
@@ -289,6 +251,34 @@ include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
   ]
   ...
 }
+----
+
+[source,json]
+----
+"themes": [
+  {
+    "concepts": [
+      "Temperature",
+      "Relative humidity",
+      "u-component of Wind",
+      "v-component of Wind"
+    ],
+    "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
+  }
+]
+----
+
+[source,json]
+----
+"themes": [
+  {
+    "concepts": [
+      "Temperature/air temperature",
+      "Dewpoint temperature"
+    ],
+    "scheme": "http://codes.wmo.int/bufr4/b"
+  }
+]
 ----
 
 ==== Geospatial and Temporal Extents
