@@ -2385,7 +2385,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.14. Properties / Record Creation Date</h4>
 <div class="paragraph">
-<p>The <code>recordCreated</code> property is the date that the WCMP metadata record was created.</p>
+<p>The <code>recordCreated</code> property is a single date that the WCMP metadata record was created.</p>
 </div>
 <table id="req_core_record_creation_date" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2402,7 +2402,13 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide a <code>properties.recordCreated</code> property.</p>
+<p>A WCMP record SHALL provide a single <code>properties.recordCreated</code> property.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHALL NOT be repeatable or used to document change history.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3492,7 +3498,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>properties.recordCreated</code> property in the WCMP record.</p>
+<p>Check for the existence of one and only one <code>properties.recordCreated</code> property in the WCMP record.</p>
 </div>
 </div>
 </div>
@@ -4280,7 +4286,7 @@ properties:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-25 11:19:54 UTC
+Last updated 2022-11-25 11:57:21 UTC
 </div>
 </div>
 </body>
