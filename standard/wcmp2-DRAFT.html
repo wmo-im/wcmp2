@@ -457,10 +457,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-11-24</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2022-11-25</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2022-11-24</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2022-11-25</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -537,23 +537,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel3">
 <li><a href="#_overview_2">7.1.1. Overview</a></li>
 <li><a href="#_validation">7.1.2. Validation</a></li>
-<li><a href="#_granularity_2">7.1.3. Granularity</a></li>
-<li><a href="#_identifier">7.1.4. Identifier</a></li>
-<li><a href="#_conformance_2">7.1.5. Conformance</a></li>
-<li><a href="#_properties_type">7.1.6. Properties / Type</a></li>
-<li><a href="#_properties_title">7.1.7. Properties / Title</a></li>
-<li><a href="#_properties_description">7.1.8. Properties / Description</a></li>
-<li><a href="#_properties_keywords">7.1.9. Properties / Keywords</a></li>
-<li><a href="#themes">7.1.10. Properties / Themes and Topic Hierarchy</a></li>
-<li><a href="#_geospatial_and_temporal_extents">7.1.11. Geospatial and Temporal Extents</a></li>
-<li><a href="#_properties_providers">7.1.12. Properties / Providers</a></li>
-<li><a href="#_properties_version">7.1.13. Properties / Version</a></li>
-<li><a href="#_properties_persistent_identifiers">7.1.14. Properties / Persistent Identifiers</a></li>
-<li><a href="#_properties_record_creation_date">7.1.15. Properties / Record Creation Date</a></li>
-<li><a href="#_properties_record_update_date">7.1.16. Properties / Record Update Date</a></li>
-<li><a href="#_properties_wmo_data_policy">7.1.17. Properties / WMO Data Policy</a></li>
-<li><a href="#distribution">7.1.18. Distribution Information</a></li>
-<li><a href="#_additional_properties">7.1.19. Additional Properties</a></li>
+<li><a href="#_identifier">7.1.3. Identifier</a></li>
+<li><a href="#_conformance_2">7.1.4. Conformance</a></li>
+<li><a href="#_properties_type">7.1.5. Properties / Type</a></li>
+<li><a href="#_properties_title">7.1.6. Properties / Title</a></li>
+<li><a href="#_properties_description">7.1.7. Properties / Description</a></li>
+<li><a href="#_properties_keywords">7.1.8. Properties / Keywords</a></li>
+<li><a href="#_properties_themes_and_topic_hierarchy">7.1.9. Properties / Themes and Topic Hierarchy</a></li>
+<li><a href="#_geospatial_and_temporal_extents">7.1.10. Geospatial and Temporal Extents</a></li>
+<li><a href="#_properties_providers">7.1.11. Properties / Providers</a></li>
+<li><a href="#_properties_version">7.1.12. Properties / Version</a></li>
+<li><a href="#_properties_persistent_identifiers">7.1.13. Properties / Persistent Identifiers</a></li>
+<li><a href="#_properties_record_creation_date">7.1.14. Properties / Record Creation Date</a></li>
+<li><a href="#_properties_record_update_date">7.1.15. Properties / Record Update Date</a></li>
+<li><a href="#_properties_wmo_data_policy">7.1.16. Properties / WMO Data Policy</a></li>
+<li><a href="#distribution">7.1.17. Distribution Information</a></li>
+<li><a href="#_additional_properties">7.1.18. Additional Properties</a></li>
 </ul>
 </li>
 </ul>
@@ -1051,6 +1050,11 @@ are to provide describing their data and associated services.  Articulating the 
 and bring the user closer to the data via their search criteria.</p>
 </div>
 <div class="paragraph">
+<p>A WCMP record provides a description at the granularity of a dataset, which facilitates clear
+cataloguing and discovery workflow, in combination with data services or APIs, which provide
+access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).</p>
+</div>
+<div class="paragraph">
 <p>The <a href="#metadata-discovery-workflow">Discovery metadata workflow</a> below illustrates example metadata publication and discovery workflows against
 common meteorological data types:</p>
 </div>
@@ -1482,82 +1486,7 @@ of a WCMP discovery metadata record.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_granularity_2"><a class="anchor" href="#_granularity_2"></a>7.1.3. Granularity</h4>
-<div class="paragraph">
-<p>A WCMP record provides a description at the granularity of a dataset, which facilitates clear
-cataloguing and discovery workflow, in combination with data services or APIs, which provide
-access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).</p>
-</div>
-<table id="rec_core_granularity" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/core/granularity</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide a high level description of a dataset to facilitate simple information search queries.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide enough information to facilitate further interaction with a dataset (parameters, variables, spatiotemporal dimensions) as part of an associated service or capability.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD describe dataset parameters and variables as themes/concepts with an associated vocabulary <a href="#themes">Properties / Themes and Topic Hierarchy</a>.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>When dataset properties (parameters, variables, spatiotemporal extents) are made available via a data service or API, a WCMP record SHOULD provide templated links to facilitate easier data queries and filtering. See the <a href="#distribution">Distribution Information</a> section.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="listingblock">
-<div class="title">Examples</div>
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"themes": [
-  {
-    "concepts": [
-      "Temperature",
-      "Relative humidity",
-      "u-component of Wind",
-      "v-component of Wind"
-    ],
-    "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
-  }
-]</code></pre>
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"themes": [
-  {
-    "concepts": [
-      "Temperature/air temperature",
-      "Dewpoint temperature"
-    ],
-    "scheme": "http://codes.wmo.int/bufr4/b"
-  }
-]</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>7.1.4. Identifier</h4>
+<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>7.1.3. Identifier</h4>
 <div class="paragraph">
 <p>The <code>id</code> property is a unique identifier
 of the dataset.  A record identifier is essential for querying and identifying
@@ -1615,7 +1544,7 @@ records within the GDC.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_conformance_2"><a class="anchor" href="#_conformance_2"></a>7.1.5. Conformance</h4>
+<h4 id="_conformance_2"><a class="anchor" href="#_conformance_2"></a>7.1.4. Conformance</h4>
 <div class="paragraph">
 <p>The <code>conformsTo</code> property to identifies the version ofthe WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
 detection and handling of content.</p>
@@ -1656,7 +1585,7 @@ detection and handling of content.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.6. Properties / Type</h4>
+<h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.5. Properties / Type</h4>
 <div class="paragraph">
 <p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from [codelist]. Most metadata records will be set to <code>dataset</code>.</p>
 </div>
@@ -1698,7 +1627,7 @@ detection and handling of content.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_title"><a class="anchor" href="#_properties_title"></a>7.1.7. Properties / Title</h4>
+<h4 id="_properties_title"><a class="anchor" href="#_properties_title"></a>7.1.6. Properties / Title</h4>
 <div class="paragraph">
 <p>The <code>title</code> property is a human-readable name of the dataset.</p>
 </div>
@@ -1734,7 +1663,7 @@ detection and handling of content.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_description"><a class="anchor" href="#_properties_description"></a>7.1.8. Properties / Description</h4>
+<h4 id="_properties_description"><a class="anchor" href="#_properties_description"></a>7.1.7. Properties / Description</h4>
 <div class="paragraph">
 <p>The <code>description</code> property is a free-text summary of the dataset.</p>
 </div>
@@ -1770,7 +1699,7 @@ detection and handling of content.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_keywords"><a class="anchor" href="#_properties_keywords"></a>7.1.9. Properties / Keywords</h4>
+<h4 id="_properties_keywords"><a class="anchor" href="#_properties_keywords"></a>7.1.8. Properties / Keywords</h4>
 <div class="paragraph">
 <p>The <code>keywords</code> property is a list keywords, tags, specific phrases, or classification codes associated with the dataset, but are not referenced to a particular vocabulary or knowledge organization system.</p>
 </div>
@@ -1781,7 +1710,7 @@ detection and handling of content.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/keywords</strong></p>
 </div></div></td>
@@ -1811,7 +1740,7 @@ detection and handling of content.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="themes"><a class="anchor" href="#themes"></a>7.1.10. Properties / Themes and Topic Hierarchy</h4>
+<h4 id="_properties_themes_and_topic_hierarchy"><a class="anchor" href="#_properties_themes_and_topic_hierarchy"></a>7.1.9. Properties / Themes and Topic Hierarchy</h4>
 <div class="paragraph">
 <p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A WCMP metadata record can have one or more themes.  The WIS2 Topic Hierarchy is a required concept and and it should be consistent with the topic as defined in distribution links
 advertising broker services.</p>
@@ -1838,6 +1767,26 @@ advertising broker services.</p>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WCMP record <code>properties.theme</code> SHALL provide ONE theme based on the WIS 2 Topic Hierarchy (additional themes are permitted based on other vocabularies).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_core_granularity" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/granularity</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHOULD describe dataset parameters and variables as themes/concepts with an associated vocabulary.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1875,11 +1824,39 @@ advertising broker services.</p>
 }</code></pre>
 </div>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"themes": [
+  {
+    "concepts": [
+      "Temperature",
+      "Relative humidity",
+      "u-component of Wind",
+      "v-component of Wind"
+    ],
+    "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"themes": [
+  {
+    "concepts": [
+      "Temperature/air temperature",
+      "Dewpoint temperature"
+    ],
+    "scheme": "http://codes.wmo.int/bufr4/b"
+  }
+]</code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.11. Geospatial and Temporal Extents</h4>
+<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.10. Geospatial and Temporal Extents</h4>
 <div class="sect4">
-<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.11.1. Geospatial Extent</h5>
+<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.10.1. Geospatial Extent</h5>
 <div class="paragraph">
 <p>The <code>geometry</code> property is the general bounding spatial extent of the dataset in the geographic coordinate system.
 Geospatial bounding
@@ -1987,7 +1964,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.11.2. Additional Geospatial Extents</h5>
+<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.10.2. Additional Geospatial Extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.spatial</code> property is for other geospatial extents associated with the dataset, for example, non-geographic data or for describing multiple sub-areas of a dataset.
 The <code>additionalExtents.spatial.bbox</code> property
@@ -2051,7 +2028,7 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.11.3. Temporal Extent</h5>
+<h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.10.3. Temporal Extent</h5>
 <div class="paragraph">
 <p>The <code>time</code> property describes the general bounding extent of the dataset and the temporal resolution.
 Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC.</p>
@@ -2143,7 +2120,7 @@ Temporal extents provide a useful indicator of the date and time period of the d
 </div>
 </div>
 <div class="sect4">
-<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.11.4. Additional Temporal Extents</h5>
+<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.10.4. Additional Temporal Extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.temporal</code> property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems.</p>
 </div>
@@ -2191,7 +2168,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_providers"><a class="anchor" href="#_properties_providers"></a>7.1.12. Properties / Providers</h4>
+<h4 id="_properties_providers"><a class="anchor" href="#_properties_providers"></a>7.1.11. Properties / Providers</h4>
 <div class="paragraph">
 <p>The <code>providers</code> property is the contact information and <code>role</code> of the dataset providers.</p>
 </div>
@@ -2287,7 +2264,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.13. Properties / Version</h4>
+<h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.12. Properties / Version</h4>
 <div class="paragraph">
 <p>The <code>version</code> property is the version of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.</p>
 </div>
@@ -2323,7 +2300,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.14. Properties / Persistent Identifiers</h4>
+<h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.13. Properties / Persistent Identifiers</h4>
 <div class="paragraph">
 <p>The <code>externalIds</code> property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers
 are commonly used for scientific publications and datasets.</p>
@@ -2406,7 +2383,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.15. Properties / Record Creation Date</h4>
+<h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.14. Properties / Record Creation Date</h4>
 <div class="paragraph">
 <p>The <code>recordCreated</code> property is the date that the WCMP metadata record was created.</p>
 </div>
@@ -2442,7 +2419,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.16. Properties / Record Update Date</h4>
+<h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.15. Properties / Record Update Date</h4>
 <div class="paragraph">
 <p>The <code>recordUpdated</code> property is the date that the WCMP metadata record was last updated.</p>
 </div>
@@ -2478,7 +2455,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO Data Policy</h4>
+<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.16. Properties / WMO Data Policy</h4>
 <div class="paragraph">
 <p>The <code>dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.</p>
 </div>
@@ -2655,9 +2632,9 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribution"><a class="anchor" href="#distribution"></a>7.1.18. Distribution Information</h4>
+<h4 id="distribution"><a class="anchor" href="#distribution"></a>7.1.17. Distribution Information</h4>
 <div class="sect4">
-<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.18.1. Overview</h5>
+<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.17.1. Overview</h5>
 <div class="paragraph">
 <p>The <code>links</code> property describes URLs and APIs for accessing or subscribing to the dataset.</p>
 </div>
@@ -2975,7 +2952,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.19. Additional Properties</h4>
+<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.18. Additional Properties</h4>
 <div class="paragraph">
 <p>A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.</p>
@@ -4303,7 +4280,7 @@ properties:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-11-24 14:24:11 UTC
+Last updated 2022-11-25 11:19:54 UTC
 </div>
 </div>
 </body>
