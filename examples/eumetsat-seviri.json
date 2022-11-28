@@ -68,31 +68,61 @@
         "themes": [
             {
                 "concepts": [
-                    "meteorology",
-                    "weatherObservations"
+                    {
+                        "name": "meteorology"
+                    },
+                    {
+                        "name": "weatherObservations"
+                    }
                 ],
                 "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_theme"
             },
             {
                 "concepts": [
-                    "EDHA",
-                    "EDHI",
-                    "EDHK",
-                    "EDJA",
-                    "EDMO",
-                    "EDOP",
-                    "EDTD",
-                    "EDTL",
-                    "EDTY",
-                    "EDVE",
-                    "EDXW",
-                    "EDZO"
+                    {
+                        "name": "EDHA"
+                    },
+                    {
+                        "name": "EDHI"
+                    },
+                    {
+                        "name": "EDHK"
+                    },
+                    {
+                        "name": "EDJA"
+                    },
+                    {
+                        "name": "EDMO"
+                    },
+                    {
+                        "name": "EDOP"
+                    },
+                    {
+                        "name": "EDTD"
+                    },
+                    {
+                        "name": "EDTL"
+                    },
+                    {
+                        "name": "EDTY"
+                    },
+                    {
+                        "name": "EDVE"
+                    },
+                    {
+                        "name": "EDXW"
+                    },
+                    {
+                        "name": "EDZO"
+                    }
                 ],
                 "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_place"
             },
             {
                 "concepts": [
-                    "GlobalExchange"
+                    {
+                        "name": "GlobalExchange"
+                    }
                 ],
                 "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_dataCentre"
             }

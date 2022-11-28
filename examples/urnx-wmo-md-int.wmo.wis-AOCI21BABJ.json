@@ -2,80 +2,92 @@
     "id": "urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
     "type": "Feature",
     "conformsTo": [
-		"http://wis.wmo.int/spec/wcmp/2.0"
-	],
-	"time": {
-		"interval": ["2014",null],
-		"resolution": "PT12H"
-	},   
-   "geometry": {
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "time": {
+        "interval": [
+            "2014",
+            null
+        ],
+        "resolution": "PT12H"
+    },
+    "geometry": {
         "type": "Point",
         "coordinates": [
             [
-               76.366667,
-               -69.366667
-            ],
+                76.366667,
+                -69.366667
+            ]
         ]
     },
     "properties": {
-	"type": "dataset",
+        "type": "dataset",
         "title": "AOCI21 Ozone level observation",
         "description": "AOCI21 - Ozone level observation , antarctic area. Included stations: (89573, Zhongshan). The AOCI21 Data Designator decodes as follow: T1(A):Analyses;T1T2(AO):Ozone layer;A1A2(CI):China.(Refer to WMO No.386 - Manual on the GTS). Related words: meteorology;meteorological.",
         "language": "en",
         "created": "2014-09-10T00:00:00Z",
         "updated": "2014-09-10T00:00:00Z",
-	"formats": ["txt"],
+        "formats": [
+            "txt"
+        ],
         "themes": [
-           	{
-				"concepts": ["wis2/CHN/CMA-GISC/data/core/weather/observation"],
-				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-			},
-        	{
-        		"concepts": ["meteorology"],
-        		"scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
-        	}
-        
+            {
+                "concepts": [
+                    {
+                        "name": "wis2/CHN/CMA-GISC/data/core/weather/observation"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+            },
+            {
+                "concepts": [
+                    {
+                        "name": "meteorology"
+                    }
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            }
         ],
         "providers": [
             {
                 "name": "National Meteorological Information Center, CMA",
-                "contactInfo": [
-					"email": {
-							"work": "zhuting@cma.gov.cn"
-                        },
+                "contactInfo": {
+                    "email": {
+                        "work": "zhuting@cma.gov.cn"
+                    },
                     "address": [
-						{
-							"deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
-							"city": "Beijing",
-							"state": "Beijing",
-							"postalCode": "100081",
-							"country": "CHINA"
-						}
-					],
-					"url": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ"
-					"phone": "86-10-58993021"
-                ],
-				"roles": [
-					{
-						"name": "pointOfContact"
-					},
-					{
-						"name": "originator"
-					}
-				]
-            },
+                        {
+                            "deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
+                            "city": "Beijing",
+                            "state": "Beijing",
+                            "postalCode": "100081",
+                            "country": "CHINA"
+                        }
+                    ],
+                    "url": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
+                    "phone": "86-10-58993021"
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    },
+                    {
+                        "name": "originator"
+                    }
+                ]
+            }
         ],
-	"recordCreated": "2014-09-10T00:00:00Z",
-	"recordUpdated": "2014-09-10T00:00:00Z",
-	"wmo:dataPolicy": {
-		"name": "core" 
-	},
+        "recordCreated": "2014-09-10T00:00:00Z",
+        "recordUpdated": "2014-09-10T00:00:00Z",
+        "wmo:dataPolicy": {
+            "name": "core"
+        },
         "extent": [
             {
                 "spatial": {
                     "bbox": [
-                       76.366667,
-						-69.366667
+                        76.366667,
+                        -69.366667
                     ],
                     "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
                 },
@@ -95,9 +107,8 @@
                 "rel": "download",
                 "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
                 "type": "text/octet-stream",
-                "title": "GISC Beijing Cache",
-            },
-
+                "title": "GISC Beijing Cache"
+            }
         ]
     }
 }

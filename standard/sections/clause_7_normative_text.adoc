@@ -227,9 +227,10 @@ include::../recommendations/core/REC_granularity.adoc[]
   ...
   "themes": [
     {
-      "concepts": [
-        "weather"
-      ],
+      "concepts": [{
+        "name": "weather",
+        "url": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv#L2"
+      }],
       "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
     }
   ]
@@ -243,9 +244,9 @@ include::../recommendations/core/REC_granularity.adoc[]
   ...
   "themes": [
     {
-      "concepts": [
-        "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
-      ],
+      "concepts": [{
+        "name": "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
+      }],
       "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
     }
   ]
@@ -258,10 +259,18 @@ include::../recommendations/core/REC_granularity.adoc[]
 "themes": [
   {
     "concepts": [
-      "Temperature",
-      "Relative humidity",
-      "u-component of Wind",
-      "v-component of Wind"
+      {
+        "name": "Temperature"
+      },
+      {
+        "name": "Relative humidity"
+      },
+      {
+        "name": "u-component of Wind"
+      },
+      {
+        "name": "v-component of Wind"
+      }
     ],
     "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
   }
@@ -273,8 +282,12 @@ include::../recommendations/core/REC_granularity.adoc[]
 "themes": [
   {
     "concepts": [
-      "Temperature/air temperature",
-      "Dewpoint temperature"
+      {
+        "name": "Temperature/air temperature"
+      },
+      {
+        "name": "Dewpoint temperature"
+      }
     ],
     "scheme": "http://codes.wmo.int/bufr4/b"
   }

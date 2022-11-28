@@ -37,35 +37,61 @@
         "themes": [
             {
                 "concepts": [
-                    "Hydrology",
-                    "Streamflow",
-                    "Discharge",
-                    "Water level",
-                    "Water quantity",
-                    "Sediment concentration"
+                    {
+                        "name": "Hydrology"
+                    },
+                    {
+                        "name": "Streamflow"
+                    },
+                    {
+                        "name": "Discharge"
+                    },
+                    {
+                        "name": "Water level"
+                    },
+                    {
+                        "name": "Water quantity"
+                    },
+                    {
+                        "name": "Sediment concentration"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Water",
-                    "Inland waters",
-                    "Water management"
+                    {
+                        "name": "Water"
+                    },
+                    {
+                        "name": "Inland waters"
+                    },
+                    {
+                        "name": "Water management"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Water"
+                    {
+                        "name": "Water"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "National (CA)"
+                    {
+                        "name": "National (CA)"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Observation",
-                    "Measurement"
+                    {
+                        "name": "Observation"
+                    },
+                    {
+                        "name": "Measurement"
+                    }
                 ]
             }
         ],

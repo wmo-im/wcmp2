@@ -37,41 +37,79 @@
         "themes": [
             {
                 "concepts": [
-                    "Projections",
-                    "climate",
-                    "climate change",
-                    "percentiles",
-                    "ensembles",
-                    "climate model",
-                    "temperature",
-                    "cmip5",
-                    "anomaly"
+                    {
+                        "name": "Projections"
+                    },
+                    {
+                        "name": "climate"
+                    },
+                    {
+                        "name": "climate change"
+                    },
+                    {
+                        "name": "percentiles"
+                    },
+                    {
+                        "name": "ensembles"
+                    },
+                    {
+                        "name": "climate model"
+                    },
+                    {
+                        "name": "temperature"
+                    },
+                    {
+                        "name": "cmip5"
+                    },
+                    {
+                        "name": "anomaly"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather forecasts",
-                    "Precipitation",
-                    "Air temperature",
-                    "Humidity",
-                    "Snow",
-                    "Wind",
-                    "Meteorological data"
+                    {
+                        "name": "Weather forecasts"
+                    },
+                    {
+                        "name": "Precipitation"
+                    },
+                    {
+                        "name": "Air temperature"
+                    },
+                    {
+                        "name": "Humidity"
+                    },
+                    {
+                        "name": "Snow"
+                    },
+                    {
+                        "name": "Wind"
+                    },
+                    {
+                        "name": "Meteorological data"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "name": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "name": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "climatology"
+                    {
+                        "name": "climatology"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }

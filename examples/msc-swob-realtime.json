@@ -37,43 +37,77 @@
         "themes": [
             {
                 "concepts": [
-                    "Hydrology",
-                    "Streamflow",
-                    "Discharge",
-                    "Water level",
-                    "Water quantity",
-                    "Sediment concentration"
+                    {
+                        "name": "Hydrology"
+                    },
+                    {
+                        "name": "Streamflow"
+                    },
+                    {
+                        "name": "Discharge"
+                    },
+                    {
+                        "name": "Water level"
+                    },
+                    {
+                        "name": "Water quantity"
+                    },
+                    {
+                        "name": "Sediment concentration"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather forecasts",
-                    "Precipitation",
-                    "Air temperature",
-                    "Humidity",
-                    "Snow",
-                    "Wind",
-                    "Meteorological data"
+                    {
+                        "name": "Weather forecasts"
+                    },
+                    {
+                        "name": "Precipitation"
+                    },
+                    {
+                        "name": "Air temperature"
+                    },
+                    {
+                        "name": "Humidity"
+                    },
+                    {
+                        "name": "Snow"
+                    },
+                    {
+                        "name": "Wind"
+                    },
+                    {
+                        "name": "Meteorological data"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "name": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "International"
+                    {
+                        "name": "International"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "name": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "weatherObservations"
+                    {
+                        "name": "weatherObservations"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }

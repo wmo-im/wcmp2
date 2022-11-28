@@ -32,7 +32,10 @@
         ]
     },
     "time": {
-        "interval" : ["1840", null],
+        "interval": [
+            "1840",
+            null
+        ],
         "resolution": "P1D"
     },
     "properties": {
@@ -41,30 +44,46 @@
         "themes": [
             {
                 "concepts": [
-                    "Climate",
-                    "Climate archives",
-                    "Climate change"
+                    {
+                        "name": "Climate"
+                    },
+                    {
+                        "name": "Climate archives"
+                    },
+                    {
+                        "name": "Climate change"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "name": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "National (CA)"
+                    {
+                        "name": "National (CA)"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "name": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "climatology",
-                    "weatherObservations"
+                    {
+                        "name": "climatology"
+                    },
+                    {
+                        "name": "weatherObservations"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }

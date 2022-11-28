@@ -1,87 +1,97 @@
 {
     "id": "urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
     "type": "Feature",
-	"conformsTo": [
-         "http://wis.wmo.int/spec/wcmp/2.0"
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
     ],
-	"time": {
-		"interval": ["2019",null],
-		"resolution": "PT12H"
-	},   
+    "time": {
+        "interval": [
+            "2019",
+            null
+        ],
+        "resolution": "PT12H"
+    },
     "geometry": {
         "type": "Polygon",
         "coordinates": [
-               [
-                   0,
-                    -90
-                ],
-                [
-                    0,
-                    90
-                ],
-                [
-                    360,
-                    90
-                ],
-                [
-                    360,
-                    -90
-                ],
-                [
-                    0,
-                    -90
-                ]
+            [
+                0,
+                -90
+            ],
+            [
+                0,
+                90
+            ],
+            [
+                360,
+                90
+            ],
+            [
+                360,
+                -90
+            ],
+            [
+                0,
+                -90
+            ]
         ]
     },
     "properties": {
-	"type": "dataset",
+        "type": "dataset",
         "title": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members)",
-        "description": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members) in grib2 format are provided. Base Time is 1200UTC. Forecast step is 354-hour. GRAPES_GEPS is a global ensemble prediction model (31-members) with 50km horizontal resolution, 60 levels in the vertical with top at 3 hPa and forcast length up to 15 days. Initial perturbation: Singular Vectors；Perturbation of physics:Stochastically perturbed physics tendencies (SPPT) scheme and Stochastic kinetic energy backscatter (SKEB) scheme.",
+        "description": "354-hour Forecast at 1200UTC from GRAPES_GEPS(31-members) in grib2 format are provided. Base Time is 1200UTC. Forecast step is 354-hour. GRAPES_GEPS is a global ensemble prediction model (31-members) with 50km horizontal resolution, 60 levels in the vertical with top at 3 hPa and forcast length up to 15 days. Initial perturbation: Singular Vectors\uff1bPerturbation of physics:Stochastically perturbed physics tendencies (SPPT) scheme and Stochastic kinetic energy backscatter (SKEB) scheme.",
         "language": "en",
         "created": "2019-05-15T00:00:00Z",
         "updated": "2019-05-15T00:00:00Z",
-		"formats": ["GRIB2"],
-		"themes": [
-           	{
-				"concepts": ["wis2/CHN/CMA-GISC/data/core/weather/analysis"],
-				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-			},
-        	{
-        		"concepts": ["meteorology"],
-        		"scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
-        	}
-        
+        "formats": [
+            "GRIB2"
         ],
-        "providers": {
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "name": "wis2/CHN/CMA-GISC/data/core/weather/analysis"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
+            },
+            {
+                "concepts": [
+                    {
+                        "name": "meteorology"
+                    }
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            }
+        ],
+        "providers": [
             {
                 "name": "National Meteorological Information Center, CMA",
-                "contactInfo": [
-					"email": {
-							"work": "zhuting@cma.gov.cn"
-                        },
-                    "address": [
-						{
-							"deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
-							"city": "Beijing",
-							"state": "Beijing",
-							"postalCode": "100081",
-							"country": "CHINA"
-						}
-					],
-					"url": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354"
-					"phone": "86-10-58993021"
-                ],
-				"roles": [
-					{
-						"name": "pointOfContact"
-					},
-					{
-						"name": "originator"
-					}
-				]
-            },
-        },
-	"recordCreated": "2019-05-15T00:00:00Z",
+                "contactInfo": {
+                    "email": {
+                        "work": "zhuting@cma.gov.cn"
+                    },
+                    "address": {
+                        "deliveryPoint": "National Meteorological Information Center, 46 ZhongGuanCunNanDaJie",
+                        "city": "Beijing",
+                        "state": "Beijing",
+                        "postalCode": "100081",
+                        "country": "CHINA"
+                    },
+                    "url": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
+                    "phone": "86-10-58993021"
+                },
+                "roles": [
+                    {
+                        "name": "pointOfContact"
+                    },
+                    {
+                        "name": "originator"
+                    }
+                ]
+            }
+        ],
+        "recordCreated": "2019-05-15T00:00:00Z",
         "recordUpdated": "2019-05-15T00:00:00Z",
         "extent": [
             {
@@ -110,7 +120,7 @@
                 "rel": "download",
                 "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
                 "type": "text/octet-stream",
-                "title": "GISC Beijing Cache",
+                "title": "GISC Beijing Cache"
             }
         ]
     }

@@ -37,33 +37,55 @@
         "themes": [
             {
                 "concepts": [
-                    "Real-Time",
-                    "Water Level",
-                    "Flow",
-                    "Discharge"
+                    {
+                        "name": "Real-Time"
+                    },
+                    {
+                        "name": "Water Level"
+                    },
+                    {
+                        "name": "Flow"
+                    },
+                    {
+                        "name": "Discharge"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Water",
-                    "Inland waters",
-                    "Water management"
+                    {
+                        "name": "Water"
+                    },
+                    {
+                        "name": "Inland waters"
+                    },
+                    {
+                        "name": "Water management"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Water"
+                    {
+                        "name": "Water"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "National (CA)"
+                    {
+                        "name": "National (CA)"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Observation",
-                    "Measurement"
+                    {
+                        "name": "Observation"
+                    },
+                    {
+                        "name": "Measurement"
+                    }
                 ]
             }
         ],
@@ -180,13 +202,13 @@
             "hreflang": "en",
             "title": "Raw data download (CSV files)"
         },
-        {   
+        {
             "rel": "OASIS:MQTT",
             "href": "mqtt://example.org:8883",
             "wmo:topic": "wis2/CAN/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"
-        },  
+        },
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-realtime/items",

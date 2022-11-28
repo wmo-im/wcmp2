@@ -37,41 +37,71 @@
         "themes": [
             {
                 "concepts": [
-                    "Prediction",
-                    "Global",
-                    "Deterministic"
+                    {
+                        "name": "Prediction"
+                    },
+                    {
+                        "name": "Global"
+                    },
+                    {
+                        "name": "Deterministic"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather forecasts",
-                    "Precipitation",
-                    "Air temperature",
-                    "Humidity",
-                    "Snow",
-                    "Wind",
-                    "Meteorological data"
+                    {
+                        "name": "Weather forecasts"
+                    },
+                    {
+                        "name": "Precipitation"
+                    },
+                    {
+                        "name": "Air temperature"
+                    },
+                    {
+                        "name": "Humidity"
+                    },
+                    {
+                        "name": "Snow"
+                    },
+                    {
+                        "name": "Wind"
+                    },
+                    {
+                        "name": "Meteorological data"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "name": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "International"
+                    {
+                        "name": "International"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "name": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "weatherForecasts",
-                    "meteorology"
+                    {
+                        "name": "weatherForecasts"
+                    },
+                    {
+                        "name": "meteorology"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
