@@ -120,7 +120,7 @@ include::../requirements/core/REQ_identifier.adoc[]
 
 [source,json]
 ----
-"id": "urn:x-wmo:md:CAN:eccc-msc:observations.swob"
+"id": "urn:x-wmo:md:can:eccc-msc:observations.swob"
 ----
 
 ==== Conformance
@@ -245,7 +245,7 @@ include::../recommendations/core/REC_granularity.adoc[]
   "themes": [
     {
       "concepts": [{
-        "name": "wis2/CAN/eccc-msc/data/core/weather/surface-based-observations"
+        "name": "wis2/can/eccc-msc/data/core/weather/surface-based-observations"
       }],
       "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
     }

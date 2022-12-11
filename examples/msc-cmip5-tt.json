@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
+    "id": "urn:x-wmo:md:can:eccc-msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
     "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],

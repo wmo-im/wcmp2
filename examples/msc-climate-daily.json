@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily",
+    "id": "urn:x-wmo:md:can:eccc-msc:climate.climate-daily",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2.0"
     ],
@@ -221,7 +221,7 @@
         {
             "rel": "OASIS:MQTT",
             "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/CAN/eccc-msc/data/core/climate/observations",
+            "wmo:topic": "wis2/can/eccc-msc/data/core/climate/observations",
             "type": "application/json",
             "title": "Data notifications"
         }
