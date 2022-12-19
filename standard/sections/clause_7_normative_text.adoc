@@ -384,21 +384,27 @@ include::../recommendations/core/REC_extent_temporal.adoc[]
 }
 ----
 
+In some cases more than one time dimension are at hand, e.g. when describing forecast models. In those cases it is necessary to describe intervals covering the model run time (=start) up to the range covered (=end). Additionally the time steps of the model forecast need to be indicated (=resolution). To ensure clarity an additional human-readable explanation should be given in the `+properties.description+`.
+
+.Example: complex time intervals with corresponding resolution and additional explanation
+
 [source, json]
 ----
 "time": {
   "interval": [
-    ["R/T00Z", "PT180H"],
-    ["R/T12Z", "PT180H"]
+    ["T00Z", "PT180H"],
+    ["T12Z", "PT180H"]
   ],
   "resolution": "PT6H"
+},
+"properties": {
+  ...
+  "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
+  ...
 }
 ----
 
-[source,json]
-----
-"time": null
-----
+If necessary further granularity can be indicated by the `+additionalExtents.temporal+` property.
 
 ===== Additional Temporal Extents
 The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems. 
