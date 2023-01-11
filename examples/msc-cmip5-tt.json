@@ -38,77 +38,77 @@
             {
                 "concepts": [
                     {
-                        "name": "Projections"
+                        "id": "Projections"
                     },
                     {
-                        "name": "climate"
+                        "id": "climate"
                     },
                     {
-                        "name": "climate change"
+                        "id": "climate change"
                     },
                     {
-                        "name": "percentiles"
+                        "id": "percentiles"
                     },
                     {
-                        "name": "ensembles"
+                        "id": "ensembles"
                     },
                     {
-                        "name": "climate model"
+                        "id": "climate model"
                     },
                     {
-                        "name": "temperature"
+                        "id": "temperature"
                     },
                     {
-                        "name": "cmip5"
+                        "id": "cmip5"
                     },
                     {
-                        "name": "anomaly"
+                        "id": "anomaly"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Weather forecasts"
+                        "id": "Weather forecasts"
                     },
                     {
-                        "name": "Precipitation"
+                        "id": "Precipitation"
                     },
                     {
-                        "name": "Air temperature"
+                        "id": "Air temperature"
                     },
                     {
-                        "name": "Humidity"
+                        "id": "Humidity"
                     },
                     {
-                        "name": "Snow"
+                        "id": "Snow"
                     },
                     {
-                        "name": "Wind"
+                        "id": "Wind"
                     },
                     {
-                        "name": "Meteorological data"
+                        "id": "Meteorological data"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Weather and Climate"
+                        "id": "Weather and Climate"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Atmosphere"
+                        "id": "Atmosphere"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "climatology"
+                        "id": "climatology"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"

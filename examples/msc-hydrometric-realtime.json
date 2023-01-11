@@ -38,53 +38,53 @@
             {
                 "concepts": [
                     {
-                        "name": "Real-Time"
+                        "id": "Real-Time"
                     },
                     {
-                        "name": "Water Level"
+                        "id": "Water Level"
                     },
                     {
-                        "name": "Flow"
+                        "id": "Flow"
                     },
                     {
-                        "name": "Discharge"
+                        "id": "Discharge"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Water"
+                        "id": "Water"
                     },
                     {
-                        "name": "Inland waters"
+                        "id": "Inland waters"
                     },
                     {
-                        "name": "Water management"
+                        "id": "Water management"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Water"
+                        "id": "Water"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "National (CA)"
+                        "id": "National (CA)"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Observation"
+                        "id": "Observation"
                     },
                     {
-                        "name": "Measurement"
+                        "id": "Measurement"
                     }
                 ]
             }

@@ -45,44 +45,44 @@
             {
                 "concepts": [
                     {
-                        "name": "Climate"
+                        "id": "Climate"
                     },
                     {
-                        "name": "Climate archives"
+                        "id": "Climate archives"
                     },
                     {
-                        "name": "Climate change"
+                        "id": "Climate change"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Weather and Climate"
+                        "id": "Weather and Climate"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "National (CA)"
+                        "id": "National (CA)"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Atmosphere"
+                        "id": "Atmosphere"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "climatology"
+                        "id": "climatology"
                     },
                     {
-                        "name": "weatherObservations"
+                        "id": "weatherObservations"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"

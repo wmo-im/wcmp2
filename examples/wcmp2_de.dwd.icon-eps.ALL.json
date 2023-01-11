@@ -64,7 +64,7 @@
             {
                 "concepts": [
                     {
-                        "name": "wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"
+                        "id": "wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
@@ -72,7 +72,7 @@
             {
                 "concepts": [
                     {
-                        "name": "meteorology"
+                        "id": "meteorology"
                     }
                 ],
                 "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
@@ -80,7 +80,7 @@
             {
                 "concepts": [
                     {
-                        "name": "Meteorological geographical features"
+                        "id": "Meteorological geographical features"
                     }
                 ],
                 "scheme": "https://inspire.ec.europa.eu/theme/mf"
@@ -88,7 +88,7 @@
             {
                 "concepts": [
                     {
-                        "name": "FM 92 GRIB edition 2"
+                        "id": "FM 92 GRIB edition 2"
                     }
                 ],
                 "scheme": "http://codes.wmo.int/codeform"

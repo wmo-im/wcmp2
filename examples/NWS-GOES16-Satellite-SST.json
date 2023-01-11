@@ -60,67 +60,67 @@
             {
                 "concepts": [
                     {
-                        "name": "Satellite"
+                        "id": "Satellite"
                     },
                     {
-                        "name": "Geostationary Operational Environmental Satellite"
+                        "id": "Geostationary Operational Environmental Satellite"
                     },
                     {
-                        "name": "GOES-16"
+                        "id": "GOES-16"
                     },
                     {
-                        "name": "Measurement"
+                        "id": "Measurement"
                     },
                     {
-                        "name": "Radiation"
+                        "id": "Radiation"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Oceans"
+                        "id": "Oceans"
                     },
                     {
-                        "name": "Ocean Temperature"
+                        "id": "Ocean Temperature"
                     },
                     {
-                        "name": "Sea Surface Temperature"
+                        "id": "Sea Surface Temperature"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "goes_16_ABI-L2-SSTF"
+                        "id": "goes_16_ABI-L2-SSTF"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Weather and Climate"
+                        "id": "Weather and Climate"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "International"
+                        "id": "International"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Atmosphere"
+                        "id": "Atmosphere"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "meteorology"
+                        "id": "meteorology"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"

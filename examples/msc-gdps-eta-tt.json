@@ -38,69 +38,69 @@
             {
                 "concepts": [
                     {
-                        "name": "Prediction"
+                        "id": "Prediction"
                     },
                     {
-                        "name": "Global"
+                        "id": "Global"
                     },
                     {
-                        "name": "Deterministic"
+                        "id": "Deterministic"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Weather forecasts"
+                        "id": "Weather forecasts"
                     },
                     {
-                        "name": "Precipitation"
+                        "id": "Precipitation"
                     },
                     {
-                        "name": "Air temperature"
+                        "id": "Air temperature"
                     },
                     {
-                        "name": "Humidity"
+                        "id": "Humidity"
                     },
                     {
-                        "name": "Snow"
+                        "id": "Snow"
                     },
                     {
-                        "name": "Wind"
+                        "id": "Wind"
                     },
                     {
-                        "name": "Meteorological data"
+                        "id": "Meteorological data"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Weather and Climate"
+                        "id": "Weather and Climate"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "International"
+                        "id": "International"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Atmosphere"
+                        "id": "Atmosphere"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "weatherForecasts"
+                        "id": "weatherForecasts"
                     },
                     {
-                        "name": "meteorology"
+                        "id": "meteorology"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"

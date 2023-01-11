@@ -38,59 +38,59 @@
             {
                 "concepts": [
                     {
-                        "name": "Hydrology"
+                        "id": "Hydrology"
                     },
                     {
-                        "name": "Streamflow"
+                        "id": "Streamflow"
                     },
                     {
-                        "name": "Discharge"
+                        "id": "Discharge"
                     },
                     {
-                        "name": "Water level"
+                        "id": "Water level"
                     },
                     {
-                        "name": "Water quantity"
+                        "id": "Water quantity"
                     },
                     {
-                        "name": "Sediment concentration"
+                        "id": "Sediment concentration"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Water"
+                        "id": "Water"
                     },
                     {
-                        "name": "Inland waters"
+                        "id": "Inland waters"
                     },
                     {
-                        "name": "Water management"
+                        "id": "Water management"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Water"
+                        "id": "Water"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "National (CA)"
+                        "id": "National (CA)"
                     }
                 ]
             },
             {
                 "concepts": [
                     {
-                        "name": "Observation"
+                        "id": "Observation"
                     },
                     {
-                        "name": "Measurement"
+                        "id": "Measurement"
                     }
                 ]
             }

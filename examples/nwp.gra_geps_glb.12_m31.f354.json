@@ -50,7 +50,7 @@
             {
                 "concepts": [
                     {
-                        "name": "wis2/CHN/CMA-GISC/data/core/weather/analysis"
+                        "id": "wis2/CHN/CMA-GISC/data/core/weather/analysis"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
@@ -58,7 +58,7 @@
             {
                 "concepts": [
                     {
-                        "name": "meteorology"
+                        "id": "meteorology"
                     }
                 ],
                 "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
