@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:nwp.msc_nwp_gdps",
+    "id": "urn:x-wmo:md:can:eccc-msc:nwp.msc_nwp_gdps",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2.0"
     ],
@@ -37,41 +37,71 @@
         "themes": [
             {
                 "concepts": [
-                    "Prediction",
-                    "Global",
-                    "Deterministic"
+                    {
+                        "id": "Prediction"
+                    },
+                    {
+                        "id": "Global"
+                    },
+                    {
+                        "id": "Deterministic"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather forecasts",
-                    "Precipitation",
-                    "Air temperature",
-                    "Humidity",
-                    "Snow",
-                    "Wind",
-                    "Meteorological data"
+                    {
+                        "id": "Weather forecasts"
+                    },
+                    {
+                        "id": "Precipitation"
+                    },
+                    {
+                        "id": "Air temperature"
+                    },
+                    {
+                        "id": "Humidity"
+                    },
+                    {
+                        "id": "Snow"
+                    },
+                    {
+                        "id": "Wind"
+                    },
+                    {
+                        "id": "Meteorological data"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "id": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "International"
+                    {
+                        "id": "International"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "id": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "weatherForecasts",
-                    "meteorology"
+                    {
+                        "id": "weatherForecasts"
+                    },
+                    {
+                        "id": "meteorology"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
@@ -197,7 +227,7 @@
         },
         {
             "rel": "OASIS:MQTT",
-            "wmo:topic": "wis2/CAN/eccc-msc/data/core/weather/nwp/global",
+            "wmo:topic": "wis2/can/eccc-msc/data/core/weather/nwp/global",
             "href": "mqtt://example.org:8883",
             "type": "application/json",
             "title": "Data notifications"

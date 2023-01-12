@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.climate-daily",
+    "id": "urn:x-wmo:md:can:eccc-msc:climate.climate-daily",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2.0"
     ],
@@ -32,7 +32,10 @@
         ]
     },
     "time": {
-        "interval" : ["1840", null],
+        "interval": [
+            "1840",
+            null
+        ],
         "resolution": "P1D"
     },
     "properties": {
@@ -41,30 +44,46 @@
         "themes": [
             {
                 "concepts": [
-                    "Climate",
-                    "Climate archives",
-                    "Climate change"
+                    {
+                        "id": "Climate"
+                    },
+                    {
+                        "id": "Climate archives"
+                    },
+                    {
+                        "id": "Climate change"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "id": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "National (CA)"
+                    {
+                        "id": "National (CA)"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "id": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "climatology",
-                    "weatherObservations"
+                    {
+                        "id": "climatology"
+                    },
+                    {
+                        "id": "weatherObservations"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
@@ -202,7 +221,7 @@
         {
             "rel": "OASIS:MQTT",
             "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/CAN/eccc-msc/data/core/climate/observations",
+            "wmo:topic": "wis2/can/eccc-msc/data/core/climate/observations",
             "type": "application/json",
             "title": "Data notifications"
         }

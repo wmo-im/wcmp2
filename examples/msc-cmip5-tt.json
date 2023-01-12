@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
+    "id": "urn:x-wmo:md:can:eccc-msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
     "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
@@ -37,41 +37,79 @@
         "themes": [
             {
                 "concepts": [
-                    "Projections",
-                    "climate",
-                    "climate change",
-                    "percentiles",
-                    "ensembles",
-                    "climate model",
-                    "temperature",
-                    "cmip5",
-                    "anomaly"
+                    {
+                        "id": "Projections"
+                    },
+                    {
+                        "id": "climate"
+                    },
+                    {
+                        "id": "climate change"
+                    },
+                    {
+                        "id": "percentiles"
+                    },
+                    {
+                        "id": "ensembles"
+                    },
+                    {
+                        "id": "climate model"
+                    },
+                    {
+                        "id": "temperature"
+                    },
+                    {
+                        "id": "cmip5"
+                    },
+                    {
+                        "id": "anomaly"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather forecasts",
-                    "Precipitation",
-                    "Air temperature",
-                    "Humidity",
-                    "Snow",
-                    "Wind",
-                    "Meteorological data"
+                    {
+                        "id": "Weather forecasts"
+                    },
+                    {
+                        "id": "Precipitation"
+                    },
+                    {
+                        "id": "Air temperature"
+                    },
+                    {
+                        "id": "Humidity"
+                    },
+                    {
+                        "id": "Snow"
+                    },
+                    {
+                        "id": "Wind"
+                    },
+                    {
+                        "id": "Meteorological data"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "id": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "id": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "climatology"
+                    {
+                        "id": "climatology"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }

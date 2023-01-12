@@ -1,37 +1,37 @@
 {
     "id": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
     "conformsTo": [
-         "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2.0"
     ],
     "type": "Feature",
     "Itemtype": "Record",
     "geometry": {
         "type": "Polygon",
         "coordinates": [
-               [
-                   -156.3,
-                    -76.37
-                ],
-                [
-                    -156.3,
-                    76.37
-                ],
-                [
-                    6.109,
-                    76.37
-                ],
-                [
-                    6.109,
-                    -76.37
-                ],
-                [
-                    -156.3,
-                    -76.37
-                ]
+            [
+                -156.3,
+                -76.37
+            ],
+            [
+                -156.3,
+                76.37
+            ],
+            [
+                6.109,
+                76.37
+            ],
+            [
+                6.109,
+                -76.37
+            ],
+            [
+                -156.3,
+                -76.37
+            ]
         ]
     },
     "properties": {
-       "identifier": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
+        "identifier": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
         "externalIds": [
             {
                 "scheme": "default",
@@ -57,51 +57,76 @@
         "created": "2022-08-01T14:16:00Z",
         "updated": "2022-08-01T14:16:00Z",
         "themes": [
-           {
+            {
                 "concepts": [
-                    "Satellite",
-                    "Geostationary Operational Environmental Satellite",
-                    "GOES-16",
-                    "Measurement",
-                    "Radiation"
+                    {
+                        "id": "Satellite"
+                    },
+                    {
+                        "id": "Geostationary Operational Environmental Satellite"
+                    },
+                    {
+                        "id": "GOES-16"
+                    },
+                    {
+                        "id": "Measurement"
+                    },
+                    {
+                        "id": "Radiation"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Oceans",
-                    "Ocean Temperature",
-                    "Sea Surface Temperature"
+                    {
+                        "id": "Oceans"
+                    },
+                    {
+                        "id": "Ocean Temperature"
+                    },
+                    {
+                        "id": "Sea Surface Temperature"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "goes_16_ABI-L2-SSTF"
+                    {
+                        "id": "goes_16_ABI-L2-SSTF"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "id": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "International"
+                    {
+                        "id": "International"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "id": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "meteorology"
+                    {
+                        "id": "meteorology"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
         ],
-        "providers": 
-        [
+        "providers": [
             {
                 "name": "NOAA/NESDIS",
                 "contactInfo": [
@@ -156,20 +181,20 @@
                 "rel": "download",
                 "href": "https://noaa-goes16.s3.amazonaws.com/index.html#ABI-L2-SSTF",
                 "type": "application/netcdf",
-                "title": "NOAA Geostationary Operational Environmental Satellites (GOES) 16 Registry of Open Data on AWS",
+                "title": "NOAA Geostationary Operational Environmental Satellites (GOES) 16 Registry of Open Data on AWS"
             },
             {
                 "rel": "download",
                 "href": "https://www.ncdc.noaa.gov/airs-web",
                 "type": "application/netcdf",
                 "title": "NCEI's Archive Information Request System (AIRS)"
-            }
+            },
             {
                 "rel": "download",
                 "href": "https://console.cloud.google.com/storage/browser/gcp-public-data-goes-16/ABI-L2-SSTF?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false",
                 "type": "application/netcdf",
                 "title": "Google Cloud GOES-16 L2 Sea Surface Temperature"
-            }
+            },
             {
                 "rel": "download",
                 "href": "https://www.ncdc.noaa.gov/airs-web/search",

@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:weather.observations.swob-realtime",
+    "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
     "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
@@ -37,43 +37,77 @@
         "themes": [
             {
                 "concepts": [
-                    "Hydrology",
-                    "Streamflow",
-                    "Discharge",
-                    "Water level",
-                    "Water quantity",
-                    "Sediment concentration"
+                    {
+                        "id": "Hydrology"
+                    },
+                    {
+                        "id": "Streamflow"
+                    },
+                    {
+                        "id": "Discharge"
+                    },
+                    {
+                        "id": "Water level"
+                    },
+                    {
+                        "id": "Water quantity"
+                    },
+                    {
+                        "id": "Sediment concentration"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather forecasts",
-                    "Precipitation",
-                    "Air temperature",
-                    "Humidity",
-                    "Snow",
-                    "Wind",
-                    "Meteorological data"
+                    {
+                        "id": "Weather forecasts"
+                    },
+                    {
+                        "id": "Precipitation"
+                    },
+                    {
+                        "id": "Air temperature"
+                    },
+                    {
+                        "id": "Humidity"
+                    },
+                    {
+                        "id": "Snow"
+                    },
+                    {
+                        "id": "Wind"
+                    },
+                    {
+                        "id": "Meteorological data"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Weather and Climate"
+                    {
+                        "id": "Weather and Climate"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "International"
+                    {
+                        "id": "International"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Atmosphere"
+                    {
+                        "id": "Atmosphere"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "weatherObservations"
+                    {
+                        "id": "weatherObservations"
+                    }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
@@ -205,7 +239,7 @@
         {
             "rel": "OASIS:MQTT",
             "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/CAN/eccc-msc/data/core/weather/observations/surface-land/landFixed",
+            "wmo:topic": "wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
         }

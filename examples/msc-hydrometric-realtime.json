@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca.gc.ec.msc:hydrometric.realtime",
+    "id": "urn:x-wmo:md:can:eccc-msc:hydrometric.realtime",
     "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
@@ -37,33 +37,55 @@
         "themes": [
             {
                 "concepts": [
-                    "Real-Time",
-                    "Water Level",
-                    "Flow",
-                    "Discharge"
+                    {
+                        "id": "Real-Time"
+                    },
+                    {
+                        "id": "Water Level"
+                    },
+                    {
+                        "id": "Flow"
+                    },
+                    {
+                        "id": "Discharge"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Water",
-                    "Inland waters",
-                    "Water management"
+                    {
+                        "id": "Water"
+                    },
+                    {
+                        "id": "Inland waters"
+                    },
+                    {
+                        "id": "Water management"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Water"
+                    {
+                        "id": "Water"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "National (CA)"
+                    {
+                        "id": "National (CA)"
+                    }
                 ]
             },
             {
                 "concepts": [
-                    "Observation",
-                    "Measurement"
+                    {
+                        "id": "Observation"
+                    },
+                    {
+                        "id": "Measurement"
+                    }
                 ]
             }
         ],
@@ -180,13 +202,13 @@
             "hreflang": "en",
             "title": "Raw data download (CSV files)"
         },
-        {   
+        {
             "rel": "OASIS:MQTT",
             "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/CAN/eccc-msc/data/core/hydrology",
+            "wmo:topic": "wis2/can/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"
-        },  
+        },
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-realtime/items",
