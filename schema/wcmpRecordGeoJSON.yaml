@@ -53,7 +53,7 @@ properties:
       - description
       - themes
       - providers
-      - recordCreated
+      - created
       - wmo:dataPolicy
     properties:
       externalIds:

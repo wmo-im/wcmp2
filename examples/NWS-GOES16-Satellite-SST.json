@@ -38,8 +38,8 @@
                 "value": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF"
             }
         ],
-        "recordCreated": "2022-08-01T14:16:00Z",
-        "recordUpdated": "2022-08-01T14:16:00Z",
+        "created": "2022-08-01T14:16:00Z",
+        "updated": "2022-08-01T14:16:00Z",
         "type": "dataset",
         "title": "GOES-16 ABI Level 2 Sea Surface Temperature (SST)",
         "description": "Sea Surface Temperature (SST) for each cloud-free pixel over water The SST algorithm employed on GOES-R will use hybrid physical-regression retrieval in order to produce a more accurate product.",
