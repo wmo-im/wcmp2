@@ -31,8 +31,8 @@
         ]
     },
     "properties": {
-        "recordCreated": "2022-06-23T18:36:00Z",
-        "recordUpdated": "2022-06-23T18:36:00Z",
+        "created": "2022-06-23T18:36:00Z",
+        "updated": "2022-06-23T18:36:00Z",
         "type": "dataset",
         "title": "Global Forecast System (GFS) 1.0 Degree Resolution",
         "description": "The Global Forecast System (GFS) is a weather forecast model   produced by the National Centers for Environmental Prediction (NCEP). Dozens of atmospheric and land-soil variables are available through this dataset, from temperatures, winds, and precipitation to soil moisture and atmospheric ozone concentration. The entire globe is covered by the GFS at a base horizontal resolution of 18 miles (28 kilometers) between grid points, which is used by the operational forecasters who predict weather out to 16 days in the future. Horizontal resolution drops to 44 miles (70 kilometers) between grid point for forecasts between one week and two weeks. The GFS model is a coupled model, composed of four separate models (an atmosphere model, an ocean model, a land/soil model, and a sea ice model), which work together to provide an accurate picture of weather conditions. Changes are regularly made to the GFS model to improve its performance and forecast accuracy. This dataset is run four times daily at 00z, 06z, 12z and 18z out to 384 hours in two parts. The forecast steps out to 192 hours have a 1.0 degree horizontal resolution and a 3 hour temporal resolution. Forecast steps from 192 to 384 hours have a 2.5 degree horizontal resolution and a 12 hour temporal resolution.",

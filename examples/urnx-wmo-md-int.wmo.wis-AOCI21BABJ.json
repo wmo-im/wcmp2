@@ -77,8 +77,8 @@
                 ]
             }
         ],
-        "recordCreated": "2014-09-10T00:00:00Z",
-        "recordUpdated": "2014-09-10T00:00:00Z",
+        "created": "2014-09-10T00:00:00Z",
+        "updated": "2014-09-10T00:00:00Z",
         "wmo:dataPolicy": {
             "name": "core"
         },

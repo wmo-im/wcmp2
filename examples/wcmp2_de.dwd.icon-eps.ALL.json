@@ -122,8 +122,8 @@
                 ]
             }
         ],
-        "recordCreated": "2018-08-19T08:10:00Z",
-        "recordUpdated": "2022-03-15T09:26:00Z",
+        "created": "2018-08-19T08:10:00Z",
+        "updated": "2022-03-15T09:26:00Z",
         "wmo:dataPolicy": {
             "name": "core"
         },

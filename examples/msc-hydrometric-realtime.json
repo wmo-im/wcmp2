@@ -187,7 +187,8 @@
                 "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
             }
         },
-        "recordUpdated": "2022-06-22",
+        "created": "2018-01-01",
+        "updated": "2022-06-22",
         "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
         "formats": [
             "WMS",
