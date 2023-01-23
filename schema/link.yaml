@@ -45,5 +45,6 @@ properties:
                 items:
                   type: object
                   $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-  wmo:topic:
+  channel:
      type: string
+     description: topic to subscribe to for broker workflow

@@ -226,9 +226,9 @@
             "title": "Air temperature [\u00b0C]"
         },
         {
-            "rel": "OASIS:MQTT",
-            "wmo:topic": "wis2/can/eccc-msc/data/core/weather/nwp/global",
-            "href": "mqtt://example.org:8883",
+            "rel": "items",
+            "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
+            "href": "mqtts://example.org",
             "type": "application/json",
             "title": "Data notifications"
         }
