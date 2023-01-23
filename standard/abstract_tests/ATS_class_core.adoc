@@ -38,9 +38,9 @@ include::./core/ATS_test_title.adoc[]
 
 include::./core/ATS_test_description.adoc[]
 
-==== Themes and Topic Hierarchy
+==== Topic Hierarchy
 
-include::./core/ATS_test_themes_topic_hierarchy.adoc[]
+include::./core/ATS_test_topic_hierarchy.adoc[]
 
 ==== Providers
 

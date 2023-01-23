@@ -6,6 +6,7 @@ description: WCMP 2 discovery metadata record definition
 # Extension of https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml
 required:
   - id
+  - conformsTo
   - type
   - time
   - geometry
@@ -54,6 +55,7 @@ properties:
       - themes
       - providers
       - created
+      - wmo:topicHierarchy
       - wmo:dataPolicy
     properties:
       externalIds:
@@ -157,6 +159,9 @@ properties:
         description:
           The most recent date on which the record was changed.
         format: date-time
+      wmo:topicHierarchy:
+        type: string
+        description: WIS2 topic hierarchy classification of the dataset
       wmo:dataPolicy:
         type: object
         description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
