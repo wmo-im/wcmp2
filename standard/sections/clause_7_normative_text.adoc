@@ -731,11 +731,11 @@ include::../recommendations/core/REC_links.adoc[]
     "href": "https://woudc.org/data/stations"
   },
   {
-    "rel"  : "data",
+    "rel"  : "items",
     "type" : "application/json",
     "title": "WIS 2 notification service",
     "href" : "mqtts://broker.example.org",
-    "wmo:topic": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
+    "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]
 ----

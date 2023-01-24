@@ -135,11 +135,11 @@
                 "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
             },
             {
-                "rel": "subscribe",
+                "rel": "items",
                 "type": "application/json",
                 "title": "Message Broker DWD",
-                "href": "mqtts://everyone:everyone@wis2.dwd.de:8883/",
-                "wmo:topic": "origin/v04/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+                "href": "mqtts://everyone:everyone@wis2.dwd.de/",
+                "channel": "origin/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
             }
         ],
         "keywords": [

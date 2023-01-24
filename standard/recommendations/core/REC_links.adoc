@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/links*
-^|A |When a WCMP record provides a link object to a broker, the `+wmo:topic+` property SHOULD be consistent with the WIS2 topic as specified in a `+properties.themes+` object.
+^|A |When a WCMP record provides a link object to a broker, the `+channel+` property SHOULD be consistent with the WIS2 topic as specified in a `+properties.themes+` object.
 |===

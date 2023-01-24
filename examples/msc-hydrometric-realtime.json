@@ -204,9 +204,9 @@
             "title": "Raw data download (CSV files)"
         },
         {
-            "rel": "OASIS:MQTT",
-            "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/can/eccc-msc/data/core/hydrology",
+            "rel": "items",
+            "href": "mqtts://example.org",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"
         },
