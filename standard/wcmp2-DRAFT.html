@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-01-12</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-01-24</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-01-12</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-01-24</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1421,12 +1421,12 @@ of a WCMP discovery metadata record.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Persistent identifiers or handles for the dataset</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.recordCreated</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.created</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was created</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.recordUpdated</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.updated</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was updated</p></td>
 </tr>
@@ -2438,7 +2438,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.14. Properties / Record Creation Date</h4>
 <div class="paragraph">
-<p>The <code>recordCreated</code> property is a single date that the WCMP metadata record was created.</p>
+<p>The <code>created</code> property is a single date that the WCMP metadata record was created.</p>
 </div>
 <table id="req_core_record_creation_date" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2455,7 +2455,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide a single <code>properties.recordCreated</code> property.</p>
+<p>A WCMP record SHALL provide a single <code>properties.created</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2471,7 +2471,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "recordCreated": "2021-06-12T23:45:24Z"
+  "created": "2021-06-12T23:45:24Z"
   ...
 }</code></pre>
 </div>
@@ -2480,7 +2480,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.15. Properties / Record Update Date</h4>
 <div class="paragraph">
-<p>The <code>recordUpdated</code> property is the date that the WCMP metadata record was last updated.</p>
+<p>The <code>updated</code> property is the date that the WCMP metadata record was last updated.</p>
 </div>
 <table id="rec_core_record_update_date" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2497,7 +2497,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide a <code>properties.recordUpdated</code> property when a record has been updated since its initial creation.</p>
+<p>A WCMP record SHOULD provide a <code>properties.updated</code> property when a record has been updated since its initial creation.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2507,7 +2507,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "recordUpdated": "2022-06-12T18:52:39Z"
+  "updated": "2022-06-12T18:52:39Z"
   ...
 }</code></pre>
 </div>
@@ -2760,7 +2760,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>When a WCMP record provides a link object to a broker, the <code>wmo:topic</code> property SHOULD be consistent with the WIS2 topic as specified in a <code>properties.themes</code> object.</p>
+<p>When a WCMP record provides a link object to a broker, the <code>channel</code> property SHOULD be consistent with the WIS2 topic as specified in a <code>properties.themes</code> object.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2792,11 +2792,11 @@ secure data use cases, a user needs to be able to detect access-controlled data 
     "href": "https://woudc.org/data/stations"
   },
   {
-    "rel"  : "data",
+    "rel"  : "items",
     "type" : "application/json",
     "title": "WIS 2 notification service",
     "href" : "mqtts://broker.example.org",
-    "wmo:topic": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
+    "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]</code></pre>
 </div>
@@ -3551,7 +3551,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of one and only one <code>properties.recordCreated</code> property in the WCMP record.</p>
+<p>Check for the existence of one and only one <code>properties.created</code> property in the WCMP record.</p>
 </div>
 </div>
 </div>
@@ -3655,7 +3655,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>For a link object describing real-time data, check that the <code>href</code> property starts with the <code>mqtt</code> or <code>mqtts</code> protocol, AND that <code>wmo:topic</code> is additionally defined.</p>
+<p>For a link object describing real-time data, check that the <code>href</code> property starts with the <code>mqtt</code> or <code>mqtts</code> protocol, AND that <code>channel</code> is additionally defined.</p>
 </div>
 </div>
 </div>
@@ -3761,7 +3761,7 @@ properties:
       - description
       - themes
       - providers
-      - recordCreated
+      - created
       - wmo:dataPolicy
     properties:
       externalIds:
@@ -4115,7 +4115,8 @@ properties:
                 "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
             }
         },
-        "recordUpdated": "2022-06-22",
+        "created": "2018-01-01",
+        "updated": "2022-06-22",
         "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
         "formats": [
             "SQL",
@@ -4149,9 +4150,9 @@ properties:
             "title": "Documentation"
         },
         {
-            "rel": "OASIS:MQTT",
-            "href": "mqtt://example.org:8883",
-            "wmo:topic": "wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
+            "rel": "items",
+            "href": "mqtts://example.org",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
         }
@@ -4286,8 +4287,8 @@ properties:
                 ]
             }
         ],
-        "recordCreated": "2018-08-19T08:10:00Z",
-        "recordUpdated": "2022-03-15T09:26:00Z",
+        "created": "2018-08-19T08:10:00Z",
+        "updated": "2022-03-15T09:26:00Z",
         "wmo:dataPolicy": {
             "name": "core"
         },
@@ -4299,11 +4300,11 @@ properties:
                 "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
             },
             {
-                "rel": "subscribe",
+                "rel": "items",
                 "type": "application/json",
                 "title": "Message Broker DWD",
-                "href": "mqtts://everyone:everyone@wis2.dwd.de:8883/",
-                "wmo:topic": "origin/v04/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+                "href": "mqtts://everyone:everyone@wis2.dwd.de/",
+                "channel": "origin/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
             }
         ],
         "keywords": [
@@ -4335,8 +4336,6 @@ properties:
             }
         ],
         "language": "eng",
-        "created": "2018-04-22Z",
-        "updated": "2018-04-23Z",
         "formats": [
             "GRIB2"
         ]
@@ -4511,7 +4510,7 @@ properties:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-12 12:30:10 UTC
+Last updated 2023-01-24 16:07:12 UTC
 </div>
 </div>
 </body>
