@@ -240,7 +240,7 @@
         {
             "rel": "items",
             "href": "mqtts://example.org",
-            "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
         }

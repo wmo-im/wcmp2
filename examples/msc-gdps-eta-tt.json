@@ -227,7 +227,7 @@
         },
         {
             "rel": "items",
-            "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
             "href": "mqtts://example.org",
             "type": "application/json",
             "title": "Data notifications"

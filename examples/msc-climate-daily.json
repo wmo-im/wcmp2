@@ -221,7 +221,7 @@
         {
             "rel": "items",
             "href": "mqtts://example.org",
-            "channel": "cache/a/wis2/can/eccc-msc/data/core/climate/observations",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/climate/observations",
             "type": "application/json",
             "title": "Data notifications"
         }

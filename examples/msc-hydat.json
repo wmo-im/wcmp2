@@ -217,7 +217,7 @@
         {
             "rel": "items",
             "href": "mqtts://example.org",
-            "channel": "wis2/can/eccc-msc/data/core/hydrology",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"
         },
