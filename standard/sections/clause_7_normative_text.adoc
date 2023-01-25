@@ -212,7 +212,14 @@ include::../recommendations/core/REC_keywords.adoc[]
 }
 ----
 
-==== Properties / Themes and Topic Hierarchy
+==== Topic Hierarchy
+
+The WIS2 Topic Hierarchy is a required concept and is consistent with the topic as defined in distribution links
+advertising broker services.
+
+include::../requirements/core/REQ_topic_hierarchy.adoc[]
+
+==== Properties / Themes
 
 The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A concept's `+id+`
 provides an identifier for the given concept, as well as optional `+title`, `+description+` and `+url+` properties to further describe the concept as desired.
@@ -223,10 +230,6 @@ A concept's optional `+url+` property can provide a remote reference to a given 
 
 A WCMP metadata record can have one or more themes.
 
-The WIS2 Topic Hierarchy is a required concept and and it should be consistent with the topic as defined in distribution links
-advertising broker services.
-
-include::../requirements/core/REQ_themes_topic_hierarchy.adoc[]
 include::../recommendations/core/REC_themes.adoc[]
 include::../recommendations/core/REC_granularity.adoc[]
 
@@ -237,58 +240,29 @@ include::../recommendations/core/REC_granularity.adoc[]
   ...
   "themes": [
     {
-      "concepts": [{
-        "id": "weather",
-        "url": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv#L2"
-      }],
-      "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
+      "concepts": [
+        {
+          "id": "Temperature",
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-0-0"
+        },
+        {
+          "id": "Relative humidity",
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1"
+        },
+        {
+          "id": "u-component of Wind",
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2"
+        },
+        {
+          "id": "v-component of Wind",
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3"
+        }
+      ],
+      "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
     }
   ]
   ...
 }
-----
-
-[source,json]
-----
-"properties": {
-  ...
-  "themes": [
-    {
-      "concepts": [{
-        "id": "wis2/can/eccc-msc/data/core/weather/surface-based-observations"
-      }],
-      "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-    }
-  ]
-  ...
-}
-----
-
-[source,json]
-----
-"themes": [
-  {
-    "concepts": [
-      {
-        "id": "Temperature",
-        "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-0-0"
-      },
-      {
-        "id": "Relative humidity",
-        "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1"
-      },
-      {
-        "id": "u-component of Wind",
-        "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2"
-      },
-      {
-        "id": "v-component of Wind",
-        "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3"
-      }
-    ],
-    "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
-  }
-]
 ----
 
 [source,json]
@@ -309,6 +283,24 @@ include::../recommendations/core/REC_granularity.adoc[]
   }
 ]
 ----
+
+[source,json]
+----
+"properties": {
+  ...
+  "themes": [
+    {
+      "concepts": [{
+        "id": "weather",
+        "url": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv#L2"
+      }],
+      "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
+    }
+  ]
+  ...
+}
+----
+
 
 ==== Geospatial and Temporal Extents
 

@@ -1,0 +1,8 @@
+[[req_core_topic_hierarchy]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/topic_hierarchy*
+^|A |A WCMP record SHALL provide a `+wmo:topicHierarchy+` property.
+^|B |A WCMP record's `+properties.wmo:topicHierarchy+` SHALL provide a topic based on the WIS 2 Topic Hierarchy.
+^|C |A WCMP record's `+properties.wmo:topicHierarchy+` SHALL NOT include levels 1 to 3 (channel, version, wis2) of the WIS 2 Topic Hierarchy.
+|===

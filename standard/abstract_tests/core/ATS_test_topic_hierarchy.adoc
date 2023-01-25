@@ -1,0 +1,22 @@
+[[ats_core_topic_hierarchy]]
+====
+[%metadata]
+label:: /conf/core/topic_hierarchy
+subject:: /req/core/topic_hierarchy
+test-purpose:: Validate that a WCMP record provides a valid WIS 2 Topic Hierarchy.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.wmo:topicHierarchy+` property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Within `+properties.wmo:topicHierarchy+`, check that the value is a valid WIS2 Topic Hierarchy, and does not
+contain levels 1 to 3 of (channel, version, wis2)..
+--
+
+=====
+====
