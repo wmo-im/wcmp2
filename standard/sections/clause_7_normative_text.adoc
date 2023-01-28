@@ -219,6 +219,15 @@ advertising broker services.
 
 include::../requirements/core/REQ_topic_hierarchy.adoc[]
 
+.Example
+
+[source,json]
+----
+"properties": {
+  "wmo:topicHierarchy": "mwi/mwi_met_centre/data/core/weather/surface-based-observations/synop"
+}
+----
+
 ==== Properties / Themes
 
 The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A concept's `+id+`
