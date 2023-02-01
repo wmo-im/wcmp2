@@ -25,7 +25,6 @@ import os
 import sys
 
 from jsonschema import RefResolver, validate
-import yaml
 
 LOGGER = logging.getLogger(__name__)
 
@@ -48,7 +47,7 @@ if __name__ == '__main__':
 
     with open(sys.argv[1]) as fh1, open(sys.argv[2]) as fh2:
         instance = json.load(fh1)
-        schema = yaml.load(fh2, Loader=yaml.SafeLoader)
+        schema = json.load(fh2)
 
         print(f'Schema loaded as JSON: {schema}')
         print(f'Instance loaded as JSON: {instance}')
