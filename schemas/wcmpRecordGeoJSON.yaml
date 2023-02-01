@@ -1,0 +1,69 @@
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
+title: WCMP 2 discovery metadata record definition
+description: WCMP 2 discovery metadata record definition
+
+allOf:
+  - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml'
+required:
+  - id
+  - conformsTo
+  - type
+  - time
+  - geometry
+  - properties
+  - links
+properties:
+  additionalExtents:
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
+  properties:
+    type: object
+    required:
+      - type
+      - title
+      - description
+      - themes
+      - providers
+      - created
+      - wmo:topicHierarchy
+      - wmo:dataPolicy
+    properties:
+      version:
+        type: string
+        description: The version or edition of a given dataset.
+      wmo:topicHierarchy:
+        type: string
+        description: WIS2 topic hierarchy classification of the dataset
+      wmo:dataPolicy:
+        type: object
+        description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
+        properties:
+          name:
+            type: string
+            description: The WMO Unified Data Policy identifier (`core` or `recommended`).
+            enum:
+              - core
+              - recommended
+          additionalConditions:
+            type: array
+            items:
+              type: object
+              description: Additional conditions applied to recommended data
+              properties:
+                name:
+                  type: string
+                  description: Name of additional condition, from a codelist, or the string value `none` if there are no additional conditions on a recommended dataset.
+                scheme:
+                  type: string
+                  description: codelist or controlled vocabulary to which the condition applies to.
+                link:
+                  $ref: link.yaml
+              required:
+                - name
+            minItems: 1
+        required:
+          - name
+  links:
+    type: array
+    items:
+      $ref: link.yaml
