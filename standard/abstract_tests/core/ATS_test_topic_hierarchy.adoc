@@ -3,7 +3,7 @@
 [%metadata]
 label:: /conf/core/topic_hierarchy
 subject:: /req/core/topic_hierarchy
-test-purpose:: Validate that a WCMP record provides a valid WIS 2 Topic Hierarchy.
+test-purpose:: Validate that a WCMP record provides a valid WIS2 Topic Hierarchy.
 
 [.component,class=test method]
 =====

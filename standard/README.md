@@ -1,4 +1,4 @@
-# WCMP 2
+# WCMP2
 
 ## Overview
 

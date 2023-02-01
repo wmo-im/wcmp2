@@ -16,7 +16,7 @@ Complete examples can be found at https://schemas.wmo.int/wcmp/2.0/examples
 
 === Schemas
 
-The WCMP 2.0 schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml 
+The WCMP schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml 
 
 === Schema representation
 

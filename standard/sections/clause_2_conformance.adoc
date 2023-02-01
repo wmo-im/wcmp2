@@ -4,7 +4,7 @@ Conformance with this standard shall be checked using the tests specified in Ann
 
 _OGC API - Records_ (OARec) provides a record metadata model in support of resource discovery.  This standard is an extension of _OGC API - Records - Part 1: Core_.  Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of _OGC API - Records - Part 1: Core_.
 
-Authors of discovery metadata records published within the WIS 2.0 discovery catalogue are required to comply with the
+Authors of discovery metadata records published within the WIS2 Global Discovery Catalogue (GDC) are required to comply with the
 WMO Core Metadata Profile (WCMP).  WCMP discovery metadata shall therefore be compliant with OGC API - Records - Part 1:
 Core: Requirements Class: Record Core.
 

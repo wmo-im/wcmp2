@@ -1,7 +1,7 @@
 == The WMO Core Metadata Profile Record
 
 A WCMP record provides descriptive information about a dataset made available
-through WIS 2.0.
+through WIS2.
 
 === Conformance Class Core
 
@@ -104,7 +104,7 @@ The table below provides an overview of the set of properties that may be includ
 
 ==== Validation
 
-The WCMP record schema is based on  _OGC API - Records - Part 1: Core: Requirements Class: Record Core_ schema and the associated information model.  WCMP records compliant with WCMP 2.0 schema are therefore compliant with the _OGC API - Records_ record schema.
+The WCMP record schema is based on  _OGC API - Records - Part 1: Core: Requirements Class: Record Core_ schema and the associated information model.  WCMP records compliant with WCMP schema are therefore compliant with the _OGC API - Records_ record schema.
 
 include::../requirements/core/REQ_validation.adoc[]
 
@@ -734,7 +734,7 @@ include::../recommendations/core/REC_links.adoc[]
   {
     "rel"  : "items",
     "type" : "application/json",
-    "title": "WIS 2 notification service",
+    "title": "WIS2 notification service",
     "href" : "mqtts://broker.example.org",
     "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
