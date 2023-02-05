@@ -13,15 +13,15 @@ required:
   - links
 properties:
   id:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
   conformsTo:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/conformsTo'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/conformsTo'
   type:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
   time:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/time'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/time'
   geometry:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
   additionalExtents:
     $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
   properties:
@@ -30,33 +30,32 @@ properties:
       - type
       - title
       - description
-      - themes
-      - providers
+#      - providers
       - created
       - wmo:topicHierarchy
       - wmo:dataPolicy
     properties:
       type:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
       title:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/title'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/title'
       description:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/description'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/description'
       keywords:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
       themes:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/themes'
-      providers:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/themes'
+#      providers:
+#        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
       version:
         type: string
         description: The version or edition of a given dataset.
       externalIds:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/externalIds'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/externalIds'
       created:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
       updated:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
       wmo:topicHierarchy:
         type: string
         description: WIS2 topic hierarchy classification of the dataset

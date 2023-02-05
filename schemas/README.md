@@ -19,11 +19,26 @@ To generate the WCMP2 JSON schema, following these steps:
 - on the right hand pane, right-click the file `wcmpRecordGeoJSON.yaml` and select "Export"
 - select the following from the dialogue box:
   - Format: JSON
-  - References: Bundled (Recommended)
+  - References: Dereferened
   - X-Extensions: unchecked
 - click "Save to file"
+
+A screenshot is shown below:
+
+![Stoplight Studio Export](stoplight-studio-export.png "Stoplight Studio Export")
+
 - save file to the root of this repository, i.e. `/wcmp2-bundled.json`
 - commit changes
 
 Note: the above are manual steps to verify and generate the JSON Schema bundle.  Future updates will
 include automated workflow via GitHub Actions.
+
+## Validating a WCMP2 record
+
+```bash
+# install the check-jsonschema Python package
+pip3 install check-jsonschema
+
+# validate a WCMP2 file on the command line
+check-jsonschema --schemafile ./wcmp2-bundled.json examples/msc-swob-realtime.json
+```
