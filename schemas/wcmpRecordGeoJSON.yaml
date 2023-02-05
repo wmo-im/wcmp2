@@ -90,5 +90,6 @@ properties:
           - name
   links:
     type: array
+    minItems: 1
     items:
       $ref: link.yaml

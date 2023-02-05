@@ -22,13 +22,12 @@ To generate the WCMP2 JSON schema, following these steps:
   - References: Dereferened
   - X-Extensions: unchecked
 - click "Save to file"
+- save file to the root of this repository, i.e. `wcmp2-bundled.json`
+- commit changes
 
 A screenshot is shown below:
 
 ![Stoplight Studio Export](stoplight-studio-export.png "Stoplight Studio Export")
-
-- save file to the root of this repository, i.e. `/wcmp2-bundled.json`
-- commit changes
 
 Note: the above are manual steps to verify and generate the JSON Schema bundle.  Future updates will
 include automated workflow via GitHub Actions.
