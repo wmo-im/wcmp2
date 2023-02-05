@@ -1,0 +1,138 @@
+== Overview
+
+=== Purpose
+
+This document is intended to define Key Performance Indicators (KPIs) in
+support of the WMO Core Metadata Profile (WCMP). KPIs provide measurable
+and valuable quality assessment rules over and above the rulesets put
+forth by WCMP.
+
+The core driver of WCMP KPIs is continuous improvement and useability of
+discovery metadata as part of the WMO Information System (WIS).footnote:[https://community.wmo.int/activity-areas/wmo-information-system-wis]
+
+=== Scope
+
+This document is bound to the WCMP 2 specification and codelists. All
+other metadata specifications or representations are not in scope.
+
+=== Audience
+
+The target stakeholder audiences for this document include (but are not limited to):
+
+* Metadata providers (NCs, DCPCs)
+* WIS2 Global Discovery Catalogues (GDCs)
+* WIS2 Nodes
+* GAW World Data Centres (WDCs)
+* WIS2 Monitoring
+* Metadata implementors (generation, ingest)
+
+=== How to use
+
+The KPIs in this document are designed to help metadata providers in the
+curation of discovery metadata, as well as GDCs to measure the quality
+of metadata from data providers.
+
+In order to improve quality:
+
+* providers should use the KPIs to build into their metadata generation
+* WIS2 Global Services and consumers should use the KPIs in order to quality assess discovery metadata
+  and provide subsequent feedback to providers
+
+=== Scoring
+
+Each KPI assesses a number of criteria asssociated with metadata quality,
+resulting in a raw score, as well as a percentage. This approach supports
+weighted rubric scoring.
+
+=== Reference implementation
+
+The TT-WISMD maintains pywcmpfootnote:[https://github.com/wmo-im/pywcmp], as the
+reference WCMP validation utility which includes:
+
+* validation against WMO Core Metadata Profile 2, Annex A: Conformance Class Abstract Test Suite (Normative)
+* validation against the KPIs described in this document
+
+Documentation on installation, configuration and usage can be found on the
+pywcmp website.
+
+pywcmp is provided as a resource to the community, under continuous
+improvement. Contributions are welcome and can be facilited by the
+WMO Task Team on WIS Metadata.
+
+=== Codelists rules
+
+TODO: pending https://github.com/wmo-im/wcmp2-codelists
+
+=== Conventions
+
+==== Symbols and abbreviated terms
+
+.Symbols and abbreviated terms
+|===
+|Abbreviation |Term
+
+|AJAX
+|Asynchronous JavaScript and XML
+
+|CSV
+|Comma-separated values
+
+|DCPC
+|Data Collection and Production Centres
+
+|DOI
+|Digital Object Identifier
+
+|GAW
+|Global Atmospheric Watch
+
+|GDC
+|Global Discovery Catalogue
+
+|HTML
+|Hypertext Markup Language
+
+|HTTP
+|Hypertext Transfer Protocol
+
+|HTTPS
+|Hypertext Transfer Protocol Secure
+
+|INSPIRE
+|Infrastructure for Spatial Information in the European Community
+
+|JSON
+|JavaScript Object Notation
+
+|MIME
+|Multipurpose Internet Mail Extensions
+
+|NC
+|National Centre
+
+|OGC
+|Open Geospatial Consortium
+
+|pywcmp
+|WMO implementation of WCMP validation
+
+|URL
+|Uniform Resource Locator
+
+|WCMP
+|WMO Core Metadata Profile
+
+|WDC
+|World Data Centre
+
+|WIS
+|WMO Information System
+
+|WMO
+|World Meteorological Organization
+
+|XHR
+|XMLHttpRequest
+
+|===
+

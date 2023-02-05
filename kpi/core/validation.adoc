@@ -1,0 +1,31 @@
+== WCMP 2, Annex A Compliance
+
+=== WCMP element(s)
+
+All WCMP elements specified in the WCMP 2, Annex A: Conformance Class Abstract Test Suite (Normative).footnote:[https://wmo-im.github.io/wcmp2/standard/wcmp2-DRAFT.html#_conformance_class_abstract_test_suite_normative]
+
+=== What is being measured
+
+All requirements specified in WCMP 2, Annex A.
+
+=== Rational for measurement
+
+WCMP 2, Annex A forms the basis of all KPIs.
+
+=== Rules for implementation
+
+. WCMP 2, Annex A, A.1.1 Validation
+
+|===
+|Rule |Score
+
+a|Requirement A.1.1. Validation: Validate that a WCMP record is valid to the authoritative WCMP schema.
+|1
+
+|===
+
+*Total possible score: 1 (100%)*
+
+=== Guidance to score well on this assessment
+
+Use WCMP templates and/or tools to generate the metadata record (e.g. pygeometafootnote:[https://github.com/geopython/pygeometa]).
