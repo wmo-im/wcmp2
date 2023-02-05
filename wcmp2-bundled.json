@@ -18,8 +18,8 @@
       "description": "A unique identifier of the catalogue record.",
       "format": "uri"
     },
-    "coinformsTo": {
-      "itype": "array",
+    "conformsTo": {
+      "type": "array",
       "items": {
         "type": "string"
       }
@@ -653,6 +653,7 @@
         "type",
         "title",
         "description",
+        "providers",
         "created",
         "wmo:topicHierarchy",
         "wmo:dataPolicy"
@@ -719,6 +720,242 @@
               }
             }
           }
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {
+                "type": "object",
+                "description": "A reference to information about the responsible party.  For example,\na link to a VCard (see https://www.w3.org/TR/vcard-rdf/).",
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "description": "A URI providing a link to the contact."
+                  },
+                  "roles": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "description": "The function performed by the responsible party. Suggested codelists include the STAC Collection\nProvider roles as well as ISO 19115.",
+                      "required": [
+                        "name"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "authority": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "url"
+                ]
+              },
+              {
+                "type": "object",
+                "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
+                "required": [
+                  "name"
+                ],
+                "properties": {
+                  "identifier": {
+                    "type": "string",
+                    "description": "A value uniquely identifying a party (individual or organization)"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the organization or the individual."
+                  },
+                  "positionName": {
+                    "type": "string",
+                    "description": "Role or position of the responsible person."
+                  },
+                  "organization": {
+                    "type": "string",
+                    "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
+                  },
+                  "logo": {
+                    "description": "Graphic identifying a party",
+                    "type": "object",
+                    "required": [
+                      "href"
+                    ],
+                    "properties": {
+                      "href": {
+                        "type": "string",
+                        "format": "url"
+                      },
+                      "rel": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "hreflang": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "templated": {
+                        "type": "boolean"
+                      },
+                      "variables": {
+                        "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
+                        "type": "object"
+                      },
+                      "created": {
+                        "type": "string",
+                        "description": "Date of creation of the resource pointed to by the link.",
+                        "format": "date-time"
+                      },
+                      "updated": {
+                        "type": "string",
+                        "description": "Most recent date on which the resource pointed to by the link was changed.",
+                        "format": "date-time"
+                      }
+                    }
+                  },
+                  "contactInfo": {
+                    "type": "object",
+                    "description": "Information required to enable contact with the responsible party.",
+                    "properties": {
+                      "phone": {
+                        "type": "object",
+                        "description": "Telephone numbers at which contact can be made.",
+                        "patternProperties": {
+                          "^.*": {
+                            "type": "string",
+                            "description": "The key name indicates the type of phone number (e.g. home,\nwork, fax, etc.). The value is the phone number itself."
+                          }
+                        }
+                      },
+                      "email": {
+                        "type": "object",
+                        "description": "Email address at which contact can be made.",
+                        "patternProperties": {
+                          "^.*": {
+                            "type": "string",
+                            "description": "The key name indicates the type of email address (e.g. home,\nwork, etc.). The value of the email address itself.",
+                            "format": "email"
+                          }
+                        }
+                      },
+                      "address": {
+                        "type": "object",
+                        "description": "Physical location at which contact can be made.",
+                        "patternProperties": {
+                          "^.*": {
+                            "type": "object",
+                            "description": "The key name indicates the type of address (e.g. office,\nhome, etc.). The value is the address itself.",
+                            "properties": {
+                              "deliveryPoint": {
+                                "type": "string",
+                                "description": "Address line for the location."
+                              },
+                              "city": {
+                                "type": "string",
+                                "description": "City for the location."
+                              },
+                              "administrativeArea": {
+                                "type": "string",
+                                "description": "State or province of the location."
+                              },
+                              "postalCode": {
+                                "type": "string",
+                                "description": "ZIP or other postal code."
+                              },
+                              "country": {
+                                "type": "string",
+                                "description": "Country of the physical address."
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "url": {
+                        "description": "On-line information about the responsible party.",
+                        "type": "object",
+                        "required": [
+                          "href"
+                        ],
+                        "properties": {
+                          "href": {
+                            "type": "string",
+                            "format": "url"
+                          },
+                          "rel": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "hreflang": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "templated": {
+                            "type": "boolean"
+                          },
+                          "variables": {
+                            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
+                            "type": "object"
+                          },
+                          "created": {
+                            "type": "string",
+                            "description": "Date of creation of the resource pointed to by the link.",
+                            "format": "date-time"
+                          },
+                          "updated": {
+                            "type": "string",
+                            "description": "Most recent date on which the resource pointed to by the link was changed.",
+                            "format": "date-time"
+                          }
+                        }
+                      },
+                      "hoursOfService": {
+                        "type": "string",
+                        "description": "Time period (including time zone) when the resposible party\ncan be contacted."
+                      },
+                      "contactInstructions": {
+                        "type": "string",
+                        "description": "Supplemental instructions on how or when to contact the\nresponsible party."
+                      }
+                    }
+                  },
+                  "roles": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "description": "The function performed by the responsible party. Suggested codelists include the STAC Collection\nProvider roles as well as ISO 19115.",
+                      "required": [
+                        "name"
+                      ],
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "authority": {
+                          "type": "string",
+                          "format": "uri"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "description": "A list of providers qualified by their role in association to the record."
         },
         "version": {
           "type": "string",

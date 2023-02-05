@@ -30,7 +30,7 @@ properties:
       - type
       - title
       - description
-#      - providers
+      - providers
       - created
       - wmo:topicHierarchy
       - wmo:dataPolicy
@@ -45,8 +45,8 @@ properties:
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
       themes:
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/themes'
-#      providers:
-#        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
+      providers:
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
       version:
         type: string
         description: The version or edition of a given dataset.

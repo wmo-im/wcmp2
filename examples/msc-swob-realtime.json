@@ -1,6 +1,6 @@
 {
     "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
-    "iconformsTo": [
+    "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
     "time": "2010-11-11T11:11:11Z",
@@ -145,6 +145,7 @@
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
                 },
+                "url": "https://www.canada.ca/en/environment-climate-change.html",
                 "roles": [
                     {
                         "name": "pointOfContact"
