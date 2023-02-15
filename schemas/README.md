@@ -22,7 +22,7 @@ To generate the WCMP2 JSON schema, following these steps:
   - References: Dereferened
   - X-Extensions: unchecked
 - click "Save to file"
-- save file to the root of this repository, i.e. `wcmp2-bundled.json`
+- save file to `schemas/wcmp2-bundled.json`
 - commit changes
 
 A screenshot is shown below:
@@ -39,5 +39,5 @@ include automated workflow via GitHub Actions.
 pip3 install check-jsonschema
 
 # validate a WCMP2 file on the command line
-check-jsonschema --schemafile ./wcmp2-bundled.json examples/msc-swob-realtime.json
+check-jsonschema --schemafile schemas/wcmp2-bundled.json examples/msc-swob-realtime.json
 ```

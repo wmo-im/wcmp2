@@ -28,4 +28,4 @@ jobs:
         pip3 install check-jsonschema
     - name: Validate examples
       run: |
-        for e in examples/*.json; do check-jsonschema --schemafile wcmp2-bundled.json $e; done
+        for e in examples/*.json; do check-jsonschema --schemafile schemas/wcmp2-bundled.json $e; done
