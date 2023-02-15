@@ -9,6 +9,6 @@ NOTE: The schema document will only be published on `schemas.wmo.int` once the s
 
 [source,yaml]
 ----
-include::../../schema/wcmpRecordGeoJSON.yaml[]
+include::../../schemas/wcmpRecordGeoJSON.yaml[]
 ----
 

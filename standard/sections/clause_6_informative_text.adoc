@@ -5,11 +5,11 @@
 The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured complex ISO 19115/19139-based XML for metadata. Since then, authoritative
 groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.
 
-Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
+Aligning with the WIS2 Principles, in order to support the WIS2 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
 
-==== WIS 2.0
+==== WIS2
 
-WIS 2.0 puts forth the following principles (those focused on discovery metadata are in **bold**):
+WIS2 puts forth the following principles (those focused on discovery metadata are in **bold**):
 
 * *(1) WIS 2.0 adopts Web technology and leverages industry best practices and open standards.*
 * *(2) WIS 2.0 uses Uniform Resource Locators (URL) to identify resources (i.e., Web pages, data, metadata, APIs) use.*
@@ -24,7 +24,7 @@ WIS 2.0 puts forth the following principles (those focused on discovery metadata
 
 ==== Discovery metadata design considerations
 
-The following describes envisioned workflows of WIS 2.0 in the context of metadata search and harvesting.
+The following describes envisioned workflows of WIS2 in the context of metadata search and harvesting.
 
 * Flexible metadata publishing mechanisms so providers can publish discovery metadata in the easiest and most efficient way possible.
 * Basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
@@ -71,7 +71,7 @@ Common meteorological data types include:
 === User stories
 
 As part of requirements gathering footnote:[https://github.com/wmo-im/wcmp/issues/107], the following user stories provide a
-description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective:
+description of features that are relevant to WIS2 metadata and search, and are cast from a user perspective:
 
 ==== Domain specialist
 
@@ -89,13 +89,13 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 * As a software developer (working for a national meteorological centre or a private company), I would like to find a relevant technical description of the service (API) that my boss wants me to integrate with, so that the declared interoperability becomes a reality.
 * As a web developer, I would like to access a search API that provides easy-to-read documentation, examples, and a simple, intuitive RESTful API with JSON so that I can integrate into my web application quickly.
 
-The following WIS 2.0 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:
+The following WIS2 marketing video footnote:[https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4] adds the following user stories:
 
 * As an everyday user, I would like to find easy-to-understand and precise weather data so that I can plan to have people over for an outdoor BBQ on a nice day.
 * As a smart home owner, I would like access to frequently updated data so that I can keep my smart home monitoring up to date.
 * As a weather specialist, I would like to access weather data in native data formats and subscribe to data updates, so that I can provide tailor-made weather services to my users.
 
-Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for a low barrier, ubiquitous and
+Given the above, we see a variety of users/actors to which WIS2, driving the need for a low barrier, ubiquitous and
 efficient discovery, visualization, and access of weather, climate, water (real-time, near real-time, archive, etc.) data.
 
 === OGC API - Records - Part 1: Core
@@ -108,22 +108,22 @@ The OGC Records - API - Part 1: Core specification:
 * provides a subset of core queryables (e.g. by resource type, by external identifier) which enables
   federation and cross catalogue discovery functionality
 
-=== The WIS 2.0 Global Discovery Catalogue
+=== The WIS2 Global Discovery Catalogue
 
 The GDC will provide a central search endpoint, enabling users to traverse, browse and search
-data holdings in WIS 2.0.  Key search predicate capabilities include:
+data holdings in WIS2.  Key search predicate capabilities include:
 
 * geospatial
 * temporal (time instant or time period)
 * equality predicates (i.e. `+property=value+`) for any defined discovery metadata property
 * full-text (`+q=+`)
 
-Given the WIS 2.0 principles, use cases, OGC API - Records - Part 1: Core, and the WIS 2.0 Global Discovery
+Given the WIS2 principles, use cases, OGC API - Records - Part 1: Core, and the WIS2 Global Discovery
 Catalogue, WCMP provides a standards-based, clear and well-defined information model to facilitate the
-management and discovery of data within WIS 2.0.
+management and discovery of data within WIS2.
 
 === Mass market considerations
 
-Given WIS 2.0 principle 10 (publishing metadata in a way that commercial search engines can index),
+Given WIS2 principle 10 (publishing metadata in a way that commercial search engines can index),
 WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
 structured data discovery, search, and relevant results.
