@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-01-28</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-02-15</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-01-28</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-02-15</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -515,7 +515,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_overview">6.1. Overview</a>
 <ul class="sectlevel3">
-<li><a href="#_wis_2_0">6.1.1. WIS 2.0</a></li>
+<li><a href="#_wis2">6.1.1. WIS2</a></li>
 <li><a href="#_discovery_metadata_design_considerations">6.1.2. Discovery metadata design considerations</a></li>
 <li><a href="#_granularity">6.1.3. Granularity</a></li>
 </ul>
@@ -528,7 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_ogc_api_records_part_1_core">6.3. OGC API - Records - Part 1: Core</a></li>
-<li><a href="#_the_wis_2_0_global_discovery_catalogue">6.4. The WIS 2.0 Global Discovery Catalogue</a></li>
+<li><a href="#_the_wis2_global_discovery_catalogue">6.4. The WIS2 Global Discovery Catalogue</a></li>
 <li><a href="#_mass_market_considerations">6.5. Mass market considerations</a></li>
 </ul>
 </li>
@@ -600,7 +600,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong class="big">i.     Abstract</strong></p>
 </div>
 <div class="paragraph">
-<p>Discovery and search are key components of WIS 2.0.  Quality discovery metadata that leverages industry
+<p>Discovery and search are key components of WIS2.  Quality discovery metadata that leverages industry
 standards, best practices, and architecture helps lower the barrier to and extend the reach of weather/climate/water data.</p>
 </div>
 <div class="paragraph">
@@ -645,7 +645,7 @@ provide guidelines on how to best enable spatiotemporal data to lower the barrie
 <div class="sectionbody">
 <div class="paragraph">
 <p>This document defines the content, structure, and encoding of discovery metadata published
-as part of a WIS 2.0 catalogue.</p>
+as part of the WIS2 Global Discovery Catalogue (GDC).</p>
 </div>
 <div class="paragraph">
 <p>The WMO Core Metadata Profile (WCMP) standard defined herein is an extension of the International Standard <em>OGC API - Records - Part 1: Core</em>.</p>
@@ -677,7 +677,7 @@ may be represented as part of their own metadata or associated through WCMP link
 <p><em>OGC API - Records</em> (OARec) provides a record metadata model in support of resource discovery.  This standard is an extension of <em>OGC API - Records - Part 1: Core</em>.  Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of <em>OGC API - Records - Part 1: Core</em>.</p>
 </div>
 <div class="paragraph">
-<p>Authors of discovery metadata records published within the WIS 2.0 discovery catalogue are required to comply with the
+<p>Authors of discovery metadata records published within the WIS2 Global Discovery Catalogue (GDC) are required to comply with the
 WMO Core Metadata Profile (WCMP).  WCMP discovery metadata shall therefore be compliant with OGC API - Records - Part 1:
 Core: Requirements Class: Record Core.</p>
 </div>
@@ -938,7 +938,7 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <div class="sect2">
 <h3 id="_schemas"><a class="anchor" href="#_schemas"></a>5.3. Schemas</h3>
 <div class="paragraph">
-<p>The WCMP 2.0 schema can be found at <a href="https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml" class="bare">https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml</a></p>
+<p>The WCMP schema can be found at <a href="https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml" class="bare">https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -981,12 +981,12 @@ YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.</p>
 </div>
 <div class="paragraph">
-<p>Aligning with the WIS 2.0 Principles, in order to support the WIS 2.0 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.</p>
+<p>Aligning with the WIS2 Principles, in order to support the WIS2 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.</p>
 </div>
 <div class="sect3">
-<h4 id="_wis_2_0"><a class="anchor" href="#_wis_2_0"></a>6.1.1. WIS 2.0</h4>
+<h4 id="_wis2"><a class="anchor" href="#_wis2"></a>6.1.1. WIS2</h4>
 <div class="paragraph">
-<p>WIS 2.0 puts forth the following principles (those focused on discovery metadata are in <strong>bold</strong>):</p>
+<p>WIS2 puts forth the following principles (those focused on discovery metadata are in <strong>bold</strong>):</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1026,7 +1026,7 @@ groups such as W3C and OGC have moved to adopt a more resource-oriented architec
 <div class="sect3">
 <h4 id="_discovery_metadata_design_considerations"><a class="anchor" href="#_discovery_metadata_design_considerations"></a>6.1.2. Discovery metadata design considerations</h4>
 <div class="paragraph">
-<p>The following describes envisioned workflows of WIS 2.0 in the context of metadata search and harvesting.</p>
+<p>The following describes envisioned workflows of WIS2 in the context of metadata search and harvesting.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1145,7 +1145,7 @@ common meteorological data types:</p>
 <h3 id="_user_stories"><a class="anchor" href="#_user_stories"></a>6.2. User stories</h3>
 <div class="paragraph">
 <p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>, the following user stories provide a
-description of features that are relevant to WIS 2.0 metadata and search, and are cast from a user perspective:</p>
+description of features that are relevant to WIS2 metadata and search, and are cast from a user perspective:</p>
 </div>
 <div class="sect3">
 <h4 id="_domain_specialist"><a class="anchor" href="#_domain_specialist"></a>6.2.1. Domain specialist</h4>
@@ -1189,7 +1189,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 </ul>
 </div>
 <div class="paragraph">
-<p>The following WIS 2.0 marketing video <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup> adds the following user stories:</p>
+<p>The following WIS2 marketing video <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup> adds the following user stories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1205,7 +1205,7 @@ description of features that are relevant to WIS 2.0 metadata and search, and ar
 </ul>
 </div>
 <div class="paragraph">
-<p>Given the above, we see a variety of users/actors to which WIS 2.0, driving the need for a low barrier, ubiquitous and
+<p>Given the above, we see a variety of users/actors to which WIS2, driving the need for a low barrier, ubiquitous and
 efficient discovery, visualization, and access of weather, climate, water (real-time, near real-time, archive, etc.) data.</p>
 </div>
 </div>
@@ -1234,10 +1234,10 @@ federation and cross catalogue discovery functionality</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_the_wis_2_0_global_discovery_catalogue"><a class="anchor" href="#_the_wis_2_0_global_discovery_catalogue"></a>6.4. The WIS 2.0 Global Discovery Catalogue</h3>
+<h3 id="_the_wis2_global_discovery_catalogue"><a class="anchor" href="#_the_wis2_global_discovery_catalogue"></a>6.4. The WIS2 Global Discovery Catalogue</h3>
 <div class="paragraph">
 <p>The GDC will provide a central search endpoint, enabling users to traverse, browse and search
-data holdings in WIS 2.0.  Key search predicate capabilities include:</p>
+data holdings in WIS2.  Key search predicate capabilities include:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1256,15 +1256,15 @@ data holdings in WIS 2.0.  Key search predicate capabilities include:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Given the WIS 2.0 principles, use cases, OGC API - Records - Part 1: Core, and the WIS 2.0 Global Discovery
+<p>Given the WIS2 principles, use cases, OGC API - Records - Part 1: Core, and the WIS2 Global Discovery
 Catalogue, WCMP provides a standards-based, clear and well-defined information model to facilitate the
-management and discovery of data within WIS 2.0.</p>
+management and discovery of data within WIS2.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_mass_market_considerations"><a class="anchor" href="#_mass_market_considerations"></a>6.5. Mass market considerations</h3>
 <div class="paragraph">
-<p>Given WIS 2.0 principle 10 (publishing metadata in a way that commercial search engines can index),
+<p>Given WIS2 principle 10 (publishing metadata in a way that commercial search engines can index),
 WCMP discovery metadata enables annotations that can facilitate Search Engine Optimization (SEO) and
 structured data discovery, search, and relevant results.</p>
 </div>
@@ -1276,7 +1276,7 @@ structured data discovery, search, and relevant results.</p>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A WCMP record provides descriptive information about a dataset made available
-through WIS 2.0.</p>
+through WIS2.</p>
 </div>
 <div class="sect2">
 <h3 id="_conformance_class_core"><a class="anchor" href="#_conformance_class_core"></a>7.1. Conformance Class Core</h3>
@@ -1452,7 +1452,7 @@ of a WCMP discovery metadata record.</p>
 <div class="sect3">
 <h4 id="_validation"><a class="anchor" href="#_validation"></a>7.1.2. Validation</h4>
 <div class="paragraph">
-<p>The WCMP record schema is based on  <em>OGC API - Records - Part 1: Core: Requirements Class: Record Core</em> schema and the associated information model.  WCMP records compliant with WCMP 2.0 schema are therefore compliant with the <em>OGC API - Records</em> record schema.</p>
+<p>The WCMP record schema is based on  <em>OGC API - Records - Part 1: Core: Requirements Class: Record Core</em> schema and the associated information model.  WCMP records compliant with WCMP schema are therefore compliant with the <em>OGC API - Records</em> record schema.</p>
 </div>
 <table id="req_core_validation" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1469,7 +1469,7 @@ of a WCMP discovery metadata record.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each WCMP record SHALL validate without error against the WCMP 2.0 schema.</p>
+<p>Each WCMP record SHALL validate without error against the WCMP schema.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1768,13 +1768,13 @@ advertising broker services.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:topicHierarchy</code> SHALL provide a topic based on the WIS 2 Topic Hierarchy.</p>
+<p>A WCMP record&#8217;s <code>properties.wmo:topicHierarchy</code> SHALL provide a topic based on the WIS2 Topic Hierarchy.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:topicHierarchy</code> SHALL NOT include levels 1 to 3 (channel, version, wis2) of the WIS 2 Topic Hierarchy.</p>
+<p>A WCMP record&#8217;s <code>properties.wmo:topicHierarchy</code> SHALL NOT include levels 1 to 3 (channel, version, wis2) of the WIS2 Topic Hierarchy.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2734,7 +2734,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record <code>links</code> property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS 2 topic hierarchy.</p>
+<p>A WCMP record <code>links</code> property SHALL contain the MQTT topic information for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS2 topic hierarchy.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2800,7 +2800,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
   {
     "rel"  : "items",
     "type" : "application/json",
-    "title": "WIS 2 notification service",
+    "title": "WIS2 notification service",
     "href" : "mqtts://broker.example.org",
     "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
@@ -3459,7 +3459,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WCMP record provides a valid WIS 2 Topic Hierarchy.</p>
+<p>Validate that a WCMP record provides a valid WIS2 Topic Hierarchy.</p>
 </dd>
 </dl>
 </div>
@@ -3708,10 +3708,9 @@ The schema document will only be published on <code>schemas.wmo.int</code> once 
 <div class="content">
 <pre class="highlight"><code class="language-yaml" data-lang="yaml">$schema: 'https://json-schema.org/draft/2020-12/schema'
 $id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
-title: WCMP 2 discovery metadata record definition
-description: WCMP 2 discovery metadata record definition
+title: WCMP discovery metadata record definition
+description: WCMP discovery metadata record definition
 
-# Extension of https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml
 required:
   - id
   - conformsTo
@@ -3722,36 +3721,15 @@ required:
   - links
 properties:
   id:
-    type: string
-    description:
-      A unique identifier of the catalogue record.
-    format: uri
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
   conformsTo:
-    $ref: ogcapi/records/part1/1.0/confClasses.yaml#/properties/conformsTo
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/conformsTo'
   type:
-    type: string
-    enum:
-      - Feature
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
   time:
-    oneOf:
-      - type: null
-      - type: object
-        properties:
-          oneOf:
-            - type: string
-              format: date-time
-            - type: array
-              minItems: 2
-              maxItems: 2
-              items:
-                oneOf:
-                  - type: null
-                  - type: string
-                    format: date-time
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/time'
   geometry:
-    oneOf:
-      - type: null
-      - $ref: ogcapi/records/part1/1.0/geometryGeoJSON.yaml
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
   additionalExtents:
     $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
   properties:
@@ -3760,113 +3738,32 @@ properties:
       - type
       - title
       - description
-      - themes
       - providers
       - created
       - wmo:topicHierarchy
       - wmo:dataPolicy
     properties:
-      externalIds:
-        type: array
-        description:
-          An identifier for the resource assigned by an external (to the
-          catalogue) entity.
-        items:
-          type: object
-          properties:
-            scheme:
-              type: string
-              description:
-                A reference to an authority or identifier for a knowledge
-                organization system from which the external identifier was
-                obtained.  It is recommended that the identifier be a
-                resolvable URI.
-              value:
-                type: string
-                description: The value of the identifier.
-          required:
-            - value
-  additionalExtents:
       type:
-        type: string
-        description:
-          The nature or genre of the resource. The value should be a code,
-          convenient for filtering the records. Where available, a link to
-          the canonical URI of the record type resource will be added to
-          the 'links' property.
-        maxLength: 64
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
       title:
-        type: string
-        description:
-          A human-readable name given to the resource.
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/title'
       description:
-        type: string
-        description:
-          A free-text account of the resource.
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/description'
       keywords:
-        type: array
-        description:
-          The topic or topics of the resource. Typically represented using
-          free-form keywords, tags, key phrases, or classification codes.
-        items:
-          type: string
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
       themes:
-        type: array
-        description:
-          A knowledge organization system used to classify the resource.
-        items:
-          type: object
-          properties:
-            concepts:
-              type: array
-              description:
-                One or more entity/concept identifers from this knowledge
-                system. it is recommended that a resolvable URI be used
-                for each entity/concept identifier.
-              items:
-                type: object
-                properties:
-                  id:
-                    type: string
-                    description: An identifier for the concept.
-                  title:
-                    type: string
-                    description: A human readable title for the concept.
-                  description:
-                    type: string
-                    description: A human readable description for the concept.
-                  url:
-                    type: string
-                    format: uri
-                    description: A URI providing further description of the concept.
-                required
-                  - id
-            scheme:
-              type: string
-              description:
-                An identifier for the knowledge organization system used
-                to classify the resource.  It is recommended that the
-                identifier be a resolvable URI.
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/themes'
       providers:
-        type: array
-        items:
-          $ref: ogcapi/records/part1/1.0/party.yaml
-        description:
-          A list of providers qualified by their role in association to the
-          record.
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
       version:
         type: string
         description: The version or edition of a given dataset.
+      externalIds:
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/externalIds'
       created:
-        type: string
-        description:
-          Date of creation of this record.
-        format: date-time
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
       updated:
-        type: string
-        description:
-          The most recent date on which the record was changed.
-        format: date-time
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
       wmo:topicHierarchy:
         type: string
         description: WIS2 topic hierarchy classification of the dataset
@@ -3900,6 +3797,8 @@ properties:
         required:
           - name
   links:
+    type: array
+    minItems: 1
     items:
       $ref: link.yaml</code></pre>
 </div>
@@ -3920,6 +3819,7 @@ properties:
     "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
+    "time": "2010-11-11T11:11:11Z",
     "type": "Feature",
     "geometry": {
         "type": "Polygon",
@@ -4061,72 +3961,24 @@ properties:
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
                 },
+                "url": "https://www.canada.ca/en/environment-climate-change.html",
                 "roles": [
                     {
                         "name": "pointOfContact"
-                    }
-                ]
-            },
-            {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
-                "positionName": "National Inquiry Response Team",
-                "contactInfo": {
-                    "phone": {
-                        "office": "+01-819-997-2800"
                     },
-                    "email": {
-                        "office": "+01-506-451-6010"
-                    },
-                    "address": {
-                        "office": {
-                            "deliveryPoint": "77 Westmorland Street, suite 260",
-                            "city": "Fredericton",
-                            "administrativeArea": "NB",
-                            "postalCode": "E3B 6Z4",
-                            "country": "Canada"
-                        },
-                        "onlineResource": {
-                            "href": "https://www.canada.ca/en/environment-climate-change.html"
-                        }
-                    },
-                    "hoursOfService": "0700h - 1500h EST",
-                    "contactInstructions": "email",
-                    "url": {
-                        "rel": "canonical",
-                        "type": "text/html",
-                        "href": "https://www.canada.ca/en/environment-climate-change.html"
-                    }
-                },
-                "roles": [
                     {
                         "name": "distributor"
                     }
                 ]
             }
         ],
-        "language": "en",
         "type": "dataset",
-        "extent": {
-            "spatial": {
-                "bbox": [
-                    [
-                        -142,
-                        28,
-                        -52,
-                        82
-                    ]
-                ],
-                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-            }
-        },
         "created": "2018-01-01",
         "updated": "2022-06-22",
-        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
-        "formats": [
-            "SQL",
-            "WMS"
-        ]
+        "wmo:topicHierarchy": "path/to/foo",
+        "wmo:dataPolicy": {
+            "name": "core"
+        }
     },
     "links": [
         {
@@ -4515,7 +4367,7 @@ properties:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-01-28 13:40:21 UTC
+Last updated 2023-02-15 16:09:52 UTC
 </div>
 </div>
 </body>
