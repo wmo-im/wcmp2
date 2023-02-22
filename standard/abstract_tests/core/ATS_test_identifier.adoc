@@ -14,7 +14,7 @@ Check for the existence of an `+id+` property in the WCMP record.
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, check that there are **six** tokens, delimited by `+:+`.
+In the WCMP record's `+id+` property, check that there are **five** tokens, delimited by `+:+`.
 --
 
 [.component,class=step]
