@@ -2,8 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/extent_temporal*
-^|A |Within `time.interval` durations SHOULD be provided as a valid ISO 8601 duration (e.g., `+P1D+`).
-^|B |For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (`+time.resolution+`) as a valid ISO 8601 duration (e.g., `+P1D+`).
-^|C |For complex temporal extents a WCMP record SHOULD also provide a human-readable explanation in `+properties.description+` to promote clarification and unambiguity.
-|===
+^|A |For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (`+time.resolution+`) as a valid ISO 8601 duration (e.g., `+P1D+`).
+^|B |For complex temporal extents a WCMP record SHOULD also provide a human-readable explanation in `+properties.description+` to promote clarification and unambiguity.
+^|C |To distinguish maintenance or update frequency, those SHOULD be included in `+properties.themes+`.
 |===
