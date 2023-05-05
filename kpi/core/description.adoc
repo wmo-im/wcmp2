@@ -50,7 +50,7 @@ The description should provide a clear and concise statement that enables the re
 
 ==== Relevant recommendations
 
-* Avoid adding a scientific descrtiption
+* Avoid adding a scientific description
 * Limit information in the description to the specific resource that is being described
 * Describe the contents of the resource and the key aspects and/or attributes that are represented
 * Explain briefly what is unique about this resource and, if appropriate, how it differs from similar resources
