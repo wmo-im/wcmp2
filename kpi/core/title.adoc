@@ -51,5 +51,3 @@ a|The title _does not_ contain bulletin header (regular expression: `[A-Z]{4}\d{
 
 The title should be as specific as possible. For example, if the product only contains one parameter, this can be stated in the title; however, if the product contains numerous parameters, then a more general term should be used in the title, and the parameters stated elsewhere in the metadata record (description, themes, keywords, etc.).
 
-For a satellite product offering one main data parameter, the title will typically define which parameter is contained in the product, and from which instrument or instrument type it originates. For example, "AMSR-2 Sea Surface Temperature” or “SLSTR L1B radiances and brightness temperatures”. Please see the Guidance on WIS Discovery Metadatafootnote:[https://library.wmo.int/index.php?lvl=notice_display&id=6856#.X2TSLZMzYUF] for more information.
-
