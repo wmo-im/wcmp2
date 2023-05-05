@@ -1,4 +1,4 @@
-== Graphic overview for non bulletins metadata records
+== Graphic overview for metadata records
 
 === WCMP element(s)
 
@@ -14,7 +14,7 @@ Product graphic overviews provide the user with a high level preview of the prod
 
 === Rules for implementation
 
-.Graphic overview for non bulletins metadata records implementation rules
+.Graphic overview for metadata records implementation rules
 |===
 |Rule |Score
 
