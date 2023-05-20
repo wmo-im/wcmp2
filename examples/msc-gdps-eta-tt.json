@@ -31,6 +31,12 @@
             ]
         ]
     },
+    "time": {
+        "interval": [
+            "1963-10-01",
+            ".."
+        ]
+    },
     "properties": {
         "title": "Global Deterministic Prediction System",
         "description": "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.",
@@ -45,172 +51,72 @@
                     },
                     {
                         "id": "Deterministic"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Weather forecasts"
                     },
                     {
-                        "id": "Precipitation"
+                        "id": "Weather forecasts"
                     },
                     {
                         "id": "Air temperature"
                     },
                     {
-                        "id": "Humidity"
-                    },
-                    {
-                        "id": "Snow"
-                    },
-                    {
-                        "id": "Wind"
-                    },
-                    {
                         "id": "Meteorological data"
                     }
-                ]
+                ],
+                "scheme": "https://canada.multites.net/cst"
             },
             {
                 "concepts": [
                     {
-                        "id": "Weather and Climate"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "International"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Atmosphere"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "weatherForecasts"
-                    },
-                    {
-                        "id": "meteorology"
+                        "id": "weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv"
             }
         ],
-        "providers": [
+        "contacts": [
             {
                 "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
                 "positionName": "National Inquiry Response Team",
-                "contactInfo": {
-                    "phone": {
-                        "office": "+01-819-997-2800"
-                    },
-                    "email": {
-                        "office": "+01-506-451-6010"
-                    },
-                    "address": {
-                        "office": {
-                            "deliveryPoint": "77 Westmorland Street, suite 260",
-                            "city": "Fredericton",
-                            "administrativeArea": "NB",
-                            "postalCode": "E3B 6Z4",
-                            "country": "Canada"
-                        },
-                        "onlineResource": {
-                            "href": "https://www.canada.ca/en/environment-climate-change.html"
-                        }
-                    },
-                    "hoursOfService": "0700h - 1500h EST",
-                    "contactInstructions": "email",
-                    "url": {
+                "phones": [
+                    {
+                        "value": "+18199972800"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "enviroinfo@ec.gc.ca"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "77 Westmorland Street, suite 260"
+                        ],
+                        "city": "Fredericton",
+                        "administrativeArea": "NB",
+                        "postalCode": "E3B 6Z4",
+                        "country": "Canada"
+                    }
+                ],
+                "contactInstructions": "email",
+                "links": [
+                    {
                         "rel": "canonical",
                         "type": "text/html",
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
-                },
+                ],
                 "roles": [
-                    {
-                        "name": "pointOfContact"
-                    }
-                ]
-            },
-            {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
-                "positionName": "National Inquiry Response Team",
-                "contactInfo": {
-                    "phone": {
-                        "office": "+01-819-997-2800"
-                    },
-                    "email": {
-                        "office": "+01-506-451-6010"
-                    },
-                    "address": {
-                        "office": {
-                            "deliveryPoint": "77 Westmorland Street, suite 260",
-                            "city": "Fredericton",
-                            "administrativeArea": "NB",
-                            "postalCode": "E3B 6Z4",
-                            "country": "Canada"
-                        },
-                        "onlineResource": {
-                            "href": "https://www.canada.ca/en/environment-climate-change.html"
-                        }
-                    },
-                    "hoursOfService": "0700h - 1500h EST",
-                    "contactInstructions": "email",
-                    "url": {
-                        "rel": "canonical",
-                        "type": "text/html",
-                        "href": "https://www.canada.ca/en/environment-climate-change.html"
-                    }
-                },
-                "roles": [
-                    {
-                        "name": "distributor"
-                    }
+                    "pointOfContact",
+                    "distributor"
                 ]
             }
         ],
         "language": "en",
         "type": "dataset",
-        "extent": {
-            "spatial": {
-                "bbox": [
-                    [
-                        -180,
-                        -90,
-                        180,
-                        90
-                    ]
-                ],
-                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-            },
-            "temporal": {
-                "interval": [
-                    "1963-10-01",
-                    null
-                ],
-                "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
-            }
-        },
         "created": "2018-01-01",
-        "updated": "2022-06-17",
-        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
-        "formats": [
-            "WMS",
-            "GRIB2"
-        ]
+        "updated": "2022-06-17"
     },
     "links": [
         {
@@ -218,6 +124,12 @@
             "href": "https://dd.weather.gc.ca/model_gem_global",
             "type": "text/html",
             "title": "MSC Datamart"
+        },
+        {
+            "rel": "license",
+            "href": "https://open.canada.ca/en/open-government-licence-canada",
+            "type": "text/html",
+            "title": "Open Government Licence - Canada"
         },
         {
             "rel": "http://www.opengis.net/def/serviceType/ogc/wms",

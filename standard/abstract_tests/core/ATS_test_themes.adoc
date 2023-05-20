@@ -1,0 +1,36 @@
+[[ats_core_themes]]
+====
+[%metadata]
+label:: /conf/core/themes
+subject:: /req/core/themes
+test-purpose:: Validate that a WCMP record provides a themes property.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a single `+themes+` array property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Check that the `+themes+` property provides a minimum of one theme object.
+--
+
+[.component,class=step]
+--
+Check that each theme object provides a minimum of one `+concepts+` property.
+--
+
+[.component,class=step]
+--
+Check that each theme object provides a minimum of one `+scheme+` property.
+--
+
+[.component,class=step]
+--
+Check that each concept object provides a minimum of one `+id+` property.
+--
+
+=====
+====

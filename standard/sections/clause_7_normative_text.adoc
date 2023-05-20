@@ -68,7 +68,7 @@ The table below provides an overview of the set of properties that may be includ
 |optional
 |Additional time instants or periods
 
-|``properties.providers``
+|``properties.contacts``
 |**required**
 |Contact information for the dataset
 
@@ -225,7 +225,7 @@ A concept's optional `+url+` property can provide a remote reference to a given 
 
 A WCMP metadata record can have one or more themes.
 
-include::../recommendations/core/REC_themes.adoc[]
+include::../requirements/core/REQ_themes.adoc[]
 include::../recommendations/core/REC_granularity.adoc[]
 
 .Examples
@@ -442,11 +442,11 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 }
 ----
 
-==== Properties / Providers
+==== Properties / Contacts
 
-The `+providers+` property is the contact information and `+role+` of the dataset providers.
+The `+contacts+` property is the contact information and `+role+` of the dataset contacts.
 
-include::../requirements/core/REQ_providers.adoc[]
+include::../requirements/core/REQ_contacts.adoc[]
 
 .Examples
 
@@ -454,59 +454,45 @@ include::../requirements/core/REQ_providers.adoc[]
 ----
 "properties": {
   ...
-  "providers": [
-    {
-      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+  "contacts": [{
+      "identifier": "ECCC",
+      "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
       "positionName": "National Inquiry Response Team",
-      "contactInfo": {
-        "phone": {
-          "office": "+01-819-997-2800"
-        },
-        "email": {
-          "office":"enviroinfo@ec.gc.ca"
-        },
-        "address": {
-          "office": {
-            "deliveryPoint": "77 Westmorland Street, suite 260",
-            "city": "Fredericton",
-            "administrativeArea": "NB",
-            "postalCode": "E3B 6Z4",
-            "country": "Canada"
-          },
-          "onlineResource": {
-            "href": "https://www.canada.ca/en/environment-climate-change.html"
-          }
-        },
-        "hoursOfService": "0700h - 1500h EST",
-        "contactInstructions": "email",
-        "url": {
-          "rel": "canonical",
-          "type": "text/html",
-          "href": "https://www.canada.ca/en/environment-climate-change.html"
-        }
-      },
-      "roles": [
-        {
-          "name": "pointOfContact"
-        },
-        {
-          "name": "originator"
-        }
-      ]
-    }
-  ]
+      "phones": [{
+        "value": "+01-819-997-2800"
+      }],
+      "emails": [{
+        "value":"enviroinfo@ec.gc.ca"
+      }],
+      "addresses": [{
+        "deliveryPoint": "77 Westmorland Street, suite 260",
+        "city": "Fredericton",
+        "administrativeArea": "NB",
+        "postalCode": "E3B 6Z4",
+        "country": "Canada"
+      }],
+      "links": [{
+        "href": "https://www.canada.ca/en/environment-climate-change.html"
+      }],
+      "hoursOfService": "0700h - 1500h EST",
+      "contactInstructions": "email",
+      "roles": ["pointOfContact", "originator"]
+  }]
   ...
 }
 ----
 
-Note that a provider can also be specified by using a URL:
+Note that a contact can also be specified by using a URL:
 
 [source,json]
 ----
 "properties": {
   ...
-  "providers": [
-      "https://example.org/contact"
+  "contacts": [{
+      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+      "links": [{
+          "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html"
+      }]
   ]
   ...
 }

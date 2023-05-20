@@ -1,0 +1,26 @@
+[[ats_core_contacts]]
+====
+[%metadata]
+label:: /conf/core/contacts
+subject:: /req/core/contacts
+test-purpose:: Validate that a WCMP record provides contact information for the metadata point of contact and originator of the data.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.contacts+` property in the WCMP record.
+--
+
+[.component,class=step]
+--
+Check that the `+contact+` property provides a minimum of one contact object.
+--
+
+[.component,class=step]
+--
+Within `+properties.contacts+`, check for the existence of `+originator+` and `+pointOfContact+` within the `+roles+` array property across all contact objects.
+--
+
+=====
+====

@@ -30,7 +30,7 @@ properties:
       - type
       - title
       - description
-      - providers
+      - contacts
       - created
     properties:
       type:
@@ -42,9 +42,15 @@ properties:
       keywords:
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
       themes:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/themes'
-      providers:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
+        type: array
+        minItems: 1
+        items:
+          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/theme.yaml'
+      contacts:
+        type: array
+        minItems: 1
+        items:
+          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/contact.yaml'
       version:
         type: string
         description: The version or edition of a given dataset.

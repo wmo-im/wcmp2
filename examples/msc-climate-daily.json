@@ -33,8 +33,8 @@
     },
     "time": {
         "interval": [
-            "1840",
-            null
+            "1840-01-01",
+            ".."
         ],
         "resolution": "P1D"
     },
@@ -53,145 +53,62 @@
                     {
                         "id": "Climate change"
                     }
-                ]
+                ],
+                "scheme": "https://canada.multites.net/cst"
             },
             {
                 "concepts": [
                     {
-                        "id": "Weather and Climate"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "National (CA)"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Atmosphere"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "climatology"
-                    },
-                    {
-                        "id": "weatherObservations"
+                        "id": "climate"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
             }
         ],
-        "providers": [
+        "contacts": [
             {
                 "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
                 "positionName": "National Inquiry Response Team",
-                "contactInfo": {
-                    "phone": {
-                        "office": "+01-819-997-2800"
-                    },
-                    "email": {
-                        "office": "+01-506-451-6010"
-                    },
-                    "address": {
-                        "office": {
-                            "deliveryPoint": "77 Westmorland Street, suite 260",
-                            "city": "Fredericton",
-                            "administrativeArea": "NB",
-                            "postalCode": "E3B 6Z4",
-                            "country": "Canada"
-                        },
-                        "onlineResource": {
-                            "href": "https://www.canada.ca/en/environment-climate-change.html"
-                        }
-                    },
-                    "hoursOfService": "0700h - 1500h EST",
-                    "contactInstructions": "email",
-                    "url": {
+                "phones": [
+                    {
+                        "value": "+18199972800"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "enviroinfo@ec.gc.ca"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "77 Westmorland Street, suite 260"
+                        ],
+                        "city": "Fredericton",
+                        "administrativeArea": "NB",
+                        "postalCode": "E3B 6Z4",
+                        "country": "Canada"
+                    }
+                ],
+                "contactInstructions": "email",
+                "links": [
+                    {
                         "rel": "canonical",
                         "type": "text/html",
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
-                },
+                ],
                 "roles": [
-                    {
-                        "name": "pointOfContact"
-                    }
-                ]
-            },
-            {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
-                "positionName": "National Inquiry Response Team",
-                "contactInfo": {
-                    "phone": {
-                        "office": "+01-819-997-2800"
-                    },
-                    "email": {
-                        "office": "+01-506-451-6010"
-                    },
-                    "address": {
-                        "office": {
-                            "deliveryPoint": "77 Westmorland Street, suite 260",
-                            "city": "Fredericton",
-                            "administrativeArea": "NB",
-                            "postalCode": "E3B 6Z4",
-                            "country": "Canada"
-                        },
-                        "onlineResource": {
-                            "href": "https://www.canada.ca/en/environment-climate-change.html"
-                        }
-                    },
-                    "hoursOfService": "0700h - 1500h EST",
-                    "contactInstructions": "email",
-                    "url": {
-                        "rel": "canonical",
-                        "type": "text/html",
-                        "href": "https://www.canada.ca/en/environment-climate-change.html"
-                    }
-                },
-                "roles": [
-                    {
-                        "name": "distributor"
-                    }
+                    "pointOfContact",
+                    "distributor"
                 ]
             }
         ],
         "language": "en",
         "type": "dataset",
-        "extent": {
-            "spatial": {
-                "bbox": [
-                    [
-                        -142,
-                        52,
-                        -52,
-                        84
-                    ]
-                ],
-                "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-            },
-            "temporal": {
-                "interval": [
-                    "1840",
-                    null
-                ],
-                "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
-            }
-        },
         "created": "2018-01-01",
-        "updated": "2022-06-17",
-        "rights": "Open Government Licence - Canada (https://open.canada.ca/en/open-government-licence-canada)",
-        "formats": [
-            "CSV"
-        ]
+        "updated": "2022-06-17"
     },
     "links": [
         {
@@ -205,6 +122,12 @@
             "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
             "type": "text/html",
             "title": "Raw data download (CSV files)"
+        },
+        {
+            "rel": "license",
+            "href": "https://open.canada.ca/en/open-government-licence-canada",
+            "type": "text/html",
+            "title": "Open Government Licence - Canada"
         },
         {
             "rel": "items",
