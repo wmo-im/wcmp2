@@ -613,13 +613,14 @@ include::../recommendations/core/REC_record_update_date.adoc[]
 
 ==== Properties / WMO Data Policy
 
-The `+dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]. The codelist values are `+core+` or `+recommended+`.
+The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]. The codelist values are `+core+` or `+recommended+`.
 
 include::../requirements/core/REQ_data_policy.adoc[]
+include::../recommendations/core/PER_data_policy.adoc[]
 
-The `+additionalConditions+` property are access and license details that apply when the dataset is classified as `+recommended+`.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
+Licensing and copyright are expressed via the `+links+` property (see <<distribution>>, providing access conditions and license details that apply when the dataset is classified as `+recommended+`.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
 
-include::../requirements/core/REQ_data_policy_conditions.adoc[]
+Note that core data can contain attribution licensing (such as Creative Commons footnote:[https://creativecommons.org]) as needed.
 
 .Example: Core Data
 
@@ -627,24 +628,17 @@ include::../requirements/core/REQ_data_policy_conditions.adoc[]
 ----
 "properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "core"
-  }
+  "wmo:dataPolicy": "core"
   ...
 }
 ----
 
-.Example: Recommended Data with no additional conditions
+.Example: Recommended Data
 [source,json]
 ----
 "properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "recommended",
-    "additionalConditions": [{
-        "name": "none"
-    }]
-  }
+  "wmo:dataPolicy": "recommended"
   ...
 }
 ----
@@ -654,40 +648,36 @@ include::../requirements/core/REQ_data_policy_conditions.adoc[]
 ----
 "properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "recommended",
-    "additionalConditions": [{
-      "name": "copyright",
-      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
-    }]
-  }
+  "wmo:dataPolicy": "recommended"
   ...
-}
+},
+"links": [{
+  "rel": "copyright",
+  "href": "https://example.org/dataset/copyright.html",
+  "type": "text/html",
+  "title": "Dataset copyright information"
+}]
 ----
 
 It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
-include::../recommendations/core/REC_data_policy_conditions.adoc[]
+
+include::../recommendations/core/REC_data_policy.adoc[]
 
 .Example: Recommended Data with additional conditions and provider-specific details:
 [source,json]
 ----
 "properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "recommended",
-    "additionalConditions": [{
-      "name": "license",
-      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode",
-      "link": {
-        "href": "https://www.eumetsat.int/eumetsat-data-licensing",
-        "title": "EUMETSAT DATA LICENSING"
-      }
-    }]
-  }
+  "wmo:dataPolicy": "recommended"
   ...
-}
+},
+"links": [{
+  "rel": "license",
+  "href": "https://www.eumetsat.int/eumetsat-data-licensing",
+  "type": "text/html",
+  "title": "EUMETSAT DATA LICENSING"
+}]
 ----
-
 
 ==== Distribution Information [[distribution]]
 

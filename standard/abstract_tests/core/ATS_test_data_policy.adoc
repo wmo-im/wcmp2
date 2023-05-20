@@ -12,15 +12,10 @@ Check for the existence of a `+properties.wmo:dataPolicy+` property in the WCMP 
 --
 [.component,class=step]
 --
-Check that `+properties.wmo:dataPolicy+` has an element `+name+` equal to `+core+` or `+recommended+`.
+Check that `+properties.wmo:dataPolicy+` has a value equal to `+core+` or `+recommended+`.
 --
 [.component,class=step]
 --
-If `+properties.wmo:dataPolicy.name+` is equal to `+recommended+`, check for the existence of a `+properties.wmo:dataPolicy.additionalConditions+` element containing at least one object with a `+name+` property.
---
-[.component,class=step]
---
-Check that `+properties.wmo:dataPolicy.additionalConditions.conditions+` is `+none+`.  If the value is not `+none+`, then check for the existence of a `+properties.wmo:dataPolicy.additionalConditions.scheme+` property.
---
+If `+properties.wmo:dataPolicy+` is equal to `+recommended+`, check for the existence of at least one `+links+` item containing a `+license+` or `+copyright+` link relation (`+rel+`).
 =====
 ====
