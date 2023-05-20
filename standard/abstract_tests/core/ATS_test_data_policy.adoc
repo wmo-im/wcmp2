@@ -3,7 +3,21 @@
 [%metadata]
 label:: /conf/core/data_policy
 subject:: /req/core/data_policy
-test-purpose:: Validate that a WCMP record provides information about data policy and, if applicable additional information about licensing and/or rights.
+test-purpose:: Validate that a WCMP record provides information about data policy and, if applicable additional information about licensing and/or copyright.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the type of WCMP record (`+properties.type+`).
+--
+[.component,class=step]
+--
+If `+properties.type+` is found, and `+properties.type+` is equal to `+dataset+` check that `+properties.wmo:dataPolicy+` exists.
+--
+
+=====
+
 [.component,class=test method]
 =====
 [.component,class=step]
@@ -12,10 +26,12 @@ Check for the existence of a `+properties.wmo:dataPolicy+` property in the WCMP 
 --
 [.component,class=step]
 --
-Check that `+properties.wmo:dataPolicy+` has a value equal to `+core+` or `+recommended+`.
+If `+properties.wmo:dataPolicy+` is found, check that `+properties.wmo:dataPolicy+` has a value equal to `+core+` or `+recommended+`.
 --
 [.component,class=step]
 --
 If `+properties.wmo:dataPolicy+` is equal to `+recommended+`, check for the existence of at least one `+links+` item containing a `+license+` or `+copyright+` link relation (`+rel+`).
+--
 =====
+
 ====

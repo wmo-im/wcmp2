@@ -89,8 +89,8 @@ The table below provides an overview of the set of properties that may be includ
 |The date that the record was updated
 
 |``properties.wmo:dataPolicy``
-|**required**
-|WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]
+|**optional**
+|WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9].  **Required** for datasets.
 
 |``links``
 |**required**
@@ -613,7 +613,7 @@ include::../recommendations/core/REC_record_update_date.adoc[]
 
 ==== Properties / WMO Data Policy
 
-The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]. The codelist values are `+core+` or `+recommended+`.
+The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]. The codelist values are `+core+` or `+recommended+`.  `+wmo:dataPolicy+` is required if the record describes a dataset.
 
 include::../requirements/core/REQ_data_policy.adoc[]
 include::../recommendations/core/PER_data_policy.adoc[]

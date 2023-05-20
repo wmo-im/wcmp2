@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/data_policy*
-^|A |A WCMP record SHALL provide exactly one `+properties.wmo:dataPolicy+` property.
+^|A |If a WCMP record's type (`+properties.type+`) is a dataset (i.e. `+dataset+`), the record SHALL provide exactly one `+properties.wmo:dataPolicy+` property.
 ^|B |A WCMP record's `+properties.wmo:dataPolicy+` property SHALL have a value of either `+core+` or `+recommended+`.
 ^|C |If a WCMP record's `+properties.wmo:dataPolicy+` is equal to `+recommended+`, any data licensing SHALL be provided by at least one `+links+` item with link relations `(+rel+`) of `+license+`.
 ^|D |If a WCMP record's `+properties.wmo:dataPolicy+` is equal to `+recommended+`, any copyright SHALL be provided by at least one `+links+` item with link relations `(+rel+`) of `+copyright+`.
