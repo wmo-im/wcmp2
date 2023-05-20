@@ -38,10 +38,6 @@ include::./core/ATS_test_title.adoc[]
 
 include::./core/ATS_test_description.adoc[]
 
-==== Topic Hierarchy
-
-include::./core/ATS_test_topic_hierarchy.adoc[]
-
 ==== Providers
 
 include::./core/ATS_test_providers.adoc[]

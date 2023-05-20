@@ -32,8 +32,6 @@ properties:
       - description
       - providers
       - created
-      - wmo:topicHierarchy
-      - wmo:dataPolicy
     properties:
       type:
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
@@ -56,9 +54,6 @@ properties:
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
       updated:
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
-      wmo:topicHierarchy:
-        type: string
-        description: WIS2 topic hierarchy classification of the dataset
       wmo:dataPolicy:
         type: string
         description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
