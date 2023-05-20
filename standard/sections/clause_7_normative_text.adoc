@@ -141,7 +141,9 @@ include::../requirements/core/REQ_conformance.adoc[]
 
 ==== Properties / Type
 
-The `+type+` property identifies the type of resource that the metadata record describes using values from [codelist]. Most metadata records will be set to `dataset`. 
+The `+type+` property identifies the type of resource that the metadata record describes using values from [codelist]. While most metadata records will be set to `dataset`,
+WCMP can also describe services and processes. See the resource type codelist footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv] for
+allowed values.
 
 include::../requirements/core/REQ_type.adoc[]
 

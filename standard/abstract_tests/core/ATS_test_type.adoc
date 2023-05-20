@@ -9,7 +9,11 @@ test-purpose:: Validate that a WCMP record provides valid resource type informat
 =====
 [.component,class=step]
 --
-Check for the existence of a valid `+properties.type+` property in the WCMP record.
+Check for the existence of a `+properties.type+` property in the WCMP record.
+--
+[.component,class=step]
+--
+Check that the value of `+properties.type+` is part of the WCMP resource type codelist.
 --
 =====
 ====
