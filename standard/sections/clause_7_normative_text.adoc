@@ -22,83 +22,83 @@ The table below provides an overview of the set of properties that may be includ
 
 |``id``
 |**required**
-|A unique identifier to the dataset
+|A unique identifier to the dataset (see <<_identifier>>)
 
 |``type``
 |**required**
-|A fixed value denoting the record as a GeoJSON ``Feature``
+|A fixed value denoting the record as a GeoJSON ``Feature`` (see <<_validation>>)
 
 |``conformsTo``
 |**required**
-|The version of WCMP associated that the record conforms to
+|The version of WCMP associated that the record conforms to (see <<_conformance_2>>)
 
 |``properties.type``
 |**required**
-|The resource type described by the record
+|The resource type described by the record (see <<_properties_type>>)
 
 |``properties.title``
 |**required**
-|A human-readable name for a given dataset
+|A human-readable name for a given dataset (see <<_properties_title>>)
 
 |``properties.description``
 |**required**
-|A free-text summary description of the dataset
+|A free-text summary description of the dataset (see <<_properties_description>>)
 
 |``properties.keywords``
 |optional
-|Keywords, tags, key phrases, or classification codes
+|Keywords, tags, key phrases, or classification codes (see <<_properties_keywords>>)
 
 |``properties.themes``
 |**required**
-|Classifiers, categories and controlled vocabularies
+|Classifiers, categories and controlled vocabularies (see <<_properties_themes>>)
 
 |``geometry``
 |**required**
-|Geospatial location associated with the dataset, in a geographic coordinate reference system
+|Geospatial location associated with the dataset, in a geographic coordinate reference system (see <<_geospatial_extent>>)
 
 |``time``
 |**required**
-|Temporal extent associated with a dataset
+|Temporal extent associated with a dataset (see <<_temporal_extent>>)
 
 |``additionalExtents.spatial``
 |optional
-|Additional geospatial extents in other coordinate reference systems
+|Additional geospatial extents in other coordinate reference systems (see <<_additional_geospatial_extents>>)
 
 |``additionalExtents.temporal``
 |optional
-|Additional time instants or periods
+|Additional time instants or periods (see <<_additional_temporal_extents>>)
 
 |``properties.contacts``
 |**required**
-|Contact information for the dataset
+|Contact information for the dataset (see <<_properties_contacts>>)
 
 |``properties.version``
 |optional
-|Version or edition of the dataset
+|Version or edition of the dataset (see <<_properties_version>>)
 
 |``properties.externalIds``
 |optional
-|Persistent identifiers or handles for the dataset
+|Persistent identifiers or handles for the dataset (see <<_properties_persistent_identifiers>>)
 
 |``properties.created``
 |**required**
-|The date that the record was created
+|The date that the record was created (see <<_properties_record_creation_date>>)
 
 |``properties.updated``
 |optional
-|The date that the record was updated
+|The date that the record was updated (see <<_properties_record_update_date>>)
 
 |``properties.wmo:dataPolicy``
-|**optional**
-|WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9].  **Required** for datasets.
+|**conditional**
+|WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9].  **Required** for datasets (see <<_properties_wmo_data_policy>>)
 
 |``links``
 |**required**
-|Online linkages to data retrieval or additional resources associated with the dataset
+|Online linkages to data retrieval or additional resources associated with the dataset (see <<distribution>>)
 
 |``properties.*``
 |optional
-|Additional properties as required
+|Additional properties as required (see <<_additional_properties>>)
 
 |===
 
@@ -459,7 +459,7 @@ include::../requirements/core/REQ_contacts.adoc[]
       "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
       "positionName": "National Inquiry Response Team",
       "phones": [{
-        "value": "+01-819-997-2800"
+        "value": "+18199972800"
       }],
       "emails": [{
         "value":"enviroinfo@ec.gc.ca"
@@ -474,7 +474,6 @@ include::../requirements/core/REQ_contacts.adoc[]
       "links": [{
         "href": "https://www.canada.ca/en/environment-climate-change.html"
       }],
-      "hoursOfService": "0700h - 1500h EST",
       "contactInstructions": "email",
       "roles": ["pointOfContact", "originator"]
   }]
