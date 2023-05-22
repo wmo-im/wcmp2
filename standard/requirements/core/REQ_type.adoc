@@ -3,6 +3,6 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/type*
 ^|A |A WCMP record SHALL provide a `+properties.type+` property.
-^|B |A WCMP record's `+properties.type+` property SHALL provide a valid resource type from the WCMP codelist.
+^|B |A WCMP record's `+properties.type+` property SHALL provide a valid resource type from the WCMP resource type codelist.
 
 |===

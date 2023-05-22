@@ -1,9 +1,0 @@
-[[req_core_data_policy_conditions]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/core/data_policy_conditions*
-^|A |A WCMP record's `+properties.wmo:dataPolicy.additionalConditions+` SHALL enumerate one to many objects to describe the conditions for the resource.
-^|B |The `+properties.wmo:dataPolicy.additionalConditions.name+` property SHALL identify the condition applied to the dataset.
-^|C |The `+properties.wmo:dataPolicy.additionalConditions.scheme+` property SHALL be used to identify a codelist or controlled vocabulary to which the condition name applies.
-^|D |If there are *no* additional conditions, the fixed value of `+none+` SHALL be provided `+properties.wmo:dataPolicy.additionalConditions.name+` without any scheme identified.
-|===

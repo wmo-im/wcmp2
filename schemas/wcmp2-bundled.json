@@ -31,31 +31,48 @@
       ]
     },
     "time": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
+      "type": "object",
+      "nullable": true,
+      "properties": {
+        "date": {
           "type": "string",
-          "format": "date-time"
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
         },
-        {
+        "timestamp": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+        },
+        "interval": {
           "type": "array",
           "minItems": 2,
           "maxItems": 2,
           "items": {
             "oneOf": [
               {
-                "type": "null"
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
               },
               {
                 "type": "string",
-                "format": "date-time"
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  ".."
+                ]
               }
             ]
           }
+        },
+        "resolution": {
+          "type": "string",
+          "description": "Minimum time period resolvable in the dataset, as an ISO 8601 duration",
+          "example": [
+            "P1D"
+          ]
         }
-      ]
+      }
     },
     "geometry": {
       "oneOf": [
@@ -539,7 +556,7 @@
               }
             },
             "values": {
-              "description": "Provides information about the time intervals available in the collection \nas ISO8601 compliant dates, either as a time range specified \nas start time / end time  (e.g. 2017-11-14T09:00Z/2017-11-14T21:00Z)  or\nas number of repeatitions / end time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) \nor a list of time values (e.g.\n2017-11-14T09:00Z,2017-11-14T12:00Z,2017-11-14T15:00Z,2017-11-14T18:00Z,2017-11-14T21:00Z)",
+              "description": "Provides information about the time intervals available in the collection \nas ISO8601 compliant dates, either as a time range specified \nas start time / end time  (e.g. 2017-11-14T09:00Z/2017-11-14T21:00Z)  or\nas number of repetitions / start time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) \nor a list of time values (e.g.\n2017-11-14T09:00Z,2017-11-14T12:00Z,2017-11-14T15:00Z,2017-11-14T18:00Z,2017-11-14T21:00Z)",
               "type": "array",
               "minItems": 1,
               "items": {
@@ -611,7 +628,7 @@
               }
             },
             "values": {
-              "description": "Vertical level intervals that data in the collection is available at \nthese can be defined as follows:\nmin level / max level (e.g. \"2/100\") or \nas number of repeatitions / min level / interval (e.g.\"R5/100/50\") \nor a list of vertical levels (e.g. \"2\",10,\"80\",\"100\"}\nThe value `null` is supported and indicates an open vertical interval.",
+              "description": "Vertical level intervals that data in the collection is available at \nthese can be defined as follows:\nmin level / max level (e.g. \"2/100\") or \nas number of repetitions / start level / interval (e.g.\"R5/100/50\") \nor a list of vertical levels (e.g. \"2\",10,\"80\",\"100\"}\nThe value `null` is supported and indicates an open vertical interval.",
               "type": "array",
               "minItems": 1,
               "items": {
@@ -653,15 +670,13 @@
         "type",
         "title",
         "description",
-        "providers",
-        "created",
-        "wmo:topicHierarchy",
-        "wmo:dataPolicy"
+        "contacts",
+        "created"
       ],
       "properties": {
         "type": {
           "type": "string",
-          "description": "The nature or genre of the resource. The value should be a code, convenient for filtering the records. Where available, a link to the canonical URI of the record type resource will be added to the 'links' property.",
+          "description": "The nature or genre of the resource. The value should be a code, convenient for filtering records. Where available, a link to the canonical URI of the record type resource will be added to the 'links' property.",
           "maxLength": 64
         },
         "title": {
@@ -681,15 +696,23 @@
         },
         "themes": {
           "type": "array",
-          "description": "A knowledge organization system used to classify the resource.",
+          "minItems": 1,
           "items": {
             "type": "object",
+            "required": [
+              "concepts",
+              "scheme"
+            ],
             "properties": {
               "concepts": {
                 "type": "array",
-                "description": "One or more entity/concept identifers from this knowledge system. it is recommended that a resolvable URI be used for each entity/concept identifier.",
+                "description": "One or more entity/concept identifiers from this knowledge system. it is recommended that a resolvable URI be used for each entity/concept identifier.",
+                "minItems": 1,
                 "items": {
                   "type": "object",
+                  "required": [
+                    "id"
+                  ],
                   "properties": {
                     "id": {
                       "type": "string",
@@ -708,81 +731,46 @@
                       "format": "uri",
                       "description": "A URI providing further description of the concept."
                     }
-                  },
-                  "required": [
-                    "id"
-                  ]
+                  }
                 }
               },
               "scheme": {
                 "type": "string",
-                "description": "An identifier for the knowledge organization system used to classify the resource.  It is recommended that the identifier be a resolvable URI."
+                "description": "An identifier for the knowledge organization system used to classify the resource.  It is recommended that the identifier be a resolvable URI.  The list of schemes used in a searchable catalogue can be determined by inspecting the server's OpenAPI document or, if the server implements CQL2, by exposing a queryable (e.g. named `scheme`) and enumerating the list of schemes in the queryable's schema definition."
               }
             }
           }
         },
-        "providers": {
+        "contacts": {
           "type": "array",
+          "minItems": 1,
           "items": {
-            "oneOf": [
-              {
-                "type": "object",
-                "description": "A reference to information about the responsible party.  For example,\na link to a VCard (see https://www.w3.org/TR/vcard-rdf/).",
-                "properties": {
-                  "url": {
-                    "type": "string",
-                    "format": "uri",
-                    "description": "A URI providing a link to the contact."
-                  },
-                  "roles": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "description": "The function performed by the responsible party. Suggested codelists include the STAC Collection\nProvider roles as well as ISO 19115.",
-                      "required": [
-                        "name"
-                      ],
-                      "properties": {
-                        "name": {
-                          "type": "string"
-                        },
-                        "authority": {
-                          "type": "string",
-                          "format": "uri"
-                        }
-                      }
-                    }
-                  }
-                },
-                "required": [
-                  "url"
-                ]
+            "type": "object",
+            "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "identifier": {
+                "type": "string",
+                "description": "A value uniquely identifying a contact (individual or organization)"
               },
-              {
-                "type": "object",
-                "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
-                "required": [
-                  "name"
-                ],
-                "properties": {
-                  "identifier": {
-                    "type": "string",
-                    "description": "A value uniquely identifying a party (individual or organization)"
-                  },
-                  "name": {
-                    "type": "string",
-                    "description": "The name of the organization or the individual."
-                  },
-                  "positionName": {
-                    "type": "string",
-                    "description": "Role or position of the responsible person."
-                  },
-                  "organization": {
-                    "type": "string",
-                    "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
-                  },
-                  "logo": {
-                    "description": "Graphic identifying a party",
+              "name": {
+                "type": "string",
+                "description": "The name of the organization or the individual."
+              },
+              "positionName": {
+                "type": "string",
+                "description": "The name of the role or position of the responsible person taken from the organization's formal organizational hierarchy or chart."
+              },
+              "organization": {
+                "type": "string",
+                "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
+              },
+              "logo": {
+                "description": "Graphic identifying a contact. The link relation should be `icon` and the media type should be an image media type.",
+                "allOf": [
+                  {
                     "type": "object",
                     "required": [
                       "href"
@@ -823,139 +811,198 @@
                       }
                     }
                   },
-                  "contactInfo": {
+                  {
                     "type": "object",
-                    "description": "Information required to enable contact with the responsible party.",
+                    "required": [
+                      "rel",
+                      "type"
+                    ],
                     "properties": {
-                      "phone": {
-                        "type": "object",
-                        "description": "Telephone numbers at which contact can be made.",
-                        "patternProperties": {
-                          "^.*": {
-                            "type": "string",
-                            "description": "The key name indicates the type of phone number (e.g. home,\nwork, fax, etc.). The value is the phone number itself."
-                          }
-                        }
-                      },
-                      "email": {
-                        "type": "object",
-                        "description": "Email address at which contact can be made.",
-                        "patternProperties": {
-                          "^.*": {
-                            "type": "string",
-                            "description": "The key name indicates the type of email address (e.g. home,\nwork, etc.). The value of the email address itself.",
-                            "format": "email"
-                          }
-                        }
-                      },
-                      "address": {
-                        "type": "object",
-                        "description": "Physical location at which contact can be made.",
-                        "patternProperties": {
-                          "^.*": {
-                            "type": "object",
-                            "description": "The key name indicates the type of address (e.g. office,\nhome, etc.). The value is the address itself.",
-                            "properties": {
-                              "deliveryPoint": {
-                                "type": "string",
-                                "description": "Address line for the location."
-                              },
-                              "city": {
-                                "type": "string",
-                                "description": "City for the location."
-                              },
-                              "administrativeArea": {
-                                "type": "string",
-                                "description": "State or province of the location."
-                              },
-                              "postalCode": {
-                                "type": "string",
-                                "description": "ZIP or other postal code."
-                              },
-                              "country": {
-                                "type": "string",
-                                "description": "Country of the physical address."
-                              }
-                            }
-                          }
-                        }
-                      },
-                      "url": {
-                        "description": "On-line information about the responsible party.",
-                        "type": "object",
-                        "required": [
-                          "href"
-                        ],
-                        "properties": {
-                          "href": {
-                            "type": "string",
-                            "format": "url"
-                          },
-                          "rel": {
-                            "type": "string"
-                          },
-                          "type": {
-                            "type": "string"
-                          },
-                          "hreflang": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          },
-                          "templated": {
-                            "type": "boolean"
-                          },
-                          "variables": {
-                            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                            "type": "object"
-                          },
-                          "created": {
-                            "type": "string",
-                            "description": "Date of creation of the resource pointed to by the link.",
-                            "format": "date-time"
-                          },
-                          "updated": {
-                            "type": "string",
-                            "description": "Most recent date on which the resource pointed to by the link was changed.",
-                            "format": "date-time"
-                          }
-                        }
-                      },
-                      "hoursOfService": {
-                        "type": "string",
-                        "description": "Time period (including time zone) when the resposible party\ncan be contacted."
-                      },
-                      "contactInstructions": {
-                        "type": "string",
-                        "description": "Supplemental instructions on how or when to contact the\nresponsible party."
+                      "rel": {
+                        "enum": [
+                          "icon"
+                        ]
                       }
                     }
-                  },
-                  "roles": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "description": "The function performed by the responsible party. Suggested codelists include the STAC Collection\nProvider roles as well as ISO 19115.",
-                      "required": [
-                        "name"
-                      ],
-                      "properties": {
-                        "name": {
-                          "type": "string"
-                        },
-                        "authority": {
-                          "type": "string",
-                          "format": "uri"
-                        }
+                  }
+                ]
+              },
+              "phones": {
+                "type": "array",
+                "description": "Telephone numbers at which contact can be made.",
+                "items": {
+                  "type": "object",
+                  "required": ["value"],
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "description": "The value is the phone number itself.",
+                      "pattern": "^\\+[1-9]{1}[0-9]{3,14}$"
+                    },
+                    "roles": {
+                      "description": "The type of phone number (e.g. home, work, fax, etc.).",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
                       }
                     }
                   }
                 }
+              },
+              "emails": {
+                "type": "array",
+                "description": "Email addresses at which contact can be made.",
+                "items": {
+                  "type": "object",
+                  "required": ["value"],
+                  "properties": {
+                    "value": {
+                      "type": "string",
+                      "description": "The value is the email number itself.",
+                      "format": "email"
+                    },
+                    "roles": {
+                      "description": "The type of email (e.g. home, work, etc.).",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "addresses": {
+                "type": "array",
+                "description": "Physical location at which contact can be made.",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "deliveryPoint": {
+                      "type": "array",
+                      "description": "Address lines for the location.",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "city": {
+                      "type": "string",
+                      "description": "City for the location."
+                    },
+                    "administrativeArea": {
+                      "type": "string",
+                      "description": "State or province of the location."
+                    },
+                    "postalCode": {
+                      "type": "string",
+                      "description": "ZIP or other postal code."
+                    },
+                    "country": {
+                      "type": "string",
+                      "description": "Country of the physical address."
+                    },
+                    "roles": {
+                      "description": "The type of address (e.g. office, home, etc.).",
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              },
+              "links": {
+                "type": "array",
+                "description": "On-line information about the contact.",
+                "items": {
+                  "allOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "href"
+                      ],
+                      "properties": {
+                        "href": {
+                          "type": "string",
+                          "format": "url"
+                        },
+                        "rel": {
+                          "type": "string"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "hreflang": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "templated": {
+                          "type": "boolean"
+                        },
+                        "variables": {
+                          "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
+                          "type": "object"
+                        },
+                        "created": {
+                          "type": "string",
+                          "description": "Date of creation of the resource pointed to by the link.",
+                          "format": "date-time"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "description": "Most recent date on which the resource pointed to by the link was changed.",
+                          "format": "date-time"
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "hoursOfService": {
+                "type": "object",
+                "description": "Time period when the contact can be contacted.  The keys are the numbers 1 to 7 indicating the day of the week starting with Monday as day 1 as per ISO-8601.  Associated with each key/day is an array of time intervals indicating the periods of open service.  There is also a closed member to indicate days of the year when service is closed (e.g. public holidays).",
+                "patternProperties": {
+                  "^[1-7]$": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "time",
+                        "minItems": 2,
+                        "maxItems": 2
+                      }
+                    }
+                  },
+                  "closed": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "date"
+                    }
+                  }
+                }
+              },
+              "contactInstructions": {
+                "type": "string",
+                "description": "Supplemental instructions on how or when to contact the\nresponsible party."
+              },
+              "roles": {
+                "description": "The set of named duties, job functions and/or permissions associated with this contact. (e.g. developer, administrator, etc.).",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
-            ]
-          },
-          "description": "A list of providers qualified by their role in association to the record."
+            }
+          }
         },
         "version": {
           "type": "string",
@@ -991,507 +1038,19 @@
           "description": "The most recent date on which the record was changed.",
           "format": "date-time"
         },
-        "wmo:topicHierarchy": {
-          "type": "string",
-          "description": "WIS2 topic hierarchy classification of the dataset"
-        },
         "wmo:dataPolicy": {
-          "type": "object",
+          "type": "string",
           "description": "The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].",
-          "properties": {
-            "name": {
-              "type": "string",
-              "description": "The WMO Unified Data Policy identifier (`core` or `recommended`).",
-              "enum": [
-                "core",
-                "recommended"
-              ]
-            },
-            "additionalConditions": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "description": "Additional conditions applied to recommended data",
-                "properties": {
-                  "name": {
-                    "type": "string",
-                    "description": "Name of additional condition, from a codelist, or the string value `none` if there are no additional conditions on a recommended dataset."
-                  },
-                  "scheme": {
-                    "type": "string",
-                    "description": "codelist or controlled vocabulary to which the condition applies to."
-                  },
-                  "link": {
-                    "$schema": "https://json-schema.org/draft/2020-12/schema",
-                    "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml",
-                    "title": "WCMP link object definition",
-                    "description": "WCMP link object definition",
-                    "required": [
-                      "href"
-                    ],
-                    "properties": {
-                      "href": {
-                        "type": "string",
-                        "format": "url"
-                      },
-                      "rel": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "string"
-                      },
-                      "hreflang": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "templated": {
-                        "type": "boolean"
-                      },
-                      "variables": {
-                        "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                        "type": "object"
-                      },
-                      "created": {
-                        "type": "string",
-                        "description": "Date of creation of the resource pointed to by the link.",
-                        "format": "date-time"
-                      },
-                      "updated": {
-                        "type": "string",
-                        "description": "Most recent date on which the resource pointed to by the link was changed.",
-                        "format": "date-time"
-                      },
-                      "channel": {
-                        "type": "string",
-                        "description": "topic to subscribe to for broker workflow"
-                      },
-                      "security": {
-                        "type": "object",
-                        "patternProperties": {
-                          "^[a-zA-Z0-9\\.\\-_]+$": {
-                            "oneOf": [
-                              {
-                                "type": "object",
-                                "required": [
-                                  "$ref"
-                                ],
-                                "patternProperties": {
-                                  "^\\$ref$": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  }
-                                }
-                              },
-                              {
-                                "oneOf": [
-                                  {
-                                    "type": "object",
-                                    "required": [
-                                      "type",
-                                      "name",
-                                      "in"
-                                    ],
-                                    "properties": {
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "apiKey"
-                                        ]
-                                      },
-                                      "name": {
-                                        "type": "string"
-                                      },
-                                      "in": {
-                                        "type": "string",
-                                        "enum": [
-                                          "header",
-                                          "query",
-                                          "cookie"
-                                        ]
-                                      },
-                                      "description": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "patternProperties": {
-                                      "^x-": {}
-                                    },
-                                    "additionalProperties": false
-                                  },
-                                  {
-                                    "type": "object",
-                                    "required": [
-                                      "scheme",
-                                      "type"
-                                    ],
-                                    "properties": {
-                                      "scheme": {
-                                        "type": "string"
-                                      },
-                                      "bearerFormat": {
-                                        "type": "string"
-                                      },
-                                      "description": {
-                                        "type": "string"
-                                      },
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "http"
-                                        ]
-                                      }
-                                    },
-                                    "patternProperties": {
-                                      "^x-": {}
-                                    },
-                                    "additionalProperties": false,
-                                    "oneOf": [
-                                      {
-                                        "description": "Bearer",
-                                        "properties": {
-                                          "scheme": {
-                                            "enum": [
-                                              "bearer"
-                                            ]
-                                          }
-                                        }
-                                      },
-                                      {
-                                        "description": "Non Bearer",
-                                        "not": {
-                                          "required": [
-                                            "bearerFormat"
-                                          ]
-                                        },
-                                        "properties": {
-                                          "scheme": {
-                                            "not": {
-                                              "enum": [
-                                                "bearer"
-                                              ]
-                                            }
-                                          }
-                                        }
-                                      }
-                                    ]
-                                  },
-                                  {
-                                    "type": "object",
-                                    "required": [
-                                      "type",
-                                      "flows"
-                                    ],
-                                    "properties": {
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "oauth2"
-                                        ]
-                                      },
-                                      "flows": {
-                                        "type": "object",
-                                        "properties": {
-                                          "implicit": {
-                                            "type": "object",
-                                            "required": [
-                                              "authorizationUrl",
-                                              "scopes"
-                                            ],
-                                            "properties": {
-                                              "authorizationUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "refreshUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "scopes": {
-                                                "type": "object",
-                                                "additionalProperties": {
-                                                  "type": "string"
-                                                }
-                                              }
-                                            },
-                                            "patternProperties": {
-                                              "^x-": {}
-                                            },
-                                            "additionalProperties": false
-                                          },
-                                          "password": {
-                                            "type": "object",
-                                            "required": [
-                                              "tokenUrl"
-                                            ],
-                                            "properties": {
-                                              "tokenUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "refreshUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "scopes": {
-                                                "type": "object",
-                                                "additionalProperties": {
-                                                  "type": "string"
-                                                }
-                                              }
-                                            },
-                                            "patternProperties": {
-                                              "^x-": {}
-                                            },
-                                            "additionalProperties": false
-                                          },
-                                          "clientCredentials": {
-                                            "type": "object",
-                                            "required": [
-                                              "tokenUrl"
-                                            ],
-                                            "properties": {
-                                              "tokenUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "refreshUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "scopes": {
-                                                "type": "object",
-                                                "additionalProperties": {
-                                                  "type": "string"
-                                                }
-                                              }
-                                            },
-                                            "patternProperties": {
-                                              "^x-": {}
-                                            },
-                                            "additionalProperties": false
-                                          },
-                                          "authorizationCode": {
-                                            "type": "object",
-                                            "required": [
-                                              "authorizationUrl",
-                                              "tokenUrl"
-                                            ],
-                                            "properties": {
-                                              "authorizationUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "tokenUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "refreshUrl": {
-                                                "type": "string",
-                                                "format": "uri-reference"
-                                              },
-                                              "scopes": {
-                                                "type": "object",
-                                                "additionalProperties": {
-                                                  "type": "string"
-                                                }
-                                              }
-                                            },
-                                            "patternProperties": {
-                                              "^x-": {}
-                                            },
-                                            "additionalProperties": false
-                                          }
-                                        },
-                                        "patternProperties": {
-                                          "^x-": {}
-                                        },
-                                        "additionalProperties": false
-                                      },
-                                      "description": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "patternProperties": {
-                                      "^x-": {}
-                                    },
-                                    "additionalProperties": false
-                                  },
-                                  {
-                                    "type": "object",
-                                    "required": [
-                                      "type",
-                                      "openIdConnectUrl"
-                                    ],
-                                    "properties": {
-                                      "type": {
-                                        "type": "string",
-                                        "enum": [
-                                          "openIdConnect"
-                                        ]
-                                      },
-                                      "openIdConnectUrl": {
-                                        "type": "string",
-                                        "format": "uri-reference"
-                                      },
-                                      "description": {
-                                        "type": "string"
-                                      }
-                                    },
-                                    "patternProperties": {
-                                      "^x-": {}
-                                    },
-                                    "additionalProperties": false
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        }
-                      },
-                      "distribution": {
-                        "type": "object",
-                        "description": "the additional information qualifying the service and allowing to build and display the \"access\" information in a portal",
-                        "properties": {
-                          "availableFormats": {
-                            "type": "array",
-                            "items": {
-                              "type": "object",
-                              "properties": {
-                                "name": {
-                                  "type": "string",
-                                  "description": "available format short name."
-                                },
-                                "description": {
-                                  "type": "string",
-                                  "description": "the individual format description to allow building the portal information"
-                                },
-                                "numberOFiles": {
-                                  "type": "string",
-                                  "description": "typical number of files disseminated by the distribution mechanism over a period of time"
-                                },
-                                "typicalFilesize": {
-                                  "type": "string",
-                                  "description": "size of a typical individual file (e.g. KB, MB, GB)"
-                                },
-                                "typicalFilename": {
-                                  "type": "string",
-                                  "description": "example filename"
-                                },
-                                "samples": {
-                                  "type": "object",
-                                  "description": "links of samples that can be openly accessed by users to provide a better understanding of the data",
-                                  "items": {
-                                    "type": "object",
-                                    "required": [
-                                      "href"
-                                    ],
-                                    "properties": {
-                                      "href": {
-                                        "type": "string",
-                                        "format": "url"
-                                      },
-                                      "rel": {
-                                        "type": "string"
-                                      },
-                                      "type": {
-                                        "type": "string"
-                                      },
-                                      "hreflang": {
-                                        "type": "string"
-                                      },
-                                      "title": {
-                                        "type": "string"
-                                      },
-                                      "templated": {
-                                        "type": "boolean"
-                                      },
-                                      "variables": {
-                                        "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                                        "type": "object"
-                                      },
-                                      "created": {
-                                        "type": "string",
-                                        "description": "Date of creation of the resource pointed to by the link.",
-                                        "format": "date-time"
-                                      },
-                                      "updated": {
-                                        "type": "string",
-                                        "description": "Most recent date on which the resource pointed to by the link was changed.",
-                                        "format": "date-time"
-                                      }
-                                    }
-                                  }
-                                },
-                                "documentation": {
-                                  "type": "array",
-                                  "description": "links to the associated documentation available for this format when applicable",
-                                  "items": {
-                                    "type": "object",
-                                    "required": [
-                                      "href"
-                                    ],
-                                    "properties": {
-                                      "href": {
-                                        "type": "string",
-                                        "format": "url"
-                                      },
-                                      "rel": {
-                                        "type": "string"
-                                      },
-                                      "type": {
-                                        "type": "string"
-                                      },
-                                      "hreflang": {
-                                        "type": "string"
-                                      },
-                                      "title": {
-                                        "type": "string"
-                                      },
-                                      "templated": {
-                                        "type": "boolean"
-                                      },
-                                      "variables": {
-                                        "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                                        "type": "object"
-                                      },
-                                      "created": {
-                                        "type": "string",
-                                        "description": "Date of creation of the resource pointed to by the link.",
-                                        "format": "date-time"
-                                      },
-                                      "updated": {
-                                        "type": "string",
-                                        "description": "Most recent date on which the resource pointed to by the link was changed.",
-                                        "format": "date-time"
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "required": [
-                  "name"
-                ]
-              },
-              "minItems": 1
-            }
-          },
-          "required": [
-            "name"
+          "enum": [
+            "core",
+            "recommended"
           ]
         }
       }
     },
     "links": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml",

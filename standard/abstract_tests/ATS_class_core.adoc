@@ -38,13 +38,13 @@ include::./core/ATS_test_title.adoc[]
 
 include::./core/ATS_test_description.adoc[]
 
-==== Topic Hierarchy
+==== Themes
 
-include::./core/ATS_test_topic_hierarchy.adoc[]
+include::./core/ATS_test_themes.adoc[]
 
-==== Providers
+==== Contacts
 
-include::./core/ATS_test_providers.adoc[]
+include::./core/ATS_test_contacts.adoc[]
 
 ==== Record Creation Date
 

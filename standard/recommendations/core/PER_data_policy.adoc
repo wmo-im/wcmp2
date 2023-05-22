@@ -1,0 +1,6 @@
+[[per_core_data_policy]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/core/data_policy*
+^|A |A WCMP record whose data policy is `+core +` MAY provide attribution licensing as needed.
+|===

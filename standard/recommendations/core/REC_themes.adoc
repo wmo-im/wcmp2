@@ -1,6 +1,0 @@
-[[rec_core_themes]]
-[width="90%",cols="2,6a"]
-|===
-^|*Recommendation {counter:rec-id}* |*/rec/core/themes*
-^|A |A WCMP record SHOULD use themes/concepts when describing a dataset based on an associated controlled vocabulary.
-|===

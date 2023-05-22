@@ -1,0 +1,8 @@
+[[req_core_contacts]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/contacts*
+^|A |A WCMP record SHALL provide a `+properties.contacts+` property.
+^|B |A WCMP record `+properties.contacts+` property SHALL provide at least TWO contacts (as multiple contact objects or a single contact object with multiple roles) based on the metadata point of contact and the originator of the data.
+
+|===
