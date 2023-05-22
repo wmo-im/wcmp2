@@ -29,3 +29,5 @@ a|Requirement A.1.1. Validation: Validate that a WCMP record is valid to the aut
 === Guidance to score well on this assessment
 
 Use WCMP templates and/or tools to generate the metadata record (e.g. pygeometafootnote:[https://github.com/geopython/pygeometa]).
+
+* Generate good WCMP2 from scratch and do not simply transform old metadata.
