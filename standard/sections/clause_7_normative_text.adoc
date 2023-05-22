@@ -589,9 +589,7 @@ The `+wmo:dataPolicy+` property is a codelist that identifies the classification
 include::../requirements/core/REQ_data_policy.adoc[]
 include::../recommendations/core/PER_data_policy.adoc[]
 
-Licensing and copyright are expressed via the `+links+` property (see <<distribution>>, providing access conditions and license details that apply when the dataset is classified as `+recommended+`.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
-
-Note that core data can contain attribution licensing (such as Creative Commons footnote:[https://creativecommons.org]) as needed.
+Licensing and copyright are expressed via the links property (see distribution section), providing access, license and attribution details as required. Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
 
 .Example: Core Data
 
