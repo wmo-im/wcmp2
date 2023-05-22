@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-02-22</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-05-22</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-02-22</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-05-22</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -544,17 +544,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_properties_title">7.1.6. Properties / Title</a></li>
 <li><a href="#_properties_description">7.1.7. Properties / Description</a></li>
 <li><a href="#_properties_keywords">7.1.8. Properties / Keywords</a></li>
-<li><a href="#_topic_hierarchy">7.1.9. Topic Hierarchy</a></li>
-<li><a href="#_properties_themes">7.1.10. Properties / Themes</a></li>
-<li><a href="#_geospatial_and_temporal_extents">7.1.11. Geospatial and Temporal Extents</a></li>
-<li><a href="#_properties_providers">7.1.12. Properties / Providers</a></li>
-<li><a href="#_properties_version">7.1.13. Properties / Version</a></li>
-<li><a href="#_properties_persistent_identifiers">7.1.14. Properties / Persistent Identifiers</a></li>
-<li><a href="#_properties_record_creation_date">7.1.15. Properties / Record Creation Date</a></li>
-<li><a href="#_properties_record_update_date">7.1.16. Properties / Record Update Date</a></li>
-<li><a href="#_properties_wmo_data_policy">7.1.17. Properties / WMO Data Policy</a></li>
-<li><a href="#distribution">7.1.18. Distribution Information</a></li>
-<li><a href="#_additional_properties">7.1.19. Additional Properties</a></li>
+<li><a href="#_properties_themes">7.1.9. Properties / Themes</a></li>
+<li><a href="#_geospatial_and_temporal_extents">7.1.10. Geospatial and Temporal Extents</a></li>
+<li><a href="#_properties_contacts">7.1.11. Properties / Contacts</a></li>
+<li><a href="#_properties_version">7.1.12. Properties / Version</a></li>
+<li><a href="#_properties_persistent_identifiers">7.1.13. Properties / Persistent Identifiers</a></li>
+<li><a href="#_properties_record_creation_date">7.1.14. Properties / Record Creation Date</a></li>
+<li><a href="#_properties_record_update_date">7.1.15. Properties / Record Update Date</a></li>
+<li><a href="#_properties_wmo_data_policy">7.1.16. Properties / WMO Data Policy</a></li>
+<li><a href="#distribution">7.1.17. Distribution Information</a></li>
+<li><a href="#_additional_properties">7.1.18. Additional Properties</a></li>
 </ul>
 </li>
 </ul>
@@ -571,8 +570,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_temporal_extent_2">A.1.6. Temporal Extent</a></li>
 <li><a href="#_title">A.1.7. Title</a></li>
 <li><a href="#_description">A.1.8. Description</a></li>
-<li><a href="#_topic_hierarchy_2">A.1.9. Topic Hierarchy</a></li>
-<li><a href="#_providers">A.1.10. Providers</a></li>
+<li><a href="#_themes">A.1.9. Themes</a></li>
+<li><a href="#_contacts">A.1.10. Contacts</a></li>
 <li><a href="#_record_creation_date">A.1.11. Record Creation Date</a></li>
 <li><a href="#_wmo_data_policy">A.1.12. WMO Data Policy</a></li>
 </ul>
@@ -1349,102 +1348,102 @@ of a WCMP discovery metadata record.</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>id</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A unique identifier to the dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A unique identifier to the dataset (see <a href="#_identifier">Identifier</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>type</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A fixed value denoting the record as a GeoJSON <code>Feature</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A fixed value denoting the record as a GeoJSON <code>Feature</code> (see <a href="#_validation">Validation</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>conformsTo</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WCMP associated that the record conforms to</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WCMP associated that the record conforms to (see <a href="#_conformance_2">Conformance</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.type</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The resource type described by the record</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The resource type described by the record (see <a href="#_properties_type">Properties / Type</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.title</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A human-readable name for a given dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A human-readable name for a given dataset (see <a href="#_properties_title">Properties / Title</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.description</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A free-text summary description of the dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A free-text summary description of the dataset (see <a href="#_properties_description">Properties / Description</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.keywords</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Keywords, tags, key phrases, or classification codes</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Keywords, tags, key phrases, or classification codes (see <a href="#_properties_keywords">Properties / Keywords</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.themes</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Classifiers, categories and controlled vocabularies</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Classifiers, categories and controlled vocabularies (see <a href="#_properties_themes">Properties / Themes</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>geometry</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Geospatial location associated with the dataset, in a geographic coordinate reference system</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Geospatial location associated with the dataset, in a geographic coordinate reference system (see <a href="#_geospatial_extent">Geospatial Extent</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>time</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Temporal extent associated with a dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Temporal extent associated with a dataset (see <a href="#_temporal_extent">Temporal Extent</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>additionalExtents.spatial</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional geospatial extents in other coordinate reference systems</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional geospatial extents in other coordinate reference systems (see <a href="#_additional_geospatial_extents">Additional Geospatial Extents</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>additionalExtents.temporal</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional time instants or periods</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional time instants or periods (see <a href="#_additional_temporal_extents">Additional Temporal Extents</a>)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.providers</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.contacts</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Contact information for the dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Contact information for the dataset (see <a href="#_properties_contacts">Properties / Contacts</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.version</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version or edition of the dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version or edition of the dataset (see <a href="#_properties_version">Properties / Version</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.externalIds</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Persistent identifiers or handles for the dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Persistent identifiers or handles for the dataset (see <a href="#_properties_persistent_identifiers">Properties / Persistent Identifiers</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.created</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was created</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was created (see <a href="#_properties_record_creation_date">Properties / Record Creation Date</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.updated</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was updated</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was updated (see <a href="#_properties_record_update_date">Properties / Record Update Date</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.wmo:dataPolicy</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO data policy as per Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>conditional</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO data policy as per Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_properties_wmo_data_policy">Properties / WMO Data Policy</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>links</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online linkages to data retrieval or additional resources associated with the dataset</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online linkages to data retrieval or additional resources associated with the dataset (see <a href="#distribution">Distribution Information</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.*</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional properties as required</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Additional properties as required (see <a href="#_additional_properties">Additional Properties</a>)</p></td>
 </tr>
 </tbody>
 </table>
@@ -1589,7 +1588,9 @@ detection and handling of content.</p>
 <div class="sect3">
 <h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.5. Properties / Type</h4>
 <div class="paragraph">
-<p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from [codelist]. Most metadata records will be set to <code>dataset</code>.</p>
+<p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from [codelist]. While most metadata records will be set to <code>dataset</code>,
+WCMP can also describe services and processes. See the resource type codelist <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup> for
+allowed values.</p>
 </div>
 <table id="req_core_type" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1612,7 +1613,7 @@ detection and handling of content.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.type</code> property SHALL provide a valid resource type from the WCMP codelist.</p>
+<p>A WCMP record&#8217;s <code>properties.type</code> property SHALL provide a valid resource type from the WCMP resource type codelist.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1742,54 +1743,7 @@ detection and handling of content.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_topic_hierarchy"><a class="anchor" href="#_topic_hierarchy"></a>7.1.9. Topic Hierarchy</h4>
-<div class="paragraph">
-<p>The WIS2 Topic Hierarchy is a required concept and is consistent with the topic as defined in distribution links
-advertising broker services.</p>
-</div>
-<table id="req_core_topic_hierarchy" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/core/topic_hierarchy</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide a <code>wmo:topicHierarchy</code> property.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:topicHierarchy</code> SHALL provide a topic based on the WIS2 Topic Hierarchy.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:topicHierarchy</code> SHALL NOT include levels 1 to 3 (channel, version, wis2) of the WIS2 Topic Hierarchy.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="listingblock">
-<div class="title">Example</div>
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
-  "wmo:topicHierarchy": "mwi/mwi_met_centre/data/core/weather/surface-based-observations/synop"
-}</code></pre>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_properties_themes"><a class="anchor" href="#_properties_themes"></a>7.1.10. Properties / Themes</h4>
+<h4 id="_properties_themes"><a class="anchor" href="#_properties_themes"></a>7.1.9. Properties / Themes</h4>
 <div class="paragraph">
 <p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A concept&#8217;s <code>id</code>
 provides an identifier for the given concept, as well as optional <code>+title</code>, <code>description</code> and <code>url</code> properties to further describe the concept as desired.</p>
@@ -1818,7 +1772,7 @@ provides an identifier for the given concept, as well as optional <code>+title</
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD use themes/concepts when describing a dataset based on an associated controlled vocabulary.</p>
+<p>A WCMP record SHALL use themes/concepts when describing a dataset based on an associated controlled vocabulary.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1913,9 +1867,9 @@ provides an identifier for the given concept, as well as optional <code>+title</
 </div>
 </div>
 <div class="sect3">
-<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.11. Geospatial and Temporal Extents</h4>
+<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.10. Geospatial and Temporal Extents</h4>
 <div class="sect4">
-<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.11.1. Geospatial Extent</h5>
+<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.10.1. Geospatial Extent</h5>
 <div class="paragraph">
 <p>The <code>geometry</code> property is the general bounding spatial extent of the dataset in the geographic coordinate system.
 Geospatial bounding
@@ -1928,7 +1882,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/extent_geospatial</strong></p>
 </div></div></td>
@@ -2023,7 +1977,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 </div>
 </div>
 <div class="sect4">
-<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.11.2. Additional Geospatial Extents</h5>
+<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.10.2. Additional Geospatial Extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.spatial</code> property is for other geospatial extents associated with the dataset, for example, non-geographic data or for describing multiple sub-areas of a dataset.
 The <code>additionalExtents.spatial.bbox</code> property
@@ -2087,7 +2041,7 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.11.3. Temporal Extent</h5>
+<h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.10.3. Temporal Extent</h5>
 <div class="paragraph">
 <p>The <code>time</code> property describes the general bounding extent of the dataset and the temporal resolution.
 Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC.</p>
@@ -2099,7 +2053,7 @@ Temporal extents provide a useful indicator of the date and time period of the d
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/extent_temporal</strong></p>
 </div></div></td>
@@ -2179,7 +2133,7 @@ Temporal extents provide a useful indicator of the date and time period of the d
 </div>
 </div>
 <div class="sect4">
-<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.11.4. Additional Temporal Extents</h5>
+<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.10.4. Additional Temporal Extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.temporal</code> property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems.</p>
 </div>
@@ -2227,32 +2181,32 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_providers"><a class="anchor" href="#_properties_providers"></a>7.1.12. Properties / Providers</h4>
+<h4 id="_properties_contacts"><a class="anchor" href="#_properties_contacts"></a>7.1.11. Properties / Contacts</h4>
 <div class="paragraph">
-<p>The <code>providers</code> property is the contact information and <code>role</code> of the dataset providers.</p>
+<p>The <code>contacts</code> property is the contact information and <code>role</code> of the dataset contacts.</p>
 </div>
-<table id="req_core_providers" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_core_contacts" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/core/providers</strong></p>
+<p><strong>/req/core/contacts</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide a <code>properties.providers</code> property.</p>
+<p>A WCMP record SHALL provide a <code>properties.contacts</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record <code>properties.providers</code> property SHALL provide at least TWO providers (as multiple provider objects or a single provider object with multiple roles) based on the metadata point of contact and the originator of the data.  Providers are defined as either a URI or inline.</p>
+<p>A WCMP record <code>properties.contacts</code> property SHALL provide at least TWO contacts (as multiple contact objects or a single contact object with multiple roles) based on the metadata point of contact and the originator of the data.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2262,60 +2216,45 @@ property is able express the temporal granularity at which a given dataset&#8217
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "providers": [
-    {
-      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+  "contacts": [{
+      "identifier": "ECCC",
+      "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
       "positionName": "National Inquiry Response Team",
-      "contactInfo": {
-        "phone": {
-          "office": "+01-819-997-2800"
-        },
-        "email": {
-          "office":"enviroinfo@ec.gc.ca"
-        },
-        "address": {
-          "office": {
-            "deliveryPoint": "77 Westmorland Street, suite 260",
-            "city": "Fredericton",
-            "administrativeArea": "NB",
-            "postalCode": "E3B 6Z4",
-            "country": "Canada"
-          },
-          "onlineResource": {
-            "href": "https://www.canada.ca/en/environment-climate-change.html"
-          }
-        },
-        "hoursOfService": "0700h - 1500h EST",
-        "contactInstructions": "email",
-        "url": {
-          "rel": "canonical",
-          "type": "text/html",
-          "href": "https://www.canada.ca/en/environment-climate-change.html"
-        }
-      },
-      "roles": [
-        {
-          "name": "pointOfContact"
-        },
-        {
-          "name": "originator"
-        }
-      ]
-    }
-  ]
+      "phones": [{
+        "value": "+18199972800"
+      }],
+      "emails": [{
+        "value":"enviroinfo@ec.gc.ca"
+      }],
+      "addresses": [{
+        "deliveryPoint": "77 Westmorland Street, suite 260",
+        "city": "Fredericton",
+        "administrativeArea": "NB",
+        "postalCode": "E3B 6Z4",
+        "country": "Canada"
+      }],
+      "links": [{
+        "href": "https://www.canada.ca/en/environment-climate-change.html"
+      }],
+      "contactInstructions": "email",
+      "roles": ["pointOfContact", "originator"]
+  }]
   ...
 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Note that a provider can also be specified by using a URL:</p>
+<p>Note that a contact can also be specified by using a URL:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "providers": [
-      "https://example.org/contact"
+  "contacts": [{
+      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+      "links": [{
+          "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html"
+      }]
   ]
   ...
 }</code></pre>
@@ -2323,7 +2262,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.13. Properties / Version</h4>
+<h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.12. Properties / Version</h4>
 <div class="paragraph">
 <p>The <code>version</code> property is the version of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.</p>
 </div>
@@ -2359,7 +2298,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.14. Properties / Persistent Identifiers</h4>
+<h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.13. Properties / Persistent Identifiers</h4>
 <div class="paragraph">
 <p>The <code>externalIds</code> property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers
 are commonly used for scientific publications and datasets.</p>
@@ -2370,13 +2309,13 @@ are commonly used for scientific publications and datasets.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Digital Object Identifiers (DOI) <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup></p>
+<p>Digital Object Identifiers (DOI) <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup></p>
 </li>
 <li>
-<p>Archival Resource Key (ARK) <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup></p>
+<p>Archival Resource Key (ARK) <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
 </li>
 <li>
-<p>Handle <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
+<p>Handle <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -2442,7 +2381,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.15. Properties / Record Creation Date</h4>
+<h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.14. Properties / Record Creation Date</h4>
 <div class="paragraph">
 <p>The <code>created</code> property is a single date that the WCMP metadata record was created.</p>
 </div>
@@ -2453,7 +2392,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/record_creation_date</strong></p>
 </div></div></td>
@@ -2484,7 +2423,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.16. Properties / Record Update Date</h4>
+<h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.15. Properties / Record Update Date</h4>
 <div class="paragraph">
 <p>The <code>updated</code> property is the date that the WCMP metadata record was last updated.</p>
 </div>
@@ -2520,9 +2459,9 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO Data Policy</h4>
+<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.16. Properties / WMO Data Policy</h4>
 <div class="paragraph">
-<p>The <code>dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.</p>
+<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.  <code>wmo:dataPolicy</code> is required if the record describes a dataset.</p>
 </div>
 <table id="req_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2531,7 +2470,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/data_policy</strong></p>
 </div></div></td>
@@ -2539,87 +2478,68 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide exactly one <code>properties.wmo:dataPolicy</code> property.</p>
+<p>If a WCMP record&#8217;s type (<code>properties.type</code>) is a dataset (i.e. <code>dataset</code>), the record SHALL provide exactly one <code>properties.wmo:dataPolicy</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> property SHALL have exactly one <code>name</code> item which SHALL be either <code>core</code> or <code>recommended</code>.</p>
+<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> property SHALL have a value of either <code>core</code> or <code>recommended</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy.name</code> is equal to <code>recommended</code>, a <code>properties.wmo:dataPolicy.additionalConditions</code> item SHALL be provided.</p>
+<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, any data licensing SHALL be provided by at least one <code>links</code> item with link relations <code>(+rel+</code>) of <code>license</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, any copyright SHALL be provided by at least one <code>links</code> item with link relations <code>(+rel+</code>) of <code>copyright</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>The <code>additionalConditions</code> property are access and license details that apply when the dataset is classified as <code>recommended</code>.  Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.</p>
-</div>
-<table id="req_core_data_policy_conditions" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="per_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 13</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/core/data_policy_conditions</strong></p>
+<p><strong>/per/core/data_policy</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy.additionalConditions</code> SHALL enumerate one to many objects to describe the conditions for the resource.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.wmo:dataPolicy.additionalConditions.name</code> property SHALL identify the condition applied to the dataset.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.wmo:dataPolicy.additionalConditions.scheme</code> property SHALL be used to identify a codelist or controlled vocabulary to which the condition name applies.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If there are <strong>no</strong> additional conditions, the fixed value of <code>none</code> SHALL be provided <code>properties.wmo:dataPolicy.additionalConditions.name</code> without any scheme identified.</p>
+<p>A WCMP record whose data policy is <code>+core +</code> MAY provide attribution licensing as needed.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>Licensing and copyright are expressed via the links property (see distribution section), providing access, license and attribution details as required. Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.</p>
+</div>
 <div class="listingblock">
 <div class="title">Example: Core Data</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "core"
-  }
+  "wmo:dataPolicy": "core"
   ...
 }</code></pre>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example: Recommended Data with no additional conditions</div>
+<div class="title">Example: Recommended Data</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "recommended",
-    "additionalConditions": [{
-        "name": "none"
-    }]
-  }
+  "wmo:dataPolicy": "recommended"
   ...
 }</code></pre>
 </div>
@@ -2629,15 +2549,15 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "recommended",
-    "additionalConditions": [{
-      "name": "copyright",
-      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode"
-    }]
-  }
+  "wmo:dataPolicy": "recommended"
   ...
-}</code></pre>
+},
+"links": [{
+  "rel": "copyright",
+  "href": "https://example.org/dataset/copyright.html",
+  "type": "text/html",
+  "title": "Dataset copyright information"
+}]</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -2658,19 +2578,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy.additionalConditions</code> SHOULD provide additional provider-specific details to the conditions by adding an external URL in a <code>properties.wmo:dataPolicy.additionalConditions.link</code> object.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.wmo:dataPolicy.additionalConditions.scheme</code> property SHOULD be used for conditions which are based on a codelist of controlled vocabulary.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s <code>properties.wmo:dataPolicy.additionalConditions</code> SHOULD contain a <code>properties.wmo:dataPolicy.additionalConditions.link.title</code> property to provide additional human-readable information about the external URL.</p>
+<p>A WCMP record&#8217;s additional conditions represented by a <code>links</code> item SHOULD provide a <code>title</code> property to provide additional human-readable information about link.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2680,26 +2588,22 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
-  "wmo:dataPolicy": {
-    "name": "recommended",
-    "additionalConditions": [{
-      "name": "license",
-      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_RestrictionCode",
-      "link": {
-        "href": "https://www.eumetsat.int/eumetsat-data-licensing",
-        "title": "EUMETSAT DATA LICENSING"
-      }
-    }]
-  }
+  "wmo:dataPolicy": "recommended"
   ...
-}</code></pre>
+},
+"links": [{
+  "rel": "license",
+  "href": "https://www.eumetsat.int/eumetsat-data-licensing",
+  "type": "text/html",
+  "title": "EUMETSAT DATA LICENSING"
+}]</code></pre>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribution"><a class="anchor" href="#distribution"></a>7.1.18. Distribution Information</h4>
+<h4 id="distribution"><a class="anchor" href="#distribution"></a>7.1.17. Distribution Information</h4>
 <div class="sect4">
-<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.18.1. Overview</h5>
+<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.17.1. Overview</h5>
 <div class="paragraph">
 <p>The <code>links</code> property describes URLs and APIs for accessing or subscribing to the dataset.</p>
 </div>
@@ -2714,7 +2618,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/links</strong></p>
 </div></div></td>
@@ -2814,7 +2718,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/links</strong></p>
 </div></div></td>
@@ -3017,7 +2921,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.19. Additional Properties</h4>
+<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.18. Additional Properties</h4>
 <div class="paragraph">
 <p>A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.</p>
@@ -3029,7 +2933,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/additional_properties</strong></p>
 </div></div></td>
@@ -3256,7 +3160,14 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a valid <code>properties.type</code> property in the WCMP record.</p>
+<p>Check for the existence of a <code>properties.type</code> property in the WCMP record.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the value of <code>properties.type</code> is part of the WCMP resource type codelist.</p>
 </div>
 </div>
 </div>
@@ -3444,22 +3355,22 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_topic_hierarchy_2"><a class="anchor" href="#_topic_hierarchy_2"></a>A.1.9. Topic Hierarchy</h4>
-<div id="ats_core_topic_hierarchy" class="exampleblock">
+<h4 id="_themes"><a class="anchor" href="#_themes"></a>A.1.9. Themes</h4>
+<div id="ats_core_themes" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/core/topic_hierarchy</p>
+<p>/conf/core/themes</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/core/topic_hierarchy</p>
+<p>/req/core/themes</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WCMP record provides a valid WIS2 Topic Hierarchy.</p>
+<p>Validate that a WCMP record provides a themes property.</p>
 </dd>
 </dl>
 </div>
@@ -3468,15 +3379,35 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>properties.wmo:topicHierarchy</code> property in the WCMP record.</p>
+<p>Check for the existence of a single <code>themes</code> array property in the WCMP record.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Within <code>properties.wmo:topicHierarchy</code>, check that the value is a valid WIS2 Topic Hierarchy, and does not
-contain levels 1 to 3 of (channel, version, wis2)..</p>
+<p>Check that the <code>themes</code> property provides a minimum of one theme object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each theme object provides a minimum of one <code>concepts</code> property.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each theme object provides a minimum of one <code>scheme</code> property.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each concept object provides a minimum of one <code>id</code> property.</p>
 </div>
 </div>
 </div>
@@ -3486,18 +3417,18 @@ contain levels 1 to 3 of (channel, version, wis2)..</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_providers"><a class="anchor" href="#_providers"></a>A.1.10. Providers</h4>
-<div id="ats_core_providers" class="exampleblock">
+<h4 id="_contacts"><a class="anchor" href="#_contacts"></a>A.1.10. Contacts</h4>
+<div id="ats_core_contacts" class="exampleblock">
 <div class="content">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p>/conf/core/providers</p>
+<p>/conf/core/contacts</p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
-<p>/req/core/providers</p>
+<p>/req/core/contacts</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
@@ -3510,14 +3441,21 @@ contain levels 1 to 3 of (channel, version, wis2)..</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a <code>properties.providers</code> property in the WCMP record.</p>
+<p>Check for the existence of a <code>properties.contacts</code> property in the WCMP record.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Within <code>properties.providers</code>, check for the existence of <code>originator</code> and <code>pointOfContact</code> within the <code>roles</code> array property across all provider objects.</p>
+<p>Check that the <code>contact</code> property provides a minimum of one contact object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Within <code>properties.contacts</code>, check for the existence of <code>originator</code> and <code>pointOfContact</code> within the <code>roles</code> array property across all contact objects.</p>
 </div>
 </div>
 </div>
@@ -3576,9 +3514,27 @@ contain levels 1 to 3 of (channel, version, wis2)..</p>
 </dd>
 <dt class="hdlist1">test-purpose</dt>
 <dd>
-<p>Validate that a WCMP record provides information about data policy and, if applicable additional information about licensing and/or rights.</p>
+<p>Validate that a WCMP record provides information about data policy and, if applicable additional information about licensing and/or copyright.</p>
 </dd>
 </dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check for the type of WCMP record (<code>properties.type</code>).</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>If <code>properties.type</code> is found, and <code>properties.type</code> is equal to <code>dataset</code> check that <code>properties.wmo:dataPolicy</code> exists.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="exampleblock component">
 <div class="content">
@@ -3592,21 +3548,14 @@ contain levels 1 to 3 of (channel, version, wis2)..</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that <code>properties.wmo:dataPolicy</code> has an element <code>name</code> equal to <code>core</code> or <code>recommended</code>.</p>
+<p>If <code>properties.wmo:dataPolicy</code> is found, check that <code>properties.wmo:dataPolicy</code> has a value equal to <code>core</code> or <code>recommended</code>.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>If <code>properties.wmo:dataPolicy.name</code> is equal to <code>recommended</code>, check for the existence of a <code>properties.wmo:dataPolicy.additionalConditions</code> element containing at least one object with a <code>name</code> property.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>Check that <code>properties.wmo:dataPolicy.additionalConditions.conditions</code> is <code>none</code>.  If the value is not <code>none</code>, then check for the existence of a <code>properties.wmo:dataPolicy.additionalConditions.scheme</code> property.</p>
+<p>If <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, check for the existence of at least one <code>links</code> item containing a <code>license</code> or <code>copyright</code> link relation (<code>rel</code>).</p>
 </div>
 </div>
 </div>
@@ -3721,15 +3670,15 @@ required:
   - links
 properties:
   id:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
   conformsTo:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/conformsTo'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/conformsTo'
   type:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
   time:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/time'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/time'
   geometry:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
   additionalExtents:
     $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
   properties:
@@ -3738,64 +3687,42 @@ properties:
       - type
       - title
       - description
-      - providers
+      - contacts
       - created
-      - wmo:topicHierarchy
-      - wmo:dataPolicy
     properties:
       type:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
       title:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/title'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/title'
       description:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/description'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/description'
       keywords:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
       themes:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/themes'
-      providers:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/providers'
+        type: array
+        minItems: 1
+        items:
+          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/theme.yaml'
+      contacts:
+        type: array
+        minItems: 1
+        items:
+          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/contact.yaml'
       version:
         type: string
         description: The version or edition of a given dataset.
       externalIds:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/externalIds'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/externalIds'
       created:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
       updated:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/record-schema-time/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
-      wmo:topicHierarchy:
-        type: string
-        description: WIS2 topic hierarchy classification of the dataset
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
       wmo:dataPolicy:
-        type: object
+        type: string
         description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
-        properties:
-          name:
-            type: string
-            description: The WMO Unified Data Policy identifier (`core` or `recommended`).
-            enum:
-              - core
-              - recommended
-          additionalConditions:
-            type: array
-            items:
-              type: object
-              description: Additional conditions applied to recommended data
-              properties:
-                name:
-                  type: string
-                  description: Name of additional condition, from a codelist, or the string value `none` if there are no additional conditions on a recommended dataset.
-                scheme:
-                  type: string
-                  description: codelist or controlled vocabulary to which the condition applies to.
-                link:
-                  $ref: link.yaml
-              required:
-                - name
-            minItems: 1
-        required:
-          - name
+        enum:
+          - core
+          - recommended
   links:
     type: array
     minItems: 1
@@ -3819,7 +3746,12 @@ properties:
     "conformsTo": [
         "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
     ],
-    "time": "2010-11-11T11:11:11Z",
+    "time": {
+        "interval": [
+            "2010-11-11T11:11:11Z",
+            ".."
+        ]
+    },
     "type": "Feature",
     "geometry": {
         "type": "Polygon",
@@ -3855,29 +3787,10 @@ properties:
             {
                 "concepts": [
                     {
-                        "id": "Hydrology"
+                        "id": "Weather"
                     },
                     {
-                        "id": "Streamflow"
-                    },
-                    {
-                        "id": "Discharge"
-                    },
-                    {
-                        "id": "Water level"
-                    },
-                    {
-                        "id": "Water quantity"
-                    },
-                    {
-                        "id": "Sediment concentration"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Weather forecasts"
+                        "id": "Archives"
                     },
                     {
                         "id": "Precipitation"
@@ -3897,88 +3810,60 @@ properties:
                     {
                         "id": "Meteorological data"
                     }
-                ]
+                ],
+                "scheme": "https://canada.multites.net/cst"
             },
             {
                 "concepts": [
                     {
-                        "id": "Weather and Climate"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "International"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Atmosphere"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "weatherObservations"
+                        "id": "weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
             }
         ],
-        "providers": [
+        "contacts": [
             {
                 "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
                 "positionName": "National Inquiry Response Team",
-                "contactInfo": {
-                    "phone": {
-                        "office": "+01-819-997-2800"
-                    },
-                    "email": {
-                        "office": "+01-506-451-6010"
-                    },
-                    "address": {
-                        "office": {
-                            "deliveryPoint": "77 Westmorland Street, suite 260",
-                            "city": "Fredericton",
-                            "administrativeArea": "NB",
-                            "postalCode": "E3B 6Z4",
-                            "country": "Canada"
-                        },
-                        "onlineResource": {
-                            "href": "https://www.canada.ca/en/environment-climate-change.html"
-                        }
-                    },
-                    "hoursOfService": "0700h - 1500h EST",
-                    "contactInstructions": "email",
-                    "url": {
+                "phones": [
+                    {
+                        "value": "+18199972800"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "enviroinfo@ec.gc.ca"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "77 Westmorland Street, suite 260"
+                        ],
+                        "city": "Fredericton",
+                        "administrativeArea": "NB",
+                        "postalCode": "E3B 6Z4",
+                        "country": "Canada"
+                    }
+                ],
+                "links": [
+                    {
                         "rel": "canonical",
                         "type": "text/html",
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
-                },
-                "url": "https://www.canada.ca/en/environment-climate-change.html",
+                ],
                 "roles": [
-                    {
-                        "name": "pointOfContact"
-                    },
-                    {
-                        "name": "distributor"
-                    }
+                    "pointOfContact",
+                    "distributor"
                 ]
             }
         ],
         "type": "dataset",
         "created": "2018-01-01",
         "updated": "2022-06-22",
-        "wmo:topicHierarchy": "path/to/foo",
-        "wmo:dataPolicy": {
-            "name": "core"
-        }
+        "wmo:dataPolicy": "core"
     },
     "links": [
         {
@@ -4146,9 +4031,7 @@ properties:
         ],
         "created": "2018-08-19T08:10:00Z",
         "updated": "2022-03-15T09:26:00Z",
-        "wmo:dataPolicy": {
-            "name": "core"
-        },
+        "wmo:dataPolicy": "core",
         "links": [
             {
                 "rel": "download",
@@ -4353,21 +4236,24 @@ properties:
 <a href="#_footnoteref_28">28</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 <div class="footnote" id="_footnotedef_29">
-<a href="#_footnoteref_29">29</a>. <a href="https://doi.org" class="bare">https://doi.org</a>
+<a href="#_footnoteref_29">29</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv</a>
 </div>
 <div class="footnote" id="_footnotedef_30">
-<a href="#_footnoteref_30">30</a>. <a href="https://arks.org" class="bare">https://arks.org</a>
+<a href="#_footnoteref_30">30</a>. <a href="https://doi.org" class="bare">https://doi.org</a>
 </div>
 <div class="footnote" id="_footnotedef_31">
-<a href="#_footnoteref_31">31</a>. <a href="https://handle.net" class="bare">https://handle.net</a>
+<a href="#_footnoteref_31">31</a>. <a href="https://arks.org" class="bare">https://arks.org</a>
 </div>
 <div class="footnote" id="_footnotedef_32">
-<a href="#_footnoteref_32">32</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_32">32</a>. <a href="https://handle.net" class="bare">https://handle.net</a>
+</div>
+<div class="footnote" id="_footnotedef_33">
+<a href="#_footnoteref_33">33</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-22 00:13:16 UTC
+Last updated 2023-05-22 16:01:21 UTC
 </div>
 </div>
 </body>
