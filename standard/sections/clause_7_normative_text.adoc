@@ -621,10 +621,10 @@ Licensing and copyright are expressed via the links property (see distribution s
   ...
 },
 "links": [{
-  "rel": "copyright",
-  "href": "https://example.org/dataset/copyright.html",
+  "rel": "license",
+  "href": "https://example.org/dataset/license.html",
   "type": "text/html",
-  "title": "Dataset copyright information"
+  "title": "Dataset license information"
 }]
 ----
 
@@ -658,7 +658,6 @@ WCMP record links may also provide links to services that implement access contr
 secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
 include::../requirements/core/REQ_links.adoc[]
-include::../recommendations/core/REC_links.adoc[]
 
 .Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 
