@@ -2,7 +2,7 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Requirements Class*
-2+|http://www.wmo.int/spec/wcmp/2.0/req/core
+2+|http://www.wmo.int/spec/wcmp/2.0/conf/core
 |Target type |Discovery Metadata
 |Dependency |<<rfc8259,IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format>>
 |Dependency |<<json-schema, JSON Schema>>
