@@ -135,7 +135,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 [source,json]
 ----
 "conformsTo": [
-  "http://wis.wmo.int/spec/wcmp/2.0"
+  "http://wis.wmo.int/spec/wcmp/2.0/conf/core"
 ]
 ----
 
