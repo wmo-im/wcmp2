@@ -2490,13 +2490,13 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, any data licensing SHALL be provided by at least one <code>links</code> item with link relations <code>(+rel+</code>) of <code>license</code>.</p>
+<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, any data licensing SHALL be provided by at least one <code>links</code> item with link relations (<code>rel</code>) of <code>license</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, any copyright SHALL be provided by at least one <code>links</code> item with link relations <code>(+rel+</code>) of <code>copyright</code>.</p>
+<p>If a WCMP record&#8217;s <code>properties.wmo:dataPolicy</code> is equal to <code>recommended</code>, any copyright SHALL be provided by at least one <code>links</code> item with link relations (<code>rel</code>) of <code>copyright</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2516,7 +2516,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record whose data policy is <code>+core +</code> MAY provide attribution licensing as needed.</p>
+<p>A WCMP record whose data policy is <code>core</code> MAY provide attribution licensing as needed.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2553,10 +2553,10 @@ resource identification using a persistent identifier scheme/framework.</p>
   ...
 },
 "links": [{
-  "rel": "copyright",
-  "href": "https://example.org/dataset/copyright.html",
+  "rel": "license",
+  "href": "https://example.org/dataset/license.html",
   "type": "text/html",
-  "title": "Dataset copyright information"
+  "title": "Dataset license information"
 }]</code></pre>
 </div>
 </div>
@@ -2655,26 +2655,6 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </tr>
 </tbody>
 </table>
-<table id="rec_core_links" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/core/links</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>When a WCMP record provides a link object to a broker, the <code>channel</code> property SHOULD be consistent with the WIS2 topic as specified in a <code>properties.themes</code> object.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
@@ -2754,7 +2734,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/distribution</strong></p>
 </div></div></td>
@@ -4253,7 +4233,7 @@ properties:
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-23 02:05:15 UTC
+Last updated 2023-05-23 02:28:54 UTC
 </div>
 </div>
 </body>
