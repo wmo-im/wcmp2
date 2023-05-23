@@ -1,7 +1,7 @@
 {
     "id": "urn:x-wmo:md:can:eccc-msc:hydrometric.realtime",
     "conformsTo": [
-        "http://www.opengis.net/spec/ogcapi-records-1/1.0/req/record-core"
+        "http://wis.wmo.int/spec/wcmp/2.0/conf/core"
     ],
     "type": "Feature",
     "geometry": {
