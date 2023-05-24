@@ -1,7 +1,7 @@
 {
     "id": "urn:x-wmo:md:can:eccc-msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0/conf/core"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "type": "Feature",
     "geometry": {

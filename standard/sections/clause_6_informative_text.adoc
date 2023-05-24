@@ -2,8 +2,7 @@
 
 === Overview
 
-The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured complex ISO 19115/19139-based XML for metadata. Since then, authoritative
-groups such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.
+The initial WIS technical specifications were developed using service-oriented architecture (SOA) principles.  It featured complex ISO 19115/19139-based XML for metadata. Since then, international standards development organizations such as W3C and OGC have moved to adopt a more resource-oriented architecture (ROA), leveraging RESTful design patterns, and mass market encodings such as JSON and HTML.
 
 Aligning with the WIS2 Principles, in order to support the WIS2 Technical Specifications for discovery and search, discovery metadata will be published to a global discovery catalogue, which will provide an OGC API - Records searchable functionality.  Users will be able to search from a web browser, whereas machines will interact with an API.
 
@@ -38,7 +37,7 @@ In order to provide discovery metadata of value, it is important to clarify the 
 are to provide describing their data and associated services.  Articulating the level of granularity will reduce catalogue "pollution"
 and bring the user closer to the data via their search criteria.
 
-A WCMP record provides a description at the granularity of a dataset, which facilitates clear
+A WCMP record provides a description at the granularity of a *dataset*, which facilitates clear
 cataloguing and discovery workflow, in combination with data services or APIs, which provide
 access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).
 
@@ -113,8 +112,8 @@ The OGC Records - API - Part 1: Core specification:
 The GDC will provide a central search endpoint, enabling users to traverse, browse and search
 data holdings in WIS2.  Key search predicate capabilities include:
 
-* geospatial
-* temporal (time instant or time period)
+* geospatial (`+bbox=+`)
+* temporal (time instant or time period) (`+datetime=+`)
 * equality predicates (i.e. `+property=value+`) for any defined discovery metadata property
 * full-text (`+q=+`)
 

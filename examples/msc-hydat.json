@@ -1,7 +1,7 @@
 {
     "id": "urn:x-wmo:md:can:eccc-msc:hydrometric.hydat",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0/conf/core"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "type": "Feature",
     "geometry": {
@@ -148,7 +148,7 @@
         },
         {
             "rel": "items",
-            "href": "mqtts://example.org",
+            "href": "mqtt://example.org:8883",
             "channel": "origin/a/wis2/can/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"

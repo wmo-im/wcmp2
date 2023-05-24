@@ -3,4 +3,7 @@
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/themes*
 ^|A |A WCMP record SHALL use themes/concepts when describing a dataset based on an associated controlled vocabulary.
+^|B |A WCMP record SHALL provide at least one theme.
+^|C |Within each theme, a WCMP record SHALL provide at least one concept.
+^|D |Within each theme, a WCMP record SHALL provide a schema that refers to a controlled vocabulary or thesaurus.
 |===

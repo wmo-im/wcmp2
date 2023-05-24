@@ -24,7 +24,7 @@ Check that each theme object provides a minimum of one `+concepts+` property.
 
 [.component,class=step]
 --
-Check that each theme object provides a minimum of one `+scheme+` property.
+Check that each theme object provides one `+scheme+` property.
 --
 
 [.component,class=step]

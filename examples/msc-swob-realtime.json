@@ -1,7 +1,7 @@
 {
     "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0/conf/core"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": {
         "interval": [
@@ -150,7 +150,7 @@
         },
         {
             "rel": "items",
-            "href": "mqtts://example.org",
+            "href": "mqtt://example.org:8883",
             "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
