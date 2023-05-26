@@ -135,7 +135,7 @@ include::../requirements/core/REQ_conformance.adoc[]
 [source,json]
 ----
 "conformsTo": [
-  "http://wis.wmo.int/spec/wcmp/2.0/conf/core"
+  "http://wis.wmo.int/spec/wcmp/2/conf/core"
 ]
 ----
 
@@ -371,7 +371,10 @@ include::../recommendations/core/PER_extent_geospatial.adoc[]
 
 ===== Temporal Extent
 The `+time+` property describes the general bounding extent of the dataset and the temporal resolution. 
+
 Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC. 
+
+Temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets).
 
 include::../requirements/core/REQ_extent_temporal.adoc[]
 include::../recommendations/core/REC_extent_temporal.adoc[]

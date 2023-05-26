@@ -3,12 +3,11 @@
 :appendix-caption: Annex
 == Schemas (Normative)
 
-NOTE: The schema document will only be published on `schemas.wmo.int` once the standard has been approved.
+NOTE: The schema document will be published on http://schemas.wmo.int/wcmp/2.0 once the standard has been approved.
 
 === WMO Core Metadata Profile Schema
 
-[source,yaml]
+[source,json]
 ----
-include::../../schemas/wcmpRecordGeoJSON.yaml[]
+include::../../schemas/wcmp2-bundled.json[]
 ----
-

@@ -4,7 +4,7 @@ This section provides details and examples for any conventions used in the docum
 === Identifiers
 The normative provisions in this Standard are denoted by the URI:
 
-http://wis.wmo.int/spec/wcmp/2.0
+http://wis.wmo.int/spec/wcmp/2
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
@@ -16,7 +16,7 @@ Complete examples can be found at https://schemas.wmo.int/wcmp/2.0/examples
 
 === Schemas
 
-The WCMP schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmpRecordGeoJSON.yaml 
+The WCMP schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmp2-bundled.json
 
 === Schema representation
 
@@ -24,7 +24,7 @@ JSON Schema footnote:[https://json-schema.org] objects are used throughout this 
 of metadata records. These schema objects are also typically represented using YAML footnote:[https://en.wikipedia.org/wiki/YAML].
 YAML is a superset of JSON, and in this standard are regarded as equivalent.
 
-Metadata record instances are always defined as JSON.
+Metadata record instances are always represented as JSON.
 
 ==== Properties
 
