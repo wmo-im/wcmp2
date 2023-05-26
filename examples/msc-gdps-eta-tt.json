@@ -140,7 +140,7 @@
         {
             "rel": "items",
             "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
-            "href": "mqtt://example.org:8883",
+            "href": "mqtts://example.org",
             "type": "application/json",
             "title": "Data notifications"
         }

@@ -136,7 +136,7 @@
                 "rel": "items",
                 "type": "application/json",
                 "title": "Message Broker DWD",
-                "href": "mqtt://everyone:everyone@wis2.dwd.de:8883",
+                "href": "mqtts://everyone:everyone@wis2.dwd.de",
                 "channel": "origin/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
             }
         ],

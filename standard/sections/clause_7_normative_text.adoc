@@ -696,7 +696,7 @@ include::../requirements/core/REQ_links.adoc[]
     "rel"  : "items",
     "type" : "application/json",
     "title": "WIS2 notification service",
-    "href" : "mqtt://broker.example.org:8883",
+    "href" : "mqtts://broker.example.org",
     "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]

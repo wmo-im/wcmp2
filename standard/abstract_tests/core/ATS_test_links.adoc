@@ -19,7 +19,7 @@ Check that the `+links+` property provides a minimum of one link object.
 
 [.component,class=step]
 --
-For a link object describing real-time data, check that the `+href+` property starts with the `+mqtt+` protocol, AND that `+channel+` is additionally defined.
+For a link object describing real-time data, check that the `+href+` property starts with the `+mqtt+` or `+mqtts+` protocol, AND that `+channel+` is additionally defined.
 --
 
 [.component,class=step]

@@ -143,7 +143,7 @@
         },
         {
             "rel": "items",
-            "href": "mqtt://example.org:8883",
+            "href": "mqtts://example.org",
             "channel": "origin/a/wis2/can/eccc-msc/data/core/hydrology",
             "type": "application/json",
             "title": "Data notifications"
