@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:DEU:dwd:icon-eps.ALL",
+    "id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2.0"
@@ -20,126 +20,111 @@
     "geometry": {
         "type": "Polygon",
         "coordinates": [
-            [
-                -180,
-                -90
-            ],
-            [
-                -180,
-                90
-            ],
-            [
-                180,
-                90
-            ],
-            [
-                180,
-                -90
-            ],
-            [
-                -180,
-                -90
-            ]
+            [-180,-90],
+            [-180,90],
+            [180,90],
+            [180,-90],
+            [-180,-90]
         ]
     },
     "additionalExtents": {
         "spatial": {
             "bbox": [
-                [
-                    -180,
-                    -90,
-                    180,
-                    90
-                ]
+                [-180,-90,180,90]
             ],
             "resolution": "0.5*0.5",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        }
+        },
+		"temporal": {
+			"interval": [
+				[
+					"R/T00Z",
+					"PT72H"
+				],
+				[
+					"R/T12Z",
+					"PT72H"
+				]
+			],
+			"resolution": "PT3H"
+		},
+		"temporal": {
+			"interval": [
+				[
+					"R/T00Z",
+					"PT48H"
+				],
+				[
+					"R/T12Z",
+					"PT48H"
+				]
+			],
+			"resolution": "PT1H"
+		}
     },
     "properties": {
         "type": "dataset",
         "title": "ICON-EPS GRIB data",
-        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, various level, various threshold",
+        "description": "ICON-EPS 0.5° x 0.5° regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
         "themes": [
             {
                 "concepts": [
-                    {
-                        "id": "wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "meteorology"
-                    }
+                    {"id": "meteorology"}
                 ],
                 "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
             },
             {
                 "concepts": [
-                    {
-                        "id": "Meteorological geographical features"
-                    }
+                    {"id": "Meteorological geographical features"}
                 ],
                 "scheme": "https://inspire.ec.europa.eu/theme/mf"
             },
             {
                 "concepts": [
-                    {
-                        "id": "FM 92 GRIB edition 2"
-                    }
+                    {"id": "FM 92 GRIB edition 2"}
                 ],
                 "scheme": "http://codes.wmo.int/codeform"
-            }
+            },
+			{
+				"concepts": [
+					{"id": "continual"}
+				],
+				"scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+			}
         ],
-        "providers": [
+		"contacts": [
             {
-                "name": "Deutscher Wetterdienst",
+                "identifier": "DWD",
+				"organization": "Deutscher Wetterdienst",
                 "positionName": "Michael Denhard",
-                "contactInfo": {
-                    "email": {
-                        "work": "gisc@dwd.de"
-                    },
-                    "address": [
+				"emails": [{
+                        "value": "wis@dwd.de"
+                    }],
+                "addresses": [
                         {
-                            "deliveryPoint": "Frankfurter Stra\u00dfe 135",
+                            "deliveryPoint": ["Frankfurter Strasse 135"],
                             "city": "Offenbach",
-                            "postal-code": "63067",
+                            "postalCode": "63067",
                             "country": "Germany"
                         }
                     ],
-                    "url": "http://www.dwd.de/wmc"
-                },
-                "roles": [
-                    {
-                        "name": "pointOfContact"
-                    },
-                    {
-                        "name": "originator"
-                    }
-                ]
+				"links": [
+					{
+						"href": "https://www.dwd.de/wmc"
+					},
+					{
+						"href": "https://gisc.dwd.de"
+					}
+				],
+				"contactInstructions": "email",
+                "roles": ["pointOfContact","originator"]
             }
         ],
         "created": "2018-08-19T08:10:00Z",
         "updated": "2022-03-15T09:26:00Z",
-        "wmo:dataPolicy": "core",
-        "links": [
-            {
-                "rel": "download",
-                "type": "text/html",
-                "title": "Open Data Server DWD",
-                "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
-            },
-            {
-                "rel": "items",
-                "type": "application/json",
-                "title": "Message Broker DWD",
-                "href": "mqtts://everyone:everyone@wis2.dwd.de",
-                "channel": "origin/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
-            }
-        ],
+        "wmo:dataPolicy": {
+            "name": "core"
+        },
         "keywords": [
             "CLCH",
             "CLCL",
@@ -172,5 +157,21 @@
         "formats": [
             "GRIB2"
         ]
-    }
+    },
+    "links": [
+            {
+                "rel": "download",
+                "type": "text/html",
+                "title": "Open Data Server DWD",
+                "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+            },
+            {
+                "rel": "subscribe",
+                "type": "application/json",
+                "title": "Global Broker (Toulouse)",
+                "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+                "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+            }
+        ]
+
 }
