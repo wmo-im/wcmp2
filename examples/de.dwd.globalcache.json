@@ -1,0 +1,128 @@
+{
+    "id": "urn:x-wmo:md:deu:dwd-offenbach:global-cache-service",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "time": {
+        "interval": [
+            [
+                "2024-01-01T00:00:00Z",
+                null
+            ]
+        ]
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [-180,-90],
+            [-180,90],
+            [180,90],
+            [180,-90],
+            [-180,-90]
+        ]
+    },
+    "properties": {
+        "type": "service",
+        "title": "WMO Global Cache (DWD)",
+        "description": "For WMO Information System 2.0 (WIS 2.0) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 4096 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+        "themes": [
+            {
+                "concepts": [
+                    {"id": "meteorology"}
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            },
+			{
+                "concepts": [
+                    {"id": "global-cache"}
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+            },
+			{
+				"concepts": [
+					{"id": "continual"}
+				],
+				"scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+			}
+        ],
+        "contacts": [
+            {
+                "identifier": "DWD",
+				"organization": "Deutscher Wetterdienst",
+                "positionName": "Kai-Thorsten Wirt",
+				"emails": [{
+                        "value": "wis@dwd.de"
+                    }],
+                "addresses": [
+                        {
+                            "deliveryPoint": ["Frankfurter Strasse 135"],
+                            "city": "Offenbach",
+                            "postalCode": "63067",
+                            "country": "Germany"
+                        }
+                    ],
+				"links": [
+					{
+						"href": "https://www.dwd.de/wmc"
+					},
+					{
+						"href": "https://gisc.dwd.de"
+					}
+				],
+				"contactInstructions": "email",
+                "roles": ["pointOfContact"]
+            }
+        ],
+        "created": "2023-05-05T08:00:00Z",
+        "updated": "2023-05-19T08:00:00Z",
+        "keywords": [
+            "WIS2",
+            "Global Cache"
+        ],
+        "externalIds": [
+            {
+                "scheme": "DWD",
+                "value": "de.dwd.globalcache"
+            }
+        ],
+        "language": "eng"
+    },
+    "links": [
+            {
+                "rel": "download",
+                "type": "text/html",
+                "title": "Open Data Server DWD (Cached files < 24h during pilot)",
+                "href": "https://opendata.dwd.de/test/wis2/cache"
+            },
+			{
+                "rel": "download",
+                "type": "text/html",
+                "title": "Open Data Server DWD (Metadata Archive)",
+                "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
+            },
+			{
+                "rel": "related",
+                "type": "application/json",
+                "title": "Global Broker (Toulouse)",
+                "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
+                "channel": "cache/a/wis2/#",
+				"distribution": {
+					"maxMSGsize": 4096,
+					"unit": "bytes"
+				}
+            },
+			{
+                "rel": "related",
+                "type": "application/json",
+                "title": "Global Broker (Beijing)",
+                "href": "mqtt://[yourAccount]:[yourPassword]@gb.wis.cma.cn:1883/",
+                "channel": "cache/a/wis2/#",
+				"distribution": {
+					"maxMSGsize": 4096,
+					"unit": "bytes"
+				}
+            }
+        ]
+
+}
