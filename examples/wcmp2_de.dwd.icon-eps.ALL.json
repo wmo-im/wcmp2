@@ -1,209 +1,196 @@
 {
-	"id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
-	"type": "Feature",
-	"conformsTo": [
-		"http://wis.wmo.int/spec/wcmp/2.0"
-	],
-	"time": {
-		"interval": [
-			[
-				"R/T00Z",
-				"PT180H"
-			],
-			[
-				"R/T12Z",
-				"PT180H"
-			]
-		],
-		"resolution": "PT6H"
-	},
-	"geometry": {
-		"type": "Polygon",
-		"coordinates": [
-			[
-				-180,
-				-90
-			],
-			[
-				-180,
-				90
-			],
-			[
-				180,
-				90
-			],
-			[
-				180,
-				-90
-			],
-			[
-				-180,
-				-90
-			]
-		]
-	},
-	"additionalExtents": {
-		"spatial": {
-			"bbox": [
-				[
-					-180,
-					-90,
-					180,
-					90
-				]
-			],
-			"resolution": "0.5*0.5",
-			"crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-		},
-		"temporal": {
-			"interval": [
-				[
-					"R/T00Z",
-					"PT72H"
-				],
-				[
-					"R/T12Z",
-					"PT72H"
-				]
-			],
-			"resolution": "PT3H"
-		},
-		"temporal": {
-			"interval": [
-				[
-					"R/T00Z",
-					"PT48H"
-				],
-				[
-					"R/T12Z",
-					"PT48H"
-				]
-			],
-			"resolution": "PT1H"
-		}
-	},
-	"properties": {
-		"type": "dataset",
-		"title": "ICON-EPS GRIB data",
-		"description": "ICON-EPS 0.5° x 0.5° regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
-		"themes": [
-			{
-				"concepts": [
-					{
-						"id": "meteorology"
-					}
-				],
-				"scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
-			},
-			{
-				"concepts": [
-					{
-						"id": "Meteorological geographical features"
-					}
-				],
-				"scheme": "https://inspire.ec.europa.eu/theme/mf"
-			},
-			{
-				"concepts": [
-					{
-						"id": "FM 92 GRIB edition 2"
-					}
-				],
-				"scheme": "http://codes.wmo.int/codeform"
-			},
-			{
-				"concepts": [
-					{
-						"id": "continual"
-					}
-				],
-				"scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
-			}
-		],
-		"contacts": [
-			{
-				"identifier": "DWD",
-				"organization": "Deutscher Wetterdienst",
-				"positionName": "Michael Denhard",
-				"emails": [
-					{
-						"value": "wis@dwd.de"
-					}
-				],
-				"addresses": [
-					{
-						"deliveryPoint": [
-							"Frankfurter Strasse 135"
-						],
-						"city": "Offenbach",
-						"postalCode": "63067",
-						"country": "Germany"
-					}
-				],
-				"links": [
-					{
-						"href": "https://www.dwd.de/wmc"
-					},
-					{
-						"href": "https://gisc.dwd.de"
-					}
-				],
-				"contactInstructions": "email",
-				"roles": [
-					"pointOfContact",
-					"originator"
-				]
-			}
-		],
-		"created": "2018-08-19T08:10:00Z",
-		"updated": "2022-03-15T09:26:00Z",
-		"wmo:dataPolicy": "core",
-		"keywords": [
-			"CLCH",
-			"CLCL",
-			"CLCM",
-			"CLCT",
-			"cloud",
-			"MSLP",
-			"Probability of temperature anomalies",
-			"cape",
-			"dew point",
-			"geopotential height",
-			"maximum temperature 2m",
-			"minimum temperature 2m",
-			"precipitation",
-			"snow",
-			"snowfall",
-			"soil temperature",
-			"temperature",
-			"wind gusts 10m",
-			"wind speed",
-			"wind speed 10m"
-		],
-		"externalIds": [
-			{
-				"scheme": "DWD",
-				"value": "de.dwd.icon-eps.ALL"
-			}
-		],
-		"language": "eng",
-		"formats": [
-			"GRIB2"
-		]
-	},
-	"links": [
-		{
-			"rel": "download",
-			"type": "text/html",
-			"title": "Open Data Server DWD",
-			"href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
-		},
-		{
-			"rel": "subscribe",
-			"type": "application/json",
-			"title": "Global Broker (Toulouse)",
-			"href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
-			"channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
-		}
-	]
+    "id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2.0"
+    ],
+    "time": {
+        "interval": [
+            [
+                "R/T00Z",
+                "PT180H"
+            ],
+            [
+                "R/T12Z",
+                "PT180H"
+            ]
+        ],
+        "resolution": "PT6H"
+    },
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                -180,
+                -90
+            ],
+            [
+                -180,
+                90
+            ],
+            [
+                180,
+                90
+            ],
+            [
+                180,
+                -90
+            ],
+            [
+                -180,
+                -90
+            ]
+        ]
+    },
+    "additionalExtents": {
+        "spatial": {
+            "bbox": [
+                [
+                    -180,
+                    -90,
+                    180,
+                    90
+                ]
+            ],
+            "resolution": "0.5*0.5",
+            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "R/T00Z",
+                    "PT48H"
+                ],
+                [
+                    "R/T12Z",
+                    "PT48H"
+                ]
+            ],
+            "resolution": "PT1H"
+        }
+    },
+    "properties": {
+        "type": "dataset",
+        "title": "ICON-EPS GRIB data",
+        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "meteorology"
+                    }
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "Meteorological geographical features"
+                    }
+                ],
+                "scheme": "https://inspire.ec.europa.eu/theme/mf"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "FM 92 GRIB edition 2"
+                    }
+                ],
+                "scheme": "http://codes.wmo.int/codeform"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "continual"
+                    }
+                ],
+                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+            }
+        ],
+        "contacts": [
+            {
+                "identifier": "DWD",
+                "organization": "Deutscher Wetterdienst",
+                "positionName": "Michael Denhard",
+                "emails": [
+                    {
+                        "value": "wis@dwd.de"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "Frankfurter Strasse 135"
+                        ],
+                        "city": "Offenbach",
+                        "postalCode": "63067",
+                        "country": "Germany"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "https://www.dwd.de/wmc"
+                    },
+                    {
+                        "href": "https://gisc.dwd.de"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "pointOfContact",
+                    "originator"
+                ]
+            }
+        ],
+        "created": "2018-08-19T08:10:00Z",
+        "updated": "2022-03-15T09:26:00Z",
+        "wmo:dataPolicy": "core",
+        "keywords": [
+            "CLCH",
+            "CLCL",
+            "CLCM",
+            "CLCT",
+            "cloud",
+            "MSLP",
+            "Probability of temperature anomalies",
+            "cape",
+            "dew point",
+            "geopotential height",
+            "maximum temperature 2m",
+            "minimum temperature 2m",
+            "precipitation",
+            "snow",
+            "snowfall",
+            "soil temperature",
+            "temperature",
+            "wind gusts 10m",
+            "wind speed",
+            "wind speed 10m"
+        ],
+        "externalIds": [
+            {
+                "scheme": "DWD",
+                "value": "de.dwd.icon-eps.ALL"
+            }
+        ],
+        "language": "eng",
+        "formats": [
+            "GRIB2"
+        ]
+    },
+    "links": [
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "Open Data Server DWD",
+            "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+        },
+        {
+            "rel": "subscribe",
+            "type": "application/json",
+            "title": "Global Broker (Toulouse)",
+            "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+            "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+        }
+    ]
 }
