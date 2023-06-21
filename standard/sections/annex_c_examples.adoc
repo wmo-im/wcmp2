@@ -5,13 +5,19 @@
 
 === WMO Core Metadata Profile Examples
 
-.Example: observations: Canadian Hourly Surface Weather Observations
+.Example: Canadian Hourly Surface Weather Observations (dataset)
 ----
 include::../../examples/msc-swob-realtime.json[]
 ----
 
-.Example: NWP: ICON-EPS GRIB data
+.Example: ICON-EPS GRIB data (dataset)
 [source,json]
 ----
 include::../../examples/wcmp2_de.dwd.icon-eps.ALL.json[]
+----
+
+.Example: WIS2 Global Broker (service)
+[source,json]
+----
+include::../../examples/fra.meteo-france.global-broker.json[]
 ----

@@ -141,11 +141,12 @@ include::../requirements/core/REQ_conformance.adoc[]
 
 ==== Properties / Type
 
-The `+type+` property identifies the type of resource that the metadata record describes using values from [codelist]. While most metadata records will be set to `dataset`,
+The `+type+` property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to `dataset`,
 WCMP can also describe services and processes. See the resource type codelist footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv] for
 allowed values.
 
 include::../requirements/core/REQ_type.adoc[]
+include::../requirements/core/REQ_type_service.adoc[]
 
 .Example
 
@@ -194,7 +195,7 @@ include::../requirements/core/REQ_description.adoc[]
 
 ==== Properties / Keywords
 
-The `+keywords+` property is a list keywords, tags, specific phrases, or classification codes associated with the dataset, but are not referenced to a particular vocabulary or knowledge organization system.
+The `+keywords+` property is a list keywords, tags, specific phrases, or classification codes associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.
 
 include::../recommendations/core/REC_keywords.adoc[]
 
@@ -216,8 +217,8 @@ include::../recommendations/core/REC_keywords.adoc[]
 
 ==== Properties / Themes
 
-The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A concept's `+id+`
-provides an identifier for the given concept, as well as optional `+title`, `+description+` and `+url+` properties to further describe the concept as desired.
+The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.  A concept's `+id+`
+provides an identifier for the given concept, as well as optional `+title+`, `+description+` and `+url+` properties to further describe the concept as desired.
 
 A theme's `+scheme+` property provides a remote reference to a controlled vocabulary, codelist or knowledge organization system.
 
@@ -226,6 +227,7 @@ A concept's optional `+url+` property can provide a remote reference to a given 
 A WCMP metadata record can have one or more themes.
 
 include::../requirements/core/REQ_themes.adoc[]
+include::../requirements/core/REQ_themes_wis2_global_service.adoc[]
 include::../recommendations/core/REC_granularity.adoc[]
 
 .Examples
@@ -307,6 +309,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 include::../requirements/core/REQ_extent_geospatial.adoc[]
 include::../recommendations/core/REC_extent_geospatial_point.adoc[]
 include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
+include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[]
 
 .Examples
 
@@ -378,6 +381,7 @@ Temporal resolution provides a useful indicator of the data update frequency (fo
 
 include::../requirements/core/REQ_extent_temporal.adoc[]
 include::../recommendations/core/REC_extent_temporal.adoc[]
+include::../recommendations/core/PER_extent_temporal_service.adoc[]
 
 .Examples
 
@@ -696,7 +700,7 @@ include::../requirements/core/REQ_links.adoc[]
     "rel"  : "items",
     "type" : "application/json",
     "title": "WIS2 notification service",
-    "href" : "mqtts://broker.example.org",
+    "href" : "mqtts://example.org",
     "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]

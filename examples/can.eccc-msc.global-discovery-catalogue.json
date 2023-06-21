@@ -1,0 +1,162 @@
+{
+    "id": "urn:x-wmo:md:can:eccc-msc:global-discovery-catalogue",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2"
+    ],
+    "time": null,
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                -180,
+                -90
+            ],
+            [
+                -180,
+                90
+            ],
+            [
+                180,
+                90
+            ],
+            [
+                180,
+                -90
+            ],
+            [
+                -180,
+                -90
+            ]
+        ]
+    },
+    "properties": {
+        "type": "service",
+        "title": "WIS2 Global Discovery Catalogue - Environment and Climate Change Canada, Meteorological Service of Canada",
+        "description": "The WIS2 Global Discovery Catalogue provides discovery and search services of WMO weather/climate/water data via the OGC API - Records - Core: Part 1 standard.",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "weather",
+                        "title": "Weather"
+                    },
+                    {
+                        "id": "climate",
+                        "title": "Climate"
+                    },
+                    {
+                        "id": "hydrology",
+                        "title": "Hydrology"
+                    },
+                    {
+                        "id": "atmospheric-composition",
+                        "title": "Atmospheric Composition"
+                    },
+                    {
+                        "id": "cryosphere",
+                        "title": "Cryosphere"
+                    },
+                    {
+                        "id": "ocean",
+                        "title": "Ocean"
+                    },
+                    {
+                        "id": "space-weather",
+                        "title": "Space Weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "global-discovery-catalogue",
+                        "title": "Global Discovery Catalogue"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+            }
+        ],
+        "contacts": [
+            {
+                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "positionName": "National Inquiry Response Team",
+                "phones": [
+                    {
+                        "value": "+18199972800"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "enviroinfo@ec.gc.ca"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "77 Westmorland Street, suite 260"
+                        ],
+                        "city": "Fredericton",
+                        "administrativeArea": "NB",
+                        "postalCode": "E3B 6Z4",
+                        "country": "Canada"
+                    }
+                ],
+                "links": [
+                    {
+                        "rel": "canonical",
+                        "type": "text/html",
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                    }
+                ],
+                "roles": [
+                    "pointOfContact",
+                    "distributor"
+                ]
+            }
+        ],
+        "created": "2022-11-11T11:00:00Z",
+        "keywords": [
+            "wis2",
+            "global discovery catalogue",
+            "metadata"
+        ]
+    },
+    "links": [
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files < 24h during pilot)",
+            "href": "https://opendata.dwd.de/test/wis2/cache"
+        },
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "Open Data Server DWD (Metadata Archive)",
+            "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
+        },
+        {
+            "rel": "related",
+            "type": "application/json",
+            "title": "WMO WIS2 Global Broker - Météo-France",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
+            "channel": "cache/a/wis2/#",
+            "distribution": {
+                "maxMSGsize": 4096,
+                "unit": "bytes"
+            }
+        },
+        {
+            "rel": "related",
+            "type": "application/json",
+            "title": "WMO WIS Global Broker - China Meteorological Administration",
+            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
+            "channel": "cache/a/wis2/#",
+            "distribution": {
+                "maxMSGsize": 4096,
+                "unit": "bytes"
+            }
+        }
+    ]
+}

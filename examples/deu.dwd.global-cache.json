@@ -2,7 +2,7 @@
     "id": "urn:x-wmo:md:deu:dwd-offenbach:global-cache-service",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2"
     ],
     "time": {
         "interval": [
@@ -39,21 +39,47 @@
     },
     "properties": {
         "type": "service",
-        "title": "WMO Global Cache (DWD)",
-        "description": "For WMO Information System 2.0 (WIS 2.0) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 4096 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+        "title": "WMO WIS2 Global Cache (Deutscher Wetterdienst)",
+        "description": "For WMO Information System 2 (WIS2) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 4096 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
         "themes": [
             {
                 "concepts": [
                     {
-                        "id": "meteorology"
+                        "id": "weather",
+                        "title": "Weather"
+                    },
+                    {
+                        "id": "climate",
+                        "title": "Climate"
+                    },
+                    {
+                        "id": "hydrology",
+                        "title": "Hydrology"
+                    },
+                    {
+                        "id": "atmospheric-composition",
+                        "title": "Atmospheric Composition"
+                    },
+                    {
+                        "id": "cryosphere",
+                        "title": "Cryosphere"
+                    },
+                    {
+                        "id": "ocean",
+                        "title": "Ocean"
+                    },
+                    {
+                        "id": "space-weather",
+                        "title": "Space Weather"
                     }
                 ],
-                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
             },
             {
                 "concepts": [
                     {
-                        "id": "global-cache"
+                        "id": "global-cache",
+                        "title": "Global Cache"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
@@ -119,7 +145,7 @@
         {
             "rel": "download",
             "type": "text/html",
-            "title": "Open Data Server DWD (Cached files < 24h during pilot)",
+            "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files < 24h during pilot)",
             "href": "https://opendata.dwd.de/test/wis2/cache"
         },
         {
@@ -131,8 +157,8 @@
         {
             "rel": "related",
             "type": "application/json",
-            "title": "Global Broker (Toulouse)",
-            "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
+            "title": "WMO WIS2 Global Broker - Météo-France",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "cache/a/wis2/#",
             "distribution": {
                 "maxMSGsize": 4096,
@@ -142,8 +168,8 @@
         {
             "rel": "related",
             "type": "application/json",
-            "title": "Global Broker (Beijing)",
-            "href": "mqtt://[yourAccount]:[yourPassword]@gb.wis.cma.cn:1883/",
+            "title": "WMO WIS Global Broker - China Meteorological Administration",
+            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
             "channel": "cache/a/wis2/#",
             "distribution": {
                 "maxMSGsize": 4096,

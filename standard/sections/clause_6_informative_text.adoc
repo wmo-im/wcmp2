@@ -37,11 +37,11 @@ In order to provide discovery metadata of value, it is important to clarify the 
 are to provide describing their data and associated services.  Articulating the level of granularity will reduce catalogue "pollution"
 and bring the user closer to the data via their search criteria.
 
-A WCMP record provides a description at the granularity of a *dataset*, which facilitates clear
+A WCMP record provides a description at the primary granularity of a *dataset*, which facilitates clear
 cataloguing and discovery workflow, in combination with data services or APIs, which provide
 access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).
 
-The <<metadata-discovery-workflow>> below illustrates example metadata publication and discovery workflows against
+The <<metadata-discovery-workflow>> figure below illustrates example metadata publication and discovery workflows against
 common meteorological data types:
 
 [[metadata-discovery-workflow]]
@@ -102,8 +102,8 @@ efficient discovery, visualization, and access of weather, climate, water (real-
 The OGC Records - API - Part 1: Core specification:
 
 * lowers the discovery barrier to finding the existence of geospatial resources on the Web
-* provides the ability for discovery metadata to be published via API machinery or static records
-* provides a core record model information communities to extend
+* provides the ability for discovery metadata to be published via API machinery (searchable catalogue) or static records (crawlable catalogue)
+* provides a core record model for information communities to extend
 * provides a subset of core queryables (e.g. by resource type, by external identifier) which enables
   federation and cross catalogue discovery functionality
 

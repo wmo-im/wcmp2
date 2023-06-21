@@ -41,6 +41,7 @@ include::./core/ATS_test_description.adoc[]
 ==== Themes
 
 include::./core/ATS_test_themes.adoc[]
+include::./core/ATS_test_themes_wis2_global_service.adoc[]
 
 ==== Contacts
 
@@ -54,6 +55,6 @@ include::./core/ATS_test_record_creation_date.adoc[]
 
 include::./core/ATS_test_data_policy.adoc[]
 
-=== Links
+==== Links
 
 include::./core/ATS_test_links.adoc[]

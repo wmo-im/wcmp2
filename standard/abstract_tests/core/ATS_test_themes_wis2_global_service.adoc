@@ -1,0 +1,36 @@
+[[ats_core_themes_wis2_global_service]]
+====
+[%metadata]
+label:: /conf/core/themes_wis2_global_service
+subject:: /req/core/themes_wis2_global_service
+test-purpose:: Validate that a WCMP record provides a themes property from a WIS2 global service.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Check for the existence of a `+properties.type+` element with a value of `+service+`.
+--
+
+[.component,class=step]
+--
+Check that the `+properties.themes+` property provides a theme object with the `+scheme+` of `+https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv+`.
+--
+
+[.component,class=step]
+--
+Check that each value from the `+scheme+` is provided as a concept.
+--
+
+[.component,class=step]
+--
+Check that the `+properties.themes+` property provides a theme object with the `+scheme+` of `+https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-type.csv+`.
+--
+
+[.component,class=step]
+--
+Check that one concept from the `+scheme+` is provided.
+--
+
+=====
+====
