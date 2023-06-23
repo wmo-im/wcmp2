@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/contacts*
-^|A |A WCMP record SHALL provide a `+properties.contacts+` property.
-^|B |A WCMP record `+properties.contacts+` property SHALL provide at least TWO contacts (as multiple contact objects or a single contact object with multiple roles) based on the metadata point of contact and the originator of the data.
-
+^|A |A WCMP record SHALL provide at least one contact via the `+properties.contacts+` property.
+^|B |A WCMP record's contact SHALL provide a `+organization+` property.
+^|C |A WCMP record’s contact `+roles+`, when specified, SHALL provide a role type from the WCMP resource type codelist.
 |===

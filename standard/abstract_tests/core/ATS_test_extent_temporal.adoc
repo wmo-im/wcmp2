@@ -20,7 +20,7 @@ Check that the `+time+` object is one of `+date+` string, `+timestamp+` string, 
 
 [.component,class=step]
 --
-Check that all non-null `+time+` values are valid RFC3339 representations, or `+..+` for an open-ended extent.
+Check that all non-null `+time+` values are valid ISO8601 representations, intervals or durations, or `+..+` for an open-ended extent.
 --
 
 =====

@@ -451,9 +451,10 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 
 ==== Properties / Contacts
 
-The `+contacts+` property is the contact information and `+role+` of the dataset contacts.
+The `+contacts+` property is the information associated with one or more responsible parties of the resource.
 
 include::../requirements/core/REQ_contacts.adoc[]
+include::../recommendations/core/PER_contacts.adoc[]
 
 .Examples
 
@@ -482,7 +483,7 @@ include::../requirements/core/REQ_contacts.adoc[]
         "href": "https://www.canada.ca/en/environment-climate-change.html"
       }],
       "contactInstructions": "email",
-      "roles": ["pointOfContact", "originator"]
+      "roles": ["producer", "host"]
   }]
   ...
 }
