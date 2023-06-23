@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-05-29</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-06-23</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-05-29</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-06-23</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -574,9 +574,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_contacts">A.1.10. Contacts</a></li>
 <li><a href="#_record_creation_date">A.1.11. Record Creation Date</a></li>
 <li><a href="#_wmo_data_policy">A.1.12. WMO Data Policy</a></li>
+<li><a href="#_links">A.1.13. Links</a></li>
 </ul>
 </li>
-<li><a href="#_links">A.2. Links</a></li>
 </ul>
 </li>
 <li><a href="#schemas">Annex B: Schemas (Normative)</a>
@@ -626,7 +626,7 @@ provide guidelines on how to best enable spatiotemporal data to lower the barrie
 <p>The following are keywords to be used by search engines and document catalogues.</p>
 </div>
 <div class="paragraph">
-<p>wmo, wis 2.0, weather, climate, water, metadata, discovery, search</p>
+<p>wmo, wis, wis2, weather, climate, water, metadata, discovery, search</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">iii.    Security Considerations</strong></p>
@@ -635,7 +635,7 @@ provide guidelines on how to best enable spatiotemporal data to lower the barrie
 <p>Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup>, exchanged data are classified as <code>core</code> or <code>recommended</code>.  Core data is considered fully open and unrestricted with no security considerations.  Recommended data may have access control defined.</p>
 </div>
 <div class="paragraph">
-<p>No security considerations have been made for this standard.</p>
+<p>No additional security considerations have been made for this standard.</p>
 </div>
 </div>
 </div>
@@ -662,7 +662,7 @@ may be represented as part of their own metadata or associated through WCMP link
 <p>WCMP discovery metadata record provides descriptions at the granularity level of a dataset.  Station, instrument and observation metadata are supported by the <em>WIGOS Metadata Standard (WMO-No. 1192)</em> <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>.</p>
 </div>
 <div class="paragraph">
-<p>This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on schemas.  Annex provides informative examples.  Annex D provides normative information on codelists.</p>
+<p>This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on schemas.  Annex C provides informative examples.  Annex D provides normative information on codelists.</p>
 </div>
 </div>
 </div>
@@ -696,7 +696,7 @@ consistency across multiple metadata records and perform quality assessment and 
 <p>"WMO Core Metadata Profile Core": This conformance class inherits from <em>OGC API — Records — Part 1: Core:
 Requirements Class: Record Core</em> which defines the requirements for a catalogue record.  The requirements
 specified in the Requirements Class “Record Core" are mandatory for all implementations of WMCP.
-The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
+The requirements are specified in Chapter 7 and in Annex A in more detail.</p>
 </li>
 </ul>
 </div>
@@ -708,7 +708,7 @@ The requirements are specified in Chapter 7 and in Annex A.2 in more detail.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a id="ogcapi-records"></a> OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2021) <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
+<p><a id="ogcapi-records"></a> OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2023) <sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
 </li>
 <li>
 <p><a id="ogcapi-features"></a> OGC: OGC 17-069r, OGC API - Features - Part 1: Core 1.0 (2022) <sup class="footnote">[<a id="_footnoteref_13" class="footnote" href="#_footnotedef_13" title="View footnote.">13</a>]</sup></p>
@@ -1050,12 +1050,12 @@ are to provide describing their data and associated services.  Articulating the 
 and bring the user closer to the data via their search criteria.</p>
 </div>
 <div class="paragraph">
-<p>A WCMP record provides a description at the granularity of a <strong>dataset</strong>, which facilitates clear
+<p>A WCMP record provides a description at the primary granularity of a <strong>dataset</strong>, which facilitates clear
 cataloguing and discovery workflow, in combination with data services or APIs, which provide
 access, queries, and filters at a lower level of granularity (parameter, variable, spatiotemporal extents).</p>
 </div>
 <div class="paragraph">
-<p>The <a href="#metadata-discovery-workflow">Discovery metadata workflow</a> below illustrates example metadata publication and discovery workflows against
+<p>The <a href="#metadata-discovery-workflow">Discovery metadata workflow</a> figure below illustrates example metadata publication and discovery workflows against
 common meteorological data types:</p>
 </div>
 <div id="metadata-discovery-workflow" class="imageblock">
@@ -1219,10 +1219,10 @@ efficient discovery, visualization, and access of weather, climate, water (real-
 <p>lowers the discovery barrier to finding the existence of geospatial resources on the Web</p>
 </li>
 <li>
-<p>provides the ability for discovery metadata to be published via API machinery or static records</p>
+<p>provides the ability for discovery metadata to be published via API machinery (searchable catalogue) or static records (crawlable catalogue)</p>
 </li>
 <li>
-<p>provides a core record model information communities to extend</p>
+<p>provides a core record model for information communities to extend</p>
 </li>
 <li>
 <p>provides a subset of core queryables (e.g. by resource type, by external identifier) which enables
@@ -1587,7 +1587,7 @@ detection and handling of content.</p>
 <div class="sect3">
 <h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.5. Properties / Type</h4>
 <div class="paragraph">
-<p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from [codelist]. While most metadata records will be set to <code>dataset</code>,
+<p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to <code>dataset</code>,
 WCMP can also describe services and processes. See the resource type codelist <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup> for
 allowed values.</p>
 </div>
@@ -1617,6 +1617,26 @@ allowed values.</p>
 </tr>
 </tbody>
 </table>
+<table id="req_core_type_service" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/core/type_service</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record describing a service or API SHALL set <code>properties.type</code> to <code>service</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
@@ -1640,7 +1660,7 @@ allowed values.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/title</strong></p>
 </div></div></td>
@@ -1677,7 +1697,7 @@ allowed values.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/description</strong></p>
 </div></div></td>
@@ -1703,7 +1723,7 @@ allowed values.</p>
 <div class="sect3">
 <h4 id="_properties_keywords"><a class="anchor" href="#_properties_keywords"></a>7.1.8. Properties / Keywords</h4>
 <div class="paragraph">
-<p>The <code>keywords</code> property is a list keywords, tags, specific phrases, or classification codes associated with the dataset, but are not referenced to a particular vocabulary or knowledge organization system.</p>
+<p>The <code>keywords</code> property is a list keywords, tags, specific phrases, or classification codes associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.</p>
 </div>
 <table id="rec_core_keywords" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1744,8 +1764,8 @@ allowed values.</p>
 <div class="sect3">
 <h4 id="_properties_themes"><a class="anchor" href="#_properties_themes"></a>7.1.9. Properties / Themes</h4>
 <div class="paragraph">
-<p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the dataset.  A concept&#8217;s <code>id</code>
-provides an identifier for the given concept, as well as optional <code>+title</code>, <code>description</code> and <code>url</code> properties to further describe the concept as desired.</p>
+<p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.  A concept&#8217;s <code>id</code>
+provides an identifier for the given concept, as well as optional <code>title</code>, <code>description</code> and <code>url</code> properties to further describe the concept as desired.</p>
 </div>
 <div class="paragraph">
 <p>A theme&#8217;s <code>scheme</code> property provides a remote reference to a controlled vocabulary, codelist or knowledge organization system.</p>
@@ -1756,16 +1776,16 @@ provides an identifier for the given concept, as well as optional <code>+title</
 <div class="paragraph">
 <p>A WCMP metadata record can have one or more themes.</p>
 </div>
-<table id="rec_core_themes" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_core_themes" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/core/themes</strong></p>
+<p><strong>/req/core/themes</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -1794,6 +1814,32 @@ provides an identifier for the given concept, as well as optional <code>+title</
 </tr>
 </tbody>
 </table>
+<table id="req_core_themes_wis2_global_service" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/core/themes_wis2_global_service</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record describing a WIS2 global service SHALL provide a theme/concept displaying all Earth system disciplines defined in the WCMP2 codelists.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record describing a WIS2 global service SHALL provide a theme/concept identifying the service type provided.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <table id="rec_core_granularity" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -1801,7 +1847,7 @@ provides an identifier for the given concept, as well as optional <code>+title</
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/granularity</strong></p>
 </div></div></td>
@@ -1899,7 +1945,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/extent_geospatial</strong></p>
 </div></div></td>
@@ -1931,7 +1977,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_geospatial_point</strong></p>
 </div></div></td>
@@ -1951,7 +1997,7 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_geospatial_precision</strong></p>
 </div></div></td>
@@ -1960,6 +2006,26 @@ extents provide a useful indicator of the location of the dataset to facilitate 
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>Geometry coordinates SHOULD have a level of precision of 2 decimal places.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_core_extent_geospatial_wis2_global_service" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/extent_geospatial_wis_2_global_service</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>For a WIS2 Global Service, a WCMP record SHOULD provide the GeoJSON geometry as a <code>Polygon</code> type with a WGS84 bounding geometry of <code>-180</code> (west longitude), <code>-90</code> (south latitude), <code>180</code> (east longitude), <code>90</code> (north latitude).</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2075,7 +2141,7 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/extent_temporal</strong></p>
 </div></div></td>
@@ -2110,6 +2176,26 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (<code>time.resolution</code>) as a valid ISO 8601 duration (e.g., <code>P1D</code>).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_core_extent_service" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 7</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/extent_service</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>For WCMP records describing a service or API, a <code>time</code> value of <code>null</code> MAY be provided.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2214,7 +2300,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/contacts</strong></p>
 </div></div></td>
@@ -2348,7 +2434,7 @@ are commonly used for scientific publications and datasets.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/pids</strong></p>
 </div></div></td>
@@ -2414,7 +2500,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/record_creation_date</strong></p>
 </div></div></td>
@@ -2456,7 +2542,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/record_update_date</strong></p>
 </div></div></td>
@@ -2492,7 +2578,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/data_policy</strong></p>
 </div></div></td>
@@ -2592,7 +2678,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/data_policy_conditions</strong></p>
 </div></div></td>
@@ -2640,7 +2726,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/links</strong></p>
 </div></div></td>
@@ -2713,7 +2799,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
     "rel"  : "items",
     "type" : "application/json",
     "title": "WIS2 notification service",
-    "href" : "mqtts://broker.example.org",
+    "href" : "mqtts://example.org",
     "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
   }
 ]</code></pre>
@@ -2762,7 +2848,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/distribution</strong></p>
 </div></div></td>
@@ -3387,14 +3473,14 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check for the existence of a single <code>themes</code> array property in the WCMP record.</p>
+<p>Check for the existence of a single <code>properties.themes</code> array property in the WCMP record.</p>
 </div>
 </div>
 </div>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>themes</code> property provides a minimum of one theme object.</p>
+<p>Check that the <code>properties.themes</code> property provides a minimum of one theme object.</p>
 </div>
 </div>
 </div>
@@ -3416,6 +3502,65 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="content">
 <div class="paragraph">
 <p>Check that each concept object provides a minimum of one <code>id</code> property.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="ats_core_themes_wis2_global_service" class="exampleblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">label</dt>
+<dd>
+<p>/conf/core/themes_wis2_global_service</p>
+</dd>
+<dt class="hdlist1">subject</dt>
+<dd>
+<p>/req/core/themes_wis2_global_service</p>
+</dd>
+<dt class="hdlist1">test-purpose</dt>
+<dd>
+<p>Validate that a WCMP record provides a themes property from a WIS2 global service.</p>
+</dd>
+</dl>
+</div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check for the existence of a <code>properties.type</code> element with a value of <code>service</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that each value from the <code>scheme</code> is provided as a concept.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-type.csv</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that one concept from the <code>scheme</code> is provided.</p>
 </div>
 </div>
 </div>
@@ -3572,9 +3717,8 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_links"><a class="anchor" href="#_links"></a>A.2. Links</h3>
+<div class="sect3">
+<h4 id="_links"><a class="anchor" href="#_links"></a>A.1.13. Links</h4>
 <div id="ats_core_links" class="exampleblock">
 <div class="content">
 <div class="dlist">
@@ -3644,6 +3788,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="schemas"><a class="anchor" href="#schemas"></a>Annex B: Schemas (Normative)</h2>
 <div class="sectionbody">
@@ -3696,48 +3841,57 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
       ]
     },
     "time": {
-      "type": "object",
-      "nullable": true,
-      "properties": {
-        "date": {
-          "type": "string",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+      "oneOf": [
+        {
+          "enum": [
+            null
+          ]
         },
-        "timestamp": {
-          "type": "string",
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
-        },
-        "interval": {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 2,
-          "items": {
-            "oneOf": [
-              {
-                "type": "string",
-                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
-              },
-              {
-                "type": "string",
-                "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
-              },
-              {
-                "type": "string",
-                "enum": [
-                  ".."
+        {
+          "type": "object",
+          "nullable": true,
+          "properties": {
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "timestamp": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+            },
+            "interval": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "oneOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      ".."
+                    ]
+                  }
                 ]
               }
-            ]
+            },
+            "resolution": {
+              "type": "string",
+              "description": "Minimum time period resolvable in the dataset, as an ISO 8601 duration",
+              "example": [
+                "P1D"
+              ]
+            }
           }
-        },
-        "resolution": {
-          "type": "string",
-          "description": "Minimum time period resolvable in the dataset, as an ISO 8601 duration",
-          "example": [
-            "P1D"
-          ]
         }
-      }
+      ]
     },
     "geometry": {
       "oneOf": [
@@ -5172,7 +5326,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="sect2">
 <h3 id="_wmo_core_metadata_profile_examples"><a class="anchor" href="#_wmo_core_metadata_profile_examples"></a>C.1. WMO Core Metadata Profile Examples</h3>
 <div class="listingblock">
-<div class="title">Example: observations: Canadian Hourly Surface Weather Observations</div>
+<div class="title">Example: Canadian Hourly Surface Weather Observations (dataset)</div>
 <div class="content">
 <pre>{
     "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
@@ -5336,10 +5490,10 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example: NWP: ICON-EPS GRIB data</div>
+<div class="title">Example: ICON-EPS GRIB data (dataset)</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
-    "id": "urn:x-wmo:md:DEU:dwd:icon-eps.ALL",
+    "id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2.0"
@@ -5394,21 +5548,26 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             ],
             "resolution": "0.5*0.5",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+        },
+        "temporal": {
+            "interval": [
+                [
+                    "R/T00Z",
+                    "PT48H"
+                ],
+                [
+                    "R/T12Z",
+                    "PT48H"
+                ]
+            ],
+            "resolution": "PT1H"
         }
     },
     "properties": {
         "type": "dataset",
         "title": "ICON-EPS GRIB data",
-        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC various parameter, various level, various threshold",
+        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
         "themes": [
-            {
-                "concepts": [
-                    {
-                        "id": "wis2/DEU/dwd-offenbach/data/core/weather/analysis-prediction"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy"
-            },
             {
                 "concepts": [
                     {
@@ -5432,54 +5591,54 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     }
                 ],
                 "scheme": "http://codes.wmo.int/codeform"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "continual"
+                    }
+                ],
+                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
             }
         ],
-        "providers": [
+        "contacts": [
             {
-                "name": "Deutscher Wetterdienst",
+                "identifier": "DWD",
+                "organization": "Deutscher Wetterdienst",
                 "positionName": "Michael Denhard",
-                "contactInfo": {
-                    "email": {
-                        "work": "gisc@dwd.de"
-                    },
-                    "address": [
-                        {
-                            "deliveryPoint": "Frankfurter Stra\u00dfe 135",
-                            "city": "Offenbach",
-                            "postal-code": "63067",
-                            "country": "Germany"
-                        }
-                    ],
-                    "url": "http://www.dwd.de/wmc"
-                },
-                "roles": [
+                "emails": [
                     {
-                        "name": "pointOfContact"
-                    },
-                    {
-                        "name": "originator"
+                        "value": "wis@dwd.de"
                     }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "Frankfurter Strasse 135"
+                        ],
+                        "city": "Offenbach",
+                        "postalCode": "63067",
+                        "country": "Germany"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "https://www.dwd.de/wmc"
+                    },
+                    {
+                        "href": "https://gisc.dwd.de"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "pointOfContact",
+                    "originator"
                 ]
             }
         ],
         "created": "2018-08-19T08:10:00Z",
         "updated": "2022-03-15T09:26:00Z",
         "wmo:dataPolicy": "core",
-        "links": [
-            {
-                "rel": "download",
-                "type": "text/html",
-                "title": "Open Data Server DWD",
-                "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
-            },
-            {
-                "rel": "items",
-                "type": "application/json",
-                "title": "Message Broker DWD",
-                "href": "mqtts://everyone:everyone@wis2.dwd.de",
-                "channel": "origin/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
-            }
-        ],
         "keywords": [
             "CLCH",
             "CLCL",
@@ -5512,7 +5671,182 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         "formats": [
             "GRIB2"
         ]
-    }
+    },
+    "links": [
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "Open Data Server DWD",
+            "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+        },
+        {
+            "rel": "subscribe",
+            "type": "application/json",
+            "title": "Global Broker (Toulouse)",
+            "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+            "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+        }
+    ]
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example: WIS2 Global Broker (service)</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+    "id": "urn:x-wmo:md:fra:meteo-france:global-broker",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2"
+    ],
+    "time": null,
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                -180,
+                -90
+            ],
+            [
+                -180,
+                90
+            ],
+            [
+                180,
+                90
+            ],
+            [
+                180,
+                -90
+            ],
+            [
+                -180,
+                -90
+            ]
+        ]
+    },
+    "properties": {
+        "type": "service",
+        "title": "WIS2 Broker - Météo-France",
+        "description": "TODO",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "weather",
+                        "title": "Weather"
+                    },
+                    {
+                        "id": "climate",
+                        "title": "Climate"
+                    },
+                    {
+                        "id": "hydrology",
+                        "title": "Hydrology"
+                    },
+                    {
+                        "id": "atmospheric-composition",
+                        "title": "Atmospheric Composition"
+                    },
+                    {
+                        "id": "cryosphere",
+                        "title": "Cryosphere"
+                    },
+                    {
+                        "id": "ocean",
+                        "title": "Ocean"
+                    },
+                    {
+                        "id": "space-weather",
+                        "title": "Space Weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "global-broker",
+                        "title": "Global Broker"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+            }
+        ],
+        "contacts": [
+            {
+                "identifier": "meteo-france",
+                "organization": "Météo-France",
+                "positionName": "David Podeur",
+                "emails": [
+                    {
+                        "value": "gisc_support@meteo.fr"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "42 Avenue Coriolis"
+                        ],
+                        "city": "Toulouse",
+                        "postalCode": "31057",
+                        "country": "France"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "https://donneespubliques.meteofrance.fr"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "pointOfContact"
+                ]
+            }
+        ],
+        "created": "2022-11-11T11:00:00Z",
+        "keywords": [
+            "wis2",
+            "global discovery catalogue",
+            "metadata"
+        ]
+    },
+    "links": [
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files &lt; 24h during pilot)",
+            "href": "https://opendata.dwd.de/test/wis2/cache"
+        },
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "Open Data Server DWD (Metadata Archive)",
+            "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
+        },
+        {
+            "rel": "related",
+            "type": "application/json",
+            "title": "WMO WIS2 Global Broker - Météo-France",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
+            "channel": "cache/a/wis2/#",
+            "distribution": {
+                "maxMSGsize": 4096,
+                "unit": "bytes"
+            }
+        },
+        {
+            "rel": "related",
+            "type": "application/json",
+            "title": "WMO WIS Global Broker - China Meteorological Administration",
+            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
+            "channel": "cache/a/wis2/#",
+            "distribution": {
+                "maxMSGsize": 4096,
+                "unit": "bytes"
+            }
+        }
+    ]
 }</code></pre>
 </div>
 </div>
@@ -5686,7 +6020,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-05-29 10:13:31 UTC
+Last updated 2023-06-23 00:11:28 UTC
 </div>
 </div>
 </body>
