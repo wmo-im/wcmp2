@@ -1,0 +1,155 @@
+{
+    "id": "urn:x-wmo:md:fra:meteo-france:global-broker",
+    "type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2"
+    ],
+    "time": null,
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                -180,
+                -90
+            ],
+            [
+                -180,
+                90
+            ],
+            [
+                180,
+                90
+            ],
+            [
+                180,
+                -90
+            ],
+            [
+                -180,
+                -90
+            ]
+        ]
+    },
+    "properties": {
+        "type": "service",
+        "title": "WIS2 Broker - Météo-France",
+        "description": "TODO",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "weather",
+                        "title": "Weather"
+                    },
+                    {
+                        "id": "climate",
+                        "title": "Climate"
+                    },
+                    {
+                        "id": "hydrology",
+                        "title": "Hydrology"
+                    },
+                    {
+                        "id": "atmospheric-composition",
+                        "title": "Atmospheric Composition"
+                    },
+                    {
+                        "id": "cryosphere",
+                        "title": "Cryosphere"
+                    },
+                    {
+                        "id": "ocean",
+                        "title": "Ocean"
+                    },
+                    {
+                        "id": "space-weather",
+                        "title": "Space Weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "global-broker",
+                        "title": "Global Broker"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+            }
+        ],
+        "contacts": [
+            {
+                "identifier": "meteo-france",
+                "organization": "Météo-France",
+                "positionName": "David Podeur",
+                "emails": [
+                    {
+                        "value": "gisc_support@meteo.fr"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "42 Avenue Coriolis"
+                        ],
+                        "city": "Toulouse",
+                        "postalCode": "31057",
+                        "country": "France"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "https://donneespubliques.meteofrance.fr"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "pointOfContact"
+                ]
+            }
+        ],
+        "created": "2022-11-11T11:00:00Z",
+        "keywords": [
+            "wis2",
+            "global discovery catalogue",
+            "metadata"
+        ]
+    },
+    "links": [
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files < 24h during pilot)",
+            "href": "https://opendata.dwd.de/test/wis2/cache"
+        },
+        {
+            "rel": "download",
+            "type": "text/html",
+            "title": "Open Data Server DWD (Metadata Archive)",
+            "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
+        },
+        {
+            "rel": "related",
+            "type": "application/json",
+            "title": "WMO WIS2 Global Broker - Météo-France",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
+            "channel": "cache/a/wis2/#",
+            "distribution": {
+                "maxMSGsize": 4096,
+                "unit": "bytes"
+            }
+        },
+        {
+            "rel": "related",
+            "type": "application/json",
+            "title": "WMO WIS Global Broker - China Meteorological Administration",
+            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
+            "channel": "cache/a/wis2/#",
+            "distribution": {
+                "maxMSGsize": 4096,
+                "unit": "bytes"
+            }
+        }
+    ]
+}

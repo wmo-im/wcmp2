@@ -9,12 +9,12 @@ test-purpose:: Validate that a WCMP record provides a themes property.
 =====
 [.component,class=step]
 --
-Check for the existence of a single `+themes+` array property in the WCMP record.
+Check for the existence of a single `+properties.themes+` array property in the WCMP record.
 --
 
 [.component,class=step]
 --
-Check that the `+themes+` property provides a minimum of one theme object.
+Check that the `+properties.themes+` property provides a minimum of one theme object.
 --
 
 [.component,class=step]

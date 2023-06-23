@@ -1,6 +1,6 @@
 == References
 
-* [[ogcapi-records]] OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2021) footnote:[https://docs.ogc.org/DRAFTS/20-004.html]
+* [[ogcapi-records]] OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2023) footnote:[https://docs.ogc.org/DRAFTS/20-004.html]
 * [[ogcapi-features]] OGC: OGC 17-069r, OGC API - Features - Part 1: Core 1.0 (2022) footnote:[https://docs.opengeospatial.org/is/17-069r4/17-069r4.html]
 * [[rfc7946]] IETF: RFC-7946 The GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc7946]
 * [[rfc8259]] IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Formathe GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc8259]

@@ -18,4 +18,4 @@ The mandatory Conformance Class for WCMP is:
 * "WMO Core Metadata Profile Core": This conformance class inherits from _OGC API — Records — Part 1: Core:
 Requirements Class: Record Core_ which defines the requirements for a catalogue record.  The requirements
 specified in the Requirements Class “Record Core" are mandatory for all implementations of WMCP.
-The requirements are specified in Chapter 7 and in Annex A.2 in more detail.
+The requirements are specified in Chapter 7 and in Annex A in more detail.

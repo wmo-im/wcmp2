@@ -1,0 +1,7 @@
+[[req_core_themes_wis2_global_service]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/core/themes_wis2_global_service*
+^|A |A WCMP record describing a WIS2 global service SHALL provide a theme/concept displaying all Earth system disciplines defined in the WCMP2 codelists.
+^|B |A WCMP record describing a WIS2 global service SHALL provide a theme/concept identifying the service type provided.
+|===

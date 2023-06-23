@@ -1,0 +1,6 @@
+[[rec_core_extent_geospatial_wis2_global_service]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/extent_geospatial_wis_2_global_service*
+^|A |For a WIS2 Global Service, a WCMP record SHOULD provide the GeoJSON geometry as a `+Polygon+` type with a WGS84 bounding geometry of `+-180+` (west longitude), `+-90+` (south latitude), `+180+` (east longitude), `+90+` (north latitude).
+|===
