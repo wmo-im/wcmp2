@@ -2,38 +2,38 @@
     "id": "urn:x-wmo:md:deu:dwd-offenbach:global-cache-service",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": {
         "interval": [
-            [
-                "2024-01-01T00:00:00Z",
-                null
-            ]
+            "2024-01-01T00:00:00Z",
+            ".."
         ]
     },
     "geometry": {
         "type": "Polygon",
         "coordinates": [
             [
-                -180,
-                -90
-            ],
-            [
-                -180,
-                90
-            ],
-            [
-                180,
-                90
-            ],
-            [
-                180,
-                -90
-            ],
-            [
-                -180,
-                -90
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
             ]
         ]
     },
@@ -95,9 +95,8 @@
         ],
         "contacts": [
             {
-                "identifier": "DWD",
+                "name": "Kai-Thorsten Wirt",
                 "organization": "Deutscher Wetterdienst",
-                "positionName": "Kai-Thorsten Wirt",
                 "emails": [
                     {
                         "value": "wis@dwd.de"
@@ -115,15 +114,17 @@
                 ],
                 "links": [
                     {
+                        "type": "text/html",
                         "href": "https://www.dwd.de/wmc"
                     },
                     {
+                        "type": "text/html",
                         "href": "https://gisc.dwd.de"
                     }
                 ],
                 "contactInstructions": "email",
                 "roles": [
-                    "pointOfContact"
+                    "host"
                 ]
             }
         ],
@@ -157,7 +158,7 @@
         {
             "rel": "related",
             "type": "application/json",
-            "title": "WMO WIS2 Global Broker - Météo-France",
+            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "cache/a/wis2/#",
             "distribution": {

@@ -84,9 +84,8 @@
         ],
         "contacts": [
             {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
-                "positionName": "National Inquiry Response Team",
+                "name": "National Inquiry Response Team",
+                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "phones": [
                     {
                         "value": "+18199972800"
@@ -117,8 +116,7 @@
                     }
                 ],
                 "roles": [
-                    "pointOfContact",
-                    "distributor"
+                    "producer"
                 ]
             }
         ],

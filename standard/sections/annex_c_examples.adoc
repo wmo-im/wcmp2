@@ -7,13 +7,13 @@
 
 .Example: Canadian Hourly Surface Weather Observations (dataset)
 ----
-include::../../examples/msc-swob-realtime.json[]
+include::../../examples/can.eccc-msc.surface-weather-observations-realtime.json[]
 ----
 
 .Example: ICON-EPS GRIB data (dataset)
 [source,json]
 ----
-include::../../examples/wcmp2_de.dwd.icon-eps.ALL.json[]
+include::../../examples/deu.dwd.icon-eps-all.json[]
 ----
 
 .Example: WIS2 Global Broker (service)

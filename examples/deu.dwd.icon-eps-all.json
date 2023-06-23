@@ -2,18 +2,12 @@
     "id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": {
         "interval": [
-            [
-                "R/T00Z",
-                "PT180H"
-            ],
-            [
-                "R/T12Z",
-                "PT180H"
-            ]
+            "T00Z",
+            "T12Z"
         ],
         "resolution": "PT6H"
     },
@@ -21,24 +15,26 @@
         "type": "Polygon",
         "coordinates": [
             [
-                -180,
-                -90
-            ],
-            [
-                -180,
-                90
-            ],
-            [
-                180,
-                90
-            ],
-            [
-                180,
-                -90
-            ],
-            [
-                -180,
-                -90
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
             ]
         ]
     },
@@ -66,7 +62,8 @@
                     "PT48H"
                 ]
             ],
-            "resolution": "PT1H"
+            "resolution": "PT1H",
+            "trs": "http://www.opengis.net/def/trs/ISO-8601"
         }
     },
     "properties": {
@@ -129,9 +126,11 @@
                 ],
                 "links": [
                     {
+                        "type": "text/html",
                         "href": "https://www.dwd.de/wmc"
                     },
                     {
+                        "type": "text/html",
                         "href": "https://gisc.dwd.de"
                     }
                 ],

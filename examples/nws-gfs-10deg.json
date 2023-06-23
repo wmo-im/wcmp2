@@ -1,32 +1,34 @@
 {
     "id": "urn:x-wmo:md:us.noaa.nws.ncep:nwp.gfs_1deg",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
+    "time": null,
     "type": "Feature",
-    "Itemtype": "Record",
     "geometry": {
         "type": "Polygon",
         "coordinates": [
             [
-                0,
-                -90
-            ],
-            [
-                0,
-                90
-            ],
-            [
-                360,
-                90
-            ],
-            [
-                360,
-                -90
-            ],
-            [
-                0,
-                -90
+                [
+                    0,
+                    -90
+                ],
+                [
+                    0,
+                    90
+                ],
+                [
+                    360,
+                    90
+                ],
+                [
+                    360,
+                    -90
+                ],
+                [
+                    0,
+                    -90
+                ]
             ]
         ]
     },
@@ -80,8 +82,6 @@
         ],
         "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
-        "created": "2022-06-23T18:36:00Z",
-        "updated": "2022-06-23T18:36:00Z",
         "themes": [
             {
                 "concepts": [
@@ -515,9 +515,9 @@
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
         ],
-        "providers": [
+        "contacts": [
             {
-                "name": "NOAA/NWS/NCEP",
+                "organization": "NOAA/NWS/NCEP",
                 "contactInfo": [
                     {
                         "phone": "(301) 683-1500"
@@ -564,20 +564,20 @@
                     "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
                 }
             }
-        ],
-        "links": [
-            {
-                "rel": "download",
-                "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
-                "type": "application/x-grib",
-                "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
-            },
-            {
-                "rel": "OPeNDAP",
-                "href": "https://nomads.ncep.noaa.gov/dods/gfs_1p00",
-                "type": "text/html",
-                "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
-            }
         ]
-    }
+    },
+    "links": [
+        {
+            "rel": "download",
+            "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
+            "type": "application/x-grib",
+            "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
+        },
+        {
+            "rel": "OPeNDAP",
+            "href": "https://nomads.ncep.noaa.gov/dods/gfs_1p00",
+            "type": "text/html",
+            "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
+        }
+    ]
 }

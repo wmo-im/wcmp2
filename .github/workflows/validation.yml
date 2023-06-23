@@ -1,4 +1,4 @@
-name: validate schema and examples
+name: Schema and examples validation
 
 on:
   push:

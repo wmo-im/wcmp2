@@ -1,10 +1,10 @@
 {
     "id": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
+    "time": null,
     "type": "Feature",
-    "Itemtype": "Record",
     "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -126,9 +126,9 @@
                 "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
             }
         ],
-        "providers": [
+        "contacts": [
             {
-                "name": "NOAA/NESDIS",
+                "organization": "NOAA/NESDIS",
                 "contactInfo": [
                     {
                         "phone": "(301) 817-3880"
@@ -175,32 +175,32 @@
                     "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
                 }
             }
-        ],
-        "links": [
-            {
-                "rel": "download",
-                "href": "https://noaa-goes16.s3.amazonaws.com/index.html#ABI-L2-SSTF",
-                "type": "application/netcdf",
-                "title": "NOAA Geostationary Operational Environmental Satellites (GOES) 16 Registry of Open Data on AWS"
-            },
-            {
-                "rel": "download",
-                "href": "https://www.ncdc.noaa.gov/airs-web",
-                "type": "application/netcdf",
-                "title": "NCEI's Archive Information Request System (AIRS)"
-            },
-            {
-                "rel": "download",
-                "href": "https://console.cloud.google.com/storage/browser/gcp-public-data-goes-16/ABI-L2-SSTF?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false",
-                "type": "application/netcdf",
-                "title": "Google Cloud GOES-16 L2 Sea Surface Temperature"
-            },
-            {
-                "rel": "download",
-                "href": "https://www.ncdc.noaa.gov/airs-web/search",
-                "type": "application/netcdf",
-                "title": "NCEI's Archive Information Request System (AIRS)"
-            }
         ]
-    }
+    },
+    "links": [
+        {
+            "rel": "download",
+            "href": "https://noaa-goes16.s3.amazonaws.com/index.html#ABI-L2-SSTF",
+            "type": "application/netcdf",
+            "title": "NOAA Geostationary Operational Environmental Satellites (GOES) 16 Registry of Open Data on AWS"
+        },
+        {
+            "rel": "download",
+            "href": "https://www.ncdc.noaa.gov/airs-web",
+            "type": "application/netcdf",
+            "title": "NCEI's Archive Information Request System (AIRS)"
+        },
+        {
+            "rel": "download",
+            "href": "https://console.cloud.google.com/storage/browser/gcp-public-data-goes-16/ABI-L2-SSTF?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false",
+            "type": "application/netcdf",
+            "title": "Google Cloud GOES-16 L2 Sea Surface Temperature"
+        },
+        {
+            "rel": "download",
+            "href": "https://www.ncdc.noaa.gov/airs-web/search",
+            "type": "application/netcdf",
+            "title": "NCEI's Archive Information Request System (AIRS)"
+        }
+    ]
 }

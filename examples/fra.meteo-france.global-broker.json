@@ -2,7 +2,7 @@
     "id": "urn:x-wmo:md:fra:meteo-france:global-broker",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": null,
     "geometry": {
@@ -102,12 +102,13 @@
                 ],
                 "links": [
                     {
+                        "type": "text/html",
                         "href": "https://donneespubliques.meteofrance.fr"
                     }
                 ],
                 "contactInstructions": "email",
                 "roles": [
-                    "pointOfContact"
+                    "host"
                 ]
             }
         ],
