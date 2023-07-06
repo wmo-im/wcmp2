@@ -666,6 +666,7 @@ WCMP record links may also provide links to services that implement access contr
 secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
 include::../requirements/core/REQ_links.adoc[]
+include::../recommendations/core/REC_links.adoc[]
 
 .Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 
