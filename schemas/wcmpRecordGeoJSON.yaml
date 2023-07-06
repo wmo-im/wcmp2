@@ -58,7 +58,7 @@ properties:
   geometry:
     $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
   additionalExtents:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/schemas/collections/extent.yaml'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/core/standard/openapi/schemas/collections/extent.yaml'
   properties:
     type: object
     required:
@@ -104,6 +104,9 @@ properties:
         enum:
           - core
           - recommended
+      wmo:status:
+        description: The operational status of a given dataset.
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/theme.yaml#/properties/concepts/items'
   links:
     type: array
     minItems: 1

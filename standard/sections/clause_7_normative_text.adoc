@@ -88,6 +88,10 @@ The table below provides an overview of the set of properties that may be includ
 |optional
 |The date that the record was updated (see <<_properties_record_update_date>>)
 
+|``properties.status``
+|optional
+|The operational status of a given dataset.
+
 |``properties.wmo:dataPolicy``
 |**conditional**
 |WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9].  **Required** for datasets (see <<_properties_wmo_data_policy>>)
@@ -635,6 +639,21 @@ include::../recommendations/core/REC_record_update_date.adoc[]
   ...
   "updated": "2022-06-12T18:52:39Z"
   ...
+}
+----
+
+==== Properties / Status
+
+The `+status+` property identifies the lifecycle of a given dataset.  See Annex D for possible codelists to use when encoding this property.
+
+[source,json]
+----
+"properties": {
+  "status": {
+    "id": "operational",
+    "title": "dataset is in 24/7 operation",
+    "url": "https://example.org/my-vocab"
+  }
 }
 ----
 

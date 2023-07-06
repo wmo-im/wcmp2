@@ -1,4 +1,13 @@
 [appendix]
 :appendix-caption: Annex
 [[Codelists]]
-= Codelists (Normative)
+== Codelists (Informative)
+
+=== Dataset status
+
+The links below provide some controlled vocabularies in support of dataset status, and may be
+of use when encoding the `+properties.status+` property..
+
+* https://www.w3.org/TR/vocab-dcat-3/#life-cycle
+* https://vocab.met.no/mmd/en/page/?uri=https%3A%2F%2Fvocab.met.no%2Fmmd%2FOperational_Status
+* https://wiki.esipfed.org/ISO_19115_and_19115-2_CodeList_Dictionaries#MD_ProgressCode
