@@ -2164,6 +2164,12 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 <p>A WCMP record SHALL provide the value of <code>null</code> when a conformant time cannot be derived.</p>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>All non-null <code>time</code> values SHALL be valid ISO8601 representations or <code>..</code> for an open-ended extent.</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
 <table id="rec_core_extent_temporal" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -2182,6 +2188,18 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>For datasets with known or discrete intervals, a WCMP record SHOULD provide the temporal resolution (<code>time.resolution</code>) as a valid ISO 8601 duration (e.g., <code>P1D</code>).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>For complex temporal extents, a WCMP record SHOULD also provide a human-readable explanation in <code>properties.description</code> to promote clarification and unambiguity.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>To distinguish maintenance or update frequency, those SHOULD be included in <code>properties.themes</code>.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2245,6 +2263,57 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 <pre class="highlight"><code class="language-json" data-lang="json">"time": null</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>If only times are given for the interval, it is implicitly assumed that those are recurring every day.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+  "interval" : ["T00Z", "T23Z"],
+  "resolution": "PT1H"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Some cases might be more complex due to the product&#8217;s characteristics.</p>
+</div>
+<div class="paragraph">
+<p>The example below describes two intervals with the model run time (start) up to the range covered by the model run (end). Here, the end of the interval is characterised by a time period. Additionally, the time steps within the model range are relevant information (resolution).</p>
+</div>
+<div class="paragraph">
+<p>To ensure clarity, an additional human-readable explanation is given in the <code>properties.description</code>.
+Further time-related characteristics (e.g. frequency of modifications, available data, etc.) should be added in <code>properties.themes</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example: complex time information with additional explanation and characteristics</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+    "interval": [
+        ["T00Z", "PT180H"],
+        ["T12Z", "PT180H"]
+    ],
+    "resolution": "PT6H"
+},
+"properties": {
+    ...
+    "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
+    ...
+    "themes": [
+        {
+        "concepts": [
+            {"id": "continual"}
+        ],
+        "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+        }
+        ...
+    ]
+    ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If necessary, further granularity can be indicated by the <code>additionalExtents.temporal</code> property.</p>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.10.4. Additional Temporal Extents</h5>
@@ -2297,7 +2366,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 <div class="sect3">
 <h4 id="_properties_contacts"><a class="anchor" href="#_properties_contacts"></a>7.1.11. Properties / Contacts</h4>
 <div class="paragraph">
-<p>The <code>contacts</code> property is the contact information and <code>role</code> of the dataset contacts.</p>
+<p>The <code>contacts</code> property is the information associated with one or more responsible parties of the resource.</p>
 </div>
 <table id="req_core_contacts" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2314,13 +2383,39 @@ property is able express the temporal granularity at which a given dataset&#8217
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide a <code>properties.contacts</code> property.</p>
+<p>A WCMP record SHALL provide at least one contact via the <code>properties.contacts</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record <code>properties.contacts</code> property SHALL provide at least TWO contacts (as multiple contact objects or a single contact object with multiple roles) based on the metadata point of contact and the originator of the data.</p>
+<p>A WCMP record&#8217;s contact SHALL provide a <code>organization</code> property.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record’s contact <code>roles</code>, when specified, SHALL provide a role type from the WCMP resource type codelist.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="per_core_contacts" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 3</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/core/contacts</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record <code>properties.contacts</code> property MAY provide more than one contact via multiple objects or a single contact object with multiple roles.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2351,7 +2446,7 @@ property is able express the temporal granularity at which a given dataset&#8217
         "href": "https://www.canada.ca/en/environment-climate-change.html"
       }],
       "contactInstructions": "email",
-      "roles": ["pointOfContact", "originator"]
+      "roles": ["producer", "host"]
   }]
   ...
 }</code></pre>
@@ -2387,7 +2482,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/version</strong></p>
 </div></div></td>
@@ -2460,7 +2555,7 @@ are commonly used for scientific publications and datasets.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/pids</strong></p>
 </div></div></td>
@@ -2622,7 +2717,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/data_policy</strong></p>
 </div></div></td>
@@ -2775,6 +2870,26 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </tr>
 </tbody>
 </table>
+<table id="rec_core_links" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/links</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record&#8217;s links SHOULD be provided using secure protocols (e.g. HTTPS, MQTTS, etc.).</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
@@ -2818,7 +2933,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/links</strong></p>
 </div></div></td>
@@ -2854,7 +2969,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/distribution</strong></p>
 </div></div></td>
@@ -3033,7 +3148,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/additional_properties</strong></p>
 </div></div></td>
@@ -3377,7 +3492,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that all non-null <code>time</code> values are valid RFC3339 representations, or <code>..</code> for an open-ended extent.</p>
+<p>Check that all non-null <code>time</code> values are valid ISO8601 representations, intervals or durations, or <code>..</code> for an open-ended extent.</p>
 </div>
 </div>
 </div>
@@ -3636,7 +3751,21 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Within <code>properties.contacts</code>, check for the existence of <code>originator</code> and <code>pointOfContact</code> within the <code>roles</code> array property across all contact objects.</p>
+<p>Check for the existence of a <code>roles</code> property in the contact object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check for the existence of an <code>organization</code> property in the contact object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>If <code>roles</code> exists, check that the value is part of the WCMP contact role codelist.</p>
 </div>
 </div>
 </div>
@@ -3877,7 +4006,6 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         },
         {
           "type": "object",
-          "nullable": true,
           "properties": {
             "date": {
               "type": "string",
@@ -3899,7 +4027,19 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                   },
                   {
                     "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}$"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^\\d{4}$"
+                  },
+                  {
+                    "type": "string",
                     "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^T\\d{2}(:\\d{2})?(:\\d{2})?(?:\\.\\d+)?Z$"
                   },
                   {
                     "type": "string",
@@ -4594,248 +4734,252 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
           "type": "array",
           "minItems": 1,
           "items": {
-            "type": "object",
-            "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
-            "required": [
-              "name"
-            ],
-            "properties": {
-              "identifier": {
-                "type": "string",
-                "description": "A value uniquely identifying a contact (individual or organization)"
-              },
-              "name": {
-                "type": "string",
-                "description": "The name of the organization or the individual."
-              },
-              "positionName": {
-                "type": "string",
-                "description": "The name of the role or position of the responsible person taken from the organization's formal organizational hierarchy or chart."
-              },
-              "organization": {
-                "type": "string",
-                "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
-              },
-              "logo": {
-                "description": "Graphic identifying a contact. The link relation should be `icon` and the media type should be an image media type.",
-                "allOf": [
-                  {
-                    "type": "object",
-                    "required": [
-                      "href"
-                    ],
-                    "properties": {
-                      "href": {
-                        "type": "string",
-                        "format": "url"
+            "allOf": [
+              {
+                "required": [
+                  "organization"
+                ],
+                "type": "object",
+                "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
+                "properties": {
+                  "identifier": {
+                    "type": "string",
+                    "description": "A value uniquely identifying a contact (individual or organization)"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the organization or the individual."
+                  },
+                  "positionName": {
+                    "type": "string",
+                    "description": "The name of the role or position of the responsible person taken from the organization's formal organizational hierarchy or chart."
+                  },
+                  "organization": {
+                    "type": "string",
+                    "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
+                  },
+                  "logo": {
+                    "description": "Graphic identifying a contact. The link relation should be `icon` and the media type should be an image media type.",
+                    "allOf": [
+                      {
+                        "type": "object",
+                        "required": [
+                          "href"
+                        ],
+                        "properties": {
+                          "href": {
+                            "type": "string",
+                            "format": "url"
+                          },
+                          "rel": {
+                            "type": "string"
+                          },
+                          "type": {
+                            "type": "string"
+                          },
+                          "hreflang": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "templated": {
+                            "type": "boolean"
+                          },
+                          "variables": {
+                            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
+                            "type": "object"
+                          },
+                          "created": {
+                            "type": "string",
+                            "description": "Date of creation of the resource pointed to by the link.",
+                            "format": "date-time"
+                          },
+                          "updated": {
+                            "type": "string",
+                            "description": "Most recent date on which the resource pointed to by the link was changed.",
+                            "format": "date-time"
+                          }
+                        }
                       },
-                      "rel": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "string"
-                      },
-                      "hreflang": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "templated": {
-                        "type": "boolean"
-                      },
-                      "variables": {
-                        "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                        "type": "object"
-                      },
-                      "created": {
-                        "type": "string",
-                        "description": "Date of creation of the resource pointed to by the link.",
-                        "format": "date-time"
-                      },
-                      "updated": {
-                        "type": "string",
-                        "description": "Most recent date on which the resource pointed to by the link was changed.",
-                        "format": "date-time"
+                      {
+                        "type": "object",
+                        "required": [
+                          "rel",
+                          "type"
+                        ],
+                        "properties": {
+                          "rel": {
+                            "enum": [
+                              "icon"
+                            ]
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "phones": {
+                    "type": "array",
+                    "description": "Telephone numbers at which contact can be made.",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "value"
+                      ],
+                      "properties": {
+                        "value": {
+                          "type": "string",
+                          "description": "The value is the phone number itself.",
+                          "pattern": "^\\+[1-9]{1}[0-9]{3,14}$",
+                          "example": "+14165550142"
+                        },
+                        "roles": {
+                          "description": "The type of phone number (e.g. home, work, fax, etc.).",
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
                       }
                     }
                   },
-                  {
-                    "type": "object",
-                    "required": [
-                      "rel",
-                      "type"
-                    ],
-                    "properties": {
-                      "rel": {
-                        "enum": [
-                          "icon"
-                        ]
-                      }
-                    }
-                  }
-                ]
-              },
-              "phones": {
-                "type": "array",
-                "description": "Telephone numbers at which contact can be made.",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "value"
-                  ],
-                  "properties": {
-                    "value": {
-                      "type": "string",
-                      "description": "The value is the phone number itself.",
-                      "pattern": "^\\+[1-9]{1}[0-9]{3,14}$",
-                      "example": "+14165550142"
-                    },
-                    "roles": {
-                      "description": "The type of phone number (e.g. home, work, fax, etc.).",
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              },
-              "emails": {
-                "type": "array",
-                "description": "Email addresses at which contact can be made.",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "value"
-                  ],
-                  "properties": {
-                    "value": {
-                      "type": "string",
-                      "description": "The value is the email number itself.",
-                      "format": "email"
-                    },
-                    "roles": {
-                      "description": "The type of email (e.g. home, work, etc.).",
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              },
-              "addresses": {
-                "type": "array",
-                "description": "Physical location at which contact can be made.",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "deliveryPoint": {
-                      "type": "array",
-                      "description": "Address lines for the location.",
-                      "items": {
-                        "type": "string"
-                      }
-                    },
-                    "city": {
-                      "type": "string",
-                      "description": "City for the location."
-                    },
-                    "administrativeArea": {
-                      "type": "string",
-                      "description": "State or province of the location."
-                    },
-                    "postalCode": {
-                      "type": "string",
-                      "description": "ZIP or other postal code."
-                    },
-                    "country": {
-                      "type": "string",
-                      "description": "Country of the physical address."
-                    },
-                    "roles": {
-                      "description": "The type of address (e.g. office, home, etc.).",
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              },
-              "links": {
-                "type": "array",
-                "description": "On-line information about the contact.",
-                "items": {
-                  "allOf": [
-                    {
+                  "emails": {
+                    "type": "array",
+                    "description": "Email addresses at which contact can be made.",
+                    "items": {
                       "type": "object",
                       "required": [
-                        "href"
+                        "value"
                       ],
                       "properties": {
-                        "href": {
+                        "value": {
                           "type": "string",
-                          "format": "url"
+                          "description": "The value is the email number itself.",
+                          "format": "email"
                         },
-                        "rel": {
-                          "type": "string"
-                        },
-                        "type": {
-                          "type": "string"
-                        },
-                        "hreflang": {
-                          "type": "string"
-                        },
-                        "title": {
-                          "type": "string"
-                        },
-                        "templated": {
-                          "type": "boolean"
-                        },
-                        "variables": {
-                          "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                          "type": "object"
-                        },
-                        "created": {
-                          "type": "string",
-                          "description": "Date of creation of the resource pointed to by the link.",
-                          "format": "date-time"
-                        },
-                        "updated": {
-                          "type": "string",
-                          "description": "Most recent date on which the resource pointed to by the link was changed.",
-                          "format": "date-time"
+                        "roles": {
+                          "description": "The type of email (e.g. home, work, etc.).",
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
                         }
                       }
-                    },
-                    {
+                    }
+                  },
+                  "addresses": {
+                    "type": "array",
+                    "description": "Physical location at which contact can be made.",
+                    "items": {
                       "type": "object",
-                      "required": [
-                        "type"
+                      "properties": {
+                        "deliveryPoint": {
+                          "type": "array",
+                          "description": "Address lines for the location.",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "city": {
+                          "type": "string",
+                          "description": "City for the location."
+                        },
+                        "administrativeArea": {
+                          "type": "string",
+                          "description": "State or province of the location."
+                        },
+                        "postalCode": {
+                          "type": "string",
+                          "description": "ZIP or other postal code."
+                        },
+                        "country": {
+                          "type": "string",
+                          "description": "Country of the physical address."
+                        },
+                        "roles": {
+                          "description": "The type of address (e.g. office, home, etc.).",
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "links": {
+                    "type": "array",
+                    "description": "On-line information about the contact.",
+                    "items": {
+                      "allOf": [
+                        {
+                          "type": "object",
+                          "required": [
+                            "href"
+                          ],
+                          "properties": {
+                            "href": {
+                              "type": "string",
+                              "format": "url"
+                            },
+                            "rel": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "hreflang": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "templated": {
+                              "type": "boolean"
+                            },
+                            "variables": {
+                              "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
+                              "type": "object"
+                            },
+                            "created": {
+                              "type": "string",
+                              "description": "Date of creation of the resource pointed to by the link.",
+                              "format": "date-time"
+                            },
+                            "updated": {
+                              "type": "string",
+                              "description": "Most recent date on which the resource pointed to by the link was changed.",
+                              "format": "date-time"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "required": [
+                            "type"
+                          ]
+                        }
                       ]
                     }
-                  ]
-                }
-              },
-              "hoursOfService": {
-                "type": "string",
-                "description": "Time period when the contact can be contacted.",
-                "example": "Hours: Mo-Fr 10am-7pm Sa 10am-22pm Su 10am-21pm"
-              },
-              "contactInstructions": {
-                "type": "string",
-                "description": "Supplemental instructions on how or when to contact the\nresponsible party."
-              },
-              "roles": {
-                "description": "The set of named duties, job functions and/or permissions associated with this contact. (e.g. developer, administrator, etc.).",
-                "type": "array",
-                "items": {
-                  "type": "string"
+                  },
+                  "hoursOfService": {
+                    "type": "string",
+                    "description": "Time period when the contact can be contacted.",
+                    "example": "Hours: Mo-Fr 10am-7pm Sa 10am-22pm Su 10am-21pm"
+                  },
+                  "contactInstructions": {
+                    "type": "string",
+                    "description": "Supplemental instructions on how or when to contact the\nresponsible party."
+                  },
+                  "roles": {
+                    "description": "The set of named duties, job functions and/or permissions associated with this contact. (e.g. developer, administrator, etc.).",
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
-            }
+            ]
           }
         },
         "version": {
@@ -5439,8 +5583,8 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         ],
         "contacts": [
             {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "positionName": "National Inquiry Response Team",
+                "name": "National Inquiry Response Team",
+                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "phones": [
                     {
                         "value": "+18199972800"
@@ -5470,8 +5614,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     }
                 ],
                 "roles": [
-                    "pointOfContact",
-                    "distributor"
+                    "producer"
                 ]
             }
         ],
@@ -5524,18 +5667,12 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
     "id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": {
         "interval": [
-            [
-                "R/T00Z",
-                "PT180H"
-            ],
-            [
-                "R/T12Z",
-                "PT180H"
-            ]
+            "T00Z",
+            "T12Z"
         ],
         "resolution": "PT6H"
     },
@@ -5543,24 +5680,26 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         "type": "Polygon",
         "coordinates": [
             [
-                -180,
-                -90
-            ],
-            [
-                -180,
-                90
-            ],
-            [
-                180,
-                90
-            ],
-            [
-                180,
-                -90
-            ],
-            [
-                -180,
-                -90
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
             ]
         ]
     },
@@ -5588,7 +5727,8 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     "PT48H"
                 ]
             ],
-            "resolution": "PT1H"
+            "resolution": "PT1H",
+            "trs": "http://www.opengis.net/def/trs/ISO-8601"
         }
     },
     "properties": {
@@ -5651,9 +5791,11 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 ],
                 "links": [
                     {
+                        "type": "text/html",
                         "href": "https://www.dwd.de/wmc"
                     },
                     {
+                        "type": "text/html",
                         "href": "https://gisc.dwd.de"
                     }
                 ],
@@ -5725,37 +5867,39 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
     "id": "urn:x-wmo:md:fra:meteo-france:global-broker",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": null,
     "geometry": {
         "type": "Polygon",
         "coordinates": [
             [
-                -180,
-                -90
-            ],
-            [
-                -180,
-                90
-            ],
-            [
-                180,
-                90
-            ],
-            [
-                180,
-                -90
-            ],
-            [
-                -180,
-                -90
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
             ]
         ]
     },
     "properties": {
         "type": "service",
-        "title": "WIS2 Broker - Météo-France",
+        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
         "description": "TODO",
         "themes": [
             {
@@ -5804,7 +5948,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         "contacts": [
             {
                 "identifier": "meteo-france",
-                "organization": "Météo-France",
+                "organization": "M\u00e9t\u00e9o-France",
                 "positionName": "David Podeur",
                 "emails": [
                     {
@@ -5823,12 +5967,13 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 ],
                 "links": [
                     {
+                        "type": "text/html",
                         "href": "https://donneespubliques.meteofrance.fr"
                     }
                 ],
                 "contactInstructions": "email",
                 "roles": [
-                    "pointOfContact"
+                    "host"
                 ]
             }
         ],
@@ -5855,7 +6000,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         {
             "rel": "related",
             "type": "application/json",
-            "title": "WMO WIS2 Global Broker - Météo-France",
+            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "cache/a/wis2/#",
             "distribution": {
@@ -6048,7 +6193,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-08-14 16:04:17 UTC
+Last updated 2023-08-14 16:45:24 UTC
 </div>
 </div>
 </body>
