@@ -9,30 +9,32 @@
         "type": "Polygon",
         "coordinates": [
             [
-                -180,
-                -90
-            ],
-            [
-                -180,
-                90
-            ],
-            [
-                180,
-                90
-            ],
-            [
-                180,
-                -90
-            ],
-            [
-                -180,
-                -90
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
             ]
         ]
     },
     "properties": {
         "type": "service",
-        "title": "WIS2 Broker - Météo-France",
+        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
         "description": "TODO",
         "themes": [
             {
@@ -81,7 +83,7 @@
         "contacts": [
             {
                 "identifier": "meteo-france",
-                "organization": "Météo-France",
+                "organization": "M\u00e9t\u00e9o-France",
                 "positionName": "David Podeur",
                 "emails": [
                     {
@@ -132,7 +134,7 @@
         {
             "rel": "related",
             "type": "application/json",
-            "title": "WMO WIS2 Global Broker - Météo-France",
+            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "cache/a/wis2/#",
             "distribution": {
