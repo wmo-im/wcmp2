@@ -33,4 +33,20 @@ Check that each concept object provides a minimum of one `+id+` property.
 --
 
 =====
+
+
+[.component,class=test method]
+=====
+
+[.component,class=step]
+--
+Check that the `+properties.themes+` property provides a theme object with the `+scheme+` of `+https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv+`.
+--
+
+[.component,class=step]
+--
+Check that all concepts identified are part of the `+scheme+` provided.
+--
+
+=====
 ====

@@ -22,6 +22,12 @@ Check that the `+properties.themes+` property provides a theme object with the `
 Check that each value from the `+scheme+` is provided as a concept.
 --
 
+=====
+
+
+[.component,class=test method]
+=====
+
 [.component,class=step]
 --
 Check that the `+properties.themes+` property provides a theme object with the `+scheme+` of `+https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-type.csv+`.
