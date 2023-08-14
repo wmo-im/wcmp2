@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-06-23</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-08-14</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-06-23</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-08-14</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1809,7 +1809,13 @@ provides an identifier for the given concept, as well as optional <code>title</c
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Within each theme, a WCMP record SHALL provide a schema that refers to a controlled vocabulary or thesaurus.</p>
+<p>Within each theme, a WCMP record SHALL provide a scheme that refers to a controlled vocabulary or thesaurus.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHALL provide a theme/concept identifying all applicable Earth system disciplines as defined in WCMP2 codelists.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1829,7 +1835,7 @@ provides an identifier for the given concept, as well as optional <code>title</c
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record describing a WIS2 global service SHALL provide a theme/concept displaying all Earth system disciplines defined in the WCMP2 codelists.</p>
+<p>A WCMP record describing a WIS2 global service SHALL provide a theme/concept identifying all Earth system disciplines as defined in WCMP2 codelists.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3507,6 +3513,24 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 </div>
+<div class="exampleblock component">
+<div class="content">
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv</code>.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that all concepts identified are part of the <code>scheme</code> provided.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="ats_core_themes_wis2_global_service" class="exampleblock">
@@ -3550,6 +3574,10 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="exampleblock component">
+<div class="content">
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
@@ -6020,7 +6048,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-06-23 00:11:28 UTC
+Last updated 2023-08-14 16:04:17 UTC
 </div>
 </div>
 </body>
