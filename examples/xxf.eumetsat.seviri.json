@@ -1,35 +1,41 @@
 {
     "id": "urn:x-wmo:md:int.eumetsat::EO:EUM:DAT:MSG:HRSEVIRI",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+    "time": null,
     "type": "Feature",
     "geometry": {
         "type": "Polygon",
         "coordinates": [
             [
-                -81,
-                -79
-            ],
-            [
-                -81,
-                79
-            ],
-            [
-                81,
-                79
-            ],
-            [
-                81,
-                -79
-            ],
-            [
-                -81,
-                -79
+                [
+                    -81,
+                    -79
+                ],
+                [
+                    -81,
+                    79
+                ],
+                [
+                    81,
+                    79
+                ],
+                [
+                    81,
+                    -79
+                ],
+                [
+                    -81,
+                    -79
+                ]
             ]
         ]
     },
     "properties": {
-        "created": "2011-03-17T10:00:00Z",
-        "updated": "2021-08-19T10:00:00Z",
-        "type": "dataset (http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/codelist/gmxCodelists.xml#MD_ScopeCode)",
+        "created": "2009-03-23T00:00:00Z",
+        "updated": "now",
+        "type": "dataset",
         "title": "High Rate SEVIRI Level 1.5 Image Data - MSG - 0 degree",
         "description": "Rectified (level 1.5) Meteosat SEVIRI image data. The data is transmitted as High Rate transmissions in 12 spectral channels. Level 1.5 image data corresponds to the geolocated and radiometrically pre-processed image data, ready for further processing, e.g. the extraction of meteorological products. Any spacecraft specific effects have been removed, and in particular, linearisation and equalisation of the image radiometry has been performed for all SEVIRI channels. The on-board blackbody data has been processed. Both radiometric and geometric quality control information is included. Images are made available with different timeliness according to their latency: quarter-hourly images if latency is more than 3 hours and hourly images if latency is less than 3 hours (for a total of 87 images per day). To enhance the perception for areas which are on the night side of the Earth a different mapping with increased contrast is applied for IR3.9 product. The greyscale mapping is based on the EBBT which allows to map the ranges 200 K to 300 K for the night and 250 K to 330 K for the day.",
         "keywords": [
@@ -39,12 +45,9 @@
         ],
         "keywordsCodespace": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode",
         "language": "en",
-        "created": "2009-03-23T00:00:00Z",
-        "updated": "now",
-        "publisher": [
+        "contacts": [
             {
-                "individual-name": "European Organisation for the Exploitation of Meteorological Satellites",
-                "organizationName": "EUMETSAT",
+                "organization": "European Organisation for the Exploitation of Meteorological Satellites",
                 "positionName": "RTH FOCAL POINT",
                 "contactInfo": [
                     {
@@ -176,26 +179,26 @@
                 "exchange": "wisof",
                 "topic/routing_key": "v03/wis/de/offenbach/surface/aviation/metar/de"
             }
-        ],
-        "links": [
-            {
-                "rel": "resources",
-                "type": "text/html",
-                "title": "MSG Level 1.5 Image Data Format Description",
-                "href": "https://www.eumetsat.int/media/45126"
-            },
-            {
-                "rel": "resources",
-                "type": "application/vnd.ms-powerpoint",
-                "title": "Meteorological Use Of The Seviri Ir3.9 Channel",
-                "href": "http://eumetrain.org/IntGuide/PowerPoints/Channels/Channel_IR39.ppt"
-            },
-            {
-                "rel": "dataset",
-                "type": "collection",
-                "title": "High Rate SEVIRI Level 1.5 Image Data - MSG - Indian Ocean 41.5 degrees E",
-                "href": "https://navigator.eumetsat.int/product/EO:EUM:DAT:MSG:HRSEVIRI-IODC"
-            }
         ]
-    }
+    },
+    "links": [
+        {
+            "rel": "resources",
+            "type": "text/html",
+            "title": "MSG Level 1.5 Image Data Format Description",
+            "href": "https://www.eumetsat.int/media/45126"
+        },
+        {
+            "rel": "resources",
+            "type": "application/vnd.ms-powerpoint",
+            "title": "Meteorological Use Of The Seviri Ir3.9 Channel",
+            "href": "http://eumetrain.org/IntGuide/PowerPoints/Channels/Channel_IR39.ppt"
+        },
+        {
+            "rel": "dataset",
+            "type": "collection",
+            "title": "High Rate SEVIRI Level 1.5 Image Data - MSG - Indian Ocean 41.5 degrees E",
+            "href": "https://navigator.eumetsat.int/product/EO:EUM:DAT:MSG:HRSEVIRI-IODC"
+        }
+    ]
 }

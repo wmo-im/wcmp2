@@ -2,7 +2,7 @@
     "id": "urn:x-wmo:md:can:eccc-msc:global-discovery-catalogue",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": null,
     "geometry": {
@@ -82,8 +82,7 @@
         ],
         "contacts": [
             {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "positionName": "National Inquiry Response Team",
+                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "phones": [
                     {
                         "value": "+18199972800"
@@ -113,8 +112,7 @@
                     }
                 ],
                 "roles": [
-                    "pointOfContact",
-                    "distributor"
+                    "host"
                 ]
             }
         ],

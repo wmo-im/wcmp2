@@ -1,0 +1,6 @@
+[[rec_core_links]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/links*
+^|A |A WCMP record's links SHOULD be provided using secure protocols (e.g. HTTPS, MQTTS, etc.).
+|===

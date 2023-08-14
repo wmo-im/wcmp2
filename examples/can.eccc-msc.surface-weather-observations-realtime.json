@@ -1,8 +1,14 @@
 {
-    "id": "urn:x-wmo:md:can:eccc-msc:hydrometric.realtime",
+    "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
+    "time": {
+        "interval": [
+            "2010-11-11T11:11:11Z",
+            ".."
+        ]
+    },
     "type": "Feature",
     "geometry": {
         "type": "Polygon",
@@ -31,44 +37,35 @@
             ]
         ]
     },
-    "time": {
-        "interval": [
-            "1850-01-01",
-            ".."
-        ]
-    },
     "properties": {
-        "title": "Real-time hydrometric data",
-        "description": "Real-time water level and flow (discharge) data collected at over 2100 hydrometric stations across Canada (last 30 days).",
+        "title": "Surface Weather Observations",
+        "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
         "themes": [
             {
                 "concepts": [
                     {
-                        "id": "Hydrology"
+                        "id": "Weather"
                     },
                     {
-                        "id": "Streamflow"
+                        "id": "Archives"
                     },
                     {
-                        "id": "Discharge"
+                        "id": "Precipitation"
                     },
                     {
-                        "id": "Water level"
+                        "id": "Air temperature"
                     },
                     {
-                        "id": "Water quantity"
+                        "id": "Humidity"
                     },
                     {
-                        "id": "Sediment concentration"
+                        "id": "Snow"
                     },
                     {
-                        "id": "Water"
+                        "id": "Wind"
                     },
                     {
-                        "id": "Inland waters"
-                    },
-                    {
-                        "id": "Water management"
+                        "id": "Meteorological data"
                     }
                 ],
                 "scheme": "https://canada.multites.net/cst"
@@ -76,7 +73,7 @@
             {
                 "concepts": [
                     {
-                        "id": "hydrology"
+                        "id": "weather"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
@@ -84,9 +81,8 @@
         ],
         "contacts": [
             {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
-                "positionName": "National Inquiry Response Team",
+                "name": "National Inquiry Response Team",
+                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "phones": [
                     {
                         "value": "+18199972800"
@@ -108,7 +104,6 @@
                         "country": "Canada"
                     }
                 ],
-                "contactInstructions": "email",
                 "links": [
                     {
                         "rel": "canonical",
@@ -117,43 +112,47 @@
                     }
                 ],
                 "roles": [
-                    "pointOfContact",
-                    "distributor"
+                    "producer"
                 ]
             }
         ],
-        "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
-        "updated": "2022-06-22"
+        "updated": "2022-06-22",
+        "wmo:dataPolicy": "core"
     },
     "links": [
         {
+            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
+            "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
+            "type": "text/csv",
+            "title": "Stations associated with this dataset"
+        },
+        {
             "rel": "download",
-            "href": "https://dd.weather.gc.ca/hydrometric/csv",
+            "href": "https://dd.weather.gc.ca/observations/swob-ml",
             "type": "text/html",
             "hreflang": "en",
             "title": "Raw data download (CSV files)"
         },
         {
-            "rel": "license",
-            "href": "https://open.canada.ca/en/open-government-licence-canada",
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/swob-realtime/items",
+            "type": "application/json",
+            "title": "Data access API interface"
+        },
+        {
+            "rel": "related",
+            "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
             "type": "text/html",
-            "title": "Open Government Licence - Canada"
+            "title": "Documentation"
         },
         {
             "rel": "items",
             "href": "mqtts://example.org",
-            "channel": "origin/a/wis2/can/eccc-msc/data/core/hydrology",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
-        },
-        {
-            "rel": "items",
-            "href": "https://api.weather.gc.ca/collections/hydrometric-realtime/items",
-            "type": "application/json",
-            "hreflang": "en",
-            "title": "Data access API"
         }
     ]
 }

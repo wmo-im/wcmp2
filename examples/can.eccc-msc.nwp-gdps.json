@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:can:eccc-msc:climate.climate-daily",
+    "id": "urn:x-wmo:md:can:eccc-msc:nwp.msc_nwp_gdps",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -9,49 +9,57 @@
         "coordinates": [
             [
                 [
-                    -142,
-                    52
+                    -180,
+                    -90
                 ],
                 [
-                    -142,
-                    84
+                    -180,
+                    90
                 ],
                 [
-                    -52,
-                    84
+                    180,
+                    90
                 ],
                 [
-                    -52,
-                    52
+                    180,
+                    -90
                 ],
                 [
-                    -142,
-                    52
+                    -180,
+                    -90
                 ]
             ]
         ]
     },
     "time": {
         "interval": [
-            "1840-01-01",
+            "1963-10-01",
             ".."
-        ],
-        "resolution": "P1D"
+        ]
     },
     "properties": {
-        "title": "Daily Climate Observations",
-        "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
+        "title": "Global Deterministic Prediction System",
+        "description": "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.",
         "themes": [
             {
                 "concepts": [
                     {
-                        "id": "Climate"
+                        "id": "Prediction"
                     },
                     {
-                        "id": "Climate archives"
+                        "id": "Global"
                     },
                     {
-                        "id": "Climate change"
+                        "id": "Deterministic"
+                    },
+                    {
+                        "id": "Weather forecasts"
+                    },
+                    {
+                        "id": "Air temperature"
+                    },
+                    {
+                        "id": "Meteorological data"
                     }
                 ],
                 "scheme": "https://canada.multites.net/cst"
@@ -59,17 +67,16 @@
             {
                 "concepts": [
                     {
-                        "id": "climate"
+                        "id": "weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
             }
         ],
         "contacts": [
             {
-                "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "individual": "National Inquiry Response Team / \u00c9quipe nationale de r\u00e9ponse des demandes du public",
-                "positionName": "National Inquiry Response Team",
+                "name": "National Inquiry Response Team",
+                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
                 "phones": [
                     {
                         "value": "+18199972800"
@@ -100,8 +107,7 @@
                     }
                 ],
                 "roles": [
-                    "pointOfContact",
-                    "distributor"
+                    "producer"
                 ]
             }
         ],
@@ -112,16 +118,10 @@
     },
     "links": [
         {
-            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
-            "href": "https://api.weather.gc.ca/collections/climate-stations/items",
-            "type": "application/json",
-            "title": "Stations associated with this dataset"
-        },
-        {
             "rel": "download",
-            "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
+            "href": "https://dd.weather.gc.ca/model_gem_global",
             "type": "text/html",
-            "title": "Raw data download (CSV files)"
+            "title": "MSC Datamart"
         },
         {
             "rel": "license",
@@ -130,21 +130,15 @@
             "title": "Open Government Licence - Canada"
         },
         {
-            "rel": "items",
-            "href": "https://api.weather.gc.ca/collections/climate-daily/items",
-            "type": "application/json",
-            "title": "Climate daily data access API interface"
-        },
-        {
-            "rel": "related",
-            "href": "https://eccc-msc.github.io/open-data/msc-data/climate_obs/readme_climateobs_en",
-            "type": "text/html",
-            "title": "Documentation"
+            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
+            "type": "image/png",
+            "title": "Air temperature [\u00b0C]"
         },
         {
             "rel": "items",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
             "href": "mqtts://example.org",
-            "channel": "origin/a/wis2/can/eccc-msc/data/core/climate/observations",
             "type": "application/json",
             "title": "Data notifications"
         }

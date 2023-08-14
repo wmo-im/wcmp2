@@ -407,7 +407,7 @@ include::../recommendations/core/PER_extent_temporal_service.adoc[]
 }
 ----
 
-[source, json]
+[source,json]
 ----
 "time": {
   "interval": [
@@ -423,7 +423,55 @@ include::../recommendations/core/PER_extent_temporal_service.adoc[]
 "time": null
 ----
 
+If only times are given for the interval, it is implicitly assumed that those are recurring every day.
+
+[source,json]
+----
+"time": {
+  "interval" : ["T00Z", "T23Z"],
+  "resolution": "PT1H"
+}
+----
+
+Some cases might be more complex due to the product's characteristics.
+
+The example below describes two intervals with the model run time (start) up to the range covered by the model run (end). Here, the end of the interval is characterised by a time period. Additionally, the time steps within the model range are relevant information (resolution).
+
+To ensure clarity, an additional human-readable explanation is given in the `+properties.description+`.
+Further time-related characteristics (e.g. frequency of modifications, available data, etc.) should be added in `+properties.themes+`.
+
+.Example: complex time information with additional explanation and characteristics
+
+[source,json]
+----
+"time": {
+    "interval": [
+        ["T00Z", "PT180H"],
+        ["T12Z", "PT180H"]
+    ],
+    "resolution": "PT6H"
+},
+"properties": {
+    ...
+    "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
+    ...
+    "themes": [
+        {
+        "concepts": [
+            {"id": "continual"}
+        ],
+        "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+        }
+        ...
+    ]
+    ...
+}
+----
+
+If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property.
+
 ===== Additional Temporal Extents
+
 The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems. 
 
 Temporal extents can be fully bound or open in either direction (e.g., until or before).  An `+additionalExtents.temporal.resolution+`
@@ -451,9 +499,10 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 
 ==== Properties / Contacts
 
-The `+contacts+` property is the contact information and `+role+` of the dataset contacts.
+The `+contacts+` property is the information associated with one or more responsible parties of the resource.
 
 include::../requirements/core/REQ_contacts.adoc[]
+include::../recommendations/core/PER_contacts.adoc[]
 
 .Examples
 
@@ -482,7 +531,7 @@ include::../requirements/core/REQ_contacts.adoc[]
         "href": "https://www.canada.ca/en/environment-climate-change.html"
       }],
       "contactInstructions": "email",
-      "roles": ["pointOfContact", "originator"]
+      "roles": ["producer", "host"]
   }]
   ...
 }
@@ -665,6 +714,7 @@ WCMP record links may also provide links to services that implement access contr
 secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
 include::../requirements/core/REQ_links.adoc[]
+include::../recommendations/core/REC_links.adoc[]
 
 .Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 

@@ -7,17 +7,15 @@
     "time": {
         "interval": [
             "2014",
-            null
+            ".."
         ],
         "resolution": "PT12H"
     },
     "geometry": {
         "type": "Point",
         "coordinates": [
-            [
-                76.366667,
-                -69.366667
-            ]
+            76.366667,
+            -69.366667
         ]
     },
     "properties": {
@@ -48,9 +46,9 @@
                 "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
             }
         ],
-        "providers": [
+        "contacts": [
             {
-                "name": "National Meteorological Information Center, CMA",
+                "organization": "National Meteorological Information Center, CMA",
                 "contactInfo": {
                     "email": {
                         "work": "zhuting@cma.gov.cn"
@@ -68,17 +66,11 @@
                     "phone": "86-10-58993021"
                 },
                 "roles": [
-                    {
-                        "name": "pointOfContact"
-                    },
-                    {
-                        "name": "originator"
-                    }
+                    "producer",
+                    "host"
                 ]
             }
         ],
-        "created": "2014-09-10T00:00:00Z",
-        "updated": "2014-09-10T00:00:00Z",
         "wmo:dataPolicy": "core",
         "extent": [
             {
@@ -99,14 +91,14 @@
                     "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
                 }
             }
-        ],
-        "links": [
-            {
-                "rel": "download",
-                "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
-                "type": "text/octet-stream",
-                "title": "GISC Beijing Cache"
-            }
         ]
-    }
+    },
+    "links": [
+        {
+            "rel": "download",
+            "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
+            "type": "text/octet-stream",
+            "title": "GISC Beijing Cache"
+        }
+    ]
 }
