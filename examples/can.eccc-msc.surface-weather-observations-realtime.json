@@ -76,7 +76,7 @@
                         "id": "weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-domain.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
             }
         ],
         "contacts": [
