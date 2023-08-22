@@ -1,0 +1,16 @@
+== Cataloguing considerations
+
+In addition to documenting and describing WIS2 data holdings, WCMP discovery metadata will be
+searchable via the <<_the_wis2_global_discovery_catalogue>> (GDC).  As part of discovery and search
+workflow, a GDC may choose to apply filters to help narrow search results.  This is realized by
+the API of the GDC, as well as applying facets in the catalogue.
+
+=== Faceting
+
+The API of the GDC, in addition to allowing for spatial/temporal/attribute queries and filters,
+may choose to apply facets to WCMP records.  Facets are effective when applied against controlled
+vocabularies and classifications.  The following WCMP required properties would be subject to faceting by a GDC:
+
+- ``country`` and ``centre-id`` as defined in <<_identifier>>
+- <<_properties_type>>
+- <<_properties_wmo_data_policy>>
