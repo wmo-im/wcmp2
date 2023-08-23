@@ -458,10 +458,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-08-16</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-08-23</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-08-16</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-08-23</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -556,6 +556,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_additional_properties">7.1.18. Additional Properties</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#_cataloguing_considerations">8. Cataloguing considerations</a>
+<ul class="sectlevel2">
+<li><a href="#_faceting">8.1. Faceting</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_class_abstract_test_suite_normative">Annex A: Conformance Class Abstract Test Suite (Normative)</a>
@@ -3177,6 +3182,38 @@ record.  Additional properties do not break compliance to WCMP.</p>
 }</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cataloguing_considerations"><a class="anchor" href="#_cataloguing_considerations"></a>8. Cataloguing considerations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In addition to documenting and describing WIS2 data holdings, WCMP discovery metadata will be
+searchable via the <a href="#_the_wis2_global_discovery_catalogue">The WIS2 Global Discovery Catalogue</a> (GDC).  As part of discovery and search
+workflow, a GDC may choose to apply filters to help narrow search results.  This is realized by
+the API of the GDC, as well as applying facets in the catalogue.</p>
+</div>
+<div class="sect2">
+<h3 id="_faceting"><a class="anchor" href="#_faceting"></a>8.1. Faceting</h3>
+<div class="paragraph">
+<p>The API of the GDC, in addition to allowing for spatial/temporal/attribute queries and filters,
+may choose to apply facets to WCMP records.  Facets are effective when applied against controlled
+vocabularies and classifications.  The following WCMP required properties would be subject to faceting by a GDC:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>country</code> and <code>centre-id</code> as defined in <a href="#_identifier">Identifier</a></p>
+</li>
+<li>
+<p><a href="#_properties_type">Properties / Type</a></p>
+</li>
+<li>
+<p><a href="#_properties_wmo_data_policy">Properties / WMO Data Policy</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -6193,7 +6230,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-08-16 21:55:53 UTC
+Last updated 2023-08-23 10:55:15 UTC
 </div>
 </div>
 </body>
