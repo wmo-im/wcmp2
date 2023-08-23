@@ -52,6 +52,8 @@ include::sections/clause_6_informative_text.adoc[]
 
 include::sections/clause_7_normative_text.adoc[]
 
+include::sections/clause_8_gdc.adoc[]
+
 include::sections/annex_a_ats.adoc[]
 
 include::sections/annex_b_schemas.adoc[]
