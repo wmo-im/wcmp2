@@ -3,66 +3,51 @@ $id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml
 title: WCMP link object definition
 description: WCMP link object definition
 
-required:
-  - href
-properties:
-  href:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/href
-  rel:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/rel
-  type:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/type
-  hreflang:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/hreflang
-  title:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/title
-  templated:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/templated
-  variables:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/variables
-  created:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/created
-  updated:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/updated
-  channel:
-    type: string
-    description: topic to subscribe to for broker workflow
-  security:
-    type: object
-    $ref: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/3.1.0/schemas/v3.0/schema.yaml#/definitions/Components/properties/securitySchemes
-  distribution:
-    type: object
-    description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
-    properties:
-      availableFormats: 
-        type: array 
-        items: 
-           type: object
-           properties:
-             name:
-                type: string
-                description: available format short name.
-             description:
-                type: string
-                description: the individual format description to allow building the portal information
-             numberOFiles:
-                type: string
-                description: typical number of files disseminated by the distribution mechanism over a period of time
-             typicalFilesize:
-                type: string
-                description: size of a typical individual file (e.g. KB, MB, GB)
-             typicalFilename:
-                type: string
-                description: example filename
-             samples:
-                type: object
-                description: links of samples that can be openly accessed by users to provide a better understanding of the data
-                items:
-                  type: object
-                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
-             documentation:
-                type: array
-                description: links to the associated documentation available for this format when applicable
-                items:
-                  type: object
-                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+
+allOf:
+  - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml'
+  - required:
+    - href
+  - properties:
+      channel:
+        type: string
+        description: topic to subscribe to for broker workflow
+      security:
+        type: object
+        $ref: https://raw.githubusercontent.com/OAI/OpenAPI-Specification/3.1.0/schemas/v3.0/schema.yaml#/definitions/Components/properties/securitySchemes
+      distribution:
+        type: object
+        description: the additional information qualifying the service and allowing to build and display the "access" information in a portal
+        properties:
+          availableFormats:
+            type: array
+            items:
+               type: object
+               properties:
+                 name:
+                    type: string
+                    description: available format short name.
+                 description:
+                    type: string
+                    description: the individual format description to allow building the portal information
+                 numberOFiles:
+                    type: string
+                    description: typical number of files disseminated by the distribution mechanism over a period of time
+                 typicalFilesize:
+                    type: string
+                    description: size of a typical individual file (e.g. KB, MB, GB)
+                 typicalFilename:
+                    type: string
+                    description: example filename
+                 samples:
+                    type: object
+                    description: links of samples that can be openly accessed by users to provide a better understanding of the data
+                    items:
+                      type: object
+                      $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+                 documentation:
+                    type: array
+                    description: links to the associated documentation available for this format when applicable
+                    items:
+                      type: object
+                      $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
