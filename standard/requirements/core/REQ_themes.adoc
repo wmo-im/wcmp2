@@ -6,5 +6,5 @@
 ^|B |A WCMP record SHALL provide at least one theme.
 ^|C |Within each theme, a WCMP record SHALL provide at least one concept.
 ^|D |Within each theme, a WCMP record SHALL provide a scheme that refers to a controlled vocabulary or thesaurus.
-^|E |A WCMP record SHALL provide a theme/concept identifying all applicable Earth system disciplines as defined in WCMP2 codelists.
+^|E |A WCMP record SHALL provide a theme/concept identifying all applicable Earth system disciplines as defined in WCMP codelists.
 |===
