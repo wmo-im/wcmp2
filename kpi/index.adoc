@@ -35,7 +35,6 @@ toc::[]
 <<<
 
 include::overview.adoc[]
-include::core/validation.adoc[]
 include::core/title.adoc[]
 include::core/description.adoc[]
 include::core/time-intervals.adoc[]
