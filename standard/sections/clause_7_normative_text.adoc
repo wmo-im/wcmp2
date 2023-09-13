@@ -229,6 +229,7 @@ A WCMP metadata record can have one or more themes.
 include::../requirements/core/REQ_themes.adoc[]
 include::../requirements/core/REQ_themes_wis2_global_service.adoc[]
 include::../recommendations/core/REC_granularity.adoc[]
+include::../recommendations/core/PER_themes.adoc[]
 
 .Examples
 [source,json]
