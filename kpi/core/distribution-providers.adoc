@@ -20,7 +20,7 @@ Information of the distributing provider allows the user to contact the distribu
 
 === Rules for implementation
 
-By detecting the presence of the distributor provider.  See WCMP2, clause 7.
+By detecting the presence of the distributor provider.  See WCMP, clause 7.
 
 .Distributor information implementation rules
 [cols="1a,2"]

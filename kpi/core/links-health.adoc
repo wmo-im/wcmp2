@@ -5,7 +5,7 @@
 Any property with linked information (URLs).
 
 * `links[*].href`
-* `properties[*].onlineresource.href`
+* `properties[*].href`
 * `properties[*].url.href`
 
 === What is being measured
