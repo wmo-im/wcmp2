@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/pids*
-^|A |A WCMP record MAY provide a persistent identifier as a means to cite research or
-resource identification using a persistent identifier scheme/framework.
+^|A |A WCMP record MAY provide a persistent identifier as a means to cite research or resource identification using a persistent identifier scheme/framework.
+^|B |A WCMP record MAY provide a persistent identifier as a link object with `+rel=cite-as+` if there is an online citation or reference.
 |===
