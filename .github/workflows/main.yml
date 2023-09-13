@@ -8,7 +8,8 @@ on:
     - 'standard/**'
 
 env:
-  FILE_BASENAME: wcmp2-DRAFT
+  SPEC_FILE_BASENAME: wcmp2-DRAFT
+  KPI_FILE_BASENAME: wcmp2-kpi-DRAFT
 
 jobs:
   build-wcmp2:
@@ -22,15 +23,24 @@ jobs:
           && sudo gem install asciidoctor asciidoctor-pdf
       - name: checkout repository
         uses: actions/checkout@v3
-      - name: build documentation
+      - name: build specification
         run: |
           mkdir -p /tmp/wcmp2/standard/images \
           && cd standard \
-          && asciidoctor --trace -o /tmp/wcmp2/standard/${FILE_BASENAME}.html index.adoc \
-          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/standard/${FILE_BASENAME}.docx \
-          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/${FILE_BASENAME}.pdf index.adoc \
+          && asciidoctor --trace -o /tmp/wcmp2/standard/${SPEC_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/standard/${SPEC_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/${SPEC_FILE_BASENAME}.pdf index.adoc \
           && cp images/*.png /tmp/wcmp2/standard/images \
           && cd ..
+      - name: build KPIs
+        run: |
+          mkdir -p /tmp/wcmp2/standard/images \
+          && cd standard/kpi \
+          && asciidoctor --trace -o /tmp/wcmp2/standard/kpi/${KPI_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/standard/kpi/${KPI_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/kpi/${KPI_FILE_BASENAME}.pdf index.adoc \
+          && cd ..
+      - name: checkout gh-pages branch
       - name: checkout gh-pages branch
         uses: actions/checkout@v3
         with:
