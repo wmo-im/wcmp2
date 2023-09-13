@@ -19,7 +19,7 @@ jobs:
         run: |
           sudo apt-get update -y \
           && sudo apt-get install -y pandoc \
-          && sudo gem install asciidoctor asciidoctor-pdf 
+          && sudo gem install asciidoctor asciidoctor-pdf
       - name: checkout repository
         uses: actions/checkout@v3
       - name: build documentation
