@@ -35,10 +35,10 @@ jobs:
       - name: build KPIs
         run: |
           mkdir -p /tmp/wcmp2/standard/images \
-          && cd standard/kpi \
-          && asciidoctor --trace -o /tmp/wcmp2/standard/kpi/${KPI_FILE_BASENAME}.html index.adoc \
-          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/standard/kpi/${KPI_FILE_BASENAME}.docx \
-          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/standard/kpi/${KPI_FILE_BASENAME}.pdf index.adoc \
+          && cd kpi \
+          && asciidoctor --trace -o /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.html index.adoc \
+          && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.docx \
+          && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.pdf index.adoc \
           && cd ..
       - name: checkout gh-pages branch
         uses: actions/checkout@v3
