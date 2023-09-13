@@ -3,4 +3,5 @@
 |===
 ^|*Permission {counter:per-id}* |*/per/core/extent_geospatial*
 ^|A |A WCMP record MAY provide multiple `+additionalExtents.spatial.bbox+` item properties to express additional geospatial extents in other coordinate reference systems.
+^|B |A WCMP record's `+geometry+` MAY provide a third element (height) as per clause 4 of the GeoJSON specification.
 |===
