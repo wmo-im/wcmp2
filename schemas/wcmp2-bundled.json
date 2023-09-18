@@ -774,22 +774,34 @@
                 ],
                 "type": "object",
                 "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
+                "anyOf": [
+                  {
+                    "required": [
+                      "name"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "organization"
+                    ]
+                  }
+                ],
                 "properties": {
                   "identifier": {
                     "type": "string",
-                    "description": "A value uniquely identifying a contact (individual or organization)"
+                    "description": "A value uniquely identifying a contact."
                   },
                   "name": {
                     "type": "string",
-                    "description": "The name of the organization or the individual."
+                    "description": "The name of the responsible person."
                   },
-                  "positionName": {
+                  "position": {
                     "type": "string",
                     "description": "The name of the role or position of the responsible person taken from the organization's formal organizational hierarchy or chart."
                   },
                   "organization": {
                     "type": "string",
-                    "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
+                    "description": "Organization/affiliation of the contact."
                   },
                   "logo": {
                     "description": "Graphic identifying a contact. The link relation should be `icon` and the media type should be an image media type.",
@@ -869,6 +881,7 @@
                         "roles": {
                           "description": "The type of phone number (e.g. home, work, fax, etc.).",
                           "type": "array",
+                          "minItems": 1,
                           "items": {
                             "type": "string"
                           }
@@ -893,6 +906,7 @@
                         "roles": {
                           "description": "The type of email (e.g. home, work, etc.).",
                           "type": "array",
+                          "minItems": 1,
                           "items": {
                             "type": "string"
                           }
@@ -927,11 +941,12 @@
                         },
                         "country": {
                           "type": "string",
-                          "description": "Country of the physical address."
+                          "description": "Country of the physical address.  ISO 3166-1 is recommended."
                         },
                         "roles": {
                           "description": "The type of address (e.g. office, home, etc.).",
                           "type": "array",
+                          "minItems": 1,
                           "items": {
                             "type": "string"
                           }
@@ -1006,6 +1021,7 @@
                   "roles": {
                     "description": "The set of named duties, job functions and/or permissions associated with this contact. (e.g. developer, administrator, etc.).",
                     "type": "array",
+                    "minItems": 1,
                     "items": {
                       "type": "string"
                     }
@@ -1056,6 +1072,32 @@
             "core",
             "recommended"
           ]
+        },
+        "wmo:status": {
+          "description": "The operational status of a given dataset.",
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "An identifier for the concept."
+            },
+            "title": {
+              "type": "string",
+              "description": "A human readable title for the concept."
+            },
+            "description": {
+              "type": "string",
+              "description": "A human readable description for the concept."
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "A URI providing further description of the concept."
+            }
+          }
         }
       }
     },
