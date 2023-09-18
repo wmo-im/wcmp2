@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-09-13</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-09-18</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-09-13</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-09-18</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -548,7 +548,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_properties_record_creation_date">7.1.14. Properties / Record Creation Date</a></li>
 <li><a href="#_properties_record_update_date">7.1.15. Properties / Record Update Date</a></li>
 <li><a href="#_properties_wmo_data_policy">7.1.16. Properties / WMO Data Policy</a></li>
-<li><a href="#distribution">7.1.17. Distribution Information</a></li>
+<li><a href="#links-distribution">7.1.17. Links and Distribution Information</a></li>
 <li><a href="#_additional_properties">7.1.18. Additional Properties</a></li>
 </ul>
 </li>
@@ -743,6 +743,9 @@ The requirements are specified in Chapter 7 and in Annex A in more detail.</p>
 </li>
 <li>
 <p><a id="openapi"></a> OpenAPI Specification 3.1.0 (2022) <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup></p>
+</li>
+<li>
+<p><a id="wis2-guide"></a> Draft guidance on technical specifications of WIS2 (2023) <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -944,8 +947,8 @@ The requirements are specified in Chapter 7 and in Annex A in more detail.</p>
 <div class="sect2">
 <h3 id="_schema_representation"><a class="anchor" href="#_schema_representation"></a>5.4. Schema representation</h3>
 <div class="paragraph">
-<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup> objects are used throughout this standard to define the structure
-of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup>.
+<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup> objects are used throughout this standard to define the structure
+of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>.
 YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 <div class="paragraph">
@@ -1138,12 +1141,15 @@ common meteorological data types:</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Section "Why are datasets so important?" in the WIS2 Guide <a href="#wis2-guide">[wis2-guide]</a> provides further explanation and rationale for datasets as part of WIS2.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_user_stories"><a class="anchor" href="#_user_stories"></a>6.2. User stories</h3>
 <div class="paragraph">
-<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>, the following user stories provide a
+<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup>, the following user stories provide a
 description of features that are relevant to WIS2 metadata and search, and are cast from a user perspective:</p>
 </div>
 <div class="sect3">
@@ -1188,7 +1194,7 @@ description of features that are relevant to WIS2 metadata and search, and are c
 </ul>
 </div>
 <div class="paragraph">
-<p>The following WIS2 marketing video <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup> adds the following user stories:</p>
+<p>The following WIS2 marketing video <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup> adds the following user stories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1433,12 +1439,12 @@ of a WCMP discovery metadata record.</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.wmo:dataPolicy</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>conditional</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO data policy as per Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_properties_wmo_data_policy">Properties / WMO Data Policy</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO data policy as per Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_properties_wmo_data_policy">Properties / WMO Data Policy</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>links</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online linkages to data retrieval or additional resources associated with the dataset (see <a href="#distribution">Distribution Information</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online linkages to data retrieval or additional resources associated with the dataset (see <a href="#links-distribution">Links and Distribution Information</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.*</code></p></td>
@@ -1589,7 +1595,7 @@ detection and handling of content.</p>
 <h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.5. Properties / Type</h4>
 <div class="paragraph">
 <p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to <code>dataset</code>,
-WCMP can also describe services and processes. See the resource type codelist <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup> for
+WCMP can also describe services and processes. See the resource type codelist <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup> for
 allowed values.</p>
 </div>
 <table id="req_core_type" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1867,6 +1873,26 @@ provides an identifier for the given concept, as well as optional <code>title</c
 </tr>
 </tbody>
 </table>
+<table id="per_core_themes" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/per/core/themes</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record MAY provide as many themes/concepts as applicable to describe the themes of a given dataset.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="listingblock">
 <div class="title">Examples</div>
 <div class="content">
@@ -2103,7 +2129,7 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 1</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/extent_geospatial</strong></p>
 </div></div></td>
@@ -2338,7 +2364,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/extent_temporal</strong></p>
 </div></div></td>
@@ -2414,7 +2440,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/contacts</strong></p>
 </div></div></td>
@@ -2489,7 +2515,7 @@ property is able express the temporal granularity at which a given dataset&#8217
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/version</strong></p>
 </div></div></td>
@@ -2525,13 +2551,13 @@ are commonly used for scientific publications and datasets.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Digital Object Identifiers (DOI) <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup></p>
+<p>Digital Object Identifiers (DOI) <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
 </li>
 <li>
-<p>Archival Resource Key (ARK) <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
+<p>Archival Resource Key (ARK) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
 </li>
 <li>
-<p>Handle <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
+<p>Handle <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -2550,7 +2576,7 @@ are commonly used for scientific publications and datasets.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide persistent identifier references via items in the <code>properties.externalIds</code> array property, where the value of <code>scheme</code> is based on an established persistent identifier scheme (such as <code>doi</code>, <code>ark</code>, <code>handle</code>, etc.), and the value of <code>value</code> is the perstitent identifier (e.g. <code><a href="https://dx.doi.org/10.14287/10000001" class="bare">https://dx.doi.org/10.14287/10000001</a></code>).</p>
+<p>A WCMP record SHOULD provide persistent identifier references via items in the <code>properties.externalIds</code> array property, where the value of <code>scheme</code> is based on an established persistent identifier scheme (such as <code>doi</code>, <code>ark</code>, <code>handle</code>, etc.), and the value of <code>value</code> is the persistent identifier (e.g. <code><a href="https://dx.doi.org/10.14287/10000001" class="bare">https://dx.doi.org/10.14287/10000001</a></code>).</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2562,7 +2588,7 @@ are commonly used for scientific publications and datasets.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/pids</strong></p>
 </div></div></td>
@@ -2570,8 +2596,13 @@ are commonly used for scientific publications and datasets.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record MAY provide a persistent identifier as a means to cite research or
-resource identification using a persistent identifier scheme/framework.</p>
+<p>A WCMP record MAY provide a persistent identifier as a means to cite research or resource identification using a persistent identifier scheme/framework.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record MAY provide a persistent identifier as a link object with <code>rel=cite-as</code> if there is an online citation or reference.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2583,7 +2614,7 @@ resource identification using a persistent identifier scheme/framework.</p>
   ...
   "externalIds": [{
     "scheme": "doi",
-    "value": "https://dx.doi.org/10.14287/10000001"
+    "value": "10.14287/10000001"
   }, {
     "scheme": "hdl",
     "value": "2381/12775"
@@ -2593,6 +2624,19 @@ resource identification using a persistent identifier scheme/framework.</p>
   } ]
   ...
 }</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example: Online citation</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"links": [
+  {
+    "rel": "cite-as",
+    "title": "Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004",
+    "type": "text/html",
+    "href": "https://dx.doi.org/10.14287/10000004"
+  }
+]</code></pre>
 </div>
 </div>
 </div>
@@ -2677,7 +2721,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 <div class="sect3">
 <h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.16. Properties / WMO Data Policy</h4>
 <div class="paragraph">
-<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.  <code>wmo:dataPolicy</code> is required if the record describes a dataset.</p>
+<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.  <code>wmo:dataPolicy</code> is required if the record describes a dataset.</p>
 </div>
 <table id="req_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2724,7 +2768,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/data_policy</strong></p>
 </div></div></td>
@@ -2817,7 +2861,7 @@ resource identification using a persistent identifier scheme/framework.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribution"><a class="anchor" href="#distribution"></a>7.1.17. Distribution Information</h4>
+<h4 id="links-distribution"><a class="anchor" href="#links-distribution"></a>7.1.17. Links and Distribution Information</h4>
 <div class="sect4">
 <h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.17.1. Overview</h5>
 <div class="paragraph">
@@ -2873,6 +2917,12 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>For representing MQTT links, a WCMP record SHALL use the URI scheme of <code>mqtt</code> (default port 1883) and <code>mqtts</code> (default port 8883) for secure TLS encrypted connections.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record <code>links</code> property SHALL include a valid link relation from IANA or the WCMP link type codelist.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2940,7 +2990,7 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/links</strong></p>
 </div></div></td>
@@ -2962,6 +3012,19 @@ secure data use cases, a user needs to be able to detect access-controlled data 
     "type": "application/json",
     "title": "OGC API - Features service",
     "href": "https://example.org/api"
+  }
+]</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example: a link object providing a browse graphic</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"links": [
+  {
+    "rel": "preview",
+    "type": "image/png",
+    "title": "Browse graphic",
+    "href": "https://example.org/path/to/browse.png"
   }
 ]</code></pre>
 </div>
@@ -3155,7 +3218,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Permission 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/per/core/additional_properties</strong></p>
 </div></div></td>
@@ -3946,6 +4009,13 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="content">
 <div class="paragraph">
 <p>Check that the <code>links</code> property provides a minimum of one link object.</p>
+</div>
+</div>
+</div>
+<div class="openblock component">
+<div class="content">
+<div class="paragraph">
+<p>Check that a link&#8217;s <code>rel</code> property is a valid IANA, OGC, or WCMP link relation.</p>
 </div>
 </div>
 </div>
@@ -6200,39 +6270,42 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <a href="#_footnoteref_23">23</a>. <a href="https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md" class="bare">https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md</a>
 </div>
 <div class="footnote" id="_footnotedef_24">
-<a href="#_footnoteref_24">24</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
+<a href="#_footnoteref_24">24</a>. <a href="https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html" class="bare">https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html</a>
 </div>
 <div class="footnote" id="_footnotedef_25">
-<a href="#_footnoteref_25">25</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
+<a href="#_footnoteref_25">25</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_26">
-<a href="#_footnoteref_26">26</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
+<a href="#_footnoteref_26">26</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
 </div>
 <div class="footnote" id="_footnotedef_27">
-<a href="#_footnoteref_27">27</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
+<a href="#_footnoteref_27">27</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
 </div>
 <div class="footnote" id="_footnotedef_28">
-<a href="#_footnoteref_28">28</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_28">28</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
 </div>
 <div class="footnote" id="_footnotedef_29">
-<a href="#_footnoteref_29">29</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv</a>
+<a href="#_footnoteref_29">29</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 <div class="footnote" id="_footnotedef_30">
-<a href="#_footnoteref_30">30</a>. <a href="https://doi.org" class="bare">https://doi.org</a>
+<a href="#_footnoteref_30">30</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv</a>
 </div>
 <div class="footnote" id="_footnotedef_31">
-<a href="#_footnoteref_31">31</a>. <a href="https://arks.org" class="bare">https://arks.org</a>
+<a href="#_footnoteref_31">31</a>. <a href="https://doi.org" class="bare">https://doi.org</a>
 </div>
 <div class="footnote" id="_footnotedef_32">
-<a href="#_footnoteref_32">32</a>. <a href="https://handle.net" class="bare">https://handle.net</a>
+<a href="#_footnoteref_32">32</a>. <a href="https://arks.org" class="bare">https://arks.org</a>
 </div>
 <div class="footnote" id="_footnotedef_33">
-<a href="#_footnoteref_33">33</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_33">33</a>. <a href="https://handle.net" class="bare">https://handle.net</a>
+</div>
+<div class="footnote" id="_footnotedef_34">
+<a href="#_footnoteref_34">34</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-09-13 19:42:22 UTC
+Last updated 2023-09-18 09:49:22 UTC
 </div>
 </div>
 </body>
