@@ -547,9 +547,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_properties_persistent_identifiers">7.1.13. Properties / Persistent Identifiers</a></li>
 <li><a href="#_properties_record_creation_date">7.1.14. Properties / Record Creation Date</a></li>
 <li><a href="#_properties_record_update_date">7.1.15. Properties / Record Update Date</a></li>
-<li><a href="#_properties_wmo_data_policy">7.1.16. Properties / WMO Data Policy</a></li>
-<li><a href="#links-distribution">7.1.17. Links and Distribution Information</a></li>
-<li><a href="#_additional_properties">7.1.18. Additional Properties</a></li>
+<li><a href="#_properties_status">7.1.16. Properties / Status</a></li>
+<li><a href="#_properties_wmo_data_policy">7.1.17. Properties / WMO Data Policy</a></li>
+<li><a href="#links-distribution">7.1.18. Links and Distribution Information</a></li>
+<li><a href="#_additional_properties">7.1.19. Additional Properties</a></li>
 </ul>
 </li>
 </ul>
@@ -590,7 +591,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_wmo_core_metadata_profile_examples">C.1. WMO Core Metadata Profile Examples</a></li>
 </ul>
 </li>
-<li><a href="#Codelists">Annex D: Codelists (Normative)</a></li>
+<li><a href="#Codelists">Annex D: Codelists (Informative)</a>
+<ul class="sectlevel2">
+<li><a href="#_dataset_status">D.1. Dataset status</a></li>
+</ul>
+</li>
 <li><a href="#Bibliography">Annex E: Bibliography</a></li>
 <li><a href="#_revision_history">Annex F: Revision History</a></li>
 </ul>
@@ -1435,6 +1440,11 @@ of a WCMP discovery metadata record.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.updated</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The date that the record was updated (see <a href="#_properties_record_update_date">Properties / Record Update Date</a>)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.status</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">optional</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The operational status of a given dataset.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.wmo:dataPolicy</code></p></td>
@@ -2719,7 +2729,24 @@ are commonly used for scientific publications and datasets.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.16. Properties / WMO Data Policy</h4>
+<h4 id="_properties_status"><a class="anchor" href="#_properties_status"></a>7.1.16. Properties / Status</h4>
+<div class="paragraph">
+<p>The <code>status</code> property identifies the lifecycle of a given dataset.  See Annex D for possible codelists to use when encoding this property.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
+  "status": {
+    "id": "operational",
+    "title": "dataset is in 24/7 operation",
+    "url": "https://example.org/my-vocab"
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO Data Policy</h4>
 <div class="paragraph">
 <p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.  <code>wmo:dataPolicy</code> is required if the record describes a dataset.</p>
 </div>
@@ -2861,9 +2888,9 @@ are commonly used for scientific publications and datasets.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="links-distribution"><a class="anchor" href="#links-distribution"></a>7.1.17. Links and Distribution Information</h4>
+<h4 id="links-distribution"><a class="anchor" href="#links-distribution"></a>7.1.18. Links and Distribution Information</h4>
 <div class="sect4">
-<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.17.1. Overview</h5>
+<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.18.1. Overview</h5>
 <div class="paragraph">
 <p>The <code>links</code> property describes URLs and APIs for accessing or subscribing to the dataset.</p>
 </div>
@@ -3206,7 +3233,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect3">
-<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.18. Additional Properties</h4>
+<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.19. Additional Properties</h4>
 <div class="paragraph">
 <p>A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.</p>
@@ -4850,22 +4877,34 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 ],
                 "type": "object",
                 "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
+                "anyOf": [
+                  {
+                    "required": [
+                      "name"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "organization"
+                    ]
+                  }
+                ],
                 "properties": {
                   "identifier": {
                     "type": "string",
-                    "description": "A value uniquely identifying a contact (individual or organization)"
+                    "description": "A value uniquely identifying a contact."
                   },
                   "name": {
                     "type": "string",
-                    "description": "The name of the organization or the individual."
+                    "description": "The name of the responsible person."
                   },
-                  "positionName": {
+                  "position": {
                     "type": "string",
                     "description": "The name of the role or position of the responsible person taken from the organization's formal organizational hierarchy or chart."
                   },
                   "organization": {
                     "type": "string",
-                    "description": "Organization/affiliation of the individual/responsible person. In case of an organization, the name property should be used and this property is not to be used."
+                    "description": "Organization/affiliation of the contact."
                   },
                   "logo": {
                     "description": "Graphic identifying a contact. The link relation should be `icon` and the media type should be an image media type.",
@@ -4945,6 +4984,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                         "roles": {
                           "description": "The type of phone number (e.g. home, work, fax, etc.).",
                           "type": "array",
+                          "minItems": 1,
                           "items": {
                             "type": "string"
                           }
@@ -4969,6 +5009,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                         "roles": {
                           "description": "The type of email (e.g. home, work, etc.).",
                           "type": "array",
+                          "minItems": 1,
                           "items": {
                             "type": "string"
                           }
@@ -5003,11 +5044,12 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                         },
                         "country": {
                           "type": "string",
-                          "description": "Country of the physical address."
+                          "description": "Country of the physical address.  ISO 3166-1 is recommended."
                         },
                         "roles": {
                           "description": "The type of address (e.g. office, home, etc.).",
                           "type": "array",
+                          "minItems": 1,
                           "items": {
                             "type": "string"
                           }
@@ -5082,6 +5124,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                   "roles": {
                     "description": "The set of named duties, job functions and/or permissions associated with this contact. (e.g. developer, administrator, etc.).",
                     "type": "array",
+                    "minItems": 1,
                     "items": {
                       "type": "string"
                     }
@@ -5132,6 +5175,32 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "core",
             "recommended"
           ]
+        },
+        "wmo:status": {
+          "description": "The operational status of a given dataset.",
+          "type": "object",
+          "required": [
+            "id"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "An identifier for the concept."
+            },
+            "title": {
+              "type": "string",
+              "description": "A human readable title for the concept."
+            },
+            "description": {
+              "type": "string",
+              "description": "A human readable description for the concept."
+            },
+            "url": {
+              "type": "string",
+              "format": "uri",
+              "description": "A URI providing further description of the concept."
+            }
+          }
         }
       }
     },
@@ -6136,9 +6205,28 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 </div>
 <div class="sect1">
-<h2 id="Codelists"><a class="anchor" href="#Codelists"></a>Annex D: Codelists (Normative)</h2>
+<h2 id="Codelists"><a class="anchor" href="#Codelists"></a>Annex D: Codelists (Informative)</h2>
 <div class="sectionbody">
-
+<div class="sect2">
+<h3 id="_dataset_status"><a class="anchor" href="#_dataset_status"></a>D.1. Dataset status</h3>
+<div class="paragraph">
+<p>The links below provide some controlled vocabularies in support of dataset status, and may be
+of use when encoding the <code>properties.status</code> property..</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.w3.org/TR/vocab-dcat-3/#life-cycle" class="bare">https://www.w3.org/TR/vocab-dcat-3/#life-cycle</a></p>
+</li>
+<li>
+<p><a href="https://vocab.met.no/mmd/en/page/?uri=https%3A%2F%2Fvocab.met.no%2Fmmd%2FOperational_Status" class="bare">https://vocab.met.no/mmd/en/page/?uri=https%3A%2F%2Fvocab.met.no%2Fmmd%2FOperational_Status</a></p>
+</li>
+<li>
+<p><a href="https://wiki.esipfed.org/ISO_19115_and_19115-2_CodeList_Dictionaries#MD_ProgressCode" class="bare">https://wiki.esipfed.org/ISO_19115_and_19115-2_CodeList_Dictionaries#MD_ProgressCode</a></p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -6305,7 +6393,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-09-18 09:53:25 UTC
+Last updated 2023-09-18 15:02:49 UTC
 </div>
 </div>
 </body>
