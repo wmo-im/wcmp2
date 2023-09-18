@@ -1,7 +1,6 @@
 :title: WMO Core Metadata Profile 2, Key Performance Indicators
 :titletext: {title}
-:version: 2
-:date: 2023-02-06
+:version: 2.0.0-DRAFT-{docdate}
 :copyright: Copyright © 2023 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
@@ -20,7 +19,7 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*World Meteorological Organization*
-|Date: {date}
+|Date: {docdate}
 |Version: {version}
 |Document location: https://community.wmo.int/wis-metadata-kpis
 |Task Team on WIS Metadata (TT-WISMD)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/expert-team-metadata-0]
