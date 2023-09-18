@@ -67,6 +67,8 @@ Common meteorological data types include:
 *** API endpoint to interrogate data/variable/spatiotemporal dimensions
 *** single observation (granule) (STAC Item with link to actual data asset)
 
+Section "Why are datasets so important?" in the WIS2 Guide <<wis2-guide>> provides further explanation and rationale for datasets as part of WIS2.
+
 === User stories
 
 As part of requirements gathering footnote:[https://github.com/wmo-im/wcmp/issues/107], the following user stories provide a

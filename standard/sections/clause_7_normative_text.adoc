@@ -94,7 +94,7 @@ The table below provides an overview of the set of properties that may be includ
 
 |``links``
 |**required**
-|Online linkages to data retrieval or additional resources associated with the dataset (see <<distribution>>)
+|Online linkages to data retrieval or additional resources associated with the dataset (see <<links-distribution>>)
 
 |``properties.*``
 |optional
@@ -229,6 +229,7 @@ A WCMP metadata record can have one or more themes.
 include::../requirements/core/REQ_themes.adoc[]
 include::../requirements/core/REQ_themes_wis2_global_service.adoc[]
 include::../recommendations/core/REC_granularity.adoc[]
+include::../recommendations/core/PER_themes.adoc[]
 
 .Examples
 [source,json]
@@ -592,7 +593,7 @@ include::../recommendations/core/PER_pids.adoc[]
   ...
   "externalIds": [{
     "scheme": "doi",
-    "value": "https://dx.doi.org/10.14287/10000001"
+    "value": "10.14287/10000001"
   }, {
     "scheme": "hdl",
     "value": "2381/12775"
@@ -602,6 +603,20 @@ include::../recommendations/core/PER_pids.adoc[]
   } ]
   ...
 }
+----
+
+.Example: Online citation
+
+[source,json]
+----
+"links": [
+  {
+    "rel": "cite-as",
+    "title": "Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004",
+    "type": "text/html",
+    "href": "https://dx.doi.org/10.14287/10000004"
+  }
+]
 ----
 
 ==== Properties / Record Creation Date
@@ -704,7 +719,7 @@ include::../recommendations/core/REC_data_policy.adoc[]
 }]
 ----
 
-==== Distribution Information [[distribution]]
+==== Links and Distribution Information [[links-distribution]]
 
 ===== Overview
 
@@ -771,6 +786,21 @@ include::../recommendations/core/PER_links.adoc[]
   }
 ]
 ----
+
+.Example: a link object providing a browse graphic
+
+[source,json]
+----
+"links": [
+  {
+    "rel": "preview",
+    "type": "image/png",
+    "title": "Browse graphic",
+    "href": "https://example.org/path/to/browse.png"
+  }
+]
+----
+
 The `+distribution+` property provides information about the format of the dataset, associated documentation and representative examples of the dataset.
 
 include::../recommendations/core/REC_distribution.adoc[]

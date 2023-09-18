@@ -19,6 +19,11 @@ Check that the `+links+` property provides a minimum of one link object.
 
 [.component,class=step]
 --
+Check that a link's `+rel+` property is a valid IANA, OGC, or WCMP link relation.
+--
+
+[.component,class=step]
+--
 For a link object describing real-time data, check that the `+href+` property starts with the `+mqtt+` or `+mqtts+` protocol, AND that `+channel+` is additionally defined.
 --
 
