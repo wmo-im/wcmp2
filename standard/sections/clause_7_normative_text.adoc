@@ -496,7 +496,7 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
         null
       ]
     ],
-    "resolution": "P1H",
+    "resolution": "PT1H",
     "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
   }
 }
