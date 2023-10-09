@@ -8,5 +8,5 @@
 ^|D |A WCMP record `+links+` property SHALL contain a Web Accessible Folder (WAF) OR an API link for non real-time data (e.g., climate records, hydrometric data archives).
 ^|E |A WCMP record `+links+` property SHALL contain access control information for data, products, and services requiring authentication or authorization.
 ^|F |For representing MQTT links, a WCMP record SHALL use the URI scheme of `+mqtt+` (default port 1883) and `+mqtts+` (default port 8883) for secure TLS encrypted connections.
-^|G |A WCMP record `+links+` property SHALL include a valid link relation from IANA_ footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml] or the WCMP link type codelist_ footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv].
+^|G |A WCMP record `+links+` property SHALL include a valid link relation from IANA footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml] or the WCMP link type codelist footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv].
 |===
