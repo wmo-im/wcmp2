@@ -119,6 +119,7 @@ of the dataset.  A record identifier is essential for querying and identifying
 records within the GDC.
 
 include::../requirements/core/REQ_identifier.adoc[]
+include::../recommendations/core/PER_identifier.adoc[]
 
 .Example
 

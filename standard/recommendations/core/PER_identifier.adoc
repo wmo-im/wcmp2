@@ -1,0 +1,6 @@
+[[per_core_identifier]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/rec/core/identifier*
+^|A |A WCMP record identifier's local identifier MAY also have colons (`+:+`) as required by the data publisher.
+|===
