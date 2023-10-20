@@ -129,7 +129,7 @@
             "title": "Stations associated with this dataset"
         },
         {
-            "rel": "download",
+            "rel": "data",
             "href": "https://dd.weather.gc.ca/observations/swob-ml",
             "type": "text/html",
             "hreflang": "en",
