@@ -159,7 +159,7 @@
             "title": "OGC API endpoint"
         },
         {
-            "rel": "download",
+            "rel": "data",
             "href": "https://dd.weather.gc.ca/climate/cmip5/netcdf/scenarios/RCP8.5/annual/avg_20years",
             "type": "text/html",
             "hreflang": "en",

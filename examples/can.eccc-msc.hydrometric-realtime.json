@@ -127,7 +127,7 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "href": "https://dd.weather.gc.ca/hydrometric/csv",
             "type": "text/html",
             "hreflang": "en",

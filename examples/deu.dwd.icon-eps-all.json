@@ -179,7 +179,7 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "type": "text/html",
             "title": "Open Data Server DWD",
             "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"

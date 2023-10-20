@@ -95,9 +95,9 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
-            "type": "text/octet-stream",
+            "type": "application/octet-stream",
             "title": "GISC Beijing Cache"
         }
     ]

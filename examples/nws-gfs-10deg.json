@@ -568,7 +568,7 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
             "type": "application/x-grib",
             "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"

@@ -113,9 +113,9 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "href": "http://gisc.wis.cma.cn/wis/portal.pub?M_PID=urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
-            "type": "text/octet-stream",
+            "type": "text/html",
             "title": "GISC Beijing Cache"
         }
     ]
