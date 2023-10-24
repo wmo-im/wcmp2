@@ -758,7 +758,7 @@ include::../recommendations/core/REC_links.adoc[]
 [source,json]
 ----
 "links": [{
-  "rel": "download",
+  "rel": "data",
   "type": "application/json",
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
@@ -923,7 +923,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 [source,json]
 ----
 "links": [{
-  "rel": "download",
+  "rel": "data",
   "type": "application/json",
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
