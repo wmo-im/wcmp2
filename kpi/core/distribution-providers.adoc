@@ -1,18 +1,18 @@
 == Distribution providers
 
-Metadata records should contain information regarding the distribution provider and how to contact them.
+Metadata records should contain information regarding the distribution provider and how to contact them via email.
 
 === WCMP element(s)
 
-* `$.properties.providers[?(@.role=="distributor")]`
-* `$.properties.providers[?(@.role=="distributor")].name`
-* `$.properties.providers[?(@.role=="distributor")].contactInfo.email`
+* `$.properties.contacts[?(@.role=="distributor")]`
+* `$.properties.contacts[?(@.role=="distributor")].emails`
+* `$.properties.contacts[?(@.role=="distributor")].contactInstructions`
 
 === What is being measured
 
 The presence of distribution provider information and supporting elements.
 
-* distributor contact information (organization, email)
+* distributor contact information (email, contact instructions)
 
 === Rationale for measurement
 
@@ -20,7 +20,7 @@ Information of the distributing provider allows the user to contact the distribu
 
 === Rules for implementation
 
-By detecting the presence of the distributor provider.  See WCMP, clause 7.
+By detecting the presence of the distributor provider.  See WCMP2, clause 7.
 
 .Distributor information implementation rules
 [cols="1a,2"]
@@ -30,10 +30,10 @@ By detecting the presence of the distributor provider.  See WCMP, clause 7.
 |The distributor provider is included.
 |1
 
-|The distributor contact organization is included.
+|The distributor contact email is included.
 |1
 
-|The distributor contact email is included.
+|The distributor contact instruction element is included.
 |1
 
 |===
@@ -44,40 +44,49 @@ By detecting the presence of the distributor provider.  See WCMP, clause 7.
 
 * Specify a distributor provider. Note that a distributor provider does not have to be the same as the main point of contact, principal investigator
 * Specify an email for the distributor
+* Specify contact instructions for the distributor
 
 === Examples
 
 ```json
 "properties": {
   ...
-  "providers": [{
+  "contacts": [{
     ...
     {
-        "name": "WMO Lead Centre for Long-Range Forecast Multi-Model Ensemble",
-        "contactInfo": {
-            "phone": {
-			    "office": "+82-2-2181-0486",
-				"fax": "+82-2-2181-0489"
+        "organization": "WMO Lead Centre for Long-Range Forecast Multi-Model Ensemble",
+        "phones": [
+            {
+			    "value": "+82-2-2181-0486",
+                "role": "office"
 			},
-            "email": {
-                "work": "lc_lrfmme@korea.kr"
-            },
-            "address": [
-                {
+            {
+			    "value": "+82-2-2181-0489",
+                "role": "fax"
+			}
+        ],
+        "emails": [
+            {
+                "value": "lc_lrfmme@korea.kr",
+                "role": "work"
+            }
+        ],
+        "addresses": [
+            {
                 "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
                 "city": "SEOUL",
-                "postal-code": "07062",
+                "postalCode": "07062",
                 "country": "Republic of Korea"
-                }
-            ],
-            "url": {
-				"href": "https://www.wmolc.org/"
-			}
-        },
-        "roles": [
-            {
-                "name": "distributor"
             }
+        ],
+        "contactInstructions": "email",
+        "links": [
+            {
+                "href": "https://www.wmolc.org/"
+            }
+        ],
+        "roles": [
+            "distributor"
         ]
     }]
   ...
