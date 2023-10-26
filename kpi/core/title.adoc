@@ -29,7 +29,7 @@ In the context of WIS2 Global Discovery Catalogues, the product title and descri
 |The title has 150 characters or less
 |1
 
-|The title has only printable characters (numbers and letters)
+|The title has only printable characters (numbers and letters) and round brackets
 |1
 
 |The words in title are represented in "Title Case"
