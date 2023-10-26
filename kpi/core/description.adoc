@@ -37,29 +37,27 @@ In the context of WIS2 Global Discovery Catalogues, the product title and descri
 
 === Guidance to score well on this assessment
 
-The description should provide a clear and concise statement that enables the reader to understand the content of the dataset. For guidance when completing the description, consider the following recommendations:
-
-* State the 'things' that are recorded
-* State the key aspects recorded about these things
-* State what form the data takes
-* State any other limiting information, such as time period of validity of the data
-* Add purpose of data resource where relevant (e.g. for survey data)
-* Aim to be understood by non-experts
-* Do not include general background information
-* Avoid jargon and unexplained abbreviations
+The description should provide a clear and concise statement that enables the reader to understand the content of the dataset. For guidance when completing the description, consider the following:
 
 ==== Relevant recommendations
 
+Aim to be understood by non-experts::
 * Avoid adding a scientific description
-* Limit information in the description to the specific resource that is being described
-* Describe the contents of the resource and the key aspects and/or attributes that are represented
+Describe the contents of the resource and the key aspects and/or attributes that are represented::
+* Limit information in the description to the specific resource that is being described -> Do not include general background information
 * Explain briefly what is unique about this resource and, if appropriate, how it differs from similar resources
-* Avoid citing external sources to this resource
+* State what form the data takes
+* State any other limiting information, such as time period of validity of the data
+Spell out uncommon acronyms only once::
+* Avoid jargon and unexplained abbreviations
 * Avoid spelling out commonly used acronym which are already understood by the general public
-* Spell out uncommon acronyms only once
-* Avoid including HTML/CSV tables, extra spaces or other markup to control display of text. Use simple paragraph(s) only
-* Avoid copying text from a journal article verbatim. This can lead to copyright violation concerns. Additionally, abstracts for journal articles are not  intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata
-* Avoid using future verb tense when possible. Write using present or past tenses
+Write using present or past tenses::
+* Avoid using future verb tense when possible
+Use simple paragraph(s) only::
+* Avoid including HTML/CSV tables, extra spaces or other markup to control display of text
+Add purpose of data resource where relevant (e.g. for survey data)::
+* Avoid citing external sources to this resource
+* Avoid copying text from a journal article verbatim because this can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata
 
 ==== Spell checking recommendations
 
@@ -68,5 +66,10 @@ The description should provide a clear and concise statement that enables the re
 
 === Examples
 
-References of good description examples can be found in TODO.
+```json
+"properties": {
+    ...
+    "description": "For WMO Information System 2.0 (WIS 2.0) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 8192 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+    ...
+```
 
