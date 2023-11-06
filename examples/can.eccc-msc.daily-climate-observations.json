@@ -116,7 +116,7 @@
             "title": "Stations associated with this dataset"
         },
         {
-            "rel": "download",
+            "rel": "data",
             "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
             "type": "text/html",
             "title": "Raw data download (CSV files)"

@@ -121,13 +121,13 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "type": "text/html",
             "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files < 24h during pilot)",
             "href": "https://opendata.dwd.de/test/wis2/cache"
         },
         {
-            "rel": "download",
+            "rel": "archives",
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
             "href": "https://opendata.dwd.de/test/wis2/cache_metadata"

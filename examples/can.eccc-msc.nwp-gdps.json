@@ -118,7 +118,7 @@
     },
     "links": [
         {
-            "rel": "download",
+            "rel": "data",
             "href": "https://dd.weather.gc.ca/model_gem_global",
             "type": "text/html",
             "title": "MSC Datamart"

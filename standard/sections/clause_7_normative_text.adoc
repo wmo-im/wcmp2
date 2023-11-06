@@ -758,7 +758,7 @@ include::../recommendations/core/REC_links.adoc[]
 [source,json]
 ----
 "links": [{
-  "rel": "download",
+  "rel": "data",
   "type": "application/json",
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
@@ -799,7 +799,7 @@ include::../recommendations/core/PER_links.adoc[]
 ----
 "links": [
   {
-    "rel": "http://www.opengis.net/def/interface/ogcapi-features",
+    "rel": "service",
     "type": "application/json",
     "title": "OGC API - Features service",
     "href": "https://example.org/api"
@@ -891,7 +891,7 @@ Additional distribution information is added to allow more comprehensive discove
 [source,json]
 ----
 "links": [{
-  "rel": "service",
+  "rel": "search",
   "type": "text/html",
   "title": "EUMETSAT Datastore",
   "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
@@ -923,7 +923,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 [source,json]
 ----
 "links": [{
-  "rel": "download",
+  "rel": "data",
   "type": "application/json",
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
@@ -934,6 +934,58 @@ example demonstrates how to express access control using HTTP Basic Authenticati
   }
 }]
 ----
+
+===== Link relation selection
+
+Link relations are very important and provide valuable context to help clarify the semantics of a given link or URL.
+
+The table below provides guidance on which link relation to use to identify common types of
+links to data and services.
+
+.Link relation selection
+|===
+|Link type|Link relation (`rel=`)
+
+|Online data archive
+|`archives`
+
+|OpenAPI endpoint (e.g. JSON or YAML)
+|`service-desc`
+
+|OpenAPI endpoint in HTML (e.g. Swagger, ReDoc)
+|`service-doc`
+
+|OGC WMS, WFS, WCS, CSW, WPS Capabilities
+|`service-desc`
+
+|A single link providing numerous data granules
+|`items`
+
+|A link providing a single data granule
+|`item`
+
+|A link to numerous stations that the dataset is based on
+|`http://def.wmo.int/def/rel/wmdr/-/FacilitySet`
+
+|A link to a single station that the dataset is based on
+|`http://def.wmo.int/def/rel/wmdr/-/EnvironmentalMonitoringFacility`
+
+|citation
+|`cite-as`
+
+|A search portal or web application
+|`search`
+
+|A zipfile of data, or bulk download
+|`enclosure`
+
+|A browse graphic of a dataset
+|`preview`
+
+|An OGC API endpoint providing a collection description
+|`collection`
+
+|===
 
 ==== Additional Properties
 
