@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:can:eccc-msc:hydrometric.realtime",
+    "id": "urn:x-wmo:md:ca-eccc-msc:hydrometric.hydat",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -38,8 +38,8 @@
         ]
     },
     "properties": {
-        "title": "Real-time hydrometric data",
-        "description": "Real-time water level and flow (discharge) data collected at over 2100 hydrometric stations across Canada (last 30 days).",
+        "title": "Historical Hydrometric Data",
+        "description": "Historical hydrometric data are standardized water resource data and information. They are collected, interpreted and disseminated by the Water Survey of Canada (WSC) in partnership with the provinces, territories and other agencies through the National Hydrometric Program. These data sets include daily mean, monthly mean, annual maximum and minimum daily mean and instantaneous peak water level and discharge information for over 2700 active and 5080 discontinued hydrometric monitoring stations across Canada.",
         "themes": [
             {
                 "concepts": [
@@ -123,21 +123,26 @@
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
-        "updated": "2022-06-22"
+        "updated": "2022-06-17"
     },
     "links": [
         {
-            "rel": "data",
-            "href": "https://dd.weather.gc.ca/hydrometric/csv",
+            "rel": "related",
+            "href": "https://www.canada.ca/en/environment-climate-change/services/water-overview/quantity/monitoring/survey/data-products-services/national-archive-hydat.html",
             "type": "text/html",
-            "hreflang": "en",
-            "title": "Raw data download (CSV files)"
+            "title": "Archive database download"
         },
         {
             "rel": "license",
             "href": "https://open.canada.ca/en/open-government-licence-canada",
             "type": "text/html",
             "title": "Open Government Licence - Canada"
+        },
+        {
+            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities",
+            "type": "image/png",
+            "title": "HYDROMETRIC.STATIONS"
         },
         {
             "rel": "items",
@@ -148,10 +153,33 @@
         },
         {
             "rel": "items",
-            "href": "https://api.weather.gc.ca/collections/hydrometric-realtime/items",
+            "href": "https://api.weather.gc.ca/collections/hydrometric-stations/items",
             "type": "application/json",
-            "hreflang": "en",
-            "title": "Data access API"
+            "title": "hydrometric-stations"
+        },
+        {
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/hydrometric-daily-mean/items",
+            "type": "application/json",
+            "title": "hydrometric-daily-mean"
+        },
+        {
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/hydrometric-monthly-mean/items",
+            "type": "application/json",
+            "title": "hydrometric-monthly-mean"
+        },
+        {
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/hydrometric-annual-statistics/items",
+            "type": "application/json",
+            "title": "hydrometric-annual-statistics"
+        },
+        {
+            "rel": "items",
+            "href": "https://api.weather.gc.ca/collections/hydrometric-annual-peaks/items",
+            "type": "application/json",
+            "title": "hydrometric-annual-peaks"
         }
     ]
 }

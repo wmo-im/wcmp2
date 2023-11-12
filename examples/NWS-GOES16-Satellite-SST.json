@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
+    "id": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -33,11 +33,11 @@
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
+        "identifier": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF",
         "externalIds": [
             {
                 "scheme": "default",
-                "value": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF"
+                "value": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF"
             }
         ],
         "created": "2022-08-01T14:16:00Z",
@@ -55,7 +55,7 @@
         ],
         "keywordsCodespace": "http://codes.wmo.int/common/quantity-kind/_seaSurfaceTemperature",
         "language": "en",
-        "externalID": "urn:x-wmo:md:us.noaa.nws.ncep:goes_16_ABI-L2-SSTF",
+        "externalID": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF",
         "themes": [
             {
                 "concepts": [

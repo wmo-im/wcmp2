@@ -1,68 +1,62 @@
 {
-    "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
+    "id": "urn:x-wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
-    "time": {
-        "interval": [
-            "2010-11-11T11:11:11Z",
-            ".."
-        ]
-    },
     "type": "Feature",
     "geometry": {
         "type": "Polygon",
         "coordinates": [
             [
                 [
-                    -142,
-                    28
+                    -180,
+                    -90
                 ],
                 [
-                    -142,
-                    82
+                    -180,
+                    90
                 ],
                 [
-                    -52,
-                    82
+                    180,
+                    90
                 ],
                 [
-                    -52,
-                    28
+                    180,
+                    -90
                 ],
                 [
-                    -142,
-                    28
+                    -180,
+                    -90
                 ]
             ]
         ]
     },
+    "time": {
+        "interval": [
+            "1963-10-01",
+            ".."
+        ]
+    },
     "properties": {
-        "title": "Surface Weather Observations",
-        "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
+        "title": "Global Deterministic Prediction System",
+        "description": "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.",
         "themes": [
             {
                 "concepts": [
                     {
-                        "id": "Weather"
+                        "id": "Prediction"
                     },
                     {
-                        "id": "Archives"
+                        "id": "Global"
                     },
                     {
-                        "id": "Precipitation"
+                        "id": "Deterministic"
+                    },
+                    {
+                        "id": "Weather forecasts"
                     },
                     {
                         "id": "Air temperature"
-                    },
-                    {
-                        "id": "Humidity"
-                    },
-                    {
-                        "id": "Snow"
-                    },
-                    {
-                        "id": "Wind"
                     },
                     {
                         "id": "Meteorological data"
@@ -104,6 +98,7 @@
                         "country": "Canada"
                     }
                 ],
+                "contactInstructions": "email",
                 "links": [
                     {
                         "rel": "canonical",
@@ -116,41 +111,34 @@
                 ]
             }
         ],
+        "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
-        "updated": "2022-06-22",
-        "wmo:dataPolicy": "core"
+        "updated": "2022-06-17"
     },
     "links": [
         {
-            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
-            "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
-            "type": "text/csv",
-            "title": "Stations associated with this dataset"
-        },
-        {
             "rel": "data",
-            "href": "https://dd.weather.gc.ca/observations/swob-ml",
+            "href": "https://dd.weather.gc.ca/model_gem_global",
             "type": "text/html",
-            "hreflang": "en",
-            "title": "Raw data download (CSV files)"
+            "title": "MSC Datamart"
+        },
+        {
+            "rel": "license",
+            "href": "https://open.canada.ca/en/open-government-licence-canada",
+            "type": "text/html",
+            "title": "Open Government Licence - Canada"
+        },
+        {
+            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
+            "type": "image/png",
+            "title": "Air temperature [\u00b0C]"
         },
         {
             "rel": "items",
-            "href": "https://api.weather.gc.ca/collections/swob-realtime/items",
-            "type": "application/json",
-            "title": "Data access API interface"
-        },
-        {
-            "rel": "related",
-            "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
-            "type": "text/html",
-            "title": "Documentation"
-        },
-        {
-            "rel": "items",
+            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
             "href": "mqtts://example.org",
-            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
             "type": "application/json",
             "title": "Data notifications"
         }

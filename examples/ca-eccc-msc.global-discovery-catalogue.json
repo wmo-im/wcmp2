@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:fra:meteo-france:global-broker",
+    "id": "urn:x-wmo:md:ca-eccc-msc:global-discovery-catalogue",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
@@ -34,8 +34,8 @@
     },
     "properties": {
         "type": "service",
-        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
-        "description": "TODO",
+        "title": "WIS2 Global Discovery Catalogue - Environment and Climate Change Canada, Meteorological Service of Canada",
+        "description": "The WIS2 Global Discovery Catalogue provides discovery and search services of WMO weather/climate/water data via the OGC API - Records - Core: Part 1 standard.",
         "themes": [
             {
                 "concepts": [
@@ -73,8 +73,8 @@
             {
                 "concepts": [
                     {
-                        "id": "global-broker",
-                        "title": "Global Broker"
+                        "id": "global-discovery-catalogue",
+                        "title": "Global Discovery Catalogue"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
@@ -82,31 +82,35 @@
         ],
         "contacts": [
             {
-                "identifier": "meteo-france",
-                "organization": "M\u00e9t\u00e9o-France",
-                "positionName": "David Podeur",
+                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+                "phones": [
+                    {
+                        "value": "+18199972800"
+                    }
+                ],
                 "emails": [
                     {
-                        "value": "gisc_support@meteo.fr"
+                        "value": "enviroinfo@ec.gc.ca"
                     }
                 ],
                 "addresses": [
                     {
                         "deliveryPoint": [
-                            "42 Avenue Coriolis"
+                            "77 Westmorland Street, suite 260"
                         ],
-                        "city": "Toulouse",
-                        "postalCode": "31057",
-                        "country": "France"
+                        "city": "Fredericton",
+                        "administrativeArea": "NB",
+                        "postalCode": "E3B 6Z4",
+                        "country": "Canada"
                     }
                 ],
                 "links": [
                     {
+                        "rel": "canonical",
                         "type": "text/html",
-                        "href": "https://donneespubliques.meteofrance.fr"
+                        "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
                 ],
-                "contactInstructions": "email",
                 "roles": [
                     "host"
                 ]
