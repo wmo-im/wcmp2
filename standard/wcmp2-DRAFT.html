@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-11-06</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-11-13</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-11-06</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-11-13</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1530,23 +1530,17 @@ records within the GDC.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record identifier SHALL have the following notation: <code>urn:x-wmo:md:{country}:{centre_id}:{local_identifier}</code>.</p>
+<p>A WCMP record identifier SHALL have the following notation: <code>urn:x-wmo:md:{centre_id}:{local_identifier}</code>.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record identifier SHALL include a <code>country</code> based on the associated vocabulary as specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WCMP record identifier SHALL include a <code>centre_id</code> based on the associated vocabulary specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WCMP record identifier SHALL include a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or special or accented characters.</p>
 </div></div></td>
@@ -1576,7 +1570,7 @@ records within the GDC.</p>
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:can:eccc-msc:observations.swob"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:can-eccc-msc:observations.swob"</code></pre>
 </div>
 </div>
 </div>
@@ -3403,7 +3397,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="ulist">
 <ul>
 <li>
-<p><code>country</code> and <code>centre-id</code> as defined in <a href="#_identifier">Identifier</a></p>
+<p><code>centre-id</code> as defined in <a href="#_identifier">Identifier</a></p>
 </li>
 <li>
 <p><a href="#_properties_type">Properties / Type</a></p>
@@ -3507,7 +3501,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, check that there are at least <strong>six</strong> tokens, delimited by <code>:</code>.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, check that there are at least <strong>five</strong> tokens, delimited by <code>:</code>.</p>
 </div>
 </div>
 </div>
@@ -3521,14 +3515,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fourth token is a country based on the WIS2 Topic Hierarchy and controlled vocabulary.</p>
-</div>
-</div>
-</div>
-<div class="openblock component">
-<div class="content">
-<div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fifth token is a centre id based on the WIS2 Topic Hierarchy and controlled vocabulary.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the fourth token is a centre id based on the WIS2 Topic Hierarchy and controlled vocabulary.</p>
 </div>
 </div>
 </div>
@@ -5784,527 +5771,19 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="listingblock">
 <div class="title">Example: Canadian Hourly Surface Weather Observations (dataset)</div>
 <div class="content">
-<pre>{
-    "id": "urn:x-wmo:md:can:eccc-msc:weather.observations.swob-realtime",
-    "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2/conf/core"
-    ],
-    "time": {
-        "interval": [
-            "2010-11-11T11:11:11Z",
-            ".."
-        ]
-    },
-    "type": "Feature",
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-            [
-                [
-                    -142,
-                    28
-                ],
-                [
-                    -142,
-                    82
-                ],
-                [
-                    -52,
-                    82
-                ],
-                [
-                    -52,
-                    28
-                ],
-                [
-                    -142,
-                    28
-                ]
-            ]
-        ]
-    },
-    "properties": {
-        "title": "Surface Weather Observations",
-        "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
-        "themes": [
-            {
-                "concepts": [
-                    {
-                        "id": "Weather"
-                    },
-                    {
-                        "id": "Archives"
-                    },
-                    {
-                        "id": "Precipitation"
-                    },
-                    {
-                        "id": "Air temperature"
-                    },
-                    {
-                        "id": "Humidity"
-                    },
-                    {
-                        "id": "Snow"
-                    },
-                    {
-                        "id": "Wind"
-                    },
-                    {
-                        "id": "Meteorological data"
-                    }
-                ],
-                "scheme": "https://canada.multites.net/cst"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "weather"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
-            }
-        ],
-        "contacts": [
-            {
-                "name": "National Inquiry Response Team",
-                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "phones": [
-                    {
-                        "value": "+18199972800"
-                    }
-                ],
-                "emails": [
-                    {
-                        "value": "enviroinfo@ec.gc.ca"
-                    }
-                ],
-                "addresses": [
-                    {
-                        "deliveryPoint": [
-                            "77 Westmorland Street, suite 260"
-                        ],
-                        "city": "Fredericton",
-                        "administrativeArea": "NB",
-                        "postalCode": "E3B 6Z4",
-                        "country": "Canada"
-                    }
-                ],
-                "links": [
-                    {
-                        "rel": "canonical",
-                        "type": "text/html",
-                        "href": "https://www.canada.ca/en/environment-climate-change.html"
-                    }
-                ],
-                "roles": [
-                    "producer"
-                ]
-            }
-        ],
-        "type": "dataset",
-        "created": "2018-01-01",
-        "updated": "2022-06-22",
-        "wmo:dataPolicy": "core"
-    },
-    "links": [
-        {
-            "rel": "http://www.wmo.int/def/rel/wmdr/1.0/FacilitySet",
-            "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
-            "type": "text/csv",
-            "title": "Stations associated with this dataset"
-        },
-        {
-            "rel": "data",
-            "href": "https://dd.weather.gc.ca/observations/swob-ml",
-            "type": "text/html",
-            "hreflang": "en",
-            "title": "Raw data download (CSV files)"
-        },
-        {
-            "rel": "items",
-            "href": "https://api.weather.gc.ca/collections/swob-realtime/items",
-            "type": "application/json",
-            "title": "Data access API interface"
-        },
-        {
-            "rel": "related",
-            "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
-            "type": "text/html",
-            "title": "Documentation"
-        },
-        {
-            "rel": "items",
-            "href": "mqtts://example.org",
-            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/observations/surface-land/landFixed",
-            "type": "application/json",
-            "title": "Data notifications"
-        }
-    ]
-}</pre>
+<pre>Unresolved directive in sections/annex_c_examples.adoc - include::../../examples/can.eccc-msc.surface-weather-observations-realtime.json[]</pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example: ICON-EPS GRIB data (dataset)</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-    "id": "urn:x-wmo:md:deu:dwd-offenbach:icon-eps.ALL",
-    "type": "Feature",
-    "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2/conf/core"
-    ],
-    "time": {
-        "interval": [
-            "T00Z",
-            "T12Z"
-        ],
-        "resolution": "PT6H"
-    },
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-            [
-                [
-                    -180,
-                    -90
-                ],
-                [
-                    -180,
-                    90
-                ],
-                [
-                    180,
-                    90
-                ],
-                [
-                    180,
-                    -90
-                ],
-                [
-                    -180,
-                    -90
-                ]
-            ]
-        ]
-    },
-    "additionalExtents": {
-        "spatial": {
-            "bbox": [
-                [
-                    -180,
-                    -90,
-                    180,
-                    90
-                ]
-            ],
-            "resolution": "0.5*0.5",
-            "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-        },
-        "temporal": {
-            "interval": [
-                [
-                    "R/T00Z",
-                    "PT48H"
-                ],
-                [
-                    "R/T12Z",
-                    "PT48H"
-                ]
-            ],
-            "resolution": "PT1H",
-            "trs": "http://www.opengis.net/def/trs/ISO-8601"
-        }
-    },
-    "properties": {
-        "type": "dataset",
-        "title": "ICON-EPS GRIB data",
-        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
-        "themes": [
-            {
-                "concepts": [
-                    {
-                        "id": "meteorology"
-                    }
-                ],
-                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Meteorological geographical features"
-                    }
-                ],
-                "scheme": "https://inspire.ec.europa.eu/theme/mf"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "FM 92 GRIB edition 2"
-                    }
-                ],
-                "scheme": "http://codes.wmo.int/codeform"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "continual"
-                    }
-                ],
-                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
-            }
-        ],
-        "contacts": [
-            {
-                "identifier": "DWD",
-                "organization": "Deutscher Wetterdienst",
-                "positionName": "Michael Denhard",
-                "emails": [
-                    {
-                        "value": "wis@dwd.de"
-                    }
-                ],
-                "addresses": [
-                    {
-                        "deliveryPoint": [
-                            "Frankfurter Strasse 135"
-                        ],
-                        "city": "Offenbach",
-                        "postalCode": "63067",
-                        "country": "Germany"
-                    }
-                ],
-                "links": [
-                    {
-                        "type": "text/html",
-                        "href": "https://www.dwd.de/wmc"
-                    },
-                    {
-                        "type": "text/html",
-                        "href": "https://gisc.dwd.de"
-                    }
-                ],
-                "contactInstructions": "email",
-                "roles": [
-                    "pointOfContact",
-                    "originator"
-                ]
-            }
-        ],
-        "created": "2018-08-19T08:10:00Z",
-        "updated": "2022-03-15T09:26:00Z",
-        "wmo:dataPolicy": "core",
-        "keywords": [
-            "CLCH",
-            "CLCL",
-            "CLCM",
-            "CLCT",
-            "cloud",
-            "MSLP",
-            "Probability of temperature anomalies",
-            "cape",
-            "dew point",
-            "geopotential height",
-            "maximum temperature 2m",
-            "minimum temperature 2m",
-            "precipitation",
-            "snow",
-            "snowfall",
-            "soil temperature",
-            "temperature",
-            "wind gusts 10m",
-            "wind speed",
-            "wind speed 10m"
-        ],
-        "externalIds": [
-            {
-                "scheme": "DWD",
-                "value": "de.dwd.icon-eps.ALL"
-            }
-        ],
-        "language": "eng",
-        "formats": [
-            "GRIB2"
-        ]
-    },
-    "links": [
-        {
-            "rel": "data",
-            "type": "text/html",
-            "title": "Open Data Server DWD",
-            "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
-        },
-        {
-            "rel": "subscribe",
-            "type": "application/json",
-            "title": "Global Broker (Toulouse)",
-            "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
-            "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
-        }
-    ]
-}</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in sections/annex_c_examples.adoc - include::../../examples/deu.dwd.icon-eps-all.json[]</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="title">Example: WIS2 Global Broker (service)</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-    "id": "urn:x-wmo:md:fra:meteo-france:global-broker",
-    "type": "Feature",
-    "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2/conf/core"
-    ],
-    "time": null,
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-            [
-                [
-                    -180,
-                    -90
-                ],
-                [
-                    -180,
-                    90
-                ],
-                [
-                    180,
-                    90
-                ],
-                [
-                    180,
-                    -90
-                ],
-                [
-                    -180,
-                    -90
-                ]
-            ]
-        ]
-    },
-    "properties": {
-        "type": "service",
-        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
-        "description": "TODO",
-        "themes": [
-            {
-                "concepts": [
-                    {
-                        "id": "weather",
-                        "title": "Weather"
-                    },
-                    {
-                        "id": "climate",
-                        "title": "Climate"
-                    },
-                    {
-                        "id": "hydrology",
-                        "title": "Hydrology"
-                    },
-                    {
-                        "id": "atmospheric-composition",
-                        "title": "Atmospheric Composition"
-                    },
-                    {
-                        "id": "cryosphere",
-                        "title": "Cryosphere"
-                    },
-                    {
-                        "id": "ocean",
-                        "title": "Ocean"
-                    },
-                    {
-                        "id": "space-weather",
-                        "title": "Space Weather"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/earth-system-discipline.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "global-broker",
-                        "title": "Global Broker"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
-            }
-        ],
-        "contacts": [
-            {
-                "identifier": "meteo-france",
-                "organization": "M\u00e9t\u00e9o-France",
-                "positionName": "David Podeur",
-                "emails": [
-                    {
-                        "value": "gisc_support@meteo.fr"
-                    }
-                ],
-                "addresses": [
-                    {
-                        "deliveryPoint": [
-                            "42 Avenue Coriolis"
-                        ],
-                        "city": "Toulouse",
-                        "postalCode": "31057",
-                        "country": "France"
-                    }
-                ],
-                "links": [
-                    {
-                        "type": "text/html",
-                        "href": "https://donneespubliques.meteofrance.fr"
-                    }
-                ],
-                "contactInstructions": "email",
-                "roles": [
-                    "host"
-                ]
-            }
-        ],
-        "created": "2022-11-11T11:00:00Z",
-        "keywords": [
-            "wis2",
-            "global discovery catalogue",
-            "metadata"
-        ]
-    },
-    "links": [
-        {
-            "rel": "data",
-            "type": "text/html",
-            "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files &lt; 24h during pilot)",
-            "href": "https://opendata.dwd.de/test/wis2/cache"
-        },
-        {
-            "rel": "archives",
-            "type": "text/html",
-            "title": "Open Data Server DWD (Metadata Archive)",
-            "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS Global Broker - China Meteorological Administration",
-            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        }
-    ]
-}</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in sections/annex_c_examples.adoc - include::../../examples/fra.meteo-france.global-broker.json[]</code></pre>
 </div>
 </div>
 </div>
@@ -6499,7 +5978,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-06 09:10:00 UTC
+Last updated 2023-11-13 12:10:23 UTC
 </div>
 </div>
 </body>
