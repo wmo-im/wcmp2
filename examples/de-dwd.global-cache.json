@@ -1,10 +1,15 @@
 {
-    "id": "urn:x-wmo:md:can:eccc-msc:global-discovery-catalogue",
+    "id": "urn:x-wmo:md:de-dwd-offenbach:global-cache-service",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
-    "time": null,
+    "time": {
+        "interval": [
+            "2024-01-01T00:00:00Z",
+            ".."
+        ]
+    },
     "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -34,8 +39,8 @@
     },
     "properties": {
         "type": "service",
-        "title": "WIS2 Global Discovery Catalogue - Environment and Climate Change Canada, Meteorological Service of Canada",
-        "description": "The WIS2 Global Discovery Catalogue provides discovery and search services of WMO weather/climate/water data via the OGC API - Records - Core: Part 1 standard.",
+        "title": "WMO WIS2 Global Cache (Deutscher Wetterdienst)",
+        "description": "For WMO Information System 2 (WIS2) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 4096 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
         "themes": [
             {
                 "concepts": [
@@ -73,55 +78,69 @@
             {
                 "concepts": [
                     {
-                        "id": "global-discovery-catalogue",
-                        "title": "Global Discovery Catalogue"
+                        "id": "global-cache",
+                        "title": "Global Cache"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "continual"
+                    }
+                ],
+                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
             }
         ],
         "contacts": [
             {
-                "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-                "phones": [
-                    {
-                        "value": "+18199972800"
-                    }
-                ],
+                "name": "Kai-Thorsten Wirt",
+                "organization": "Deutscher Wetterdienst",
                 "emails": [
                     {
-                        "value": "enviroinfo@ec.gc.ca"
+                        "value": "wis@dwd.de"
                     }
                 ],
                 "addresses": [
                     {
                         "deliveryPoint": [
-                            "77 Westmorland Street, suite 260"
+                            "Frankfurter Strasse 135"
                         ],
-                        "city": "Fredericton",
-                        "administrativeArea": "NB",
-                        "postalCode": "E3B 6Z4",
-                        "country": "Canada"
+                        "city": "Offenbach",
+                        "postalCode": "63067",
+                        "country": "Germany"
                     }
                 ],
                 "links": [
                     {
-                        "rel": "canonical",
                         "type": "text/html",
-                        "href": "https://www.canada.ca/en/environment-climate-change.html"
+                        "href": "https://www.dwd.de/wmc"
+                    },
+                    {
+                        "type": "text/html",
+                        "href": "https://gisc.dwd.de"
                     }
                 ],
+                "contactInstructions": "email",
                 "roles": [
                     "host"
                 ]
             }
         ],
-        "created": "2022-11-11T11:00:00Z",
+        "created": "2023-05-05T08:00:00Z",
+        "updated": "2023-05-19T08:00:00Z",
         "keywords": [
-            "wis2",
-            "global discovery catalogue",
-            "metadata"
-        ]
+            "WIS2",
+            "Global Cache"
+        ],
+        "externalIds": [
+            {
+                "scheme": "DWD",
+                "value": "de.dwd.globalcache"
+            }
+        ],
+        "language": "eng"
     },
     "links": [
         {
@@ -131,7 +150,7 @@
             "href": "https://opendata.dwd.de/test/wis2/cache"
         },
         {
-            "rel": "archives",
+            "rel": "data",
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
             "href": "https://opendata.dwd.de/test/wis2/cache_metadata"

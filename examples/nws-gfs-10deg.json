@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:us.noaa.nws.ncep:nwp.gfs_1deg",
+    "id": "urn:x-wmo:md:us-noaa-nws-ncep:nwp.gfs_1deg",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],

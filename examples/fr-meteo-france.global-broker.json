@@ -1,15 +1,10 @@
 {
-    "id": "urn:x-wmo:md:deu:dwd-offenbach:global-cache-service",
+    "id": "urn:x-wmo:md:fr-meteo-france:global-broker",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
-    "time": {
-        "interval": [
-            "2024-01-01T00:00:00Z",
-            ".."
-        ]
-    },
+    "time": null,
     "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -39,8 +34,8 @@
     },
     "properties": {
         "type": "service",
-        "title": "WMO WIS2 Global Cache (Deutscher Wetterdienst)",
-        "description": "For WMO Information System 2 (WIS2) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 4096 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
+        "description": "TODO",
         "themes": [
             {
                 "concepts": [
@@ -78,48 +73,37 @@
             {
                 "concepts": [
                     {
-                        "id": "global-cache",
-                        "title": "Global Cache"
+                        "id": "global-broker",
+                        "title": "Global Broker"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "continual"
-                    }
-                ],
-                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
             }
         ],
         "contacts": [
             {
-                "name": "Kai-Thorsten Wirt",
-                "organization": "Deutscher Wetterdienst",
+                "identifier": "meteo-france",
+                "organization": "M\u00e9t\u00e9o-France",
+                "positionName": "David Podeur",
                 "emails": [
                     {
-                        "value": "wis@dwd.de"
+                        "value": "gisc_support@meteo.fr"
                     }
                 ],
                 "addresses": [
                     {
                         "deliveryPoint": [
-                            "Frankfurter Strasse 135"
+                            "42 Avenue Coriolis"
                         ],
-                        "city": "Offenbach",
-                        "postalCode": "63067",
-                        "country": "Germany"
+                        "city": "Toulouse",
+                        "postalCode": "31057",
+                        "country": "France"
                     }
                 ],
                 "links": [
                     {
                         "type": "text/html",
-                        "href": "https://www.dwd.de/wmc"
-                    },
-                    {
-                        "type": "text/html",
-                        "href": "https://gisc.dwd.de"
+                        "href": "https://donneespubliques.meteofrance.fr"
                     }
                 ],
                 "contactInstructions": "email",
@@ -128,19 +112,12 @@
                 ]
             }
         ],
-        "created": "2023-05-05T08:00:00Z",
-        "updated": "2023-05-19T08:00:00Z",
+        "created": "2022-11-11T11:00:00Z",
         "keywords": [
-            "WIS2",
-            "Global Cache"
-        ],
-        "externalIds": [
-            {
-                "scheme": "DWD",
-                "value": "de.dwd.globalcache"
-            }
-        ],
-        "language": "eng"
+            "wis2",
+            "global discovery catalogue",
+            "metadata"
+        ]
     },
     "links": [
         {
@@ -150,7 +127,7 @@
             "href": "https://opendata.dwd.de/test/wis2/cache"
         },
         {
-            "rel": "data",
+            "rel": "archives",
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
             "href": "https://opendata.dwd.de/test/wis2/cache_metadata"

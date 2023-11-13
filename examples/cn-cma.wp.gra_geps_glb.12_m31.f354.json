@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:cn.cma.wmc-bj::nwp.gra_geps_glb.12_m31.f354",
+    "id": "urn:x-wmo:md:cn-cma-wmc-bj::nwp.gra_geps_glb.12_m31.f354",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
