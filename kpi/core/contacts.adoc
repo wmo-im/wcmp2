@@ -49,7 +49,6 @@ By detecting the presence of the contact with the role `host`. See WCMP2, clause
 === Examples
 
 ```json
-{
   "properties": {
     ...
     "contacts": [
@@ -90,7 +89,6 @@ By detecting the presence of the contact with the role `host`. See WCMP2, clause
         ]
       }
     ]
+    ...
   }
-  ...
-}
 ```
