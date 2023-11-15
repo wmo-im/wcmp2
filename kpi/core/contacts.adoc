@@ -1,0 +1,94 @@
+== Contacts
+
+Metadata records should contain information regarding the contact with the role `host` and how to contact them via email.
+
+=== WCMP element(s)
+
+* `$.properties.contacts[?(@.role=="host")]`
+* `$.properties.contacts[?(@.role=="host")].emails`
+* `$.properties.contacts[?(@.role=="host")].contactInstructions`
+
+=== What is being measured
+
+The presence of host information and supporting elements.
+
+* host contact information (email, contact instructions)
+
+=== Rationale for measurement
+
+Information of the host allows the user to contact the host in case of anything related to accessing the data.
+
+=== Rules for implementation
+
+By detecting the presence of the contact with the role `host`. See WCMP2, clause 7.
+
+.Host information implementation rules
+[cols="1a,2"]
+|===
+|Rule |Score
+
+|The contact with the role `host` is included.
+|1
+
+|The host contact email is included.
+|1
+
+|The host contact instruction element is included.
+|1
+
+|===
+
+*Total possible score: 3 (100%)*
+
+=== Guidance to score well on this assessment
+
+* Specify a host. Note that a host does not have to be the same as the main point of contact, principal investigator
+* Specify an email for the host
+* Specify contact instructions for the host
+
+=== Examples
+
+```json
+  "properties": {
+    ...
+    "contacts": [
+      {
+        "organization": "WMO Lead Centre for Long-Range Forecast Multi-Model Ensemble",
+        "phones": [
+          {
+            "value": "+82-2-2181-0486",
+            "role": "office"
+          },
+          {
+            "value": "+82-2-2181-0489",
+            "role": "fax"
+          }
+        ],
+        "emails": [
+          {
+            "value": "lc_lrfmme@korea.kr",
+            "role": "work"
+          }
+        ],
+        "addresses": [
+          {
+            "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
+            "city": "SEOUL",
+            "postalCode": "07062",
+            "country": "Republic of Korea"
+          }
+        ],
+        "contactInstructions": "email",
+        "links": [
+          {
+            "href": "https://www.wmolc.org/"
+          }
+        ],
+        "roles": [
+          "host"
+        ]
+      }
+    ]
+    ...
+  }
+```

@@ -6,7 +6,8 @@ Any property with linked information (URLs).
 
 * `links[*].href`
 * `properties[*].href`
-* `properties[*].url.href`
+* `properties[*].concepts.url`
+* `properties[*].scheme`
 
 === What is being measured
 
@@ -32,9 +33,12 @@ HTTPS is increasingly becoming a requirement for numerous agencies as well as th
 |Each valid HTTPS link present
 |1
 
+|Each valid MQTTS link present
+|1
+
 |===
 
-*Total possible score: (valid links + valid HTTPS links) / (total links * 2) (100%)*
+*Total possible score: (valid links + valid HTTPS links + valid MQTTS links) / (total links * 3) (100%)*
 
 === Guidance to score well on this assessment
 
@@ -43,14 +47,41 @@ Ensure that all links resolve and are accessible via HTTPS.
 === Examples
 
 ```json
-"links": [
-  ...
-  {
-    "rel": "search",
-    "type": "text/html",
-    "title": "WOUDC - Data - Station List",
-    "href": "https://woudc.org/data/stations"
-  },
-  ...
-]
+  "links": [
+    {
+      "rel": "search",
+      "type": "text/html",
+      "title": "WOUDC - Data - Station List",
+      "href": "https://woudc.org/data/stations"
+    }
+  ]
+```
+
+
+```json
+  "links": [
+    {
+      "rel": "related",
+      "type": "application/json",
+      "title": "Global Broker (Toulouse)",
+      "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
+      "channel": "cache/a/wis2/#",
+      "distribution": {
+        "maxMSGsize": 4096,
+        "unit": "bytes"
+      }
+    }
+  ]
+```
+
+```json
+  "links": [
+    {
+      "rel": "subscribe",
+      "type": "application/json",
+      "title": "Global Broker (Toulouse)",
+      "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+      "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"
+    }
+  ]
 ```

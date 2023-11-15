@@ -6,7 +6,7 @@
 
 === What is being measured
 
-The title shall always be populated and follow the principles of WCMP guidance. The length shall not be too short or too long, contain less than 3 acronyms and represented in title case. Spelling and grammar are correct.
+The title shall always be populated and follow the principles of WCMP guidance. The length shall not be too short or too long, contain less than 3 acronyms and represented in sentence case. Spelling and grammar are correct.
 
 === Rationale for measurement
 
@@ -29,10 +29,10 @@ In the context of WIS2 Global Discovery Catalogues, the product title and descri
 |The title has 150 characters or less
 |1
 
-|The title has only printable characters (numbers and letters)
+|The title has only printable characters (numbers and letters) and round brackets
 |1
 
-|The words in title are represented in "Title Case"
+|The words in title are represented in "Sentence case"
 |1
 
 |The title contains less than 3 acronyms (words with all upper case)
