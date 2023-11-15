@@ -47,45 +47,41 @@ Ensure that all links resolve and are accessible via HTTPS.
 === Examples
 
 ```json
-"links": [
-  ...
-  {
-    "rel": "search",
-    "type": "text/html",
-    "title": "WOUDC - Data - Station List",
-    "href": "https://woudc.org/data/stations"
-  },
-  ...
-]
-```
-
-
-```json
-"links": [
-  ...
-  {
-    "rel": "related",
-    "type": "application/json",
-    "title": "Global Broker (Toulouse)",
-    "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
-    "channel": "cache/a/wis2/#",
-    "distribution": {
-      "maxMSGsize": 4096,
-      "unit": "bytes"
+  "links": [
+    {
+      "rel": "search",
+      "type": "text/html",
+      "title": "WOUDC - Data - Station List",
+      "href": "https://woudc.org/data/stations"
     }
-  },
-  ...
+  ]
+```
+
+
+```json
+  "links": [
+    {
+      "rel": "related",
+      "type": "application/json",
+      "title": "Global Broker (Toulouse)",
+      "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
+      "channel": "cache/a/wis2/#",
+      "distribution": {
+        "maxMSGsize": 4096,
+        "unit": "bytes"
+      }
+    }
+  ]
 ```
 
 ```json
-"links": [
-  ...
-  {
-    "rel": "subscribe",
-    "type": "application/json",
-    "title": "Global Broker (Toulouse)",
-    "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
-    "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"
-  },
-  ...
+  "links": [
+    {
+      "rel": "subscribe",
+      "type": "application/json",
+      "title": "Global Broker (Toulouse)",
+      "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+      "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"
+    }
+  ]
 ```
