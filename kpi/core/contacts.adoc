@@ -1,39 +1,39 @@
-== Distribution providers
+== Contacts
 
-Metadata records should contain information regarding the distribution provider and how to contact them via email.
+Metadata records should contain information regarding the contact with the role `host` and how to contact them via email.
 
 === WCMP element(s)
 
-* `$.properties.contacts[?(@.role=="distributor")]`
-* `$.properties.contacts[?(@.role=="distributor")].emails`
-* `$.properties.contacts[?(@.role=="distributor")].contactInstructions`
+* `$.properties.contacts[?(@.role=="host")]`
+* `$.properties.contacts[?(@.role=="host")].emails`
+* `$.properties.contacts[?(@.role=="host")].contactInstructions`
 
 === What is being measured
 
-The presence of distribution provider information and supporting elements.
+The presence of host information and supporting elements.
 
-* distributor contact information (email, contact instructions)
+* host contact information (email, contact instructions)
 
 === Rationale for measurement
 
-Information of the distributing provider allows the user to contact the distributor in case of anything related to accessing the data.
+Information of the host allows the user to contact the host in case of anything related to accessing the data.
 
 === Rules for implementation
 
-By detecting the presence of the distributor provider.  See WCMP2, clause 7.
+By detecting the presence of the contact with the role `host. See WCMP2, clause 7.
 
-.Distributor information implementation rules
+.Host information implementation rules
 [cols="1a,2"]
 |===
 |Rule |Score
 
-|The distributor provider is included.
+|The contact with the role `host` is included.
 |1
 
-|The distributor contact email is included.
+|The host contact email is included.
 |1
 
-|The distributor contact instruction element is included.
+|The host contact instruction element is included.
 |1
 
 |===
@@ -42,9 +42,9 @@ By detecting the presence of the distributor provider.  See WCMP2, clause 7.
 
 === Guidance to score well on this assessment
 
-* Specify a distributor provider. Note that a distributor provider does not have to be the same as the main point of contact, principal investigator
-* Specify an email for the distributor
-* Specify contact instructions for the distributor
+* Specify a host. Note that a host does not have to be the same as the main point of contact, principal investigator
+* Specify an email for the host
+* Specify contact instructions for the host
 
 === Examples
 
@@ -86,7 +86,7 @@ By detecting the presence of the distributor provider.  See WCMP2, clause 7.
             }
         ],
         "roles": [
-            "distributor"
+            "host"
         ]
     }]
   ...
