@@ -20,7 +20,7 @@ Information of the host allows the user to contact the host in case of anything 
 
 === Rules for implementation
 
-By detecting the presence of the contact with the role `host. See WCMP2, clause 7.
+By detecting the presence of the contact with the role `host`. See WCMP2, clause 7.
 
 .Host information implementation rules
 [cols="1a,2"]
@@ -49,46 +49,48 @@ By detecting the presence of the contact with the role `host. See WCMP2, clause 
 === Examples
 
 ```json
-"properties": {
-  ...
-  "contacts": [{
+{
+  "properties": {
     ...
-    {
+    "contacts": [
+      {
         "organization": "WMO Lead Centre for Long-Range Forecast Multi-Model Ensemble",
         "phones": [
-            {
-			    "value": "+82-2-2181-0486",
-                "role": "office"
-			},
-            {
-			    "value": "+82-2-2181-0489",
-                "role": "fax"
-			}
+          {
+            "value": "+82-2-2181-0486",
+            "role": "office"
+          },
+          {
+            "value": "+82-2-2181-0489",
+            "role": "fax"
+          }
         ],
         "emails": [
-            {
-                "value": "lc_lrfmme@korea.kr",
-                "role": "work"
-            }
+          {
+            "value": "lc_lrfmme@korea.kr",
+            "role": "work"
+          }
         ],
         "addresses": [
-            {
-                "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
-                "city": "SEOUL",
-                "postalCode": "07062",
-                "country": "Republic of Korea"
-            }
+          {
+            "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
+            "city": "SEOUL",
+            "postalCode": "07062",
+            "country": "Republic of Korea"
+          }
         ],
         "contactInstructions": "email",
         "links": [
-            {
-                "href": "https://www.wmolc.org/"
-            }
+          {
+            "href": "https://www.wmolc.org/"
+          }
         ],
         "roles": [
-            "host"
+          "host"
         ]
-    }]
+      }
+    ]
+  }
   ...
 }
 ```
