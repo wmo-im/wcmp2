@@ -14,4 +14,4 @@ may be represented as part of their own metadata or associated through WCMP link
 
 WCMP discovery metadata record provides descriptions at the granularity level of a dataset.  Station, instrument and observation metadata are supported by the _WIGOS Metadata Standard (WMO-No. 1192)_ footnote:[https://library.wmo.int/doc_num.php?explnum_id=10109].
 
-This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on schemas.  Annex C provides informative examples.  Annex D provides normative information on codelists.
+This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on schemas.  Annex C provides informative examples.  Annex D provides informative codelists.
