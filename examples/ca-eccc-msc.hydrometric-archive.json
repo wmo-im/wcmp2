@@ -116,6 +116,7 @@
                     }
                 ],
                 "roles": [
+                    "host",
                     "producer"
                 ]
             }
