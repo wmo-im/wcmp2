@@ -5,9 +5,9 @@
 Any property with linked information (URLs).
 
 * `links[*].href`
-* `properties[*].href`
-* `properties[*].concepts.url`
-* `properties[*].scheme`
+* `properties.themes[*].concepts[*].url`
+* `properties.themes[*].scheme`
+* `properties.contacts[*].links[*].href`
 
 === What is being measured
 
@@ -27,18 +27,14 @@ HTTPS is increasingly becoming a requirement for numerous agencies as well as th
 |===
 |Rule |Score
 
-|Each valid link present
+|Link resolves successfully
 |1
 
-|Each valid HTTPS link present
+|Link has a valid media type
 |1
-
-|Each valid MQTTS link present
-|1
-
 |===
 
-*Total possible score: (valid links + valid HTTPS links + valid MQTTS links) / (total links * 3) (100%)*
+*Total possible score: (link resolves) / (total links * 1) (100%)*
 
 === Guidance to score well on this assessment
 
