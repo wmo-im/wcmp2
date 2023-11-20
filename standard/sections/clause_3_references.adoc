@@ -8,6 +8,7 @@
 * W3C: Data on the Web Best Practices, W3C Recommendation (2017) footnote:[https://www.w3.org/TR/dwbp]
 * W3C: Data Catalog Vocabulary, W3C Recommendation (2014) footnote:[https://www.w3.org/TR/vocab-dcat]
 * IANA: Link Relation Types (2020) footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml]
+* IANA: Media Types (2023) footnote:[https://www.iana.org/assignments/media-types/media-types.xhtml]
 * Linux Foundation: SPDX License List (2021) footnote:[https://spdx.org/licenses]
 * [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
 * [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
