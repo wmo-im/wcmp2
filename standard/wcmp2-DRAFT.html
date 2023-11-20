@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-11-15</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-11-20</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-11-15</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-11-20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -668,7 +668,7 @@ may be represented as part of their own metadata or associated through WCMP link
 <p>WCMP discovery metadata record provides descriptions at the granularity level of a dataset.  Station, instrument and observation metadata are supported by the <em>WIGOS Metadata Standard (WMO-No. 1192)</em> <sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup>.</p>
 </div>
 <div class="paragraph">
-<p>This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on schemas.  Annex C provides informative examples.  Annex D provides normative information on codelists.</p>
+<p>This specification defines the conformance requirements for the WMO Core Metadata Profile.  Annex A defines the abstract test suite. Annex B provides normative information on schemas.  Annex C provides informative examples.  Annex D provides informative codelists.</p>
 </div>
 </div>
 </div>
@@ -738,19 +738,22 @@ The requirements are specified in Chapter 7 and in Annex A in more detail.</p>
 <p>IANA: Link Relation Types (2020) <sup class="footnote">[<a id="_footnoteref_19" class="footnote" href="#_footnotedef_19" title="View footnote.">19</a>]</sup></p>
 </li>
 <li>
-<p>Linux Foundation: SPDX License List (2021) <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
+<p>IANA: Media Types (2023) <sup class="footnote">[<a id="_footnoteref_20" class="footnote" href="#_footnotedef_20" title="View footnote.">20</a>]</sup></p>
 </li>
 <li>
-<p><a id="json-schema"></a> IETF: JSON Schema (2022) <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup></p>
+<p>Linux Foundation: SPDX License List (2021) <sup class="footnote">[<a id="_footnoteref_21" class="footnote" href="#_footnotedef_21" title="View footnote.">21</a>]</sup></p>
 </li>
 <li>
-<p><a id="wis2-topic-hierarchy"></a> WMO: WIS2 Topic Hierarchy (2022) <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup></p>
+<p><a id="json-schema"></a> IETF: JSON Schema (2022) <sup class="footnote">[<a id="_footnoteref_22" class="footnote" href="#_footnotedef_22" title="View footnote.">22</a>]</sup></p>
 </li>
 <li>
-<p><a id="openapi"></a> OpenAPI Specification 3.1.0 (2022) <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup></p>
+<p><a id="wis2-topic-hierarchy"></a> WMO: WIS2 Topic Hierarchy (2022) <sup class="footnote">[<a id="_footnoteref_23" class="footnote" href="#_footnotedef_23" title="View footnote.">23</a>]</sup></p>
 </li>
 <li>
-<p><a id="wis2-guide"></a> Draft guidance on technical specifications of WIS2 (2023) <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup></p>
+<p><a id="openapi"></a> OpenAPI Specification 3.1.0 (2022) <sup class="footnote">[<a id="_footnoteref_24" class="footnote" href="#_footnotedef_24" title="View footnote.">24</a>]</sup></p>
+</li>
+<li>
+<p><a id="wis2-guide"></a> Draft guidance on technical specifications of WIS2 (2023) <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -952,8 +955,8 @@ The requirements are specified in Chapter 7 and in Annex A in more detail.</p>
 <div class="sect2">
 <h3 id="_schema_representation"><a class="anchor" href="#_schema_representation"></a>5.4. Schema representation</h3>
 <div class="paragraph">
-<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_25" class="footnote" href="#_footnotedef_25" title="View footnote.">25</a>]</sup> objects are used throughout this standard to define the structure
-of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup>.
+<p>JSON Schema <sup class="footnote">[<a id="_footnoteref_26" class="footnote" href="#_footnotedef_26" title="View footnote.">26</a>]</sup> objects are used throughout this standard to define the structure
+of metadata records. These schema objects are also typically represented using YAML <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup>.
 YAML is a superset of JSON, and in this standard are regarded as equivalent.</p>
 </div>
 <div class="paragraph">
@@ -1154,7 +1157,7 @@ common meteorological data types:</p>
 <div class="sect2">
 <h3 id="_user_stories"><a class="anchor" href="#_user_stories"></a>6.2. User stories</h3>
 <div class="paragraph">
-<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_27" class="footnote" href="#_footnotedef_27" title="View footnote.">27</a>]</sup>, the following user stories provide a
+<p>As part of requirements gathering <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup>, the following user stories provide a
 description of features that are relevant to WIS2 metadata and search, and are cast from a user perspective:</p>
 </div>
 <div class="sect3">
@@ -1199,7 +1202,7 @@ description of features that are relevant to WIS2 metadata and search, and are c
 </ul>
 </div>
 <div class="paragraph">
-<p>The following WIS2 marketing video <sup class="footnote">[<a id="_footnoteref_28" class="footnote" href="#_footnotedef_28" title="View footnote.">28</a>]</sup> adds the following user stories:</p>
+<p>The following WIS2 marketing video <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup> adds the following user stories:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1449,7 +1452,7 @@ of a WCMP discovery metadata record.</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.wmo:dataPolicy</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>conditional</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO data policy as per Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_29" class="footnote" href="#_footnotedef_29" title="View footnote.">29</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_properties_wmo_data_policy">Properties / WMO Data Policy</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">WMO data policy as per Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_properties_wmo_data_policy">Properties / WMO Data Policy</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>links</code></p></td>
@@ -1619,7 +1622,7 @@ detection and handling of content.</p>
 <h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.5. Properties / Type</h4>
 <div class="paragraph">
 <p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to <code>dataset</code>,
-WCMP can also describe services and processes. See the resource type codelist <sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup> for
+WCMP can also describe services and processes. See the resource type codelist <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup> for
 allowed values.</p>
 </div>
 <table id="req_core_type" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -2575,13 +2578,13 @@ are commonly used for scientific publications and datasets.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Digital Object Identifiers (DOI) <sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup></p>
+<p>Digital Object Identifiers (DOI) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
 </li>
 <li>
-<p>Archival Resource Key (ARK) <sup class="footnote">[<a id="_footnoteref_32" class="footnote" href="#_footnotedef_32" title="View footnote.">32</a>]</sup></p>
+<p>Archival Resource Key (ARK) <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p>
 </li>
 <li>
-<p>Handle <sup class="footnote">[<a id="_footnoteref_33" class="footnote" href="#_footnotedef_33" title="View footnote.">33</a>]</sup></p>
+<p>Handle <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -2762,7 +2765,7 @@ are commonly used for scientific publications and datasets.</p>
 <div class="sect3">
 <h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO Data Policy</h4>
 <div class="paragraph">
-<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_34" class="footnote" href="#_footnotedef_34" title="View footnote.">34</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.  <code>wmo:dataPolicy</code> is required if the record describes a dataset.</p>
+<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup>. The codelist values are <code>core</code> or <code>recommended</code>.  <code>wmo:dataPolicy</code> is required if the record describes a dataset.</p>
 </div>
 <table id="req_core_data_policy" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2963,15 +2966,15 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record <code>links</code> property SHALL include a valid link relation from IANA <sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup> or the WCMP link type codelist <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup>.</p>
+<p>A WCMP record <code>links</code> property SHALL include a valid link relation from IANA <sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup> or the WCMP link type codelist <sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnotedef_37" title="View footnote.">37</a>]</sup>.</p>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnotedef_35">
-<a href="#_footnoteref_35">35</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
-</div>
 <div class="footnote" id="_footnotedef_36">
-<a href="#_footnoteref_36">36</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv</a>
+<a href="#_footnoteref_36">36</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
+</div>
+<div class="footnote" id="_footnotedef_37">
+<a href="#_footnoteref_37">37</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv</a>
 </div>
 </div></div></td>
 </tr>
@@ -2993,6 +2996,12 @@ secure data use cases, a user needs to be able to detect access-controlled data 
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>A WCMP record&#8217;s links SHOULD be provided using secure protocols (e.g. HTTPS, MQTTS, etc.).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record <code>links</code> property SHOULD provide the <code>type`</code> property with a valid media type from IANA or as designated by WMO.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5931,54 +5940,57 @@ of use when encoding the <code>properties.status</code> property..</p>
 <a href="#_footnoteref_19">19</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
 </div>
 <div class="footnote" id="_footnotedef_20">
-<a href="#_footnoteref_20">20</a>. <a href="https://spdx.org/licenses" class="bare">https://spdx.org/licenses</a>
+<a href="#_footnoteref_20">20</a>. <a href="https://www.iana.org/assignments/media-types/media-types.xhtml" class="bare">https://www.iana.org/assignments/media-types/media-types.xhtml</a>
 </div>
 <div class="footnote" id="_footnotedef_21">
-<a href="#_footnoteref_21">21</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
+<a href="#_footnoteref_21">21</a>. <a href="https://spdx.org/licenses" class="bare">https://spdx.org/licenses</a>
 </div>
 <div class="footnote" id="_footnotedef_22">
-<a href="#_footnoteref_22">22</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
+<a href="#_footnoteref_22">22</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_23">
-<a href="#_footnoteref_23">23</a>. <a href="https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md" class="bare">https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md</a>
+<a href="#_footnoteref_23">23</a>. <a href="https://github.com/wmo-im/wis2-topic-hierarchy" class="bare">https://github.com/wmo-im/wis2-topic-hierarchy</a>
 </div>
 <div class="footnote" id="_footnotedef_24">
-<a href="#_footnoteref_24">24</a>. <a href="https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html" class="bare">https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html</a>
+<a href="#_footnoteref_24">24</a>. <a href="https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md" class="bare">https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md</a>
 </div>
 <div class="footnote" id="_footnotedef_25">
-<a href="#_footnoteref_25">25</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
+<a href="#_footnoteref_25">25</a>. <a href="https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html" class="bare">https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html</a>
 </div>
 <div class="footnote" id="_footnotedef_26">
-<a href="#_footnoteref_26">26</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
+<a href="#_footnoteref_26">26</a>. <a href="https://json-schema.org" class="bare">https://json-schema.org</a>
 </div>
 <div class="footnote" id="_footnotedef_27">
-<a href="#_footnoteref_27">27</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
+<a href="#_footnoteref_27">27</a>. <a href="https://en.wikipedia.org/wiki/YAML" class="bare">https://en.wikipedia.org/wiki/YAML</a>
 </div>
 <div class="footnote" id="_footnotedef_28">
-<a href="#_footnoteref_28">28</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
+<a href="#_footnoteref_28">28</a>. <a href="https://github.com/wmo-im/wcmp/issues/107" class="bare">https://github.com/wmo-im/wcmp/issues/107</a>
 </div>
 <div class="footnote" id="_footnotedef_29">
-<a href="#_footnoteref_29">29</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_29">29</a>. <a href="https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4" class="bare">https://gisc.dwd.de/wis2.0/WIS_2.0_final.mp4</a>
 </div>
 <div class="footnote" id="_footnotedef_30">
-<a href="#_footnoteref_30">30</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv</a>
+<a href="#_footnoteref_30">30</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 <div class="footnote" id="_footnotedef_31">
-<a href="#_footnoteref_31">31</a>. <a href="https://doi.org" class="bare">https://doi.org</a>
+<a href="#_footnoteref_31">31</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv</a>
 </div>
 <div class="footnote" id="_footnotedef_32">
-<a href="#_footnoteref_32">32</a>. <a href="https://arks.org" class="bare">https://arks.org</a>
+<a href="#_footnoteref_32">32</a>. <a href="https://doi.org" class="bare">https://doi.org</a>
 </div>
 <div class="footnote" id="_footnotedef_33">
-<a href="#_footnoteref_33">33</a>. <a href="https://handle.net" class="bare">https://handle.net</a>
+<a href="#_footnoteref_33">33</a>. <a href="https://arks.org" class="bare">https://arks.org</a>
 </div>
 <div class="footnote" id="_footnotedef_34">
-<a href="#_footnoteref_34">34</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
+<a href="#_footnoteref_34">34</a>. <a href="https://handle.net" class="bare">https://handle.net</a>
+</div>
+<div class="footnote" id="_footnotedef_35">
+<a href="#_footnoteref_35">35</a>. <a href="https://library.wmo.int/doc_num.php?explnum_id=11113#page=9" class="bare">https://library.wmo.int/doc_num.php?explnum_id=11113#page=9</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-15 15:20:07 UTC
+Last updated 2023-11-20 11:18:23 UTC
 </div>
 </div>
 </body>

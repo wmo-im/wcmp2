@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-11-15</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2023-11-20</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-11-15</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2023-11-20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: <a href="https://community.wmo.int/wis-metadata-kpis" class="bare">https://community.wmo.int/wis-metadata-kpis</a></p></td>
@@ -514,9 +514,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_examples">3.6. Examples</a></li>
 </ul>
 </li>
-<li><a href="#_time_intervals">4. Time Intervals</a>
+<li><a href="#_time_intervals">4. Time intervals</a>
 <ul class="sectlevel2">
-<li><a href="#_wcmp_elements_3">4.1. WCMP Element(s)</a></li>
+<li><a href="#_wcmp_elements_3">4.1. WCMP element(s)</a></li>
 <li><a href="#_what_is_being_measured_3">4.2. What is being measured</a></li>
 <li><a href="#_rationale_for_measurement_3">4.3. Rationale for measurement</a></li>
 <li><a href="#_rules_for_implementation_3">4.4. Rules for implementation</a></li>
@@ -1061,10 +1061,10 @@ WMO Task Team on WIS Metadata.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_time_intervals"><a class="anchor" href="#_time_intervals"></a>4. Time Intervals</h2>
+<h2 id="_time_intervals"><a class="anchor" href="#_time_intervals"></a>4. Time intervals</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_wcmp_elements_3"><a class="anchor" href="#_wcmp_elements_3"></a>4.1. WCMP Element(s)</h3>
+<h3 id="_wcmp_elements_3"><a class="anchor" href="#_wcmp_elements_3"></a>4.1. WCMP element(s)</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1104,7 +1104,7 @@ WMO Task Team on WIS Metadata.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The begin is less than or equal to the end or open.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The begin is less than the end or open.</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
@@ -1118,7 +1118,7 @@ WMO Task Team on WIS Metadata.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Total possible score: 3 (100%)</strong></p>
+<p>*Total possible score: (begin less than end + only one interval open + resolution) / (total intervals * 3) (100%)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1195,7 +1195,7 @@ WMO Task Team on WIS Metadata.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Total possible score: 3 (100%)</strong></p>
+<p>*Total possible score: (present link + resolves + image file type) / (total graphic overviews * 3) (100%)</p>
 </div>
 </div>
 <div class="sect2">
@@ -1246,13 +1246,13 @@ WMO Task Team on WIS Metadata.</p>
 <p><code>links[*].href</code></p>
 </li>
 <li>
-<p><code>properties[*].href</code></p>
+<p><code>properties.themes[<strong>].concepts[</strong>].url</code></p>
 </li>
 <li>
-<p><code>properties[*].concepts.url</code></p>
+<p><code>properties.themes[*].scheme</code></p>
 </li>
 <li>
-<p><code>properties[*].scheme</code></p>
+<p><code>properties.contacts[<strong>].links[</strong>].href</code></p>
 </li>
 </ul>
 </div>
@@ -1291,21 +1291,17 @@ WMO Task Team on WIS Metadata.</p>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid link present</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Link resolves successfully</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid HTTPS link present</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Each valid MQTTS link present</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Link has a valid media type</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Total possible score: (valid links + valid HTTPS links + valid MQTTS links) / (total links * 3) (100%)</strong></p>
+<p><strong>Total possible score: (link resolves) / (total links * 1) (100%)</strong></p>
 </div>
 </div>
 <div class="sect2">
@@ -1657,7 +1653,7 @@ WMO Task Team on WIS Metadata.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-11-15 15:20:07 UTC
+Last updated 2023-11-20 11:18:23 UTC
 </div>
 </div>
 </body>
