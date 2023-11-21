@@ -14,7 +14,7 @@ Check for the existence of a `+properties.type+` element with a value of `+servi
 
 [.component,class=step]
 --
-Check that the `+properties.themes+` property provides a theme object with the `+scheme+` of `+https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline.csv+`.
+Check that the `+properties.themes+` property provides a theme object with the `+scheme+` of `+https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv+`.
 --
 
 [.component,class=step]
