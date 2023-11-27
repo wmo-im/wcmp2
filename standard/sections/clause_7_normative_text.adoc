@@ -125,7 +125,7 @@ include::../recommendations/core/PER_identifier.adoc[]
 
 [source,json]
 ----
-"id": "urn:x-wmo:md:can-eccc-msc:observations.swob"
+"id": "urn:x-wmo:md:ca-eccc-msc-dcpc:observations.swob"
 ----
 
 ==== Conformance
@@ -786,7 +786,7 @@ include::../recommendations/core/REC_links.adoc[]
     "type" : "application/json",
     "title": "WIS2 notification service",
     "href" : "mqtts://example.org",
-    "channel": "cache/a/wis2/can/eccc-msc/data/core/weather/surface-based-observations"
+    "channel": "cache/a/wis2/ca-eccc-msc-dcpc/data/core/weather/surface-based-observations"
   }
 ]
 ----

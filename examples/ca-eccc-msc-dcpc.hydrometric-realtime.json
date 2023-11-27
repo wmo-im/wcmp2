@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps",
+    "id": "urn:x-wmo:md:ca-eccc-msc-dcpc:hydrometric.realtime",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -9,57 +9,66 @@
         "coordinates": [
             [
                 [
-                    -180,
-                    -90
+                    -142,
+                    28
                 ],
                 [
-                    -180,
-                    90
+                    -142,
+                    82
                 ],
                 [
-                    180,
-                    90
+                    -52,
+                    82
                 ],
                 [
-                    180,
-                    -90
+                    -52,
+                    28
                 ],
                 [
-                    -180,
-                    -90
+                    -142,
+                    28
                 ]
             ]
         ]
     },
     "time": {
         "interval": [
-            "1963-10-01",
+            "1850-01-01",
             ".."
         ]
     },
     "properties": {
-        "title": "Global Deterministic Prediction System",
-        "description": "The Global Deterministic Prediction System (GDPS) carries out physics calculations to arrive at deterministic predictions of atmospheric elements from the current day out to 10 days into the future. Atmospheric elements include temperature, precipitation, cloud cover, wind speed and direction, humidity and others. This product contains raw numerical results of these calculations. Geographical coverage is global. Data is available at horizontal resolution of about 15 km up to 33 vertical levels. Predictions are performed twice a day.",
+        "title": "Real-time hydrometric data",
+        "description": "Real-time water level and flow (discharge) data collected at over 2100 hydrometric stations across Canada (last 30 days).",
         "themes": [
             {
                 "concepts": [
                     {
-                        "id": "Prediction"
+                        "id": "Hydrology"
                     },
                     {
-                        "id": "Global"
+                        "id": "Streamflow"
                     },
                     {
-                        "id": "Deterministic"
+                        "id": "Discharge"
                     },
                     {
-                        "id": "Weather forecasts"
+                        "id": "Water level"
                     },
                     {
-                        "id": "Air temperature"
+                        "id": "Water quantity"
                     },
                     {
-                        "id": "Meteorological data"
+                        "id": "Sediment concentration"
+                    },
+                    {
+                        "id": "Water"
+                    },
+                    {
+                        "id": "Inland waters"
+                    },
+                    {
+                        "id": "Water management"
                     }
                 ],
                 "scheme": "https://canada.multites.net/cst"
@@ -67,7 +76,7 @@
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "hydrology"
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
@@ -115,14 +124,15 @@
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
-        "updated": "2022-06-17"
+        "updated": "2022-06-22"
     },
     "links": [
         {
             "rel": "data",
-            "href": "https://dd.weather.gc.ca/model_gem_global",
+            "href": "https://dd.weather.gc.ca/hydrometric/csv",
             "type": "text/html",
-            "title": "MSC Datamart"
+            "hreflang": "en",
+            "title": "Raw data download (CSV files)"
         },
         {
             "rel": "license",
@@ -131,17 +141,18 @@
             "title": "Open Government Licence - Canada"
         },
         {
-            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
-            "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
-            "type": "image/png",
-            "title": "Air temperature [\u00b0C]"
+            "rel": "items",
+            "href": "mqtts://example.org",
+            "channel": "origin/a/wis2/ca-eccc-msc-dcpc/data/core/hydrology",
+            "type": "application/json",
+            "title": "Data notifications"
         },
         {
             "rel": "items",
-            "channel": "origin/a/wis2/can/eccc-msc/data/core/weather/nwp/global",
-            "href": "mqtts://example.org",
+            "href": "https://api.weather.gc.ca/collections/hydrometric-realtime/items",
             "type": "application/json",
-            "title": "Data notifications"
+            "hreflang": "en",
+            "title": "Data access API"
         }
     ]
 }
