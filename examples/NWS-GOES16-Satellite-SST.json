@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF",
+    "id": "urn:x-wmo:md:us-nws-noaa:goes_16_ABI-L2-SSTF",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -33,97 +33,51 @@
         ]
     },
     "properties": {
-        "identifier": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF",
+        "identifier": "urn:x-wmo:md:us-nws-noaa:goes_16_ABI-L2-SSTF",
         "externalIds": [
             {
                 "scheme": "default",
-                "value": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF"
+                "value": "urn:x-wmo:md:us-nws-noaa:goes_16_ABI-L2-SSTF"
             }
         ],
         "created": "2022-08-01T14:16:00Z",
         "updated": "2022-08-01T14:16:00Z",
+        "wmo:dataPolicy": "core",
         "type": "dataset",
-        "title": "GOES-16 ABI Level 2 Sea Surface Temperature (SST)",
-        "description": "Sea Surface Temperature (SST) for each cloud-free pixel over water The SST algorithm employed on GOES-R will use hybrid physical-regression retrieval in order to produce a more accurate product.",
+        "title": "Goes 16 Advanced Baseline Imager Level 2 Sea Surface Temperature",
+        "description": "Sea Surface Temperature for each cloud-free pixel over water The Sea Surface Temperature algorithm employed on GOES 18 will use hybrid physical-regression retrieval in order to produce a more accurate product.",
         "keywords": [
             "Sea Surface Temperature",
             "Geostationary Operational Environmental Satellite 16 (GOES-16)",
             "Advanced Baseline Imager (ABI)",
             "Earth Science",
             "Infrared Wavelengths",
-            "Brightness Temperature"
+            "Brightness Temperature",
+            "Satellite",
+            "Geostationary Operational Environmental Satellite",
+            "GOES-16",
+            "Measurement",
+            "Radiation",
+            "Oceans",
+            "Ocean Temperature",
+            "Sea Surface Temperature",
+            "goes_16_ABI-L2-SSTF",
+            "Weather and Climate",
+            "International",
+            "Atmosphere",
+            "meteorology"
         ],
         "keywordsCodespace": "http://codes.wmo.int/common/quantity-kind/_seaSurfaceTemperature",
         "language": "en",
-        "externalID": "urn:x-wmo:md:us-noaa-nws-ncep:goes_16_ABI-L2-SSTF",
+        "externalID": "urn:x-wmo:md:us-nws-noaa:goes_16_ABI-L2-SSTF",
         "themes": [
             {
                 "concepts": [
                     {
-                        "id": "Satellite"
-                    },
-                    {
-                        "id": "Geostationary Operational Environmental Satellite"
-                    },
-                    {
-                        "id": "GOES-16"
-                    },
-                    {
-                        "id": "Measurement"
-                    },
-                    {
-                        "id": "Radiation"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Oceans"
-                    },
-                    {
-                        "id": "Ocean Temperature"
-                    },
-                    {
-                        "id": "Sea Surface Temperature"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "goes_16_ABI-L2-SSTF"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Weather and Climate"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "International"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Atmosphere"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "meteorology"
+                        "id": "weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
             }
         ],
         "contacts": [
@@ -145,7 +99,11 @@
                     "country": "United States"
                 },
                 "onlineResource": "https://www.goes.noaa.gov",
-                "contactInstructions": "email"
+                "contactInstructions": "email",
+                "roles": [
+                    "host",
+                    "producer"
+                ]
             }
         ],
         "formats": [
