@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:us-noaa-nws-ncep:nwp.gfs_1deg",
+    "id": "urn:x-wmo:md:us-nws-noaa:nwp.gfs_1deg",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -35,9 +35,10 @@
     "properties": {
         "created": "2022-06-23T18:36:00Z",
         "updated": "2022-06-23T18:36:00Z",
+        "wmo:dataPolicy": "core",
         "type": "dataset",
-        "title": "Global Forecast System (GFS) 1.0 Degree Resolution",
-        "description": "The Global Forecast System (GFS) is a weather forecast model   produced by the National Centers for Environmental Prediction (NCEP). Dozens of atmospheric and land-soil variables are available through this dataset, from temperatures, winds, and precipitation to soil moisture and atmospheric ozone concentration. The entire globe is covered by the GFS at a base horizontal resolution of 18 miles (28 kilometers) between grid points, which is used by the operational forecasters who predict weather out to 16 days in the future. Horizontal resolution drops to 44 miles (70 kilometers) between grid point for forecasts between one week and two weeks. The GFS model is a coupled model, composed of four separate models (an atmosphere model, an ocean model, a land/soil model, and a sea ice model), which work together to provide an accurate picture of weather conditions. Changes are regularly made to the GFS model to improve its performance and forecast accuracy. This dataset is run four times daily at 00z, 06z, 12z and 18z out to 384 hours in two parts. The forecast steps out to 192 hours have a 1.0 degree horizontal resolution and a 3 hour temporal resolution. Forecast steps from 192 to 384 hours have a 2.5 degree horizontal resolution and a 12 hour temporal resolution.",
+        "title": "Global Forecast System 1 Degree Resolution",
+        "description": "The Global Forecast System is a weather forecast model produced by the National Centers for Environmental Prediction.",
         "keywords": [
             "Geopotential Height",
             "Planetary Boundary Layer Height",
@@ -78,7 +79,141 @@
             "Snow Cover",
             "Snow Depth",
             "Sea Ice Concentration",
-            "Land Use/Land Cover Classification"
+            "Land Use/Land Cover Classification",
+            "Prediction",
+            "Global",
+            "Deterministic",
+            "cloud_ceiling",
+            "entire_atmosphere_considered_as_a_single_layer",
+            "entire_atmosphere",
+            "ground_or_water_surface",
+            "high_cloud_layer",
+            "highest_tropospheric_freezing_level",
+            "hybrid_level",
+            "level_at_specified_pressure_difference_from_ground_to_level_pa",
+            "level_of_0C_isotherm",
+            "maximum_wind_level",
+            "mean_sea_level_pa",
+            "middle_cloud_layer",
+            "planetary_boundary_layer",
+            "sigma_level_sigma_value",
+            "specified_altitude_above_mean_sea_level_m",
+            "specified_height_level_above_ground_m",
+            "tropopause",
+            "depth_below_land_surface_m",
+            "isobaric_surface_pa",
+            "potential_vorticity_k_m2_kg-1_s-1",
+            "convective_cloud",
+            "convective_cloud_bottom_level",
+            "convective_cloud_top_level",
+            "boundary_layer_cloud_layer",
+            "high_cloud_bottom_level",
+            "high_cloud_layer",
+            "high_cloud_top_level",
+            "low_cloud_bottom_level",
+            "low_cloud_layer",
+            "low_cloud_top_level",
+            "middle_cloud_bottom_level",
+            "middle_cloud_layer",
+            "middle_cloud_top_level",
+            "nominal_top_of_the_atmosphere",
+            "absolute_vorticity",
+            "albedo",
+            "apparent_temperature",
+            "best_(4_layer)_lifted_index",
+            "categorical_freezing_rain_(yes=1;_no=0)",
+            "categorical_ice_pellets_(yes=1;_no=0)",
+            "categorical_rain_(yes=1;_no=0)",
+            "categorical_snow_(yes=1;_no=0)",
+            "cloud_mixing_ratio",
+            "cloud_water",
+            "cloud_work_function",
+            "composite_reflectivity",
+            "convective_available_potential_energy",
+            "convective_inhibition",
+            "convective_precipitation",
+            "convective_precipitation_rate",
+            "depth_below_land_surface",
+            "dew_point_temperature",
+            "downward_long-wave_radiation_flux",
+            "downward_short-wave_radiation_flux",
+            "field_capacity",
+            "frictional_velocity",
+            "geopotential_height",
+            "graupel",
+            "ground_heat_flux",
+            "haines_index",
+            "high_cloud_cover",
+            "icao_standard_atmosphere_reference_height",
+            "ice_cover",
+            "ice_growth_rate",
+            "ice_temperature",
+            "ice_thickness",
+            "ice_water_mixing_ratio",
+            "land_cover_(1=land,_0=sea)",
+            "latent_heat_next_flux",
+            "level_at_specified_pressure_difference_from_ground_to_level",
+            "liquid_volumetric_soil_moisture_(non_frozen)",
+            "low_cloud_cover",
+            "maximum_temperature",
+            "medium_cloud_cover",
+            "meridional_flux_of_gravity_wave_stress",
+            "minimum_temperature",
+            "momentum_flux,_u-component",
+            "momentum_flux,_v-component",
+            "mslp_(eta_model_reduction)",
+            "ozone_mixing_ratio",
+            "percent_frozen_precipitation",
+            "planetary_boundary_layer_height",
+            "plant_canopy_surface_water",
+            "potential_evaporation_rate",
+            "potential_temperature",
+            "precipitable_water",
+            "precipitation_rate",
+            "pressure",
+            "pressure_of_level_from_which_parcel_was_lifted",
+            "pressure_reduced_to_msl",
+            "rain_mixing_ratio",
+            "reflectivity",
+            "relative_humidity",
+            "sensible_heat_next_flux",
+            "sigma_level_(sigma_value)",
+            "snow_depth",
+            "snow_mixing_ratio",
+            "soil_temperature",
+            "soil_type",
+            "specific_humidity",
+            "storm_relative_helicity",
+            "sunshine_duration",
+            "surface_lifted_index",
+            "surface_roughness",
+            "temperature",
+            "total_cloud_cover",
+            "total_ozone",
+            "total_precipitation",
+            "u-component_of_wind",
+            "u-component_storm_motion",
+            "upward_long-wave_radiation_flux",
+            "upward_short-wave_radiation_flux",
+            "v-component_of_wind",
+            "v-component_storm_motion",
+            "vegetation",
+            "ventilation_rate",
+            "vertical_speed_shear",
+            "vertical_velocity_(geometric)",
+            "vertical_velocity_(pressure)",
+            "visibility",
+            "volumetric_soil_moisture_content",
+            "water_equivalent_of_accumulated_snow_depth",
+            "water_runoff",
+            "wilting_point",
+            "wind_speed_(gust)",
+            "zonal_flux_of_gravity_wave_stress",
+            "Weather and Climate",
+            "International",
+            "Atmosphere",
+            "weatherForecasts",
+            "meteorology"
         ],
         "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
@@ -86,433 +221,10 @@
             {
                 "concepts": [
                     {
-                        "id": "Prediction"
-                    },
-                    {
-                        "id": "Global"
-                    },
-                    {
-                        "id": "Deterministic"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "cloud_ceiling"
-                    },
-                    {
-                        "id": "entire_atmosphere_considered_as_a_single_layer"
-                    },
-                    {
-                        "id": "entire_atmosphere"
-                    },
-                    {
-                        "id": "ground_or_water_surface"
-                    },
-                    {
-                        "id": "high_cloud_layer"
-                    },
-                    {
-                        "id": "highest_tropospheric_freezing_level"
-                    },
-                    {
-                        "id": "hybrid_level"
-                    },
-                    {
-                        "id": "level_at_specified_pressure_difference_from_ground_to_level_pa"
-                    },
-                    {
-                        "id": "level_of_0C_isotherm"
-                    },
-                    {
-                        "id": "maximum_wind_level"
-                    },
-                    {
-                        "id": "mean_sea_level_pa"
-                    },
-                    {
-                        "id": "middle_cloud_layer"
-                    },
-                    {
-                        "id": "planetary_boundary_layer"
-                    },
-                    {
-                        "id": "sigma_level_sigma_value"
-                    },
-                    {
-                        "id": "specified_altitude_above_mean_sea_level_m"
-                    },
-                    {
-                        "id": "specified_height_level_above_ground_m"
-                    },
-                    {
-                        "id": "tropopause"
-                    },
-                    {
-                        "id": "depth_below_land_surface_m"
-                    },
-                    {
-                        "id": "isobaric_surface_pa"
-                    },
-                    {
-                        "id": "potential_vorticity_k_m2_kg-1_s-1"
-                    },
-                    {
-                        "id": "convective_cloud"
-                    },
-                    {
-                        "id": "convective_cloud_bottom_level"
-                    },
-                    {
-                        "id": "convective_cloud_top_level"
-                    },
-                    {
-                        "id": "boundary_layer_cloud_layer"
-                    },
-                    {
-                        "id": "high_cloud_bottom_level"
-                    },
-                    {
-                        "id": "high_cloud_layer"
-                    },
-                    {
-                        "id": "high_cloud_top_level"
-                    },
-                    {
-                        "id": "low_cloud_bottom_level"
-                    },
-                    {
-                        "id": "low_cloud_layer"
-                    },
-                    {
-                        "id": "low_cloud_top_level"
-                    },
-                    {
-                        "id": "middle_cloud_bottom_level"
-                    },
-                    {
-                        "id": "middle_cloud_layer"
-                    },
-                    {
-                        "id": "middle_cloud_top_level"
-                    },
-                    {
-                        "id": "nominal_top_of_the_atmosphere"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "absolute_vorticity"
-                    },
-                    {
-                        "id": "albedo"
-                    },
-                    {
-                        "id": "apparent_temperature"
-                    },
-                    {
-                        "id": "best_(4_layer)_lifted_index"
-                    },
-                    {
-                        "id": "categorical_freezing_rain_(yes=1;_no=0)"
-                    },
-                    {
-                        "id": "categorical_ice_pellets_(yes=1;_no=0)"
-                    },
-                    {
-                        "id": "categorical_rain_(yes=1;_no=0)"
-                    },
-                    {
-                        "id": "categorical_snow_(yes=1;_no=0)"
-                    },
-                    {
-                        "id": "cloud_mixing_ratio"
-                    },
-                    {
-                        "id": "cloud_water"
-                    },
-                    {
-                        "id": "cloud_work_function"
-                    },
-                    {
-                        "id": "composite_reflectivity"
-                    },
-                    {
-                        "id": "convective_available_potential_energy"
-                    },
-                    {
-                        "id": "convective_inhibition"
-                    },
-                    {
-                        "id": "convective_precipitation"
-                    },
-                    {
-                        "id": "convective_precipitation_rate"
-                    },
-                    {
-                        "id": "depth_below_land_surface"
-                    },
-                    {
-                        "id": "dew_point_temperature"
-                    },
-                    {
-                        "id": "downward_long-wave_radiation_flux"
-                    },
-                    {
-                        "id": "downward_short-wave_radiation_flux"
-                    },
-                    {
-                        "id": "field_capacity"
-                    },
-                    {
-                        "id": "frictional_velocity"
-                    },
-                    {
-                        "id": "geopotential_height"
-                    },
-                    {
-                        "id": "graupel"
-                    },
-                    {
-                        "id": "ground_heat_flux"
-                    },
-                    {
-                        "id": "haines_index"
-                    },
-                    {
-                        "id": "high_cloud_cover"
-                    },
-                    {
-                        "id": "icao_standard_atmosphere_reference_height"
-                    },
-                    {
-                        "id": "ice_cover"
-                    },
-                    {
-                        "id": "ice_growth_rate"
-                    },
-                    {
-                        "id": "ice_temperature"
-                    },
-                    {
-                        "id": "ice_thickness"
-                    },
-                    {
-                        "id": "ice_water_mixing_ratio"
-                    },
-                    {
-                        "id": "land_cover_(1=land,_0=sea)"
-                    },
-                    {
-                        "id": "latent_heat_net_flux"
-                    },
-                    {
-                        "id": "level_at_specified_pressure_difference_from_ground_to_level"
-                    },
-                    {
-                        "id": "liquid_volumetric_soil_moisture_(non_frozen)"
-                    },
-                    {
-                        "id": "low_cloud_cover"
-                    },
-                    {
-                        "id": "maximum_temperature"
-                    },
-                    {
-                        "id": "medium_cloud_cover"
-                    },
-                    {
-                        "id": "meridional_flux_of_gravity_wave_stress"
-                    },
-                    {
-                        "id": "minimum_temperature"
-                    },
-                    {
-                        "id": "momentum_flux,_u-component"
-                    },
-                    {
-                        "id": "momentum_flux,_v-component"
-                    },
-                    {
-                        "id": "mslp_(eta_model_reduction)"
-                    },
-                    {
-                        "id": "ozone_mixing_ratio"
-                    },
-                    {
-                        "id": "percent_frozen_precipitation"
-                    },
-                    {
-                        "id": "planetary_boundary_layer_height"
-                    },
-                    {
-                        "id": "plant_canopy_surface_water"
-                    },
-                    {
-                        "id": "potential_evaporation_rate"
-                    },
-                    {
-                        "id": "potential_temperature"
-                    },
-                    {
-                        "id": "precipitable_water"
-                    },
-                    {
-                        "id": "precipitation_rate"
-                    },
-                    {
-                        "id": "pressure"
-                    },
-                    {
-                        "id": "pressure_of_level_from_which_parcel_was_lifted"
-                    },
-                    {
-                        "id": "pressure_reduced_to_msl"
-                    },
-                    {
-                        "id": "rain_mixing_ratio"
-                    },
-                    {
-                        "id": "reflectivity"
-                    },
-                    {
-                        "id": "relative_humidity"
-                    },
-                    {
-                        "id": "sensible_heat_net_flux"
-                    },
-                    {
-                        "id": "sigma_level_(sigma_value)"
-                    },
-                    {
-                        "id": "snow_depth"
-                    },
-                    {
-                        "id": "snow_mixing_ratio"
-                    },
-                    {
-                        "id": "soil_temperature"
-                    },
-                    {
-                        "id": "soil_type"
-                    },
-                    {
-                        "id": "specific_humidity"
-                    },
-                    {
-                        "id": "storm_relative_helicity"
-                    },
-                    {
-                        "id": "sunshine_duration"
-                    },
-                    {
-                        "id": "surface_lifted_index"
-                    },
-                    {
-                        "id": "surface_roughness"
-                    },
-                    {
-                        "id": "temperature"
-                    },
-                    {
-                        "id": "total_cloud_cover"
-                    },
-                    {
-                        "id": "total_ozone"
-                    },
-                    {
-                        "id": "total_precipitation"
-                    },
-                    {
-                        "id": "u-component_of_wind"
-                    },
-                    {
-                        "id": "u-component_storm_motion"
-                    },
-                    {
-                        "id": "upward_long-wave_radiation_flux"
-                    },
-                    {
-                        "id": "upward_short-wave_radiation_flux"
-                    },
-                    {
-                        "id": "v-component_of_wind"
-                    },
-                    {
-                        "id": "v-component_storm_motion"
-                    },
-                    {
-                        "id": "vegetation"
-                    },
-                    {
-                        "id": "ventilation_rate"
-                    },
-                    {
-                        "id": "vertical_speed_shear"
-                    },
-                    {
-                        "id": "vertical_velocity_(geometric)"
-                    },
-                    {
-                        "id": "vertical_velocity_(pressure)"
-                    },
-                    {
-                        "id": "visibility"
-                    },
-                    {
-                        "id": "volumetric_soil_moisture_content"
-                    },
-                    {
-                        "id": "water_equivalent_of_accumulated_snow_depth"
-                    },
-                    {
-                        "id": "water_runoff"
-                    },
-                    {
-                        "id": "wilting_point"
-                    },
-                    {
-                        "id": "wind_speed_(gust)"
-                    },
-                    {
-                        "id": "zonal_flux_of_gravity_wave_stress"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Weather and Climate"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "International"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "Atmosphere"
-                    }
-                ]
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "weatherForecasts"
-                    },
-                    {
-                        "id": "meteorology"
+                        "id": "weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp-codelists/blob/main/codelists/WMO_CategoryCode.csv"
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
             }
         ],
         "contacts": [
@@ -534,7 +246,11 @@
                     "country": "United States"
                 },
                 "onlineResource": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
-                "contactInstructions": "email"
+                "contactInstructions": "email",
+                "roles": [
+                    "host",
+                    "producer"
+                ]
             }
         ],
         "formats": [
@@ -571,12 +287,6 @@
             "rel": "data",
             "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
             "type": "application/x-grib",
-            "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
-        },
-        {
-            "rel": "OPeNDAP",
-            "href": "https://nomads.ncep.noaa.gov/dods/gfs_1p00",
-            "type": "text/html",
             "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
         }
     ]
