@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc-dcpc:nwp.msc_nwp_gdps",
+    "id": "urn:x-wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -112,6 +112,7 @@
                 ]
             }
         ],
+        "wmo:dataPolicy": "core",
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
@@ -131,7 +132,7 @@
             "title": "Open Government Licence - Canada"
         },
         {
-            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
             "type": "image/png",
             "title": "Air temperature [\u00b0C]"

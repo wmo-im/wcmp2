@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc-dcpc:hydrometric.realtime",
+    "id": "urn:x-wmo:md:ca-eccc-msc:hydrometric.realtime",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -121,6 +121,7 @@
                 ]
             }
         ],
+        "wmo:dataPolicy": "core",
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",

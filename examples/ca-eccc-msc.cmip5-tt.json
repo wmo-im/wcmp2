@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc-dcpc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
+    "id": "urn:x-wmo:md:ca-eccc-msc:climate.cmip5.tt.rcp85.year.2081-2100_pctl5",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -121,6 +121,7 @@
                 ]
             }
         ],
+        "wmo:dataPolicy": "core",
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
@@ -148,7 +149,7 @@
             "title": "Documentation"
         },
         {
-            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities&layer=CMIP5.TT.RCP85.YEAR.2081-2100_PCTL50",
             "type": "image/png",
             "title": "CMIP5.TT.RCP85.YEAR.2081-2100_PCTL50"

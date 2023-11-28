@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc-dcpc:climate.climate-daily",
+    "id": "urn:x-wmo:md:ca-eccc-msc:climate.climate-daily",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -104,6 +104,7 @@
                 ]
             }
         ],
+        "wmo:dataPolicy": "core",
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",

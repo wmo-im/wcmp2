@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc-dcpc:hydrometric.hydat",
+    "id": "urn:x-wmo:md:ca-eccc-msc:hydrometric.hydat",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -121,6 +121,7 @@
                 ]
             }
         ],
+        "wmo:dataPolicy": "core",
         "language": "en",
         "type": "dataset",
         "created": "2018-01-01",
@@ -140,7 +141,7 @@
             "title": "Open Government Licence - Canada"
         },
         {
-            "rel": "http://www.opengis.net/def/serviceType/ogc/wms",
+            "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities",
             "type": "image/png",
             "title": "HYDROMETRIC.STATIONS"
