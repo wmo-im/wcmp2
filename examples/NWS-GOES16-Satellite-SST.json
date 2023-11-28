@@ -34,12 +34,6 @@
     },
     "properties": {
         "identifier": "urn:x-wmo:md:us-nws-noaa:goes_16_ABI-L2-SSTF",
-        "externalIds": [
-            {
-                "scheme": "default",
-                "value": "urn:x-wmo:md:us-nws-noaa:goes_16_ABI-L2-SSTF"
-            }
-        ],
         "created": "2022-08-01T14:16:00Z",
         "updated": "2022-08-01T14:16:00Z",
         "wmo:dataPolicy": "core",
