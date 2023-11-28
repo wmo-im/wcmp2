@@ -1,8 +1,8 @@
 {
-    "id": "urn:x-wmo:md:int.wmo.wis::AOCI21BABJ",
+    "id": "urn:x-wmo:md:cn-cma:AOCI21BABJ",
     "type": "Feature",
     "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2.0"
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
     "time": {
         "interval": [

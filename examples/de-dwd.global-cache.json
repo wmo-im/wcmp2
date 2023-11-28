@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:de-dwd-offenbach:global-cache-service",
+    "id": "urn:x-wmo:md:de-dwd:global-cache-service",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"

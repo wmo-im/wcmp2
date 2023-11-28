@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:de-dwd-offenbach:icon-eps.ALL",
+    "id": "urn:x-wmo:md:de-dwd:icon-eps.ALL",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
@@ -136,8 +136,7 @@
                 ],
                 "contactInstructions": "email",
                 "roles": [
-                    "pointOfContact",
-                    "originator"
+                    "host"
                 ]
             }
         ],
@@ -185,10 +184,10 @@
             "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
         },
         {
-            "rel": "subscribe",
+            "rel": "items",
             "type": "application/json",
             "title": "Global Broker (Toulouse)",
-            "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
         }
     ]
