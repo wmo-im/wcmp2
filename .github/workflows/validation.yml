@@ -1,4 +1,4 @@
-name: Schema and examples validation
+name: validate schema and examples
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.7, 3.8, 3.9]
+        python-version: [3.8, 3.9]
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
@@ -25,7 +25,16 @@ jobs:
     - name: Install requirements 📦
       run: |
         python3 -m pip install --upgrade pip
-        pip3 install check-jsonschema
-    - name: Validate examples
+        pip3 install check-jsonschema pywcmp
+        pywcmp bundle sync
+    - name: Run JSON Schema validation
       run: |
+        check-jsonschema --check-metaschema schemas/wcmp2-bundled.json
         for e in examples/*.json; do check-jsonschema --schemafile schemas/wcmp2-bundled.json $e; done
+    - name: Run pywcmp ETS validation
+      run: |
+        for e in examples/*.json; do pywcmp ets validate $e; done
+    - name: Run pywcmp ETS validation on failing examples
+      continue-on-error: true
+      run: |
+        for e in examples/failing/*.json; do pywcmp ets validate $e; done
