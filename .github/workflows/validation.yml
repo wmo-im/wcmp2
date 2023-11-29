@@ -26,6 +26,7 @@ jobs:
       run: |
         python3 -m pip install --upgrade pip
         pip3 install check-jsonschema pywcmp
+        pywcmp bundle sync
     - name: Run JSON Schema validation
       run: |
         check-jsonschema --check-metaschema schemas/wcmp2-bundled.json
