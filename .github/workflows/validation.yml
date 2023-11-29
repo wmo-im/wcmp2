@@ -31,6 +31,10 @@ jobs:
       run: |
         check-jsonschema --check-metaschema schemas/wcmp2-bundled.json
         for e in examples/*.json; do check-jsonschema --schemafile schemas/wcmp2-bundled.json $e; done
-    - name: Run pwcmp ETS validation
+    - name: Run pywcmp ETS validation
       run: |
         for e in examples/*.json; do pywcmp ets validate $e; done
+    - name: Run pywcmp ETS validation on failing examples
+      continue-on-error: true
+      run: |
+        for e in examples/failing/*.json; do pywcmp ets validate $e; done
