@@ -90,7 +90,7 @@ The table below provides an overview of the set of properties that may be includ
 
 |``properties.status``
 |optional
-|The operational status of a given dataset.
+|The operational status of a given dataset (see <<_properties_status>>)
 
 |``properties.wmo:dataPolicy``
 |**conditional**
