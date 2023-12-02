@@ -118,9 +118,6 @@ The `+id+` property is a unique identifier
 of the dataset.  A record identifier is essential for querying and identifying
 records within the GDC.
 
-include::../requirements/core/REQ_identifier.adoc[]
-include::../recommendations/core/PER_identifier.adoc[]
-
 .Example
 
 [source,json]
@@ -128,12 +125,13 @@ include::../recommendations/core/PER_identifier.adoc[]
 "id": "urn:x-wmo:md:ca-eccc-msc:observations.swob"
 ----
 
+include::../requirements/core/REQ_identifier.adoc[]
+include::../recommendations/core/PER_identifier.adoc[]
+
 ==== Conformance
 
 The `+conformsTo+` property to identifies the version ofthe WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
 detection and handling of content.
-
-include::../requirements/core/REQ_conformance.adoc[]
 
 .Example
 
@@ -144,16 +142,20 @@ include::../requirements/core/REQ_conformance.adoc[]
 ]
 ----
 
+include::../requirements/core/REQ_conformance.adoc[]
+
 ==== Properties / Type
 
 The `+type+` property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to `dataset`,
-WCMP can also describe services and processes. See the resource type codelist footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv] for
-allowed values.
+WCMP can also describe additional resources, such as services and processes.
 
-include::../requirements/core/REQ_type.adoc[]
-include::../requirements/core/REQ_type_service.adoc[]
+A **dataset** is the primary granularity of a WCMP record describing a collection of data granules.
 
-.Example
+A **service** is an API or Web service providing a discovery, visualization, or access mechanism that operates on data.
+
+A **process** is a workflow or execution to provide custom functionality to calculate a given output or product.
+
+.Example:
 
 [source,json]
 ----
@@ -164,11 +166,11 @@ include::../requirements/core/REQ_type_service.adoc[]
 }
 ----
 
+include::../requirements/core/REQ_type.adoc[]
+
 ==== Properties / Title
 
 The `+title+` property is a human-readable name of the dataset.
-
-include::../requirements/core/REQ_title.adoc[]
 
 .Example
 
@@ -181,13 +183,13 @@ include::../requirements/core/REQ_title.adoc[]
 }
 ----
 
+include::../requirements/core/REQ_title.adoc[]
+
 ==== Properties / Description
 
 The `+description+` property is a free-text summary of the dataset.
 
 .Example
-
-include::../requirements/core/REQ_description.adoc[]
 
 [source,json]
 ----
@@ -198,11 +200,11 @@ include::../requirements/core/REQ_description.adoc[]
 }
 ----
 
+include::../requirements/core/REQ_description.adoc[]
+
 ==== Properties / Keywords
 
 The `+keywords+` property is a list keywords, tags, specific phrases, or classification codes associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.
-
-include::../recommendations/core/REC_keywords.adoc[]
 
 .Example
 
@@ -220,6 +222,8 @@ include::../recommendations/core/REC_keywords.adoc[]
 }
 ----
 
+include::../recommendations/core/REC_keywords.adoc[]
+
 ==== Properties / Themes
 
 The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.  A concept's `+id+`
@@ -230,11 +234,6 @@ A theme's `+scheme+` property provides a remote reference to a controlled vocabu
 A concept's optional `+url+` property can provide a remote reference to a given concept (for example, to an online ontology or code registry).
 
 A WCMP metadata record can have one or more themes.
-
-include::../requirements/core/REQ_themes.adoc[]
-include::../requirements/core/REQ_themes_wis2_global_service.adoc[]
-include::../recommendations/core/REC_granularity.adoc[]
-include::../recommendations/core/PER_themes.adoc[]
 
 .Examples
 [source,json]
@@ -304,18 +303,18 @@ include::../recommendations/core/PER_themes.adoc[]
 }
 ----
 
+include::../requirements/core/REQ_themes.adoc[]
+include::../requirements/core/REQ_themes_wis2_global_service.adoc[]
+include::../recommendations/core/REC_granularity.adoc[]
+include::../recommendations/core/PER_themes.adoc[]
 
 ==== Geospatial and Temporal Extents
 
 ===== Geospatial Extent
+
 The `+geometry+` property is the general bounding spatial extent of the dataset in the geographic coordinate system.  
 Geospatial bounding
 extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.
-
-include::../requirements/core/REQ_extent_geospatial.adoc[]
-include::../recommendations/core/REC_extent_geospatial_point.adoc[]
-include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
-include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[]
 
 .Examples
 
@@ -346,7 +345,13 @@ include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[
 "geometry": null
 ----
 
+include::../requirements/core/REQ_extent_geospatial.adoc[]
+include::../recommendations/core/REC_extent_geospatial_point.adoc[]
+include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
+include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[]
+
 ===== Additional Geospatial Extents
+
 The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset, for example, non-geographic data or for describing multiple sub-areas of a dataset.
 The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
@@ -362,8 +367,6 @@ signed number between -90 and 90, greater than or equal to miny.
 
 This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
 
-include::../recommendations/core/PER_extent_geospatial.adoc[]
-
 .Example
 
 [source,json]
@@ -378,16 +381,15 @@ include::../recommendations/core/PER_extent_geospatial.adoc[]
 }
 ----
 
+include::../recommendations/core/PER_extent_geospatial.adoc[]
+
 ===== Temporal Extent
+
 The `+time+` property describes the general bounding extent of the dataset and the temporal resolution. 
 
 Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC. 
 
 Temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets).
-
-include::../requirements/core/REQ_extent_temporal.adoc[]
-include::../recommendations/core/REC_extent_temporal.adoc[]
-include::../recommendations/core/PER_extent_temporal_service.adoc[]
 
 .Examples
 
@@ -476,14 +478,15 @@ Further time-related characteristics (e.g. frequency of modifications, available
 
 If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property.
 
+include::../requirements/core/REQ_extent_temporal.adoc[]
+include::../recommendations/core/REC_extent_temporal.adoc[]
+include::../recommendations/core/PER_extent_temporal_service.adoc[]
+
 ===== Additional Temporal Extents
 
 The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems. 
-
 Temporal extents can be fully bound or open in either direction (e.g., until or before).  An `+additionalExtents.temporal.resolution+`
 property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
-
-include::../recommendations/core/PER_extent_temporal.adoc[]
 
 .Example
 
@@ -503,12 +506,11 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 }
 ----
 
+include::../recommendations/core/PER_extent_temporal.adoc[]
+
 ==== Properties / Contacts
 
 The `+contacts+` property is the information associated with one or more responsible parties of the resource.
-
-include::../requirements/core/REQ_contacts.adoc[]
-include::../recommendations/core/PER_contacts.adoc[]
 
 .Examples
 
@@ -559,11 +561,12 @@ Note that a contact can also be specified by using a URL:
 }
 ----
 
+include::../requirements/core/REQ_contacts.adoc[]
+include::../recommendations/core/PER_contacts.adoc[]
+
 ==== Properties / Version
 
 The `+version+` property is the version of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
-
-include::../recommendations/core/PER_version.adoc[]
 
 .Example
 
@@ -576,6 +579,8 @@ include::../recommendations/core/PER_version.adoc[]
 }
 ----
 
+include::../recommendations/core/PER_version.adoc[]
+
 ==== Properties / Persistent Identifiers
 
 The `+externalIds+` property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers
@@ -586,9 +591,6 @@ Examples of persistent identifiers include, but are not limited to:
 * Digital Object Identifiers (DOI) footnote:[https://doi.org]
 * Archival Resource Key (ARK) footnote:[https://arks.org]
 * Handle footnote:[https://handle.net]
-
-include::../recommendations/core/REC_pids.adoc[]
-include::../recommendations/core/PER_pids.adoc[]
 
 .Example
 
@@ -624,11 +626,15 @@ include::../recommendations/core/PER_pids.adoc[]
 ]
 ----
 
+include::../recommendations/core/REC_pids.adoc[]
+include::../recommendations/core/PER_pids.adoc[]
+
 ==== Properties / Record Creation Date
 
 The `+created+` property is a single date that the WCMP metadata record was created.
 
-include::../requirements/core/REQ_record_creation_date.adoc[]
+[NOTE]
+This property relates to the date of the metadata record, not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
 
 .Example
 
@@ -641,11 +647,14 @@ include::../requirements/core/REQ_record_creation_date.adoc[]
 }
 ----
 
+include::../requirements/core/REQ_record_creation_date.adoc[]
+
 ==== Properties / Record Update Date
 
 The `+updated+` property is the date that the WCMP metadata record was last updated.
 
-include::../recommendations/core/REC_record_update_date.adoc[]
+[NOTE]
+This property relates to the date of the metadata record, not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
 
 .Example
 
@@ -657,6 +666,8 @@ include::../recommendations/core/REC_record_update_date.adoc[]
   ...
 }
 ----
+
+include::../recommendations/core/REC_record_update_date.adoc[]
 
 ==== Properties / Status
 
@@ -676,9 +687,6 @@ The `+status+` property identifies the lifecycle of a given dataset.  See Annex 
 ==== Properties / WMO Data Policy
 
 The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]. The codelist values are `+core+` or `+recommended+`.  `+wmo:dataPolicy+` is required if the record describes a dataset.
-
-include::../requirements/core/REQ_data_policy.adoc[]
-include::../recommendations/core/PER_data_policy.adoc[]
 
 Licensing and copyright are expressed via the links property (see distribution section), providing access, license and attribution details as required. Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
 
@@ -739,17 +747,78 @@ include::../recommendations/core/REC_data_policy.adoc[]
 }]
 ----
 
+include::../requirements/core/REQ_data_policy.adoc[]
+include::../recommendations/core/PER_data_policy.adoc[]
+
 ==== Links and Distribution Information [[links-distribution]]
 
 ===== Overview
 
-The `+links+` property describes URLs and APIs for accessing or subscribing to the dataset.
+The `+links+` property describes URLs and APIs for accessing or subscribing to the dataset.  Links are a core
+mechanism for further interacting with data, and provide "actionable" workflow to enhance and improve the
+user experience with "less clicks" to subscribe to or download data.
+
+The table below provides an overview of the properties of a link object.
+
+.Link properties
+|===
+|Property|Requirement|Description
+
+|``href``
+|**required**
+|The link destination or target, or URL
+
+|``rel``
+|**optional**
+|The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
+ by IANA link relations footnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] or WCMP2
+ defined extensions footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv] (see <<_link_relation_selection>>)
+
+|``type``
+|**optional**
+|The media (or MIME) type of the format of the link
+
+|``hreflang``
+|**optional**
+|The language of the content in the link
+
+|``title``
+|**optional**
+|A human-readable name for the link (can be used for display on search / discovery web portals)
+
+|``templated``
+|**optional**
+|Whether the link is a URI template
+
+|``variables``
+|**optional**
+|If the link is a URI template (``templated=true``), the variable definitions that help the user construct a
+ link from the template with the appropriate values
+
+|``created``
+|**optional**
+|The date that the link was created
+
+|``updated``
+|**optional**
+|The date that the link was updated
+
+|``channel``
+|**optional**
+|For data made available via MQTT, the topic to which a user should subscribe, to download/access data
+
+|``security``
+|**optional**
+|For access controlled data, a description of the access control mechanism applied (see <<_access_control>>)
+
+|``distribution``
+|**optional**
+|Value added information about the link to further assist the user (additional document, typical file size, etc.) (see <<_distribution_information>>)
+
+|===
 
 WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
-
-include::../requirements/core/REQ_links.adoc[]
-include::../recommendations/core/REC_links.adoc[]
 
 .Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 
@@ -791,8 +860,6 @@ include::../recommendations/core/REC_links.adoc[]
 ]
 ----
 
-include::../recommendations/core/PER_links.adoc[]
-
 .Example: a link object providing an API capability
 
 [source,json]
@@ -821,11 +888,7 @@ include::../recommendations/core/PER_links.adoc[]
 ]
 ----
 
-The `+distribution+` property provides information about the format of the dataset, associated documentation and representative examples of the dataset.
-
-include::../recommendations/core/REC_distribution.adoc[]
-
-.Example: a link object of a WMS service providing API access to images:
+.Example: a templated link object of a WMS service providing API access to images:
 
 [source,json]
 ----
@@ -884,6 +947,14 @@ include::../recommendations/core/REC_distribution.adoc[]
 }]
 ----
 
+include::../requirements/core/REQ_links.adoc[]
+include::../recommendations/core/REC_links.adoc[]
+include::../recommendations/core/PER_links.adoc[]
+
+===== Distribution information
+
+The `+distribution+` property provides information about the format of the dataset, associated documentation and representative examples of the dataset.
+
 Additional distribution information is added to allow more comprehensive discovery services. Below is an example of such distribution information.
 
 .Example with the complete distribution information
@@ -913,6 +984,10 @@ Additional distribution information is added to allow more comprehensive discove
   }
 }]
 ----
+
+include::../recommendations/core/REC_distribution.adoc[]
+
+===== Access control
 
 WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
@@ -992,8 +1067,6 @@ links to data and services.
 A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.
 
-include::../recommendations/core/PER_additional_properties.adoc[]
-
 .Example
 
 [source,json]
@@ -1011,3 +1084,4 @@ include::../recommendations/core/PER_additional_properties.adoc[]
 }
 ----
 
+include::../recommendations/core/PER_additional_properties.adoc[]

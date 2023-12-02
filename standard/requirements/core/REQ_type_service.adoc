@@ -1,7 +1,0 @@
-[[req_core_type_service]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/core/type_service*
-^|A |A WCMP record describing a service or API SHALL set `+properties.type+` to `+service+`.
-
-|===
