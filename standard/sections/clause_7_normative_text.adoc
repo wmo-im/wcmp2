@@ -758,6 +758,8 @@ The `+links+` property describes URLs and APIs for accessing or subscribing to t
 mechanism for further interacting with data, and provide "actionable" workflow to enhance and improve the
 user experience with "less clicks" to subscribe to or download data.
 
+The `+links+` property may also describe URLs for related documentation, visual images of the dataset or related data.
+
 The table below provides an overview of the properties of a link object.
 
 .Link properties
