@@ -806,7 +806,7 @@ The table below provides an overview of the properties of a link object.
 |The date that the link was updated
 
 |``channel``
-|**optional**
+|**conditional**
 |For data made available via MQTT, the topic to which a user should subscribe, to download/access data
 
 |``security``
