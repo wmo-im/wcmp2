@@ -57,6 +57,9 @@ The following additional terms and definitions also apply.
 |JSON
 |JavaScript Object Notation
 
+|MIME
+|Multipurpose Internet Mail Extensions
+
 |MQTT
 |Message Queuing Telemetry Transport
 
