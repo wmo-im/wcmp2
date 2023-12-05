@@ -95,14 +95,6 @@
             {
                 "concepts": [
                     {
-                        "id": "de-dwd"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/centre-id.csv"
-            },
-            {
-                "concepts": [
-                    {
                         "id": "continual"
                     }
                 ],
@@ -170,6 +162,13 @@
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
             "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
+        },
+        {
+            "rel": "items",
+            "channel": "cache/a/wis2",
+            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
+            "type": "application/json",
+            "title": "Data notifications"
         }
     ]
 }
