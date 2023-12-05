@@ -109,14 +109,6 @@
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "de-dwd"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/centre-id.csv"
             }
         ],
         "contacts": [
@@ -198,6 +190,13 @@
             "type": "text/html",
             "title": "Open Data Server DWD",
             "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+        },
+        {
+            "rel": "items",
+            "channel": "origin/a/wis2/de-dwd/data/core/weather/prediction/forecast/medium-range",
+            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
+            "type": "application/json",
+            "title": "Data notifications"
         }
     ]
 }
