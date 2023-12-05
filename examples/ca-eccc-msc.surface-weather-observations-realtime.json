@@ -132,9 +132,9 @@
         {
             "rel": "data",
             "href": "https://dd.weather.gc.ca/observations/swob-ml",
-            "type": "text/html",
+            "type": "application/xml",
             "hreflang": "en",
-            "title": "Raw data download (CSV files)"
+            "title": "Raw data download (XML files)"
         },
         {
             "rel": "items",
