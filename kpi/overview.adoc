@@ -57,7 +57,7 @@ pywcmp website.
 
 pywcmp is provided as a resource to the community, under continuous
 improvement. Contributions are welcome and can be facilited by the
-WMO Task Team on WIS Metadata.
+WMO.
 
 === Codelists rules
 
