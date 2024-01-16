@@ -1026,6 +1026,9 @@ links to data and services.
 |Online data archive
 |`archives`
 
+|Online documentation
+|`about`
+
 |OpenAPI endpoint (e.g. JSON or YAML)
 |`service-desc`
 
