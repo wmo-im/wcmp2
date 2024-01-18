@@ -1,14 +1,12 @@
 == The WMO Core Metadata Profile Record
 
-A WCMP record provides descriptive information about a dataset made available
-through WIS2.
+A WCMP record provides descriptive information about a dataset made available through WIS2.
 
 === Conformance Class Core
 
 ==== Overview
 
-The WCMP Core Conformance Class provides requirements to articulate the required elements
-of a WCMP discovery metadata record.
+The WCMP Core Conformance Class provides requirements for a WCMP discovery metadata record.
 
 include::../requirements/requirements_class_core.adoc[]
 
@@ -26,7 +24,7 @@ The table below provides an overview of the set of properties that may be includ
 
 |``type``
 |**required**
-|A fixed value denoting the record as a GeoJSON ``Feature`` (see <<_validation>>)
+|A fixed value denoting the WCMP record as a GeoJSON ``Feature`` (see <<_validation>>)
 
 |``conformsTo``
 |**required**
@@ -34,11 +32,11 @@ The table below provides an overview of the set of properties that may be includ
 
 |``properties.type``
 |**required**
-|The resource type described by the record (see <<_properties_type>>)
+|The resource type described by the WCMP record (see <<_properties_type>>)
 
 |``properties.title``
 |**required**
-|A human-readable name for a given dataset (see <<_properties_title>>)
+|A human-readable name of the dataset (see <<_properties_title>>)
 
 |``properties.description``
 |**required**
@@ -46,7 +44,7 @@ The table below provides an overview of the set of properties that may be includ
 
 |``properties.keywords``
 |optional
-|Keywords, tags, key phrases, or classification codes (see <<_properties_keywords>>)
+|Keywords, tags or key phrases (see <<_properties_keywords>>)
 
 |``properties.themes``
 |**required**
@@ -58,7 +56,7 @@ The table below provides an overview of the set of properties that may be includ
 
 |``time``
 |**required**
-|Temporal extent associated with a dataset (see <<_temporal_extent>>)
+|Temporal extent associated with the dataset (see <<_temporal_extent>>)
 
 |``additionalExtents.spatial``
 |optional
@@ -82,27 +80,28 @@ The table below provides an overview of the set of properties that may be includ
 
 |``properties.created``
 |**required**
-|The date that the record was created (see <<_properties_record_creation_date>>)
+|The date that the WCMP record was created (see <<_properties_record_creation_date>>)
 
 |``properties.updated``
 |optional
-|The date that the record was updated (see <<_properties_record_update_date>>)
+|The date that the WCMP record was updated (see <<_properties_record_update_date>>)
 
 |``properties.status``
 |optional
-|The operational status of a given dataset (see <<_properties_status>>)
+|The operational status of the dataset (see <<_properties_status>>)
 
 |``properties.wmo:dataPolicy``
 |**conditional**
-|WMO data policy as per Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9].  **Required** for datasets (see <<_properties_wmo_data_policy>>)
+|Classification code of ``core`` or ``recommended`` based on the WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009].  **Required** for datasets (see <<_properties_wmo_data_policy>>)
 
 |``links``
 |**required**
+//q: do offline linkages exist too? 
 |Online linkages to data retrieval or additional resources associated with the dataset (see <<links-distribution>>)
 
 |``properties.*``
 |optional
-|Additional properties as required (see <<_additional_properties>>)
+|Additional properties as needed (see <<_additional_properties>>)
 
 |===
 
@@ -115,8 +114,7 @@ include::../requirements/core/REQ_validation.adoc[]
 ==== Identifier
 
 The `+id+` property is a unique identifier
-of the dataset.  A record identifier is essential for querying and identifying
-records within the GDC.
+of the dataset.  A record identifier is essential for querying and identifying records within the GDC.
 
 .Example
 
@@ -204,7 +202,7 @@ include::../requirements/core/REQ_description.adoc[]
 
 ==== Properties / Keywords
 
-The `+keywords+` property is a list keywords, tags, specific phrases, or classification codes associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.
+The `+keywords+` property is a list of keywords, tags or specific phrases associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.
 
 .Example
 
@@ -226,10 +224,11 @@ include::../recommendations/core/REC_keywords.adoc[]
 
 ==== Properties / Themes
 
-The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.  A concept's `+id+`
-provides an identifier for the given concept, as well as optional `+title+`, `+description+` and `+url+` properties to further describe the concept as desired.
+The `+themes+` property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.  
 
 A theme's `+scheme+` property provides a remote reference to a controlled vocabulary, codelist or knowledge organization system.
+
+A concept's `+id+` provides an identifier for the given concept, as well as optional `+title+`, `+description+` and `+url+` properties to further describe the concept as desired.
 
 A concept's optional `+url+` property can provide a remote reference to a given concept (for example, to an online ontology or code registry).
 
@@ -245,19 +244,19 @@ A WCMP metadata record can have one or more themes.
       "concepts": [
         {
           "id": "Temperature",
-          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-0-0"
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0"
         },
         {
           "id": "Relative humidity",
-          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1"
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-1-1"
         },
         {
           "id": "u-component of Wind",
-          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2"
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-2"
         },
         {
           "id": "v-component of Wind",
-          "url": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3"
+          "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-3"
         }
       ],
       "scheme": "http://codes.wmo.int/grib2/codeflag/4.2"
@@ -274,11 +273,11 @@ A WCMP metadata record can have one or more themes.
     "concepts": [
       {
         "id": "Temperature/air temperature",
-        "url": "http://codes.wmo.int/bufr4/b/12/_001"
+        "url": "http://codes.wmo.int/bufr4/b/12/001"
       },
       {
         "id": "Dewpoint temperature",
-        "url": "http://codes.wmo.int/bufr4/b/12/_003"
+        "url": "http://codes.wmo.int/bufr4/b/12/003"
       }
     ],
     "scheme": "http://codes.wmo.int/bufr4/b"
@@ -294,7 +293,7 @@ A WCMP metadata record can have one or more themes.
     {
       "concepts": [{
         "id": "weather",
-        "url": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv#L2"
+        "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
       }],
       "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
     }
@@ -313,8 +312,7 @@ include::../recommendations/core/PER_themes.adoc[]
 ===== Geospatial Extent
 
 The `+geometry+` property is the general bounding spatial extent of the dataset in the geographic coordinate system.  
-Geospatial bounding
-extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.
+Geospatial bounding extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.
 
 .Examples
 
@@ -352,7 +350,7 @@ include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[
 
 ===== Additional Geospatial Extents
 
-The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset, for example, non-geographic data or for describing multiple sub-areas of a dataset.
+The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset. For example, it may be useful for non-geographic data or for describing multiple sub-areas of a dataset.
 The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
@@ -484,9 +482,8 @@ include::../recommendations/core/PER_extent_temporal_service.adoc[]
 
 ===== Additional Temporal Extents
 
-The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset, for example, multiple time instances or to identify other temporal reference systems. 
-Temporal extents can be fully bound or open in either direction (e.g., until or before).  An `+additionalExtents.temporal.resolution+`
-property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
+The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset. For example, it may be useful to represent multiple time instances or to identify other temporal reference systems. 
+Temporal extents can be fully bound or open in either direction.  An `+additionalExtents.temporal.resolution+` property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
 .Example
 
@@ -545,7 +542,7 @@ The `+contacts+` property is the information associated with one or more respons
 }
 ----
 
-Note that a contact can also be specified by using a URL:
+A contact can also be specified by using a URL.
 
 [source,json]
 ----
@@ -555,7 +552,7 @@ Note that a contact can also be specified by using a URL:
       "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
       "links": [{
           "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html"
-      }]
+      }]}
   ]
   ...
 }
@@ -566,7 +563,7 @@ include::../recommendations/core/PER_contacts.adoc[]
 
 ==== Properties / Version
 
-The `+version+` property is the version of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
+The `+version+` property is the version or edition of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
 
 .Example
 
@@ -583,14 +580,13 @@ include::../recommendations/core/PER_version.adoc[]
 
 ==== Properties / Persistent Identifiers
 
-The `+externalIds+` property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers
-are commonly used for scientific publications and datasets.
+The `+externalIds+` property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers are commonly used for scientific publications and datasets.
 
 Examples of persistent identifiers include, but are not limited to:
 
-* Digital Object Identifiers (DOI) footnote:[https://doi.org]
-* Archival Resource Key (ARK) footnote:[https://arks.org]
-* Handle footnote:[https://handle.net]
+* Digital Object Identifiers (DOI)footnote:[https://doi.org]
+* Archival Resource Key (ARK)footnote:[https://arks.org]
+* Handlefootnote:[https://handle.net]
 
 .Example
 
@@ -631,10 +627,7 @@ include::../recommendations/core/PER_pids.adoc[]
 
 ==== Properties / Record Creation Date
 
-The `+created+` property is a single date that the WCMP metadata record was created.
-
-[NOTE]
-This property relates to the date of the metadata record, not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
+The `+created+` property is a single date that the WCMP metadata record was created. Note, that this date is not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
 
 .Example
 
@@ -651,10 +644,7 @@ include::../requirements/core/REQ_record_creation_date.adoc[]
 
 ==== Properties / Record Update Date
 
-The `+updated+` property is the date that the WCMP metadata record was last updated.
-
-[NOTE]
-This property relates to the date of the metadata record, not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
+The `+updated+` property is the date that the WCMP metadata record was last updated. Note, that this date is not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
 
 .Example
 
@@ -672,6 +662,7 @@ include::../recommendations/core/REC_record_update_date.adoc[]
 ==== Properties / Status
 
 The `+status+` property identifies the lifecycle of a given dataset.  See Annex D for possible codelists to use when encoding this property.
+//may need to replace Annex D
 
 [source,json]
 ----
@@ -683,12 +674,13 @@ The `+status+` property identifies the lifecycle of a given dataset.  See Annex 
   }
 }
 ----
-
+//START HERE
 ==== Properties / WMO Data Policy
 
-The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9]. The codelist values are `+core+` or `+recommended+`.  `+wmo:dataPolicy+` is required if the record describes a dataset.
+The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009]
+for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
 
-Licensing and copyright are expressed via the links property (see distribution section), providing access, license and attribution details as required. Conditions on use are essential for the WMO Unified Data Policy, but for transparency and clarification any other conditions should also be indicated.
+Licensing and copyright are expressed via the links property (see distribution section), providing access, license and attribution details as required. [FIX: Conditions on use are essential for the WMO Unified Data Policy], but for transparency and clarification any other conditions should also be indicated.
 
 .Example: Core Data
 
@@ -727,7 +719,7 @@ Licensing and copyright are expressed via the links property (see distribution s
 }]
 ----
 
-It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
+It is useful to add provider-specific details to complete information about data policy and additional conditions.
 
 include::../recommendations/core/REC_data_policy.adoc[]
 
