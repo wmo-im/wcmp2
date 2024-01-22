@@ -716,22 +716,6 @@ Licensing and copyright are expressed via the links property (see distribution s
 }
 ----
 
-.Example: Recommended Data with additional conditions
-[source,json]
-----
-"properties": {
-  ...
-  "wmo:dataPolicy": "recommended"
-  ...
-},
-"links": [{
-  "rel": "license",
-  "href": "https://example.org/dataset/license.html",
-  "type": "text/html",
-  "title": "Dataset license information"
-}]
-----
-
 It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
 
 include::../recommendations/core/REC_data_policy.adoc[]
@@ -982,13 +966,15 @@ Additional distribution information is added to allow more comprehensive discove
       "numberOfFiles": "288 per day",
       "typicalFilesize": "60 MB",
       "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-      "samples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-      "documentation": {
+      "samples": { 
+        "href": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip" 
+      },
+      "documentation": [{
         "rel": "alternate",
         "type": "text/html",
         "title": "SIP documentation and tools",
         "href": "https://www.eumetsat.int/formats#SIP"
-      }
+      }]
     }]
   }
 }]
