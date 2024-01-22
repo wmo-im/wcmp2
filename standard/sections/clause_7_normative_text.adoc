@@ -834,9 +834,11 @@ secure data use cases, a user needs to be able to detect access-controlled data 
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
   "security": {
-    "type": "http",
-    "scheme": "basic",
-    "description": "Please contact the data provider for accessing this secured resource."
+    "default": {
+      "type": "http",
+      "scheme": "basic",
+      "description": "Please contact the data provider for accessing this secured resource."
+    }
   }
 }]
 ----
@@ -1005,9 +1007,11 @@ example demonstrates how to express access control using HTTP Basic Authenticati
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
   "security": {
-    "type": "http",
-    "scheme": "basic",
-    "description": "Please contact the data provider for accessing this secured resource."
+    "default": {
+      "type": "http",
+      "scheme": "basic",
+      "description": "Please contact the data provider for accessing this secured resource."
+    }
   }
 }]
 ----
