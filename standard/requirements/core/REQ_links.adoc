@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/links*
-^|A |A WCMP record SHALL define a `+links+` property.
-^|B |A WCMP record `+links+` property SHALL contain at least one link to the data access service allowing users to download the data in one of the supported formats.
-^|C |A WCMP record `+links+` property SHALL contain a Web Accessible Folder (WAF) OR an API link for non real-time data (e.g., climate records, hydrometric data archives).
-^|D |A WCMP record `+links+` property SHALL contain access control information for data, products, and services requiring authentication or authorization.
-^|E |For representing MQTT links, a WCMP record SHALL use the URI scheme of `+mqtt+` (default port 1883) and `+mqtts+` (default port 8883) for secure TLS encrypted connections.
-^|F |A WCMP record `+links+` property SHALL contain the `channel` property of the MQTT topic for for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS2 topic hierarchy.
-^|G |A WCMP record `+links+` property SHALL include a valid link relation from IANA footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml] or the WCMP link type codelist footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv].
+^|A |A WCMP record SHALL provide a `+links+` property.
+^|B |The `+links+` property SHALL contain at least one link to the data access service allowing users to download the data.
+^|C |The `+links+` property SHALL contain a Web Accessible Folder (WAF) OR an API link for non-real-time data (such as climate records or hydrometric data archives).
+^|D |The `+links+` property SHALL contain access control information for data, products, and services that require authentication or authorization.
+^|E |For representing MQTT links, the URI scheme SHALL be `+mqtt+` (default port 1883) or `+mqtts+` (default port 8883) for secure TLS encrypted connections.
+^|F |The `+links+` property SHALL provide the `channel` property of the MQTT topic for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS2 topic hierarchy.
+^|G |The `+links+` property SHALL include a valid link relation from IANA footnote:[https://www.iana.org/assignments/link-relations/link-relations.xml] or the WCMP link type codelist footnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv].
 |===
