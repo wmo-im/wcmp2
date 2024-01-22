@@ -3,5 +3,5 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/record_creation_date*
 ^|A |A WCMP record SHALL provide a single `+properties.created+` property.
-^|B |A WCMP record SHALL NOT be repeatable or used to document change history.
+^|B |The `+properties.created+` property SHALL NOT be repeated or used to document change history.
 |===

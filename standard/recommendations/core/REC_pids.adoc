@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/pids*
-^|A |A WCMP record SHOULD provide persistent identifier references via items in the `+properties.externalIds+` array property, where the value of `+scheme+` is based on an established persistent identifier scheme (such as `+doi+`, `+ark+`, `+handle+`, etc.), and the value of `+value+` is the persistent identifier (e.g. `https://dx.doi.org/10.14287/10000001`).
+^|A |A WCMP record SHOULD provide persistent identifier references via items in the `+properties.externalIds+` array property, where the value of `+scheme+` is based on an established persistent identifier scheme (such as `+doi+`, `+ark+`, `+handle+`, etc.), and the `+value+` property is the persistent identifier (for example, `https://dx.doi.org/10.14287/10000001`).
 |===
