@@ -529,14 +529,16 @@ The `+contacts+` property is the information associated with one or more respons
         "value":"enviroinfo@ec.gc.ca"
       }],
       "addresses": [{
-        "deliveryPoint": "77 Westmorland Street, suite 260",
+        "deliveryPoint": [ "77 Westmorland Street, suite 260" ],
         "city": "Fredericton",
         "administrativeArea": "NB",
         "postalCode": "E3B 6Z4",
         "country": "Canada"
       }],
       "links": [{
-        "href": "https://www.canada.ca/en/environment-climate-change.html"
+        "href": "https://www.canada.ca/en/environment-climate-change.html",
+        "rel": "canonical",
+        "type": "text/html"
       }],
       "contactInstructions": "email",
       "roles": ["producer", "host"]
