@@ -101,7 +101,9 @@
                 ],
                 "addresses": [
                     {
-                        "deliveryPoint": ["46 Zhongguancun Nandajie"],
+                        "deliveryPoint": [
+                            "46 Zhongguancun Nandajie"
+                        ],
                         "city": "Beijing",
                         "administrativeArea": "Beijing",
                         "postalCode": "100081",
