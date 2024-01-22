@@ -39,8 +39,8 @@
     },
     "properties": {
         "type": "service",
-        "title": "WMO WIS2 Global Cache (Deutscher Wetterdienst)",
-        "description": "For WMO Information System 2 (WIS2) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 4096 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+        "title": "WIS2 Global Cache provided by German weather service",
+        "description": "For WMO Information System 2 (WIS2) Deutscher Wetterdienst, the German weather service, provides a Global Cache. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 8192 bytes, 2) Connected Global Brokers are Global Broker MF, Global Broker CMA, and Global Broker NOAA, 3) During the test phase the data is not yet cached for 24 hours",
         "themes": [
             {
                 "concepts": [
@@ -82,7 +82,15 @@
                         "title": "Global Cache"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "cache"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/channel.csv"
             },
             {
                 "concepts": [
@@ -129,7 +137,7 @@
             }
         ],
         "created": "2023-05-05T08:00:00Z",
-        "updated": "2023-05-19T08:00:00Z",
+        "updated": "2023-12-01T08:00:00Z",
         "keywords": [
             "WIS2",
             "Global Cache"
@@ -156,26 +164,11 @@
             "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
         },
         {
-            "rel": "related",
+            "rel": "items",
+            "channel": "cache/a/wis2",
+            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
             "type": "application/json",
-            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS Global Broker - China Meteorological Administration",
-            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
+            "title": "Data notifications"
         }
     ]
 }

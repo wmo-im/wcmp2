@@ -1,0 +1,130 @@
+{
+    "id": "urn:x-wmo:md:de-dwd:weather.observations.swob-realtime",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+    "time": {
+        "interval": [
+            "2024-01-01T00:00:00Z",
+            ".."
+        ]
+    },
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    5.87,
+                    47.27
+                ],
+                [
+                    5.87,
+                    55.06
+                ],
+                [
+                    15.04,
+                    55.06
+                ],
+                [
+                    15.04,
+                    47.27
+                ],
+                [
+                    5.87,
+                    47.27
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "title": "Surface Weather Observations",
+        "description": "Surface Observations measured at the automatic and manual stations of Deutscher Wetterdienst, the German Weather Service",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "meteorology"
+                    }
+                ],
+                "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+            },
+	    {
+                "concepts": [
+                    {
+                        "id": "continual"
+                    }
+                ],
+                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+            }
+        ],
+               "contacts": [
+            {
+                "name": "Kai-Thorsten Wirt",
+                "organization": "Deutscher Wetterdienst",
+                "emails": [
+                    {
+                        "value": "wis@dwd.de"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "Frankfurter Strasse 135"
+                        ],
+                        "city": "Offenbach",
+                        "postalCode": "63067",
+                        "country": "Germany"
+                    }
+                ],
+                "links": [
+                    {
+                        "type": "text/html",
+                        "href": "https://www.dwd.de/wmc"
+                    },
+                    {
+                        "type": "text/html",
+                        "href": "https://gisc.dwd.de"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "type": "dataset",
+        "created": "2023-11-01",
+        "updated": "2023-12-01",
+        "wmo:dataPolicy": "core"
+    },
+    "links": [
+        {
+            "rel": "http://def.wmo.int/def/rel/wmdr/-/FacilitySet",
+            "href": "https://oscar.wmo.int/surface/rest/api/search/station/?&operatingStatus=Operational&territoryName=DEU&longitudeMin=5.87&longitudeMax=15.04&latitudeMax=55.06&latitudeMin=47.27",
+            "type": "application/json",
+            "title": "Stations associated with this dataset"
+        },
+        {
+            "rel": "data",
+            "href": "https://opendata.dwd.de/weather/weather_reports/synoptic/germany/Z__C_EDZW_latest_bda01%2Csynop_bufr_GER_999999_999999__MW_XXX.bin",
+            "type": "application/octet-stream",
+            "title": "Raw data download (BUFR)"
+        },
+	{
+            "rel": "items",
+            "channel": "origin/a/wis2/de-dwd/data/core/weather/surface-based-observations/synop",
+            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
+            "type": "application/json",
+            "title": "Data notifications"
+        }
+    ]
+}
