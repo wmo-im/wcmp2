@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-16</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-22</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-01-16</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-01-22</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -3032,9 +3032,11 @@ secure data use cases, a user needs to be able to detect access-controlled data 
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
   "security": {
-    "type": "http",
-    "scheme": "basic",
-    "description": "Please contact the data provider for accessing this secured resource."
+    "default": {
+      "type": "http",
+      "scheme": "basic",
+      "description": "Please contact the data provider for accessing this secured resource."
+    }
   }
 }]</code></pre>
 </div>
@@ -3369,9 +3371,11 @@ example demonstrates how to express access control using HTTP Basic Authenticati
   "title": "link to WAF endpoint",
   "href": "https://example.org/data/secure-data",
   "security": {
-    "type": "http",
-    "scheme": "basic",
-    "description": "Please contact the data provider for accessing this secured resource."
+    "default": {
+      "type": "http",
+      "scheme": "basic",
+      "description": "Please contact the data provider for accessing this secured resource."
+    }
   }
 }]</code></pre>
 </div>
@@ -6070,10 +6074,9 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
     ],
     "time": {
         "interval": [
-            "T00Z",
-            "T12Z"
-        ],
-        "resolution": "PT6H"
+            "2018-04-22",
+            ".."
+        ]
     },
     "geometry": {
         "type": "Polygon",
@@ -6115,24 +6118,24 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "resolution": "0.5*0.5",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
         },
-        "temporal": {
+        "temporal": { 
             "interval": [
                 [
                     "R/T00Z",
-                    "PT48H"
+                    "PT180H"
                 ],
                 [
                     "R/T12Z",
-                    "PT48H"
+                    "PT180H"
                 ]
             ],
-            "resolution": "PT1H",
+            "resolution": "PT6H",
             "trs": "http://www.opengis.net/def/trs/ISO-8601"
         }
     },
     "properties": {
         "type": "dataset",
-        "title": "ICON-EPS GRIB data",
+        "title": "Global Ensemble Prediction Model",
         "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
         "themes": [
             {
@@ -6166,6 +6169,14 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     }
                 ],
                 "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
             }
         ],
         "contacts": [
@@ -6200,12 +6211,13 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 ],
                 "contactInstructions": "email",
                 "roles": [
-                    "host"
+                    "host",
+                    "producer"
                 ]
             }
         ],
         "created": "2018-08-19T08:10:00Z",
-        "updated": "2022-03-15T09:26:00Z",
+        "updated": "2023-12-01T00:00:00Z",
         "wmo:dataPolicy": "core",
         "keywords": [
             "CLCH",
@@ -6249,10 +6261,10 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         },
         {
             "rel": "items",
+            "channel": "origin/a/wis2/de-dwd/data/core/weather/prediction/forecast/medium-range",
+            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
             "type": "application/json",
-            "title": "Global Broker (Toulouse)",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
-            "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+            "title": "Data notifications"
         }
     ]
 }</code></pre>
@@ -6619,7 +6631,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-16 11:22:45 UTC
+Last updated 2024-01-22 06:48:28 UTC
 </div>
 </div>
 </body>
