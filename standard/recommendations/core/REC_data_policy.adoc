@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/data_policy_conditions*
-^|A |A WCMP record's additional conditions represented by a `+links+` item SHOULD provide a `title` property to provide additional human-readable information about link.
+^|A | Additional conditions represented by a `+links+` item SHOULD also provide a `title` property to include human-readable information about link.
 |===
