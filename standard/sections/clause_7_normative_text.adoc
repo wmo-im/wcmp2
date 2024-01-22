@@ -662,7 +662,6 @@ include::../recommendations/core/REC_record_update_date.adoc[]
 ==== Properties / Status
 
 The `+status+` property identifies the lifecycle of a given dataset.  See Annex D for possible codelists to use when encoding this property.
-//may need to replace Annex D
 
 [source,json]
 ----
@@ -674,7 +673,7 @@ The `+status+` property identifies the lifecycle of a given dataset.  See Annex 
   }
 }
 ----
-//START HERE
+
 ==== Properties / WMO Data Policy
 
 The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009]
