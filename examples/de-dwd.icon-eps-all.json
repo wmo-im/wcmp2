@@ -6,10 +6,9 @@
     ],
     "time": {
         "interval": [
-            "T00Z",
-            "T12Z"
-        ],
-        "resolution": "PT6H"
+            "2018-04-22",
+            ".."
+        ]
     },
     "geometry": {
         "type": "Polygon",
@@ -51,24 +50,24 @@
             "resolution": "0.5*0.5",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
         },
-        "temporal": {
+        "temporal": { 
             "interval": [
                 [
                     "R/T00Z",
-                    "PT48H"
+                    "PT180H"
                 ],
                 [
                     "R/T12Z",
-                    "PT48H"
+                    "PT180H"
                 ]
             ],
-            "resolution": "PT1H",
+            "resolution": "PT6H",
             "trs": "http://www.opengis.net/def/trs/ISO-8601"
         }
     },
     "properties": {
         "type": "dataset",
-        "title": "ICON-EPS GRIB data",
+        "title": "Global Ensemble Prediction Model",
         "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
         "themes": [
             {
@@ -102,6 +101,14 @@
                     }
                 ],
                 "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
             }
         ],
         "contacts": [
@@ -136,12 +143,13 @@
                 ],
                 "contactInstructions": "email",
                 "roles": [
-                    "host"
+                    "host",
+                    "producer"
                 ]
             }
         ],
         "created": "2018-08-19T08:10:00Z",
-        "updated": "2022-03-15T09:26:00Z",
+        "updated": "2023-12-01T00:00:00Z",
         "wmo:dataPolicy": "core",
         "keywords": [
             "CLCH",
@@ -185,10 +193,10 @@
         },
         {
             "rel": "items",
+            "channel": "origin/a/wis2/de-dwd/data/core/weather/prediction/forecast/medium-range",
+            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
             "type": "application/json",
-            "title": "Global Broker (Toulouse)",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
-            "channel": "cache/a/wis2/deu/dwd-offenbach/data/core/weather/analysis-prediction/forecast/model/#"
+            "title": "Data notifications"
         }
     ]
 }
