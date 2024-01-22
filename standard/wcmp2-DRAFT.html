@@ -1992,22 +1992,22 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 <div class="title">Examples</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"geometry": {
-    "type": "Polygon",
-    "coordinates": [[
-            [-142.23, 28.03],
-            [-142.23, 82.56],
-            [-52.16, 82.56],
-            [-52.16, 28.03],
-            [-142.23, 28.03]
-    ]]
+  "type": "Polygon",
+  "coordinates": [[
+    [-142.23, 28.03],
+    [-142.23, 82.56],
+    [-52.16, 82.56],
+    [-52.16, 28.03],
+    [-142.23, 28.03]
+  ]]
 }</code></pre>
 </div>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"geometry": {
-    "type": "Point",
-    "coordinates": [-79.38, 43.65]
+  "type": "Point",
+  "coordinates": [-79.38, 43.65]
 }</code></pre>
 </div>
 </div>
@@ -2254,26 +2254,26 @@ Further time-related characteristics (e.g. frequency of modifications, available
 <div class="title">Example: complex time information with additional explanation and characteristics</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"time": {
-    "interval": [
-        ["T00Z", "PT180H"],
-        ["T12Z", "PT180H"]
-    ],
-    "resolution": "PT6H"
+  "interval": [
+    ["T00Z", "PT180H"],
+    ["T12Z", "PT180H"]
+  ],
+  "resolution": "PT6H"
 },
 "properties": {
+  ...
+  "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
+  ...
+  "themes": [
+    {
+      "concepts": [
+        {"id": "continual"}
+      ],
+      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+    }
     ...
-    "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
-    ...
-    "themes": [
-        {
-        "concepts": [
-            {"id": "continual"}
-        ],
-        "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
-        }
-        ...
-    ]
-    ...
+  ]
+  ...
 }</code></pre>
 </div>
 </div>
@@ -2421,27 +2421,29 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
   "contacts": [{
-      "identifier": "ECCC",
-      "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-      "positionName": "National Inquiry Response Team",
-      "phones": [{
-        "value": "+18199972800"
-      }],
-      "emails": [{
-        "value":"enviroinfo@ec.gc.ca"
-      }],
-      "addresses": [{
-        "deliveryPoint": "77 Westmorland Street, suite 260",
-        "city": "Fredericton",
-        "administrativeArea": "NB",
-        "postalCode": "E3B 6Z4",
-        "country": "Canada"
-      }],
-      "links": [{
-        "href": "https://www.canada.ca/en/environment-climate-change.html"
-      }],
-      "contactInstructions": "email",
-      "roles": ["producer", "host"]
+    "identifier": "ECCC",
+    "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+    "positionName": "National Inquiry Response Team",
+    "phones": [{
+      "value": "+18199972800"
+    }],
+    "emails": [{
+      "value":"enviroinfo@ec.gc.ca"
+    }],
+    "addresses": [{
+      "deliveryPoint": [ "77 Westmorland Street, suite 260" ],
+      "city": "Fredericton",
+      "administrativeArea": "NB",
+      "postalCode": "E3B 6Z4",
+      "country": "Canada"
+    }],
+    "links": [{
+      "href": "https://www.canada.ca/en/environment-climate-change.html",
+      "rel": "canonical",
+      "type": "text/html"
+    }],
+    "contactInstructions": "email",
+    "roles": ["producer", "host"]
   }]
   ...
 }</code></pre>
@@ -2455,12 +2457,14 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
   "contacts": [{
-      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-      "links": [{
-          "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html"
-      }]}
-  ]
-  ...
+    "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+    "links": [{
+      "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html",
+      "rel": "canonical",
+      "type": "text/html"
+    }],
+    "roles": ["producer"]
+  }]
 }</code></pre>
 </div>
 </div>
@@ -2588,7 +2592,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
   }, {
     "scheme": "ark",
     "value": "ark:/13030/tf5p30086k"
-  } ]
+  }]
   ...
 }</code></pre>
 </div>
@@ -2777,45 +2781,9 @@ for the international exchange of Earth system data. The codelist values are <co
 }</code></pre>
 </div>
 </div>
-<div class="listingblock">
-<div class="title">Example: Recommended Data with additional conditions</div>
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
-  ...
-  "wmo:dataPolicy": "recommended"
-  ...
-},
-"links": [{
-  "rel": "license",
-  "href": "https://example.org/dataset/license.html",
-  "type": "text/html",
-  "title": "Dataset license information"
-}]</code></pre>
-</div>
-</div>
 <div class="paragraph">
-<p>It is useful to add provider-specific details to complete information about data policy and additional conditions.</p>
+<p>It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.</p>
 </div>
-<table id="rec_core_data_policy_conditions" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/core/data_policy_conditions</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Additional conditions represented by a <code>links</code> item SHOULD also provide a <code>title</code> property to include human-readable information about link.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
 <div class="listingblock">
 <div class="title">Example: Recommended Data with additional conditions and provider-specific details:</div>
 <div class="content">
@@ -2866,6 +2834,26 @@ for the international exchange of Earth system data. The codelist values are <co
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>When the <code>properties.wmo:dataPolicy</code> property is <code>recommended</code>, copyright information SHALL be provided by at least one <code>links</code> item with link relations (<code>rel</code>) of <code>copyright</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="rec_core_data_policy_conditions" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/data_policy_conditions</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Additional conditions represented by a <code>links</code> item SHOULD also provide a <code>title</code> property to include human-readable information about the link.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3244,13 +3232,15 @@ for the international exchange of Earth system data. The codelist values are <co
       "numberOfFiles": "288 per day",
       "typicalFilesize": "60 MB",
       "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-      "samples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-      "documentation": {
+      "samples": {
+        "href": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
+      },
+      "documentation": [{
         "rel": "alternate",
         "type": "text/html",
         "title": "SIP documentation and tools",
         "href": "https://www.eumetsat.int/formats#SIP"
-      }
+      }]
     }]
   }
 }]</code></pre>
@@ -6595,7 +6585,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-22 22:23:08 UTC
+Last updated 2024-01-22 22:40:22 UTC
 </div>
 </div>
 </body>
