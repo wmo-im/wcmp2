@@ -1,56 +1,56 @@
 {
-	"id": "urn:x-wmo:md:cn-cma-babj:data.core.weather.surface-based-observations",
-	"type": "Feature",
+    "id": "urn:x-wmo:md:cn-cma-babj:data.core.weather.surface-based-observations",
+    "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
-	"geometry": {
-		"type": "Polygon",
-		"coordinates": [
-			[
-				[
-					73.66, 
-					4.0
-				],
-				[
-					73.66,
-					53.52
-				],
-				[	
-					135.08,
-					53.52
-				],
-				[	
-					135.08,
-					4.0
-				],
-				[
-					73.66,
-					4.0
-				]
-			]
-		]
-	},
-	"time": {
-		"interval": [
-			"2021-11-29", 
-			".."
-		],
-		"resolution": "P1H"
-	},
-	"properties": {
-		"title": "ISMN SYNOP reports - China ; available from BABJ(PEKING (BEIJING)) at 00,06,12,18 .",
-		"description": "Surface weather observations from China",
-		"themes": [
-			{
-				"concepts": [
-					{
-						"id": "weather",
-						"title": "Weather"
-					}
-				],
-				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/weather/index.csv"
-			},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    73.66,
+                    4.0
+                ],
+                [
+                    73.66,
+                    53.52
+                ],
+                [
+                    135.08,
+                    53.52
+                ],
+                [
+                    135.08,
+                    4.0
+                ],
+                [
+                    73.66,
+                    4.0
+                ]
+            ]
+        ]
+    },
+    "time": {
+        "interval": [
+            "2021-11-29",
+            ".."
+        ],
+        "resolution": "P1H"
+    },
+    "properties": {
+        "title": "ISMN SYNOP reports - China ; available from BABJ(PEKING (BEIJING)) at 00,06,12,18 .",
+        "description": "Surface weather observations from China",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "weather",
+                        "title": "Weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/weather/index.csv"
+            },
             {
                 "concepts": [
                     {
@@ -58,16 +58,16 @@
                         "title": "Global Broker"
                     }
                 ],
-				"scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
             }
-		],
-		 "contacts": [
+        ],
+        "contacts": [
             {
                 "name": "GISC Beijing",
                 "organization": "China Meteorological Administration (CMA); National Meteorological Information Center (NMIC)",
                 "phones": [
                     {
-                        "value": "86-10-58994179"
+                        "value": "+861058994179"
                     }
                 ],
                 "emails": [
@@ -77,11 +77,13 @@
                 ],
                 "addresses": [
                     {
-						"deliveryPoint": "46 Zhongguancun Nandajie",
-						"city": "Beijing",
-						"administrativeArea": "Beijing",
-						"postalCode": "100081",
-						"country": "China"
+                        "deliveryPoint": [
+                            "46 Zhongguancun Nandajie"
+                        ],
+                        "city": "Beijing",
+                        "administrativeArea": "Beijing",
+                        "postalCode": "100081",
+                        "country": "China"
                     }
                 ],
                 "links": [
@@ -90,7 +92,7 @@
                         "href": "http://gisc.wis.cma.cn/wis/portal.pub"
                     }
                 ],
-				"contactInstructions": "email",
+                "contactInstructions": "email",
                 "roles": [
                     "host"
                 ]
@@ -100,24 +102,24 @@
         "language": "en",
         "type": "dataset",
         "created": "2023-04-23T12:00:00Z",
-		"updated": "2024-01-15T12:00:00Z",
-		"keywords": [
+        "updated": "2024-01-15T12:00:00Z",
+        "keywords": [
             "WIS2",
             "surface",
-			"observations",
-			"metadata"
+            "observations",
+            "metadata"
         ]
-	},
-	"links": [
-		{
+    },
+    "links": [
+        {
             "rel": "data",
             "type": "text/html",
             "title": "Raw data download (bufr4)",
             "href": "https://wisdev.kishou.go.jp/data/wis2/chn/babj/data/core/weather/surface-based-observations/synop/"
         },
-		{
+        {
             "rel": "items",
-			"channel": "cache/a/wis2/#",
+            "channel": "cache/a/wis2/#",
             "type": "application/json",
             "title": "Data notifications - WMO WIS2 Global Broker - MF",
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883"
@@ -125,9 +127,9 @@
         {
             "rel": "items",
             "channel": "cache/a/wis2/#",
-			"type": "application/json",
+            "type": "application/json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883"
         }
-	]
+    ]
 }
