@@ -319,22 +319,22 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 [source,json]
 ----
 "geometry": {
-    "type": "Polygon",
-    "coordinates": [[
-            [-142.23, 28.03],
-            [-142.23, 82.56],
-            [-52.16, 82.56],
-            [-52.16, 28.03],
-            [-142.23, 28.03]
-    ]]
+  "type": "Polygon",
+  "coordinates": [[
+    [-142.23, 28.03],
+    [-142.23, 82.56],
+    [-52.16, 82.56],
+    [-52.16, 28.03],
+    [-142.23, 28.03]
+  ]]
 }
 ----
 
 [source,json]
 ----
 "geometry": {
-    "type": "Point",
-    "coordinates": [-79.38, 43.65]
+  "type": "Point",
+  "coordinates": [-79.38, 43.65]
 }
 ----
 
@@ -451,26 +451,26 @@ Further time-related characteristics (e.g. frequency of modifications, available
 [source,json]
 ----
 "time": {
-    "interval": [
-        ["T00Z", "PT180H"],
-        ["T12Z", "PT180H"]
-    ],
-    "resolution": "PT6H"
+  "interval": [
+    ["T00Z", "PT180H"],
+    ["T12Z", "PT180H"]
+  ],
+  "resolution": "PT6H"
 },
 "properties": {
+  ...
+  "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
+  ...
+  "themes": [
+    {
+      "concepts": [
+        {"id": "continual"}
+      ],
+      "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
+    }
     ...
-    "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
-    ...
-    "themes": [
-        {
-        "concepts": [
-            {"id": "continual"}
-        ],
-        "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
-        }
-        ...
-    ]
-    ...
+  ]
+  ...
 }
 ----
 
@@ -516,27 +516,29 @@ The `+contacts+` property is the information associated with one or more respons
 "properties": {
   ...
   "contacts": [{
-      "identifier": "ECCC",
-      "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-      "positionName": "National Inquiry Response Team",
-      "phones": [{
-        "value": "+18199972800"
-      }],
-      "emails": [{
-        "value":"enviroinfo@ec.gc.ca"
-      }],
-      "addresses": [{
-        "deliveryPoint": "77 Westmorland Street, suite 260",
-        "city": "Fredericton",
-        "administrativeArea": "NB",
-        "postalCode": "E3B 6Z4",
-        "country": "Canada"
-      }],
-      "links": [{
-        "href": "https://www.canada.ca/en/environment-climate-change.html"
-      }],
-      "contactInstructions": "email",
-      "roles": ["producer", "host"]
+    "identifier": "ECCC",
+    "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+    "positionName": "National Inquiry Response Team",
+    "phones": [{
+      "value": "+18199972800"
+    }],
+    "emails": [{
+      "value":"enviroinfo@ec.gc.ca"
+    }],
+    "addresses": [{
+      "deliveryPoint": [ "77 Westmorland Street, suite 260" ],
+      "city": "Fredericton",
+      "administrativeArea": "NB",
+      "postalCode": "E3B 6Z4",
+      "country": "Canada"
+    }],
+    "links": [{
+      "href": "https://www.canada.ca/en/environment-climate-change.html",
+      "rel": "canonical",
+      "type": "text/html"
+    }],
+    "contactInstructions": "email",
+    "roles": ["producer", "host"]
   }]
   ...
 }
@@ -549,12 +551,14 @@ A contact can also be specified by using a URL.
 "properties": {
   ...
   "contacts": [{
-      "name": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-      "links": [{
-          "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html"
-      }]}
-  ]
-  ...
+    "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
+    "links": [{
+      "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html",
+      "rel": "canonical",
+      "type": "text/html"
+    }],
+    "roles": ["producer"]
+  }]
 }
 ----
 
@@ -603,7 +607,7 @@ Examples of persistent identifiers include, but are not limited to:
   }, {
     "scheme": "ark",
     "value": "ark:/13030/tf5p30086k"
-  } ]
+  }]
   ...
 }
 ----
@@ -702,25 +706,7 @@ Licensing and copyright are expressed via the `+links+` property (see distributi
 }
 ----
 
-.Example: Recommended Data with additional conditions
-[source,json]
-----
-"properties": {
-  ...
-  "wmo:dataPolicy": "recommended"
-  ...
-},
-"links": [{
-  "rel": "license",
-  "href": "https://example.org/dataset/license.html",
-  "type": "text/html",
-  "title": "Dataset license information"
-}]
-----
-
-It is useful to add provider-specific details to complete information about data policy and additional conditions.
-
-include::../recommendations/core/REC_data_policy.adoc[]
+It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
 
 .Example: Recommended Data with additional conditions and provider-specific details:
 [source,json]
@@ -739,6 +725,7 @@ include::../recommendations/core/REC_data_policy.adoc[]
 ----
 
 include::../requirements/core/REQ_data_policy.adoc[]
+include::../recommendations/core/REC_data_policy.adoc[]
 include::../recommendations/core/PER_data_policy.adoc[]
 
 ==== Links and Distribution Information [[links-distribution]]
@@ -965,13 +952,15 @@ Additional distribution information is added to allow more comprehensive discove
       "numberOfFiles": "288 per day",
       "typicalFilesize": "60 MB",
       "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-      "samples": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-      "documentation": {
+      "samples": { 
+        "href": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip" 
+      },
+      "documentation": [{
         "rel": "alternate",
         "type": "text/html",
         "title": "SIP documentation and tools",
         "href": "https://www.eumetsat.int/formats#SIP"
-      }
+      }]
     }]
   }
 }]
