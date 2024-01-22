@@ -1,0 +1,157 @@
+{
+	"id": "urn:x-wmo:md:cn-cma-babj:data.core.weather.prediction.forecast.shortrange.probabilistic.global",
+	"type": "Feature",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+	"geometry": {
+		"type": "Polygon",
+		"coordinates": [
+			[
+				[
+					73.66,
+					4.0
+				],
+				[
+					73.66,
+					53.52
+				],
+				[
+					135.08,
+					53.52
+				],
+				[
+					135.08,
+					4.0
+				],
+				[
+					73.66,
+					4.0
+				]
+			]
+		]
+	},
+	"time": {
+		"interval": [
+			"2021-11-29",
+			".."
+		],
+		"resolution": "P6H"
+	},
+	"properties": {
+		"title": "CMA GRAPES GEPS v1.3",
+		"description": "GRAPES GEPS is the main technical means to solve the uncertainty of CMA-GFS medium-term forecast and the difficulties of extreme weather forecast.",
+		"themes": [
+			{
+				"concepts": [
+					{
+                        "id": "weather",
+                        "title": "Weather"
+                    },
+                    {
+                        "id": "climate",
+                        "title": "Climate"
+                    },
+                    {
+                        "id": "hydrology",
+                        "title": "Hydrology"
+                    },
+                    {
+                        "id": "atmospheric-composition",
+                        "title": "Atmospheric Composition"
+                    },
+                    {
+                        "id": "cryosphere",
+                        "title": "Cryosphere"
+                    },
+                    {
+                        "id": "ocean",
+                        "title": "Ocean"
+                    },
+                    {
+                        "id": "space-weather",
+                        "title": "Space Weather"
+                    }
+				],
+				"scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+			},
+            {
+                "concepts": [
+                    {
+                        "id": "global-broker",
+                        "title": "Global Broker"
+                    }
+                ],
+				"scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
+            }
+		],
+		 "contacts": [
+            {
+                "name": "GISC Beijing",
+                "organization": "China Meteorological Administration (CMA); National Meteorological Information Center (NMIC)",
+                "phones": [
+                    {
+                        "value": "86-10-58994179"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "giscadmin@cma.gov.cn"
+                    }
+                ],
+                "addresses": [
+                    {
+						"deliveryPoint": "46 Zhongguancun Nandajie",
+						"city": "Beijing",
+						"administrativeArea": "Beijing",
+						"postalCode": "100081",
+						"country": "China"
+                    }
+                ],
+                "links": [
+                    {
+                        "type": "text/html",
+                        "href": "http://gisc.wis.cma.cn/wis/portal.pub"
+                    }
+                ],
+				"contactInstructions": "email",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "wmo:dataPolicy": "core",
+        "language": "en",
+        "type": "dataset",
+        "created": "2023-04-23T12:00:00Z",
+		"updated": "2024-01-15T12:00:00Z",
+		"keywords": [
+            "WIS2",
+            "forecast",
+			"CMA-GEPS",
+			"metadata"
+        ]
+	},
+	"links": [
+		{
+            "rel": "data",
+            "type": "text/html",
+            "title": "Raw data download (grib2)",
+            "href": "https://wisdev.kishou.go.jp/data/wis2/chn/babj/data/core/weather/prediction/forecast/shortrange/probabilistic/global/CMA_GEPS/"
+        },
+		{
+            "rel": "items",
+			"channel": "cache/a/wis2/#",
+            "type": "application/json",
+            "title": "Data notifications - WMO WIS2 Global Broker - MF",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883"
+        },
+        {
+            "rel": "items",
+            "channel": "cache/a/wis2/#",
+			"type": "application/json",
+            "title": "Data notifications - WMO WIS Global Broker - CMA",
+            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883"
+        }
+	]
+}
