@@ -1,19 +1,32 @@
-== Time intervals
+=== Time intervals
 
-=== WCMP element(s)
+==== WCMP properties
 
 * `time.interval`
 * `additionalElements.temporal.interval`
 
-=== What is being measured
-
-Whether a time interval is present and contains an interval with a corresponding resolution. 
-
-=== Rationale for measurement
+==== Rationale for measurement
 
 Temporal information is a significant characteristic of weather/climate/water data and as such is critical for users to know which period(s) of time is/are covered by products and how often new products are received.
 
-=== Rules for implementation
+==== Measurement
+
+Whether a time interval is present and contains an interval with a corresponding resolution. 
+
+==== Guidance
+
+Ensure that the temporal extent resolution is present in the metadata record.
+
+===== Examples
+
+```json
+"time": {
+  "interval" : ["2020-10-30", ".."],
+  "resolution": "P1D"
+}
+```
+
+==== Rules
 
 .Temporal information implementation rules
 |===
@@ -32,15 +45,3 @@ Temporal information is a significant characteristic of weather/climate/water da
 
 *Total possible score: (begin less than end + only one interval open + resolution) / (total intervals * 3) (100%)
 
-=== Guidance to score well on this assessment
-
-Ensure that the temporal extent resolution is present in the metadata record.
-
-=== Examples
-
-```json
-"time": {
-  "interval" : ["2020-10-30", ".."],
-  "resolution": "P1D"
-}
-```
