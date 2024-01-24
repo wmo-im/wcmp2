@@ -4,15 +4,15 @@
 
 * `properties.title`
 
-==== Measurement
-
-The title of the product follows the principles of the WCMP guidance. The length is not too short or too long, contains less than three acronyms and is represented in title case. Spelling and grammar are correct.
-
 ==== Rationale for measurement
 
 The title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.
 
 In the context of WIS2 Global Discovery Catalogues, the product title and description are the two most relevant elements in the WCMP metadata record. These two elements are presented to the users in search results as well as the product description page, and need to focus on highlighting the product's key characteristics to assist users with relevant product search results.
+
+==== Measurement
+
+The title of the product follows the principles of the WCMP guidance. The length is not too short or too long, contains less than three acronyms and is represented in title case. Spelling and grammar are correct.
 
 ==== Guidance
 
