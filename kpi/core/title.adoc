@@ -1,4 +1,3 @@
-== KPI Measurements
 === Good quality title
 ==== WCMP Properties
 
