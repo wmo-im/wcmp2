@@ -1,3 +1,5 @@
+== Key performance indicators
+
 include::core/title.adoc[]
 include::core/description.adoc[]
 include::core/time-intervals.adoc[]
