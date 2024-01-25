@@ -4,5 +4,5 @@
 ^|*Requirement {counter:req-id}* |*/req/core/contacts*
 ^|A |A WCMP record SHALL provide at least one contact via the `+properties.contacts+` property.
 ^|B |The `+properties.contacts+` SHALL provide an `+organization+` property.
-^|C |The `+roles+`property, when specified, SHALL provide a role type from the WCMP role type codelist.
+^|C |The `+roles+` property, when specified, SHALL provide a role type from the WCMP role type codelist.
 |===
