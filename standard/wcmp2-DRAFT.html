@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-24</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-25</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-01-24</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-01-25</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1546,7 +1546,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The<code>centre_id</code> SHALL be based on the associated vocabulary specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
+<p>The <code>centre_id</code> SHALL be based on the associated vocabulary specified in the WIS <a href="#wis2-topic-hierarchy">topic hierarchy</a>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2495,7 +2495,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The `roles`property, when specified, SHALL provide a role type from the WCMP role type codelist.</p>
+<p>The <code>roles</code> property, when specified, SHALL provide a role type from the WCMP role type codelist.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2973,10 +2973,10 @@ for the international exchange of Earth system data. The codelist values are <co
 </tbody>
 </table>
 <div class="paragraph">
-<p>The <code>links</code> property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.</p>
+<p>For recommended data, the <code>links</code> property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example Access controlled link</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"links": [{
   "rel": "data",
@@ -3183,7 +3183,7 @@ for the international exchange of Earth system data. The codelist values are <co
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links</code> property SHOULD provide a <code>type`</code> property with a valid media type from IANA or as designated by WMO.</p>
+<p>The <code>links</code> property SHOULD provide a <code>type</code> property with a valid media type from IANA or as designated by WMO.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3261,49 +3261,49 @@ for the international exchange of Earth system data. The codelist values are <co
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD describe additional distribution information with the <code>properties.distribution</code> property to qualify a given service link. This information SHOULD be used to build the discovery information and allow the user to find and choose the appropriate service for accessing the data.</p>
+<p>A WCMP record SHOULD describe additional distribution information with the <code>links.distribution</code> property to qualify a given service link. This information SHOULD be used to build the discovery information and allow the user to find and choose the appropriate service for accessing the data.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat</code> property SHOULD describe the different formats that can be retrieved using the service link.</p>
+<p>The <code>links.distribution.availableFormats</code> property SHOULD describe the different formats that can be retrieved using the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat.description</code> SHOULD describe the associated format.</p>
+<p>The <code>links.distribution.availableFormats.description</code> SHOULD describe the associated format.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat.typicalFilename</code> SHOULD describe the filenames that are available from the service link.</p>
+<p>The <code>links.distribution.availableFormats.typicalFilename</code> SHOULD describe the filenames that are available from the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat.typicalFilesize</code> SHOULD describe the typical filesize available from the service link.</p>
+<p>The <code>links.distribution.availableFormats.typicalFilesize</code> SHOULD describe the typical filesize available from the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat.numberOfFiles</code> SHOULD describe the typical number of files received during a given period (day, month, &#8230;&#8203;) when using the service link. It SHOULD follow the pattern X per day, X per month.</p>
+<p>The <code>links.distribution.availableFormats.numberOfFiles</code> SHOULD describe the typical number of files received during a given period (day, month, &#8230;&#8203;) when using the service link. It SHOULD follow the pattern X per day, X per month.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat.documentation</code> SHOULD be a <code>link</code> for accessing the documentation associated with the format.</p>
+<p>The <code>links.distribution.availableFormats.documentation</code> SHOULD be a <code>link</code> for accessing the documentation associated with the format.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">H</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.distribution.availableFormat.productSamples</code> SHOULD be an array of direct links to representative samples of the data.</p>
+<p>The <code>links.distribution.availableFormats.productSamples</code> SHOULD be an array of direct links to representative samples of the data.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5053,6 +5053,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 "required": [
                   "organization"
                 ],
+                "additionalProperties": false,
                 "type": "object",
                 "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
                 "anyOf": [
@@ -6072,7 +6073,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "resolution": "0.5*0.5",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
         },
-        "temporal": { 
+        "temporal": {
             "interval": [
                 [
                     "R/T00Z",
@@ -6137,7 +6138,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             {
                 "identifier": "DWD",
                 "organization": "Deutscher Wetterdienst",
-                "positionName": "Michael Denhard",
+                "name": "Michael Denhard",
                 "emails": [
                     {
                         "value": "wis@dwd.de"
@@ -6313,7 +6314,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             {
                 "identifier": "meteo-france",
                 "organization": "M\u00e9t\u00e9o-France",
-                "positionName": "David Podeur",
+                "name": "David Podeur",
                 "emails": [
                     {
                         "value": "gisc_support@meteo.fr"
@@ -6585,7 +6586,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-24 22:46:50 UTC
+Last updated 2024-01-25 11:45:32 UTC
 </div>
 </div>
 </body>
