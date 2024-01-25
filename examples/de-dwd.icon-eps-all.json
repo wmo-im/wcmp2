@@ -50,7 +50,7 @@
             "resolution": "0.5*0.5",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
         },
-        "temporal": { 
+        "temporal": {
             "interval": [
                 [
                     "R/T00Z",
@@ -115,7 +115,7 @@
             {
                 "identifier": "DWD",
                 "organization": "Deutscher Wetterdienst",
-                "positionName": "Michael Denhard",
+                "name": "Michael Denhard",
                 "emails": [
                     {
                         "value": "wis@dwd.de"

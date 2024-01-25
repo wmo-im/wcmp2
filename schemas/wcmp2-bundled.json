@@ -772,6 +772,7 @@
                 "required": [
                   "organization"
                 ],
+                "additionalProperties": false,
                 "type": "object",
                 "description": "Identification of, and means of communication with, person responsible\nfor the resource.",
                 "anyOf": [
