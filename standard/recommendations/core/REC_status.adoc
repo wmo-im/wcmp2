@@ -1,0 +1,10 @@
+[[rec_core_status]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/status*
+^|A |A WCMP record SHOULD provide a `+properties.status+` property to identify the operational status of a given dataset.
+^|B |A WCMP record SHOULD provide a `+properties.status.id+` property to identify the concept of the status (see Annex D for possible codelists to use).
+^|C |A WCMP record SHOULD provide a `+properties.status.title+` property to provide a human readable title for the concept.
+^|D |A WCMP record SHOULD provide a `+properties.status.description+` property to provide a human readable description for the concept.
+^|E |A WCMP record SHOULD provide a `+properties.status.url+` property to provide further description of the concept via the given URI.
+|===
