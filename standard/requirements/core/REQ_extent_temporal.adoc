@@ -3,6 +3,6 @@
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/extent_temporal*
 ^|A |A WCMP record SHALL provide ONE `+time+` property using the Gregorian calendar.
-^|B |The `+time+` property SHALL provide the value of `+null+` when a conformant time cannot be derived.
+^|B |The `+time+` property SHALL provide either ONE `+date+`, `+timestamp+`, `+interval+` or the value of `+null+` when a conformant time cannot be derived.
 ^|C |All non-null `+time+` values SHALL be valid ISO8601 representations or `+..+` for an open-ended extent.
 |===
