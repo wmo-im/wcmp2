@@ -387,7 +387,9 @@ The `+time+` property describes the general bounding extent of the dataset and t
 
 Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC. 
 
-Temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets).
+In addition the temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets). If only times are given for the interval, it is implicitly assumed that those are recurring every day.
+
+In cases where no time indication can be derived, it is applicable to state the value of `+null+`.
 
 .Examples
 
@@ -416,11 +418,15 @@ Temporal resolution provides a useful indicator of the data update frequency (fo
 [source,json]
 ----
 "time": {
-  "interval": [
-    ["R/T00Z", "PT180H"],
-    ["R/T12Z", "PT180H"]
-  ],
-  "resolution": "PT6H"
+  "interval" : ["T00Z", "T23Z"],
+  "resolution": "PT1H"
+}
+----
+
+[source,json]
+----
+"time": {
+  "interval": ["2018-04-22", ".."],
 }
 ----
 
@@ -429,38 +435,39 @@ Temporal resolution provides a useful indicator of the data update frequency (fo
 "time": null
 ----
 
-If only times are given for the interval, it is implicitly assumed that those are recurring every day.
-
-[source,json]
-----
-"time": {
-  "interval" : ["T00Z", "T23Z"],
-  "resolution": "PT1H"
-}
-----
-
-Some cases might be more complex due to the product's characteristics.
-
-The example below describes two intervals with the model run time (start) up to the range covered by the model run (end). Here, the end of the interval is characterised by a time period. Additionally, the time steps within the model range are relevant information (resolution).
-
 To ensure clarity, an additional human-readable explanation is given in the `+properties.description+`.
 Further time-related characteristics (e.g. frequency of modifications, available data, etc.) should be added in `+properties.themes+`.
 
-.Example: complex time information with additional explanation and characteristics
+Some cases might be more complex due to the product's characteristics.
+If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property (see <<_additional_temporal_extents>>).
+
+.Example: Complex time indication
 
 [source,json]
 ----
 "time": {
-  "interval": [
-    ["T00Z", "PT180H"],
-    ["T12Z", "PT180H"]
-  ],
-  "resolution": "PT6H"
+  "interval" : ["2018-04-22", ".."]
 },
+"additionalExtents": {
+  "temporal": {
+    "interval": [
+      [
+        "T00Z",
+        "PT180H"
+      ],
+      [
+        "T12Z",
+        "PT180H"
+      ]
+    ],
+    "resolution": "PT6H",
+    "trs": "http://www.opengis.net/def/trs/ISO-8601"
+  }
+}
+...
 "properties": {
   ...
-  "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
-  ...
+  "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
   "themes": [
     {
       "concepts": [
@@ -468,13 +475,9 @@ Further time-related characteristics (e.g. frequency of modifications, available
       ],
       "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
     }
-    ...
   ]
-  ...
 }
 ----
-
-If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property.
 
 include::../requirements/core/REQ_extent_temporal.adoc[]
 include::../recommendations/core/REC_extent_temporal.adoc[]
@@ -493,12 +496,16 @@ Temporal extents can be fully bound or open in either direction.  An `+additiona
   "temporal": {
     "interval": [
       [
-        "1924-08-18",
-        null
+        "T00Z",
+        "PT180H"
+      ],
+      [
+        "T12Z",
+        "PT180H"
       ]
     ],
-    "resolution": "PT1H",
-    "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+    "resolution": "PT6H",
+    "trs": "http://www.opengis.net/def/trs/ISO-8601"
   }
 }
 ----
@@ -518,7 +525,7 @@ The `+contacts+` property is the information associated with one or more respons
   "contacts": [{
     "identifier": "ECCC",
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-    "positionName": "National Inquiry Response Team",
+    "name": "National Inquiry Response Team",
     "phones": [{
       "value": "+18199972800"
     }],
@@ -677,6 +684,8 @@ The `+status+` property identifies the lifecycle of a given dataset.  See Annex 
   }
 }
 ----
+
+include::../recommendations/core/REC_status.adoc[]
 
 ==== Properties / WMO Data Policy
 
