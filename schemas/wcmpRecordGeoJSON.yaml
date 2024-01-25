@@ -89,6 +89,7 @@ properties:
             - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/contact.yaml'
               required:
                 - organization
+              additionalProperties: false
       version:
         type: string
         description: The version or edition of a given dataset.

@@ -84,7 +84,7 @@
             {
                 "identifier": "meteo-france",
                 "organization": "M\u00e9t\u00e9o-France",
-                "positionName": "David Podeur",
+                "name": "David Podeur",
                 "emails": [
                     {
                         "value": "gisc_support@meteo.fr"

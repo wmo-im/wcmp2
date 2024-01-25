@@ -1,0 +1,287 @@
+{
+    "id": "urn:x-wmo:md:us-noaa-nws:nwp.gfs_1deg",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+    "time": {
+        "interval": [
+            "2022-06-23T18:00:00Z",
+            ".."
+        ]
+    },
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    0,
+                    -90
+                ],
+                [
+                    0,
+                    90
+                ],
+                [
+                    360,
+                    90
+                ],
+                [
+                    360,
+                    -90
+                ],
+                [
+                    0,
+                    -90
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "created": "2022-06-23T18:36:00Z",
+        "updated": "2022-06-23T18:36:00Z",
+        "wmo:dataPolicy": "core",
+        "type": "dataset",
+        "title": "Global Forecast System 1 Degree Resolution",
+        "description": "The Global Forecast System is a weather forecast model produced by the National Centers for Environmental Prediction.",
+        "keywords": [
+            "Geopotential Height",
+            "Planetary Boundary Layer Height",
+            "Tropopause",
+            "Atmospheric Pressure Measurements",
+            "Pressure Thickness",
+            "Sea Level Pressure",
+            "Surface Pressure",
+            "Land Cover",
+            "Soil Moisture/Water Content",
+            "Soil Temperature",
+            "Sea Surface Temperature",
+            "Albedo",
+            "Incoming Solar Radiation",
+            "Longwave Radiation",
+            "Outgoing Longwave Radiation",
+            "Shortwave Radiation",
+            "Solar Radiation",
+            "Surface Temperature",
+            "Atmospheric Stability",
+            "Boundary Layer Temperature",
+            "Dew Point Temperature",
+            "Surface Temperature",
+            "Upper Air Temperature",
+            "Water Vapor Processes",
+            "Water Vapor Indicators",
+            "Water Vapor",
+            "Water Vapor Profiles",
+            "Boundary Layer Winds",
+            "Surface Winds",
+            "Upper Level Winds",
+            "Wind Profiles",
+            "Wind Dynamics",
+            "Precipitation Amount",
+            "Precipitation Rate",
+            "Liquid Precipitation",
+            "Solid Precipitation",
+            "Snow Cover",
+            "Snow Depth",
+            "Sea Ice Concentration",
+            "Land Use/Land Cover Classification",
+            "Prediction",
+            "Global",
+            "Deterministic",
+            "cloud_ceiling",
+            "entire_atmosphere_considered_as_a_single_layer",
+            "entire_atmosphere",
+            "ground_or_water_surface",
+            "high_cloud_layer",
+            "highest_tropospheric_freezing_level",
+            "hybrid_level",
+            "level_at_specified_pressure_difference_from_ground_to_level_pa",
+            "level_of_0C_isotherm",
+            "maximum_wind_level",
+            "mean_sea_level_pa",
+            "middle_cloud_layer",
+            "planetary_boundary_layer",
+            "sigma_level_sigma_value",
+            "specified_altitude_above_mean_sea_level_m",
+            "specified_height_level_above_ground_m",
+            "tropopause",
+            "depth_below_land_surface_m",
+            "isobaric_surface_pa",
+            "potential_vorticity_k_m2_kg-1_s-1",
+            "convective_cloud",
+            "convective_cloud_bottom_level",
+            "convective_cloud_top_level",
+            "boundary_layer_cloud_layer",
+            "high_cloud_bottom_level",
+            "high_cloud_layer",
+            "high_cloud_top_level",
+            "low_cloud_bottom_level",
+            "low_cloud_layer",
+            "low_cloud_top_level",
+            "middle_cloud_bottom_level",
+            "middle_cloud_layer",
+            "middle_cloud_top_level",
+            "nominal_top_of_the_atmosphere",
+            "absolute_vorticity",
+            "albedo",
+            "apparent_temperature",
+            "best_(4_layer)_lifted_index",
+            "categorical_freezing_rain_(yes=1;_no=0)",
+            "categorical_ice_pellets_(yes=1;_no=0)",
+            "categorical_rain_(yes=1;_no=0)",
+            "categorical_snow_(yes=1;_no=0)",
+            "cloud_mixing_ratio",
+            "cloud_water",
+            "cloud_work_function",
+            "composite_reflectivity",
+            "convective_available_potential_energy",
+            "convective_inhibition",
+            "convective_precipitation",
+            "convective_precipitation_rate",
+            "depth_below_land_surface",
+            "dew_point_temperature",
+            "downward_long-wave_radiation_flux",
+            "downward_short-wave_radiation_flux",
+            "field_capacity",
+            "frictional_velocity",
+            "geopotential_height",
+            "graupel",
+            "ground_heat_flux",
+            "haines_index",
+            "high_cloud_cover",
+            "icao_standard_atmosphere_reference_height",
+            "ice_cover",
+            "ice_growth_rate",
+            "ice_temperature",
+            "ice_thickness",
+            "ice_water_mixing_ratio",
+            "land_cover_(1=land,_0=sea)",
+            "latent_heat_next_flux",
+            "level_at_specified_pressure_difference_from_ground_to_level",
+            "liquid_volumetric_soil_moisture_(non_frozen)",
+            "low_cloud_cover",
+            "maximum_temperature",
+            "medium_cloud_cover",
+            "meridional_flux_of_gravity_wave_stress",
+            "minimum_temperature",
+            "momentum_flux,_u-component",
+            "momentum_flux,_v-component",
+            "mslp_(eta_model_reduction)",
+            "ozone_mixing_ratio",
+            "percent_frozen_precipitation",
+            "planetary_boundary_layer_height",
+            "plant_canopy_surface_water",
+            "potential_evaporation_rate",
+            "potential_temperature",
+            "precipitable_water",
+            "precipitation_rate",
+            "pressure",
+            "pressure_of_level_from_which_parcel_was_lifted",
+            "pressure_reduced_to_msl",
+            "rain_mixing_ratio",
+            "reflectivity",
+            "relative_humidity",
+            "sensible_heat_next_flux",
+            "sigma_level_(sigma_value)",
+            "snow_depth",
+            "snow_mixing_ratio",
+            "soil_temperature",
+            "soil_type",
+            "specific_humidity",
+            "storm_relative_helicity",
+            "sunshine_duration",
+            "surface_lifted_index",
+            "surface_roughness",
+            "temperature",
+            "total_cloud_cover",
+            "total_ozone",
+            "total_precipitation",
+            "u-component_of_wind",
+            "u-component_storm_motion",
+            "upward_long-wave_radiation_flux",
+            "upward_short-wave_radiation_flux",
+            "v-component_of_wind",
+            "v-component_storm_motion",
+            "vegetation",
+            "ventilation_rate",
+            "vertical_speed_shear",
+            "vertical_velocity_(geometric)",
+            "vertical_velocity_(pressure)",
+            "visibility",
+            "volumetric_soil_moisture_content",
+            "water_equivalent_of_accumulated_snow_depth",
+            "water_runoff",
+            "wilting_point",
+            "wind_speed_(gust)",
+            "zonal_flux_of_gravity_wave_stress",
+            "Weather and Climate",
+            "International",
+            "Atmosphere",
+            "weatherForecasts",
+            "meteorology"
+        ],
+        "keywordsCodespace": "http://codes.wmo.int/306/4678",
+        "language": "en",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "weather"
+                    }
+                ],
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+            }
+        ],
+        "contacts": [
+            {
+                "organization": "NOAA/NWS/NCEP",
+                "phones": [
+                    {
+                        "value": "+13016831500"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "sdm@noaa.gov"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "NOAA Center for Weather and Climate Prediction, 5830 University Research Ct"
+                        ],
+                        "city": "College Park",
+                        "state": "Maryland",
+                        "postalCode": "20740",
+                        "country": "United States"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
+                        "rel": "canonical",
+                        "type": "text/html"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "host",
+                    "producer"
+                ]
+            }
+        ],
+        "formats": [
+            "GRIB2"
+        ],
+        "license": "http://codes.wmo.int/wmdr/DataPolicy/_WMOOther",
+        "rights": "access"
+    },
+    "links": [
+        {
+            "rel": "data",
+            "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
+            "type": "application/x-grib",
+            "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
+        }
+    ]
+}
