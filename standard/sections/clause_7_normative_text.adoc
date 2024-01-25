@@ -795,11 +795,11 @@ The table below provides an overview of the properties of a link object.
 
 |===
 
-The ``links`` property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
+For recommended data, the ``links`` property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
 .Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 
-.Example
+.Example Access controlled link
 
 [source,json]
 ----
