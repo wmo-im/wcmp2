@@ -2,5 +2,9 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/data_policy_conditions*
-^|A | Additional conditions represented by a `+links+` item SHOULD also provide a `title` property to include human-readable information about the link.
+^|A|Additional conditions represented by a `+links+` item SHOULD also provide a `title` property to include human-readable information about the link.
+^|B|To express any conditions on use of a given dataset, the `+properties.rights+` property SHOULD be used.
+^|C|For core data or recommended data compatible with free and unrestricted principles, `+properties.rights+` SHOULD be declared with exactly the following statement:
+
+  Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021))
 |===

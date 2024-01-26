@@ -105,6 +105,8 @@ properties:
         enum:
           - core
           - recommended
+      rights:
+        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/rights'
       wmo:status:
         description: The operational status of a given dataset.
         $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/theme.yaml#/properties/concepts/items'

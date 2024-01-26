@@ -15,7 +15,7 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "A unique identifier of the catalogue record.",
+      "description": "A unique identifier of the catalog record.",
       "format": "uri"
     },
     "conformsTo": {
@@ -282,192 +282,7 @@
                 "geometries": {
                   "type": "array",
                   "items": {
-                    "oneOf": [
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "coordinates"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "Point"
-                            ]
-                          },
-                          "coordinates": {
-                            "type": "array",
-                            "minItems": 2,
-                            "items": {
-                              "type": "number"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "coordinates"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "MultiPoint"
-                            ]
-                          },
-                          "coordinates": {
-                            "type": "array",
-                            "items": {
-                              "type": "array",
-                              "minItems": 2,
-                              "items": {
-                                "type": "number"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "coordinates"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "LineString"
-                            ]
-                          },
-                          "coordinates": {
-                            "type": "array",
-                            "minItems": 2,
-                            "items": {
-                              "type": "array",
-                              "minItems": 2,
-                              "items": {
-                                "type": "number"
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "coordinates"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "MultiLineString"
-                            ]
-                          },
-                          "coordinates": {
-                            "type": "array",
-                            "items": {
-                              "type": "array",
-                              "minItems": 2,
-                              "items": {
-                                "type": "array",
-                                "minItems": 2,
-                                "items": {
-                                  "type": "number"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "coordinates"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "Polygon"
-                            ]
-                          },
-                          "coordinates": {
-                            "type": "array",
-                            "items": {
-                              "type": "array",
-                              "minItems": 4,
-                              "items": {
-                                "type": "array",
-                                "minItems": 2,
-                                "items": {
-                                  "type": "number"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "coordinates"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "MultiPolygon"
-                            ]
-                          },
-                          "coordinates": {
-                            "type": "array",
-                            "items": {
-                              "type": "array",
-                              "items": {
-                                "type": "array",
-                                "minItems": 4,
-                                "items": {
-                                  "type": "array",
-                                  "minItems": 2,
-                                  "items": {
-                                    "type": "number"
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "geometries"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "GeometryCollection"
-                            ]
-                          },
-                          "geometries": {
-                            "type": "array",
-                            "items": {
-                              "$ref": "#/properties/geometry/oneOf/1/oneOf/6/properties/geometries/items"
-                            }
-                          }
-                        }
-                      }
-                    ]
+                    "$ref": "#/properties/geometry/oneOf/1"
                   }
                 }
               }
@@ -758,7 +573,7 @@
               },
               "scheme": {
                 "type": "string",
-                "description": "An identifier for the knowledge organization system used to classify the resource.  It is recommended that the identifier be a resolvable URI.  The list of schemes used in a searchable catalogue can be determined by inspecting the server's OpenAPI document or, if the server implements CQL2, by exposing a queryable (e.g. named `scheme`) and enumerating the list of schemes in the queryable's schema definition."
+                "description": "An identifier for the knowledge organization system used to classify the resource.  It is recommended that the identifier be a resolvable URI.  The list of schemes used in a searchable catalog can be determined by inspecting the server's OpenAPI document or, if the server implements CQL2, by exposing a queryable (e.g. named `scheme`) and enumerating the list of schemes in the queryable's schema definition."
               }
             }
           }
@@ -810,41 +625,32 @@
                       {
                         "type": "object",
                         "required": [
-                          "href"
+                          "href",
+                          "rel"
                         ],
                         "properties": {
                           "href": {
                             "type": "string",
-                            "format": "url"
+                            "example": "http://data.example.com/buildings/123"
                           },
                           "rel": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "alternate"
                           },
                           "type": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "application/geo+json"
                           },
                           "hreflang": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "en"
                           },
                           "title": {
-                            "type": "string"
-                          },
-                          "templated": {
-                            "type": "boolean"
-                          },
-                          "variables": {
-                            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                            "type": "object"
-                          },
-                          "created": {
                             "type": "string",
-                            "description": "Date of creation of the resource pointed to by the link.",
-                            "format": "date-time"
+                            "example": "Trierer Strasse 70, 53115 Bonn"
                           },
-                          "updated": {
-                            "type": "string",
-                            "description": "Most recent date on which the resource pointed to by the link was changed.",
-                            "format": "date-time"
+                          "length": {
+                            "type": "integer"
                           }
                         }
                       },
@@ -881,11 +687,7 @@
                         },
                         "roles": {
                           "description": "The type of phone number (e.g. home, work, fax, etc.).",
-                          "type": "array",
-                          "minItems": 1,
-                          "items": {
-                            "type": "string"
-                          }
+                          "$ref": "#/properties/properties/properties/contacts/items/allOf/0/properties/roles"
                         }
                       }
                     }
@@ -906,11 +708,7 @@
                         },
                         "roles": {
                           "description": "The type of email (e.g. home, work, etc.).",
-                          "type": "array",
-                          "minItems": 1,
-                          "items": {
-                            "type": "string"
-                          }
+                          "$ref": "#/properties/properties/properties/contacts/items/allOf/0/properties/roles"
                         }
                       }
                     }
@@ -946,11 +744,7 @@
                         },
                         "roles": {
                           "description": "The type of address (e.g. office, home, etc.).",
-                          "type": "array",
-                          "minItems": 1,
-                          "items": {
-                            "type": "string"
-                          }
+                          "$ref": "#/properties/properties/properties/contacts/items/allOf/0/properties/roles"
                         }
                       }
                     }
@@ -961,45 +755,7 @@
                     "items": {
                       "allOf": [
                         {
-                          "type": "object",
-                          "required": [
-                            "href"
-                          ],
-                          "properties": {
-                            "href": {
-                              "type": "string",
-                              "format": "url"
-                            },
-                            "rel": {
-                              "type": "string"
-                            },
-                            "type": {
-                              "type": "string"
-                            },
-                            "hreflang": {
-                              "type": "string"
-                            },
-                            "title": {
-                              "type": "string"
-                            },
-                            "templated": {
-                              "type": "boolean"
-                            },
-                            "variables": {
-                              "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                              "type": "object"
-                            },
-                            "created": {
-                              "type": "string",
-                              "description": "Date of creation of the resource pointed to by the link.",
-                              "format": "date-time"
-                            },
-                            "updated": {
-                              "type": "string",
-                              "description": "Most recent date on which the resource pointed to by the link was changed.",
-                              "format": "date-time"
-                            }
-                          }
+                          "$ref": "#/properties/properties/properties/contacts/items/allOf/0/properties/logo/allOf/0"
                         },
                         {
                           "type": "object",
@@ -1038,7 +794,7 @@
         },
         "externalIds": {
           "type": "array",
-          "description": "An identifier for the resource assigned by an external (to the catalogue) entity.",
+          "description": "An identifier for the resource assigned by an external (to the catalog) entity.",
           "items": {
             "type": "object",
             "properties": {
@@ -1074,31 +830,13 @@
             "recommended"
           ]
         },
+        "rights": {
+          "type": "string",
+          "description": "A statement that concerns all rights not addressed by the license such as a copyright statement."
+        },
         "wmo:status": {
           "description": "The operational status of a given dataset.",
-          "type": "object",
-          "required": [
-            "id"
-          ],
-          "properties": {
-            "id": {
-              "type": "string",
-              "description": "An identifier for the concept."
-            },
-            "title": {
-              "type": "string",
-              "description": "A human readable title for the concept."
-            },
-            "description": {
-              "type": "string",
-              "description": "A human readable description for the concept."
-            },
-            "url": {
-              "type": "string",
-              "format": "uri",
-              "description": "A URI providing further description of the concept."
-            }
-          }
+          "$ref": "#/properties/properties/properties/themes/items/properties/concepts/items"
         }
       }
     },
@@ -1106,452 +844,109 @@
       "type": "array",
       "minItems": 1,
       "items": {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml",
-        "title": "WCMP link object definition",
-        "description": "WCMP link object definition",
-        "required": [
-          "href"
-        ],
-        "properties": {
-          "href": {
-            "type": "string",
-            "format": "url"
-          },
-          "rel": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "hreflang": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "templated": {
-            "type": "boolean"
-          },
-          "variables": {
-            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-            "type": "object"
-          },
-          "created": {
-            "type": "string",
-            "description": "Date of creation of the resource pointed to by the link.",
-            "format": "date-time"
-          },
-          "updated": {
-            "type": "string",
-            "description": "Most recent date on which the resource pointed to by the link was changed.",
-            "format": "date-time"
-          },
-          "channel": {
-            "type": "string",
-            "description": "topic to subscribe to for broker workflow"
-          },
-          "security": {
-            "type": "object",
-            "patternProperties": {
-              "^[a-zA-Z0-9\\.\\-_]+$": {
-                "oneOf": [
-                  {
+        "$ref": "#/definitions/Link"
+      }
+    }
+  },
+  "definitions": {
+    "Link": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml",
+      "title": "WCMP link object definition",
+      "description": "WCMP link object definition",
+      "required": [
+        "href"
+      ],
+      "properties": {
+        "href": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/href"
+        },
+        "rel": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/rel"
+        },
+        "type": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/type"
+        },
+        "hreflang": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/hreflang"
+        },
+        "title": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/title"
+        },
+        "templated": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/templated"
+        },
+        "variables": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/variables"
+        },
+        "created": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/created"
+        },
+        "updated": {
+          "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/updated"
+        },
+        "channel": {
+          "type": "string",
+          "description": "topic to subscribe to for broker workflow"
+        },
+        "security": {
+          "type": "object",
+          "patternProperties": {
+            "^[a-zA-Z0-9\\.\\-_]+$": {
+              "oneOf": [
+                {
+                  "$ref": "#/definitions/Schema_Reference"
+                },
+                {
+                  "$ref": "#/definitions/Schema_SecurityScheme"
+                }
+              ]
+            }
+          }
+        },
+        "distribution": {
+          "type": "object",
+          "description": "the additional information qualifying the service and allowing to build and display the \"access\" information in a portal",
+          "properties": {
+            "availableFormats": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "available format short name."
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "the individual format description to allow building the portal information"
+                  },
+                  "numberOFiles": {
+                    "type": "string",
+                    "description": "typical number of files disseminated by the distribution mechanism over a period of time"
+                  },
+                  "typicalFilesize": {
+                    "type": "string",
+                    "description": "size of a typical individual file (e.g. KB, MB, GB)"
+                  },
+                  "typicalFilename": {
+                    "type": "string",
+                    "description": "example filename"
+                  },
+                  "samples": {
                     "type": "object",
-                    "required": [
-                      "$ref"
-                    ],
-                    "patternProperties": {
-                      "^\\$ref$": {
-                        "type": "string",
-                        "format": "uri-reference"
-                      }
+                    "description": "links of samples that can be openly accessed by users to provide a better understanding of the data",
+                    "items": {
+                      "type": "object",
+                      "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml"
                     }
                   },
-                  {
-                    "oneOf": [
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "name",
-                          "in"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "apiKey"
-                            ]
-                          },
-                          "name": {
-                            "type": "string"
-                          },
-                          "in": {
-                            "type": "string",
-                            "enum": [
-                              "header",
-                              "query",
-                              "cookie"
-                            ]
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        },
-                        "patternProperties": {
-                          "^x-": {}
-                        },
-                        "additionalProperties": false
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "scheme",
-                          "type"
-                        ],
-                        "properties": {
-                          "scheme": {
-                            "type": "string"
-                          },
-                          "bearerFormat": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          },
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "http"
-                            ]
-                          }
-                        },
-                        "patternProperties": {
-                          "^x-": {}
-                        },
-                        "additionalProperties": false,
-                        "oneOf": [
-                          {
-                            "description": "Bearer",
-                            "properties": {
-                              "scheme": {
-                                "enum": [
-                                  "bearer"
-                                ]
-                              }
-                            }
-                          },
-                          {
-                            "description": "Non Bearer",
-                            "not": {
-                              "required": [
-                                "bearerFormat"
-                              ]
-                            },
-                            "properties": {
-                              "scheme": {
-                                "not": {
-                                  "enum": [
-                                    "bearer"
-                                  ]
-                                }
-                              }
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "flows"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "oauth2"
-                            ]
-                          },
-                          "flows": {
-                            "type": "object",
-                            "properties": {
-                              "implicit": {
-                                "type": "object",
-                                "required": [
-                                  "authorizationUrl",
-                                  "scopes"
-                                ],
-                                "properties": {
-                                  "authorizationUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "refreshUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "scopes": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                      "type": "string"
-                                    }
-                                  }
-                                },
-                                "patternProperties": {
-                                  "^x-": {}
-                                },
-                                "additionalProperties": false
-                              },
-                              "password": {
-                                "type": "object",
-                                "required": [
-                                  "tokenUrl"
-                                ],
-                                "properties": {
-                                  "tokenUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "refreshUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "scopes": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                      "type": "string"
-                                    }
-                                  }
-                                },
-                                "patternProperties": {
-                                  "^x-": {}
-                                },
-                                "additionalProperties": false
-                              },
-                              "clientCredentials": {
-                                "type": "object",
-                                "required": [
-                                  "tokenUrl"
-                                ],
-                                "properties": {
-                                  "tokenUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "refreshUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "scopes": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                      "type": "string"
-                                    }
-                                  }
-                                },
-                                "patternProperties": {
-                                  "^x-": {}
-                                },
-                                "additionalProperties": false
-                              },
-                              "authorizationCode": {
-                                "type": "object",
-                                "required": [
-                                  "authorizationUrl",
-                                  "tokenUrl"
-                                ],
-                                "properties": {
-                                  "authorizationUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "tokenUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "refreshUrl": {
-                                    "type": "string",
-                                    "format": "uri-reference"
-                                  },
-                                  "scopes": {
-                                    "type": "object",
-                                    "additionalProperties": {
-                                      "type": "string"
-                                    }
-                                  }
-                                },
-                                "patternProperties": {
-                                  "^x-": {}
-                                },
-                                "additionalProperties": false
-                              }
-                            },
-                            "patternProperties": {
-                              "^x-": {}
-                            },
-                            "additionalProperties": false
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        },
-                        "patternProperties": {
-                          "^x-": {}
-                        },
-                        "additionalProperties": false
-                      },
-                      {
-                        "type": "object",
-                        "required": [
-                          "type",
-                          "openIdConnectUrl"
-                        ],
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "enum": [
-                              "openIdConnect"
-                            ]
-                          },
-                          "openIdConnectUrl": {
-                            "type": "string",
-                            "format": "uri-reference"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        },
-                        "patternProperties": {
-                          "^x-": {}
-                        },
-                        "additionalProperties": false
-                      }
-                    ]
-                  }
-                ]
-              }
-            }
-          },
-          "distribution": {
-            "type": "object",
-            "description": "the additional information qualifying the service and allowing to build and display the \"access\" information in a portal",
-            "properties": {
-              "availableFormats": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string",
-                      "description": "available format short name."
-                    },
-                    "description": {
-                      "type": "string",
-                      "description": "the individual format description to allow building the portal information"
-                    },
-                    "numberOFiles": {
-                      "type": "string",
-                      "description": "typical number of files disseminated by the distribution mechanism over a period of time"
-                    },
-                    "typicalFilesize": {
-                      "type": "string",
-                      "description": "size of a typical individual file (e.g. KB, MB, GB)"
-                    },
-                    "typicalFilename": {
-                      "type": "string",
-                      "description": "example filename"
-                    },
-                    "samples": {
+                  "documentation": {
+                    "type": "array",
+                    "description": "links to the associated documentation available for this format when applicable",
+                    "items": {
                       "type": "object",
-                      "description": "links of samples that can be openly accessed by users to provide a better understanding of the data",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "href"
-                        ],
-                        "properties": {
-                          "href": {
-                            "type": "string",
-                            "format": "url"
-                          },
-                          "rel": {
-                            "type": "string"
-                          },
-                          "type": {
-                            "type": "string"
-                          },
-                          "hreflang": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          },
-                          "templated": {
-                            "type": "boolean"
-                          },
-                          "variables": {
-                            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                            "type": "object"
-                          },
-                          "created": {
-                            "type": "string",
-                            "description": "Date of creation of the resource pointed to by the link.",
-                            "format": "date-time"
-                          },
-                          "updated": {
-                            "type": "string",
-                            "description": "Most recent date on which the resource pointed to by the link was changed.",
-                            "format": "date-time"
-                          }
-                        }
-                      }
-                    },
-                    "documentation": {
-                      "type": "array",
-                      "description": "links to the associated documentation available for this format when applicable",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "href"
-                        ],
-                        "properties": {
-                          "href": {
-                            "type": "string",
-                            "format": "url"
-                          },
-                          "rel": {
-                            "type": "string"
-                          },
-                          "type": {
-                            "type": "string"
-                          },
-                          "hreflang": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          },
-                          "templated": {
-                            "type": "boolean"
-                          },
-                          "variables": {
-                            "description": "This object contains one key per substitution variable in a templated\nhref.  Each key defines the schema of one substitution variable using\na JSON Schema fragment and can thus include things like the data type\nof the variable, enumerations, minimum values, maximum values, etc.\nIn combination with a templated href, the variables section should\nprovide enough information to bind to the target resource (e.g. a WMS).",
-                            "type": "object"
-                          },
-                          "created": {
-                            "type": "string",
-                            "description": "Date of creation of the resource pointed to by the link.",
-                            "format": "date-time"
-                          },
-                          "updated": {
-                            "type": "string",
-                            "description": "Most recent date on which the resource pointed to by the link was changed.",
-                            "format": "date-time"
-                          }
-                        }
-                      }
+                      "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml"
                     }
                   }
                 }
@@ -1560,6 +955,307 @@
           }
         }
       }
+    },
+    "Schema_APIKeySecurityScheme": {
+      "type": "object",
+      "required": [
+        "type",
+        "name",
+        "in"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "apiKey"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "in": {
+          "type": "string",
+          "enum": [
+            "header",
+            "query",
+            "cookie"
+          ]
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_AuthorizationCodeOAuthFlow": {
+      "type": "object",
+      "required": [
+        "authorizationUrl",
+        "tokenUrl"
+      ],
+      "properties": {
+        "authorizationUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "tokenUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "refreshUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "scopes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_ClientCredentialsFlow": {
+      "type": "object",
+      "required": [
+        "tokenUrl"
+      ],
+      "properties": {
+        "tokenUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "refreshUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "scopes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_HTTPSecurityScheme": {
+      "type": "object",
+      "required": [
+        "scheme",
+        "type"
+      ],
+      "properties": {
+        "scheme": {
+          "type": "string"
+        },
+        "bearerFormat": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "http"
+          ]
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "description": "Bearer",
+          "properties": {
+            "scheme": {
+              "enum": [
+                "bearer"
+              ]
+            }
+          }
+        },
+        {
+          "description": "Non Bearer",
+          "not": {
+            "required": [
+              "bearerFormat"
+            ]
+          },
+          "properties": {
+            "scheme": {
+              "not": {
+                "enum": [
+                  "bearer"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "Schema_ImplicitOAuthFlow": {
+      "type": "object",
+      "required": [
+        "authorizationUrl",
+        "scopes"
+      ],
+      "properties": {
+        "authorizationUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "refreshUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "scopes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_OAuth2SecurityScheme": {
+      "type": "object",
+      "required": [
+        "type",
+        "flows"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "oauth2"
+          ]
+        },
+        "flows": {
+          "$ref": "#/definitions/Schema_OAuthFlows"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_OAuthFlows": {
+      "type": "object",
+      "properties": {
+        "implicit": {
+          "$ref": "#/definitions/Schema_ImplicitOAuthFlow"
+        },
+        "password": {
+          "$ref": "#/definitions/Schema_PasswordOAuthFlow"
+        },
+        "clientCredentials": {
+          "$ref": "#/definitions/Schema_ClientCredentialsFlow"
+        },
+        "authorizationCode": {
+          "$ref": "#/definitions/Schema_AuthorizationCodeOAuthFlow"
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_OpenIdConnectSecurityScheme": {
+      "type": "object",
+      "required": [
+        "type",
+        "openIdConnectUrl"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "openIdConnect"
+          ]
+        },
+        "openIdConnectUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_PasswordOAuthFlow": {
+      "type": "object",
+      "required": [
+        "tokenUrl"
+      ],
+      "properties": {
+        "tokenUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "refreshUrl": {
+          "type": "string",
+          "format": "uri-reference"
+        },
+        "scopes": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "patternProperties": {
+        "^x-": {}
+      },
+      "additionalProperties": false
+    },
+    "Schema_Reference": {
+      "type": "object",
+      "required": [
+        "$ref"
+      ],
+      "patternProperties": {
+        "^\\$ref$": {
+          "type": "string",
+          "format": "uri-reference"
+        }
+      }
+    },
+    "Schema_SecurityScheme": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/Schema_APIKeySecurityScheme"
+        },
+        {
+          "$ref": "#/definitions/Schema_HTTPSecurityScheme"
+        },
+        {
+          "$ref": "#/definitions/Schema_OAuth2SecurityScheme"
+        },
+        {
+          "$ref": "#/definitions/Schema_OpenIdConnectSecurityScheme"
+        }
+      ]
     }
   }
 }
