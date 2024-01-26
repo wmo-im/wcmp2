@@ -30,7 +30,7 @@ If `+properties.wmo:dataPolicy+` is found, check that `+properties.wmo:dataPolic
 --
 [.component,class=step]
 --
-If `+properties.wmo:dataPolicy+` is equal to `+recommended+`, check for the existence of at least one `+links+` item containing a `+license+` or `+copyright+` link relation (`+rel+`).
+If `+properties.wmo:dataPolicy+` is equal to `+recommended+`, check for the existence of at least one `+links+` item containing a `+license+` link relation (`+rel+`).
 --
 =====
 
