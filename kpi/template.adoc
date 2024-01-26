@@ -1,25 +1,25 @@
-== KPI-XXX: my KPI
+=== my KPI
 
-=== WCMP properties
+==== WCMP properties
 
 * `JSONPath1`
 * `JSONPath2`
 
-=== Rationale for measurement
+==== Rationale for measurement
 
 Why should this measurement take place.
 
-=== Measurement
+==== Measurement
 
 Text description of measurement.
 
-=== Rules
+==== Guidance
+
+Recommendations and hints/advice.
+
+==== Rules
 
 - use JSONPath and pseudo-code (if then else)
 - provide total possible score
 
 *Total possible score: x (100%)*
-
-=== Guidance
-
-Recommendations and hints/advice.
