@@ -102,6 +102,7 @@
                 ],
                 "links": [
                     {
+                        "rel": "about",
                         "type": "text/html",
                         "href": "https://donneespubliques.meteofrance.fr"
                     }

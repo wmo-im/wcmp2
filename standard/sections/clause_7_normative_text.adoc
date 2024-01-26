@@ -100,8 +100,11 @@ The table below provides an overview of the set of properties that may be includ
 
 |``links``
 |**required**
-//q: do offline linkages exist too? 
 |Online linkages to data retrieval or additional resources associated with the dataset (see <<links-distribution>>)
+
+|``linkTemplates``
+|optional
+|Online link templates for dynamic / API access (see <<_templated_links>>)
 
 |``properties.*``
 |optional
@@ -780,23 +783,6 @@ The table below provides an overview of the properties of a link object.
 |**optional**
 |A human-readable name for the link (can be used for display on search / discovery web portals)
 
-|``templated``
-|**optional**
-|Indicates whether the link is a URI template or not
-
-|``variables``
-|**optional**
-|If the link is a URI template (``templated=true``), the variables help the user construct a
- link from the template with the appropriate values
-
-|``created``
-|**optional**
-|The date that the link was created
-
-|``updated``
-|**optional**
-|The date that the link was updated
-
 |``channel``
 |**conditional**
 |For data made available via MQTT, the topic to which a user may subscribe to for notifications and access
@@ -883,16 +869,18 @@ For recommended data, the ``links`` property may also provide links to services 
 ]
 ----
 
-.Example: a templated link object of a WMS service providing API access to images:
+===== Templated links
 
+Templated links allow for specifying a pattern of a link in support API interaction (where parameter values are variable).
+
+.Example: a templated link object of a WMS service providing API access to images:
 [source,json]
 ----
-"links": [{
+"linkTemplates": [{
   "rel": "item",
   "type": "image/png",
   "title": "Eumetview",
-  "href": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
-  "templated": true,
+  "uriTemplate": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
   "variables": {
     "crs": {
       "description": "...",

@@ -115,3 +115,7 @@ properties:
     minItems: 1
     items:
       $ref: link.yaml
+  linkTemplates:
+    type: array
+    items:
+      $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/linkTemplate.yaml'

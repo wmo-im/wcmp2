@@ -122,10 +122,12 @@
                 ],
                 "links": [
                     {
+                        "rel": "about",
                         "type": "text/html",
                         "href": "https://www.dwd.de/wmc"
                     },
                     {
+                        "rel": "about",
                         "type": "text/html",
                         "href": "https://gisc.dwd.de"
                     }
