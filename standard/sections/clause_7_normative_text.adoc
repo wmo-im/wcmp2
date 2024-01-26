@@ -2,7 +2,7 @@
 
 A WCMP record provides descriptive information about a dataset made available through WIS2.
 
-=== Conformance Class Core
+=== Conformance Class "Core"
 
 ==== Overview
 
@@ -94,10 +94,17 @@ The table below provides an overview of the set of properties that may be includ
 |**conditional**
 |Classification code of ``core`` or ``recommended`` based on the WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009].  **Required** for datasets (see <<_properties_wmo_data_policy>>)
 
+|``properties.rights``
+|optional
+|A statement that concerns all rights not addressed by the license such as a copyright statement. (see <<_properties_wmo_data_policy>>)
+
 |``links``
 |**required**
-//q: do offline linkages exist too? 
 |Online linkages to data retrieval or additional resources associated with the dataset (see <<links-distribution>>)
+
+|``linkTemplates``
+|optional
+|Online link templates for dynamic / API access (see <<_templated_links>>)
 
 |``properties.*``
 |optional
@@ -307,9 +314,9 @@ include::../requirements/core/REQ_themes_wis2_global_service.adoc[]
 include::../recommendations/core/REC_granularity.adoc[]
 include::../recommendations/core/PER_themes.adoc[]
 
-==== Geospatial and Temporal Extents
+==== Geospatial and temporal extents
 
-===== Geospatial Extent
+===== Geospatial extent
 
 The `+geometry+` property is the general bounding spatial extent of the dataset in the geographic coordinate system.  
 Geospatial bounding extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.
@@ -348,7 +355,7 @@ include::../recommendations/core/REC_extent_geospatial_point.adoc[]
 include::../recommendations/core/REC_extent_geospatial_precision.adoc[]
 include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[]
 
-===== Additional Geospatial Extents
+===== Additional geospatial extents
 
 The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset. For example, it may be useful for non-geographic data or for describing multiple sub-areas of a dataset.
 The `+additionalExtents.spatial.bbox+` property
@@ -381,7 +388,7 @@ This property also facilitates catalogue searches with geospatial predicate (wit
 
 include::../recommendations/core/PER_extent_geospatial.adoc[]
 
-===== Temporal Extent
+===== Temporal extent
 
 The `+time+` property describes the general bounding extent of the dataset and the temporal resolution. 
 
@@ -480,7 +487,7 @@ include::../requirements/core/REQ_extent_temporal.adoc[]
 include::../recommendations/core/REC_extent_temporal.adoc[]
 include::../recommendations/core/PER_extent_temporal_service.adoc[]
 
-===== Additional Temporal Extents
+===== Additional temporal extents
 
 The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset. For example, it may be useful to represent multiple time instances or to identify other temporal reference systems. 
 Temporal extents can be fully bound or open in either direction.  An `+additionalExtents.temporal.resolution+` property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
@@ -582,7 +589,7 @@ The `+version+` property is the version or edition of the dataset. Datasets may 
 
 include::../recommendations/core/PER_version.adoc[]
 
-==== Properties / Persistent Identifiers
+==== Properties / Persistent identifiers
 
 The `+externalIds+` property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers are commonly used for scientific publications and datasets.
 
@@ -629,7 +636,7 @@ Examples of persistent identifiers include, but are not limited to:
 include::../recommendations/core/REC_pids.adoc[]
 include::../recommendations/core/PER_pids.adoc[]
 
-==== Properties / Record Creation Date
+==== Properties / Record creation date
 
 The `+created+` property is a single date that the WCMP metadata record was created. Note, that this date is not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
 
@@ -646,7 +653,7 @@ The `+created+` property is a single date that the WCMP metadata record was crea
 
 include::../requirements/core/REQ_record_creation_date.adoc[]
 
-==== Properties / Record Update Date
+==== Properties / Record update date
 
 The `+updated+` property is the date that the WCMP metadata record was last updated. Note, that this date is not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
 
@@ -678,14 +685,14 @@ The `+status+` property identifies the lifecycle of a given dataset.  See Annex 
 }
 ----
 
-==== Properties / WMO Data Policy
+==== Properties / WMO data policy
 
 The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009]
 for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
 
 Licensing and copyright are expressed via the `+links+` property (see distribution section), providing access, license and attribution details as required. Conditions on use of the data should be indicated for transparency and clarification.
 
-.Example: Core Data
+.Example: Core data
 
 [source,json]
 ----
@@ -696,7 +703,7 @@ Licensing and copyright are expressed via the `+links+` property (see distributi
 }
 ----
 
-.Example: Recommended Data
+.Example: Recommended data
 [source,json]
 ----
 "properties": {
@@ -708,7 +715,7 @@ Licensing and copyright are expressed via the `+links+` property (see distributi
 
 It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
 
-.Example: Recommended Data with additional conditions and provider-specific details:
+.Example: Recommended data with additional conditions and provider-specific details:
 [source,json]
 ----
 "properties": {
@@ -724,11 +731,23 @@ It is useful to add provider-specific details to have the most detailed informat
 }]
 ----
 
+To express rights not address by a license, the `+rights+` property can be used as follows:
+
+.Example: Rights
+[source,json]
+----
+"properties": {
+ ...
+ "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021))"
+ ...
+}
+----
+
 include::../requirements/core/REQ_data_policy.adoc[]
 include::../recommendations/core/REC_data_policy.adoc[]
 include::../recommendations/core/PER_data_policy.adoc[]
 
-==== Links and Distribution Information [[links-distribution]]
+==== Links and distribution information [[links-distribution]]
 
 ===== Overview
 
@@ -763,23 +782,6 @@ The table below provides an overview of the properties of a link object.
 |``title``
 |**optional**
 |A human-readable name for the link (can be used for display on search / discovery web portals)
-
-|``templated``
-|**optional**
-|Indicates whether the link is a URI template or not
-
-|``variables``
-|**optional**
-|If the link is a URI template (``templated=true``), the variables help the user construct a
- link from the template with the appropriate values
-
-|``created``
-|**optional**
-|The date that the link was created
-
-|``updated``
-|**optional**
-|The date that the link was updated
 
 |``channel``
 |**conditional**
@@ -867,16 +869,18 @@ For recommended data, the ``links`` property may also provide links to services 
 ]
 ----
 
-.Example: a templated link object of a WMS service providing API access to images:
+===== Templated links
 
+Templated links allow for specifying a pattern of a link in support API interaction (where parameter values are variable).
+
+.Example: a templated link object of a WMS service providing API access to images:
 [source,json]
 ----
-"links": [{
+"linkTemplates": [{
   "rel": "item",
   "type": "image/png",
   "title": "Eumetview",
-  "href": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
-  "templated": true,
+  "uriTemplate": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
   "variables": {
     "crs": {
       "description": "...",
@@ -1048,7 +1052,7 @@ links to data and services.
 
 |===
 
-==== Additional Properties
+==== Additional properties
 
 A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.
