@@ -53,11 +53,11 @@
         "temporal": {
             "interval": [
                 [
-                    "R/T00Z",
+                    "T00Z",
                     "PT180H"
                 ],
                 [
-                    "R/T12Z",
+                    "T12Z",
                     "PT180H"
                 ]
             ],
