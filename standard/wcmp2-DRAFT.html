@@ -2198,7 +2198,10 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 <p>Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC.</p>
 </div>
 <div class="paragraph">
-<p>Temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets).</p>
+<p>In addition the temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets). If only times are given for the interval, it is implicitly assumed that those are recurring every day.</p>
+</div>
+<div class="paragraph">
+<p>In cases where no time indication can be derived, it is applicable to state the value of <code>null</code>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Examples</div>
@@ -2226,11 +2229,15 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"time": {
-  "interval": [
-    ["R/T00Z", "PT180H"],
-    ["R/T12Z", "PT180H"]
-  ],
-  "resolution": "PT6H"
+  "interval" : ["T00Z", "T23Z"],
+  "resolution": "PT1H"
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"time": {
+  "interval": ["2018-04-22", ".."],
 }</code></pre>
 </div>
 </div>
@@ -2240,40 +2247,39 @@ signed number between -90 and 90, greater than or equal to miny.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>If only times are given for the interval, it is implicitly assumed that those are recurring every day.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"time": {
-  "interval" : ["T00Z", "T23Z"],
-  "resolution": "PT1H"
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Some cases might be more complex due to the product&#8217;s characteristics.</p>
-</div>
-<div class="paragraph">
-<p>The example below describes two intervals with the model run time (start) up to the range covered by the model run (end). Here, the end of the interval is characterised by a time period. Additionally, the time steps within the model range are relevant information (resolution).</p>
-</div>
-<div class="paragraph">
 <p>To ensure clarity, an additional human-readable explanation is given in the <code>properties.description</code>.
 Further time-related characteristics (e.g. frequency of modifications, available data, etc.) should be added in <code>properties.themes</code>.</p>
 </div>
+<div class="paragraph">
+<p>Some cases might be more complex due to the product&#8217;s characteristics.
+If necessary, further granularity can be indicated by the <code>additionalExtents.temporal</code> property (see <a href="#_additional_temporal_extents">Additional temporal extents</a>).</p>
+</div>
 <div class="listingblock">
-<div class="title">Example: complex time information with additional explanation and characteristics</div>
+<div class="title">Example: Complex time indication</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"time": {
-  "interval": [
-    ["T00Z", "PT180H"],
-    ["T12Z", "PT180H"]
-  ],
-  "resolution": "PT6H"
+  "interval" : ["2018-04-22", ".."]
 },
+"additionalExtents": {
+  "temporal": {
+    "interval": [
+      [
+        "T00Z",
+        "PT180H"
+      ],
+      [
+        "T12Z",
+        "PT180H"
+      ]
+    ],
+    "resolution": "PT6H",
+    "trs": "http://www.opengis.net/def/trs/ISO-8601"
+  }
+}
+...
 "properties": {
   ...
-  "description": "[...] up to +180h every 6h, runs 00/12 UTC [...]."
-  ...
+  "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
   "themes": [
     {
       "concepts": [
@@ -2281,14 +2287,9 @@ Further time-related characteristics (e.g. frequency of modifications, available
       ],
       "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
     }
-    ...
   ]
-  ...
 }</code></pre>
 </div>
-</div>
-<div class="paragraph">
-<p>If necessary, further granularity can be indicated by the <code>additionalExtents.temporal</code> property.</p>
 </div>
 <table id="req_core_extent_temporal" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -2311,7 +2312,7 @@ Further time-related characteristics (e.g. frequency of modifications, available
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>time</code> property SHALL provide the value of <code>null</code> when a conformant time cannot be derived.</p>
+<p>The <code>time</code> property SHALL provide either ONE <code>date</code>, <code>timestamp</code>, <code>interval</code> or the value of <code>null</code> when a conformant time cannot be derived.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2388,12 +2389,16 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
   "temporal": {
     "interval": [
       [
-        "1924-08-18",
-        null
+        "T00Z",
+        "PT180H"
+      ],
+      [
+        "T12Z",
+        "PT180H"
       ]
     ],
-    "resolution": "PT1H",
-    "trs": "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+    "resolution": "PT6H",
+    "trs": "http://www.opengis.net/def/trs/ISO-8601"
   }
 }</code></pre>
 </div>
@@ -2433,7 +2438,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
   "contacts": [{
     "identifier": "ECCC",
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
-    "positionName": "National Inquiry Response Team",
+    "name": "National Inquiry Response Team",
     "phones": [{
       "value": "+18199972800"
     }],
@@ -2761,6 +2766,50 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 }</code></pre>
 </div>
 </div>
+<table id="rec_core_status" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/status</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHOULD provide a <code>properties.status</code> property to identify the operational status of a given dataset.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHOULD provide a <code>properties.status.id</code> property to identify the concept of the status (see Annex D for possible codelists to use).</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHOULD provide a <code>properties.status.title</code> property to provide a human readable title for the concept.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHOULD provide a <code>properties.status.description</code> property to provide a human readable description for the concept.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A WCMP record SHOULD provide a <code>properties.status.url</code> property to provide further description of the concept via the given URI.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect3">
 <h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO data policy</h4>
@@ -2862,7 +2911,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/data_policy_conditions</strong></p>
 </div></div></td>
@@ -3220,7 +3269,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/links</strong></p>
 </div></div></td>
@@ -3304,7 +3353,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/distribution</strong></p>
 </div></div></td>
@@ -3324,37 +3373,43 @@ for the international exchange of Earth system data. The codelist values are <co
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.description</code> SHOULD describe the associated format.</p>
+<p>The <code>properties.distribution.availableFormats.name</code> property SHOULD describe the available format short name.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.typicalFilename</code> SHOULD describe the filenames that are available from the service link.</p>
+<p>The <code>properties.distribution.availableFormats.description</code> SHOULD describe the associated format.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.typicalFilesize</code> SHOULD describe the typical filesize available from the service link.</p>
+<p>The <code>properties.distribution.availableFormats.typicalFilename</code> SHOULD describe the filenames that are available from the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.numberOfFiles</code> SHOULD describe the typical number of files received during a given period (day, month, &#8230;&#8203;) when using the service link. It SHOULD follow the pattern X per day, X per month.</p>
+<p>The <code>properties.distribution.availableFormats.typicalFilesize</code> SHOULD describe the typical filesize available from the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.documentation</code> SHOULD be a <code>link</code> for accessing the documentation associated with the format.</p>
+<p>The <code>properties.distribution.availableFormats.numberOfFiles</code> SHOULD describe the typical number of files received during a given period (day, month, &#8230;&#8203;) when using the service link. It SHOULD follow the pattern X per day, X per month.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">H</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.productSamples</code> SHOULD be an array of direct links to representative samples of the data.</p>
+<p>The <code>properties.distribution.availableFormats.documentation</code> SHOULD be a <code>link</code> for accessing the documentation associated with the format.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">I</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>properties.distribution.availableFormats.samples</code> SHOULD be an array of direct links to representative samples of the data.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -5931,11 +5986,11 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
         "temporal": {
             "interval": [
                 [
-                    "R/T00Z",
+                    "T00Z",
                     "PT180H"
                 ],
                 [
-                    "R/T12Z",
+                    "T12Z",
                     "PT180H"
                 ]
             ],
@@ -6444,7 +6499,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-26 07:06:43 UTC
+Last updated 2024-01-26 07:09:58 UTC
 </div>
 </div>
 </body>
