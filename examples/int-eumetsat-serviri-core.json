@@ -32,7 +32,10 @@
         ]
     },
     "time": {
-        "interval": [ "2004-01-19", ".." ],
+        "interval": [
+            "2004-01-19",
+            ".."
+        ],
         "resolution": "PT15M"
     },
     "properties": {
@@ -55,11 +58,10 @@
         "language": "en",
         "contacts": [
             {
-                "name": "EUMETSAT",
+                "name": "Data Collection or Production Centre",
                 "organization": "European Organisation for the Exploitation of Meteorological Satellites",
                 "phones": [
                     {
-                        "value": "+4961518073660",
                         "value": "+4961518073770"
                     }
                 ],
@@ -80,18 +82,20 @@
                 ],
                 "links": [
                     {
-                        "rel": "canonical",
-                        "type": "text/html",
-                        "href": "https://www.eumetsat.int/contact-us"
+                        "href": "https://www.eumetsat.int",
+                        "rel": "about",
+                        "type": "text/html"
+                    },
+                    {
+                        "href": "https://www.eumetsat.int/themes/eumetsat_theme/images/eumetsat_logo_white.svg",
+                        "type": "image/svg+xml",
+                        "rel": "preview"
                     }
                 ],
                 "roles": [
-                   "host",
-                   "producer"
-                ],
-                "positionName": "Data Collection or Production Centre",
-                "organizationLogo": "https://www.eumetsat.int/eum_logo",
-                "onlineResource": "https://www.eumetsat.int"
+                    "host",
+                    "producer"
+                ]
             }
         ],
         "themes": [
@@ -141,97 +145,105 @@
             "title": "EUMETSAT Datastore",
             "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
             "distribution": {
-              "availableFormats": [{
-                "name": "native",
-                "description": "This is the native format sent in a compressed Submission Information Package (SIP) by default.",
-                "numberOfFiles": "96 per day",
-                "typicalFilesize": "185 MB",
-                "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
-                "iproductSamples": [
-                                     "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
-                                   ],
-                "documentation": [{
-                  "rel": "canonical",
-				  "title": "SIP documentation and tools",
-                  "type": "text/html",
-                  "href": "https://www.eumetsat.int/formats#SIP"
-                }]
-              }]
+                "availableFormats": [
+                    {
+                        "name": "native",
+                        "description": "This is the native format sent in a compressed Submission Information Package (SIP) by default.",
+                        "numberOfFiles": "96 per day",
+                        "typicalFilesize": "185 MB",
+                        "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
+                        "iproductSamples": [
+                            "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
+                        ],
+                        "documentation": [
+                            {
+                                "rel": "canonical",
+                                "title": "SIP documentation and tools",
+                                "type": "text/html",
+                                "href": "https://www.eumetsat.int/formats#SIP"
+                            }
+                        ]
+                    }
+                ]
             }
-         },
-         {
+        },
+        {
             "rel": "service",
             "href": "https://view.eumetsat.int/geoserver/msg_fes/ir108/ows?service=WMS&request=GetCapabilities&version=1.3.0",
             "type": "image/png",
             "title": "MSG IR 10.8"
-         },
-         {
-            "rel": "items",
-            "type": "image/png",
-            "title": "Eumetview MSG IR10.8",
-            "href": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
-            "templated": true,
-            "variables": {
-                "crs": {
-                "description": "...",
-                "type": "string",
-                "enum": [ "EPSG:4326", "EPSG:3857" ]
-                },
-                "bbox": {
-                  "description": "...",
-                  "type": "array",
-                  "items": {
-                    "type": "number",
-                    "format": "double"
-                  },
-                  "minItems": 4,
-                  "maxItems": 4
-                },
-                "width": {
-                  "description": "...",
-                  "type": "number",
-                  "format": "integer",
-                  "minimum": 600,
-                  "maximum": 5000
-                },
-                "height": {
-                  "description": "...",
-                  "type": "number",
-                  "format": "integer",
-                  "minimum": 600,
-                  "maximum": 5000
-                },
-                "format": {
-                  "description": "...",
-                  "type": "string",
-                  "enum": [
-                    "image/geotiff",
-                    "image/geotiff8",
-                    "image/gif",
-                    "image/jpeg",
-                    "image/png; mode=8bit"
-                  ]
-                },
-                "sampleRequest": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
-            }
-         },
-         {
+        },
+        {
             "rel": "license",
             "href": "https://www.eumetsat.int/eumetsat-data-licensing",
             "type": "text/html",
             "title": "EUMETSAT Data Licensing"
-         },
-         {
+        },
+        {
             "rel": "help",
             "type": "text/html",
             "title": "MSG Level 1.5 Image Data Format Description",
             "href": "https://www.eumetsat.int/media/45126"
-         },
-         {
+        },
+        {
             "rel": "help",
             "type": "application/vnd.ms-powerpoint",
             "title": "Meteorological Use Of The Seviri Ir3.9 Channel",
             "href": "http://eumetrain.org/IntGuide/PowerPoints/Channels/Channel_IR39.ppt"
-         }
+        }
+    ],
+    "linkTemplates": [
+        {
+            "rel": "items",
+            "type": "image/png",
+            "title": "Eumetview MSG IR10.8",
+            "uriTemplate": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
+            "variables": {
+                "crs": {
+                    "description": "...",
+                    "type": "string",
+                    "enum": [
+                        "EPSG:4326",
+                        "EPSG:3857"
+                    ]
+                },
+                "bbox": {
+                    "description": "...",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "format": "double"
+                    },
+                    "minItems": 4,
+                    "maxItems": 4
+                },
+                "width": {
+                    "description": "...",
+                    "type": "number",
+                    "format": "integer",
+                    "minimum": 600,
+                    "maximum": 5000
+                },
+                "height": {
+                    "description": "...",
+                    "type": "number",
+                    "format": "integer",
+                    "minimum": 600,
+                    "maximum": 5000
+                },
+                "format": {
+                    "description": "...",
+                    "type": "string",
+                    "enum": [
+                        "image/geotiff",
+                        "image/geotiff8",
+                        "image/gif",
+                        "image/jpeg",
+                        "image/png; mode=8bit"
+                    ]
+                },
+                "sampleRequest": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
+            }
+        }
     ]
 }

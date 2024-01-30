@@ -3,27 +3,35 @@ $id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml
 title: WCMP link object definition
 description: WCMP link object definition
 
+type: object
 required:
   - href
 properties:
-  href:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/href
   rel:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/rel
+    type: string
+    description: The type or semantics of the relation.
+    example: alternate
   type:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/type
+    type: string
+    description:
+      A hint indicating what the media type of the
+      result of dereferencing the link should be.
+    example: application/geo+json
   hreflang:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/hreflang
+    type: string
+    description:
+      A hint indicating what the language of the
+      result of dereferencing the link should be.
+    example: en
   title:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/title
-  templated:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/templated
-  variables:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/variables
-  created:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/created
-  updated:
-    $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml#/properties/updated
+    type: string
+    description:
+      Used to label the destination of a link
+      such that it can be used as a human-readable
+      identifier.
+    example: "Trierer Strasse 70, 53115 Bonn"
+  length:
+    type: integer
   channel:
     type: string
     description: topic to subscribe to for broker workflow
@@ -55,14 +63,12 @@ properties:
                 type: string
                 description: example filename
              samples:
-                type: object
                 description: links of samples that can be openly accessed by users to provide a better understanding of the data
                 items:
                   type: object
-                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/link.yaml
              documentation:
                 type: array
                 description: links to the associated documentation available for this format when applicable
                 items:
-                  type: object
-                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/common/link.yaml
+                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/link.yaml

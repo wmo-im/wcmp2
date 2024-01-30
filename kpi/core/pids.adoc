@@ -1,18 +1,52 @@
-== Persistent identifiers
+=== Persistent identifiers
 
-=== WCMP element(s)
+==== WCMP properties
 
 * `properties.externalIds`
 
-=== What is being measured
-
-Whether persistent identifier information is available, can be successfully identified, and provides citation instructions.
-
-=== Rationale for measurement
+==== Rationale for measurement
 
 Persistent identifiers allow data to be accessible and citable. They make research data easier to access, reuse and verify, thereby making it easier to build on previous work, conduct new research and avoid duplicating already existing work.
 
-=== Rules for implementation
+==== Measurement
+
+Whether persistent identifier information is available, can be successfully identified, and provides citation instructions.
+
+==== Guidance
+
+* Provide a persistent identifier
+* Provide a 'Cite as' template as a link object with `rel="cite-as"`
+
+===== Examples 
+
+```json
+"properties": {
+  ...
+  "externalIds": [{
+    "scheme": "doi",
+    "value": "https://dx.doi.org/10.14287/10000001"
+  }]
+  ...
+}
+```
+
+For a citation:
+
+```json
+"properties": {
+    ...
+    "links": [
+    ...
+    {
+        "rel": "cite-as",
+        "title": "Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004",
+        "type": "text/html",
+        "href": "https://dx.doi.org/10.14287/10000004"
+    }]
+  ...
+}
+```
+=== Rules
 
 .Persistent identifiers implementation rules
 |===
@@ -30,37 +64,3 @@ Persistent identifiers allow data to be accessible and citable. They make resear
 
 *Total possible score: 3 (100%)*
 
-=== Guidance to score well on this assessment
-
-* Provide a persistent identifier
-* Provide a 'Cite as' template as a link object with `rel="cite-as"`
-
-=== Examples 
-
-
-```json
-"properties": {
-  ...
-  "externalIds": [{
-    "scheme": "doi",
-    "value": "https://dx.doi.org/10.14287/10000001"
-  }]
-  ...
-}
-```
-
-For a citation:
-```json
-"properties": {
-    ...
-    "links": [
-    ...
-    {
-        "rel": "cite-as",
-        "title": "Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004",
-        "type": "text/html",
-        "href": "https://dx.doi.org/10.14287/10000004"
-    }]
-  ...
-]
-```
