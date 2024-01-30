@@ -112,6 +112,7 @@
                 ],
                 "links": [
                     {
+                        "rel": "about",
                         "type": "text/html",
                         "href": "http://gisc.wis.cma.cn/wis/portal.pub"
                     }
