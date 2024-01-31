@@ -143,7 +143,7 @@
             "title": "Data access API interface"
         },
         {
-            "rel": "related",
+            "rel": "about",
             "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
             "type": "text/html",
             "title": "Documentation"
