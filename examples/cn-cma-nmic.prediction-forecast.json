@@ -144,7 +144,7 @@
         },
         {
             "rel": "items",
-            "channel": "cache/a/wis2/#",
+            "channel": "origin/a/wis2/cn-cma-babj/weather/prediction/forecast/#",
             "type": "application/json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883"
