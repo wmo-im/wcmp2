@@ -77,7 +77,7 @@
                         "title": "Global Discovery Catalogue"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
             }
         ],
         "contacts": [
