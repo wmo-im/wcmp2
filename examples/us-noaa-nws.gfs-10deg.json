@@ -50,13 +50,10 @@
             "Tropopause",
             "Atmospheric Pressure Measurements",
             "Pressure Thickness",
-            "Sea Level Pressure",
             "Surface Pressure",
             "Land Cover",
             "Soil Moisture/Water Content",
-            "Soil Temperature",
             "Sea Surface Temperature",
-            "Albedo",
             "Incoming Solar Radiation",
             "Longwave Radiation",
             "Outgoing Longwave Radiation",
@@ -66,7 +63,6 @@
             "Atmospheric Stability",
             "Boundary Layer Temperature",
             "Dew Point Temperature",
-            "Surface Temperature",
             "Upper Air Temperature",
             "Water Vapor Processes",
             "Water Vapor Indicators",
@@ -81,8 +77,6 @@
             "Precipitation Rate",
             "Liquid Precipitation",
             "Solid Precipitation",
-            "Snow Cover",
-            "Snow Depth",
             "Sea Ice Concentration",
             "Land Use/Land Cover Classification",
             "Prediction",
@@ -122,8 +116,6 @@
             "middle_cloud_layer",
             "middle_cloud_top_level",
             "nominal_top_of_the_atmosphere",
-            "absolute_vorticity",
-            "albedo",
             "apparent_temperature",
             "best_(4_layer)_lifted_index",
             "categorical_freezing_rain_(yes=1;_no=0)",
@@ -200,13 +192,8 @@
             "u-component_storm_motion",
             "upward_long-wave_radiation_flux",
             "upward_short-wave_radiation_flux",
-            "v-component_of_wind",
-            "v-component_storm_motion",
-            "vegetation",
             "ventilation_rate",
             "vertical_speed_shear",
-            "vertical_velocity_(geometric)",
-            "vertical_velocity_(pressure)",
             "visibility",
             "volumetric_soil_moisture_content",
             "water_equivalent_of_accumulated_snow_depth",
@@ -220,7 +207,6 @@
             "weatherForecasts",
             "meteorology"
         ],
-        "keywordsCodespace": "http://codes.wmo.int/306/4678",
         "language": "en",
         "themes": [
             {
@@ -230,6 +216,52 @@
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "TODO - find a keyword matching old keywordsCodespace"
+                    }
+                ],
+                "scheme": "http://codes.wmo.int/306/4678"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "Absolute vorticity"
+                    },
+                    {
+                        "id": "Albedo"
+                    },
+                    {
+                        "id": "Pressure reduced to MSL"
+                    },
+                    {
+                        "id": "Snow cover"
+                    },
+                    {
+                        "id": "Snow depth"
+                    },
+                    {
+                        "id": "Soil temperature"
+                    },
+                    {
+                        "id": "v-component of wind"
+                    },
+                    {
+                        "id": "v-component storm motion"
+                    },
+                    {
+                        "id": "Vegetation"
+                    },
+                    {
+                        "id":"Vertical velocity (geometric))"
+                    },
+                    {
+                        "id":"Vertical velocity (pressure)"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/grib2/codeflag/_4.2"
             }
         ],
         "contacts": [
@@ -258,9 +290,10 @@
                 ],
                 "links": [
                     {
-                        "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
-                        "rel": "canonical",
-                        "type": "text/html"
+                        "href": "https://nomads.ncep.noaa.gov/info.php?page=documents",
+                        "rel": "about",
+                        "type": "text/html",
+                        "title": "NOMADS Documents"
                     }
                 ],
                 "contactInstructions": "email",
@@ -270,10 +303,7 @@
                 ]
             }
         ],
-        "formats": [
-            "GRIB2"
-        ],
-        "license": "http://codes.wmo.int/wmdr/DataPolicy/_WMOOther",
+        "wmo:dataPolicy": "recommended",
         "rights": "access"
     },
     "links": [
