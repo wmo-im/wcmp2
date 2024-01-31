@@ -41,6 +41,7 @@
         "created": "2022-06-23T18:36:00Z",
         "updated": "2022-06-23T18:36:00Z",
         "wmo:dataPolicy": "core",
+        "rights": "access",
         "type": "dataset",
         "title": "Global Forecast System 1 Degree Resolution",
         "description": "The Global Forecast System is a weather forecast model produced by the National Centers for Environmental Prediction.",
@@ -302,9 +303,7 @@
                     "producer"
                 ]
             }
-        ],
-        "wmo:dataPolicy": "recommended",
-        "rights": "access"
+        ]
     },
     "links": [
         {
