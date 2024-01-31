@@ -138,14 +138,7 @@
         "keywords": [
             "WIS2",
             "Global Cache"
-        ],
-        "externalIds": [
-            {
-                "scheme": "DWD",
-                "value": "de.dwd.globalcache"
-            }
-        ],
-        "language": "eng"
+        ]
     },
     "links": [
         {
