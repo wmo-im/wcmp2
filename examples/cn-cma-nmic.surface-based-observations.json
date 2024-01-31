@@ -50,20 +50,11 @@
                     }
                 ],
                 "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/weather/index.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "global-broker",
-                        "title": "Global Broker"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
             }
         ],
         "contacts": [
             {
-                "name": "GISC Beijing",
+                "name": "GISC Beijing Team",
                 "organization": "China Meteorological Administration (CMA); National Meteorological Information Center (NMIC)",
                 "phones": [
                     {
@@ -117,13 +108,6 @@
             "type": "text/html",
             "title": "Raw data download (bufr4)",
             "href": "https://wisdev.kishou.go.jp/data/wis2/chn/babj/data/core/weather/surface-based-observations/synop/"
-        },
-        {
-            "rel": "items",
-            "channel": "cache/a/wis2/#",
-            "type": "application/json",
-            "title": "Data notifications - WMO WIS2 Global Broker - MF",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883"
         },
         {
             "rel": "items",
