@@ -4,12 +4,7 @@
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
-    "time": {
-        "interval": [
-            "2024-01-01T00:00:00Z",
-            ".."
-        ]
-    },
+    "time": null,
     "geometry": {
         "type": "Polygon",
         "coordinates": [
