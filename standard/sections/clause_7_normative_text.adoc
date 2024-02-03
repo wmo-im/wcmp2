@@ -1039,10 +1039,10 @@ links to data and services.
 |`item`
 
 |A link to numerous stations that the dataset is based on
-|`http://def.wmo.int/def/rel/wmdr/-/FacilitySet`
+|`stations`
 
 |A link to a single station that the dataset is based on
-|`http://def.wmo.int/def/rel/wmdr/-/EnvironmentalMonitoringFacility`
+|`station`
 
 |citation
 |`cite-as`

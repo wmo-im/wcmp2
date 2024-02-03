@@ -112,7 +112,7 @@
     },
     "links": [
         {
-            "rel": "http://def.wmo.int/def/rel/wmdr/-/FacilitySet",
+            "rel": "stations",
             "href": "https://oscar.wmo.int/surface/rest/api/search/station/?&operatingStatus=Operational&territoryName=DEU&longitudeMin=5.87&longitudeMax=15.04&latitudeMax=55.06&latitudeMin=47.27",
             "type": "application/json",
             "title": "Stations associated with this dataset"

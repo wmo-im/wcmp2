@@ -114,7 +114,7 @@
     },
     "links": [
         {
-            "rel": "http://def.wmo.int/def/rel/wmdr/-/FacilitySet",
+            "rel": "stations",
             "href": "https://api.weather.gc.ca/collections/climate-stations/items",
             "type": "application/json",
             "title": "Stations associated with this dataset"
