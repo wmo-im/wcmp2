@@ -41,43 +41,51 @@
                 "concepts": [
                     {
                         "id": "weather",
-                        "title": "Weather"
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     },
                     {
                         "id": "climate",
-                        "title": "Climate"
+                        "title": "Climate",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/climate"
                     },
                     {
                         "id": "hydrology",
-                        "title": "Hydrology"
+                        "title": "Hydrology",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/hydrology"
                     },
                     {
                         "id": "atmospheric-composition",
-                        "title": "Atmospheric Composition"
+                        "title": "Atmospheric Composition",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/atmospheric-composition"
                     },
                     {
                         "id": "cryosphere",
-                        "title": "Cryosphere"
+                        "title": "Cryosphere",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/cryosphere"
                     },
                     {
                         "id": "ocean",
-                        "title": "Ocean"
+                        "title": "Ocean",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/ocean"
                     },
                     {
                         "id": "space-weather",
-                        "title": "Space Weather"
+                        "title": "Space Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/space-weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             },
             {
                 "concepts": [
                     {
                         "id": "global-broker",
-                        "title": "Global Broker"
+                        "title": "Global Broker",
+                        "url": "https://codes.wmo.int/wis/service-types/global-broker"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+                "scheme": "https://codes.wmo.int/wis/service-types"
             }
         ],
         "contacts": [

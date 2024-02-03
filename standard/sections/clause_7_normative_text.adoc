@@ -302,7 +302,7 @@ A WCMP metadata record can have one or more themes.
         "id": "weather",
         "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
       }],
-      "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+      "scheme": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline"
     }
   ]
   ...
@@ -613,13 +613,13 @@ Examples of persistent identifiers include, but are not limited to:
 "properties": {
   ...
   "externalIds": [{
-    "scheme": "doi",
+    "scheme": "https://doi.org",
     "value": "10.14287/10000001"
   }, {
-    "scheme": "hdl",
+    "scheme": "https://handle.net",
     "value": "2381/12775"
   }, {
-    "scheme": "ark",
+    "scheme": "https://arks.org",
     "value": "ark:/13030/tf5p30086k"
   }]
   ...
@@ -778,7 +778,7 @@ The table below provides an overview of the properties of a link object.
 |**optional**
 |The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
  by IANA link relationsfootnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] or WCMP2
- defined extensionsfootnote:[https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv] (see <<_link_relation_selection>>)
+ defined extensionsfootnote:[https://codes.wmo.int/wis/link-type] (see <<_link_relation_selection>>)
 
 |``type``
 |**optional**

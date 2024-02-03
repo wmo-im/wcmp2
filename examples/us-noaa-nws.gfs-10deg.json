@@ -226,10 +226,12 @@
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "weather",
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
