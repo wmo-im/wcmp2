@@ -52,10 +52,12 @@
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "weather",
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             },
 	    {
                 "concepts": [
@@ -110,7 +112,7 @@
     },
     "links": [
         {
-            "rel": "http://def.wmo.int/def/rel/wmdr/-/FacilitySet",
+            "rel": "stations",
             "href": "https://oscar.wmo.int/surface/rest/api/search/station/?&operatingStatus=Operational&territoryName=DEU&longitudeMin=5.87&longitudeMax=15.04&latitudeMax=55.06&latitudeMin=47.27",
             "type": "application/json",
             "title": "Stations associated with this dataset"

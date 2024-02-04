@@ -73,10 +73,12 @@
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "weather",
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -124,7 +126,7 @@
     },
     "links": [
         {
-            "rel": "http://def.wmo.int/def/rel/wmdr/-/FacilitySet",
+            "rel": "stations",
             "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
             "type": "text/csv",
             "title": "Stations associated with this dataset"

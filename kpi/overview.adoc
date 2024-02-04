@@ -59,10 +59,6 @@ pywcmp is provided as a resource to the community, under continuous
 improvement. Contributions are welcome and can be facilited by the
 WMO.
 
-=== Codelists rules
-
-TODO: pending https://github.com/wmo-im/wcmp2-codelists
-
 === Conventions
 
 ==== Symbols and abbreviated terms

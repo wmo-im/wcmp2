@@ -23,7 +23,7 @@ Whether persistent identifier information is available, can be successfully iden
 "properties": {
   ...
   "externalIds": [{
-    "scheme": "doi",
+    "scheme": "https://doi.org",
     "value": "https://dx.doi.org/10.14287/10000001"
   }]
   ...
@@ -55,7 +55,7 @@ For a citation:
 |The external identifiers object is present
 |1
 
-|At least one scheme is equal to `doi`, `ark`, or `hdl`
+|At least one scheme is equal to `https://doi.org`, `https://arks.org`, or `https://handle.net`
 |1
 
 |At least one citation exists as a link object with `rel="cite-as"`

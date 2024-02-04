@@ -46,19 +46,11 @@
                 "concepts": [
                     {
                         "id": "weather",
-                        "title": "Weather"
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/weather/index.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "global-broker",
-                        "title": "Global Broker"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
