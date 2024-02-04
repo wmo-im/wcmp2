@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-01-31</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-04</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-01-31</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-04</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1311,7 +1311,7 @@ structured data discovery, search, and relevant results.</p>
 <td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.wmo.int/spec/wcmp/2/conf/core" class="bare">http://www.wmo.int/spec/wcmp/2/conf/core</a></p></td>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://wis.wmo.int/spec/wcmp/2/conf/core" class="bare">http://wis.wmo.int/spec/wcmp/2/conf/core</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
@@ -1680,7 +1680,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_31">
-<a href="#_footnoteref_31">31</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/resource-type.csv</a>
+<a href="#_footnoteref_31">31</a>. <a href="https://codes.wmo.int/wis/resource-type" class="bare">https://codes.wmo.int/wis/resource-type</a>
 </div>
 </div></div></td>
 </tr>
@@ -1878,7 +1878,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
         "id": "weather",
         "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
       }],
-      "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+      "scheme": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline"
     }
   ]
   ...
@@ -2599,13 +2599,13 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
   "externalIds": [{
-    "scheme": "doi",
+    "scheme": "https://doi.org",
     "value": "10.14287/10000001"
   }, {
-    "scheme": "hdl",
+    "scheme": "https://handle.net",
     "value": "2381/12775"
   }, {
-    "scheme": "ark",
+    "scheme": "https://arks.org",
     "value": "ark:/13030/tf5p30086k"
   }]
   ...
@@ -2640,7 +2640,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide persistent identifier references via items in the <code>properties.externalIds</code> array property, where the value of <code>scheme</code> is based on an established persistent identifier scheme (such as <code>doi</code>, <code>ark</code>, <code>handle</code>, etc.), and the <code>value</code> property is the persistent identifier (for example, <code><a href="https://dx.doi.org/10.14287/10000001" class="bare">https://dx.doi.org/10.14287/10000001</a></code>).</p>
+<p>A WCMP record SHOULD provide persistent identifier references via items in the <code>properties.externalIds</code> array property, where the value of <code>scheme</code> is based on an established persistent identifier scheme (such as <code>https://doi.org</code>, <code>https://arks.org</code>, <code>https://handle.net</code>, etc.), and the <code>value</code> property is the persistent identifier (for example, <code><a href="https://dx.doi.org/10.14287/10000001" class="bare">https://dx.doi.org/10.14287/10000001</a></code>).</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3256,7 +3256,7 @@ for the international exchange of Earth system data. The codelist values are <co
 <a href="#_footnoteref_40">40</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
 </div>
 <div class="footnote" id="_footnotedef_41">
-<a href="#_footnoteref_41">41</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv</a>
+<a href="#_footnoteref_41">41</a>. <a href="https://codes.wmo.int/wis/link-type" class="bare">https://codes.wmo.int/wis/link-type</a>
 </div>
 </div></div></td>
 </tr>
@@ -3493,11 +3493,11 @@ links to data and services.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A link to numerous stations that the dataset is based on</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code><a href="http://def.wmo.int/def/rel/wmdr/-/FacilitySet" class="bare">http://def.wmo.int/def/rel/wmdr/-/FacilitySet</a></code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>stations</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A link to a single station that the dataset is based on</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code><a href="http://def.wmo.int/def/rel/wmdr/-/EnvironmentalMonitoringFacility" class="bare">http://def.wmo.int/def/rel/wmdr/-/EnvironmentalMonitoringFacility</a></code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>station</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">citation</p></td>
@@ -3612,7 +3612,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <dl>
 <dt class="hdlist1">label</dt>
 <dd>
-<p><a href="http://www.wmo.int/spec/wcmp/2/conf/core" class="bare">http://www.wmo.int/spec/wcmp/2/conf/core</a></p>
+<p><a href="http://wis.wmo.int/spec/wcmp/2/conf/core" class="bare">http://wis.wmo.int/spec/wcmp/2/conf/core</a></p>
 </dd>
 <dt class="hdlist1">subject</dt>
 <dd>
@@ -4046,7 +4046,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv</code>.</p>
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/topic-hierarchy/earth-system-discipline</code>.</p>
 </div>
 </div>
 </div>
@@ -4091,7 +4091,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv</code>.</p>
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/topic-hierarchy/earth-system-discipline</code>.</p>
 </div>
 </div>
 </div>
@@ -4109,7 +4109,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv</code>.</p>
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/wis/global-service-type</code>.</p>
 </div>
 </div>
 </div>
@@ -5842,10 +5842,12 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "weather",
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -5893,7 +5895,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
     },
     "links": [
         {
-            "rel": "http://def.wmo.int/def/rel/wmdr/-/FacilitySet",
+            "rel": "stations",
             "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
             "type": "text/csv",
             "title": "Stations associated with this dataset"
@@ -6025,7 +6027,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                         "id": "FM 92 GRIB edition 2"
                     }
                 ],
-                "scheme": "http://codes.wmo.int/codeform"
+                "scheme": "https://codes.wmo.int/grib2"
             },
             {
                 "concepts": [
@@ -6038,10 +6040,12 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "weather",
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -6183,43 +6187,51 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 "concepts": [
                     {
                         "id": "weather",
-                        "title": "Weather"
+                        "title": "Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
                     },
                     {
                         "id": "climate",
-                        "title": "Climate"
+                        "title": "Climate",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/climate"
                     },
                     {
                         "id": "hydrology",
-                        "title": "Hydrology"
+                        "title": "Hydrology",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/hydrology"
                     },
                     {
                         "id": "atmospheric-composition",
-                        "title": "Atmospheric Composition"
+                        "title": "Atmospheric Composition",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/atmospheric-composition"
                     },
                     {
                         "id": "cryosphere",
-                        "title": "Cryosphere"
+                        "title": "Cryosphere",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/cryosphere"
                     },
                     {
                         "id": "ocean",
-                        "title": "Ocean"
+                        "title": "Ocean",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/ocean"
                     },
                     {
                         "id": "space-weather",
-                        "title": "Space Weather"
+                        "title": "Space Weather",
+                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/space-weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
             },
             {
                 "concepts": [
                     {
                         "id": "global-broker",
-                        "title": "Global Broker"
+                        "title": "Global Broker",
+                        "url": "https://codes.wmo.int/wis/service-types/global-broker"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/service-types.csv"
+                "scheme": "https://codes.wmo.int/wis/service-types"
             }
         ],
         "contacts": [
@@ -6494,12 +6506,12 @@ of use when encoding the <code>properties.status</code> property..</p>
 <a href="#_footnoteref_38">38</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
 </div>
 <div class="footnote" id="_footnotedef_39">
-<a href="#_footnoteref_39">39</a>. <a href="https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv" class="bare">https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/link-type.csv</a>
+<a href="#_footnoteref_39">39</a>. <a href="https://codes.wmo.int/wis/link-type" class="bare">https://codes.wmo.int/wis/link-type</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-01-31 11:04:57 UTC
+Last updated 2024-02-04 17:52:53 UTC
 </div>
 </div>
 </body>
