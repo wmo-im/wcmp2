@@ -46,16 +46,15 @@
                 "concepts": [
                     {
                         "id": "weather",
-                        "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "title": "Weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/weather/index.csv"
             }
         ],
         "contacts": [
             {
-                "name": "GISC Beijing",
+                "name": "GISC Beijing Team",
                 "organization": "China Meteorological Administration (CMA); National Meteorological Information Center (NMIC)",
                 "phones": [
                     {
@@ -114,15 +113,8 @@
             "rel": "items",
             "channel": "cache/a/wis2/#",
             "type": "application/json",
-            "title": "Data notifications - WMO WIS2 Global Broker - MF",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883"
-        },
-        {
-            "rel": "items",
-            "channel": "cache/a/wis2/#",
-            "type": "application/json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
-            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883"
+            "href": "mqtts://everyone:everyone@example.org:8883"
         }
     ]
 }

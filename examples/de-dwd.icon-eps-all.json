@@ -198,7 +198,7 @@
         {
             "rel": "items",
             "channel": "origin/a/wis2/de-dwd/data/core/weather/prediction/forecast/medium-range",
-            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
+            "href": "mqtts://everyone:everyone@example.org:8883",
             "type": "application/json",
             "title": "Data notifications"
         }

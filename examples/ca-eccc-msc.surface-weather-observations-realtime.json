@@ -108,7 +108,7 @@
                 ],
                 "links": [
                     {
-                        "rel": "canonical",
+                        "rel": "about",
                         "type": "text/html",
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
@@ -145,7 +145,7 @@
             "title": "Data access API interface"
         },
         {
-            "rel": "related",
+            "rel": "about",
             "href": "https://eccc-msc.github.io/open-data/msc-data/obs_station/readme_obs_insitu_swobdatamart_en",
             "type": "text/html",
             "title": "Documentation"
@@ -153,7 +153,7 @@
         {
             "rel": "items",
             "href": "mqtts://example.org",
-            "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/observations/surface-land/landFixed",
+            "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",
             "type": "application/json",
             "title": "Data notifications"
         }
