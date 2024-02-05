@@ -4,12 +4,7 @@
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
-    "time": {
-        "interval": [
-            "2024-01-01T00:00:00Z",
-            ".."
-        ]
-    },
+    "time": null,
     "geometry": {
         "type": "Polygon",
         "coordinates": [
@@ -153,14 +148,7 @@
         "keywords": [
             "WIS2",
             "Global Cache"
-        ],
-        "externalIds": [
-            {
-                "scheme": "DWD",
-                "value": "de.dwd.globalcache"
-            }
-        ],
-        "language": "eng"
+        ]
     },
     "links": [
         {
@@ -178,7 +166,7 @@
         {
             "rel": "items",
             "channel": "cache/a/wis2",
-            "href": "mqtts://everyone:everyone@wis2.dwd.de:8883",
+            "href": "mqtts://everyone:everyone@example.org:8883",
             "type": "application/json",
             "title": "Data notifications"
         }

@@ -114,7 +114,7 @@
                 ],
                 "links": [
                     {
-                        "rel": "canonical",
+                        "rel": "about",
                         "type": "text/html",
                         "href": "https://www.canada.ca/en/environment-climate-change.html"
                     }
@@ -133,38 +133,10 @@
     },
     "links": [
         {
-            "rel": "data",
-            "type": "text/html",
-            "title": "WMO WIS Global Cache - Deutscher Wetterdienst (Cached files < 24h during pilot)",
-            "href": "https://opendata.dwd.de/test/wis2/cache"
-        },
-        {
             "rel": "archives",
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
-            "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
-            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS Global Broker - China Meteorological Administration",
-            "href": "mqtt://everyone:everyone@gb.wis.cma.cn:1883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
+            "href": "https://example.org/cache_metadata"
         }
     ]
 }
