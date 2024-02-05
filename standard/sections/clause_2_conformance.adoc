@@ -11,11 +11,11 @@ Core: Requirements Class: Record Core.
 WMO shall publish guidance material to assist authors of WCMP discovery metadata for maintaining
 consistency across multiple metadata records and perform quality assessment and reporting.
 
-This standard identifies one Conformance Class which defines the functional requirements.
+This standard identifies one Requirements Class which defines the functional requirements.
 
-The mandatory Conformance Class for WCMP is:
+The mandatory Requirements Class for WCMP is:
 
-* "WMO Core Metadata Profile Core": This conformance class inherits from _OGC API — Records — Part 1: Core:
+* "WMO Core Metadata Profile Core": This Requirements Class inherits from _OGC API — Records — Part 1: Core:
 Requirements Class: Record Core_ which defines the requirements for a catalogue record.  The requirements
 specified in the Requirements Class “Record Core" are mandatory for all implementations of WMCP.
 The requirements are specified in Chapter 7 and in Annex A in more detail.
