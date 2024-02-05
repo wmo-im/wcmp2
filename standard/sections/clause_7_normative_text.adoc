@@ -2,11 +2,11 @@
 
 A WCMP record provides descriptive information about a dataset made available through WIS2.
 
-=== Conformance Class "Core"
+=== Requirements Class "Core"
 
 ==== Overview
 
-The WCMP Core Conformance Class provides requirements for a WCMP discovery metadata record.
+The WCMP Core Requirements Class provides requirements for a WCMP discovery metadata record.
 
 include::../requirements/requirements_class_core.adoc[]
 
