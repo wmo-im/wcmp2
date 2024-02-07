@@ -777,7 +777,7 @@ The table below provides an overview of the properties of a link object.
 |``rel``
 |**optional**
 |The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
- by IANA link relationsfootnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] or WCMP2
+ by IANA link relationsfootnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] or WCMP
  defined extensionsfootnote:[https://codes.wmo.int/wis/link-type] (see <<_link_relation_selection>>)
 
 |``type``
