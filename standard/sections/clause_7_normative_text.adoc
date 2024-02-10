@@ -250,19 +250,23 @@ A WCMP metadata record can have one or more themes.
     {
       "concepts": [
         {
-          "id": "Temperature",
+          "id": "0-0-0",
+          "title": "Temperature",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0"
         },
         {
-          "id": "Relative humidity",
+          "id": "0-1-1",
+          "title": "Relative humidity",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-1-1"
         },
         {
-          "id": "u-component of Wind",
+          "id": "0-2-2",
+          "title": "u-component of Wind",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-2"
         },
         {
-          "id": "v-component of Wind",
+          "id": "0-2-3",
+          "title": "v-component of Wind",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-3"
         }
       ],
@@ -279,11 +283,13 @@ A WCMP metadata record can have one or more themes.
   {
     "concepts": [
       {
-        "id": "Temperature/air temperature",
-        "url": "http://codes.wmo.int/bufr4/b/12/001"
+        "id": "001",
+        "title": "Temperature/air temperature",
+        "kurl": "http://codes.wmo.int/bufr4/b/12/001"
       },
       {
-        "id": "Dewpoint temperature",
+        "id": "003",
+        "title": "Dewpoint temperature",
         "url": "http://codes.wmo.int/bufr4/b/12/003"
       }
     ],
@@ -300,6 +306,7 @@ A WCMP metadata record can have one or more themes.
     {
       "concepts": [{
         "id": "weather",
+        "title": "Weather",
         "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
       }],
       "scheme": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline"
@@ -547,8 +554,8 @@ The `+contacts+` property is the information associated with one or more respons
       "country": "Canada"
     }],
     "links": [{
-      "href": "https://www.canada.ca/en/environment-climate-change.html",
-      "rel": "canonical",
+      "href": "https://example.org/about",
+      "rel": "about",
       "type": "text/html"
     }],
     "contactInstructions": "email",
@@ -567,8 +574,8 @@ A contact can also be specified by using a URL.
   "contacts": [{
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
     "links": [{
-      "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html",
-      "rel": "canonical",
+      "href": "https://exmaple.org/about",
+      "rel": "about",
       "type": "text/html"
     }],
     "roles": ["producer"]
@@ -734,7 +741,7 @@ It is useful to add provider-specific details to have the most detailed informat
 },
 "links": [{
   "rel": "license",
-  "href": "https://www.eumetsat.int/eumetsat-data-licensing",
+  "href": "https://example.org/license",
   "type": "text/html",
   "title": "EUMETSAT DATA LICENSING"
 }]
@@ -838,7 +845,7 @@ For recommended data, the ``links`` property may also provide links to services 
     "rel": "search",
     "type": "text/html",
     "title": "WOUDC - Data - Station List",
-    "href": "https://woudc.org/data/stations"
+    "href": "https://example.org/data/stations"
   },
   {
     "rel"  : "items",
@@ -889,7 +896,7 @@ Templated links allow for specifying a pattern of a link in support API interact
   "rel": "item",
   "type": "image/png",
   "title": "Eumetview",
-  "uriTemplate": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
+  "uriTemplate": "https://example.org/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format={format}&crs={crs}&bbox={bbox}&width={width}&height={height}",
   "variables": {
     "crs": {
       "description": "...",
@@ -934,7 +941,7 @@ Templated links allow for specifying a pattern of a link in support API interact
         "image/png; mode=8bit"
       ]
     },
-    "sampleRequest": "https://view.eumetsat.int/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
+    "sampleRequest": "https://example.org/geoserver/ows?service=WMS&request=GetMap&version=1.3.0&layers=msg_fes:ir108&styles=&format=image/jpeg&crs=EPSG:4326&bbox=-77,-77,77,77&width=800&height=800"
   }
 }]
 ----
@@ -957,7 +964,7 @@ Additional distribution information is added to allow more comprehensive discove
   "rel": "search",
   "type": "text/html",
   "title": "EUMETSAT Datastore",
-  "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
+  "href": "https://example.org/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
   "distribution": {
     "availableFormats": [{
       "name": "native",
@@ -966,7 +973,7 @@ Additional distribution information is added to allow more comprehensive discove
       "typicalFilesize": "60 MB",
       "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
       "samples": { 
-        "href": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip" 
+        "href": "https://example.org/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip" 
       },
       "documentation": [{
         "rel": "alternate",
