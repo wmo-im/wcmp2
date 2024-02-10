@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-07</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-10</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-07</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-10</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1826,19 +1826,23 @@ WCMP can also describe additional resources, such as services and processes.</p>
     {
       "concepts": [
         {
-          "id": "Temperature",
+          "id": "0-0-0",
+          "title": "Temperature",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0"
         },
         {
-          "id": "Relative humidity",
+          "id": "0-1-1",
+          "title": "Relative humidity",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-1-1"
         },
         {
-          "id": "u-component of Wind",
+          "id": "0-2-2",
+          "title": "u-component of Wind",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-2"
         },
         {
-          "id": "v-component of Wind",
+          "id": "0-2-3",
+          "title": "v-component of Wind",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-3"
         }
       ],
@@ -1855,11 +1859,13 @@ WCMP can also describe additional resources, such as services and processes.</p>
   {
     "concepts": [
       {
-        "id": "Temperature/air temperature",
-        "url": "http://codes.wmo.int/bufr4/b/12/001"
+        "id": "001",
+        "title": "Temperature/air temperature",
+        "kurl": "http://codes.wmo.int/bufr4/b/12/001"
       },
       {
-        "id": "Dewpoint temperature",
+        "id": "003",
+        "title": "Dewpoint temperature",
         "url": "http://codes.wmo.int/bufr4/b/12/003"
       }
     ],
@@ -1876,6 +1882,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
     {
       "concepts": [{
         "id": "weather",
+        "title": "Weather",
         "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
       }],
       "scheme": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline"
@@ -2453,8 +2460,8 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
       "country": "Canada"
     }],
     "links": [{
-      "href": "https://www.canada.ca/en/environment-climate-change.html",
-      "rel": "canonical",
+      "href": "https://example.org/about",
+      "rel": "about",
       "type": "text/html"
     }],
     "contactInstructions": "email",
@@ -2474,8 +2481,8 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
   "contacts": [{
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
     "links": [{
-      "href": "https://www.canada.ca/en/environment-climate-change/corporate/contact.html",
-      "rel": "canonical",
+      "href": "https://exmaple.org/about",
+      "rel": "about",
       "type": "text/html"
     }],
     "roles": ["producer"]
@@ -2853,7 +2860,7 @@ for the international exchange of Earth system data. The codelist values are <co
 },
 "links": [{
   "rel": "license",
-  "href": "https://www.eumetsat.int/eumetsat-data-licensing",
+  "href": "https://example.org/license",
   "type": "text/html",
   "title": "EUMETSAT DATA LICENSING"
 }]</code></pre>
@@ -3096,7 +3103,7 @@ for the international exchange of Earth system data. The codelist values are <co
     "rel": "search",
     "type": "text/html",
     "title": "WOUDC - Data - Station List",
-    "href": "https://woudc.org/data/stations"
+    "href": "https://example.org/data/stations"
   },
   {
     "rel"  : "items",
@@ -3147,7 +3154,7 @@ for the international exchange of Earth system data. The codelist values are <co
   "rel": "item",
   "type": "image/png",
   "title": "Eumetview",
-  "uriTemplate": "https://view.eumetsat.int/geoserver/ows?service=WMS&amp;request=GetMap&amp;version=1.3.0&amp;layers=msg_fes:ir108&amp;styles=&amp;format={format}&amp;crs={crs}&amp;bbox={bbox}&amp;width={width}&amp;height={height}",
+  "uriTemplate": "https://example.org/geoserver/ows?service=WMS&amp;request=GetMap&amp;version=1.3.0&amp;layers=msg_fes:ir108&amp;styles=&amp;format={format}&amp;crs={crs}&amp;bbox={bbox}&amp;width={width}&amp;height={height}",
   "variables": {
     "crs": {
       "description": "...",
@@ -3192,7 +3199,7 @@ for the international exchange of Earth system data. The codelist values are <co
         "image/png; mode=8bit"
       ]
     },
-    "sampleRequest": "https://view.eumetsat.int/geoserver/ows?service=WMS&amp;request=GetMap&amp;version=1.3.0&amp;layers=msg_fes:ir108&amp;styles=&amp;format=image/jpeg&amp;crs=EPSG:4326&amp;bbox=-77,-77,77,77&amp;width=800&amp;height=800"
+    "sampleRequest": "https://example.org/geoserver/ows?service=WMS&amp;request=GetMap&amp;version=1.3.0&amp;layers=msg_fes:ir108&amp;styles=&amp;format=image/jpeg&amp;crs=EPSG:4326&amp;bbox=-77,-77,77,77&amp;width=800&amp;height=800"
   }
 }]</code></pre>
 </div>
@@ -3324,7 +3331,7 @@ for the international exchange of Earth system data. The codelist values are <co
   "rel": "search",
   "type": "text/html",
   "title": "EUMETSAT Datastore",
-  "href": "https://data.eumetsat.int/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
+  "href": "https://example.org/data/map/EO:EUM:DAT:MSG:MSG15-RSS",
   "distribution": {
     "availableFormats": [{
       "name": "native",
@@ -3333,7 +3340,7 @@ for the international exchange of Earth system data. The codelist values are <co
       "typicalFilesize": "60 MB",
       "typicalFilename": "MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip",
       "samples": {
-        "href": "https://data.eumetsat.int/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
+        "href": "https://example.org/data/access/MSG3-SEVI-MSG15-0100-NA-20130208102743.243000000Z-1051616.zip"
       },
       "documentation": [{
         "rel": "alternate",
@@ -6499,7 +6506,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-07 12:27:56 UTC
+Last updated 2024-02-10 15:11:07 UTC
 </div>
 </div>
 </body>
