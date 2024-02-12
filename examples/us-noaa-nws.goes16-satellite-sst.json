@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:us-noaa-nws:goes_16_ABI-L2-SSTF",
+    "id": "urn:wmo:md:us-noaa-nws:goes_16_ABI-L2-SSTF",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -73,10 +73,10 @@
                     {
                         "id": "weather",
                         "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [

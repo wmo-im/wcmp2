@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc:hydrometric.realtime",
+    "id": "urn:wmo:md:ca-eccc-msc:hydrometric.realtime",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -78,10 +78,10 @@
                     {
                         "id": "hydrology",
                         "title": "Hydrology",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/hydrology"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/hydrology"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [

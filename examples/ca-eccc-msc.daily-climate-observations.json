@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc:climate.climate-daily",
+    "id": "urn:wmo:md:ca-eccc-msc:climate.climate-daily",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -61,10 +61,10 @@
                     {
                         "id": "climate",
                         "title": "Climate",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/climate"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/climate"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [

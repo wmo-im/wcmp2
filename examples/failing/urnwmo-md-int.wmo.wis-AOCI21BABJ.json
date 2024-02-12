@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:cn-cma:AOCI21BABJ",
+    "id": "urn:wmo:md:cn-cma:AOCI21BABJ",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
