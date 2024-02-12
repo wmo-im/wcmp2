@@ -1109,8 +1109,15 @@ record.  Additional properties do not break compliance to WCMP.
 
 include::../recommendations/core/PER_additional_properties.adoc[]
 
-=== WMO Core Metadata Profile Resources
+=== WMO Core Metadata Profile resources
 
 ==== WMO Codes Registry
+•	https://codes.wmo.int/wis/topic-hierarchy/centre-id
+•	https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline
+•	https://codes.wmo.int/wis/topic-hierarchy/data-policy
+•	https://codes.wmo.int/wis/link-type
+•	https://codes.wmo.int/wis/resource-type
+•	https://codes.wmo.int/wis/contact-role
 
 ==== WMO schemas server
+Validation, examples, and other resources are published at https://schemas.wmo.int/wcmp/2.
