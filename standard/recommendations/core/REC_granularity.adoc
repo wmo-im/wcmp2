@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/granularity*
-^|A |A WCMP record SHOULD describe dataset parameters and variables as themes/concepts with an associated controlled vocabulary.
+^|A |A WCMP record should describe dataset parameters and variables as themes/concepts with an associated controlled vocabulary.
 |===
