@@ -1,14 +1,10 @@
 [[rc_core]]
 [cols="1,4",width="90%"]
 |===
-2+|*Requirements Class*
-2+|http://wis.wmo.int/spec/wcmp/2/req/core
-|Target type |Discovery Metadata
-|Dependency |<<rfc8259,IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format>>
-|Dependency |<<json-schema, JSON Schema>>
-|Dependency |<<rfc7946,GeoJSON>>
-|Dependency |<<ogcapi-records,OGC API - Records - Core: Part 1>>
-|Dependency |<<openapi,OpenAPI Specification, Version 3.1.0>>
-|Pre-conditions |
-The record conforms to OGC API - Records - Core: Part 1: Requirements Class: Record Core
+|URI |http://wis.wmo.int/spec/wcmp/2/req/core
+|Dependency | The JavaScript Object Notation (JSON) Data Interchange Format link:https://datatracker.ietf.org/doc/html/rfc8259[(IETF RFC8259 (2017))]
+|Dependency |link:https://json-schema.org[JSON Schema] (2022)
+|Dependency |The GeoJSON Format link:https://datatracker.ietf.org/doc/html/rfc7946[(IETF: RFC-7946 (2016))] 
+|Dependency |OGC API - Features - Part 1: Core corrigendum link:https://docs.opengeospatial.org/is/17-069r4/17-069r4.html[(OGC: OGC 17-069r)]
+|Pre-conditions |The record conforms to OGC API - Records - Core: Part 1: Requirements Class: Record Core
 |===

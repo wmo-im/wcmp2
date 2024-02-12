@@ -2,6 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/type*
-^|A |A WCMP record SHALL provide a `+properties.type+` property.
-^|B |The `+properties.type+` property SHALL be a valid code from the WCMP resource type codelistfootnote:[https://codes.wmo.int/wis/resource-type].
+^|A |A WCMP record shall provide a `+properties.type+` property.
+^|B |The `+properties.type+` property shall be a valid code from the WCMP resource type codelistfootnote:[https://codes.wmo.int/wis/resource-type].
+//link to codes section or codes.wmo.int directly?
 |===
