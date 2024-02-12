@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc-gdc:global-discovery-catalogue",
+    "id": "urn:wmo:md:ca-eccc-msc-gdc:global-discovery-catalogue",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
@@ -42,40 +42,40 @@
                     {
                         "id": "weather",
                         "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
                     },
                     {
                         "id": "climate",
                         "title": "Climate",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/climate"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/climate"
                     },
                     {
                         "id": "hydrology",
                         "title": "Hydrology",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/hydrology"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/hydrology"
                     },
                     {
                         "id": "atmospheric-composition",
                         "title": "Atmospheric Composition",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/atmospheric-composition"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/atmospheric-composition"
                     },
                     {
                         "id": "cryosphere",
                         "title": "Cryosphere",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/cryosphere"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/cryosphere"
                     },
                     {
                         "id": "ocean",
                         "title": "Ocean",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/ocean"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/ocean"
                     },
                     {
                         "id": "space-weather",
                         "title": "Space Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/space-weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/space-weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             },
             {
                 "concepts": [

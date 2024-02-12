@@ -127,7 +127,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 
 [source,json]
 ----
-"id": "urn:x-wmo:md:ca-eccc-msc:observations.swob"
+"id": "urn:wmo:md:ca-eccc-msc:observations.swob"
 ----
 
 include::../requirements/core/REQ_identifier.adoc[]
@@ -307,9 +307,9 @@ A WCMP metadata record can have one or more themes.
       "concepts": [{
         "id": "weather",
         "title": "Weather",
-        "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+        "url": "http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
       }],
-      "scheme": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+      "scheme": "http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
     }
   ]
   ...

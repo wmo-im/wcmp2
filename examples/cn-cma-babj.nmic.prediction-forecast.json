@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:cn-cma-babj:data.core.weather.prediction.forecast.shortrange.probabilistic.global",
+    "id": "urn:wmo:md:cn-cma-babj:data.core.weather.prediction.forecast.shortrange.probabilistic.global",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"

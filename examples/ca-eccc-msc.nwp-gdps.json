@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps",
+    "id": "urn:wmo:md:ca-eccc-msc:nwp.msc_nwp_gdps",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -69,10 +69,10 @@
                     {
                         "id": "weather",
                         "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [

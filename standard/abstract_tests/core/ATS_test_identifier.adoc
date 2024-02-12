@@ -19,7 +19,7 @@ In the WCMP record's `+id+` property, check that there are at least **five** tok
 
 [.component,class=step]
 --
-In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the first three tokens are equal to `+['urn', 'x-wmo', 'md']+`.
+In the WCMP record's `+id+` property, delimiting the value on `+:+`, check that the first three tokens are equal to `+['urn', 'wmo', 'md']+`.
 --
 
 [.component,class=step]

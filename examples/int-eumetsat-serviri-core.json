@@ -1,5 +1,5 @@
 {
-    "id": "urn:x-wmo:md:int-eumetsat:EO:EUM:DAT:MSG:HRSEVIRI",
+    "id": "urn:wmo:md:int-eumetsat:EO:EUM:DAT:MSG:HRSEVIRI",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
