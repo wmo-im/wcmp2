@@ -2,8 +2,8 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/validation*
-^|A |Each WCMP record SHALL validate without error against the WCMP schema.
-^|B |Each WCMP record SHALL provide `+id+`, `+type+`, `+geometry+` and `+properties+` properties for GeoJSON compliance.
-^|C |The `+type+` property SHALL be set to a fixed value of `+Feature+` for GeoJSON compliance.
+^|A |Each WCMP record shall validate without error against the WCMP schema.
+^|B |Each WCMP record shall provide `+id+`, `+type+`, `+geometry+` and `+properties+` properties for GeoJSON compliance.
+^|C |The `+type+` property shall be set to a fixed value of `+Feature+` for GeoJSON compliance.
 |===
 
