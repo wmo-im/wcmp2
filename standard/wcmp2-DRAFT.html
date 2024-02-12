@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-10</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-12</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-10</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-12</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -1526,7 +1526,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 <div class="listingblock">
 <div class="title">Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:x-wmo:md:ca-eccc-msc:observations.swob"</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">"id": "urn:wmo:md:ca-eccc-msc:observations.swob"</code></pre>
 </div>
 </div>
 <table id="req_core_identifier" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -1550,7 +1550,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>id</code> property SHALL have the following notation: <code>urn:x-wmo:md:{centre_id}:{local_identifier}</code>.</p>
+<p>The <code>id</code> property SHALL have the following notation: <code>urn:wmo:md:{centre_id}:{local_identifier}</code>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1883,9 +1883,9 @@ WCMP can also describe additional resources, such as services and processes.</p>
       "concepts": [{
         "id": "weather",
         "title": "Weather",
-        "url": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+        "url": "http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
       }],
-      "scheme": "http://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+      "scheme": "http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
     }
   ]
   ...
@@ -3706,7 +3706,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the first three tokens are equal to <code>['urn', 'x-wmo', 'md']</code>.</p>
+<p>In the WCMP record&#8217;s <code>id</code> property, delimiting the value on <code>:</code>, check that the first three tokens are equal to <code>['urn', 'wmo', 'md']</code>.</p>
 </div>
 </div>
 </div>
@@ -4053,7 +4053,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/topic-hierarchy/earth-system-discipline</code>.</p>
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline</code>.</p>
 </div>
 </div>
 </div>
@@ -4098,7 +4098,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="openblock component">
 <div class="content">
 <div class="paragraph">
-<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/topic-hierarchy/earth-system-discipline</code>.</p>
+<p>Check that the <code>properties.themes</code> property provides a theme object with the <code>scheme</code> of <code>https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline</code>.</p>
 </div>
 </div>
 </div>
@@ -5775,7 +5775,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="title">Example: Canadian Hourly Surface Weather Observations (dataset)</div>
 <div class="content">
 <pre>{
-    "id": "urn:x-wmo:md:ca-eccc-msc:weather.observations.swob-realtime",
+    "id": "urn:wmo:md:ca-eccc-msc:weather.observations.swob-realtime",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -5851,10 +5851,10 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     {
                         "id": "weather",
                         "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -5941,7 +5941,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="title">Example: ICON-EPS GRIB data (dataset)</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
-    "id": "urn:x-wmo:md:de-dwd:icon-eps.ALL",
+    "id": "urn:wmo:md:de-dwd:icon-eps.ALL",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
@@ -6049,10 +6049,10 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     {
                         "id": "weather",
                         "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -6152,7 +6152,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="title">Example: WIS2 Global Broker (service)</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
-    "id": "urn:x-wmo:md:fr-meteo-france:global-broker",
+    "id": "urn:wmo:md:fr-meteo-france:global-broker",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
@@ -6195,40 +6195,40 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                     {
                         "id": "weather",
                         "title": "Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
                     },
                     {
                         "id": "climate",
                         "title": "Climate",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/climate"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/climate"
                     },
                     {
                         "id": "hydrology",
                         "title": "Hydrology",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/hydrology"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/hydrology"
                     },
                     {
                         "id": "atmospheric-composition",
                         "title": "Atmospheric Composition",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/atmospheric-composition"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/atmospheric-composition"
                     },
                     {
                         "id": "cryosphere",
                         "title": "Cryosphere",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/cryosphere"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/cryosphere"
                     },
                     {
                         "id": "ocean",
                         "title": "Ocean",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/ocean"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/ocean"
                     },
                     {
                         "id": "space-weather",
                         "title": "Space Weather",
-                        "url": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline/space-weather"
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/space-weather"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/topic-hierarchy/earth-system-discipline"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             },
             {
                 "concepts": [
@@ -6506,7 +6506,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-10 15:11:07 UTC
+Last updated 2024-02-12 15:35:28 UTC
 </div>
 </div>
 </body>
