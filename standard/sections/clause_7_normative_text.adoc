@@ -1,17 +1,14 @@
-== The WMO Core Metadata Profile Record
-
-A WCMP record provides descriptive information about a dataset made available through WIS2.
+== Appendix E: WMO Core Metadata Profile (Version 2)
 
 === Requirements Class "Core"
 
-==== Overview
-
-The WCMP Core Requirements Class provides requirements for a WCMP discovery metadata record.
-
 include::../requirements/requirements_class_core.adoc[]
 
-The table below provides an overview of the set of properties that may be included in a WCMP record.
+WMO Core Metadata Profile (WCMP) is an extension of the OGC API - Features standard and shall be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (http://wis.wmo.int/spec/wcmp/2) and requirements are denoted by partial URIs relative to this base. Examples in this document are encoded as ``plain text`` strings.
 
+==== Overview
+
+The table below provides an overview of the set of properties that may be included in a WCMP record.
 
 .WCMP record core properties
 |===
@@ -246,7 +243,7 @@ A concept's optional `+url+` property can provide a remote reference to a given 
 
 A WCMP metadata record can have one or more themes.
 
-.Examples
+.Example.Themes object with GRIB2 codes
 [source,json]
 ----
 "properties": {
@@ -281,6 +278,7 @@ A WCMP metadata record can have one or more themes.
   ...
 }
 ----
+.Example.Themes object with BUFR4 codes
 
 [source,json]
 ----
@@ -302,6 +300,7 @@ A WCMP metadata record can have one or more themes.
   }
 ]
 ----
+.Example.Themes object with of the earth-system-discipline from the WMO Topic Hierarchy
 
 [source,json]
 ----
@@ -455,7 +454,7 @@ In cases where no time indication can be derived, it is applicable to state the 
 ----
 
 To ensure clarity, an additional human-readable explanation is given in the `+properties.description+`.
-Further time-related characteristics (e.g. frequency of modifications, available data, etc.) should be added in `+properties.themes+`.
+Further time-related characteristics (for example, frequency of modifications, available data, etc.) should be added in `+properties.themes+`.
 
 Some cases might be more complex due to the product's characteristics.
 If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property (see <<_additional_temporal_extents>>).
@@ -535,7 +534,7 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 
 The `+contacts+` property is the information associated with one or more responsible parties of the resource.
 
-.Examples
+.Example.Contacts object with all contact details
 
 [source,json]
 ----
@@ -569,8 +568,7 @@ The `+contacts+` property is the information associated with one or more respons
   ...
 }
 ----
-
-A contact can also be specified by using a URL.
+.Example.Contacts object with contact details specified in a URL
 
 [source,json]
 ----
@@ -708,8 +706,7 @@ include::../recommendations/core/REC_status.adoc[]
 
 ==== Properties / WMO data policy
 
-The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009]
-for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
+The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by link:https://library.wmo.int/idurl/4/58009[WMO Unified Data Policy] for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
 
 Licensing and copyright are expressed via the `+links+` property (see distribution section), providing access, license and attribution details as required. Conditions on use of the data should be indicated for transparency and clarification.
 
@@ -775,7 +772,7 @@ To express rights not address by a license, the `+rights+` property can be used 
 ----
 "properties": {
  ...
- "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021))"
+ "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021))."
  ...
 }
 ----
@@ -805,8 +802,7 @@ The table below provides an overview of the properties of a link object.
 |``rel``
 |optional
 |The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
- by IANA link relationsfootnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] or WCMP
- defined extensionsfootnote:[https://codes.wmo.int/wis/link-type] (see <<_link_relation_selection>>)
+ by link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA link relations] or link:https://codes.wmo.int/wis/link-type[WIS link type] extensions. (see <<_link_relation_selection>>)
 
 |``type``
 |optional
@@ -1112,3 +1108,9 @@ record.  Additional properties do not break compliance to WCMP.
 ----
 
 include::../recommendations/core/PER_additional_properties.adoc[]
+
+=== WMO Core Metadata Profile Resources
+
+==== WMO Codes Registry
+
+==== WMO schemas server
