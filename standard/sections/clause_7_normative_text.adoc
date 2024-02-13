@@ -574,7 +574,7 @@ A contact can also be specified by using a URL.
   "contacts": [{
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
     "links": [{
-      "href": "https://exmaple.org/about",
+      "href": "https://example.org/about",
       "rel": "about",
       "type": "text/html"
     }],
