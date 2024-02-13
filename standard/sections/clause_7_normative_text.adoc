@@ -747,6 +747,22 @@ It is useful to add provider-specific details to have the most detailed informat
 }]
 ----
 
+.Example: Recommended data for data put into the public domain:
+[source,json]
+----
+"properties": {
+  ...
+  "wmo:dataPolicy": "recommended"
+  ...
+},
+"links": [{
+  "rel": "license",
+  "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "text/html",
+  "title": "CC0 1.0 Deed | CC0 1.0 Universal | Creative Commons"
+}]
+----
+
 To express rights not address by a license, the `+rights+` property can be used as follows:
 
 .Example: Rights
