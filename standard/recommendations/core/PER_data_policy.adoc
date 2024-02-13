@@ -3,7 +3,7 @@
 |===
 ^|*Permission {counter:per-id}* |*/per/core/data_policy*
 ^|A|For core data (when `+properties.wmo:dataPolicy+` property is `+core+`), attribution licensing MAY be provided as needed.
-^|B|For core data (when `+properties.wmo:dataPolicy+` is `+core+`) or recommended data (when `+properties.wmo:dataPolicy+` is `+recommended+`, and the data is compatible with free and unrestricted principles), a license or public domain statement that is compatible with free and unrestricted principles (e.g., Creative Commons CC0footnote:[https://creativecommons.org/public-domain/cc0] or CC-BY 4.0footnote:[https://creativecommons.org/licenses/by/4.0]) MAY be expressed as a link object with the `license` link relation.
+^|B|For core data (when `+properties.wmo:dataPolicy+` is `+core+`) or recommended data (when `+properties.wmo:dataPolicy+` is `+recommended+`, and the data is compatible with free and unrestricted principles), a license or public domain statement that is compatible with free and unrestricted principles (e.g., Creative Commons CC0footnote:[https://creativecommons.org/publicdomain/zero/1.0/]) MAY be expressed as a link object with the `license` link relation.
 ^|C|For core data (when `+properties.wmo:dataPolicy+` is `+core+`) or recommended data (when `+properties.wmo:dataPolicy+` is `+recommended+`, a copyright statement MAY be expressed in `+properties.rights+`
 ^|D|For core data (when `+properties.wmo:dataPolicy+` is `+core+`) or recommended data (when `+properties.wmo:dataPolicy+` is `+recommended+`, a link object MAY be expressed with `+rel=copyright+`.
 |===
