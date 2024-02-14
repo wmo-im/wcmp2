@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/extent_geospatial_precision*
-^|A |Geometry coordinates SHOULD have a level of precision of 2 decimal places.
+^|A |Geometry coordinates SHOULD have a level of precision of 2 or more decimal places.
 |===

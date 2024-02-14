@@ -368,13 +368,13 @@ The `+additionalExtents.spatial+` property is for other geospatial extents assoc
 The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
-* minx is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+* The minimum longitude is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
 signed number between -180 and 180, less than or equal to maxx.
-* miny is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+* The minimum latitude is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
 signed number between -90 and 90, less than or equal to maxy.
-* maxx is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+* The maximum longitude is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
 signed number between -180 and 180, greater than or equal to minx.
-* maxy is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+* The maximum latitude is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
 signed number between -90 and 90, greater than or equal to miny.
 
 This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
@@ -481,7 +481,7 @@ If necessary, further granularity can be indicated by the `+additionalExtents.te
 ...
 "properties": {
   ...
-  "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
+  "description": "ICON-EPS 0.5 deg x 0.5 deg regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
   "themes": [
     {
       "concepts": [
