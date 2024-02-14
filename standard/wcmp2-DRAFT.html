@@ -2481,7 +2481,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
   "contacts": [{
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
     "links": [{
-      "href": "https://exmaple.org/about",
+      "href": "https://example.org/about",
       "rel": "about",
       "type": "text/html"
     }],
@@ -2866,6 +2866,22 @@ for the international exchange of Earth system data. The codelist values are <co
 }]</code></pre>
 </div>
 </div>
+<div class="listingblock">
+<div class="title">Example: License for recommended data in the public domain</div>
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
+  ...
+  "wmo:dataPolicy": "recommended"
+  ...
+},
+"links": [{
+  "rel": "license",
+  "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "text/html",
+  "title": "CC0 1.0 Deed | CC0 1.0 Universal | Creative Commons"
+}]</code></pre>
+</div>
+</div>
 <div class="paragraph">
 <p>To express rights not address by a license, the <code>rights</code> property can be used as follows:</p>
 </div>
@@ -2975,15 +2991,12 @@ for the international exchange of Earth system data. The codelist values are <co
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>For core data (when <code>properties.wmo:dataPolicy</code> is <code>core</code>) or recommended data (when <code>properties.wmo:dataPolicy</code> is <code>recommended</code>, and the data is compatible with feee and unrestricted principles), a license or public domain statement that is compatible with free and unrestricted principles (e.g., Creative Commons CC0<sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup> or CC-BY 4.0<sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnotedef_37" title="View footnote.">37</a>]</sup>) MAY be expressed as a link object with the <code>license</code> link relation.</p>
+<p>For core data (when <code>properties.wmo:dataPolicy</code> is <code>core</code>) or recommended data (when <code>properties.wmo:dataPolicy</code> is <code>recommended</code>, and the data is compatible with free and unrestricted principles), a license or public domain statement that is compatible with free and unrestricted principles (e.g., Creative Commons CC0<sup class="footnote">[<a id="_footnoteref_36" class="footnote" href="#_footnotedef_36" title="View footnote.">36</a>]</sup>) MAY be expressed as a link object with the <code>license</code> link relation.</p>
 </div>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_36">
-<a href="#_footnoteref_36">36</a>. <a href="https://creativecommons.org/public-domain/cc0" class="bare">https://creativecommons.org/public-domain/cc0</a>
-</div>
-<div class="footnote" id="_footnotedef_37">
-<a href="#_footnoteref_37">37</a>. <a href="https://creativecommons.org/licenses/by/4.0" class="bare">https://creativecommons.org/licenses/by/4.0</a>
+<a href="#_footnoteref_36">36</a>. <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="bare">https://creativecommons.org/publicdomain/zero/1.0/</a>
 </div>
 </div></div></td>
 </tr>
@@ -3039,8 +3052,8 @@ for the international exchange of Earth system data. The codelist values are <co
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>rel</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>optional</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
- by IANA link relations<sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnotedef_38" title="View footnote.">38</a>]</sup> or WCMP
- defined extensions<sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup> (see <a href="#_link_relation_selection">Link relation selection</a>)</p></td>
+ by IANA link relations<sup class="footnote">[<a id="_footnoteref_37" class="footnote" href="#_footnotedef_37" title="View footnote.">37</a>]</sup> or WCMP
+ defined extensions<sup class="footnote">[<a id="_footnoteref_38" class="footnote" href="#_footnotedef_38" title="View footnote.">38</a>]</sup> (see <a href="#_link_relation_selection">Link relation selection</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>type</code></p></td>
@@ -3255,15 +3268,15 @@ for the international exchange of Earth system data. The codelist values are <co
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links</code> property SHALL include a valid link relation from IANA <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup> or the WCMP link type codelist <sup class="footnote">[<a id="_footnoteref_41" class="footnote" href="#_footnotedef_41" title="View footnote.">41</a>]</sup>.</p>
+<p>The <code>links</code> property SHALL include a valid link relation from IANA <sup class="footnote">[<a id="_footnoteref_39" class="footnote" href="#_footnotedef_39" title="View footnote.">39</a>]</sup> or the WCMP link type codelist <sup class="footnote">[<a id="_footnoteref_40" class="footnote" href="#_footnotedef_40" title="View footnote.">40</a>]</sup>.</p>
 </div>
 <div id="footnotes">
 <hr>
-<div class="footnote" id="_footnotedef_40">
-<a href="#_footnoteref_40">40</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
+<div class="footnote" id="_footnotedef_39">
+<a href="#_footnoteref_39">39</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a>
 </div>
-<div class="footnote" id="_footnotedef_41">
-<a href="#_footnoteref_41">41</a>. <a href="https://codes.wmo.int/wis/link-type" class="bare">https://codes.wmo.int/wis/link-type</a>
+<div class="footnote" id="_footnotedef_40">
+<a href="#_footnoteref_40">40</a>. <a href="https://codes.wmo.int/wis/link-type" class="bare">https://codes.wmo.int/wis/link-type</a>
 </div>
 </div></div></td>
 </tr>
@@ -6497,16 +6510,16 @@ of use when encoding the <code>properties.status</code> property..</p>
 <div class="footnote" id="_footnotedef_35">
 <a href="#_footnoteref_35">35</a>. <a href="https://library.wmo.int/idurl/4/58009" class="bare">https://library.wmo.int/idurl/4/58009</a>
 </div>
-<div class="footnote" id="_footnotedef_38">
-<a href="#_footnoteref_38">38</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
+<div class="footnote" id="_footnotedef_37">
+<a href="#_footnoteref_37">37</a>. <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
 </div>
-<div class="footnote" id="_footnotedef_39">
-<a href="#_footnoteref_39">39</a>. <a href="https://codes.wmo.int/wis/link-type" class="bare">https://codes.wmo.int/wis/link-type</a>
+<div class="footnote" id="_footnotedef_38">
+<a href="#_footnoteref_38">38</a>. <a href="https://codes.wmo.int/wis/link-type" class="bare">https://codes.wmo.int/wis/link-type</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-14 12:47:51 UTC
+Last updated 2024-02-14 12:49:14 UTC
 </div>
 </div>
 </body>
