@@ -454,10 +454,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-12</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-02-14</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-12</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0-DRAFT-2024-02-14</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Document location: TBD</p></td>
@@ -2100,7 +2100,7 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Geometry coordinates SHOULD have a level of precision of 2 decimal places.</p>
+<p>Geometry coordinates SHOULD have a level of precision of 2 or more decimal places.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2136,20 +2136,20 @@ provides the ability to list one to many minimum bounding geometries for a given
 <div class="ulist">
 <ul>
 <li>
-<p>minx is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, less than or equal to maxx.</p>
+<p>The minimum longitude is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, less than or equal to the maximum longitude.</p>
 </li>
 <li>
-<p>miny is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, less than or equal to maxy.</p>
+<p>The minimum latitude is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, less than or equal to the maximum latitude.</p>
 </li>
 <li>
-<p>maxx is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, greater than or equal to minx.</p>
+<p>The maximum longitude is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
+signed number between -180 and 180, greater than or equal to the minimum longitude.</p>
 </li>
 <li>
-<p>maxy is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, greater than or equal to miny.</p>
+<p>The maximum latitude is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
+signed number between -90 and 90, greater than or equal to the minumium latitude.</p>
 </li>
 </ul>
 </div>
@@ -2286,7 +2286,7 @@ If necessary, further granularity can be indicated by the <code>additionalExtent
 ...
 "properties": {
   ...
-  "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
+  "description": "ICON-EPS 0.5 deg x 0.5 deg regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
   "themes": [
     {
       "concepts": [
@@ -6506,7 +6506,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-12 15:35:28 UTC
+Last updated 2024-02-14 12:47:51 UTC
 </div>
 </div>
 </body>
