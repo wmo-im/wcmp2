@@ -10,7 +10,6 @@ The WCMP Core Requirements Class provides requirements for a WCMP discovery meta
 
 include::../requirements/requirements_class_core.adoc[]
 
-When a record is transported through a protocol that is capable of assigning a media type to it, it should be set to ``application/geo+json``.
 The table below provides an overview of the set of properties that may be included in a WCMP record.
 
 
@@ -111,6 +110,12 @@ The table below provides an overview of the set of properties that may be includ
 |Additional properties as needed (see <<_additional_properties>>)
 
 |===
+
+==== WCMP record representation
+
+WCMP record can be represented in various ways internally, in WIS systems and software tools, but its external representation is GeoJSON.
+
+include::../recommendations/core/REC_media_type.adoc[]
 
 ==== Validation
 
