@@ -574,7 +574,7 @@ A contact can also be specified by using a URL.
   "contacts": [{
     "organization": "Government of Canada; Environment and Climate Change Canada; Meteorological Service of Canada",
     "links": [{
-      "href": "https://exmaple.org/about",
+      "href": "https://example.org/about",
       "rel": "about",
       "type": "text/html"
     }],
@@ -744,6 +744,22 @@ It is useful to add provider-specific details to have the most detailed informat
   "href": "https://example.org/license",
   "type": "text/html",
   "title": "EUMETSAT DATA LICENSING"
+}]
+----
+
+.Example: License for recommended data in the public domain
+[source,json]
+----
+"properties": {
+  ...
+  "wmo:dataPolicy": "recommended"
+  ...
+},
+"links": [{
+  "rel": "license",
+  "href": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "text/html",
+  "title": "CC0 1.0 Deed | CC0 1.0 Universal | Creative Commons"
 }]
 ----
 
