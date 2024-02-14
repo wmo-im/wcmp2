@@ -369,13 +369,13 @@ The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
 * The minimum longitude is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, less than or equal to maxx.
+signed number between -180 and 180, less than or equal to the maximum longitude.
 * The minimum latitude is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, less than or equal to maxy.
+signed number between -90 and 90, less than or equal to the maximum latitude.
 * The maximum longitude is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, greater than or equal to minx.
+signed number between -180 and 180, greater than or equal to the minimum longitude.
 * The maximum latitude is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, greater than or equal to miny.
+signed number between -90 and 90, greater than or equal to the minumium latitude.
 
 This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
 
