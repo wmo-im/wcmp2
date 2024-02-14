@@ -43,7 +43,7 @@ Ensure that all links resolve and are accessible via HTTPS.
   "links": [
     {
       "rel": "related",
-      "type": "application/json",
+      "type": "application/geo+json",
       "title": "Global Broker (Toulouse)",
       "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
       "channel": "cache/a/wis2/#",
@@ -59,7 +59,7 @@ Ensure that all links resolve and are accessible via HTTPS.
   "links": [
     {
       "rel": "subscribe",
-      "type": "application/json",
+      "type": "application/geo+json",
       "title": "Global Broker (Toulouse)",
       "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
       "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"

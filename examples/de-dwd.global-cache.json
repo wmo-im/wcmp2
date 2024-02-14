@@ -167,7 +167,7 @@
             "rel": "items",
             "channel": "cache/a/wis2",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]

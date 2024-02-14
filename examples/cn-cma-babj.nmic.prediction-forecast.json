@@ -145,7 +145,7 @@
         {
             "rel": "items",
             "channel": "origin/a/wis2/cn-cma-babj/weather/prediction/forecast/#",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtts://everyone:everyone@example.org:8883"
         }

@@ -10,7 +10,7 @@ The WCMP Core Requirements Class provides requirements for a WCMP discovery meta
 
 include::../requirements/requirements_class_core.adoc[]
 
-
+When a record is transported through a protocol that is capable of assigning a media type to it, it should be set to ``application/geo+json``.
 The table below provides an overview of the set of properties that may be included in a WCMP record.
 
 
@@ -865,7 +865,7 @@ For recommended data, the ``links`` property may also provide links to services 
   },
   {
     "rel"  : "items",
-    "type" : "application/json",
+    "type" : "application/geo+json",
     "title": "WIS2 notification service",
     "href" : "mqtts://example.org",
     "channel": "cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations"

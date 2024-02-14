@@ -136,7 +136,7 @@
             "rel": "items",
             "channel": "origin/a/wis2/int-eumetsat/data/core/weather/space-based-observations/satellite4nowcasting/Meteosat-10/ImageL1-5",
             "href": "mqtts://example.org",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         },
         {

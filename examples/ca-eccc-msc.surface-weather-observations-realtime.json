@@ -154,7 +154,7 @@
             "rel": "items",
             "href": "mqtts://example.org",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]

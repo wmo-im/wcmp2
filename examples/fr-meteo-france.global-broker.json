@@ -131,7 +131,7 @@
     "links": [
         {
             "rel": "items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@example.org:8883",
             "channel": "cache/a/wis2/#",

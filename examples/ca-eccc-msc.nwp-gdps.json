@@ -143,7 +143,7 @@
             "rel": "items",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/nwp/global",
             "href": "mqtts://example.org",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]
