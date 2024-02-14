@@ -747,7 +747,7 @@ It is useful to add provider-specific details to have the most detailed informat
 }]
 ----
 
-.Example: Recommended data for data put into the public domain:
+.Example: License for recommended data in the public domain
 [source,json]
 ----
 "properties": {
