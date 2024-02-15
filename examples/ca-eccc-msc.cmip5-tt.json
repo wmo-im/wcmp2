@@ -126,7 +126,7 @@
         "wmo:dataPolicy": "core",
         "language": "en",
         "type": "dataset",
-        "created": "2018-01-01",
+        "created": "2018-01-01T12:34:32",
         "updated": "2018-09-06"
     },
     "links": [
