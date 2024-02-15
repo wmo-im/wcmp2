@@ -533,24 +533,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_requirements_class_core">7.1. Requirements Class "Core"</a>
 <ul class="sectlevel3">
 <li><a href="#_overview_2">7.1.1. Overview</a></li>
-<li><a href="#_validation">7.1.2. Validation</a></li>
-<li><a href="#_identifier">7.1.3. Identifier</a></li>
-<li><a href="#_conformance_2">7.1.4. Conformance</a></li>
-<li><a href="#_properties_type">7.1.5. Properties / Type</a></li>
-<li><a href="#_properties_title">7.1.6. Properties / Title</a></li>
-<li><a href="#_properties_description">7.1.7. Properties / Description</a></li>
-<li><a href="#_properties_keywords">7.1.8. Properties / Keywords</a></li>
-<li><a href="#_properties_themes">7.1.9. Properties / Themes</a></li>
-<li><a href="#_geospatial_and_temporal_extents">7.1.10. Geospatial and temporal extents</a></li>
-<li><a href="#_properties_contacts">7.1.11. Properties / Contacts</a></li>
-<li><a href="#_properties_version">7.1.12. Properties / Version</a></li>
-<li><a href="#_properties_persistent_identifiers">7.1.13. Properties / Persistent identifiers</a></li>
-<li><a href="#_properties_record_creation_date">7.1.14. Properties / Record creation date</a></li>
-<li><a href="#_properties_record_update_date">7.1.15. Properties / Record update date</a></li>
-<li><a href="#_properties_status">7.1.16. Properties / Status</a></li>
-<li><a href="#_properties_wmo_data_policy">7.1.17. Properties / WMO data policy</a></li>
-<li><a href="#links-distribution">7.1.18. Links and distribution information</a></li>
-<li><a href="#_additional_properties">7.1.19. Additional properties</a></li>
+<li><a href="#_wcmp_record_representation">7.1.2. WCMP record representation</a></li>
+<li><a href="#_validation">7.1.3. Validation</a></li>
+<li><a href="#_identifier">7.1.4. Identifier</a></li>
+<li><a href="#_conformance_2">7.1.5. Conformance</a></li>
+<li><a href="#_properties_type">7.1.6. Properties / Type</a></li>
+<li><a href="#_properties_title">7.1.7. Properties / Title</a></li>
+<li><a href="#_properties_description">7.1.8. Properties / Description</a></li>
+<li><a href="#_properties_keywords">7.1.9. Properties / Keywords</a></li>
+<li><a href="#_properties_themes">7.1.10. Properties / Themes</a></li>
+<li><a href="#_geospatial_and_temporal_extents">7.1.11. Geospatial and temporal extents</a></li>
+<li><a href="#_properties_contacts">7.1.12. Properties / Contacts</a></li>
+<li><a href="#_properties_version">7.1.13. Properties / Version</a></li>
+<li><a href="#_properties_persistent_identifiers">7.1.14. Properties / Persistent identifiers</a></li>
+<li><a href="#_properties_record_creation_date">7.1.15. Properties / Record creation date</a></li>
+<li><a href="#_properties_record_update_date">7.1.16. Properties / Record update date</a></li>
+<li><a href="#_properties_status">7.1.17. Properties / Status</a></li>
+<li><a href="#_properties_wmo_data_policy">7.1.18. Properties / WMO data policy</a></li>
+<li><a href="#links-distribution">7.1.19. Links and distribution information</a></li>
+<li><a href="#_additional_properties">7.1.20. Additional properties</a></li>
 </ul>
 </li>
 </ul>
@@ -1480,7 +1481,33 @@ structured data discovery, search, and relevant results.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_validation"><a class="anchor" href="#_validation"></a>7.1.2. Validation</h4>
+<h4 id="_wcmp_record_representation"><a class="anchor" href="#_wcmp_record_representation"></a>7.1.2. WCMP record representation</h4>
+<div class="paragraph">
+<p>WCMP record can be represented in various ways internally, in WIS systems and software tools, but its external representation is GeoJSON.</p>
+</div>
+<table id="rec_core_media_type" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/media_type</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The media type assigned to a WCMP record, when transported through a protocol that supports it, SHOULD be <code>application/geo+json</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_validation"><a class="anchor" href="#_validation"></a>7.1.3. Validation</h4>
 <div class="paragraph">
 <p>The WCMP record schema is based on  <em>OGC API - Records - Part 1: Core: Requirements Class: Record Core</em> schema and the associated information model.  WCMP records compliant with WCMP schema are therefore compliant with the <em>OGC API - Records</em> record schema.</p>
 </div>
@@ -1518,7 +1545,7 @@ structured data discovery, search, and relevant results.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>7.1.3. Identifier</h4>
+<h4 id="_identifier"><a class="anchor" href="#_identifier"></a>7.1.4. Identifier</h4>
 <div class="paragraph">
 <p>The <code>id</code> property is a unique identifier
 of the dataset.  A record identifier is essential for querying and identifying records within the GDC.</p>
@@ -1589,7 +1616,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 </table>
 </div>
 <div class="sect3">
-<h4 id="_conformance_2"><a class="anchor" href="#_conformance_2"></a>7.1.4. Conformance</h4>
+<h4 id="_conformance_2"><a class="anchor" href="#_conformance_2"></a>7.1.5. Conformance</h4>
 <div class="paragraph">
 <p>The <code>conformsTo</code> property to identifies the version of the WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
 detection and handling of content.</p>
@@ -1630,7 +1657,7 @@ detection and handling of content.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.5. Properties / Type</h4>
+<h4 id="_properties_type"><a class="anchor" href="#_properties_type"></a>7.1.6. Properties / Type</h4>
 <div class="paragraph">
 <p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to <code>dataset</code>,
 WCMP can also describe additional resources, such as services and processes.</p>
@@ -1688,7 +1715,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_title"><a class="anchor" href="#_properties_title"></a>7.1.6. Properties / Title</h4>
+<h4 id="_properties_title"><a class="anchor" href="#_properties_title"></a>7.1.7. Properties / Title</h4>
 <div class="paragraph">
 <p>The <code>title</code> property is a human-readable name of the dataset.</p>
 </div>
@@ -1724,7 +1751,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_description"><a class="anchor" href="#_properties_description"></a>7.1.7. Properties / Description</h4>
+<h4 id="_properties_description"><a class="anchor" href="#_properties_description"></a>7.1.8. Properties / Description</h4>
 <div class="paragraph">
 <p>The <code>description</code> property is a free-text summary of the dataset.</p>
 </div>
@@ -1760,7 +1787,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_keywords"><a class="anchor" href="#_properties_keywords"></a>7.1.8. Properties / Keywords</h4>
+<h4 id="_properties_keywords"><a class="anchor" href="#_properties_keywords"></a>7.1.9. Properties / Keywords</h4>
 <div class="paragraph">
 <p>The <code>keywords</code> property is a list of keywords, tags or specific phrases associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.</p>
 </div>
@@ -1786,7 +1813,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/keywords</strong></p>
 </div></div></td>
@@ -1801,7 +1828,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_themes"><a class="anchor" href="#_properties_themes"></a>7.1.9. Properties / Themes</h4>
+<h4 id="_properties_themes"><a class="anchor" href="#_properties_themes"></a>7.1.10. Properties / Themes</h4>
 <div class="paragraph">
 <p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.</p>
 </div>
@@ -1963,7 +1990,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/granularity</strong></p>
 </div></div></td>
@@ -1998,9 +2025,9 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.10. Geospatial and temporal extents</h4>
+<h4 id="_geospatial_and_temporal_extents"><a class="anchor" href="#_geospatial_and_temporal_extents"></a>7.1.11. Geospatial and temporal extents</h4>
 <div class="sect4">
-<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.10.1. Geospatial extent</h5>
+<h5 id="_geospatial_extent"><a class="anchor" href="#_geospatial_extent"></a>7.1.11.1. Geospatial extent</h5>
 <div class="paragraph">
 <p>The <code>geometry</code> property is the general bounding spatial extent of the dataset in the geographic coordinate system.
 Geospatial bounding extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.</p>
@@ -2072,7 +2099,7 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_geospatial_point</strong></p>
 </div></div></td>
@@ -2092,7 +2119,7 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_geospatial_precision</strong></p>
 </div></div></td>
@@ -2112,7 +2139,7 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_geospatial_wis_2_global_service</strong></p>
 </div></div></td>
@@ -2127,7 +2154,7 @@ Geospatial bounding extents provide a useful indicator of the location of the da
 </table>
 </div>
 <div class="sect4">
-<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.10.2. Additional geospatial extents</h5>
+<h5 id="_additional_geospatial_extents"><a class="anchor" href="#_additional_geospatial_extents"></a>7.1.11.2. Additional geospatial extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.spatial</code> property is for other geospatial extents associated with the dataset. For example, it may be useful for non-geographic data or for describing multiple sub-areas of a dataset.
 The <code>additionalExtents.spatial.bbox</code> property
@@ -2197,7 +2224,7 @@ signed number between -90 and 90, greater than or equal to the minimum latitude.
 </table>
 </div>
 <div class="sect4">
-<h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.10.3. Temporal extent</h5>
+<h5 id="_temporal_extent"><a class="anchor" href="#_temporal_extent"></a>7.1.11.3. Temporal extent</h5>
 <div class="paragraph">
 <p>The <code>time</code> property describes the general bounding extent of the dataset and the temporal resolution.</p>
 </div>
@@ -2337,7 +2364,7 @@ If necessary, further granularity can be indicated by the <code>additionalExtent
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_temporal</strong></p>
 </div></div></td>
@@ -2369,7 +2396,7 @@ If necessary, further granularity can be indicated by the <code>additionalExtent
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/extent_service</strong></p>
 </div></div></td>
@@ -2384,7 +2411,7 @@ If necessary, further granularity can be indicated by the <code>additionalExtent
 </table>
 </div>
 <div class="sect4">
-<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.10.4. Additional temporal extents</h5>
+<h5 id="_additional_temporal_extents"><a class="anchor" href="#_additional_temporal_extents"></a>7.1.11.4. Additional temporal extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.temporal</code> property is for describing other temporal extents associated with the dataset. For example, it may be useful to represent multiple time instances or to identify other temporal reference systems.
 Temporal extents can be fully bound or open in either direction.  An <code>additionalExtents.temporal.resolution</code> property is able express the temporal granularity at which a given dataset&#8217;s data is measured, generated, or reported.</p>
@@ -2433,7 +2460,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </div>
 </div>
 <div class="sect3">
-<h4 id="_properties_contacts"><a class="anchor" href="#_properties_contacts"></a>7.1.11. Properties / Contacts</h4>
+<h4 id="_properties_contacts"><a class="anchor" href="#_properties_contacts"></a>7.1.12. Properties / Contacts</h4>
 <div class="paragraph">
 <p>The <code>contacts</code> property is the information associated with one or more responsible parties of the resource.</p>
 </div>
@@ -2544,7 +2571,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.12. Properties / Version</h4>
+<h4 id="_properties_version"><a class="anchor" href="#_properties_version"></a>7.1.13. Properties / Version</h4>
 <div class="paragraph">
 <p>The <code>version</code> property is the version or edition of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.</p>
 </div>
@@ -2580,7 +2607,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.13. Properties / Persistent identifiers</h4>
+<h4 id="_properties_persistent_identifiers"><a class="anchor" href="#_properties_persistent_identifiers"></a>7.1.14. Properties / Persistent identifiers</h4>
 <div class="paragraph">
 <p>The <code>externalIds</code> property is a persistent (or handle) identifier used to provide a long lasting reference to a digital resource.  Persistent identifiers are commonly used for scientific publications and datasets.</p>
 </div>
@@ -2639,7 +2666,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 8</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 9</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/pids</strong></p>
 </div></div></td>
@@ -2680,7 +2707,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.14. Properties / Record creation date</h4>
+<h4 id="_properties_record_creation_date"><a class="anchor" href="#_properties_record_creation_date"></a>7.1.15. Properties / Record creation date</h4>
 <div class="paragraph">
 <p>The <code>created</code> property is a single date that the WCMP metadata record was created. Note, that this date is not the start or end time of a given dataset.  See <a href="#_temporal_extent">Temporal extent</a> for more information on defining dataset temporal extents.</p>
 </div>
@@ -2722,7 +2749,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.15. Properties / Record update date</h4>
+<h4 id="_properties_record_update_date"><a class="anchor" href="#_properties_record_update_date"></a>7.1.16. Properties / Record update date</h4>
 <div class="paragraph">
 <p>The <code>updated</code> property is the date that the WCMP metadata record was last updated. Note, that this date is not the start or end time of a given dataset.  See <a href="#_temporal_extent">Temporal extent</a> for more information on defining dataset temporal extents.</p>
 </div>
@@ -2743,7 +2770,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 9</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/record_update_date</strong></p>
 </div></div></td>
@@ -2758,7 +2785,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_status"><a class="anchor" href="#_properties_status"></a>7.1.16. Properties / Status</h4>
+<h4 id="_properties_status"><a class="anchor" href="#_properties_status"></a>7.1.17. Properties / Status</h4>
 <div class="paragraph">
 <p>The <code>status</code> property identifies the lifecycle of a given dataset.  See Annex D for possible codelists to use when encoding this property.</p>
 </div>
@@ -2780,7 +2807,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 10</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/status</strong></p>
 </div></div></td>
@@ -2819,7 +2846,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </table>
 </div>
 <div class="sect3">
-<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.17. Properties / WMO data policy</h4>
+<h4 id="_properties_wmo_data_policy"><a class="anchor" href="#_properties_wmo_data_policy"></a>7.1.18. Properties / WMO data policy</h4>
 <div class="paragraph">
 <p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by WMO Unified Data Policy<sup class="footnote">[<a id="_footnoteref_35" class="footnote" href="#_footnotedef_35" title="View footnote.">35</a>]</sup>
 for the international exchange of Earth system data. The codelist values are <code>core</code> or <code>recommended</code>.  The <code>wmo:dataPolicy</code> property is required if the metadata record describes a dataset.</p>
@@ -2934,7 +2961,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 11</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/data_policy_conditions</strong></p>
 </div></div></td>
@@ -3016,9 +3043,9 @@ for the international exchange of Earth system data. The codelist values are <co
 </table>
 </div>
 <div class="sect3">
-<h4 id="links-distribution"><a class="anchor" href="#links-distribution"></a>7.1.18. Links and distribution information</h4>
+<h4 id="links-distribution"><a class="anchor" href="#links-distribution"></a>7.1.19. Links and distribution information</h4>
 <div class="sect4">
-<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.18.1. Overview</h5>
+<h5 id="_overview_3"><a class="anchor" href="#_overview_3"></a>7.1.19.1. Overview</h5>
 <div class="paragraph">
 <p>The <code>links</code> property describes URLs and APIs for accessing the dataset or for subscribing to dataset notifications. Links are the primary mechanism for interacting with the data, and provide an "actionable" workflow to enhance and improve the user experience with "less clicks" for subscriptions and downloads.</p>
 </div>
@@ -3120,7 +3147,7 @@ for the international exchange of Earth system data. The codelist values are <co
   },
   {
     "rel"  : "items",
-    "type" : "application/json",
+    "type" : "application/geo+json",
     "title": "WIS2 notification service",
     "href" : "mqtts://example.org",
     "channel": "cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations"
@@ -3156,7 +3183,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </div>
 </div>
 <div class="sect4">
-<h5 id="_templated_links"><a class="anchor" href="#_templated_links"></a>7.1.18.2. Templated links</h5>
+<h5 id="_templated_links"><a class="anchor" href="#_templated_links"></a>7.1.19.2. Templated links</h5>
 <div class="paragraph">
 <p>Templated links allow for specifying a pattern of a link in support API interaction (where parameter values are variable).</p>
 </div>
@@ -3289,7 +3316,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 12</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/links</strong></p>
 </div></div></td>
@@ -3330,7 +3357,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </table>
 </div>
 <div class="sect4">
-<h5 id="_distribution_information"><a class="anchor" href="#_distribution_information"></a>7.1.18.3. Distribution information</h5>
+<h5 id="_distribution_information"><a class="anchor" href="#_distribution_information"></a>7.1.19.3. Distribution information</h5>
 <div class="paragraph">
 <p>The <code>distribution</code> property provides information about the format of the dataset, associated documentation and representative examples of the dataset.</p>
 </div>
@@ -3373,7 +3400,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 13</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/distribution</strong></p>
 </div></div></td>
@@ -3436,7 +3463,7 @@ for the international exchange of Earth system data. The codelist values are <co
 </table>
 </div>
 <div class="sect4">
-<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>7.1.18.4. Access control</h5>
+<h5 id="_access_control"><a class="anchor" href="#_access_control"></a>7.1.19.4. Access control</h5>
 <div class="paragraph">
 <p>WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
@@ -3462,7 +3489,7 @@ example demonstrates how to express access control using HTTP Basic Authenticati
 </div>
 </div>
 <div class="sect4">
-<h5 id="_link_relation_selection"><a class="anchor" href="#_link_relation_selection"></a>7.1.18.5. Link relation selection</h5>
+<h5 id="_link_relation_selection"><a class="anchor" href="#_link_relation_selection"></a>7.1.19.5. Link relation selection</h5>
 <div class="paragraph">
 <p>Link relations are very important and provide valuable context to help clarify the semantics of a given link or URL.</p>
 </div>
@@ -3544,7 +3571,7 @@ links to data and services.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.19. Additional properties</h4>
+<h4 id="_additional_properties"><a class="anchor" href="#_additional_properties"></a>7.1.20. Additional properties</h4>
 <div class="paragraph">
 <p>A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.</p>
@@ -5943,7 +5970,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "rel": "items",
             "href": "mqtts://example.org",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]
@@ -6154,7 +6181,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "rel": "items",
             "channel": "origin/a/wis2/de-dwd/data/core/weather/prediction/forecast/medium-range",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]
@@ -6297,7 +6324,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
     "links": [
         {
             "rel": "items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@example.org:8883",
             "channel": "cache/a/wis2/#",
@@ -6519,7 +6546,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-15 01:49:26 UTC
+Last updated 2024-02-15 01:51:19 UTC
 </div>
 </div>
 </body>
