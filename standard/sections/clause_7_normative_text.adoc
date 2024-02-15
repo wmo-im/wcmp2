@@ -10,7 +10,6 @@ The WCMP Core Requirements Class provides requirements for a WCMP discovery meta
 
 include::../requirements/requirements_class_core.adoc[]
 
-
 The table below provides an overview of the set of properties that may be included in a WCMP record.
 
 
@@ -135,7 +134,7 @@ include::../recommendations/core/PER_identifier.adoc[]
 
 ==== Conformance
 
-The `+conformsTo+` property to identifies the version ofthe WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
+The `+conformsTo+` property to identifies the version of the WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
 detection and handling of content.
 
 .Example
@@ -285,7 +284,7 @@ A WCMP metadata record can have one or more themes.
       {
         "id": "001",
         "title": "Temperature/air temperature",
-        "kurl": "http://codes.wmo.int/bufr4/b/12/001"
+        "url": "http://codes.wmo.int/bufr4/b/12/001"
       },
       {
         "id": "003",
@@ -375,7 +374,7 @@ signed number between -90 and 90, less than or equal to the maximum latitude.
 * The maximum longitude is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
 signed number between -180 and 180, greater than or equal to the minimum longitude.
 * The maximum latitude is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, greater than or equal to the minumium latitude.
+signed number between -90 and 90, greater than or equal to the minimum latitude.
 
 This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
 
