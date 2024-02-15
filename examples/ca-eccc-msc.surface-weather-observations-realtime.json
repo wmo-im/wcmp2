@@ -120,8 +120,8 @@
             }
         ],
         "type": "dataset",
-        "created": "2018-01-01",
-        "updated": "2022-06-22",
+        "created": "2018-01-01T00:11:32Z",
+        "updated": "2022-06-22T08:23:42Z",
         "wmo:dataPolicy": "core"
     },
     "links": [
