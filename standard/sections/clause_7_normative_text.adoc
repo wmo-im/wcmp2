@@ -111,6 +111,12 @@ The table below provides an overview of the set of properties that may be includ
 
 |===
 
+==== WCMP record representation
+
+WCMP record can be represented in various ways internally, in WIS systems and software tools, but its external representation is GeoJSON.
+
+include::../recommendations/core/REC_media_type.adoc[]
+
 ==== Validation
 
 The WCMP record schema is based on  _OGC API - Records - Part 1: Core: Requirements Class: Record Core_ schema and the associated information model.  WCMP records compliant with WCMP schema are therefore compliant with the _OGC API - Records_ record schema.
@@ -864,7 +870,7 @@ For recommended data, the ``links`` property may also provide links to services 
   },
   {
     "rel"  : "items",
-    "type" : "application/json",
+    "type" : "application/geo+json",
     "title": "WIS2 notification service",
     "href" : "mqtts://example.org",
     "channel": "cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations"

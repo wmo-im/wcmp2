@@ -127,7 +127,7 @@
             "rel": "items",
             "channel": "origin/a/wis2/de-dwd/data/core/weather/surface-based-observations/synop",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]

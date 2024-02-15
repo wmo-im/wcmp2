@@ -147,7 +147,7 @@
             "rel": "items",
             "href": "mqtts://example.org",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/climate/observations",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications"
         }
     ]

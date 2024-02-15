@@ -112,7 +112,7 @@
         {
             "rel": "items",
             "channel": "cache/a/wis2/#",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtts://everyone:everyone@example.org:8883"
         }
