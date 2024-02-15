@@ -68,7 +68,7 @@
     "properties": {
         "type": "dataset",
         "title": "Global Ensemble Prediction Model",
-        "description": "ICON-EPS 0.5\u00b0 x 0.5\u00b0 regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
+        "description": "ICON-EPS 0.5 deg x 0.5 deg regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
         "themes": [
             {
                 "concepts": [
