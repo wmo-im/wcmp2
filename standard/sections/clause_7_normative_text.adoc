@@ -803,21 +803,21 @@ The table below provides an overview of the properties of a link object.
 |The link destination or target, or URL
 
 |``rel``
-|**optional**
+|optional
 |The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
  by IANA link relationsfootnote:[https://www.iana.org/assignments/link-relations/link-relations.xhtml] or WCMP
  defined extensionsfootnote:[https://codes.wmo.int/wis/link-type] (see <<_link_relation_selection>>)
 
 |``type``
-|**optional**
+|optional
 |The media (or MIME) type of the format of the link
 
 |``hreflang``
-|**optional**
+|optional
 |The language of the content in the link
 
 |``title``
-|**optional**
+|optional
 |A human-readable name for the link (can be used for display on search / discovery web portals)
 
 |``channel``
@@ -825,11 +825,11 @@ The table below provides an overview of the properties of a link object.
 |For data made available via MQTT, the topic to which a user may subscribe to for notifications and access
 
 |``security``
-|**optional**
+|optional
 |For access controlled data, a description of the access control mechanism applied (see <<_access_control>>)
 
 |``distribution``
-|**optional**
+|optional
 |Value added information about the link to further assist the user (additional document, typical file size, etc.) (see <<_distribution_information>>)
 
 |===
