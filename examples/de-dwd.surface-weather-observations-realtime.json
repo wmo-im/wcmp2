@@ -106,8 +106,8 @@
             }
         ],
         "type": "dataset",
-        "created": "2023-11-01",
-        "updated": "2023-12-01",
+        "created": "2023-11-01T22:23:43Z",
+        "updated": "2023-12-01T18:49:27Z",
         "wmo:dataPolicy": "core"
     },
     "links": [
