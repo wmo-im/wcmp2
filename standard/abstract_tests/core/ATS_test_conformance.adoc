@@ -14,7 +14,7 @@ Check for the existence of a `+conformsTo+` property in the WCMP record.
 
 [.component,class=step]
 --
-In the WCMP record's `+conformsTo+` array property, check that ONE of the values is equal to `+http://wmo.int/spec/wcmp/2/conf/core+`.
+In the WCMP record's `+conformsTo+` array property, check that ONE of the values is equal to `+http://wis.wmo.int/spec/wcmp/2/conf/core+`.
 --
 =====
 ====
