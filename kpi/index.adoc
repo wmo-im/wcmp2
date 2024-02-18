@@ -1,7 +1,8 @@
 :title: WMO Core Metadata Profile 2, Key Performance Indicators
 :titletext: {title}
-:version: 2.0.0-DRAFT-{docdate}
-:copyright: Copyright © 2023 World Meteorological Organization (WMO)
+:version: 2.0.0
+:date: {docdate}
+:copyright: Copyright © 2024 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
 :lang: en
