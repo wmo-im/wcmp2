@@ -113,6 +113,14 @@
             {
                 "concepts": [
                     {
+                        "id": "space-weather"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+            },
+            {
+                "concepts": [
+                    {
                         "id": "GlobalExchange"
                     }
                 ],
