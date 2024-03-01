@@ -62,9 +62,7 @@
                         "title": "weather"
                     }
                 ],
-                "scheme": [
-                    "topic-hierarchy/earth-system-discipline"
-                ]
+                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
             }
         ],
         "contacts": [
