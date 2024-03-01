@@ -1,5 +1,5 @@
 {
-    "id": "urn:wmo:md:md-qc:surface-based-observations.temp",
+    "id": "urn:wmo:md:cu-insmet:surface-based-observations.temp",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
