@@ -58,11 +58,12 @@
             {
                 "concepts": [
                     {
+                        "id": "weather",
                         "title": "weather"
                     }
                 ],
                 "scheme": [
-                    "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                    "topic-hierarchy/earth-system-discipline"
                 ]
             }
         ],
@@ -70,7 +71,9 @@
             {
                 "organization": "WMO",
                 "phones": [
-                    {}
+                    {
+                        "value":"+141227308342"
+                    }
                 ],
                 "emails": [
                     {
@@ -83,7 +86,13 @@
                     }
                 ],
                 "links": [
-                    {}
+                    {
+                        "rel": "about",
+                        "href": "https://wmo.int",
+                        "title": "WMO homepage",
+                        "type": "text/html"
+                        
+                    }
                 ],
                 "hoursOfService": "Hours: Mo-Fr 9am-5pm Sa 10am-5pm Su 10am-4pm",
                 "contactInstructions": "Email",
@@ -99,12 +108,15 @@
         {
             "rel": "collection",
             "href": "undefined/oapi/collections/urn:x-wmo:md:md-qc:surface-based-observations.temp",
-            "title": "urn:x-wmo:md:md-qc:surface-based-observations.temp"
+            "title": "urn:x-wmo:md:md-qc:surface-based-observations.temp",
+            "type": "application/bufr"
+
         },
         {
             "rel": "canonical",
             "href": "undefined/oapi/collections/discovery-metadata/items/urn:x-wmo:md:md-qc:surface-based-observations.temp",
-            "title": "urn:x-wmo:md:md-qc:surface-based-observations.temp"
+            "title": "urn:x-wmo:md:md-qc:surface-based-observations.temp",
+            "type": "application/bufr"
         }
     ]
 }
