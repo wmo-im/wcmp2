@@ -34,7 +34,3 @@ jobs:
     - name: Run pywcmp ETS validation
       run: |
         for e in examples/*.json; do pywcmp ets validate $e; done
-    - name: Run pywcmp ETS validation on failing examples
-      continue-on-error: true
-      run: |
-        for e in examples/failing/*.json; do pywcmp ets validate $e; done
