@@ -38,8 +38,8 @@
         ]
     },
     "properties": {
-        "created": "2022-08-01",
-        "updated": "2024-03-13",
+        "created": "2022-08-01T12:00:00Z",
+        "updated": "2024-03-13T12:00:00Z",
         "wmo:dataPolicy": "core",
         "type": "dataset",
         "title": "Goes 16 Advanced Baseline Imager Level 2 Sea Surface Temperature",
