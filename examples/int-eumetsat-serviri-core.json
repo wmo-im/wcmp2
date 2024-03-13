@@ -49,6 +49,7 @@
             "title": "dataset is in 24/7 operation",
             "url": "https://vocab.met.no/mmd/en/page/Operational_Status"
         },
+        "amComment1":"move these keywords into concepts",
         "keywords": [
             "atmosphere",
             "land",
@@ -127,6 +128,7 @@
                 "scheme": "https://wis.wmo.int/2012/codelists/WMOCodeLists.xml#WMO_CategoryCode#MD_KeywordTypeCode_dataCentre"
             }
         ],
+        "amComment2":"move formats under links.distribution.availableFormats",
         "formats": [
             "application/x-eum-hrit"
         ],
@@ -143,6 +145,7 @@
         {
             "rel": "items",
             "channel": "origin/a/wis2/int-eumetsat/data/core/weather/space-based-observations/satellite4nowcasting/Meteosat-10/ImageL1-5",
+            "amComment":"update channel when satellite topics are defined, change href",
             "href": "mqtts://example.org",
             "type": "application/geo+json",
             "title": "Data notifications"

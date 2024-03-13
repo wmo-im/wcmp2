@@ -39,12 +39,14 @@
     },
     "properties": {
         "created": "2022-06-23T18:36:00Z",
-        "updated": "2022-06-23T18:36:00Z",
+        "updated": "2024-03-13",
         "wmo:dataPolicy": "core",
         "rights": "access",
+        "amComment1":"what does access mean?",
         "type": "dataset",
         "title": "Global Forecast System 1 Degree Resolution",
         "description": "The Global Forecast System is a weather forecast model produced by the National Centers for Environmental Prediction.",
+        "amComment2":"can the description be expanded on a little bit?",
         "keywords": [
             "Geopotential Height",
             "Planetary Boundary Layer Height",
@@ -212,56 +214,69 @@
             {
                 "concepts": [
                     {
-                        "id": "weather"
+                        "id": "weather",
+                        "title": "Weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
+                "scheme": "http:codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
             },
-            {
+            { "amComment3":"remove because it doesn't have a definition and I don't like using old ISO codes",
                 "concepts": [
                     {
-                        "id": "meteorology"
+                        "title": "meteorology"
                     }
                 ],
                 "scheme": "http://wis.wmo.int/2012/codelists/WMOCodeLists#WMO_CategoryCode"
             },
+
             {
                 "concepts": [
                     {
-                        "id": "Absolute vorticity"
+                        "title": "Absolute vorticity",
+                        "id": "0-2-10"
                     },
                     {
-                        "id": "Albedo"
+                        "title": "Albedo",
+                        "id":"0-19-1"
                     },
                     {
-                        "id": "Pressure reduced to MSL"
+                        "title": "Pressure reduced to MSL",
+                        "id":"0-3-1"
                     },
                     {
-                        "id": "Snow cover"
+                        "title": "Snow cover",
+                        "id":"0-1-42"
                     },
                     {
-                        "id": "Snow depth"
+                        "title": "Snow depth",
+                        "id":"0-1-11"
                     },
                     {
-                        "id": "Soil temperature"
+                        "title": "Soil temperature",
+                        "id":"2-3-18"
                     },
                     {
-                        "id": "v-component of wind"
+                        "title": "v-component of wind",
+                        "id":"0-2-3"
                     },
                     {
-                        "id": "v-component storm motion"
+                        "title": "v-component storm motion",
+                        "id":"0-2-28"
                     },
                     {
-                        "id": "Vegetation"
+                        "title": "Vegetation",
+                        "id":"2-0-4"
                     },
                     {
-                        "id":"Vertical velocity (geometric))"
+                        "title":"Vertical velocity (geometric))",
+                        "id":"0-2-9"
                     },
                     {
-                        "id":"Vertical velocity (pressure)"
+                        "title":"Vertical velocity (pressure)",
+                        "id":"0-2-8"
                     }
                 ],
-                "scheme": "https://codes.wmo.int/grib2/codeflag/_4.2"
+                "scheme": "https://codes.wmo.int/grib2/codeflag/4.2"
             }
         ],
         "contacts": [
@@ -308,8 +323,16 @@
         {
             "rel": "data",
             "href": "https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/",
-            "type": "application/x-grib",
+            "type": "application/grib;edition=2",
             "title": "NOAA Operational Model Archive and Distribution System (NOMADS)"
+        },
+        {
+            "amComment":"need to update channel",
+            "rel": "items",
+            "channel": ".../weather/prediction/forecast/.../global",
+            "type": "application/geo+json",
+            "title": "Data notifications",
+            "href": "mqtts://everyone:everyone@example.org:8883"
         }
     ]
 }

@@ -98,12 +98,12 @@
         "keywords": [
             "WIS2",
             "surface",
-            "observations",
-            "metadata"
+            "observations"
         ]
     },
     "links": [
         {
+            "amComment":"is there a non-dev URL?",
             "rel": "data",
             "type": "text/html",
             "title": "Raw data download (bufr4)",
@@ -111,7 +111,7 @@
         },
         {
             "rel": "items",
-            "channel": "cache/a/wis2/#",
+            "channel": "origin/a/wis2/cn-cma/data/core/weather/surface-based-observations/synop",
             "type": "application/geo+json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtts://everyone:everyone@example.org:8883"

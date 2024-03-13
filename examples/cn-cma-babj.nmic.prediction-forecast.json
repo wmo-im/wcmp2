@@ -1,5 +1,6 @@
 {
-    "id": "urn:wmo:md:cn-cma-babj:data.core.weather.prediction.forecast.shortrange.probabilistic.global",
+    "amComment": "short-range or medium-range? global or limited-area? are all of the discipline topics relevant? Is there a real link for data access?",
+    "id": "urn:wmo:md:cn-cma-babj:data.core.weather.prediction.forecast.short-range.probabilistic.global",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
@@ -39,7 +40,7 @@
         "resolution": "P6H"
     },
     "properties": {
-        "title": "CMA GRAPES GEPS v1.3",
+        "title": "CMA Global and Regional Assimilation and Prediction system Global Ensemble Prediction System (GRAPES GEPS) v1.3",
         "description": "GRAPES GEPS is the main technical means to solve the uncertainty of CMA-GFS medium-term forecast and the difficulties of extreme weather forecast.",
         "themes": [
             {
@@ -73,16 +74,7 @@
                         "title": "Space Weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "global-broker",
-                        "title": "Global Broker"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -127,7 +119,7 @@
         "language": "en",
         "type": "dataset",
         "created": "2023-04-23T12:00:00Z",
-        "updated": "2024-01-15T12:00:00Z",
+        "updated": "2024-03-13",
         "keywords": [
             "WIS2",
             "forecast",
@@ -144,7 +136,7 @@
         },
         {
             "rel": "items",
-            "channel": "origin/a/wis2/cn-cma-babj/weather/prediction/forecast/#",
+            "channel": "origin/a/wis2/cn-cma-babj/weather/prediction/forecast/shortrange/probabilistic/global",
             "type": "application/geo+json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtts://everyone:everyone@example.org:8883"

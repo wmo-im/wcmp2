@@ -146,6 +146,7 @@
         {
             "rel": "items",
             "href": "mqtts://example.org",
+            "amComment":"should we add observations to the climate discpline?",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/climate/observations",
             "type": "application/geo+json",
             "title": "Data notifications"

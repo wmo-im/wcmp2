@@ -126,6 +126,7 @@
     },
     "links": [
         {
+            "amComment":"this URL redirects to the GetCapabilities doc",
             "rel": "stations",
             "href": "https://dd.weather.gc.ca/observations/doc/swob-xml_station_list.csv",
             "type": "text/csv",
@@ -151,6 +152,7 @@
             "title": "Documentation"
         },
         {
+            "amComment":"update with real MQTT link",
             "rel": "items",
             "href": "mqtts://example.org",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",

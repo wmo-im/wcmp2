@@ -133,6 +133,7 @@
     },
     "links": [
         {
+            "amComment":"is there a real URL now?",
             "rel": "archives",
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",

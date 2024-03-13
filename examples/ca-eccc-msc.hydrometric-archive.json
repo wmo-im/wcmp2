@@ -143,12 +143,14 @@
             "title": "Open Government Licence - Canada"
         },
         {
+            "amComment1":"technically, the GetCapabilities document is XML",
             "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities",
             "type": "image/png",
             "title": "HYDROMETRIC.STATIONS"
         },
         {
+            "amComment2": "update href with real URL",
             "rel": "items",
             "href": "mqtts://example.org",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/hydrology",

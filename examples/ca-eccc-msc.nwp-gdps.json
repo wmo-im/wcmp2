@@ -134,12 +134,14 @@
             "title": "Open Government Licence - Canada"
         },
         {
+            "amComment": "text/xml? spell out degrees?",
             "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
             "type": "image/png",
             "title": "Air temperature [\u00b0C]"
         },
         {
+            "amComment":"update with real MQTT link",
             "rel": "items",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/nwp/global",
             "href": "mqtts://example.org",
