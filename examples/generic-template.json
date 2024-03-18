@@ -1,0 +1,122 @@
+{
+    "id": "urn:wmo:md:{centre-id}:{topic}.{topic}.{unique_id}",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+    "time": {
+        "interval": [
+            "2024-01-01T00:00:00Z",
+            ".."
+        ]
+    },
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -180,
+                    -90
+                ],
+                [
+                    -180,
+                    90
+                ],
+                [
+                    180,
+                    90
+                ],
+                [
+                    180,
+                    -90
+                ],
+                [
+                    -180,
+                    -90
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "title": "{Dataset Title}",
+        "description": "{A description of the dataset.",
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "{concept_ID}",
+                        "title": "{concept name}"
+                    },
+                        {
+                            "id": "{concept_ID}",
+                            "title": "{concept name}",
+                            "url":"{concept URI/URL}"
+                        }
+    
+                ],
+                "scheme": "http://example.org/{concept_source}"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "{disciplineNotation}",
+                        "title": "discipline name",
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/{disciplineNotation}"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+            }
+        ],
+               "contacts": [
+            {
+                "name": "{Contact Name}",
+                "organization": "{Contact organization}",
+                "emails": [
+                    {
+                        "value": "{email}"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "{street adresss}"
+                        ],
+                        "city": "{city}",
+                        "postalCode": "{postalcode}",
+                        "country": "{country}"
+                    }
+                ],
+                "links": [
+                    {
+                        "rel": "{iana link type}",
+                        "type": "{url type}",
+                        "href": "URL"
+                    }
+                ],
+                "contactInstructions": "{other instructions}",
+                "roles": [
+                    "{contact_role}"
+                ]
+            }
+        ],
+        "type": "dataset",
+        "created": "2024-01-30T12:00:00",
+        "updated": "2024-12-31T12:00:00",
+        "wmo:dataPolicy": "core"
+    },
+        "links": [
+            {
+                "rel": "{iana link type}",
+                "type": "{url type}",
+                "href": "URL",
+                "title":"{title of URL}"
+            },
+      	{
+            "rel": "items",
+            "channel": "{topic_hiearchy}",
+            "href": "mqtts://everyone:everyone@example.org:8883",
+            "type": "application/geo+json",
+            "title": "Data notifications"
+        }
+    ]
+}
