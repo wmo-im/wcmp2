@@ -73,7 +73,7 @@
                 "organization": "{Contact organization}",
                 "emails": [
                     {
-                        "value": "{email}"
+                        "value": "email@example.org"
                     }
                 ],
                 "addresses": [
@@ -100,8 +100,8 @@
             }
         ],
         "type": "dataset",
-        "created": "2024-01-30T12:00:00",
-        "updated": "2024-12-31T12:00:00",
+        "created": "2024-01-30T12:00:00Z",
+        "updated": "2024-12-31T12:00:00Z",
         "wmo:dataPolicy": "core"
     },
         "links": [
