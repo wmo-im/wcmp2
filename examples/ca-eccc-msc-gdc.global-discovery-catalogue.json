@@ -1,5 +1,5 @@
 {
-    "id": "urn:wmo:md:ca-eccc-msc-gdc:global-discovery-catalogue",
+    "id": "urn:wmo:md:ca-eccc-msc-global-discovery-catalogue:geomet",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
