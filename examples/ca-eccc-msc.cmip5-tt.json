@@ -153,7 +153,7 @@
         {
             "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities&layer=CMIP5.TT.RCP85.YEAR.2081-2100_PCTL50",
-            "type": "image/png",
+            "type": "application/xml",
             "title": "CMIP5.TT.RCP85.YEAR.2081-2100_PCTL50"
         },
         {
@@ -167,7 +167,14 @@
             "href": "https://dd.weather.gc.ca/climate/cmip5/netcdf/scenarios/RCP8.5/annual/avg_20years",
             "type": "text/html",
             "hreflang": "en",
-            "title": "Raw data download (NetCDF files)"
+            "title": "Raw data download (NetCDF files)",
+            "distribution": {
+                "availableFormat": [
+                    {
+                        "name": "NetCDF"
+                    }
+                ]
+            }
         }
     ]
 }

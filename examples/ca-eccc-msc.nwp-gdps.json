@@ -125,7 +125,14 @@
             "rel": "data",
             "href": "https://dd.weather.gc.ca/model_gem_global",
             "type": "text/html",
-            "title": "MSC Datamart"
+            "title": "MSC Datamart",
+            "distribution": {
+                "availableFormats": [
+                    {
+                        "name": "GRIB2"
+                    }
+                ]
+            }
         },
         {
             "rel": "license",
@@ -136,13 +143,13 @@
         {
             "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet?lang=en&service=WMS&request=GetCapabilities&layers=GDPS.ETA_TT",
-            "type": "image/png",
-            "title": "Air temperature [\u00b0C]"
+            "type": "application/xml",
+            "title": "Air temperature [degrees]"
         },
         {
             "rel": "items",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/nwp/global",
-            "href": "mqtts://example.org",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "type": "application/geo+json",
             "title": "Data notifications"
         }

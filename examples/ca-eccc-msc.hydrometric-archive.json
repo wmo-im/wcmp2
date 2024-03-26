@@ -134,7 +134,14 @@
             "rel": "related",
             "href": "https://www.canada.ca/en/environment-climate-change/services/water-overview/quantity/monitoring/survey/data-products-services/national-archive-hydat.html",
             "type": "text/html",
-            "title": "Archive database download"
+            "title": "Archive database download",
+            "distribution": {
+                "availableFormats": [
+                    {
+                        "name": "SQLite3"
+                    }
+                ]
+            }
         },
         {
             "rel": "license",
@@ -145,12 +152,12 @@
         {
             "rel": "service",
             "href": "https://geo.weather.gc.ca/geomet-climate?lang=F&service=WMS&request=GetCapabilities",
-            "type": "image/png",
+            "type": "application/xml",
             "title": "HYDROMETRIC.STATIONS"
         },
         {
             "rel": "items",
-            "href": "mqtts://example.org",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/hydrology",
             "type": "application/geo+json",
             "title": "Data notifications"
@@ -158,7 +165,7 @@
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-stations/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "hydrometric-stations"
         },
         {
@@ -170,19 +177,19 @@
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-monthly-mean/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "hydrometric-monthly-mean"
         },
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-annual-statistics/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "hydrometric-annual-statistics"
         },
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-annual-peaks/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "hydrometric-annual-peaks"
         }
     ]

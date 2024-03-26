@@ -73,16 +73,7 @@
                         "title": "Space Weather"
                     }
                 ],
-                "scheme": "https://github.com/wmo-im/wis2-topic-hierarchy/blob/main/topic-hierarchy/earth-system-discipline/index.csv"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "global-broker",
-                        "title": "Global Broker"
-                    }
-                ],
-                "scheme": "https://github.com/wmo-im/wcmp2-codelists/blob/main/codelists/global-service-type.csv"
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             }
         ],
         "contacts": [
@@ -127,7 +118,7 @@
         "language": "en",
         "type": "dataset",
         "created": "2023-04-23T12:00:00Z",
-        "updated": "2024-01-15T12:00:00Z",
+        "updated": "2024-03-13T12:00:00Z",
         "keywords": [
             "WIS2",
             "forecast",
@@ -144,10 +135,10 @@
         },
         {
             "rel": "items",
-            "channel": "origin/a/wis2/cn-cma-babj/weather/prediction/forecast/#",
+            "channel": "origin/a/wis2/cn-cma-babj/weather/prediction/forecast/shortrange/probabilistic/global",
             "type": "application/geo+json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
-            "href": "mqtts://everyone:everyone@example.org:8883"
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883"
         }
     ]
 }
