@@ -83,29 +83,29 @@
                         "id": "ocean",
                         "title": "Ocean",
                         "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/ocean"
-                    },
-                    {
-                        "concepts": [
-                            {
-                                "id": "seaSurfaceTemperature",
-                                "title": "Sea surface temperature",
-                                "url": "http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature"
-                            }
-                        ],
-                        "scheme": "http://codes.wmo.int/common/quantity-kind"
-                    },
-                    {
-                        "concepts": [
-                            {
-                                "id": "95",
-                                "title": "Sea surface temperature",
-                                "url": "http://codes.wmo.int/wmdr/ObservedVariableOcean/95"
-                            }
-                        ],
-                        "scheme": "https://codes.wmo.int/wmdr/ObservedVariableOcean"
                     }
                 ],
                 "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "seaSurfaceTemperature",
+                        "title": "Sea surface temperature",
+                        "url": "http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature"
+                    }
+                ],
+                "scheme": "http://codes.wmo.int/common/quantity-kind"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "95",
+                        "title": "Sea surface temperature",
+                        "url": "http://codes.wmo.int/wmdr/ObservedVariableOcean/95"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/wmdr/ObservedVariableOcean"
             }
         ],
         "contacts": [
