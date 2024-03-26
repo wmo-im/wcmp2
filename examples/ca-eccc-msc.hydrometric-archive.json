@@ -171,7 +171,7 @@
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-daily-mean/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "hydrometric-daily-mean"
         },
         {
