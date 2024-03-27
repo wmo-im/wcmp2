@@ -116,7 +116,7 @@
         {
             "rel": "stations",
             "href": "https://api.weather.gc.ca/collections/climate-stations/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Stations associated with this dataset"
         },
         {
@@ -134,7 +134,7 @@
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/climate-daily/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "title": "Climate daily data access API interface"
         },
         {
@@ -146,7 +146,7 @@
         {
             "rel": "items",
             "href": "mqtts://example.org",
-            "channel": "origin/a/wis2/ca-eccc-msc/data/core/climate/observations",
+            "channel": "origin/a/wis2/ca-eccc-msc/data/core/climate",
             "type": "application/geo+json",
             "title": "Data notifications"
         }

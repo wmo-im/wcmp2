@@ -38,12 +38,12 @@
         ]
     },
     "properties": {
-        "created": "2022-08-01T14:16:00Z",
-        "updated": "2022-08-01T14:16:00Z",
+        "created": "2022-08-01T12:00:00Z",
+        "updated": "2024-03-13T12:00:00Z",
         "wmo:dataPolicy": "core",
         "type": "dataset",
         "title": "Goes 16 Advanced Baseline Imager Level 2 Sea Surface Temperature",
-        "description": "Sea Surface Temperature for each cloud-free pixel over water The Sea Surface Temperature algorithm employed on GOES 18 will use hybrid physical-regression retrieval in order to produce a more accurate product.",
+        "description": "Sea Surface Temperature for each cloud-free pixel over water. The Sea Surface Temperature algorithm employed on GOES 16 will use hybrid physical-regression retrieval in order to produce a more accurate product.",
         "keywords": [
             "Sea Surface Temperature",
             "Geostationary Operational Environmental Satellite 16 (GOES-16)",
@@ -65,7 +65,6 @@
             "Atmosphere",
             "meteorology"
         ],
-        "keywordsCodespace": "http://codes.wmo.int/common/quantity-kind/_seaSurfaceTemperature",
         "language": "en",
         "themes": [
             {
@@ -74,9 +73,39 @@
                         "id": "weather",
                         "title": "Weather",
                         "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
+                    },
+                    {
+                        "id": "climate",
+                        "title": "Climate",
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/climate"
+                    },
+                    {
+                        "id": "ocean",
+                        "title": "Ocean",
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/ocean"
                     }
                 ],
                 "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "seaSurfaceTemperature",
+                        "title": "Sea surface temperature",
+                        "url": "http://codes.wmo.int/common/quantity-kind/seaSurfaceTemperature"
+                    }
+                ],
+                "scheme": "http://codes.wmo.int/common/quantity-kind"
+            },
+            {
+                "concepts": [
+                    {
+                        "id": "95",
+                        "title": "Sea surface temperature",
+                        "url": "http://codes.wmo.int/wmdr/ObservedVariableOcean/95"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/wmdr/ObservedVariableOcean"
             }
         ],
         "contacts": [
@@ -120,15 +149,21 @@
         "formats": [
             "NetCDF"
         ],
-        "license": "There are no restrictions on the use of this data.",
-        "rights": "access"
+        "rights": "There are no restrictions on the use of this data."
     },
     "links": [
         {
             "rel": "data",
             "href": "https://noaa-goes16.s3.amazonaws.com/index.html#ABI-L2-SSTF",
-            "type": "application/netcdf",
-            "title": "NOAA Geostationary Operational Environmental Satellites (GOES) 16 Registry of Open Data on AWS"
+            "type": "text/html",
+            "title": "NOAA Geostationary Operational Environmental Satellites (GOES) 16 Registry of Open Data on AWS",
+            "distribution": {
+                "availableFormats": [
+                    {
+                        "name": "NetCDF"
+                    }
+                ]
+            }
         },
         {
             "rel": "data",
@@ -138,7 +173,7 @@
         },
         {
             "rel": "data",
-            "href": "https://console.cloud.google.com/storage/browser/gcp-public-data-goes-16/ABI-L2-SSTF?pageState=(%22StorageObjectListTable%22:(%22f%22:%22%255B%255D%22))&prefix=&forceOnObjectsSortingFiltering=false",
+            "href": "https://console.cloud.google.com/storage/browser/gcp-public-data-goes-16/ABI-L2-SSTF",
             "type": "text/html",
             "title": "Google Cloud GOES-16 L2 Sea Surface Temperature"
         },

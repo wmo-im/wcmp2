@@ -136,7 +136,7 @@
             "rel": "archives",
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
-            "href": "https://example.org/cache_metadata"
+            "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
         }
     ]
 }

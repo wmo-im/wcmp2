@@ -135,7 +135,14 @@
             "href": "https://dd.weather.gc.ca/hydrometric/csv",
             "type": "text/html",
             "hreflang": "en",
-            "title": "Raw data download (CSV files)"
+            "title": "Raw data download (CSV files)",
+            "distribution": {
+                "availableFormats": [
+                    {
+                        "name": "CSV"
+                    }
+                ]
+            }
         },
         {
             "rel": "license",
@@ -145,7 +152,7 @@
         },
         {
             "rel": "items",
-            "href": "mqtts://example.org",
+            "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/hydrology",
             "type": "application/geo+json",
             "title": "Data notifications"
@@ -153,7 +160,7 @@
         {
             "rel": "items",
             "href": "https://api.weather.gc.ca/collections/hydrometric-realtime/items",
-            "type": "application/json",
+            "type": "application/geo+json",
             "hreflang": "en",
             "title": "Data access API"
         }
