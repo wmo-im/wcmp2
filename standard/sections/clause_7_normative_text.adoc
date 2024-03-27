@@ -284,23 +284,27 @@ A WCMP metadata record can have one or more themes.
 
 [source,json]
 ----
-"themes": [
-  {
-    "concepts": [
-      {
-        "id": "001",
-        "title": "Temperature/air temperature",
-        "url": "http://codes.wmo.int/bufr4/b/12/001"
-      },
-      {
-        "id": "003",
-        "title": "Dewpoint temperature",
-        "url": "http://codes.wmo.int/bufr4/b/12/003"
-      }
-    ],
-    "scheme": "http://codes.wmo.int/bufr4/b"
-  }
-]
+"properties": {
+  ...
+  "themes": [
+    {
+      "concepts": [
+        {
+          "id": "001",
+          "title": "Temperature/air temperature",
+          "url": "http://codes.wmo.int/bufr4/b/12/001"
+        },
+        {
+          "id": "003",
+          "title": "Dewpoint temperature",
+          "url": "http://codes.wmo.int/bufr4/b/12/003"
+        }
+      ],
+      "scheme": "http://codes.wmo.int/bufr4/b"
+    }
+  ]
+  ...
+}
 ----
 
 [source,json]
