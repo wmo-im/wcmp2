@@ -43,7 +43,7 @@
         "wmo:dataPolicy": "core",
         "type": "dataset",
         "title": "Goes 16 Advanced Baseline Imager Level 2 Sea Surface Temperature",
-        "description": "Sea Surface Temperature for each cloud-free pixel over water. The Sea Surface Temperature algorithm employed on GOES 18 [16 or 18?] will use hybrid physical-regression retrieval in order to produce a more accurate product.",
+        "description": "Sea Surface Temperature for each cloud-free pixel over water. The Sea Surface Temperature algorithm employed on GOES 16 will use hybrid physical-regression retrieval in order to produce a more accurate product.",
         "keywords": [
             "Sea Surface Temperature",
             "Geostationary Operational Environmental Satellite 16 (GOES-16)",
