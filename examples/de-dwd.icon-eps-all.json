@@ -47,7 +47,7 @@
                     90
                 ]
             ],
-            "resolution": "0.5*0.5",
+            "resolution": "13km",
             "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
         },
         "temporal": {
@@ -186,7 +186,8 @@
         "language": "eng",
         "formats": [
             "GRIB2"
-        ]
+        ],
+        "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data."
     },
     "links": [
         {
@@ -194,6 +195,18 @@
             "type": "text/html",
             "title": "Open Data Server DWD",
             "href": "https://opendata.dwd.de/weather/wmc/icon-eps/data/grib"
+        },
+        {
+            "rel": "about",
+            "href": "https://www.dwd.de/EN/ourservices/nwp_forecast_data/nwp_forecast_data.html",
+            "type": "text/html",
+            "title": "NWP Forecast Data"
+        },
+        {
+            "rel": "copyright",
+            "type": "text/html",
+            "title": "copyright readme",
+            "href": "https://opendata.dwd.de/README.txt"
         },
         {
             "rel": "items",
