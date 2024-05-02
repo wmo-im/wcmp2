@@ -81,11 +81,22 @@
 	"rights": "The public domain data available from MPLNET are contributed by the International MPLNET Federation. All project operations, calibrations, and data processing are coordinated by MPLNET staff at NASA. Each site has a Principal Investigator(s) (PI), responsible for deployment, maintenance, and data collection. The PI(s) has priority use of the data collected at the site(s). The PI(s) is entitled to be informed of any other use of the data. Although journal paper authorship and acknowledgement is the domain of the senior author and no policy is universally applicable, the MPLNET contributors ask that every practical attempt be made to honor the following general guidelines."
     },
     "links": [
-	{
+        {
+            "rel": "stations",
+            "href": "https://mplnet.gsfc.nasa.gov/tmp/20240502112218.667466/MPLNET_All.csv",
+            "type": "text/csv",
+            "title": "MPLNET Stations"
+        },
+        {
             "rel": "about",
             "href": "https://mplnet.gsfc.nasa.gov/data",
             "type": "text/html",
-            "title": "MPLNET V3 Data"
+            "title": "MPLNET V3 Data",
+            "distribution": {
+                "availableFormats": [{
+                  "name": "MPLNET NETCDF4",
+                  "description": "MPLNET V3 products are NETCDF 4, CF compliant files. Subsets for each product may be selected to reduce file sizes."
+                }]}
         },
         {
             "rel": "search",
