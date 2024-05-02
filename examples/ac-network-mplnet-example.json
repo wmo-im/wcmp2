@@ -1,26 +1,28 @@
-{
+{    
     "id": "urn:wmo:md:nasa-mplnet-test:atmospheric-composition.observations.mplnet",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            41.38600158691406,2.117000102996826
+        ]
+    },
     "time": {
         "interval": [
             "2015-06-01T00:00:00Z",
             ".."],
         "resolution": "PT1M"
     },
-    "type": "Feature",
-    "geometry": {
-        "type": "Point",
-        "coordinates": [41.38600158691406,2.117000102996826],
     "properties": {
-        "title": "MPLNET Version 3 Data: Barcelona",
+        "title": "MPLNET Version 3 Data",
         "description": "The NASA Micro-Pulse Lidar Network (MPLNET) is a federated network of Micro-Pulse Lidar (MPL) systems designed to measure aerosol and cloud vertical structure, and boundary layer heights. The data are collected continuously, day and night, over long time periods from sites around the world. Most MPLNET sites are co-located with sites in the NASA Aerosol Robotic Network (AERONET). MPLNET is also a contributing network to the World Meteorological Organization (WMO) Global Atmospheric Watch (GAW) Aerosol Lidar Observation Network, GALION.",
         "keywords":[
-			"NRB","AER","CLD","PBL","Volume_Depolarization_Ratio"
+			"NRB","AER","CLD","PBL","volume depolarization ratio"
 		],
 		"themes": [
-            
             {
                 "concepts": [
                     {
@@ -50,7 +52,7 @@
                 }
             ],
         "schema":"http://codes.wmo.int/wmdr/ProgramAffiliation"
-    },
+    }],
 	    "contacts": [
             {
                 "name":"Constantino Muñoz-Porcar",
@@ -81,9 +83,9 @@
     "links": [
 	{
             "rel": "about",
-            "href": "https://mplnet.gsfc.nasa.gov/data?s=Barcelona&v=V3",
+            "href": "https://mplnet.gsfc.nasa.gov/data",
             "type": "text/html",
-            "title": "MPLNET V3 Data: Barcelona"
+            "title": "MPLNET V3 Data"
         },
         {
             "rel": "search",
