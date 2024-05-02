@@ -55,11 +55,11 @@
     }],
 	    "contacts": [
             {
-                "name":"Constantino Muñoz-Porcar",
-                "organization": "Universitat Politècnica de Catalunya - UPC",
+                "name":"Dr Ellsworth Judd Welton",
+                "organization": "NASA",
                 "emails": [
                     {
-                        "value": "constantino.munoz@upc.edu"
+                        "value": "Ellsworth.J.Welton@nasa.gov"
                     }
                 ],
                 "links": [
