@@ -1,5 +1,5 @@
 {
-    "*id": "urn:wmo:md:nasa-mplnet-test:atmospheric-composition.observations.mplnet.Barcelona",
+    "id": "urn:wmo:md:nasa-mplnet-test:atmospheric-composition.observations.mplnet",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
     ],
@@ -15,7 +15,7 @@
         "coordinates": [41.38600158691406,2.117000102996826],
     "properties": {
         "title": "MPLNET Version 3 Data: Barcelona",
-        "*description": "The NASA Micro-Pulse Lidar Network (MPLNET) is a federated network of Micro-Pulse Lidar (MPL) systems designed to measure aerosol and cloud vertical structure, and boundary layer heights. The data are collected continuously, day and night, over long time periods from sites around the world. Most MPLNET sites are co-located with sites in the NASA Aerosol Robotic Network (AERONET). MPLNET is also a contributing network to the World Meteorological Organization (WMO) Global Atmospheric Watch (GAW) Aerosol Lidar Observation Network, GALION.",
+        "description": "The NASA Micro-Pulse Lidar Network (MPLNET) is a federated network of Micro-Pulse Lidar (MPL) systems designed to measure aerosol and cloud vertical structure, and boundary layer heights. The data are collected continuously, day and night, over long time periods from sites around the world. Most MPLNET sites are co-located with sites in the NASA Aerosol Robotic Network (AERONET). MPLNET is also a contributing network to the World Meteorological Organization (WMO) Global Atmospheric Watch (GAW) Aerosol Lidar Observation Network, GALION.",
         "keywords":[
 			"NRB","AER","CLD","PBL","Volume_Depolarization_Ratio"
 		],
@@ -51,16 +51,7 @@
             ],
         "schema":"http://codes.wmo.int/wmdr/ProgramAffiliation"
     },
-	    {
-                "*concepts": [
-                    {
-                        "id": "continual"
-                    }
-                ],
-                "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
-            }
-        ],
-               "contacts": [
+	    "contacts": [
             {
                 "name":"Constantino Muñoz-Porcar",
                 "organization": "Universitat Politècnica de Catalunya - UPC",

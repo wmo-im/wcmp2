@@ -15,7 +15,7 @@
         "coordinates": [41.38600158691406,2.117000102996826],
     "properties": {
         "title": "MPLNET Version 3 Data: Barcelona",
-        "*description": "The NASA Micro-Pulse Lidar Network (MPLNET) is a federated network of Micro-Pulse Lidar (MPL) systems designed to measure aerosol and cloud vertical structure, and boundary layer heights. The data are collected continuously, day and night, over long time periods from sites around the world. Most MPLNET sites are co-located with sites in the NASA Aerosol Robotic Network (AERONET). MPLNET is also a contributing network to the World Meteorological Organization (WMO) Global Atmospheric Watch (GAW) Aerosol Lidar Observation Network, GALION.",
+        "description": "The NASA Micro-Pulse Lidar Network (MPLNET) is a federated network of Micro-Pulse Lidar (MPL) systems designed to measure aerosol and cloud vertical structure, and boundary layer heights. The data are collected continuously, day and night, over long time periods from sites around the world. Most MPLNET sites are co-located with sites in the NASA Aerosol Robotic Network (AERONET). MPLNET is also a contributing network to the World Meteorological Organization (WMO) Global Atmospheric Watch (GAW) Aerosol Lidar Observation Network, GALION.",
         "keywords":[
 			"NRB","AER","CLD","PBL","volume depolarization ratio","lidar signals","diagnostics","cloud heights", "thin cloud extinction and optical depths","cloud phase","aerosol heights","extinction","backscatter","aerosol depolarization ratio profiles","lidar ratio","Surface-Attached Mixed Layer Top and estimated mixed layer AOD"
 		],
