@@ -1,0 +1,128 @@
+{
+    "id": "urn:wmo:md:nasa-mplnet-test:atmospheric-composition.observations.mplnet",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+    "time": {
+        "interval": [
+            "2015-06-01T00:00:00Z",
+            ".."],
+        "resolution": "PT1M"
+    },
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [41.38600158691406,2.117000102996826],
+    "properties": {
+        "title": "MPLNET Version 3 Data: Barcelona",
+        "*description": "The NASA Micro-Pulse Lidar Network (MPLNET) is a federated network of Micro-Pulse Lidar (MPL) systems designed to measure aerosol and cloud vertical structure, and boundary layer heights. The data are collected continuously, day and night, over long time periods from sites around the world. Most MPLNET sites are co-located with sites in the NASA Aerosol Robotic Network (AERONET). MPLNET is also a contributing network to the World Meteorological Organization (WMO) Global Atmospheric Watch (GAW) Aerosol Lidar Observation Network, GALION.",
+        "keywords":[
+			"NRB","AER","CLD","PBL","volume depolarization ratio","lidar signals","diagnostics","cloud heights", "thin cloud extinction and optical depths","cloud phase","aerosol heights","extinction","backscatter","aerosol depolarization ratio profiles","lidar ratio","Surface-Attached Mixed Layer Top and estimated mixed layer AOD"
+		],
+		"themes": [
+           {
+                "concepts": [
+                    {
+                        "id": "atmospheric-composition",
+                        "title": "Atmospheric Composition",
+                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/atmospheric-composition"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+            },
+            {
+                "concepts":[
+                    {
+                        "id":"506",
+                        "title":"Cloud optical depth",
+                        "url":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/506"
+                    },
+                    {
+                        "id":"12251",
+                        "title":"Relative attenuated backscatter",
+                        "url":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/12251"
+                    },
+                    {
+                        "id":"325",
+                        "title":"Aerosol optical depth, TSP",
+                        "url":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/325"
+                    }
+                ],
+            "schema":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere"
+        },
+        {
+            "concepts":[
+                {
+                    "id":"MPLNET",
+                    "title":"MPLNET",
+                    "url":"http://codes.wmo.int/wmdr/ProgramAffiliation/MPLNET"
+                },
+                {
+                    "id":"GALION",
+                    "title":"GALION",
+                    "url":"http://codes.wmo.int/wmdr/ProgramAffiliation/GALION"
+                }
+            ],
+        "schema":"http://codes.wmo.int/wmdr/ProgramAffiliation"
+        }
+	],
+        "contacts": [
+            {
+                "name":"Dr Ellsworth Judd Welton",
+                "organization": "NASA Goddard Space Flight Center",
+                "emails": [
+                    {
+                        "value": "Ellsworth.J.Welton@nasa.gov"
+                    }
+                ],
+                "links": [
+                    {
+                        "rel": "about",
+                        "type": "text/html",
+                        "href": "https://mplnet.gsfc.nasa.gov/about-us"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "host"
+                ]
+            }
+        ],
+        "type": "dataset",
+        "created": "2024-02-02T11:00:00Z",
+        "wmo:dataPolicy": "core",
+	"rights": "The public domain data available from MPLNET are contributed by the International MPLNET Federation. All project operations, calibrations, and data processing are coordinated by MPLNET staff at NASA. Each site has a Principal Investigator(s) (PI), responsible for deployment, maintenance, and data collection. The PI(s) has priority use of the data collected at the site(s). The PI(s) is entitled to be informed of any other use of the data. Although journal paper authorship and acknowledgement is the domain of the senior author and no policy is universally applicable, the MPLNET contributors ask that every practical attempt be made to honor the following general guidelines."
+    },
+    "links": [
+	{
+            "rel": "about",
+            "href": "https://mplnet.gsfc.nasa.gov",
+            "type": "text/html",
+            "title": "MPLNET V3 Dataa"
+        },
+        {
+            "rel": "stations",
+            "href": "https://mplnet.gsfc.nasa.gov/tmp/20240502093737.138512/MPLNET_All.csv",
+            "type": "text/csv",
+            "title": "MPLNET stations"
+        },
+        {
+            "rel": "search",
+            "href": "https://mplnet.gsfc.nasa.gov/download_tool/",
+            "type": "text/html",
+            "title": "Download data",
+            "distribution": {
+                "availableFormats": [{
+                  "name": "MPLNET NETCDF4 File Format",
+                  "description": "MPLNET V3 products are NETCDF 4, CF compliant files. Subsets for each product may be selected to reduce file sizes."}]
+                }
+        },
+	{
+            "rel": "items",
+            "channel": "origin/a/wis2/nasa-mplnet/data/core/atmospheric-composition/surface-based-observations/mplnet",
+            "href": "mqtts://everyone:everyone@example.org:8883",
+            "type": "application/geo+json",
+            "title": "Data notifications"
+        }
+    ]}
+}
