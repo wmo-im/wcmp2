@@ -41,7 +41,7 @@
                         "url":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/12251"
                     }
                 ],
-            "schema":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere"
+            "scheme":"http://codes.wmo.int/wmdr/ObservedVariableAtmosphere"
         },
         {
             "concepts":[
@@ -51,7 +51,7 @@
                     "url":"http://codes.wmo.int/wmdr/ProgramAffiliation/MPLNET"
                 }
             ],
-        "schema":"http://codes.wmo.int/wmdr/ProgramAffiliation"
+        "scheme":"http://codes.wmo.int/wmdr/ProgramAffiliation"
     }],
 	    "contacts": [
             {
