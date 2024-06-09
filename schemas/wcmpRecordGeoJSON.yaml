@@ -15,7 +15,9 @@ properties:
   id:
     $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
   conformsTo:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/conformsTo'
+    type: array
+    contains:
+      const: http://wis.wmo.int/spec/wcmp/2/conf/core
   type:
     $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
   time:

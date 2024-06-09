@@ -20,8 +20,8 @@
     },
     "conformsTo": {
       "type": "array",
-      "items": {
-        "type": "string"
+      "contains": {
+        "const": "http://wis.wmo.int/spec/wcmp/2/conf/core"
       }
     },
     "type": {
