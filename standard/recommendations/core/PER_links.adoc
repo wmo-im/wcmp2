@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/links*
-^|A |The `+links+` property MAY contain a Web Accessible Folder (WAF) OR an API link for real-time data.
+^|A |The `+links+` property MAY contain a Web Accessible Folder (WAF) or an API link for real-time data.
 |===

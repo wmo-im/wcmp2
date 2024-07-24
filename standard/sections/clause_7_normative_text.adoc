@@ -1,7 +1,7 @@
 == Appendix F: WMO Core Metadata Profile (Version 2)
 Note: This section of working draft document is the same as Appendix F in the https://library.wmo.int/idurl/4/68731[_Manual on the WMO Information System_] (WMO-No. 1060), Volume II
 
-WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and SHALL be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (``http://wis.wmo.int/spec/wcmp/2``) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with ``shaded text`` in this document.
+WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and shall be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (``http://wis.wmo.int/spec/wcmp/2``) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with ``shaded text`` in this document.
 
 :sectnums!:
 === 1. Requirements Class "Core"
@@ -10,103 +10,105 @@ include::../requirements/requirements_class_core.adoc[]
 
 ==== 1.1 Overview
 
-The table below provides an overview of the set of properties that MAY be included in a WCMP record.
+The table below provides an overview of the set of properties that may be included in a WCMP record.
 
 .Table. WCMP record core properties
 |===
 |Property|Requirement|Description
 
 |``id``
-|**required**
-|A unique identifier of the dataset (see <<_identifier>>)
+|**Required**
+|A unique identifier of the dataset (see <<_1_4_identifier>>)
 
 |``type``
-|**required**
-|A fixed value denoting the WCMP record as a GeoJSON ``Feature`` (see <<_validation>>)
+|**Required**
+|A fixed value denoting the WCMP record as a GeoJSON ``Feature`` (see <<_1_3_validation>>)
 
 |``conformsTo``
-|**required**
-|The version of WCMP associated that the record conforms to (see <<_conformance_2>>)
+|**Required**
+|The version of WCMP associated that the record conforms to (see <<_1_5_conformance>>)
 
 |``properties.type``
-|**required**
-|The resource type described by the WCMP record (see <<_properties_type>>)
+|**Required**
+|The resource type described by the WCMP record (see <<_1_6_properties_type>>)
 
 |``properties.title``
-|**required**
-|A human-readable name of the dataset (see <<_properties_title>>)
+|**Required**
+|A human-readable name of the dataset (see <<_1_7_properties_title>>)
 
 |``properties.description``
-|**required**
-|A free-text summary description of the dataset (see <<_properties_description>>)
+|**Required**
+|A free-text summary description of the dataset (see <<_1_8_properties_description>>)
 
 |``properties.keywords``
-|optional
-|Keywords, tags or key phrases (see <<_properties_keywords>>)
+|Optional
+|Keywords, tags or key phrases (see <<_1_9_properties_keywords>>)
 
 |``properties.themes``
-|**required**
-|Classifiers, categories and controlled vocabularies (see <<_properties_themes>>)
+|**Required**
+|Classifiers, categories and controlled vocabularies (see <<_1_10_properties_themes>>)
 
 |``geometry``
-|**required**
-|Geospatial location associated with the dataset, in a geographic coordinate reference system (see <<_geospatial_extent>>)
+|**Required**
+|Geospatial location associated with the dataset, in a geographic coordinate reference system (see <<_1_11_1_geospatial_extent>>)
 
 |``time``
-|**required**
-|Temporal extent associated with the dataset (see <<_temporal_extent>>)
+|**Required**
+|Temporal extent associated with the dataset (see <<_1_11_3_temporal_extent>>)
 
 |``additionalExtents.spatial``
-|optional
-|Additional geospatial extents in other coordinate reference systems (see <<_additional_geospatial_extents>>)
+|Optional
+|Additional geospatial extents in other coordinate reference systems (see <<_1_11_2_additional_geospatial_extents>>)
 
 |``additionalExtents.temporal``
-|optional
-|Additional time instants or periods (see <<_additional_temporal_extents>>)
+|Optional
+|Additional time instants or periods (see <<_1_11_4_additional_temporal_extents>>)
 
 |``properties.contacts``
-|**required**
-|Contact information for the dataset (see <<_properties_contacts>>)
+|**Required**
+|Contact information for the dataset (see <<_1_12_properties_contacts>>)
 
 |``properties.version``
-|optional
-|Version or edition of the dataset (see <<_properties_version>>)
+|Optional
+|Version or edition of the dataset (see <<_1_13_properties_version>>)
 
 |``properties.externalIds``
-|optional
-|Persistent identifiers or handles for the dataset (see <<_properties_persistent_identifiers>>)
+|Optional
+|Persistent identifiers or handles for the dataset (see <<_1_14_properties_persistent_identifiers>>)
 
 |``properties.created``
-|**required**
-|The date that the WCMP record was created (see <<_properties_record_creation_date>>)
+|**Required**
+|The date that the WCMP record was created (see <<_1_15_properties_record_creation_date>>)
 
 |``properties.updated``
-|optional
-|The date that the WCMP record was updated (see <<_properties_record_update_date>>)
+|Optional
+|The date that the WCMP record was updated (see <<_1_16_properties_record_update_date>>)
 
 |``properties.status``
-|optional
-|The operational status of the dataset (see <<_properties_status>>)
+|Optional
+|The operational status of the dataset (see <<_1_17_properties_status>>)
 
 |``properties.wmo:dataPolicy``
-|**conditional**
-|Classification code of ``core`` or ``recommended`` based on the WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009].  **Required** for datasets (see <<_properties_wmo_data_policy>>)
+|**Conditional**
+|Classification code of ``core`` or ``recommended`` based on the WMO Unified Data Policyfootnote:[https://library.wmo.int/idurl/4/58009].  **Required** for datasets (see <<_1_18_properties_wmo_data_policy>>)
 
 |``properties.rights``
-|optional
-|A statement that concerns all rights not addressed by the license such as a copyright statement. (see <<_properties_wmo_data_policy>>)
+|Optional
+|A statement that concerns all rights not addressed by the license such as a copyright statement
+(see <<_1_18_properties_wmo_data_policy>>)
 
 |``links``
-|**required**
-|Online linkages to data retrieval or additional resources associated with the dataset (see <<links-distribution>>)
+|**Required**
+|Online linkages to data retrieval or additional resources associated with the dataset (see <<_1_19_links_and_distribution_information>>)
+
 
 |``linkTemplates``
-|optional
-|Online link templates for dynamic / API access (see <<_templated_links>>)
+|Optional
+|Online link templates for dynamic / API access (see <<_1_19_2_templated_links>>)
 
 |``properties.*``
-|optional
-|Additional properties as needed (see <<_additional_properties>>)
+|Optional
+|Additional properties as needed (see <<_1_20_additional_properties>>)
 
 |===
 
@@ -160,11 +162,11 @@ WCMP can also describe additional resources, such as services and processes.
 
 A **dataset** is the primary granularity of a WCMP record describing a collection of data granules.
 
-A **service** is an API or Web service providing a discovery, visualization, or access mechanism that operates on data.
+A **service** is an API or web service providing a discovery, visualization, or access mechanism that operates on data.
 
 A **process** is a workflow or execution to provide custom functionality to calculate a given output or product.
 
-.Example:
+.Example.
 
 [source,json]
 ----
@@ -374,7 +376,7 @@ include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[
 
 ===== 1.11.2 Additional geospatial extents
 
-The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset. For example, it MAY be useful for non-geographic data or for describing multiple sub-areas of a dataset.
+The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset. For example, it may be useful for non-geographic data or for describing multiple sub-areas of a dataset.
 The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
@@ -387,7 +389,7 @@ signed number between -180 and 180, greater than or equal to the minimum longitu
 * The maximum latitude is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
 signed number between -90 and 90, greater than or equal to the minimum latitude.
 
-This property also facilitates catalogue searches with geospatial predicate (within extent, etc.).
+This property also facilitates catalogue searches with geospatial predicate (such as, within extent).
 
 .Example
 
@@ -411,9 +413,7 @@ The `+time+` property describes the general bounding extent of the dataset and t
 
 Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC. 
 
-In addition the temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets). If only times are given for the interval, it is implicitly assumed that those are recurring every day.
-
-In cases where no time indication can be derived, it is applicable to state the value of `+null+`.
+In addition, the temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets). If only times are given for the interval, it is implicitly assumed that those are recurring every day. In cases where no time indication can be derived, it is applicable to state the value of `+null+`.
 
 .Examples
 
@@ -460,12 +460,12 @@ In cases where no time indication can be derived, it is applicable to state the 
 ----
 
 To ensure clarity, an additional human-readable explanation is given in the `+properties.description+`.
-Further time-related characteristics (for example, frequency of modifications, available data, etc.) SHOULD be added in `+properties.themes+`.
+Further time-related characteristics (for example, frequency of modifications, available data, etc.) should be added in `+properties.themes+`.
 
 Some cases might be more complex due to the product's characteristics.
 If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property (see <<_additional_temporal_extents>>).
 
-.Example: Complex time indication
+.Example. Complex time indication
 
 [source,json]
 ----
@@ -488,7 +488,12 @@ If necessary, further granularity can be indicated by the `+additionalExtents.te
     "trs": "http://www.opengis.net/def/trs/ISO-8601"
   }
 }
-...
+----
+
+.Example. Complex time indication further described with themes property
+
+[source,json]
+----
 "properties": {
   ...
   "description": "ICON-EPS 0.5 deg x 0.5 deg regular lat/lon grid, up to +180h every 6h, runs 00/12 UTC, various parameter, various level, various threshold",
@@ -509,7 +514,7 @@ include::../recommendations/core/PER_extent_temporal_service.adoc[]
 
 ===== 1.11.4 Additional temporal extents
 
-The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset. For example, it MAY be useful to represent multiple time instances or to identify other temporal reference systems. 
+The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset. For example, it may be useful to represent multiple time instances or to identify other temporal reference systems. 
 Temporal extents can be fully bound or open in either direction.  An `+additionalExtents.temporal.resolution+` property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
 .Example
@@ -540,7 +545,7 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 
 The `+contacts+` property is the information associated with one or more responsible parties of the resource.
 
-.Example.Contacts object with all contact details
+.Example. Contacts object with all contact details
 
 [source,json]
 ----
@@ -574,7 +579,7 @@ The `+contacts+` property is the information associated with one or more respons
   ...
 }
 ----
-.Example.Contacts object with contact details specified in a URL
+.Example. Contacts object with URL to the relevant homepage
 
 [source,json]
 ----
@@ -597,7 +602,7 @@ include::../recommendations/core/PER_contacts.adoc[]
 
 ==== 1.13 Properties / Version
 
-The `+version+` property is the version or edition of the dataset. Datasets MAY be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
+The `+version+` property is the version or edition of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
 
 .Example
 
@@ -618,11 +623,11 @@ The `+externalIds+` property is a persistent (or handle) identifier used to prov
 
 Examples of persistent identifiers include, but are not limited to:
 
-* Digital Object Identifiers (DOI)footnote:[https://doi.org]
-* Archival Resource Key (ARK)footnote:[https://arks.org]
-* Handlefootnote:[https://handle.net]
+* Digital Object Identifier (https://doi.org[DOI])
+* Archival Resource Key (https://arks.org[ARK])
+* https://handle.net[Handle]
 
-.Example
+.Example. Persistent identifiers
 
 [source,json]
 ----
@@ -642,14 +647,14 @@ Examples of persistent identifiers include, but are not limited to:
 }
 ----
 
-.Example: Online citation
+.Example. Online citation
 
 [source,json]
 ----
 "links": [
   {
     "rel": "cite-as",
-    "title": "Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Program (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004",
+    "title": "Cite as: WMO/GAW Ozone Monitoring Community, World Meteorological Organization-Global Atmosphere Watch Programme (WMO-GAW)/World Ozone and Ultraviolet Radiation Data Centre (WOUDC) [Data]. Retrieved [YYYY-MM-DD], from https://woudc.org. A list of all contributors is available on the website. doi:10.14287/10000004",
     "type": "text/html",
     "href": "https://dx.doi.org/10.14287/10000004"
   }
@@ -661,7 +666,7 @@ include::../recommendations/core/PER_pids.adoc[]
 
 ==== 1.15 Properties / Record creation date
 
-The `+created+` property is a single date that the WCMP metadata record was created. Note, that this date is not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
+The `+created+` property is a single date that the WCMP metadata record was created. Note that this date is not the start or end time of a given dataset.  See <<_1_11_3_temporal_extent>> for more information on defining dataset temporal extents.
 
 .Example
 
@@ -678,7 +683,7 @@ include::../requirements/core/REQ_record_creation_date.adoc[]
 
 ==== 1.16 Properties / Record update date
 
-The `+updated+` property is the date that the WCMP metadata record was last updated. Note, that this date is not the start or end time of a given dataset.  See <<_temporal_extent>> for more information on defining dataset temporal extents.
+The `+updated+` property is the date that the WCMP metadata record was last updated. Note, that this date is not the start or end time of a given dataset.  See <<_1_11_3_temporal_extent>> for more information on defining dataset temporal extents.
 
 .Example
 
@@ -695,7 +700,7 @@ include::../recommendations/core/REC_record_update_date.adoc[]
 
 ==== 1.17 Properties / Status
 
-The `+status+` property identifies the lifecycle of a given dataset.  See Annex D for possible codelists to use when encoding this property.
+The `+status+` property identifies the lifecycle of a given dataset. 
 
 [source,json]
 ----
@@ -712,11 +717,11 @@ include::../recommendations/core/REC_status.adoc[]
 
 ==== 1.18 Properties / WMO data policy
 
-The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by link:https://library.wmo.int/idurl/4/58009[WMO Unified Data Policy] for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
+The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by the WMO Data Policy (Resolution 1 (Cg-Ext(2021)))footnote:[https://library.wmo.int/idurl/4/58009] for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
 
-Licensing and copyright are expressed via the `+links+` property (see distribution section), providing access, license and attribution details as required. Conditions on use of the data SHOULD be indicated for transparency and clarification.
+Licensing and copyright are expressed via the `+links+` property (see distribution section), providing access, license and attribution details as required. Conditions on use of the data should be indicated for transparency and clarification.
 
-.Example: Core data
+.Example. Core data
 
 [source,json]
 ----
@@ -727,7 +732,7 @@ Licensing and copyright are expressed via the `+links+` property (see distributi
 }
 ----
 
-.Example: Recommended data
+.Example. Recommended data
 [source,json]
 ----
 "properties": {
@@ -739,7 +744,7 @@ Licensing and copyright are expressed via the `+links+` property (see distributi
 
 It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
 
-.Example: Recommended data with additional conditions and provider-specific details:
+.Example. Recommended data with additional conditions and provider-specific details
 [source,json]
 ----
 "properties": {
@@ -755,7 +760,7 @@ It is useful to add provider-specific details to have the most detailed informat
 }]
 ----
 
-.Example: License for recommended data in the public domain
+.Example. License for recommended data in the public domain
 [source,json]
 ----
 "properties": {
@@ -771,9 +776,9 @@ It is useful to add provider-specific details to have the most detailed informat
 }]
 ----
 
-To express rights not address by a license, the `+rights+` property can be used as follows:
+To express rights not addressed by a license, the `+rights+` property can be used as follows:
 
-.Example: Rights
+.Example. Rights
 [source,json]
 ----
 "properties": {
@@ -787,60 +792,61 @@ include::../requirements/core/REQ_data_policy.adoc[]
 include::../recommendations/core/REC_data_policy.adoc[]
 include::../recommendations/core/PER_data_policy.adoc[]
 
-==== 1.19 Links and distribution information [[links-distribution]]
+==== 1.19 Links and distribution information 
+//[[links-distribution]]
 
 ===== 1.19.1 Overview
 
-The `+links+` property describes URLs and APIs for accessing the dataset or for subscribing to dataset notifications. Links are the primary mechanism for interacting with the data, and provide an "actionable" workflow to enhance and improve the user experience with "less clicks" for subscriptions and downloads.
+The `+links+` property describes URLs and APIs for accessing the dataset or for subscribing to dataset notifications. Links are the primary mechanism for interacting with the data and provide an "actionable" workflow to enhance and improve the user experience with "less clicks" for subscriptions and downloads.
 
-The `+links+` property MAY also describe URLs for related documentation, related data, or visual images of the dataset.
+The `+links+` property may also describe URLs for related documentation, related data, or visual images of the dataset.
 
 The table below provides an overview of the properties of a link object.
 
-.Link properties
+.Table. Link properties
 |===
 |Property|Requirement|Description
 
 |``href``
-|**required**
-|The link destination or target, or URL
+|**Required**
+|The link destination or target, or URL.
 
 |``rel``
-|optional
+|Optional
 |The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
- by link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA link relations] or link:https://codes.wmo.int/wis/link-type[WIS link type] extensions. (see <<_link_relation_selection>>)
+ by link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA link relations] or link:https://codes.wmo.int/wis/link-type[WIS link type] extensions. (see table <<_link_relation_selection>>)
 
 |``type``
-|optional
+|Optional
 |The media (or MIME) type of the format of the link
 
 |``hreflang`
-|optional
+|Optional
 |The language of the content in the link
 
 |``title``
-|optional
+|Optional
 |A human-readable name for the link (can be used for display on search / discovery web portals)
 
 |``channel``
-|**conditional**
-|For data made available via MQTT, the topic to which a user MAY subscribe to for notifications and access
+|**Conditional**
+|For data made available via MQTT, the topic to which a user may subscribe to for notifications and access
 
 |``security``
-|optional
-|For access controlled data, a description of the access control mechanism applied (see <<_access_control>>)
+|Optional
+|For access controlled data, a description of the access control mechanism applied (see <<1_19_4_access_control>>)
 
 |``distribution``
-|optional
-|Value added information about the link to further assist the user (additional document, typical file size, etc.) (see <<_distribution_information>>)
+|Optional
+|Value added information about the link to further assist the user (additional document, typical file size, etc.) (see <<_1_19_links_and_distribution_information>>)
 
 |===
 
-For recommended data, the ``links`` property MAY also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
+For recommended data, the ``links`` property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
-.Example a link object expressing access control using HTTP Basic Authentication for a given data access service
+.Example. A link object expressing access control using HTTP Basic Authentication for a given data access service
 
-.Example Access controlled link
+.Example. Access controlled link
 
 [source,json]
 ----
@@ -859,7 +865,7 @@ For recommended data, the ``links`` property MAY also provide links to services 
 }]
 ----
 
-.Example: two link objects providing both search and MQTT subscription information
+.Example. Two link objects providing both search and MQTT subscription information
 
 [source,json]
 ----
@@ -880,7 +886,7 @@ For recommended data, the ``links`` property MAY also provide links to services 
 ]
 ----
 
-.Example: a link object providing an API capability
+.Example. A link object providing an API capability
 
 [source,json]
 ----
@@ -894,7 +900,7 @@ For recommended data, the ``links`` property MAY also provide links to services 
 ]
 ----
 
-.Example: a link object providing a browse graphic
+.Example. A link object providing a browse graphic
 
 [source,json]
 ----
@@ -912,7 +918,7 @@ For recommended data, the ``links`` property MAY also provide links to services 
 
 Templated links allow for specifying a pattern of a link in support API interaction (where parameter values are variable).
 
-.Example: a templated link object of a WMS service providing API access to images:
+.Example. A templated link object of a WMS service providing API access to images
 [source,json]
 ----
 "linkTemplates": [{
@@ -977,9 +983,9 @@ include::../recommendations/core/PER_links.adoc[]
 
 The `+distribution+` property provides information about the format of the dataset, associated documentation and representative examples of the dataset.
 
-Additional distribution information is added to allow more comprehensive discovery services. Below is an example of such distribution information.
+Additional distribution information is added to allow more comprehensive discovery services. 
 
-.Example with the complete distribution information
+.Example. Links object with the complete distribution information
 
 [source,json]
 ----
@@ -1013,9 +1019,9 @@ include::../recommendations/core/REC_distribution.adoc[]
 
 ===== 1.19.4 Access control
 
-WCMP record links MAY also provide links to services that implement access control in support of authentication and authorization.  In
+WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
-example demonstrates how to express access control using HTTP Basic Authentication for a given data access service.
+example demonstrates how to express access control using HTTP basic authentication for a given data access service.
 
 .Example
 
@@ -1053,10 +1059,10 @@ links to data and services.
 |Online documentation
 |`about`
 
-|OpenAPI endpoint (e.g. JSON or YAML)
+|OpenAPI endpoint (such as, JSON or YAML)
 |`service-desc`
 
-|OpenAPI endpoint in HTML (e.g. Swagger, ReDoc)
+|OpenAPI endpoint in HTML (such as, Swagger, ReDoc)
 |`service-doc`
 
 |OGC WMS, WFS, WCS, CSW, WPS Capabilities
@@ -1096,7 +1102,7 @@ links to data and services.
 A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.
 
-.Example
+.Example.
 
 [source,json]
 ----
@@ -1118,12 +1124,15 @@ include::../recommendations/core/PER_additional_properties.adoc[]
 === 2. WMO Core Metadata Profile resources
 
 ==== 2.1 WMO Codes Registry
-•	https://codes.wmo.int/wis/topic-hierarchy/centre-id
-•	https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline
-•	https://codes.wmo.int/wis/topic-hierarchy/data-policy
-•	https://codes.wmo.int/wis/link-type
-•	https://codes.wmo.int/wis/resource-type
-•	https://codes.wmo.int/wis/contact-role
+
+•	http://codes.wmo.int/wis/contact-role
+•	http://codes.wmo.int/wis/global-service-type
+•	http://codes.wmo.int/wis/link-type
+•	http://codes.wmo.int/wis/resource-type
+•	http://codes.wmo.int/wis/topic-hierarchy/centre-id
+•	http://codes.wmo.int/wis/topic-hierarchy/data-policy
+•	http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline
+•	http://codes.wmo.int/wis/topic-hierarchy/notification-type
 
 ==== 2.2 WMO schemas server
-Validation, examples, and other resources are published at https://schemas.wmo.int/wcmp/2.
+Validation, examples and other resources are published at https://schemas.wmo.int/wcmp.

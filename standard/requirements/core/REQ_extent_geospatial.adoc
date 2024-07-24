@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/extent_geospatial*
-^|A |A WCMP record SHALL provide ONE `+geometry+` property to convey the geospatial properties of a dataset using a geographic coordinate reference system (World Geodetic System 1984 [WGS 84]) and longitude and latitude decimal degree units.
+^|A |A WCMP record SHALL provide one `+geometry+` property to convey the geospatial properties of a dataset using a geographic coordinate reference system (World Geodetic System 1984 [WGS 84]) and longitude and latitude decimal degree units.
 ^|B |The `+geometry+` coordinates SHALL be integer or float data types.
 ^|C |The `+geometry+` property SHALL provide the value of `+null+` when geometry cannot be derived.
 |===
