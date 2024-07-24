@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/description*
-^|A |A WCMP record shall provide a `+properties.description+` property.
+^|A |A WCMP record SHALL provide a `+properties.description+` property.
 
 |===

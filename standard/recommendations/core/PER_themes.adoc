@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/themes*
-^|A |A WCMP record may provide as many themes/concepts as applicable to describe the themes of a given dataset.
+^|A |A WCMP record MAY provide as many themes/concepts as applicable to describe the themes of a given dataset.
 |===

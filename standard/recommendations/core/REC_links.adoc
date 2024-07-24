@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/links*
-^|A |A WCMP record's links should be provided using secure protocols (such as, HTTPS, MQTTS, etc.).
-^|B |The `+links+` property should provide a `+type+` property with a valid media type from IANA or as designated by WMO.
+^|A |A WCMP record's links SHOULD be provided using secure protocols (such as, HTTPS, MQTTS, etc.).
+^|B |The `+links+` property SHOULD provide a `+type+` property with a valid media type from IANA or as designated by WMO.
 |===

@@ -2,9 +2,9 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/themes*
-//^|A |A WCMP record shall provide themes and concepts when describing a dataset based on an associated controlled vocabulary.
-^|B |A WCMP record shall provide at least one `+themes+` property.
-^|C |Each `+themes+` property shall provide at least one `+concept+` property.
-^|D |Each `+themes+` property shall provide a `+scheme+` property that refers to a controlled vocabulary or thesaurus.
-^|E |A WCMP record describing a dataset shall provide a `+themes+` property identifying all applicable Earth system disciplines as defined in the WIS2 Topic Hierarchy. <<See Appendix E>>
+//^|A |A WCMP record SHALL provide themes and concepts when describing a dataset based on an associated controlled vocabulary.
+^|B |A WCMP record SHALL provide at least one `+themes+` property.
+^|C |Each `+themes+` property SHALL provide at least one `+concept+` property.
+^|D |Each `+themes+` property SHALL provide a `+scheme+` property that refers to a controlled vocabulary or thesaurus.
+^|E |A WCMP record describing a dataset SHALL provide a `+themes+` property identifying all applicable Earth system disciplines as defined in the WIS2 Topic Hierarchy. <<See Appendix E>>
 |===

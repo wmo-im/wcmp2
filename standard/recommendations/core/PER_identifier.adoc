@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/rec/core/identifier*
-^|A |The local identifier may also have colons (`+:+`) as required by the data publisher.
+^|A |The local identifier MAY also have colons (`+:+`) as required by the data publisher.
 |===

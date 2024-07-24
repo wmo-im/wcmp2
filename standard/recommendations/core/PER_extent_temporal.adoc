@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/extent_temporal*
-^|A |A WCMP record may provide multiple `+additionalExtents.temporal+` item properties to express additional temporal extents in other temporal reference systems.
+^|A |A WCMP record MAY provide multiple `+additionalExtents.temporal+` item properties to express additional temporal extents in other temporal reference systems.
 |===

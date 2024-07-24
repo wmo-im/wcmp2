@@ -1,7 +1,7 @@
 == Appendix F: WMO Core Metadata Profile (Version 2)
 Note: This section of working draft document is the same as Appendix F in the https://library.wmo.int/idurl/4/68731[_Manual on the WMO Information System_] (WMO-No. 1060), Volume II
 
-WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and shall be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (``http://wis.wmo.int/spec/wcmp/2``) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with ``shaded text`` in this document.
+WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and SHALL be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (``http://wis.wmo.int/spec/wcmp/2``) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with ``shaded text`` in this document.
 
 :sectnums!:
 === 1. Requirements Class "Core"
@@ -10,9 +10,9 @@ include::../requirements/requirements_class_core.adoc[]
 
 ==== 1.1 Overview
 
-The table below provides an overview of the set of properties that may be included in a WCMP record.
+The table below provides an overview of the set of properties that MAY be included in a WCMP record.
 
-.WCMP record core properties
+.Table. WCMP record core properties
 |===
 |Property|Requirement|Description
 
@@ -374,7 +374,7 @@ include::../recommendations/core/REC_extent_geospatial_wis2_global_service.adoc[
 
 ===== 1.11.2 Additional geospatial extents
 
-The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset. For example, it may be useful for non-geographic data or for describing multiple sub-areas of a dataset.
+The `+additionalExtents.spatial+` property is for other geospatial extents associated with the dataset. For example, it MAY be useful for non-geographic data or for describing multiple sub-areas of a dataset.
 The `+additionalExtents.spatial.bbox+` property
 provides the ability to list one to many minimum bounding geometries for a given dataset, where:
 
@@ -460,7 +460,7 @@ In cases where no time indication can be derived, it is applicable to state the 
 ----
 
 To ensure clarity, an additional human-readable explanation is given in the `+properties.description+`.
-Further time-related characteristics (for example, frequency of modifications, available data, etc.) should be added in `+properties.themes+`.
+Further time-related characteristics (for example, frequency of modifications, available data, etc.) SHOULD be added in `+properties.themes+`.
 
 Some cases might be more complex due to the product's characteristics.
 If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property (see <<_additional_temporal_extents>>).
@@ -509,7 +509,7 @@ include::../recommendations/core/PER_extent_temporal_service.adoc[]
 
 ===== 1.11.4 Additional temporal extents
 
-The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset. For example, it may be useful to represent multiple time instances or to identify other temporal reference systems. 
+The `+additionalExtents.temporal+` property is for describing other temporal extents associated with the dataset. For example, it MAY be useful to represent multiple time instances or to identify other temporal reference systems. 
 Temporal extents can be fully bound or open in either direction.  An `+additionalExtents.temporal.resolution+` property is able express the temporal granularity at which a given dataset's data is measured, generated, or reported.
 
 .Example
@@ -597,7 +597,7 @@ include::../recommendations/core/PER_contacts.adoc[]
 
 ==== 1.13 Properties / Version
 
-The `+version+` property is the version or edition of the dataset. Datasets may be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
+The `+version+` property is the version or edition of the dataset. Datasets MAY be versioned by an organization, for example, the version of an NWP model or a processing chain/workflow, and data providers can make this information available when there are multiple versions of a dataset over time.
 
 .Example
 
@@ -714,7 +714,7 @@ include::../recommendations/core/REC_status.adoc[]
 
 The `+wmo:dataPolicy+` property is a codelist that identifies the classification of the dataset exchange as described by link:https://library.wmo.int/idurl/4/58009[WMO Unified Data Policy] for the international exchange of Earth system data. The codelist values are `+core+` or `+recommended+`.  The `+wmo:dataPolicy+` property is required if the metadata record describes a dataset.
 
-Licensing and copyright are expressed via the `+links+` property (see distribution section), providing access, license and attribution details as required. Conditions on use of the data should be indicated for transparency and clarification.
+Licensing and copyright are expressed via the `+links+` property (see distribution section), providing access, license and attribution details as required. Conditions on use of the data SHOULD be indicated for transparency and clarification.
 
 .Example: Core data
 
@@ -793,7 +793,7 @@ include::../recommendations/core/PER_data_policy.adoc[]
 
 The `+links+` property describes URLs and APIs for accessing the dataset or for subscribing to dataset notifications. Links are the primary mechanism for interacting with the data, and provide an "actionable" workflow to enhance and improve the user experience with "less clicks" for subscriptions and downloads.
 
-The `+links+` property may also describe URLs for related documentation, related data, or visual images of the dataset.
+The `+links+` property MAY also describe URLs for related documentation, related data, or visual images of the dataset.
 
 The table below provides an overview of the properties of a link object.
 
@@ -814,7 +814,7 @@ The table below provides an overview of the properties of a link object.
 |optional
 |The media (or MIME) type of the format of the link
 
-|``hreflang``
+|``hreflang`
 |optional
 |The language of the content in the link
 
@@ -824,7 +824,7 @@ The table below provides an overview of the properties of a link object.
 
 |``channel``
 |**conditional**
-|For data made available via MQTT, the topic to which a user may subscribe to for notifications and access
+|For data made available via MQTT, the topic to which a user MAY subscribe to for notifications and access
 
 |``security``
 |optional
@@ -836,7 +836,7 @@ The table below provides an overview of the properties of a link object.
 
 |===
 
-For recommended data, the ``links`` property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
+For recommended data, the ``links`` property MAY also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
 .Example a link object expressing access control using HTTP Basic Authentication for a given data access service
 
@@ -1013,7 +1013,7 @@ include::../recommendations/core/REC_distribution.adoc[]
 
 ===== 1.19.4 Access control
 
-WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
+WCMP record links MAY also provide links to services that implement access control in support of authentication and authorization.  In
 secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
 example demonstrates how to express access control using HTTP Basic Authentication for a given data access service.
 

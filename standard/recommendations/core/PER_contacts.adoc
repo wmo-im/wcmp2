@@ -2,5 +2,5 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Permission {counter:per-id}* |*/per/core/contacts*
-^|A |The `+properties.contacts+` property may provide more than one contact via multiple objects or a single contact object with multiple roles.
+^|A |The `+properties.contacts+` property MAY provide more than one contact via multiple objects or a single contact object with multiple roles.
 |===
