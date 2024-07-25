@@ -2,6 +2,7 @@
 [cols="1,4",width="90%"]
 |===
 |URI |http://wis.wmo.int/spec/wcmp/2/req/core
+|Target type|Discovery metadata
 |Dependency | The JavaScript Object Notation (JSON) Data Interchange Format link:https://datatracker.ietf.org/doc/html/rfc8259[(IETF RFC8259 (2017))]
 |Dependency |link:https://json-schema.org[JSON Schema] (2022)
 |Dependency |The GeoJSON Format link:https://datatracker.ietf.org/doc/html/rfc7946[(IETF: RFC-7946 (2016))] 

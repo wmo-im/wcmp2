@@ -1020,7 +1020,7 @@ include::../recommendations/core/REC_distribution.adoc[]
 ===== 1.19.4 Access control
 
 WCMP record links may also provide links to services that implement access control in support of authentication and authorization.  In
-secure data use cases, a user needs to be able to detect access controlled data as part of data discovery and evaluation.  The
+secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.  The
 example demonstrates how to express access control using HTTP basic authentication for a given data access service.
 
 .Example
