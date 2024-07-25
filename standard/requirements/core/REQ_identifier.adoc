@@ -1,7 +1,7 @@
 [[req_core_identifier]]
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement 2* |*/req/core/identifier*
+^|*Requirement {counter:req-id}* |*/req/core/identifier*
 ^|A |A WCMP record SHALL provide an identifier via the `+id+` property.
 ^|B |The `+id+` property SHALL have the following notation: `+urn:wmo:md:{centre_id}:{local_identifier}+`.
 ^|C |The ``centre_id`` SHALL be based on the associated vocabulary specified in Appendix D: WIS2 Topic Hierarchy.
