@@ -1,6 +1,6 @@
-[[rec_core_extent_service]]
+[[per_core_extent_service]]
 [width="90%",cols="2,6a"]
 |===
-^|*Recommendation {counter:rec-id}* |*/rec/core/extent_service*
+^|*Permission {counter:per-id}* |*/per/core/extent_service*
 ^|A |For WCMP records describing a service or API, a `+time+` value of `+null+` MAY be provided.
 |===
