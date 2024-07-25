@@ -10,3 +10,4 @@
 ^|F |The `+links+` property SHALL provide the `channel` property of the MQTT topic for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS2 topic hierarchy.
 ^|G |The `+links+` property SHALL include a valid link relation from link:https://www.iana.org/assignments/link-relations/link-relations.xml[IANA] or the link:https://codes.wmo.int/wis/link-type[WIS link type] codelist.
 |===
+//req14

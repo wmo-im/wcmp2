@@ -4,6 +4,5 @@
 ^|*Requirement {counter:req-id}* |*/req/core/conformance*
 ^|A |A WCMP record SHALL provide information on conformance via the OARec record `+conformsTo+` property.
 ^|B |The `+conformsTo+` property SHALL advertise conformance to WCMP.
-
 |===
-
+//req3

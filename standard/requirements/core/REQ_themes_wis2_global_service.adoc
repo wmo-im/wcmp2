@@ -5,3 +5,4 @@
 ^|A |A WCMP record describing a WIS2 global service SHALL provide a `+themes+` property identifying all Earth system disciplines as defined in WCMP codelists.
 ^|B |A WCMP record describing a WIS2 global service SHALL provide a `+themes+` property identifying the service type provided.
 |===
+//req8

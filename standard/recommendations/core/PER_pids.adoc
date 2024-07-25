@@ -5,3 +5,4 @@
 ^|A |A WCMP record MAY provide a persistent identifier to cite research or resource identification using a persistent identifier scheme/framework.
 ^|B |A WCMP record MAY provide a persistent identifier as a link object with `+rel=cite-as+` if there is an online citation or reference.
 |===
+//per7

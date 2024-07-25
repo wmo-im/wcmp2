@@ -6,4 +6,4 @@
 ^|B |Each WCMP record SHALL provide `+id+`, `+type+`, `+geometry+` and `+properties+` properties for GeoJSON compliance.
 ^|C |The `+type+` property SHALL be set to a fixed value of `+Feature+` for GeoJSON compliance.
 |===
-
+//req1

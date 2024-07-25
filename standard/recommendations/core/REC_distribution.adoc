@@ -12,3 +12,4 @@
 ^|H |The `+links.distribution.availableFormats.documentation+` SHOULD be a `+link+` for accessing the documentation associated with the format.
 ^|I |The `+links.distribution.availableFormats.samples+` SHOULD be an array of direct links to representative samples of the data.
 |===
+//rec14

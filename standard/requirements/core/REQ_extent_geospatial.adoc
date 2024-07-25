@@ -6,3 +6,4 @@
 ^|B |The `+geometry+` coordinates SHALL be integer or float data types.
 ^|C |The `+geometry+` property SHALL provide the value of `+null+` when geometry cannot be derived.
 |===
+//req9

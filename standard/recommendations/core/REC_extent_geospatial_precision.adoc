@@ -4,3 +4,4 @@
 ^|*Recommendation {counter:rec-id}* |*/rec/core/extent_geospatial_precision*
 ^|A |Geometry coordinates SHOULD have a level of precision of at least two or more decimal places.
 |===
+//rec5

@@ -5,3 +5,4 @@
 ^|A |A WCMP record SHALL provide a `+properties.title+` property.
 
 |===
+//req5

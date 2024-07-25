@@ -8,3 +8,4 @@
 ^|D |Each `+themes+` property SHALL provide a `+scheme+` property that refers to a controlled vocabulary or thesaurus.
 ^|E |A WCMP record describing a dataset SHALL provide a `+themes+` property identifying all applicable Earth system disciplines as defined in the WIS2 Topic Hierarchy. <<See Appendix E>>
 |===
+//req7

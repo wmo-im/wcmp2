@@ -5,3 +5,4 @@
 ^|A |A WCMP record SHALL provide a `+properties.type+` property.
 ^|B |The `+properties.type+` property SHALL be a valid code from the link:https://codes.wmo.int/wis/resource-type[WIS resource type] codelist.
 |===
+//req4

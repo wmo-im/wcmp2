@@ -4,3 +4,4 @@
 ^|*Recommendation {counter:rec-id}* |*/rec/core/extent_geospatial_point*
 ^|A |For datasets based on a geometry without a calculated area (for example, a single station point), a WCMP record SHOULD provide the GeoJSON geometry as a `+Point+` type.
 |===
+//rec4

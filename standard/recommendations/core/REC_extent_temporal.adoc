@@ -6,3 +6,4 @@
 ^|B |For complex temporal extents, a WCMP record SHOULD also provide a human-readable explanation in `+properties.description+` to promote clarification and unambiguity.
 ^|C |To distinguish maintenance or update frequency, those SHOULD be included in `+properties.themes+`.
 |===
+//rec7
