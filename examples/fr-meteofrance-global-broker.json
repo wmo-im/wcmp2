@@ -1,5 +1,5 @@
 {
-    "id": "urn:wmo:md:fr-meteo-france:global-broker",
+    "id": "urn:wmo:md:fr-meteofrance-global-broker:gb",
     "type": "Feature",
     "conformsTo": [
         "http://wis.wmo.int/spec/wcmp/2/conf/core"
