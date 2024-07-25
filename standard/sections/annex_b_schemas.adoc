@@ -3,7 +3,7 @@
 :appendix-caption: Annex
 == Schemas (Normative)
 
-NOTE: The schema document will be published on http://schemas.wmo.int/wcmp/2.0 once the standard has been approved.
+NOTE: The schema document will be published on http://schemas.wmo.int/wcmp/2.0.0 once the standard has been approved.
 
 === WMO Core Metadata Profile Schema
 

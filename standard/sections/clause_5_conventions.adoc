@@ -12,11 +12,11 @@ All requirements and conformance tests that appear in this document are denoted 
 
 Examples provided in this specification are encoded as GeoJSON.
 
-Complete examples can be found at https://schemas.wmo.int/wcmp/2.0/examples
+Complete examples can be found at https://schemas.wmo.int/wcmp/2.0.0/examples
 
 === Schemas
 
-The WCMP schema can be found at https://schemas.wmo.int/wcmp/2.0/wcmp2-bundled.json
+The WCMP schema can be found at https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json
 
 === Schema representation
 
