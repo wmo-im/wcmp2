@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-07-25</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-07-26</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0</p></td>
@@ -949,13 +949,13 @@ The requirements are specified in Chapter 7 and in Annex A in more detail.</p>
 <p>Examples provided in this specification are encoded as GeoJSON.</p>
 </div>
 <div class="paragraph">
-<p>Complete examples can be found at <a href="https://schemas.wmo.int/wcmp/2.0/examples" class="bare">https://schemas.wmo.int/wcmp/2.0/examples</a></p>
+<p>Complete examples can be found at <a href="https://schemas.wmo.int/wcmp/2.0.0/examples" class="bare">https://schemas.wmo.int/wcmp/2.0.0/examples</a></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_schemas"><a class="anchor" href="#_schemas"></a>5.3. Schemas</h3>
 <div class="paragraph">
-<p>The WCMP schema can be found at <a href="https://schemas.wmo.int/wcmp/2.0/wcmp2-bundled.json" class="bare">https://schemas.wmo.int/wcmp/2.0/wcmp2-bundled.json</a></p>
+<p>The WCMP schema can be found at <a href="https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json" class="bare">https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -4428,7 +4428,7 @@ vocabularies and classifications.  The following WCMP required properties would 
 <div class="title">Note</div>
 </td>
 <td class="content">
-The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.0" class="bare">http://schemas.wmo.int/wcmp/2.0</a> once the standard has been approved.
+The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.0.0" class="bare">http://schemas.wmo.int/wcmp/2.0.0</a> once the standard has been approved.
 </td>
 </tr>
 </table>
@@ -4439,7 +4439,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.wmo.int/wcmp/2.0/schemas/wcmp2-bundled.json",
+  "$id": "https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json",
   "title": "WCMP discovery metadata record definition",
   "description": "WCMP discovery metadata record definition",
   "required": [
@@ -6214,161 +6214,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
 <div class="listingblock">
 <div class="title">Example: WIS2 Global Broker (service)</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">{
-    "id": "urn:wmo:md:fr-meteo-france:global-broker",
-    "type": "Feature",
-    "conformsTo": [
-        "http://wis.wmo.int/spec/wcmp/2/conf/core"
-    ],
-    "time": null,
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-            [
-                [
-                    -180,
-                    -90
-                ],
-                [
-                    -180,
-                    90
-                ],
-                [
-                    180,
-                    90
-                ],
-                [
-                    180,
-                    -90
-                ],
-                [
-                    -180,
-                    -90
-                ]
-            ]
-        ]
-    },
-    "properties": {
-        "type": "service",
-        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
-        "description": "TODO",
-        "themes": [
-            {
-                "concepts": [
-                    {
-                        "id": "weather",
-                        "title": "Weather",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/weather"
-                    },
-                    {
-                        "id": "climate",
-                        "title": "Climate",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/climate"
-                    },
-                    {
-                        "id": "hydrology",
-                        "title": "Hydrology",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/hydrology"
-                    },
-                    {
-                        "id": "atmospheric-composition",
-                        "title": "Atmospheric Composition",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/atmospheric-composition"
-                    },
-                    {
-                        "id": "cryosphere",
-                        "title": "Cryosphere",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/cryosphere"
-                    },
-                    {
-                        "id": "ocean",
-                        "title": "Ocean",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/ocean"
-                    },
-                    {
-                        "id": "space-weather",
-                        "title": "Space Weather",
-                        "url": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline/space-weather"
-                    }
-                ],
-                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
-            },
-            {
-                "concepts": [
-                    {
-                        "id": "global-broker",
-                        "title": "Global Broker",
-                        "url": "https://codes.wmo.int/wis/service-types/global-broker"
-                    }
-                ],
-                "scheme": "https://codes.wmo.int/wis/service-types"
-            }
-        ],
-        "contacts": [
-            {
-                "identifier": "meteo-france",
-                "organization": "M\u00e9t\u00e9o-France",
-                "name": "David Podeur",
-                "emails": [
-                    {
-                        "value": "gisc_support@meteo.fr"
-                    }
-                ],
-                "addresses": [
-                    {
-                        "deliveryPoint": [
-                            "42 Avenue Coriolis"
-                        ],
-                        "city": "Toulouse",
-                        "postalCode": "31057",
-                        "country": "France"
-                    }
-                ],
-                "links": [
-                    {
-                        "rel": "about",
-                        "type": "text/html",
-                        "href": "https://donneespubliques.meteofrance.fr"
-                    }
-                ],
-                "contactInstructions": "email",
-                "roles": [
-                    "host"
-                ]
-            }
-        ],
-        "created": "2022-11-11T11:00:00Z",
-        "keywords": [
-            "wis2",
-            "global discovery catalogue",
-            "metadata"
-        ]
-    },
-    "links": [
-        {
-            "rel": "items",
-            "type": "application/geo+json",
-            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
-            "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS Global Broker - China Meteorological Administration",
-            "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2/#",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        }
-    ]
-}</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in sections/annex_c_examples.adoc - include::../../examples/fr-meteo-france.global-broker.json[]</code></pre>
 </div>
 </div>
 </div>
@@ -6569,7 +6415,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-07-25 13:22:02 UTC
+Last updated 2024-07-26 11:10:12 UTC
 </div>
 </div>
 </body>
