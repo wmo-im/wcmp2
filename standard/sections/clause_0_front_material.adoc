@@ -8,8 +8,8 @@ This document defines the content, structure, and encoding for the WMO Core Meta
 WCMP documents provide descriptive information for discovery of WMO resources.  WMO resources include, but are not
 limited to, data (NWP models, observations, forecasts and warnings, etc.), services/APIs, and processes.
 
-WCMP documents SHALL be encoded in GeoJSON (RFC 7946 footnote:[https://datatracker.ietf.org/doc/html/rfc7946]) as
-defined in this specification and SHALL be made available as HTTP crawlable files or via API provisioning as defined
+WCMP documents shall be encoded in GeoJSON (RFC 7946 footnote:[https://datatracker.ietf.org/doc/html/rfc7946]) as
+defined in this specification and shall be made available as HTTP crawlable files or via API provisioning as defined
 by OGC API - Records.
 
 Weather/climate/water data is by nature geospatial and temporal.  The W3C Data on the Web Best
@@ -24,6 +24,6 @@ wmo, wis, wis2, weather, climate, water, metadata, discovery, search
 
 [big]*iii.    Security Considerations*
 
-Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data are classified as `+core+` or `+recommended+`.  Core data is considered fully open and unrestricted with no security considerations.  Recommended data MAY have access control defined.
+Based on the WMO Unified Data Policy for the International Exchange of Earth System Data (Resolution 1 (Cg-Ext(2021) footnote:[https://library.wmo.int/doc_num.php?explnum_id=11113#page=9], exchanged data are classified as `+core+` or `+recommended+`.  Core data is considered fully open and unrestricted with no security considerations.  Recommended data may have access control defined.
 
 No additional security considerations have been made for this standard.

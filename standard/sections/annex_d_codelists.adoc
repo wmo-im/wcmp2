@@ -5,7 +5,7 @@
 
 === Dataset status
 
-The links below provide some controlled vocabularies in support of dataset status, and MAY be
+The links below provide some controlled vocabularies in support of dataset status, and may be
 of use when encoding the `+properties.status+` property..
 
 * https://www.w3.org/TR/vocab-dcat-3/#life-cycle

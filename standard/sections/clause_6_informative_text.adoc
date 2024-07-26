@@ -29,7 +29,7 @@ The following describes envisioned workflows of WIS2 in the context of metadata 
 * Basic, HTTP crawlable metadata files (filesystem, object storage). For example, publishing discovery metadata as
 JSON files to an S3 bucket, and then making that bucket available for harvesting and traversal to search engines and metadata harvesters.
 * The browser as the catalogue. Browsers utilize mass market search engines as the gateway to low barrier
-discovery.  This pattern MAY work by way of the Global Discovery Catalogue and the Global Cache, with the idea that search engines can index from the authoritative source.
+discovery.  This pattern may work by way of the Global Discovery Catalogue and the Global Cache, with the idea that search engines can index from the authoritative source.
 
 ==== Granularity
 
