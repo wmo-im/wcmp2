@@ -39,7 +39,7 @@ find . -name "???.adoc" -exec asciidoc-link-check -p -c asciidoc-link-check-conf
 ## Conventions
 
 - Fixed values to always use:
-  - WCMP2 schema: https://schemas.wmo.int/wcmp/2.0/wcmp2-bundled.json
+  - WCMP2 schema: https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json
 - always fence JSON snippets, single element names as code
 
 ## Releasing
