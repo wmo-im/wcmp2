@@ -814,7 +814,7 @@ The table below provides an overview of the properties of a link object.
 |``rel``
 |Optional
 |The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
- by link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA link relations] or link:https://codes.wmo.int/wis/link-type[WIS link type] extensions. (see table <<_link_relation_selection>>)
+ by link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[IANA link relations] or link:https://codes.wmo.int/wis/link-type[WIS link type] extensions. (see table <<_1_19_5_link_relation_selection>>)
 
 |``type``
 |Optional
