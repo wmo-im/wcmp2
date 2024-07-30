@@ -12,6 +12,6 @@ The API of the GDC, in addition to allowing for spatial/temporal/attribute queri
 may choose to apply facets to WCMP records.  Facets are effective when applied against controlled
 vocabularies and classifications.  The following WCMP required properties would be subject to faceting by a GDC:
 
-- ``centre-id`` as defined in <<_identifier>>
-- <<_properties_type>>
-- <<_properties_wmo_data_policy>>
+- ``centre-id`` as defined in <<_1_4_identifier>>
+- <<_1_6_properties_type>>
+- <<_1_18_properties_wmo_data_policy>>
