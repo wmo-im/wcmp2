@@ -1,5 +1,5 @@
 == WMO Core Metadata Profile (Version 2)
-Note: This section of working draft document is the same as Appendix F in the https://library.wmo.int/idurl/4/68731[_Manual on the WMO Information System_] (WMO-No. 1060), Volume II
+Note: This section of working draft document is the same as Appendix F in the https://library.wmo.int/idurl/4/68731[_Manual on the WMO Information System_] (WMO-No. 1060), Volume II.
 
 WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and shall be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (``http://wis.wmo.int/spec/wcmp/2``) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with ``shaded text`` in this document.
 
