@@ -4,3 +4,4 @@
 ^|*Recommendation {counter:rec-id}* |*/rec/core/media_type*
 ^|A |The media type assigned to a WCMP record, when transported through a protocol that supports it, SHOULD be ``application/geo+json``.
 |===
+//rec1

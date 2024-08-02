@@ -6,3 +6,4 @@
 ^|B |The `+properties.wmo:dataPolicy+` property SHALL be `+core+` or `+recommended+`.
 ^|C |When the `+properties.wmo:dataPolicy+` property is `+recommended+`, data licensing SHALL be provided by at least one `+links+` item with link relations (`+rel+`) of `+license+`.
 |===
+//req13

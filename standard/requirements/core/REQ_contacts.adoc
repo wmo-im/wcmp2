@@ -6,3 +6,4 @@
 ^|B |The `+properties.contacts+` SHALL provide an `+organization+` property.
 ^|C |The `+roles+` property, when specified, SHALL provide a role type from the WCMP role type codelist.
 |===
+//req11

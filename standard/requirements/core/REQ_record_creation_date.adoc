@@ -5,3 +5,4 @@
 ^|A |A WCMP record SHALL provide a single `+properties.created+` property.
 ^|B |The `+properties.created+` property SHALL NOT be repeated or used to document change history.
 |===
+//req12

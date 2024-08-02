@@ -4,3 +4,4 @@
 ^|*Recommendation {counter:rec-id}* |*/rec/core/keywords*
 ^|A |A WCMP record SHOULD provide a `+properties.keywords+` property, as a list of freeform text or tags that are not based on a controlled vocabulary.
 |===
+//rec2

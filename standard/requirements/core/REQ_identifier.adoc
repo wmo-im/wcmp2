@@ -4,7 +4,7 @@
 ^|*Requirement {counter:req-id}* |*/req/core/identifier*
 ^|A |A WCMP record SHALL provide an identifier via the `+id+` property.
 ^|B |The `+id+` property SHALL have the following notation: `+urn:wmo:md:{centre_id}:{local_identifier}+`.
-^|C |The ``centre_id`` SHALL be based on the associated vocabulary specified in the WIS <<wis2-topic-hierarchy, topic hierarchy>>.
-^|D |The `+id+` property SHALL include a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or special or accented characters.
+^|C |The ``centre_id`` SHALL be based on the associated vocabulary specified in Appendix D: WIS2 Topic Hierarchy.
+^|D |The `+id+` property SHALL include a local identifier as defined by the data publisher.  The local identifier SHALL NOT have spaces or accented characters.
 |===
-
+//req2

@@ -4,3 +4,4 @@
 ^|*Permission {counter:per-id}* |*/per/core/themes*
 ^|A |A WCMP record MAY provide as many themes/concepts as applicable to describe the themes of a given dataset.
 |===
+//per2
