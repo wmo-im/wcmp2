@@ -19,5 +19,5 @@ include::../../examples/de-dwd.icon-eps-all.json[]
 .Example: WIS2 Global Broker (service)
 [source,json]
 ----
-include::../../examples/fr-meteo-france.global-broker.json[]
+include::../../examples/fr-meteofrance-global-broker.json[]
 ----
