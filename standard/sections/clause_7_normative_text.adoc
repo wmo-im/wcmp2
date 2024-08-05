@@ -166,7 +166,7 @@ A **service** is an API or web service providing a discovery, visualization, or 
 
 A **process** is a workflow or execution to provide custom functionality to calculate a given output or product.
 
-.Example.
+.Example:
 
 [source,json]
 ----
@@ -247,7 +247,7 @@ A concept's optional `+url+` property can provide a remote reference to a given 
 
 A WCMP metadata record can have one or more themes.
 
-.Example.Themes object with GRIB2 codes
+.Example: Themes object with GRIB2 codes
 [source,json]
 ----
 "properties": {
@@ -282,7 +282,7 @@ A WCMP metadata record can have one or more themes.
   ...
 }
 ----
-.Example.Themes object with BUFR4 codes
+.Example: Themes object with BUFR4 codes
 
 [source,json]
 ----
@@ -308,7 +308,7 @@ A WCMP metadata record can have one or more themes.
   ...
 }
 ----
-.Example.Themes object with of the earth-system-discipline from the WMO Topic Hierarchy
+.Example: Themes object with of the earth-system-discipline from the WMO Topic Hierarchy
 
 [source,json]
 ----
@@ -465,7 +465,7 @@ Further time-related characteristics (for example, frequency of modifications, a
 Some cases might be more complex due to the product's characteristics.
 If necessary, further granularity can be indicated by the `+additionalExtents.temporal+` property (see <<_1_11_4_additional_temporal_extents>>).
 
-.Example. Complex time indication
+.Example: Complex time indication
 
 [source,json]
 ----
@@ -490,7 +490,7 @@ If necessary, further granularity can be indicated by the `+additionalExtents.te
 }
 ----
 
-.Example. Complex time indication further described with themes property
+.Example: Complex time indication further described with themes property
 
 [source,json]
 ----
@@ -545,7 +545,7 @@ include::../recommendations/core/PER_extent_temporal.adoc[]
 
 The `+contacts+` property is the information associated with one or more responsible parties of the resource.
 
-.Example. Contacts object with all contact details
+.Example: Contacts object with all contact details
 
 [source,json]
 ----
@@ -579,7 +579,7 @@ The `+contacts+` property is the information associated with one or more respons
   ...
 }
 ----
-.Example. Contacts object with URL to the relevant homepage
+.Example: Contacts object with URL to the relevant homepage
 
 [source,json]
 ----
@@ -627,7 +627,7 @@ Examples of persistent identifiers include, but are not limited to:
 * Archival Resource Key (https://arks.org[ARK])
 * https://handle.net[Handle]
 
-.Example. Persistent identifiers
+.Example: Persistent identifiers
 
 [source,json]
 ----
@@ -647,7 +647,7 @@ Examples of persistent identifiers include, but are not limited to:
 }
 ----
 
-.Example. Online citation
+.Example: Online citation
 
 [source,json]
 ----
@@ -721,7 +721,7 @@ The `+wmo:dataPolicy+` property is a codelist that identifies the classification
 
 Licensing and copyright are expressed via the `+links+` property (see <<_1_19_links_and_distribution_information>>), providing access, license and attribution details as required. Conditions on use of the data should be indicated for transparency and clarification.
 
-.Example. Core data
+.Example: Core data
 
 [source,json]
 ----
@@ -732,7 +732,7 @@ Licensing and copyright are expressed via the `+links+` property (see <<_1_19_li
 }
 ----
 
-.Example. Recommended data
+.Example: Recommended data
 [source,json]
 ----
 "properties": {
@@ -744,7 +744,7 @@ Licensing and copyright are expressed via the `+links+` property (see <<_1_19_li
 
 It is useful to add provider-specific details to have the most detailed information about data policy and additional conditions.
 
-.Example. Recommended data with additional conditions and provider-specific details
+.Example: Recommended data with additional conditions and provider-specific details
 [source,json]
 ----
 "properties": {
@@ -760,7 +760,7 @@ It is useful to add provider-specific details to have the most detailed informat
 }]
 ----
 
-.Example. License for recommended data in the public domain
+.Example: License for recommended data in the public domain
 [source,json]
 ----
 "properties": {
@@ -778,7 +778,7 @@ It is useful to add provider-specific details to have the most detailed informat
 
 To express rights not addressed by a license, the `+rights+` property can be used as follows:
 
-.Example. Rights
+.Example: Rights
 [source,json]
 ----
 "properties": {
@@ -844,9 +844,9 @@ The table below provides an overview of the properties of a link object.
 
 For recommended data, the ``links`` property may also provide links to services that implement access control in support of authentication and authorization.  In secure data use cases, a user needs to be able to detect access-controlled data as part of data discovery and evaluation.
 
-.Example. A link object expressing access control using HTTP Basic Authentication for a given data access service
+.Example: A link object expressing access control using HTTP Basic Authentication for a given data access service
 
-.Example. Access controlled link
+.Example: Access controlled link
 
 [source,json]
 ----
@@ -865,7 +865,7 @@ For recommended data, the ``links`` property may also provide links to services 
 }]
 ----
 
-.Example. Two link objects providing both search and MQTT subscription information
+.Example: Two link objects providing both search and MQTT subscription information
 
 [source,json]
 ----
@@ -886,7 +886,7 @@ For recommended data, the ``links`` property may also provide links to services 
 ]
 ----
 
-.Example. A link object providing an API capability
+.Example: A link object providing an API capability
 
 [source,json]
 ----
@@ -900,7 +900,7 @@ For recommended data, the ``links`` property may also provide links to services 
 ]
 ----
 
-.Example. A link object providing a browse graphic
+.Example: A link object providing a browse graphic
 
 [source,json]
 ----
@@ -918,7 +918,7 @@ For recommended data, the ``links`` property may also provide links to services 
 
 Templated links allow for specifying a pattern of a link in support API interaction (where parameter values are variable).
 
-.Example. A templated link object of a WMS service providing API access to images
+.Example: A templated link object of a WMS service providing API access to images
 [source,json]
 ----
 "linkTemplates": [{
@@ -985,7 +985,7 @@ The `+distribution+` property provides information about the format of the datas
 
 Additional distribution information is added to allow more comprehensive discovery services. 
 
-.Example. Links object with the complete distribution information
+.Example: Links object with the complete distribution information
 
 [source,json]
 ----
@@ -1102,7 +1102,7 @@ links to data and services.
 A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
 record.  Additional properties do not break compliance to WCMP.
 
-.Example.
+.Example:
 
 [source,json]
 ----
