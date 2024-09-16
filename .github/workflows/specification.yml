@@ -53,5 +53,5 @@ jobs:
           rm -rf standard kpi
           mv -f /tmp/wcmp2/* .
           git add .
-          git commit -am "update WMCP 2 build"
+          git commit -am "update WCMP 2 build"
           git push
