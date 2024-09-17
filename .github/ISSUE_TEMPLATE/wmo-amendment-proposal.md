@@ -1,9 +1,6 @@
 ---
-name: Amendment proposal
-about: Proposals for amendments to WCMP2
-title:
-labels:
-assignees:
+name: WMO amendment proposal
+about: Proposals for amendments to this specification
 ---
 
 > Note: sections marked with * are required.
