@@ -4,8 +4,10 @@ about: Proposals for amendments to WCMP2
 title:
 labels:
 assignees:
-
 ---
+
+> Note: sections marked with * are required.
+
 # Overview of proposal*
 _(Brief description of the amendment(s) requested. Include as much relevant information as possible, such as rationale, purpose, and implementation plans.)_
 
