@@ -23,7 +23,7 @@ jobs:
           && sudo apt-get install -y pandoc \
           && sudo gem install asciidoctor asciidoctor-pdf
       - name: checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
       - name: build specification
         run: |
           mkdir -p /tmp/wcmp2/standard/images \
@@ -42,7 +42,7 @@ jobs:
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.pdf index.adoc \
           && cd ..
       - name: checkout gh-pages branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@master
         with:
           ref: gh-pages
       - name: update gh-pages branch and publish
@@ -53,5 +53,5 @@ jobs:
           rm -rf standard kpi
           mv -f /tmp/wcmp2/* .
           git add .
-          git commit -am "update WMCP 2 build"
+          git commit -am "update WCMP 2 build"
           git push
