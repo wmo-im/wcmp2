@@ -1,9 +1,9 @@
 ---
 name: Amendment proposal
 about: Proposals for amendments to WCMP2
-title: ''
-labels: ''
-assignees: ''
+title:
+labels:
+assignees:
 
 ---
 # Overview of proposal*
