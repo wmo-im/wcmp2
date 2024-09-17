@@ -1,4 +1,4 @@
 ---
 name: General
-about: Generic issue or request
+about: General issue or request
 ---
