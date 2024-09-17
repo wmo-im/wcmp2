@@ -1,5 +1,5 @@
 ---
-name: Amendment Proposal
+name: Amendment proposal
 about: Proposals for amendments to WCMP2
 title: ''
 labels: ''
