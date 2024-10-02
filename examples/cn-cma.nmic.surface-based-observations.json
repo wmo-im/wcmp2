@@ -91,7 +91,9 @@
             }
         ],
         "wmo:dataPolicy": "core",
-        "language": "en",
+        "language": {
+            "code": "en"
+        },
         "type": "dataset",
         "created": "2023-04-23T12:00:00Z",
         "updated": "2024-01-15T12:00:00Z",
@@ -111,7 +113,7 @@
         },
         {
             "rel": "items",
-            "channel": "cache/a/wis2/#",
+            "channel": "origin/a/wis2/cn-cma/data/core/weather/surface-based-observations/synop",
             "type": "application/geo+json",
             "title": "Data notifications - WMO WIS Global Broker - CMA",
             "href": "mqtts://everyone:everyone@example.org:8883"

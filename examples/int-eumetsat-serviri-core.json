@@ -55,7 +55,9 @@
             "ocean"
         ],
         "keywordsCodespace": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode",
-        "language": "en",
+        "language": {
+            "code": "en"
+        },
         "contacts": [
             {
                 "name": "Data Collection or Production Centre",
@@ -128,7 +130,9 @@
             }
         ],
         "formats": [
-            "application/x-eum-hrit"
+            {
+                "mediaType": "application/x-eum-hrit"
+            }
         ],
         "contactPoint": "https://www.eumetsat.int/contact-us",
         "wmo:dataPolicy": "core"
@@ -142,7 +146,7 @@
         },
         {
             "rel": "items",
-            "channel": "origin/a/wis2/int-eumetsat/data/core/weather/space-based-observations/satellite4nowcasting/Meteosat-10/ImageL1-5",
+            "channel": "origin/a/wis2/int-eumetsat/data/core/weather/space-based-observations/meteosat-10/seviri",
             "href": "mqtts://example.org",
             "type": "application/geo+json",
             "title": "Data notifications"

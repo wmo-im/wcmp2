@@ -183,9 +183,13 @@
                 "value": "de.dwd.icon-eps.ALL"
             }
         ],
-        "language": "eng",
+        "language": {
+            "code": "en"
+        },
         "formats": [
-            "GRIB2"
+            {
+                "name": "GRIB2"
+            }
         ],
         "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data."
     },

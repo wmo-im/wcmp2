@@ -23,11 +23,11 @@
                     90
                 ],
                 [
-                    360,
+                    180,
                     90
                 ],
                 [
-                    360,
+                    180,
                     -90
                 ],
                 [
@@ -206,7 +206,9 @@
             "Atmosphere",
             "weatherForecasts"
         ],
-        "language": "en",
+        "language": {
+            "code": "en"
+        },
         "themes": [
             {
                 "concepts": [

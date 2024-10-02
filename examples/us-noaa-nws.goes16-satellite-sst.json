@@ -65,7 +65,9 @@
             "Atmosphere",
             "meteorology"
         ],
-        "language": "en",
+        "language": {
+            "code": "en"
+        },
         "themes": [
             {
                 "concepts": [
@@ -147,7 +149,9 @@
             }
         ],
         "formats": [
-            "NetCDF"
+            {
+                "name": "NetCDF"
+            }
         ],
         "rights": "There are no restrictions on the use of this data."
     },

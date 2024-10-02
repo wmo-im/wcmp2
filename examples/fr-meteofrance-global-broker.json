@@ -134,7 +134,7 @@
             "type": "application/geo+json",
             "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2/#",
+            "channel": "cache/a/wis2",
             "distribution": {
                 "maxMSGsize": 4096,
                 "unit": "bytes"
@@ -145,7 +145,7 @@
             "type": "application/json",
             "title": "WMO WIS Global Broker - China Meteorological Administration",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2/#",
+            "channel": "cache/a/wis2",
             "distribution": {
                 "maxMSGsize": 4096,
                 "unit": "bytes"
