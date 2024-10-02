@@ -124,7 +124,9 @@
             }
         ],
         "wmo:dataPolicy": "core",
-        "language": "en",
+        "language": {
+            "code": "en"
+        },
         "type": "dataset",
         "created": "2018-01-01T12:34:32Z",
         "updated": "2018-09-06T08:18:23Z"
