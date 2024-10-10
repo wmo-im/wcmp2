@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-09-16</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-10</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0</p></td>
@@ -2349,7 +2349,7 @@ If necessary, further granularity can be indicated by the <code>additionalExtent
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>time</code> property SHALL provide either one <code>date</code>, <code>timestamp</code>, <code>interval, or the value of `null</code> when a conformant time cannot be derived.</p>
+<p>The <code>time</code> property SHALL provide either one <code>date</code>, <code>timestamp</code>, <code>interval</code>, or the value of <code>null</code> when a conformant time cannot be derived.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -6194,9 +6194,13 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
                 "value": "de.dwd.icon-eps.ALL"
             }
         ],
-        "language": "eng",
+        "language": {
+            "code": "en"
+        },
         "formats": [
-            "GRIB2"
+            {
+                "name": "GRIB2"
+            }
         ],
         "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data."
     },
@@ -6369,7 +6373,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "type": "application/geo+json",
             "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2/#",
+            "channel": "cache/a/wis2",
             "distribution": {
                 "maxMSGsize": 4096,
                 "unit": "bytes"
@@ -6380,7 +6384,7 @@ The schema document will be published on <a href="http://schemas.wmo.int/wcmp/2.
             "type": "application/json",
             "title": "WMO WIS Global Broker - China Meteorological Administration",
             "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2/#",
+            "channel": "cache/a/wis2",
             "distribution": {
                 "maxMSGsize": 4096,
                 "unit": "bytes"
@@ -6573,7 +6577,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-09-16 10:43:18 UTC
+Last updated 2024-10-10 17:25:29 UTC
 </div>
 </div>
 </body>
