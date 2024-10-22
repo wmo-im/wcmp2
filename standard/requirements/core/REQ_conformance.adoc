@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Requirement {counter:req-id}* |*/req/core/conformance*
-^|A |A WCMP record SHALL provide information on conformance via the OARec record `+conformsTo+` property.
+^|A |A WCMP record SHALL provide information on conformance via the OGC API – Records (OARec) record `+conformsTo+` property.
 ^|B |The `+conformsTo+` property SHALL advertise conformance to WCMP.
 |===
 //req3

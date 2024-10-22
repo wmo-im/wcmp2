@@ -5,7 +5,7 @@
 ^|A |A WCMP record SHALL provide a `+links+` property.
 ^|B |The `+links+` property SHALL contain at least one link to the data access service allowing users to download the data.
 ^|C |The `+links+` property SHALL contain a Web Accessible Folder (WAF) or an API link for non-real-time data (such as climate records or hydrometric data archives).
-^|D |The `+links+` property SHALL contain access control information for data, products, and services that require authentication or authorization.
+^|D |The `+links+` property SHALL contain access control information for data, products and services that require authentication or authorization.
 ^|E |For representing MQTT links, the URI scheme SHALL be `+mqtt+` (default port 1883) or `+mqtts+` (default port 8883) for secure transport layer security (TLS) encrypted connections.
 ^|F |The `+links+` property SHALL provide the `channel` property of the MQTT topic for real-time data under which the data publication notifications will be accessible from the WIS2 Global Broker, following the WIS2 Topic Hierarchy.
 ^|G |The `+links+` property SHALL include a valid link:https://www.iana.org/assignments/link-relations/link-relations.xml[IANA] link relation or a link:https://codes.wmo.int/wis/link-type[WIS link type] code.

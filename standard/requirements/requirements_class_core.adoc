@@ -7,5 +7,5 @@
 |Dependency |link:https://json-schema.org[JSON Schema] (2022)
 |Dependency |The GeoJSON Format link:https://datatracker.ietf.org/doc/html/rfc7946[(IETF: RFC-7946 (2016))] 
 |Dependency |OGC API - Features - Part 1: Core corrigendum link:https://docs.opengeospatial.org/is/17-069r4/17-069r4.html[(OGC: OGC 17-069r)]
-|Pre-conditions |The record conforms to OGC API - Records - Core: Part 1: Requirements Class: Record Core
+|Preconditions |The record conforms to the Requirements Class “Record Core” of link:https://docs.ogc.org/DRAFTS/20-004.html[OGC API - Records - Part 1: Core]
 |===

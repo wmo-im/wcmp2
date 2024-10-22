@@ -5,11 +5,11 @@
 ^|A |A WCMP record SHOULD describe additional distribution information with the `+links.distribution+` property to qualify a given service link. This information SHOULD be used to build the discovery information and allow the user to find and choose the appropriate service for accessing the data.
 ^|B |The `+links.distribution.availableFormats+` property SHOULD describe the different formats that can be retrieved using the service link.
 ^|C |The `+links.distribution.availableFormats.name+` property SHOULD describe the available format short name.
-^|D |The `+links.distribution.availableFormats.description+` SHOULD describe the associated format.
-^|E |The `+links.distribution.availableFormats.typicalFilename+` SHOULD describe the filenames that are available from the service link.
-^|F |The `+links.distribution.availableFormats.typicalFilesize+` SHOULD describe the typical filesize available from the service link.
-^|G |The `+links.distribution.availableFormats.numberOfFiles+` SHOULD describe the typical number of files received during a given period (day, month, ...) when using the service link. It SHOULD follow the pattern X per day, X per month.
-^|H |The `+links.distribution.availableFormats.documentation+` SHOULD be a `+link+` for accessing the documentation associated with the format.
-^|I |The `+links.distribution.availableFormats.samples+` SHOULD be an array of direct links to representative samples of the data.
+^|D |The `+links.distribution.availableFormats.description+` property SHOULD describe the associated format.
+^|E |The `+links.distribution.availableFormats.typicalFilename+` property SHOULD describe the filenames that are available from the service link.
+^|F |The `+links.distribution.availableFormats.typicalFilesize+` property SHOULD describe the typical file size available from the service link.
+^|G |The `+links.distribution.availableFormats.numberOfFiles+` property SHOULD describe the typical number of files received during a given period (day, month, ...) when using the service link. It SHOULD follow the pattern X per day, X per month.
+^|H |The `+links.distribution.availableFormats.documentation+` property SHOULD be a `+link+` for accessing the documentation associated with the format.
+^|I |The `+links.distribution.availableFormats.samples+` property SHOULD be an array of direct links to representative samples of the data.
 |===
 //rec14
