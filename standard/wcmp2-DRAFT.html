@@ -455,7 +455,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-10</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2024-10-23</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.0.0</p></td>
@@ -534,7 +534,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_1_requirements_class_core">1. Requirements Class "Core"</a>
 <ul class="sectlevel3">
 <li><a href="#_1_1_overview">1.1 Overview</a></li>
-<li><a href="#_1_2_wcmp_record_representation">1.2. WCMP record representation</a></li>
+<li><a href="#_1_2_wmo_core_metadata_profile_record_representation">1.2. WMO Core Metadata Profile record representation</a></li>
 <li><a href="#_1_3_validation">1.3 Validation</a></li>
 <li><a href="#_1_4_identifier">1.4 Identifier</a></li>
 <li><a href="#_1_5_conformance">1.5 Conformance</a></li>
@@ -1303,7 +1303,7 @@ structured data discovery, search, and relevant results.</p>
 <p>Note: This section of working draft document is the same as Appendix F in the <a href="https://library.wmo.int/idurl/4/68731"><em>Manual on the WMO Information System</em></a> (WMO-No. 1060), Volume II.</p>
 </div>
 <div class="paragraph">
-<p>WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and shall be encoded in GeoJSON. The normative provisions in this standard are denoted by the base URI (<code><a href="http://wis.wmo.int/spec/wcmp/2" class="bare">http://wis.wmo.int/spec/wcmp/2</a></code>) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with <code>shaded text</code> in this document.</p>
+<p>WMO Core Metadata Profile (WCMP) is an extension of the OGC API – Features standard and shall be encoded in GeoJSON. The normative provisions in WCMP (version 2) are denoted by the base URI (<code><a href="http://wis.wmo.int/spec/wcmp/2" class="bare">http://wis.wmo.int/spec/wcmp/2</a></code>) and requirements are denoted by partial URIs relative to this base. Property names, values and examples are represented with <code>shaded text</code> in this document.</p>
 </div>
 <div class="sect2">
 <h3 id="_1_requirements_class_core"><a class="anchor" href="#_1_requirements_class_core"></a>1. Requirements Class "Core"</h3>
@@ -1338,8 +1338,8 @@ structured data discovery, search, and relevant results.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OGC API - Features - Part 1: Core corrigendum <a href="https://docs.opengeospatial.org/is/17-069r4/17-069r4.html">(OGC: OGC 17-069r)</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Pre-conditions</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The record conforms to OGC API - Records - Core: Part 1: Requirements Class: Record Core</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Preconditions</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The record conforms to the Requirements Class “Record Core” of <a href="https://docs.ogc.org/DRAFTS/20-004.html">OGC API - Records - Part 1: Core</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -1376,7 +1376,7 @@ structured data discovery, search, and relevant results.</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>conformsTo</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WCMP associated that the record conforms to (see <a href="#_1_5_conformance">1.5 Conformance</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The version of WCMP associated to which the record conforms (see <a href="#_1_5_conformance">1.5 Conformance</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.type</code></p></td>
@@ -1456,12 +1456,12 @@ structured data discovery, search, and relevant results.</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.wmo:dataPolicy</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Conditional</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Classification code of <code>core</code> or <code>recommended</code> based on the WMO Data Policy (Resolution 1 (Cg-Ext(2021)))<sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_1_18_properties_wmo_data_policy">1.18 Properties / WMO data policy</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Classification code of <code>core</code> or <code>recommended</code>, based on the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021)))<sup class="footnote">[<a id="_footnoteref_30" class="footnote" href="#_footnotedef_30" title="View footnote.">30</a>]</sup>.  <strong>Required</strong> for datasets (see <a href="#_1_18_properties_wmo_data_policy">1.18 Properties / WMO data policy</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.rights</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A statement that concerns all rights not addressed by the license such as a copyright statement
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A statement that concerns all rights not addressed by the license, such as a copyright statement
 (see <a href="#_1_18_properties_wmo_data_policy">1.18 Properties / WMO data policy</a>)</p></td>
 </tr>
 <tr>
@@ -1472,7 +1472,7 @@ structured data discovery, search, and relevant results.</p>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>linkTemplates</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online link templates for dynamic / API access (see <a href="#_1_19_2_templated_links">1.19.2 Templated links</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Online link templates for dynamic/API access (see <a href="#_1_19_2_templated_links">1.19.2 Templated links</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>properties.*</code></p></td>
@@ -1483,7 +1483,7 @@ structured data discovery, search, and relevant results.</p>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_1_2_wcmp_record_representation"><a class="anchor" href="#_1_2_wcmp_record_representation"></a>1.2. WCMP record representation</h4>
+<h4 id="_1_2_wmo_core_metadata_profile_record_representation"><a class="anchor" href="#_1_2_wmo_core_metadata_profile_record_representation"></a>1.2. WMO Core Metadata Profile record representation</h4>
 <div class="paragraph">
 <p>WCMP record can be represented in various ways internally, in WIS systems and software tools, but its external representation is GeoJSON.</p>
 </div>
@@ -1511,7 +1511,7 @@ structured data discovery, search, and relevant results.</p>
 <div class="sect3">
 <h4 id="_1_3_validation"><a class="anchor" href="#_1_3_validation"></a>1.3 Validation</h4>
 <div class="paragraph">
-<p>The WCMP record schema is based on  <em>OGC API - Records - Part 1: Core: Requirements Class: Record Core</em> schema and the associated information model.  WCMP records compliant with WCMP schema are therefore compliant with the <em>OGC API - Records</em> record schema.</p>
+<p>The WCMP record schema is based on the Requirements Class "Record Core" of OGC API – Records – Part 1: Core schema and the associated information model. WCMP records compliant with the WCMP schema are therefore compliant with the OGC API – Records record schema.</p>
 </div>
 <table id="req_core_validation" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -1534,7 +1534,7 @@ structured data discovery, search, and relevant results.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each WCMP record SHALL provide <code>id</code>, <code>type</code>, <code>geometry</code> and <code>properties</code> properties for GeoJSON compliance.</p>
+<p>Each WCMP record SHALL provide id (see <a href="#_1_4_identifier">1.4 Identifier</a>), type (see <a href="#_1_6_properties_type">1.6 Properties / Type</a>), geometry  (see <a href="#_1_11_1_geospatial_extent">1.11.1 Geospatial extent</a>) and properties (see, for example, <a href="#_1_7_properties_title">1.7 Properties / Title</a>) for GeoJSON compliance.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1550,7 +1550,7 @@ structured data discovery, search, and relevant results.</p>
 <h4 id="_1_4_identifier"><a class="anchor" href="#_1_4_identifier"></a>1.4 Identifier</h4>
 <div class="paragraph">
 <p>The <code>id</code> property is a unique identifier
-of the dataset.  A record identifier is essential for querying and identifying records within the GDC.</p>
+of the dataset.  A record identifier is essential for querying and identifying records within the Global Discovery Catalogue (GDC).</p>
 </div>
 <div class="listingblock">
 <div class="title">Example</div>
@@ -1585,7 +1585,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>centre_id</code> SHALL be based on the associated vocabulary specified in Appendix D: WIS2 Topic Hierarchy.</p>
+<p>The <code>centre_id</code> SHALL be based on the associated vocabulary specified in Appendix D. WIS2 Topic Hierarchy.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1620,7 +1620,7 @@ of the dataset.  A record identifier is essential for querying and identifying r
 <div class="sect3">
 <h4 id="_1_5_conformance"><a class="anchor" href="#_1_5_conformance"></a>1.5 Conformance</h4>
 <div class="paragraph">
-<p>The <code>conformsTo</code> property to identifies the version of the WCMP standard that the metadata record conforms to. Conformance identification is valuable for version
+<p>The <code>conformsTo</code> property identifies the version of the WCMP standard to which the metadata record conforms. Conformance identification is valuable for version
 detection and handling of content.</p>
 </div>
 <div class="listingblock">
@@ -1646,7 +1646,7 @@ detection and handling of content.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHALL provide information on conformance via the OARec record <code>conformsTo</code> property.</p>
+<p>A WCMP record SHALL provide information on conformance via the OGC API – Records (OARec) record <code>conformsTo</code> property.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -1661,14 +1661,14 @@ detection and handling of content.</p>
 <div class="sect3">
 <h4 id="_1_6_properties_type"><a class="anchor" href="#_1_6_properties_type"></a>1.6 Properties / Type</h4>
 <div class="paragraph">
-<p>The <code>type</code> property identifies the type of resource that the metadata record describes using values from the resource type codelist. While most metadata records will be set to <code>dataset</code>,
-WCMP can also describe additional resources, such as services and processes.</p>
+<p>The <code>type</code> property identifies the type of resource that the metadata record describes, using values from the resource type code list in the WMO Codes Registry. While most metadata records will be set to <code>dataset</code>,
+a WCMP record can also describe additional resources, such as services and processes.</p>
 </div>
 <div class="paragraph">
 <p>A <strong>dataset</strong> is the primary granularity of a WCMP record describing a collection of data granules.</p>
 </div>
 <div class="paragraph">
-<p>A <strong>service</strong> is an API or web service providing a discovery, visualization, or access mechanism that operates on data.</p>
+<p>A <strong>service</strong> is an API or web service providing a discovery, visualization or access mechanism that operates on data.</p>
 </div>
 <div class="paragraph">
 <p>A <strong>process</strong> is a workflow or execution to provide custom functionality to calculate a given output or product.</p>
@@ -1704,7 +1704,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.type</code> property SHALL be a valid code from the <a href="https://codes.wmo.int/wis/resource-type">WIS resource type</a> codelist.</p>
+<p>The <code>properties.type</code> property SHALL be a valid code from the <a href="https://codes.wmo.int/wis/resource-type">WIS resource type</a> code list.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1716,7 +1716,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 <p>The <code>title</code> property is a human-readable name of the dataset.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
@@ -1788,7 +1788,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 <p>The <code>keywords</code> property is a list of keywords, tags or specific phrases associated with the resource, but are not referenced to a particular vocabulary or knowledge organization system.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
@@ -1817,7 +1817,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide a <code>properties.keywords</code> property, as a list of freeform text or tags that are not based on a controlled vocabulary.</p>
+<p>A WCMP record SHOULD provide a <code>properties.keywords</code> property, as a list of free text or tags that are not based on a controlled vocabulary.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -1829,7 +1829,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 <p>The <code>themes</code> property is a list of concepts that are referenced to a vocabulary or knowledge organization system used to classify the resource.</p>
 </div>
 <div class="paragraph">
-<p>A theme&#8217;s <code>scheme</code> property provides a remote reference to a controlled vocabulary, codelist or knowledge organization system.</p>
+<p>A theme&#8217;s <code>scheme</code> property provides a remote reference to a controlled vocabulary, code list or knowledge organization system.</p>
 </div>
 <div class="paragraph">
 <p>A concept&#8217;s <code>id</code> provides an identifier for the given concept, as well as optional <code>title</code>, <code>description</code> and <code>url</code> properties to further describe the concept as desired.</p>
@@ -1903,7 +1903,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 </div>
 </div>
 <div class="listingblock">
-<div class="title">Example: Themes object with of the earth-system-discipline from the WMO Topic Hierarchy</div>
+<div class="title">Example: Themes object with the <code>earth-system-discipline</code> from the WMO Topic Hierarchy</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
@@ -2035,7 +2035,7 @@ WCMP can also describe additional resources, such as services and processes.</p>
 Geospatial bounding extents provide a useful indicator of the location of the dataset to facilitate search and map displays in the GDC.</p>
 </div>
 <div class="listingblock">
-<div class="title">Examples</div>
+<div class="title">Examples:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"geometry": {
   "type": "Polygon",
@@ -2166,15 +2166,15 @@ provides the ability to list one to many minimum bounding geometries for a given
 <ul>
 <li>
 <p>The minimum longitude is the westernmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, less than or equal to the maximum longitude.</p>
+signed number between -180 and 180, less than or equal to the maximum longitude;</p>
 </li>
 <li>
 <p>The minimum latitude is the southernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
-signed number between -90 and 90, less than or equal to the maximum latitude.</p>
+signed number between -90 and 90, less than or equal to the maximum latitude;</p>
 </li>
 <li>
 <p>The maximum longitude is the easternmost coordinate of the limit of the dataset extent, expressed in longitude decimal degrees as a
-signed number between -180 and 180, greater than or equal to the minimum longitude.</p>
+signed number between -180 and 180, greater than or equal to the minimum longitude;</p>
 </li>
 <li>
 <p>The maximum latitude is the northernmost coordinate of the limit of the dataset extent, expressed in latitude decimal degrees as a
@@ -2186,7 +2186,7 @@ signed number between -90 and 90, greater than or equal to the minimum latitude.
 <p>This property also facilitates catalogue searches with geospatial predicate (such as, within extent).</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"additionalExtents": {
   "spatial": {
@@ -2231,13 +2231,13 @@ signed number between -90 and 90, greater than or equal to the minimum latitude.
 <p>The <code>time</code> property describes the general bounding extent of the dataset and the temporal resolution.</p>
 </div>
 <div class="paragraph">
-<p>Temporal extents provide a useful indicator of the date and time period of the dataset and facilitates temporal searching in the GDC.</p>
+<p>Temporal extents provide a useful indicator of the date and time period of the dataset and facilitate temporal searching in the GDC.</p>
 </div>
 <div class="paragraph">
-<p>In addition, the temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets). If only times are given for the interval, it is implicitly assumed that those are recurring every day. In cases where no time indication can be derived, it is applicable to state the value of <code>null</code>.</p>
+<p>In addition, the temporal resolution provides a useful indicator of the data update frequency (for example, for real-time datasets). If only times are given for the interval, it is implicitly assumed that those are recurring every day. A null value can be used if a time indication cannot be derived.</p>
 </div>
 <div class="listingblock">
-<div class="title">Examples</div>
+<div class="title">Examples:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"time": {
   "date": "2021-10-30"
@@ -2280,8 +2280,8 @@ signed number between -90 and 90, greater than or equal to the minimum latitude.
 </div>
 </div>
 <div class="paragraph">
-<p>To ensure clarity, an additional human-readable explanation is given in the <code>properties.description</code>.
-Further time-related characteristics (for example, frequency of modifications, available data, etc.) should be added in <code>properties.themes</code>.</p>
+<p>To ensure clarity, an additional human-readable explanation is given in the <code>properties.description</code> property.
+Further time-related characteristics (for example, frequency of modifications, available data and so forth) should be added in <code>properties.themes</code>.</p>
 </div>
 <div class="paragraph">
 <p>Some cases might be more complex due to the product&#8217;s characteristics.
@@ -2417,10 +2417,10 @@ If necessary, further granularity can be indicated by the <code>additionalExtent
 <h5 id="_1_11_4_additional_temporal_extents"><a class="anchor" href="#_1_11_4_additional_temporal_extents"></a>1.11.4 Additional temporal extents</h5>
 <div class="paragraph">
 <p>The <code>additionalExtents.temporal</code> property is for describing other temporal extents associated with the dataset. For example, it may be useful to represent multiple time instances or to identify other temporal reference systems.
-Temporal extents can be fully bound or open in either direction.  An <code>additionalExtents.temporal.resolution</code> property is able express the temporal granularity at which a given dataset&#8217;s data is measured, generated, or reported.</p>
+Temporal extents can be fully bound or open in either direction.  An <code>additionalExtents.temporal.resolution</code> property is able to express the temporal granularity at which a given dataset&#8217;s data are measured, generated or reported.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"additionalExtents": {
   "temporal": {
@@ -2465,7 +2465,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <div class="sect3">
 <h4 id="_1_12_properties_contacts"><a class="anchor" href="#_1_12_properties_contacts"></a>1.12 Properties / Contacts</h4>
 <div class="paragraph">
-<p>The <code>contacts</code> property is the information associated with one or more responsible parties of the resource.</p>
+<p>The <code>contacts</code> property is the information associated with one or more parties responsible for the resource.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example: Contacts object with all contact details</div>
@@ -2545,7 +2545,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>roles</code> property, when specified, SHALL provide a role type from the WCMP role type codelist.</p>
+<p>The <code>roles</code> property, when specified, SHALL provide a role type from the WCMP role type code list.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2565,7 +2565,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>properties.contacts</code> property MAY provide more than one contact via multiple objects or a single contact object with multiple roles.</p>
+<p>The <code>properties.contacts</code> property MAY provide more than one contact via multiple objects, or a single contact object with multiple roles.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2695,7 +2695,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record MAY provide a persistent identifier to cite research or resource identification using a persistent identifier scheme/framework.</p>
+<p>A WCMP record MAY provide a persistent identifier to cite research or for resource identification, using a persistent identifier scheme/framework.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2710,10 +2710,10 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <div class="sect3">
 <h4 id="_1_15_properties_record_creation_date"><a class="anchor" href="#_1_15_properties_record_creation_date"></a>1.15 Properties / Record creation date</h4>
 <div class="paragraph">
-<p>The <code>created</code> property is a single date that the WCMP metadata record was created. Note that this date is not the start or end time of a given dataset.  See <a href="#_1_11_3_temporal_extent">1.11.3 Temporal extent</a> for more information on defining dataset temporal extents.</p>
+<p>The <code>created</code> property is a single date, being the date that the WCMP metadata record was created. Note that this date is not the start or end time of a given dataset.  See <a href="#_1_11_3_temporal_extent">1.11.3 Temporal extent</a> for more information on defining dataset temporal extents.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
@@ -2755,7 +2755,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <p>The <code>updated</code> property is the date that the WCMP metadata record was last updated. Note, that this date is not the start or end time of a given dataset.  See <a href="#_1_11_3_temporal_extent">1.11.3 Temporal extent</a> for more information on defining dataset temporal extents.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example</div>
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   ...
@@ -2788,9 +2788,10 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <div class="sect3">
 <h4 id="_1_17_properties_status"><a class="anchor" href="#_1_17_properties_status"></a>1.17 Properties / Status</h4>
 <div class="paragraph">
-<p>The <code>status</code> property identifies the lifecycle of a given dataset.</p>
+<p>The <code>status</code> property identifies the life cycle of a given dataset.</p>
 </div>
 <div class="listingblock">
+<div class="title">Example:</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
   "status": {
@@ -2828,13 +2829,13 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide a <code>properties.status.title</code> property to provide a human readable title for the concept.</p>
+<p>A WCMP record SHOULD provide a <code>properties.status.title</code> property to provide a human-readable title for the concept.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record SHOULD provide a <code>properties.status.description</code> property to provide a human readable description for the concept.</p>
+<p>A WCMP record SHOULD provide a <code>properties.status.description</code> property to provide a human-readable description for the concept.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2849,7 +2850,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <div class="sect3">
 <h4 id="_1_18_properties_wmo_data_policy"><a class="anchor" href="#_1_18_properties_wmo_data_policy"></a>1.18 Properties / WMO data policy</h4>
 <div class="paragraph">
-<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by the WMO Data Policy (Resolution 1 (Cg-Ext(2021)))<sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup> for the international exchange of Earth system data. The codelist values are <code>core</code> or <code>recommended</code>.  The <code>wmo:dataPolicy</code> property is required if the metadata record describes a dataset.</p>
+<p>The <code>wmo:dataPolicy</code> property is a codelist that identifies the classification of the dataset exchange as described by the WMO Unified Data Policy (Resolution 1 (Cg-Ext(2021)))<sup class="footnote">[<a id="_footnoteref_31" class="footnote" href="#_footnotedef_31" title="View footnote.">31</a>]</sup> for the international exchange of Earth system data. The code list values are <code>core</code> or <code>recommended</code>.  The <code>wmo:dataPolicy</code> property is required if the metadata record describes a dataset.</p>
 </div>
 <div class="paragraph">
 <p>Licensing and copyright are expressed via the <code>links</code> property (see <a href="#_1_19_links_and_distribution_information">1.19 Links and distribution information</a>), providing access, license and attribution details as required. Conditions on use of the data should be indicated for transparency and clarification.</p>
@@ -2985,7 +2986,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021))</pre>
+<pre>Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)).</pre>
 </div>
 </div></div></td>
 </tr>
@@ -3018,13 +3019,13 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>For core data (when <code>properties.wmo:dataPolicy</code> is <code>core</code>) or recommended data (when <code>properties.wmo:dataPolicy</code> is <code>recommended</code>, and the data is compatible with free and unrestricted principles), a license or public domain statement that is compatible with free and unrestricted principles (such as, <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a>) MAY be expressed as a link object with the <code>license</code> link relation.</p>
+<p>For core data (when <code>properties.wmo:dataPolicy</code> is <code>core</code>) or recommended data (when <code>properties.wmo:dataPolicy</code> is <code>recommended</code>, and the data is compatible with free and unrestricted principles), a license or public domain statement that is compatible with free and unrestricted principles (such as <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0</a>) MAY be expressed as a link object with the <code>license</code> link relation.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>For core data (when <code>properties.wmo:dataPolicy</code> is <code>core</code>) or recommended data (when <code>properties.wmo:dataPolicy</code> is <code>recommended</code>), a copyright statement MAY be expressed in <code>properties.rights</code></p>
+<p>For core data (when <code>properties.wmo:dataPolicy</code> is <code>core</code>) or recommended data (when <code>properties.wmo:dataPolicy</code> is <code>recommended</code>), a copyright statement MAY be expressed in <code>properties.rights</code>.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3041,10 +3042,10 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <div class="sect4">
 <h5 id="_1_19_1_overview"><a class="anchor" href="#_1_19_1_overview"></a>1.19.1 Overview</h5>
 <div class="paragraph">
-<p>The <code>links</code> property describes URLs and APIs for accessing the dataset or for subscribing to dataset notifications. Links are the primary mechanism for interacting with the data and provide an "actionable" workflow to enhance and improve the user experience with "less clicks" for subscriptions and downloads.</p>
+<p>The <code>links</code> property describes URLs and APIs for accessing the dataset or for subscribing to dataset notifications. Links are the primary mechanism for interacting with the data, and provide an "actionable" workflow to enhance and improve the user experience with "less clicks" for subscriptions and downloads.</p>
 </div>
 <div class="paragraph">
-<p>The <code>links</code> property may also describe URLs for related documentation, related data, or visual images of the dataset.</p>
+<p>The <code>links</code> property may also describe URLs for related documentation, related data or visual images of the dataset.</p>
 </div>
 <div class="paragraph">
 <p>The table below provides an overview of the properties of a link object.</p>
@@ -3067,13 +3068,13 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>href</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Required</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The link destination or target, or URL.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The link destination or target, or URL</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>rel</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The relationship that the link bears in the context of the WCMP record.  This is a controlled vocabulary defined
- by <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relations</a> or <a href="https://codes.wmo.int/wis/link-type">WIS link type</a> extensions. (see table <a href="#_1_19_5_link_relation_selection">1.19.5 Link relation selection</a>)</p></td>
+ by <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">IANA link relations</a> or <a href="https://codes.wmo.int/wis/link-type">WIS link type</a> extensions (see table in <a href="#_1_19_5_link_relation_selection">1.19.5 Link relation selection</a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>type</code></p></td>
@@ -3093,12 +3094,12 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>channel</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Conditional</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">For data made available via MQTT, the topic to which a user may subscribe to for notifications and access</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">For data made available via MQTT, the topic to which a user may subscribe for notifications and access</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>security</code></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Optional</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">For access controlled data, a description of the access control mechanism applied (see <a href="#_1_19_4_access_control">1.19.4 Access control</a>)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">For access-controlled data, a description of the access control mechanism applied (see <a href="#_1_19_4_access_control">1.19.4 Access control</a>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>distribution</code></p></td>
@@ -3178,10 +3179,10 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <div class="sect4">
 <h5 id="_1_19_2_templated_links"><a class="anchor" href="#_1_19_2_templated_links"></a>1.19.2 Templated links</h5>
 <div class="paragraph">
-<p>Templated links allow for specifying a pattern of a link in support API interaction (where parameter values are variable).</p>
+<p>Templated links allow for specifying a pattern of a link in support of API interaction (where parameter values are variable).</p>
 </div>
 <div class="listingblock">
-<div class="title">Example: A templated link object of a WMS service providing API access to images</div>
+<div class="title">Example: A templated link object of a Web Map Service (WMS) providing API access to images</div>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"linkTemplates": [{
   "rel": "item",
@@ -3270,7 +3271,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links</code> property SHALL contain access control information for data, products, and services that require authentication or authorization.</p>
+<p>The <code>links</code> property SHALL contain access control information for data, products and services that require authentication or authorization.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3308,7 +3309,7 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A WCMP record&#8217;s links SHOULD be provided using secure protocols (such as, HTTPS or MQTTS).</p>
+<p>A WCMP record&#8217;s links SHOULD be provided using secure protocols (such as HTTPS or MQTTS).</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3410,37 +3411,37 @@ Temporal extents can be fully bound or open in either direction.  An <code>addit
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.description</code> SHOULD describe the associated format.</p>
+<p>The <code>links.distribution.availableFormats.description</code> property SHOULD describe the associated format.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.typicalFilename</code> SHOULD describe the filenames that are available from the service link.</p>
+<p>The <code>links.distribution.availableFormats.typicalFilename</code> property SHOULD describe the filenames that are available from the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.typicalFilesize</code> SHOULD describe the typical filesize available from the service link.</p>
+<p>The <code>links.distribution.availableFormats.typicalFilesize</code> property SHOULD describe the typical file size available from the service link.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">G</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.numberOfFiles</code> SHOULD describe the typical number of files received during a given period (day, month, &#8230;&#8203;) when using the service link. It SHOULD follow the pattern X per day, X per month.</p>
+<p>The <code>links.distribution.availableFormats.numberOfFiles</code> property SHOULD describe the typical number of files received during a given period (day, month, &#8230;&#8203;) when using the service link. It SHOULD follow the pattern X per day, X per month.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">H</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.documentation</code> SHOULD be a <code>link</code> for accessing the documentation associated with the format.</p>
+<p>The <code>links.distribution.availableFormats.documentation</code> property SHOULD be a <code>link</code> for accessing the documentation associated with the format.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">I</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>links.distribution.availableFormats.samples</code> SHOULD be an array of direct links to representative samples of the data.</p>
+<p>The <code>links.distribution.availableFormats.samples</code> property SHOULD be an array of direct links to representative samples of the data.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3503,11 +3504,11 @@ links to data and services.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>about</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OpenAPI endpoint (such as, JSON or YAML)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OpenAPI endpoint (such as JSON or YAML)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>service-desc</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OpenAPI endpoint in HTML (such as, Swagger, ReDoc)</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">OpenAPI endpoint in HTML (such as Swagger or ReDoc)</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>service-doc</code></p></td>
 </tr>
 <tr>
@@ -3523,11 +3524,11 @@ links to data and services.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>item</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A link to numerous stations that the dataset is based on</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A link to numerous stations on which the dataset is based</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>stations</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A link to a single station that the dataset is based on</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A link to a single station on which the dataset is based</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>station</code></p></td>
 </tr>
 <tr>
@@ -3539,7 +3540,7 @@ links to data and services.</p>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>search</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A zipfile of data, or bulk download</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A zip file of data, or bulk download</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>enclosure</code></p></td>
 </tr>
 <tr>
@@ -3558,7 +3559,7 @@ links to data and services.</p>
 <h4 id="_1_20_additional_properties"><a class="anchor" href="#_1_20_additional_properties"></a>1.20 Additional properties</h4>
 <div class="paragraph">
 <p>A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
-record.  Additional properties do not break compliance to WCMP.</p>
+record.  Additional properties do not render a record non-compliant with WCMP.</p>
 </div>
 <div class="listingblock">
 <div class="title">Example:</div>
@@ -3634,7 +3635,7 @@ record.  Additional properties do not break compliance to WCMP.</p>
 <div class="sect3">
 <h4 id="_2_2_wmo_schemas_server"><a class="anchor" href="#_2_2_wmo_schemas_server"></a>2.2 WMO schemas server</h4>
 <div class="paragraph">
-<p>Validation, examples and other resources are published at <a href="https://schemas.wmo.int/wcmp" class="bare">https://schemas.wmo.int/wcmp</a>.</p>
+<p>Validation schemas, examples and other resources are published at <a href="https://schemas.wmo.int/wcmp" class="bare">https://schemas.wmo.int/wcmp</a>.</p>
 </div>
 </div>
 </div>
@@ -6577,7 +6578,7 @@ of use when encoding the <code>properties.status</code> property..</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-10 17:25:29 UTC
+Last updated 2024-10-23 02:03:19 UTC
 </div>
 </div>
 </body>
