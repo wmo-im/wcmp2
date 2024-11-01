@@ -150,7 +150,7 @@
         },
         {
             "rel": "items",
-            "channel": "data/core/weather/prediction/forecast/medium-range/deterministic/global",
+            "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global",
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "type": "application/geo+json",
             "title": "Data notifications"
