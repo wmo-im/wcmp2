@@ -9,7 +9,7 @@ on:
     - 'kpi/**'
 
 env:
-  SPEC_FILE_BASENAME: wcmp2-DRAFT
+  SPEC_FILE_BASENAME: wcmp2-STABLE
   KPI_FILE_BASENAME: wcmp2-kpi-DRAFT
 
 jobs:
