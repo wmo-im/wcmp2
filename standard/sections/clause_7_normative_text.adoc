@@ -599,6 +599,7 @@ The `+contacts+` property is the information associated with one or more parties
 ----
 
 include::../requirements/core/REQ_contacts.adoc[]
+include::../recommendations/core/REC_contacts.adoc[]
 include::../recommendations/core/PER_contacts.adoc[]
 
 ==== 1.13 Properties / Version
