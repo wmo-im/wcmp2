@@ -45,7 +45,7 @@
             },
             {
                 "name": "BUFR4",
-                "mediaType": "application/octet-stream"
+                "mediaType": "application/bufr"
             }
         ],
         "created": "2025-03-17T00:00:00Z",
