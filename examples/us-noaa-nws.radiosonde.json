@@ -235,7 +235,7 @@
         },
         {
             "rel"  : "items",
-            "href" : "mqtts:wis2node.nws.noaa.gov:8883",
+            "href" : "mqtts://wis2node.nws.noaa.gov:8883",
             "type" : "application/geo+json",
             "title": "WIS2 notification service",
             "channel": "cache/a/wis2/us-noaa-nws/data/core/weather/surface-based-observations/temp",
