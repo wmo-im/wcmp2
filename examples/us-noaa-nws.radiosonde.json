@@ -1,0 +1,251 @@
+{
+    "id": "urn:wmo:md:us-noaa-nws:radiosonde",
+    "conformsTo": [
+        "http://wis.wmo.int/spec/wcmp/2/conf/core"
+    ],
+    "time": {
+        "interval": [
+            "2025-03-17T00:00:00Z",
+            ".."
+        ]
+    },
+    "type": "Feature",
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [
+                    -169.9,
+                    72.8
+                ],
+                [
+                    -51.1,
+                    72.8
+                ],
+                [
+                    -51.1,
+                    12.1
+                ],
+                [
+                    -169.9,
+                    12.1
+                ],
+                [
+                    -169.9,
+                    -72.8
+                ]
+            ]
+        ]
+    },
+    "properties": {
+        "formats": [
+            {
+                "name": "GeoJSON",
+                "mediaType": "application/geo+json"
+            },
+            {
+                "name": "BUFR4",
+                "mediaType": "application/bufr"
+            }
+        ],
+        "created": "2025-03-17T00:00:00Z",
+        "updated": "2025-04-21T00:00:00Z",
+        "wmo:dataPolicy": "core",
+        "type": "dataset",
+        "title": "Radiosonde observations",
+        "description": "Radiosonde observations",
+        "keywords": [
+            "Earth Science",
+            "Atmosphere",
+            "Altitude",
+            "Geopotential Height",
+            "Atmospheric Water Vapor",
+            "Water Vapor Indicators",
+            "Humidity",
+            "Atmospheric Winds",
+            "Atmospheric Temperature",
+            "Upper Air Temperature",
+            "Atmospheric",
+            "Upper-air",
+            "Upper-air Wind Speed and Direction",
+            "Upper-air Water Vapour",
+            "Geographic Region",
+            "Global Land",
+            "Boundary Layer",
+            "Land Surface",
+            "Troposphere",
+            "Stratosphere",
+            "Radiosondes",
+            "Pilot Ballons",
+            "Earth Remote Sensing Instruments",
+            "Passive Remote Sensing",
+            "Profilers/Sounders"
+        ],
+        "language": {
+            "code": "en"
+        },
+        "themes": [
+            {
+                "concepts": [
+                    {
+                        "id": "weather"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+            },
+            {
+                "concepts": [
+                    {
+                        "title": "Height or altitude",
+                        "id": "002"
+                    },
+                    {
+                        "title": "Pressure",
+                        "id": "004"
+                    },
+                    {
+                        "title": "Geopotential height",
+                        "id": "009"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/bufr4/b/07/"
+            },
+            {
+                "concepts": [
+                    {
+                        "title": "Wind direction",
+                        "id": "001"
+                    },
+                    {
+                        "title": "Wind speed",
+                        "id": "002"
+                    },
+                    {
+                        "title": "Absolute wind shear in 1 km layer below",
+                        "id": "061"
+                    },
+                    {
+                        "title": "Absolute wind shear in 1 km layer above",
+                        "id": "062"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/bufr4/b/11/"
+            },
+            {
+                "concepts": [
+                    {
+                        "title": "Temperature/air temperature",
+                        "id": "001"
+                    },
+                    {
+                        "title": "Dewpoint temperature",
+                        "id": "003"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/bufr4/b/12/"
+            },
+            {
+                "concepts": [
+                    {
+                        "title": "Cloud cover (total)",
+                        "id": "010"
+                    },
+                    {
+                        "title": "Cloud type",
+                        "id": "012"
+                    }
+                ],
+                "scheme": "https://codes.wmo.int/bufr4/b/20/"
+            },
+            {
+                "concepts": [
+                    {
+                        "title": "Tropopause level",
+                        "id": "3"
+                    },
+                    {
+                        "title": "Significant temperature level",
+                        "id": "5"
+                    },
+                    {
+                        "title": "Significant humidity level",
+                        "id": "6"
+                    },
+                    {
+                        "title": "Significant wind level",
+                        "id": "7"
+                    }
+                ],
+                "scheme": "http://codes.wmo.int/bufr4/codeflag/0-08-042/"
+            }
+        ],
+        "contacts": [
+            {
+                "organization": "National Oceanic and Atomspheric Administration, National Weather Service, National Centers for Environmental Prediction",
+                "phones": [
+                    {
+                        "value": "+13016831500"
+                    }
+                ],
+                "emails": [
+                    {
+                        "value": "sdm@noaa.gov"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "deliveryPoint": [
+                            "NOAA Center for Weather and Climate Prediction, 5830 University Research Ct"
+                        ],
+                        "city": "College Park",
+                        "state": "Maryland",
+                        "postalCode": "20740",
+                        "country": "United States"
+                    }
+                ],
+                "links": [
+                    {
+                        "href": "https://www.nco.ncep.noaa.gov",
+                        "rel": "about",
+                        "type": "text/html",
+                        "title": "NCEP Central Operations"
+                    }
+                ],
+                "contactInstructions": "email",
+                "roles": [
+                    "host",
+                    "producer"
+                ]
+            }
+        ]
+    },
+    "links": [
+        {
+            "rel": "collection",
+            "href": "https://wis2node.nws.noaa.gov/collections/temp_features",
+            "type": "application/geo+json",
+            "title": "TEMP Observations",
+            "distribution": {
+                "availableFormats": [
+                    {
+                        "name": "GeoJSON"
+                    }
+                ]
+            }
+        },
+        {
+            "rel"  : "items",
+            "href" : "mqtts://wis2node.nws.noaa.gov:8883",
+            "type" : "application/geo+json",
+            "title": "WIS2 notification service",
+            "channel": "cache/a/wis2/us-noaa-nws/data/core/weather/surface-based-observations/temp",
+            "distribution": {
+                "availableFormats": [
+                    {
+                        "name": "BUFR4"
+                    }
+                ]
+            }
+        }
+    ]
+}
