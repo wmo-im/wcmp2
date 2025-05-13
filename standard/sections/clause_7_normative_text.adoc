@@ -121,7 +121,7 @@ include::../recommendations/core/REC_media_type.adoc[]
 
 ==== 1.3 Validation
 
-The WCMP record schema is based on the Requirements Class "Record Core" of OGC API – Records – Part 1: Core schema and the associated information model. WCMP records compliant with the WCMP schema are therefore compliant with the OGC API – Records record schema.
+The WCMP record schema is based on the Requirements Class "Record Core (Common Component)" of OGC API – Records – Part 1: Core schema and the associated information model. WCMP records compliant with the WCMP schema are therefore compliant with the OGC API – Records record schema.
 
 include::../requirements/core/REQ_validation.adoc[]
 
