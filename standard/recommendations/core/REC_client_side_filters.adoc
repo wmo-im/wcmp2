@@ -1,0 +1,7 @@
+[[rec_core_client_side_filters]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/client_side_filters*
+^|A |A WCMP record's link object SHOULD provide a `+filters+` object to describe the properties that can be used in support of client side filtering, described using JSON Schema.
+|===
+//recTODO
