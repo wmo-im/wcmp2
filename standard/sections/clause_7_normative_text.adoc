@@ -1100,6 +1100,112 @@ links to data and services.
 
 |===
 
+===== 1.19.6 Client side filters
+
+For real-time data, a WCMP record provides linkages to the WIS2 Global Broker
+via the MQTT protocol.
+
+A typical MQTT link in a WCMP document is defined as follows:
+
+.Example: Typical WCMP MQTT link
+[source,json]
+----
+{
+  "rel"  : "items",
+  "type" : "application/geo+json",
+  "title": "WIS2 notification service",
+  "href" : "mqtts://example.org",
+  "channel": "cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop"
+}
+----
+
+In some cases, a dataset may be organized in a manner which requires additional further "filtering" such that a
+data consumer is only interested in a certain subset of the data granules being advertised by a given WIS2 Notification.  Some examples include (but are not limited to), where a data consumer may be only be interested in:
+
+- surface weather observations from a certain station, or
+- numerical weather prediction forecast data for a certain timestep or weather parameter
+
+A WCMP link can be extended to advertise applicable filters that map to the structure of a WIS2 Notification Message `properties` object.
+
+.Example: Surface weather observations: WCMP MQTT link with additional properties
+[source,json]
+----
+{
+  "rel"  : "items",
+  "type" : "application/geo+json",
+  "title": "Real-time notifications",
+  "href" : "mqtts://globalbroker.meteo.fr:8883",
+  "channel": "cache/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",
+  "filters": {
+    "wigos_station_identifier": {
+       "type": "string",
+       "title": "WIGOS station identifier"
+    }
+  }
+}
+----
+
+.Example: Surface weather observations: WNM properties
+[source,json]
+----
+{
+  "properties": {
+    "wigos_station_identifier": "0-20000-0-71628"
+  }
+}
+----
+
+When implemented in a WCMP link object, a data consumer can then:
+
+- subscribe to real-time notifications to the given topic
+- perform client side filtering by against all incoming WNMs with `properties.wigos_station_identifier = "0-20000-0-71628"`
+
+.Example: Numerical weather prediction: WCMP MQTT link with additional properties
+[source,json]
+----
+{
+  "rel"  : "items",
+  "type" : "application/geo+json",
+  "title": "Real-time notifications",
+  "href" : "mqtts://globalbroker.meteo.fr:8883",
+  "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global",
+  "properties": {
+    "model_run": {
+       "type": "string",
+       "title": "Model run",
+       "enum": [
+           "00",
+           "12"
+        ],
+        "example": "00"
+    },
+    "forecast_hour": {
+       "type": "string",
+       "title": "Forecast hour",
+        "example": "004"
+    }
+  }
+}
+----
+
+.Example: Numerical weather prediction: WNM additional properties
+[source,json]
+----
+{
+  "properties": {
+    "model_run": "00",
+    "forecast_hour": "004"
+  }
+}
+----
+
+When implemented in a WCMP link object, a data consumer can then:
+
+- subscribe to real-time notifications to the given topic
+- perform client side filtering against all incoming WNMs with `properties.model_run = "00" and properties.forecast_hour = "004"`
+
+include::../recommendations/core/REC_client_side_filters.adoc[]
+
 ==== 1.20 Additional properties
 
 A WCMP record can be extended as required for organizational purposes by adding properties (of any type) in the
