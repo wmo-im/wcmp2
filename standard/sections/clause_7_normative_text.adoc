@@ -1173,17 +1173,15 @@ When implemented in a WCMP link object, a data consumer can then:
   "properties": {
     "model_run": {
        "type": "string",
+       "format": "date-time",
        "title": "Model run",
-       "enum": [
-           "00",
-           "12"
-        ],
-        "example": "00"
+       "example": "2025-05-27T00:00:00Z"
     },
     "forecast_hour": {
        "type": "string",
+       "format": "date-time",
        "title": "Forecast hour",
-        "example": "004"
+       "example": "2025-05-27T03:00:00Z"
     }
   }
 }
@@ -1194,8 +1192,8 @@ When implemented in a WCMP link object, a data consumer can then:
 ----
 {
   "properties": {
-    "model_run": "00",
-    "forecast_hour": "004"
+    "model_run": "2025-05-27T00:00:00Z",
+    "forecast_hour": "2025-05-27T03:00:00Z"
   }
 }
 ----
