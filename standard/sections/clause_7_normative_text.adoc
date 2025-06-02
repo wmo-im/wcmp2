@@ -1119,7 +1119,7 @@ A typical MQTT link in a WCMP document is defined as follows:
 }
 ----
 
-In some cases, a dataset may be organized in a manner which requires additional "filtering" such that a
+In some cases, a dataset may be organized in a manner which requires additional "filtering" for
 data consumer is only interested in a certain subset of the data granules being advertised by a given WIS2 Notification.  Some examples include (but are not limited to), where a data consumer may be only be interested in:
 
 - surface weather observations from a certain station, or
