@@ -1169,7 +1169,7 @@ When implemented in a WCMP link object, a data consumer can then:
   "title": "Real-time notifications",
   "href" : "mqtts://globalbroker.meteo.fr:8883",
   "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/prediction/forecast/medium-range/deterministic/global",
-  "properties": {
+  "filters": {
     "model_run": {
        "type": "string",
        "format": "date-time",
