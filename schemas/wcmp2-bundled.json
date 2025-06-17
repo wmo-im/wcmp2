@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.wmo.int/wcmp/2.0.0/schemas/wcmp2-bundled.json",
+  "$id": "https://schemas.wmo.int/wcmp/2.1.0/schemas/wcmp2-bundled.json",
   "title": "WCMP discovery metadata record definition",
   "description": "WCMP discovery metadata record definition",
   "required": [
