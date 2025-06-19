@@ -1125,7 +1125,7 @@ data consumers that are only interested in a specific subset of the data granule
 - surface weather observations from a certain station, or
 - numerical weather prediction forecast data for a certain timestep or weather parameter
 
-A WCMP link can be extended to advertise applicable filters that map to the structure of a WIS2 Notification Message `properties` object.
+The WCMP link advertising the MQTT channel can be extended to describe applicable filters that map to the structure of a `properties` object in the associated WIS2 Notification Messages.
 
 .Example: Surface weather observations: WCMP MQTT link with additional properties
 [source,json]
