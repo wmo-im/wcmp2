@@ -1101,7 +1101,7 @@ links to data and services.
 
 |===
 
-===== 1.19.6 Client side filters
+===== 1.19.6 Client-side filters
 
 For data available on WIS2 via MQTT, a WCMP record provides linkages to the WIS2 Global Broker.
 
