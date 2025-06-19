@@ -1200,7 +1200,7 @@ When implemented in a WCMP link object, a data consumer can then:
 When implemented in a WCMP link object, a data consumer can then:
 
 - subscribe to real-time notifications to the given topic
-- perform client side filtering against all incoming WNMs with `properties.model_run = "2025-05-27T00:00:00Z" and properties.forecast_hour = "2025-05-27T03:00:00Z"`
+- perform client-side filtering against all incoming WNMs with `properties.model_run = "2025-05-27T00:00:00Z" and properties.forecast_hour = "2025-05-27T03:00:00Z"`
 
 include::../recommendations/core/REC_client_side_filters.adoc[]
 
