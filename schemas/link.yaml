@@ -66,9 +66,9 @@ properties:
                 description: links of samples that can be openly accessed by users to provide a better understanding of the data
                 items:
                   type: object
-                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/link.yaml
+                  $ref: https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.yaml
              documentation:
                 type: array
                 description: links to the associated documentation available for this format when applicable
                 items:
-                  $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/link.yaml
+                  $ref: https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.yaml

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://schemas.wmo.int/wcmp/2.1.0/schemas/wcmp2-bundled.json",
+  "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml",
   "title": "WCMP discovery metadata record definition",
   "description": "WCMP discovery metadata record definition",
   "required": [
@@ -14,9 +14,15 @@
   ],
   "properties": {
     "id": {
-      "type": "string",
-      "description": "A unique identifier of the catalog record.",
-      "format": "uri"
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ],
+      "description": "A unique identifier of the catalog record."
     },
     "conformsTo": {
       "type": "array",
@@ -97,9 +103,8 @@
     "geometry": {
       "oneOf": [
         {
-          "enum": [
-            null
-          ]
+          "type": "object",
+          "nullable": true
         },
         {
           "oneOf": [
@@ -312,18 +317,18 @@
                 "oneOf": [
                   {
                     "items": {
+                      "minItems": 4,
+                      "maxItems": 4,
                       "type": "number"
                     },
-                    "minItems": 4,
-                    "maxItems": 4,
                     "type": "array"
                   },
                   {
                     "items": {
+                      "minItems": 6,
+                      "maxItems": 6,
                       "type": "number"
                     },
-                    "minItems": 6,
-                    "maxItems": 6,
                     "type": "array"
                   }
                 ]
@@ -365,6 +370,7 @@
                 "maxItems": 2,
                 "items": {
                   "type": "string",
+                  "format": "date-time",
                   "nullable": true
                 },
                 "example": [
@@ -398,6 +404,7 @@
               "items": {
                 "type": "string",
                 "minItems": 1,
+                "format": "date-time",
                 "nullable": true,
                 "example": [
                   [
@@ -463,7 +470,7 @@
               }
             },
             "values": {
-              "description": "Vertical level intervals that data in the collection is available at \nthese can be defined as follows:\nmin level / max level (e.g. \"2/100\") or \nas number of repetitions / start level / interval (e.g.\"R5/100/50\") \nor a list of vertical levels (e.g. \"2\",10,\"80\",\"100\"}\nThe value `null` is supported and indicates an open vertical interval.",
+              "description": "Vertical level intervals that data in the collection is available at \nthese can be defined as follows:\nmin level / max level (e.g. \"2/100\") or \nas number of repeatitions / min level / interval (e.g.\"R5/100/50\") \nor a list of vertical levels (e.g. \"2\",10,\"80\",\"100\"}\nThe value `null` is supported and indicates an open vertical interval.",
               "type": "array",
               "minItems": 1,
               "items": {
@@ -474,7 +481,7 @@
                     "2/100"
                   ],
                   [
-                    "R20/1000/-50"
+                    "R50/1000/-50"
                   ],
                   [
                     "2",
@@ -511,8 +518,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "The nature or genre of the resource. The value should be a code, convenient for filtering records. Where available, a link to the canonical URI of the record type resource will be added to the 'links' property.",
-          "maxLength": 64
+          "description": "The nature or genre of the resource. The value\nshould be a code, convenient for filtering\nrecords. Where available, a link to the canonical\nURI of the record type resource will be added to\nthe 'links' property."
         },
         "title": {
           "type": "string",
@@ -524,7 +530,7 @@
         },
         "keywords": {
           "type": "array",
-          "description": "The topic or topics of the resource. Typically represented using free-form keywords, tags, key phrases, or classification codes.",
+          "description": "The topic or topics of the resource. Typically\nrepresented using free-form keywords, tags, key\nphrases, or classification codes.",
           "items": {
             "type": "string"
           }
@@ -541,7 +547,7 @@
             "properties": {
               "concepts": {
                 "type": "array",
-                "description": "One or more entity/concept identifiers from this knowledge system. it is recommended that a resolvable URI be used for each entity/concept identifier.",
+                "description": "One or more entity/concept identifiers from this knowledge\nsystem. it is recommended that a resolvable URI be used for\neach entity/concept identifier.",
                 "minItems": 1,
                 "items": {
                   "type": "object",
@@ -571,7 +577,7 @@
               },
               "scheme": {
                 "type": "string",
-                "description": "An identifier for the knowledge organization system used to classify the resource.  It is recommended that the identifier be a resolvable URI.  The list of schemes used in a searchable catalog can be determined by inspecting the server's OpenAPI document or, if the server implements CQL2, by exposing a queryable (e.g. named `scheme`) and enumerating the list of schemes in the queryable's schema definition."
+                "description": "An identifier for the knowledge organization system used\nto classify the resource.  It is recommended that the\nidentifier be a resolvable URI.  The list of schemes used\nin a searchable catalog can be determined by inspecting\nthe server's OpenAPI document or, if the server implements\nCQL2, by exposing a queryable (e.g. named `scheme`) and\nenumerating the list of schemes in the queryable's schema\ndefinition."
               }
             }
           }
@@ -611,46 +617,34 @@
                   },
                   "position": {
                     "type": "string",
-                    "description": "The name of the role or position of the responsible person taken from the organization's formal organizational hierarchy or chart."
+                    "description": "The name of the role or position of the responsible person taken\nfrom the organization's formal organizational hierarchy or chart."
                   },
                   "organization": {
                     "type": "string",
                     "description": "Organization/affiliation of the contact."
                   },
                   "logo": {
-                    "description": "Graphic identifying a contact. The link relation should be `icon` and the media type should be an image media type.",
+                    "description": "Graphic identifying a contact. The link relation should be `icon`\nand the media type should be an image media type.",
                     "allOf": [
                       {
                         "type": "object",
-                        "required": [
-                          "href",
-                          "rel"
-                        ],
-                        "properties": {
-                          "href": {
-                            "type": "string",
-                            "example": "http://data.example.com/buildings/123"
+                        "allOf": [
+                          {
+                            "$ref": "#/properties/linkTemplates/items/allOf/0"
                           },
-                          "rel": {
-                            "type": "string",
-                            "example": "alternate"
-                          },
-                          "type": {
-                            "type": "string",
-                            "example": "application/geo+json"
-                          },
-                          "hreflang": {
-                            "type": "string",
-                            "example": "en"
-                          },
-                          "title": {
-                            "type": "string",
-                            "example": "Trierer Strasse 70, 53115 Bonn"
-                          },
-                          "length": {
-                            "type": "integer"
+                          {
+                            "type": "object",
+                            "required": [
+                              "href"
+                            ],
+                            "properties": {
+                              "href": {
+                                "type": "string",
+                                "format": "uri"
+                              }
+                            }
                           }
-                        }
+                        ]
                       },
                       {
                         "type": "object",
@@ -680,8 +674,7 @@
                         "value": {
                           "type": "string",
                           "description": "The value is the phone number itself.",
-                          "pattern": "^\\+[1-9]{1}[0-9]{3,14}$",
-                          "example": "+14165550142"
+                          "pattern": "^\\+[1-9]{1}[0-9]{3,14}$"
                         },
                         "roles": {
                           "description": "The type of phone number (e.g. home, work, fax, etc.).",
@@ -766,15 +759,14 @@
                   },
                   "hoursOfService": {
                     "type": "string",
-                    "description": "Time period when the contact can be contacted.",
-                    "example": "Hours: Mo-Fr 10am-7pm Sa 10am-22pm Su 10am-21pm"
+                    "description": "Time period when the contact can be contacted."
                   },
                   "contactInstructions": {
                     "type": "string",
                     "description": "Supplemental instructions on how or when to contact the\nresponsible party."
                   },
                   "roles": {
-                    "description": "The set of named duties, job functions and/or permissions associated with this contact. (e.g. developer, administrator, etc.).",
+                    "description": "The set of named duties, job functions and/or permissions\nassociated with this contact.\n(e.g. developer, administrator, etc.).",
                     "type": "array",
                     "minItems": 1,
                     "items": {
@@ -792,13 +784,13 @@
         },
         "externalIds": {
           "type": "array",
-          "description": "An identifier for the resource assigned by an external (to the catalog) entity.",
+          "description": "An identifier for the resource assigned by an\nexternal (to the catalog) entity.",
           "items": {
             "type": "object",
             "properties": {
               "scheme": {
                 "type": "string",
-                "description": "A reference to an authority or identifier for a knowledge organization system from which the external identifier was obtained.  It is recommended that the identifier be a resolvable URI."
+                "description": "A reference to an authority or identifier\nfor a knowledge organization system from\nwhich the external identifier was obtained.\nIt is recommended that the identifier be a\nresolvable URI."
               },
               "value": {
                 "type": "string",
@@ -812,7 +804,7 @@
         },
         "created": {
           "type": "string",
-          "description": "Date of creation of this record.",
+          "description": "The date this record was created in the server.",
           "format": "date-time"
         },
         "updated": {
@@ -830,7 +822,7 @@
         },
         "rights": {
           "type": "string",
-          "description": "A statement that concerns all rights not addressed by the license such as a copyright statement."
+          "description": "A statement that concerns all rights not addressed\nby the license such as a copyright statement."
         },
         "wmo:status": {
           "description": "The operational status of a given dataset.",
@@ -854,35 +846,38 @@
             "properties": {
               "rel": {
                 "type": "string",
-                "description": "The type or semantics of the relation.",
-                "example": "alternate"
+                "description": "The type or semantics of the relation."
               },
               "type": {
                 "type": "string",
-                "description": "A hint indicating what the media type of the result of dereferencing the link should be.",
-                "example": "application/geo+json"
+                "description": "A hint indicating what the media type of the\nresult of dereferencing the link should be."
               },
               "hreflang": {
                 "type": "string",
-                "description": "A hint indicating what the language of the result of dereferencing the link should be.",
-                "example": "en"
+                "description": "A hint indicating what the language of the\nresult of dereferencing the link should be."
               },
               "title": {
                 "type": "string",
-                "description": "Used to label the destination of a link such that it can be used as a human-readable identifier.",
-                "example": "Trierer Strasse 70, 53115 Bonn"
+                "description": "Used to label the destination of a link\nsuch that it can be used as a human-readable\nidentifier."
               },
               "length": {
                 "type": "integer"
               },
+              "profile": {
+                "type": "array",
+                "description": "One or more identifiers that provide information about additional\nsemantics (constraints, conventions, extensions), in addition to \nthose defined by the media type, that are associated with the\ntarget resource.",
+                "items": {
+                  "type": "string"
+                }
+              },
               "created": {
                 "type": "string",
-                "description": "Date of creation of the resource pointed to by the link.",
+                "description": "Date of creation of the resource pointed to\nby the link.",
                 "format": "date-time"
               },
               "updated": {
                 "type": "string",
-                "description": "Most recent date on which the resource pointed to by the link was changed.",
+                "description": "Most recent date on which the resource pointed\nto by the link was changed.",
                 "format": "date-time"
               }
             }
@@ -895,17 +890,16 @@
             "properties": {
               "uriTemplate": {
                 "type": "string",
-                "description": "Supplies a resolvable URI to a remote resource (or resource fragment).",
-                "example": "http://data.example.com/buildings/(building-id}"
+                "description": "Supplies a resolvable URI to a remote resource\n(or resource fragment)."
               },
               "varBase": {
                 "type": "string",
-                "description": "The base URI to which the variable name can be appended to retrieve the definition of the variable as a JSON Schema fragment.",
-                "format": "url"
+                "description": "The base URI to which the variable name can be\nappended to retrieve the definition of the\nvariable as a JSON Schema fragment.",
+                "format": "uri-reference"
               },
               "variables": {
                 "type": "object",
-                "description": "This object contains one key per substitution variable in the templated URL.  Each key defines the schema of one substitution variable using a JSON Schema fragment and can thus include things like the data type of the variable, enumerations, minimum values, maximum values, etc."
+                "description": "This object contains one key per substitution\nvariable in the templated URL.  Each key defines\nthe schema of one substitution variable using a\nJSON Schema fragment and can thus include things\nlike the data type of the variable, enumerations,\nminimum values, maximum values, etc."
               }
             }
           }
@@ -921,8 +915,7 @@
       "description": "WCMP link object definition",
       "type": "object",
       "required": [
-        "href",
-        "rel"
+        "href"
       ],
       "properties": {
         "rel": {
@@ -1007,52 +1000,41 @@
                     "type": "array",
                     "description": "links to the associated documentation available for this format when applicable",
                     "items": {
-                      "allOf": [
-                        {
-                          "type": "object",
-                          "required": [
-                            "rel"
-                          ],
-                          "properties": {
-                            "rel": {
-                              "type": "string",
-                              "description": "The type or semantics of the relation.",
-                              "example": "alternate"
-                            },
-                            "type": {
-                              "type": "string",
-                              "description": "A hint indicating what the media type of the result of dereferencing the link should be.",
-                              "example": "application/geo+json"
-                            },
-                            "hreflang": {
-                              "type": "string",
-                              "description": "A hint indicating what the language of the result of dereferencing the link should be.",
-                              "example": "en"
-                            },
-                            "title": {
-                              "type": "string",
-                              "description": "Used to label the destination of a link such that it can be used as a human-readable identifier.",
-                              "example": "Trierer Strasse 70, 53115 Bonn"
-                            },
-                            "length": {
-                              "type": "integer"
-                            }
-                          }
+                      "type": "object",
+                      "required": [
+                        "href",
+                        "rel"
+                      ],
+                      "properties": {
+                        "href": {
+                          "type": "string",
+                          "description": "Supplies the URI to a remote resource (or resource fragment).",
+                          "example": "http://data.example.com/buildings/123"
                         },
-                        {
-                          "type": "object",
-                          "required": [
-                            "href"
-                          ],
-                          "properties": {
-                            "href": {
-                              "type": "string",
-                              "description": "The URI of the link target.",
-                              "example": "http://data.example.com/buildings/123"
-                            }
-                          }
+                        "rel": {
+                          "type": "string",
+                          "description": "The type or semantics of the relation.",
+                          "example": "alternate"
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "A hint indicating what the media type of the result of dereferencing the link should be.",
+                          "example": "application/geo+json"
+                        },
+                        "hreflang": {
+                          "type": "string",
+                          "description": "A hint indicating what the language of the result of dereferencing the link should be.",
+                          "example": "en"
+                        },
+                        "title": {
+                          "type": "string",
+                          "description": "Used to label the destination of a link such that it can be used as a human-readable identifier.",
+                          "example": "Trierer Strasse 70, 53115 Bonn"
+                        },
+                        "length": {
+                          "type": "integer"
                         }
-                      ]
+                      }
                     }
                   }
                 }
