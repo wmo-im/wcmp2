@@ -103,8 +103,9 @@
     "geometry": {
       "oneOf": [
         {
-          "type": "object",
-          "nullable": true
+          "enum": [
+              null
+          ]
         },
         {
           "oneOf": [
