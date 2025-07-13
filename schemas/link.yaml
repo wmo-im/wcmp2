@@ -1,5 +1,5 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-$id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/link.yaml
+$id: https://raw.githubusercontent.com/wmo-im/wcmp2/main/schemas/link.yaml
 title: WCMP link object definition
 description: WCMP link object definition
 
