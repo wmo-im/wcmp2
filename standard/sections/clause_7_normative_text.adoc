@@ -1158,7 +1158,7 @@ The WCMP link advertising the MQTT channel can be extended to describe applicabl
 When implemented in a WCMP link object, a data consumer can then:
 
 - subscribe to real-time notifications to the given topic
-- perform client side filtering by against all incoming WNMs with `properties.wigos_station_identifier = "0-20000-0-71628"`
+- perform client-side filtering by against all incoming WNMs with `properties.wigos_station_identifier = "0-20000-0-71628"`
 
 .Example: Numerical weather prediction: WCMP MQTT link with a `filters` object
 [source,json]
