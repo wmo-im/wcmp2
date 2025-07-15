@@ -2,6 +2,6 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/client_side_filters*
-^|A |A WCMP record's link object advertising an MQTT channel SHOULD provide a `+filters+` object to describe the properties that can be used in support of client side filtering, using JSON Schema.
+^|A |A WCMP record's link object advertising an MQTT channel SHOULD provide a `+filters+` object to describe the properties that can be used in support of client side filtering.  If used, the filters SHALL be described using JSON Schema syntax."
 |===
 //recTODO
