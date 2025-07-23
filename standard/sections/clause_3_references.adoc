@@ -13,4 +13,4 @@
 * [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
 * [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
 * [[openapi]] OpenAPI Specification 3.1.0 (2022) footnote:[https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md]
-* [[wis2-guide]] Draft guidance on technical specifications of WIS2 (2023) footnote:[https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html]
+* [[wis2-guide]] Guide to the WMO Information System Volume II (2025) footnote:[https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html]
