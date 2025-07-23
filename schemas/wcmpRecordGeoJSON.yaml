@@ -55,6 +55,7 @@ properties:
             type: string
             description:
               Minimum time period resolvable in the dataset, as an ISO 8601 duration
+            pattern: '^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$'
             example:
               - 'P1D'
   geometry:
