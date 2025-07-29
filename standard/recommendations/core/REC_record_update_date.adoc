@@ -5,4 +5,4 @@
 ^|A |A WCMP record SHOULD provide a `+properties.updated+` property when a record has been updated since its initial creation.
 
 |===
-//rec10
+//rec 10

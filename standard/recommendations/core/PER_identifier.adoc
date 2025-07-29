@@ -4,4 +4,4 @@
 ^|*Permission {counter:per-id}* |*/rec/core/identifier*
 ^|A |The local identifier MAY also have colons (`+:+`) as required by the data publisher.
 |===
-//per1
+//per 1
