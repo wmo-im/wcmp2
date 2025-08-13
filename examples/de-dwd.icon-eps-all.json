@@ -54,11 +54,11 @@
             "interval": [
                 [
                     "T00Z",
-                    "T180H"
+                    "PT180H"
                 ],
                 [
                     "T12Z",
-                    "T180H"
+                    "PT180H"
                 ]
             ],
             "resolution": "PT6H",
