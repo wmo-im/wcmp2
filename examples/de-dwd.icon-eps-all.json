@@ -53,12 +53,12 @@
         "temporal": {
             "interval": [
                 [
-                    "PT00Z",
-                    "P7DT12H"
+                    "T00Z",
+                    "T180H"
                 ],
                 [
-                    "PT12Z",
-                    "P7DT12H"
+                    "T12Z",
+                    "T180H"
                 ]
             ],
             "resolution": "PT6H",
