@@ -61,7 +61,7 @@ properties:
   geometry:
     $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
   additionalExtents:
-    $ref: 'https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/collections/extent.yaml'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/refs/heads/master/core/standard/openapi/oas31/schemas/collections/extent.yaml'
   properties:
     type: object
     required:
