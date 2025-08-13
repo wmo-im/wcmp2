@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schemas/wcmpRecordGeoJSON.yaml",
+  "$id": "https://schemas.wmo.int/wcmp/2.1.0/schemas/wcmp2-bundled.json",
   "title": "WCMP discovery metadata record definition",
   "description": "WCMP discovery metadata record definition",
   "required": [
@@ -92,7 +92,7 @@
             "resolution": {
               "type": "string",
               "description": "Minimum time period resolvable in the dataset, as an ISO 8601 duration",
-              "pattern": "^(-?)P(?=\\\\d|T\\\\d)(?:(\\\\d+)Y)?(?:(\\\\d+)M)?(?:(\\\\d+)([DW]))?(?:T(?:(\\\\d+)H)?(?:(\\\\d+)M)?(?:(\\\\d+(?:\\\\.\\\\d+)?)S)?)?$",
+              "pattern": "^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$",
               "example": [
                 "P1D"
               ]
@@ -1008,8 +1008,6 @@
   },
   "definitions": {
     "Link": {
-      "$schema": "https://json-schema.org/draft/2020-12/schema",
-      "$id": "https://raw.githubusercontent.com/wmo-im/wcmp2/main/schemas/link.yaml",
       "title": "WCMP link object definition",
       "description": "WCMP link object definition",
       "type": "object",
