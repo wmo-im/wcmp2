@@ -162,7 +162,13 @@
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",
             "type": "application/geo+json",
-            "title": "Data notifications"
+            "title": "Data notifications",
+            "filters": {
+                "wigos_station_identifier": {
+                    "type": "string",
+                    "title": "WIGOS station identifier"
+                }
+            }
         }
     ]
 }

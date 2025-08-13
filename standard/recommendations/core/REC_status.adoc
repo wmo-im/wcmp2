@@ -8,4 +8,4 @@
 ^|D |A WCMP record SHOULD provide a `+properties.status.description+` property to provide a human-readable description for the concept.
 ^|E |A WCMP record SHOULD provide a `+properties.status.url+` property to provide further description of the concept via the given URI.
 |===
-//rec11
+//rec 11
