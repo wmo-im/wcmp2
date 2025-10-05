@@ -2,7 +2,7 @@
 
 ## Overview
 
-This directory contains the report and provides instructions for managing the document.
+This directory contains and provides instructions for managing the document.
 
 ### Dependencies
 
