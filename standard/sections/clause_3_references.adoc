@@ -1,6 +1,6 @@
 == References
 
-* [[ogcapi-records]] OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2023) footnote:[https://docs.ogc.org/DRAFTS/20-004.html]
+* [[ogcapi-records]] OGC: OGC 20-004, OGC API - Records - Part 1: Core 1.0 (2025) footnote:[https://docs.ogc.org/is/20-004r1/20-004r1.html]
 * [[ogcapi-features]] OGC: OGC 17-069r4, OGC API - Features - Part 1: Core 1.0 (2022) footnote:[https://docs.opengeospatial.org/is/17-069r4/17-069r4.html]
 * [[rfc7946]] IETF: RFC-7946 The GeoJSON Format (2016) footnote:[https://datatracker.ietf.org/doc/html/rfc7946]
 * [[rfc8259]] IETF: RFC-8259 The JavaScript Object Notation (JSON) Data Interchange Format (2017) footnote:[https://datatracker.ietf.org/doc/html/rfc8259]
@@ -13,4 +13,4 @@
 * [[json-schema]] IETF: JSON Schema (2022) footnote:[https://json-schema.org]
 * [[wis2-topic-hierarchy]] WMO: WIS2 Topic Hierarchy (2022) footnote:[https://github.com/wmo-im/wis2-topic-hierarchy]
 * [[openapi]] OpenAPI Specification 3.1.0 (2022) footnote:[https://github.com/OAI/OpenAPI-Specification/blob/3.1.0/versions/3.1.0.md]
-* [[wis2-guide]] Draft guidance on technical specifications of WIS2 (2023) footnote:[https://wmo-im.github.io/wis2-guide/guide/wis2-guide-DRAFT.html]
+* [[wis2-guide]] Guide to the WMO Information System Volume II (2025) footnote:[https://wmo-im.github.io/wis2-guide/guide/wis2-guide-APPROVED.html]

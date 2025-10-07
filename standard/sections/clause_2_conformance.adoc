@@ -6,7 +6,7 @@ _OGC API - Records_ (OARec) provides a record metadata model in support of resou
 
 Authors of discovery metadata records published within the WIS2 Global Discovery Catalogue (GDC) are required to comply with the
 WMO Core Metadata Profile (WCMP).  WCMP discovery metadata shall therefore be compliant with OGC API - Records - Part 1:
-Core: Requirements Class: Record Core.
+Core: Requirements Class: Record Core (Common Component).
 
 WMO shall publish guidance material to assist authors of WCMP discovery metadata for maintaining
 consistency across multiple metadata records and perform quality assessment and reporting.
@@ -16,6 +16,6 @@ This standard identifies one Requirements Class which defines the functional req
 The mandatory Requirements Class for WCMP is:
 
 * "WMO Core Metadata Profile Core": This Requirements Class inherits from _OGC API — Records — Part 1: Core:
-Requirements Class: Record Core_ which defines the requirements for a catalogue record.  The requirements
-specified in the Requirements Class “Record Core" are mandatory for all implementations of WCMP.
+Requirements Class: Record Core (Common Component)_ which defines the requirements for a catalogue record.  The requirements
+specified in the Requirements Class “Record Core (Common Component)" are mandatory for all implementations of WCMP.
 The requirements are specified in Chapter 7 and in Annex A in more detail.

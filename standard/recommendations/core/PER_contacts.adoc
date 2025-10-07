@@ -4,4 +4,4 @@
 ^|*Permission {counter:per-id}* |*/per/core/contacts*
 ^|A |The `+properties.contacts+` property MAY provide more than one contact via multiple objects, or a single contact object with multiple roles.
 |===
-//per5
+//per 6
