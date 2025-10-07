@@ -4,4 +4,4 @@
 ^|*Permission {counter:per-id}* |*/per/core/additional_properties*
 ^|A |A WCMP record MAY provide additional properties of any type in any part of the document as needed.
 |===
-//per10
+//per 11
