@@ -133,20 +133,6 @@
     },
     "links": [
         {
-            "rel": "data",
-            "href": "https://dd.weather.gc.ca/hydrometric/csv",
-            "type": "text/html",
-            "hreflang": "en",
-            "title": "Raw data download (CSV files)",
-            "distribution": {
-                "availableFormats": [
-                    {
-                        "name": "CSV"
-                    }
-                ]
-            }
-        },
-        {
             "rel": "license",
             "href": "https://open.canada.ca/en/open-government-licence-canada",
             "type": "text/html",
@@ -165,6 +151,21 @@
             "type": "application/geo+json",
             "hreflang": "en",
             "title": "Data access API"
+        }
+    ],
+    "linkTemplates": [
+        {
+            "rel": "data",
+            "type": "text/html",
+            "hreflang": "en",
+            "title": "Raw data download (CSV files)",
+            "uriTemplate": "https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/hydrometric/csv",
+            "variables": {
+                "yyyymmdd": {
+                    "type": "string",
+                    "description": "date in yyyymmdd format"
+                }
+            }
         }
     ]
 }
