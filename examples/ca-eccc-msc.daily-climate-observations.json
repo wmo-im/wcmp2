@@ -149,7 +149,7 @@
     ],
     "linkTemplates": [
         {
-            "rel": "data",
+            "rel": "archives",
             "type": "text/html",
             "title": "Raw data download (CSV files)",
             "uriTemplate": "https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/climate/observations/daily/csv",
