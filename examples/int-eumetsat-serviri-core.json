@@ -54,7 +54,6 @@
             "land",
             "ocean"
         ],
-        "keywordsCodespace": "http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode",
         "language": {
             "code": "en"
         },
