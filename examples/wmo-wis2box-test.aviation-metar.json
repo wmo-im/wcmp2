@@ -1,0 +1,108 @@
+{
+  "id": "urn:wmo:md:int-wmo-wis2box-test:aviation-metar",
+  "conformsTo": [
+    "http://wis.wmo.int/spec/wcmp/2/conf/core"
+  ],
+  "type": "Feature",
+  "time": {
+    "interval": [
+      "2025-11-18",
+      ".."
+    ],
+    "resolution": "PT3H"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.022609490593538,
+          47.83082754169129
+        ],
+        [
+          10.44270145024663,
+          47.83082754169129
+        ],
+        [
+          10.44270145024663,
+          45.776947740250776
+        ],
+        [
+          6.022609490593538,
+          45.776947740250776
+        ],
+        [
+          6.022609490593538,
+          47.83082754169129
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "type": "dataset",
+    "identifier": "urn:wmo:md:int-wmo-wis2box-test:aviation-metar",
+    "title": "Recommended data for aviation metar",
+    "description": "Recommended data for aviation metar",
+    "keywords": [
+      "aviation",
+      "metar",
+      "recommended"
+    ],
+    "themes": [
+      {
+        "concepts": [
+          {
+            "id": "weather",
+            "title": "Weather"
+          }
+        ],
+        "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+      }
+    ],
+    "contacts": [
+      {
+        "organization": "WMO Secretariat",
+        "emails": [
+          {
+            "value": "wis2-support@wmo.int"
+          }
+        ],
+        "addresses": [
+          {
+            "country": "CHE"
+          }
+        ],
+        "links": [
+          {
+            "rel": "about",
+            "href": "https://wmo.int",
+            "type": "text/html"
+          }
+        ],
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "created": "2025-11-18T13:22:56Z",
+    "updated": "2025-11-18T13:22:56Z",
+    "wmo:dataPolicy": "recommended",
+    "id": "urn:wmo:md:int-wmo-wis2box-test:aviation-metar"
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "http://example.training.wis2dev.io/data/aviation-license.html",
+      "title": "License for this dataset",
+      "type": "text/html"
+    },
+    {
+      "href": "mqtt://everyone:everyone@example.training.wis2dev.io:1883",
+      "type": "application/json",
+      "name": "origin/a/wis2/int-wmo-wis2box-test/data/recommended/weather/aviation/metar",
+      "rel": "items",
+      "channel": "origin/a/wis2/int-wmo-wis2box-test/data/recommended/weather/aviation/metar",
+      "title": "Notifications"
+    }
+  ]
+}

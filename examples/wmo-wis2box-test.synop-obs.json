@@ -1,0 +1,111 @@
+{
+  "id": "urn:wmo:md:int-wmo-wis2box-test:synop-obs",
+  "conformsTo": [
+    "http://wis.wmo.int/spec/wcmp/2/conf/core"
+  ],
+  "type": "Feature",
+  "time": {
+    "interval": [
+      "2025-11-18",
+      ".."
+    ],
+    "resolution": "PT1H"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.022609490593538,
+          47.83082754169129
+        ],
+        [
+          10.44270145024663,
+          47.83082754169129
+        ],
+        [
+          10.44270145024663,
+          45.776947740250776
+        ],
+        [
+          6.022609490593538,
+          45.776947740250776
+        ],
+        [
+          6.022609490593538,
+          47.83082754169129
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "type": "dataset",
+    "identifier": "urn:wmo:md:int-wmo-wis2box-test:synop-obs",
+    "title": "Hourly synoptic observations from fixed-land stations (SYNOP) (int-wmo-wis2box-test)",
+    "description": "example",
+    "keywords": [
+      "observations",
+      "temperature",
+      "visibility",
+      "precipitation",
+      "pressure",
+      "clouds",
+      "snow depth",
+      "evaporation",
+      "radiation",
+      "wind",
+      "total sunshine",
+      "humidity"
+    ],
+    "themes": [
+      {
+        "concepts": [
+          {
+            "id": "weather",
+            "title": "Weather"
+          }
+        ],
+        "scheme": "http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+      }
+    ],
+    "contacts": [
+      {
+        "organization": "WMO",
+        "emails": [
+          {
+            "value": "wis2-support@wmo.int"
+          }
+        ],
+        "addresses": [
+          {
+            "country": "CHE"
+          }
+        ],
+        "links": [
+          {
+            "rel": "about",
+            "href": "https://wmo.int",
+            "type": "text/html"
+          }
+        ],
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "created": "2025-11-18T08:28:37Z",
+    "updated": "2025-11-18T08:28:37Z",
+    "wmo:dataPolicy": "core",
+    "id": "urn:wmo:md:int-wmo-wis2box-test:synop-obs"
+  },
+  "links": [
+    {
+      "href": "mqtt://everyone:everyone@example.training.wis2dev.io:1883",
+      "type": "application/json",
+      "name": "origin/a/wis2/int-wmo-wis2box-test/data/core/weather/surface-based-observations/synop",
+      "rel": "items",
+      "channel": "origin/a/wis2/int-wmo-wis2box-test/data/core/weather/surface-based-observations/synop",
+      "title": "Notifications"
+    }
+  ]
+}
