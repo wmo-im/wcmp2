@@ -1,0 +1,7 @@
+[[rec_core_contacts]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/contacts*
+^|A |For addresses defined in the `+addresses+` array property, the `+country+` property SHOULD be included using a value from the ISO 3166-1 alpha-3 controlled vocabulary.
+|===
+//rectbd
