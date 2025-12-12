@@ -1,0 +1,37 @@
+=== Age of metadata record
+
+==== WCMP Properties
+
+* `properties.created`
+* `properties.updated`
+
+==== Rationale for measurement
+
+WCMP2 metadata allows data publishers to express the date of when a record is created and/or updated.  Lifecycle management of WCMP2 content is key to ensuring accurate and up to date information as well as healthy links.
+
+==== Measurement
+
+The WCMP2 record includes both created and update dates with a recent date at the time of evaluation.
+
+==== Guidance
+
+WCMP2 records should be reviewed at least every 180 days as a best practice.
+
+==== Rules
+
+.Age of metadata record rules
+|===
+|Rule |Score
+
+|The created date is less than 180 days old
+|1
+
+|The updated date is present
+|1
+
+|The updated date is less than 180 days old
+|1
+|===
+
+*Total possible score: 3 (100%)*
+
