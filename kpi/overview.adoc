@@ -24,7 +24,7 @@ The target stakeholder audiences for this document include (but are not limited 
 * WIS2 Nodes
 * GAW World Data Centres (WDCs)
 * WIS2 Monitoring
-* Metadata implementors (generation, ingest)
+* Metadata implementers (generation, ingest)
 
 === How to use
 
