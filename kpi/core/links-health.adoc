@@ -13,7 +13,7 @@ All properties with linked information (URLs).
 
 Broken links damage the user experience and gives the impression to users that a website is not maintained (88% of the online consumers are less likely to return to a site after a bad experiencefootnote:[https://review42.com/web-design-statistics]). In addition, numerous broken links may also impact the reputation and rank of the websites when indexed by mass market search engines.
 
-HTTPS is increasingly becoming a requirement for numerous agencies as well as the suggested protocol vs. HTTP.  Non-HTTPS links in a WCMP document often leads to mixed content errors in web applications deployed via HTTPS and using AJAX/XHR design patterns. HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata.
+HTTPS is increasingly becoming a requirement for numerous agencies as the suggested protocol instead of HTTP.  Non-HTTPS links in a WCMP document often leads to mixed content errors in web applications deployed via HTTPS and using AJAX/XHR design patterns. HTTPS supports secure, authoritative and trustworthy links as part of WIS Metadata.
 
 ==== Measurement
 
