@@ -24,7 +24,7 @@ Whether persistent identifier information is available, can be successfully iden
   ...
   "externalIds": [{
     "scheme": "https://doi.org",
-    "value": "https://dx.doi.org/10.14287/10000001"
+    "value": "10.14287/10000001"
   }]
   ...
 }
