@@ -6,7 +6,7 @@
 
 ==== Rationale for measurement
 
-The description faciliates ease of understanding and discovery and so is a key element of metadata information displayed as part of search results. Extensive and meaningful descriptive information allows for users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.
+The description facilitates ease of understanding and discovery and so is a key element of metadata information displayed as part of search results. Extensive and meaningful descriptive information allows for users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.
 
 In the context of WIS2 Global Discovery Catalogues, the product title and description are the two most relevant elements in the WCMP metadata record.
 
@@ -29,7 +29,7 @@ Describe the contents of the resource and the key aspects and/or attributes that
 * State any other limiting information, such as time period of validity of the data
 Spell out uncommon acronyms only once::
 * Avoid jargon and unexplained abbreviations
-* Avoid spelling out commonly used acronym which are already understood by the general public
+* Avoid spelling out commonly used acronyms which are already understood by the general public
 Write using present or past tenses::
 * Avoid using future verb tense when possible
 Use simple paragraph(s) only::
