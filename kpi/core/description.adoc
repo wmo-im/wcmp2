@@ -47,7 +47,7 @@ Add purpose of data resource where relevant (e.g. for survey data)::
 ```json
 "properties": {
     ...
-    "description": "For WMO Information System 2.0 (WIS 2.0) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 8192 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+    "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
     ...
 }
 ```

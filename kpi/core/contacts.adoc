@@ -1,27 +1,32 @@
 === Contacts
 
-Metadata records should contain information regarding the contact with the role `host` and how to contact them via email.
+Metadata records should contain information regarding the contact with the role `host` and how to contact them via email, as well the role `publisher` for citation purposes.
 
 ==== WCMP properties
 
 * `$.properties.contacts[?(@.roles=="host")]`
 * `$.properties.contacts[?(@.roles=="host")].emails`
 * `$.properties.contacts[?(@.roles=="host")].contactInstructions`
+* `$.properties.contacts[?(@.roles=="publisher")]`
 
 ==== Rationale for measurement
 
 Information of the host allows the user to contact the host in case of anything related to accessing the data.
 
+Information of the publisher allows the user to contact the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the resource .
+
 ==== Measurement
 
 The presence of host information and supporting contact properties (email and contact instructions).
+
+The presence of a publisher role.
 
 ==== Guidance
 
 * Specify a host. Note that a host does not have to be the same as the main point of contact, principal investigator
 * Include an email for the host
 * Include contact instructions for the host
-
+* Specify a contact with a publisher role
 
 ===== Examples
 
@@ -62,6 +67,7 @@ The presence of host information and supporting contact properties (email and co
           }
         ],
         "roles": [
+          "publisher",
           "host"
         ]
       }
@@ -89,7 +95,10 @@ By detecting the presence of the contact with the role `host`. See WCMP2, clause
 |The host contact instruction element is included.
 |1
 
+|The contact with the role `publisher` is included.
+|1
+
 |===
 
-*Total possible score: 3 (100%)*
+*Total possible score: 4 (100%)*
 

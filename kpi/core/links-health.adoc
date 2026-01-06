@@ -44,8 +44,8 @@ Ensure that all links resolve and are accessible via HTTPS.
     {
       "rel": "related",
       "type": "application/geo+json",
-      "title": "Global Broker (Toulouse)",
-      "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
+      "title": "Météo-France, Global Broker Service",
+      "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
       "channel": "cache/a/wis2/#",
       "distribution": {
         "maxMSGsize": 4096,
@@ -60,8 +60,8 @@ Ensure that all links resolve and are accessible via HTTPS.
     {
       "rel": "subscribe",
       "type": "application/geo+json",
-      "title": "Global Broker (Toulouse)",
-      "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+      "title": "Météo-France, Global Broker Service",
+      "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
       "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"
     }
   ]
