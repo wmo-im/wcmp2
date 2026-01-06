@@ -21,6 +21,7 @@ The presence of host information and supporting contact properties (email and co
 * Specify a host. Note that a host does not have to be the same as the main point of contact, principal investigator
 * Include an email for the host
 * Include contact instructions for the host
+* Use ISO https://www.iso.org/iso-3166-country-codes.html[3166-1 alpha-3] codes to specify the `addresses.country` property.
 
 ===== Examples
 
@@ -51,7 +52,7 @@ The presence of host information and supporting contact properties (email and co
             "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
             "city": "SEOUL",
             "postalCode": "07062",
-            "country": "Republic of Korea"
+            "country": "KOR"
           }
         ],
         "contactInstructions": "email",

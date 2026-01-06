@@ -567,7 +567,7 @@ The `+contacts+` property is the information associated with one or more parties
       "city": "Fredericton",
       "administrativeArea": "NB",
       "postalCode": "E3B 6Z4",
-      "country": "Canada"
+      "country": "CAN"
     }],
     "links": [{
       "href": "https://example.org/about",
@@ -599,6 +599,7 @@ The `+contacts+` property is the information associated with one or more parties
 ----
 
 include::../requirements/core/REQ_contacts.adoc[]
+include::../recommendations/core/REC_contacts.adoc[]
 include::../recommendations/core/PER_contacts.adoc[]
 
 ==== 1.13 Properties / Version
