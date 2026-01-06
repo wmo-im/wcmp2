@@ -46,7 +46,7 @@ For a citation:
   ...
 }
 ```
-=== Rules
+==== Rules
 
 .Persistent identifiers implementation rules
 |===
