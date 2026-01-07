@@ -35,7 +35,7 @@ The title should be as specific as possible. For example, if the product only co
 |The title has only printable characters (numbers and letters) and round brackets
 |1
 
-|The words in title are represented in "Sentence case"
+|The words in title are represented in "Title case"
 |1
 
 |The title contains less than 3 acronyms (words with all upper case)
