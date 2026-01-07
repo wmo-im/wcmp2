@@ -6,7 +6,8 @@
 
 ==== Rationale for measurement
 
-Product graphic overviews provide the user with a high level preview of the product which can assist in a high level assessment and/or evaluation as part of search results presentation.
+A graphic overview of the product provides the user with a high level preview which can assist with the initial assessment or evaluation as part of search results presentation.
+
 
 ==== Measurement
 
@@ -16,7 +17,7 @@ The presence of a `preview` link is checked that it contains a URL to a common w
 
 In addition to the presence of the graphic overview image it would also be valuable to provide consistent image dimensions (e.g. 800x800 pixels) such that all images are normalized and scaling/alignment of overivew images can be applied consistently by web applications rendering search results.
 
-Examples of catalogues using such information are here:
+Examples of catalogues displaying graphic overviews:
 
 * https://gisc.dwd.de[GISC DWD]
 * https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
