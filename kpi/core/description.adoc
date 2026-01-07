@@ -23,7 +23,7 @@ The description should provide a clear and concise statement that enables the re
 Aim to be understood by non-experts::
 * Avoid adding a scientific description
 Describe the contents of the resource and the key aspects and attributes that are represented::
-* Limit information in the description to the specific resource that is being described, in other words, do not include general background information
+* Limit information in the description to the specific resource that is being described; in other words, do not include general background information
 * Explain briefly what is unique about this resource and, if appropriate, how it differs from similar resources
 * State what form the data takes, for example BUFR4 or NetCDF
 * State any other limiting information, such as time period of data validity or geographic coverage.
