@@ -948,7 +948,7 @@ WMO.</p>
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
     ...
-    "description": "For WMO Information System 2.0 (WIS 2.0) DWD provides a Global Cache Service. It offers the possibility to download cached core data from a single source. An automatic download is made possible by messages that are distributed worldwide and contain the actual download link. Subscription to receive the messages is possible via Global Brokers. General notes: 1) Maximum message size is limited to 8192 bytes, 2) Connected Global Brokers are Global Broker MF and Global Broker CMA, 3) During the test phase the data is not yet cached for 24 hours",
+    "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
     ...
 }</code></pre>
 </div>
@@ -1022,7 +1022,7 @@ WMO.</p>
 <div class="sect3">
 <h4 id="_guidance_3"><a class="anchor" href="#_guidance_3"></a>2.3.4. Guidance</h4>
 <div class="paragraph">
-<p>Ensure that the temporal extent resolution is present in the metadata record.</p>
+<p>A temporal interval and its associated resolution should be expressed for data that is generated with a given frequency or cadence.  For example, for ongoing hourly weather observations, express a temporal interval with an "open ended" end time (e.g. <code>..</code>) and the <code>resolution</code> as an ISO 8601 Duration.</p>
 </div>
 <div class="sect4">
 <h5 id="_examples_2"><a class="anchor" href="#_examples_2"></a>2.3.4.1. Examples</h5>
@@ -1227,8 +1227,8 @@ WMO.</p>
     {
       "rel": "related",
       "type": "application/geo+json",
-      "title": "Global Broker (Toulouse)",
-      "href": "mqtts://[yourAccount]:[yourPassword]@globalbroker.meteo.fr:8883/",
+      "title": "Météo-France, Global Broker Service",
+      "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
       "channel": "cache/a/wis2/#",
       "distribution": {
         "maxMSGsize": 4096,
@@ -1244,8 +1244,8 @@ WMO.</p>
     {
       "rel": "subscribe",
       "type": "application/geo+json",
-      "title": "Global Broker (Toulouse)",
-      "href": "mqtts://[yourAccount]:[yourPassword]@wis2.dwd.de:8883/",
+      "title": "Météo-France, Global Broker Service",
+      "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
       "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"
     }
   ]</code></pre>
@@ -1286,7 +1286,7 @@ WMO.</p>
 <div class="sect2">
 <h3 id="_contacts"><a class="anchor" href="#_contacts"></a>2.6. Contacts</h3>
 <div class="paragraph">
-<p>Metadata records should contain information regarding the contact with the role <code>host</code> and how to contact them via email.</p>
+<p>Metadata records should contain information regarding the contact with the role <code>host</code> and how to contact them via email, as well the role <code>publisher</code> for citation purposes.</p>
 </div>
 <div class="sect3">
 <h4 id="_wcmp_properties_6"><a class="anchor" href="#_wcmp_properties_6"></a>2.6.1. WCMP properties</h4>
@@ -1301,6 +1301,9 @@ WMO.</p>
 <li>
 <p><code>$.properties.contacts[?(@.roles=="host")].contactInstructions</code></p>
 </li>
+<li>
+<p><code>$.properties.contacts[?(@.roles=="publisher")]</code></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1309,11 +1312,17 @@ WMO.</p>
 <div class="paragraph">
 <p>Information of the host allows the user to contact the host in case of anything related to accessing the data.</p>
 </div>
+<div class="paragraph">
+<p>Information of the publisher allows the user to contact the entity that holds, archives, publishes prints, distributes, releases, issues, or produces the resource.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_measurement_6"><a class="anchor" href="#_measurement_6"></a>2.6.3. Measurement</h4>
 <div class="paragraph">
 <p>The presence of host information and supporting contact properties (email and contact instructions).</p>
+</div>
+<div class="paragraph">
+<p>The presence of a publisher role.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1328,6 +1337,9 @@ WMO.</p>
 </li>
 <li>
 <p>Include contact instructions for the host</p>
+</li>
+<li>
+<p>Specify a contact with a publisher role</p>
 </li>
 </ul>
 </div>
@@ -1371,6 +1383,7 @@ WMO.</p>
           }
         ],
         "roles": [
+          "publisher",
           "host"
         ]
       }
@@ -1417,10 +1430,16 @@ WMO.</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The contact with the role <code>publisher</code> is included.</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">1</p></td>
+</tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p><strong>Total possible score: 3 (100%)</strong></p>
+<p><strong>Total possible score: 4 (100%)</strong></p>
 </div>
 </div>
 </div>
@@ -1570,7 +1589,7 @@ WMO.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-01-07 17:15:02 UTC
+Last updated 2026-01-07 17:31:01 UTC
 </div>
 </div>
 </body>
