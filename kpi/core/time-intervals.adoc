@@ -15,7 +15,7 @@ The time interval is present and contains and has a corresponding resolution.
 
 ==== Guidance
 
-Ensure that the temporal extent resolution is present in the metadata record.
+A temporal interval and its associated resolution should be expressed for data that is generated with a given frequency or cadence.  For example, for ongoing hourly weather observations, express a temporal interval with an "open ended" end time (e.g. `..`) and the `resolution` as an ISO 8601 Duration.
 
 ===== Examples
 
