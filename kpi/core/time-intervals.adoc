@@ -7,15 +7,15 @@
 
 ==== Rationale for measurement
 
-Temporal information is a significant characteristic of weather/climate/water data and as such is critical for users to know which period(s) of time is/are covered by products and how often new products are received.
+Temporal information is a significant characteristic of weather, climate, and water data and is critical for users to know which time periods are covered by products and how often new products are received.
 
 ==== Measurement
 
-Whether a time interval is present and contains an interval with a corresponding resolution. 
+The time interval is present and contains and has a corresponding resolution. 
 
 ==== Guidance
 
-Ensure that the temporal extent resolution is present in the metadata record.
+Ensure that the temporal extent resolution is present in the metadata record
 
 ===== Examples
 

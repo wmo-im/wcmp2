@@ -12,7 +12,7 @@ In the context of WIS2 Global Discovery Catalogues, the product title and descri
 
 ==== Measurement
 
-The description shall not be too short or too long and contain no HTML markup. Spelling and grammar are correct. Bulletin templates should not be used to populate the description.
+The description shall not be too short or too long and not contain HTML markup. Spelling and grammar are correct. Bulletin templates should not be used to populate the description.
 
 ==== Guidance
 
@@ -22,21 +22,21 @@ The description should provide a clear and concise statement that enables the re
 
 Aim to be understood by non-experts::
 * Avoid adding a scientific description
-Describe the contents of the resource and the key aspects and/or attributes that are represented::
-* Limit information in the description to the specific resource that is being described, i.e. do not include general background information
+Describe the contents of the resource and the key aspects and attributes that are represented::
+* Limit information in the description to the specific resource that is being described; in other words, do not include general background information
 * Explain briefly what is unique about this resource and, if appropriate, how it differs from similar resources
-* State what form the data takes
-* State any other limiting information, such as time period of validity of the data
+* State what form the data takes, for example BUFR4 or NetCDF
+* State any other limiting information, such as time period of data validity or geographic coverage.
 Spell out uncommon acronyms only once::
 * Avoid jargon and unexplained abbreviations
 * Avoid spelling out commonly used acronyms which are already understood by the general public
 Write using present or past tenses::
 * Avoid using future verb tense when possible
 Use simple paragraph(s) only::
-* Avoid including HTML/CSV tables, extra spaces or other markup to control display of text
+* Avoid including HTML and CSV tables or extra spaces to control display of text
 Add purpose of data resource where relevant (e.g. for survey data)::
 * Avoid citing external sources to this resource
-* Avoid copying text from a journal article verbatim because this can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced from and/or tied to the metadata
+* Avoid copying text from a journal article verbatim because this can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced in the metadata record links.
 
 ===== Spell checking recommendations
 
@@ -61,13 +61,13 @@ Add purpose of data resource where relevant (e.g. for survey data)::
 |The description has between 16 and 2048 characters
 |1
 
-|The description contains no markup (HTML)
+|The description does not contain markup (HTML)
 |1
 
 |The description passes a basic spellcheck
 |1
 
-|The description _does not_ contain bulletin template
+|The description _does not_ contain a bulletin template
 |1
 |===
 

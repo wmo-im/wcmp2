@@ -4,9 +4,9 @@ Metadata records should contain information regarding the contact with the role 
 
 ==== WCMP properties
 
-* `$.properties.contacts[?(@.roles=="host")]`
-* `$.properties.contacts[?(@.roles=="host")].emails`
-* `$.properties.contacts[?(@.roles=="host")].contactInstructions`
+* `$.properties.contacts[?(@.role=="host")]`
+* `$.properties.contacts[?(@.role=="host")].emails`
+* `$.properties.contacts[?(@.role=="host")].contactInstructions`
 
 ==== Rationale for measurement
 
@@ -14,15 +14,14 @@ Information of the host allows the user to contact the host in case of anything 
 
 ==== Measurement
 
-The presence of host information and supporting elements.
-
-* host contact information (email, contact instructions)
+The presence of host information and supporting contact properties (email and contact instructions).
 
 ==== Guidance
 
 * Specify a host. Note that a host does not have to be the same as the main point of contact, principal investigator
-* Specify an email for the host
-* Specify contact instructions for the host
+* Include an email for the host
+* Include contact instructions for the host
+* Use ISO https://www.iso.org/iso-3166-country-codes.html[3166-1 alpha-3] codes to specify the `addresses.country` property.
 
 ===== Examples
 
@@ -53,7 +52,7 @@ The presence of host information and supporting elements.
             "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
             "city": "SEOUL",
             "postalCode": "07062",
-            "country": "Republic of Korea"
+            "country": "KOR"
           }
         ],
         "contactInstructions": "email",
