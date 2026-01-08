@@ -1,0 +1,113 @@
+{
+  "id": "urn:wmo:md:wmo-wis2box-test:buoy-obs",
+  "conformsTo": [
+    "http://wis.wmo.int/spec/wcmp/2/conf/core"
+  ],
+  "type": "Feature",
+  "time": {
+    "interval": [
+      "2025-11-25",
+      ".."
+    ],
+    "resolution": "PT1H"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -180,
+          90
+        ],
+        [
+          180,
+          90
+        ],
+        [
+          180,
+          -90
+        ],
+        [
+          -180,
+          -90
+        ],
+        [
+          -180,
+          90
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "type": "dataset",
+    "identifier": "urn:wmo:md:wis2box-test:buoy-obs",
+    "title": "Drifting buoy observations (wis2box-test)",
+    "description": "Buoy observations example",
+    "keywords": [
+      "oceans",
+      "surface current",
+      "sea surface temperature",
+      "sea level pressure",
+      "lagrangian drifter",
+      "goos"
+    ],
+    "themes": [
+      {
+        "concepts": [
+          {
+            "id": "climate",
+            "title": "Climate"
+          },
+          {
+            "id": "ocean",
+            "title": "Ocean"
+          },
+          {
+            "id": "weather",
+            "title": "Weather"
+          }
+        ],
+        "scheme": "http://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
+      }
+    ],
+    "contacts": [
+      {
+        "organization": "WMO Secretariat",
+        "emails": [
+          {
+            "value": "wis2-support@wmo.int"
+          }
+        ],
+        "addresses": [
+          {
+            "country": "CHE"
+          }
+        ],
+        "links": [
+          {
+            "rel": "about",
+            "href": "https://wmo.int",
+            "type": "text/html"
+          }
+        ],
+        "roles": [
+          "host"
+        ]
+      }
+    ],
+    "created": "2025-11-25T08:44:40Z",
+    "updated": "2025-11-25T08:44:40Z",
+    "wmo:dataPolicy": "core",
+    "id": "urn:wmo:md:wis2box-test:buoy-obs"
+  },
+  "links": [
+    {
+      "href": "mqtt://everyone:everyone@remy.training.wis2dev.io:1883",
+      "type": "application/json",
+      "name": "origin/a/wis2/wis2box-test/data/core/ocean/surface-based-observations/drifting-buoys",
+      "rel": "items",
+      "channel": "origin/a/wis2/wis2box-test/data/core/ocean/surface-based-observations/drifting-buoys",
+      "title": "Notifications"
+    }
+  ]
+}
