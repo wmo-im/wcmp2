@@ -42,7 +42,7 @@
         "updated": "2024-03-13T12:00:00Z",
         "wmo:dataPolicy": "core",
         "type": "dataset",
-        "title": "Goes 16 Advanced Baseline Imager Level 2 Sea Surface Temperature",
+        "title": "GOES 16 advanced baseline imager level 2 sea surface temperature",
         "description": "Sea Surface Temperature for each cloud-free pixel over water. The Sea Surface Temperature algorithm employed on GOES 16 will use hybrid physical-regression retrieval in order to produce a more accurate product.",
         "keywords": [
             "Sea Surface Temperature",

@@ -38,7 +38,7 @@
         ]
     },
     "properties": {
-        "title": "CMIP5 (Annual) - Projected average change in Air Temperature for 2081-2100 (50th percentile)",
+        "title": "CMIP5 (annual) - projected average change in air temperature for 2081-2100 (50th percentile)",
         "description": "Seasonal and annual multi-model ensembles of projected change (also known as anomalies) in mean temperature (\u00b0C) based on an ensemble of twenty-nine Coupled Model Intercomparison Project Phase 5 (CMIP5) global climate models are available for 1901-2100. Projected change in mean temperature (\u00b0C) is with respect to the reference period of 1986-2005. The 5th, 25th, 50th, 75th and 95th percentiles of the ensembles of projected change in mean temperature change are available for the historical time period, 1901-2005, and for emission scenarios, RCP2.6, RCP4.5 and RCP8.5, for 2006-2100. Twenty-year average changes in mean temperature (\u00b0C) for four time periods (2021-2040; 2041-2060; 2061-2080; 2081-2100), with respect to the reference period of 1986-2005, for RCP2.6, RCP4.5 and RCP8.5 are also available in a range of formats. The median projected change across the ensemble of CMIP5 climate models is provided. Note: Projections among climate models can vary because of differences in their underlying representation of earth system processes. Thus, the use of a multi-model ensemble approach has been demonstrated in recent scientific literature to likely provide better projected climate change information.",
         "themes": [
             {
