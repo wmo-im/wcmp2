@@ -196,6 +196,7 @@ The `+title+` property is a human-readable name of the dataset.
 ----
 
 include::../requirements/core/REQ_title.adoc[]
+include::../recommendations/core/REC_title.adoc[]
 
 ==== 1.8 Properties / Description
 
@@ -268,12 +269,12 @@ A WCMP metadata record can have one or more themes.
         },
         {
           "id": "0-2-2",
-          "title": "u-component of Wind",
+          "title": "u-component of wind",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-2"
         },
         {
           "id": "0-2-3",
-          "title": "v-component of Wind",
+          "title": "v-component of wind",
           "url": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-3"
         }
       ],

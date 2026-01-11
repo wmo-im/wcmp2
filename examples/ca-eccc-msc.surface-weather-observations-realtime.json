@@ -38,7 +38,7 @@
         ]
     },
     "properties": {
-        "title": "Surface Weather Observations",
+        "title": "Surface weather observations",
         "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
         "themes": [
             {
