@@ -1,7 +1,7 @@
 FILE_BASENAME=wcmp2
 
 html:
-	asciidoctor --verbose --trace -o ${FILE_BASENAME}.html index.adoc
+	asciidoctor --verbose --trace -a stylesheet=css/wmo-asciidoc.css -o ${FILE_BASENAME}.html index.adoc
 
 pdf:
 	asciidoctor --verbose --trace -r asciidoctor-pdf --trace -b pdf -o ${FILE_BASENAME}.pdf index.adoc
