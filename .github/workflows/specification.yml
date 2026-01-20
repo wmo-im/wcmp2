@@ -4,9 +4,9 @@ on:
   push:
     branches:
     - main
-    paths:
-    - 'standard/**'
-    - 'kpi/**'
+#    paths:
+#    - 'standard/**'
+#    - 'kpi/**'
 
 env:
   SPEC_FILE_BASENAME: wcmp2-STABLE
@@ -35,11 +35,12 @@ jobs:
           && cd ..
       - name: build KPIs
         run: |
-          mkdir -p /tmp/wcmp2/standard/images \
+          mkdir -p /tmp/wcmp2/kpi/images \
           && cd kpi \
           && asciidoctor --trace -a stylesheet=css/wmo-asciidoc.css -o /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.html index.adoc \
           && asciidoctor --trace --backend docbook --out-file - index.adoc | pandoc --from docbook --to docx --output /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.docx \
           && asciidoctor --trace -r asciidoctor-pdf --trace -b pdf -o /tmp/wcmp2/kpi/${KPI_FILE_BASENAME}.pdf index.adoc \
+          && cp images/*.png /tmp/wcmp2/kpi/images \
           && cd ..
       - name: checkout gh-pages branch
         uses: actions/checkout@master
