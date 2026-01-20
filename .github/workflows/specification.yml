@@ -4,9 +4,9 @@ on:
   push:
     branches:
     - main
-    paths:
-    - 'standard/**'
-    - 'kpi/**'
+#    paths:
+#    - 'standard/**'
+#    - 'kpi/**'
 
 env:
   SPEC_FILE_BASENAME: wcmp2-STABLE
