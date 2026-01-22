@@ -4,4 +4,4 @@
 ^|*Permission {counter:per-id}* |*/per/core/version*
 ^|A |A WCMP record MAY provide a `+properties.version+` property to describe the version of a given dataset.
 |===
-//per6
+//per 7
