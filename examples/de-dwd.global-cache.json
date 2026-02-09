@@ -162,13 +162,6 @@
             "type": "text/html",
             "title": "Open Data Server DWD (Metadata Archive)",
             "href": "https://opendata.dwd.de/test/wis2/cache_metadata"
-        },
-        {
-            "rel": "items",
-            "channel": "cache/a/wis2",
-            "href": "mqtts://everyone:everyone@example.org:8883",
-            "type": "application/geo+json",
-            "title": "Data notifications"
         }
     ]
 }
