@@ -4,4 +4,4 @@
 ^|*Permission {counter:per-id}* |*/per/core/extent_temporal*
 ^|A |A WCMP record MAY provide multiple `+additionalExtents.temporal+` item properties to express additional temporal extents in other temporal reference systems.
 |===
-//per4
+//per 5

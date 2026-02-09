@@ -9,4 +9,4 @@
   Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data. WMO Unified Data Policy (Resolution 1 (Cg-Ext 2021)).
 ^|D|For core or recommended data not in the public domain, a copyright statement SHOULD be expressed as either a `+properties.rights+` statement or a link object with `+rel=copyright+`.
 |===
-//rec12
+//rec 12

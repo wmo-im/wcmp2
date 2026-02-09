@@ -4,6 +4,7 @@
 
 [cols="12,18,12,12,46",options="header"]
 |===
-|Date |Release |Editor | Primary clauses modified |Description
-|2021-11-06 | Template | Tom Kralidis |all | initial template
+|Date |Release |Proposed by | Primary clauses modified |Approved by
+|June 2024| 2.0.0 | ET-Metadata | Clause 7 | EC-78
+|February 2026 | 2.2.0 | ET-Metadata |Clause 7 (https://github.com/wmo-im/wcmp2/milestone/9?closed=1[See GitHub])| Fast-track 2025-2
 |===

@@ -1,5 +1,5 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema'
-$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
+$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schemas/wcmpRecordGeoJSON.yaml'
 title: WCMP discovery metadata record definition
 description: WCMP discovery metadata record definition
 
@@ -13,13 +13,13 @@ required:
   - links
 properties:
   id:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/id'
+    $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/id'
   conformsTo:
     type: array
     contains:
       const: http://wis.wmo.int/spec/wcmp/2/conf/core
   type:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/type'
+    $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/type'
   time:
     oneOf:
       - enum:
@@ -55,12 +55,13 @@ properties:
             type: string
             description:
               Minimum time period resolvable in the dataset, as an ISO 8601 duration
+            pattern: '^(-?)P(?=\\d|T\\d)(?:(\\d+)Y)?(?:(\\d+)M)?(?:(\\d+)([DW]))?(?:T(?:(\\d+)H)?(?:(\\d+)M)?(?:(\\d+(?:\\.\\d+)?)S)?)?$'
             example:
               - 'P1D'
   geometry:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
+    $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordGeoJSON.yaml#/properties/geometry'
   additionalExtents:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/core/standard/openapi/schemas/collections/extent.yaml'
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/refs/heads/master/core/standard/openapi/oas31/schemas/collections/extent.yaml'
   properties:
     type: object
     required:
@@ -71,24 +72,24 @@ properties:
       - created
     properties:
       type:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/type'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/type'
       title:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/title'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/title'
       description:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/description'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/description'
       keywords:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/keywords'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/keywords'
       themes:
         type: array
         minItems: 1
         items:
-          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/theme.yaml'
+          $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/theme.yaml'
       contacts:
         type: array
         minItems: 1
         items:
           allOf:
-            - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/contact.yaml'
+            - $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/contact.yaml'
               required:
                 - organization
               additionalProperties: false
@@ -96,11 +97,11 @@ properties:
         type: string
         description: The version or edition of a given dataset.
       externalIds:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/externalIds'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/externalIds'
       created:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/created'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/created'
       updated:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/updated'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/updated'
       wmo:dataPolicy:
         type: string
         description: The data policy definition as per the WMO Unified Data Policy Resolution (Res.1) [23].
@@ -108,10 +109,10 @@ properties:
           - core
           - recommended
       rights:
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/recordGeoJSON.yaml#/properties/properties/properties/rights'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/recordCommonProperties.yaml#/properties/rights'
       wmo:status:
         description: The operational status of a given dataset.
-        $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/theme.yaml#/properties/concepts/items'
+        $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/theme.yaml#/properties/concepts/items'
   links:
     type: array
     minItems: 1
@@ -120,4 +121,4 @@ properties:
   linkTemplates:
     type: array
     items:
-      $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-records/master/core/openapi/schemas/linkTemplate.yaml'
+      $ref: 'https://schemas.opengis.net/ogcapi/records/part1/1.0/openapi/schemas/linkTemplate.yaml'

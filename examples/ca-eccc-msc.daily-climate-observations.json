@@ -122,12 +122,6 @@
             "title": "Stations associated with this dataset"
         },
         {
-            "rel": "data",
-            "href": "https://dd.weather.gc.ca/climate/observations/daily/csv",
-            "type": "text/html",
-            "title": "Raw data download (CSV files)"
-        },
-        {
             "rel": "license",
             "href": "https://open.canada.ca/en/open-government-licence-canada",
             "type": "text/html",
@@ -151,6 +145,20 @@
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/climate",
             "type": "application/geo+json",
             "title": "Data notifications"
+        }
+    ],
+    "linkTemplates": [
+        {
+            "rel": "archives",
+            "type": "text/html",
+            "title": "Raw data download (CSV files)",
+            "uriTemplate": "https://dd.weather.gc.ca/{yyyymmdd}/WXO-DD/climate/observations/daily/csv",
+            "variables": {
+                "yyyymmdd": {
+                    "type": "string",
+                    "description": "date in yyyymmdd format"
+                }
+            }
         }
     ]
 }

@@ -34,8 +34,8 @@
     },
     "properties": {
         "type": "service",
-        "title": "WIS2 Broker - M\u00e9t\u00e9o-France",
-        "description": "TODO",
+        "title": "Météo-France (Toulouse), Global Broker Service",
+        "description": "Météo-France (Toulouse), Global Broker Service",
         "themes": [
             {
                 "concepts": [
@@ -130,22 +130,10 @@
     },
     "links": [
         {
-            "rel": "items",
+            "rel": "hub",
             "type": "application/geo+json",
-            "title": "WMO WIS2 Global Broker - M\u00e9t\u00e9o-France",
-            "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2",
-            "distribution": {
-                "maxMSGsize": 4096,
-                "unit": "bytes"
-            }
-        },
-        {
-            "rel": "related",
-            "type": "application/json",
-            "title": "WMO WIS Global Broker - China Meteorological Administration",
-            "href": "mqtts://everyone:everyone@example.org:8883",
-            "channel": "cache/a/wis2",
+            "title": "Météo-France (Toulouse), Global Broker Service",
+            "href": "wss://everyone:everyone@globalbroker.meteo.fr:443/mqtt",
             "distribution": {
                 "maxMSGsize": 4096,
                 "unit": "bytes"
