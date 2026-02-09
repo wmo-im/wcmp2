@@ -133,7 +133,7 @@
             "rel": "hub",
             "type": "application/geo+json",
             "title": "Météo-France (Toulouse), Global Broker Service",
-            "href": "mqtts://everyone:everyone@example.org:8883",
+            "href": "wss://everyone:everyone@globalbroker.meteo.fr:443/mqtt",
             "distribution": {
                 "maxMSGsize": 4096,
                 "unit": "bytes"
