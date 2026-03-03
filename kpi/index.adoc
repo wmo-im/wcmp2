@@ -1,8 +1,8 @@
 :title: WMO Core Metadata Profile 2, Key Performance Indicators
 :titletext: {title}
-:version: 2.1.0
-:date: {docdate}
-:copyright: Copyright © 2024-2025 World Meteorological Organization (WMO)
+:version: 2.2.0-draft
+:date: 2026-02-13
+:copyright: Copyright © 2024-2026 World Meteorological Organization (WMO)
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -22,6 +22,7 @@
 |[big]*World Meteorological Organization*
 |Date: {docdate}
 |Version: {version}
+|Document status: DRAFT
 |Document location: https://wmo-im.github.io/wcmp2/kpi/wcmp2-kpi-DRAFT.html
 |Task Team on WIS Metadata (TT-WISMD)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-officers/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/expert-team-metadata-0]
 |Expert Team on Metadata Standards (ET-Metadata)footnote:[https://community.wmo.int/governance/commission-membership/commission-observation-infrastructures-and-information-systems-infcom/commission-infrastructure-national-representatives/infcom-management-group/standing-committee-information-management-and-technology-sc-imt/et-metadata]
