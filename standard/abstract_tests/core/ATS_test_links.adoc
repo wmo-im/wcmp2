@@ -42,5 +42,10 @@ For a link object describing archived (NOT real-time) data made available via We
 For a link object with access control (defined by the `+security+` object), check that the `+security+` property contains a `+description+` property with instructions on how to obtain access.
 --
 
+[.component,class=step]
+--
+For a link object with a `+channel+` property defined starting with `+origin/a/wis2+` or `+cache/a/wis2+`, check that the fourth token of the `+channel+` property (split by `+/+`) is equal to the fourth token of the WCMP2 identfier (`id`) property (split by `+:+`).
+--
+
 =====
 ====
