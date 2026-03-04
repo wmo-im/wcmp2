@@ -27,6 +27,7 @@ The presence of a publisher role.
 * Include an email for the host
 * Include contact instructions for the host
 * Specify a contact with a publisher role
+* Use ISO https://www.iso.org/iso-3166-country-codes.html[3166-1 alpha-3] codes to specify the `addresses.country` property.
 
 ===== Examples
 
@@ -57,7 +58,7 @@ The presence of a publisher role.
             "deliveryPoint": "61 16-GIL YEOUIDAEBANG-RO DONGJAK-GU SEOUL",
             "city": "SEOUL",
             "postalCode": "07062",
-            "country": "Republic of Korea"
+            "country": "KOR"
           }
         ],
         "contactInstructions": "email",
