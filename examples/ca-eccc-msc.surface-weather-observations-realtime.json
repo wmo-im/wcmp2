@@ -38,7 +38,7 @@
         ]
     },
     "properties": {
-        "title": "Surface Weather Observations",
+        "title": "Surface weather observations",
         "description": "Surface Observations measured at the automatic and manual stations of the Environment and Climate Change Canada and partners networks, either for a single station, or for the stations of specific provinces and territories (last 30 days)",
         "themes": [
             {
@@ -103,7 +103,7 @@
                         "city": "Fredericton",
                         "administrativeArea": "NB",
                         "postalCode": "E3B 6Z4",
-                        "country": "Canada"
+                        "country": "CAN"
                     }
                 ],
                 "links": [
@@ -142,8 +142,8 @@
             "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
             "channel": "origin/a/wis2/ca-eccc-msc/data/core/weather/surface-based-observations/synop",
             "type": "application/geo+json",
-            "title": "Data notifications",
-            "filters": {
+           "title": "Data notifications",
+           "filters": {
                 "wigos_station_identifier": {
                     "type": "string",
                     "title": "WIGOS station identifier"
@@ -175,7 +175,7 @@
                     "type": "string",
                     "description": "date in yyyymmdd format"
                 }
-            }
+            }        
         }
     ]
 }
