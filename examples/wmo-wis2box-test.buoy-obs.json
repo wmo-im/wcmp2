@@ -1,5 +1,5 @@
 {
-  "id": "urn:wmo:md:wmo-wis2box-test:buoy-obs",
+  "id": "urn:wmo:md:wis2box-test:buoy-obs",
   "conformsTo": [
     "http://wis.wmo.int/spec/wcmp/2/conf/core"
   ],
