@@ -36,7 +36,7 @@
         "type": "service",
         "title": "Météo-France (Toulouse), Global Broker Service",
         "description": "Météo-France (Toulouse), Global Broker Service",
-                "themes": [
+        "themes": [
             {
                 "concepts": [
                     {
