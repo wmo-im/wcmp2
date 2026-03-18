@@ -38,7 +38,7 @@
         ]
     },
     "properties": {
-        "title": "Surface Weather Observations",
+        "title": "Surface weather observations",
         "description": "Surface Observations measured at the automatic and manual stations of Deutscher Wetterdienst, the German Weather Service",
         "themes": [
             {
@@ -84,7 +84,7 @@
                         ],
                         "city": "Offenbach",
                         "postalCode": "63067",
-                        "country": "Germany"
+                        "country": "DEU"
                     }
                 ],
                 "links": [
