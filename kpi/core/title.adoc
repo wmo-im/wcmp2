@@ -11,11 +11,11 @@ In the context of WIS2 Global Discovery Catalogues, the product title and descri
 
 ==== Measurement
 
-The length is not too short or too long, contains less than three acronyms and is represented in sentence case. Spelling and grammar are correct.
+The length is not too short or too long, contains fewer than three acronyms and is represented in sentence case. Spelling and grammar are correct.
 
 ==== Guidance
 
-The title should be as specific as possible. For example, if the product only contains one parameter, this can be stated in the title; however, if the product contains numerous parameters, then a more general term should be used in the title, and the parameters stated elsewhere in the metadata record (description, themes, keywords, etc.).
+The title should be as specific as possible. For example, if the product contains only one parameter, this can be stated in the title; however, if the product contains numerous parameters, a more general term should be used in the title, and the parameters should be stated elsewhere in the metadata record (description, themes, keywords, etc.).
 
 ==== Rules
 
@@ -29,7 +29,7 @@ The title should be as specific as possible. For example, if the product only co
 |The title has 3 words or more
 |1
 
-|The title has 150 characters or less
+|The title has 150 characters or fewer
 |1
 
 |The title has only printable characters (numbers and letters) and round brackets
@@ -38,10 +38,10 @@ The title should be as specific as possible. For example, if the product only co
 |The words in title are represented in "Sentence case"
 |1
 
-|The title contains less than 3 acronyms (words with all upper case)
+|The title contains fewer than 3 acronyms (words with all upper case)
 |1
 
-a|The title _does not_ contain bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
+a|The title _does not_ contain a bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)
 |1
 
 |The title passes a basic spellcheck

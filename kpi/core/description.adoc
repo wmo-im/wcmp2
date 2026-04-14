@@ -6,13 +6,13 @@
 
 ==== Rationale for measurement
 
-The description facilitates ease of understanding and discovery and so is a key element of metadata information displayed as part of search results. Extensive and meaningful descriptive information allows for users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.
+The description facilitates understanding and discovery and is a key element of metadata information displayed in search results. Extensive and meaningful descriptive information enables users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.
 
 In the context of WIS2 Global Discovery Catalogues, the product title and description are the two most relevant elements in the WCMP metadata record.
 
 ==== Measurement
 
-The description shall not be too short or too long and not contain HTML markup. Spelling and grammar are correct. Bulletin templates should not be used to populate the description.
+The description should neither be too short nor too long and should not contain HTML markup. Spelling and grammar are correct. Bulletin templates should not be used to populate the description.
 
 ==== Guidance
 
@@ -23,7 +23,7 @@ The description should provide a clear and concise statement that enables the re
 Aim to be understood by non-experts::
 * Avoid adding a scientific description
 Describe the contents of the resource and the key aspects or attributes that are represented::
-* Limit information in the description to the specific resource that is being described, i.e. do not include general background information
+* Limit information in the description to the specific resource that is being described, for example, do not include general background information
 * Explain briefly what is unique about this resource and, if appropriate, how it differs from similar resources
 * State any other limiting information, such as time period of data validity or geographic coverage
 Spell out uncommon acronyms only once::
@@ -47,7 +47,7 @@ Add purpose of data resource where relevant (e.g. for survey data)::
 ```json
 "properties": {
     ...
-    "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature, precipitation. The second are hourly stations that typically produce more weather elements e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
+    "description": "Daily climate observations are derived from two sources of data. The first are Daily Climate Stations producing one or two observations per day of temperature and precipitation. The second are hourly stations that typically produce more weather elements, e.g. wind or snow on ground. Only a subset of the total stations is shown due to size limitations. The criteria for station selection are listed as below. The priorities for inclusion are as follows: (1) Station is currently operational, (2) Stations with long periods of record, (3) Stations that are co-located with the categories above and supplement the period of record.",
     ...
 }
 ```

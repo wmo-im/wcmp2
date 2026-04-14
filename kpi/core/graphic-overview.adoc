@@ -6,16 +6,16 @@
 
 ==== Rationale for measurement
 
-A graphic overview of the product provides the user with a high level preview which can assist with the initial assessment or evaluation as part of search results presentation.
+A graphic overview of the product provides the user with a high-level preview, which can assist with the initial assessment or evaluation as part of search results presentation.
 
 
 ==== Measurement
 
-The presence of a `preview` link is checked that it contains a URL to a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types]
+The presence of a `preview` link is checked to ensure that it contains a URL to a common web image file type.footnote:[https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types]
 
 ==== Guidance
 
-In addition to the presence of the graphic overview image it would also be valuable to provide consistent image dimensions (e.g. 800x800 pixels) such that all images are normalized and scaling/alignment of overivew images can be applied consistently by web applications rendering search results.
+In addition to the presence of the graphic overview image it would also be valuable to provide consistent image dimensions (e.g. 800x800 pixels) so all images are normalized and scaling/alignment of overview images can be applied consistently by web applications rendering search results.
 
 Examples of catalogues displaying graphic overviews:
 
