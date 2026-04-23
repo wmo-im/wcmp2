@@ -4,10 +4,10 @@ Metadata records should contain information regarding the contact with the role 
 
 ==== WCMP properties
 
-* `$.properties.contacts[?(@.roles=="host")]`
-* `$.properties.contacts[?(@.roles=="host")].emails`
-* `$.properties.contacts[?(@.roles=="host")].contactInstructions`
-* `$.properties.contacts[?(@.roles=="publisher")]`
+* `properties.contacts[?(@.roles=="host")]`
+* `properties.contacts[?(@.roles=="host")].emails`
+* `properties.contacts[?(@.roles=="host")].contactInstructions`
+* `properties.contacts[?(@.roles=="publisher")]`
 
 ==== Rationale for measurement
 
