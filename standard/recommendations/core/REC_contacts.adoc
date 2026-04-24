@@ -3,6 +3,6 @@
 |===
 ^|*Recommendation {counter:rec-id}* |*/rec/core/contacts*
 ^|A|The contact role `+publisher+` SHOULD be used when specifying a dataset contact for citation or attribution.
-
+^|B |For addresses defined in the `+addresses+` array property, the `+country+` property SHOULD be included using a value from the ISO 3166-1 alpha-3 controlled vocabulary.
 |===
-//rec 8
+//rectbd
