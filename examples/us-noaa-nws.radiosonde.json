@@ -32,7 +32,7 @@
                 ],
                 [
                     -169.9,
-                    -72.8
+                    72.8
                 ]
             ]
         ]
@@ -200,7 +200,7 @@
                         "city": "College Park",
                         "state": "Maryland",
                         "postalCode": "20740",
-                        "country": "United States"
+                        "country": "USA"
                     }
                 ],
                 "links": [
@@ -234,9 +234,9 @@
             }
         },
         {
-            "rel"  : "items",
-            "href" : "mqtts://wis2node.nws.noaa.gov:8883",
-            "type" : "application/geo+json",
+            "rel": "items",
+            "href": "mqtts://wis2node.nws.noaa.gov:8883",
+            "type": "application/geo+json",
             "title": "WIS2 notification service",
             "channel": "cache/a/wis2/us-noaa-nws/data/core/weather/surface-based-observations/temp",
             "distribution": {
