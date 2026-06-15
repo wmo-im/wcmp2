@@ -7,4 +7,5 @@
 |Date |Release |Proposed by | Primary clauses modified |Approved by
 |June 2024| 2.0.0 | ET-Metadata | Clause 7 | EC-78
 |February 2026 | 2.2.0 | ET-Metadata |Clause 7 (https://github.com/wmo-im/wcmp2/milestone/9?closed=1[See GitHub])| Fast-track 2025-2
+|June 2026 | 2.3.0 | ET-Metadata |Clause 7 (https://github.com/wmo-im/wcmp2/milestone/8?closed=1[See GitHub])| Fast-track 2026-1
 |===
