@@ -15,11 +15,11 @@
         "coordinates": [
             [
                 [
-                    0,
+                    -180,
                     -90
                 ],
                 [
-                    0,
+                    -180,
                     90
                 ],
                 [
@@ -31,7 +31,7 @@
                     -90
                 ],
                 [
-                    0,
+                    -180,
                     -90
                 ]
             ]
@@ -289,7 +289,7 @@
                         "city": "College Park",
                         "state": "Maryland",
                         "postalCode": "20740",
-                        "country": "United States"
+                        "country": "USA"
                     }
                 ],
                 "links": [
@@ -321,6 +321,12 @@
                     }
                 ]
             }
+        },
+        {
+            "type": "text/html",
+            "rel": "describedby",
+            "title": "Provenance information for the GFS Model",
+            "href": "https://vlab.noaa.gov/web/gfs/documentation"
         }
     ]
 }
