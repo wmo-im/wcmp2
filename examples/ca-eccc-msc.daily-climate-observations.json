@@ -146,7 +146,7 @@
             "type": "application/geo+json",
             "title": "Data notifications"
         }
-           ],
+    ],
     "linkTemplates": [
         {
             "rel": "archives",

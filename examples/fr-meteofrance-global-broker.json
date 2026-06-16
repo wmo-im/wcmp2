@@ -34,8 +34,8 @@
     },
     "properties": {
         "type": "service",
-        "title": "Météo-France (Toulouse), Global Broker Service",
-        "description": "Météo-France (Toulouse), Global Broker Service",
+        "title": "M\u00e9t\u00e9o-France (Toulouse), Global Broker Service",
+        "description": "M\u00e9t\u00e9o-France (Toulouse), Global Broker Service",
         "themes": [
             {
                 "concepts": [
@@ -132,7 +132,7 @@
         {
             "rel": "hub",
             "type": "application/geo+json",
-            "title": "Météo-France (Toulouse), Global Broker Service",
+            "title": "M\u00e9t\u00e9o-France (Toulouse), Global Broker Service",
             "href": "wss://everyone:everyone@globalbroker.meteo.fr:443/mqtt",
             "distribution": {
                 "maxMSGsize": 4096,

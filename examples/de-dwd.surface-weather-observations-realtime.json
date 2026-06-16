@@ -59,7 +59,7 @@
                 ],
                 "scheme": "https://codes.wmo.int/wis/topic-hierarchy/earth-system-discipline"
             },
-	    {
+            {
                 "concepts": [
                     {
                         "id": "continual"
@@ -68,7 +68,7 @@
                 "scheme": "https://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_FrequencyCode"
             }
         ],
-               "contacts": [
+        "contacts": [
             {
                 "name": "Kai-Thorsten Wirt",
                 "organization": "Deutscher Wetterdienst",
@@ -109,7 +109,7 @@
         "created": "2023-11-01T22:23:43Z",
         "updated": "2023-12-01T18:49:27Z",
         "wmo:dataPolicy": "core",
-	"rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data."
+        "rights": "Users are granted free and unrestricted access to this data, without charge and with no conditions on use. Users are requested to attribute the producer of this data."
     },
     "links": [
         {
@@ -118,7 +118,7 @@
             "type": "application/json",
             "title": "Stations associated with this dataset"
         },
-	{
+        {
             "rel": "about",
             "href": "https://www.dwd.de/EN/ourservices/surface_weather_observations/surface_weather_observations.html",
             "type": "text/html",
@@ -130,7 +130,7 @@
             "type": "application/octet-stream",
             "title": "Raw data download (BUFR)"
         },
-	{
+        {
             "rel": "items",
             "channel": "origin/a/wis2/de-dwd/data/core/weather/surface-based-observations/synop",
             "href": "mqtts://everyone:everyone@example.org:8883",
