@@ -4,6 +4,10 @@
 
 * `properties.description`
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_8_properties_description[Specification reference]
+
 ==== Rationale for measurement
 
 The description facilitates understanding and discovery and is a key element of metadata information displayed in search results. Extensive and meaningful descriptive information enables users to both understand and properly evaluate a metadata record and its respective resource in support of data access, visualization and exploitation.

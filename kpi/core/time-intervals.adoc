@@ -5,6 +5,10 @@
 * `time.interval`
 * `additionalElements.temporal.interval`
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_11_geospatial_and_temporal_extents[Specification reference]
+
 ==== Rationale for measurement
 
 Temporal information is a significant characteristic of weather, climate, and water data and is critical for users to know which time periods are covered by products and how often new products are received.

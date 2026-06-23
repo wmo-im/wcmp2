@@ -4,6 +4,10 @@
 
 * `$.links[?(@.rel=="preview")]`
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[Specification reference]
+
 ==== Rationale for measurement
 
 A graphic overview of the product provides the user with a high-level preview, which can assist with the initial assessment or evaluation as part of search results presentation.

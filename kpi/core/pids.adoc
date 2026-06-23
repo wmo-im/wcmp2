@@ -4,6 +4,10 @@
 
 * `properties.externalIds`
 
+==== WCMP properties
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_14_properties_persistent_identifiers[Specification reference]
+
 ==== Rationale for measurement
 
 Persistent identifiers allow data to be accessible and citable. They make research data easier to access, reuse and verify, thereby making it easier to build on previous work, conduct new research and avoid duplicating already existing work.

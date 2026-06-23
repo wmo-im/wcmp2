@@ -9,6 +9,12 @@ All properties with linked information (URLs).
 * `properties.themes[*].scheme`
 * `properties.contacts[*].links[*].href`
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[Specification reference]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_10_properties_themes[Specification reference]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Specification reference]
+
 ==== Rationale for measurement
 
 Broken links damage the user experience and give users the impression that a website is not maintained (88% of online consumers are less likely to return to a site after a bad experience). In addition, numerous broken links can affect the reputation and rank of your website when indexed by mass market search engines.
