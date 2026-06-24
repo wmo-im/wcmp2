@@ -1,11 +1,12 @@
 === Good quality title
-==== WCMP Properties
-
-* `properties.title`
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[Specification reference]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[Properties / Title]
+
+==== WCMP Properties
+
+* `properties.title`
 
 ==== Rationale for measurement
 

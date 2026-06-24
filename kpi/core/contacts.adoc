@@ -2,16 +2,16 @@
 
 Metadata records should contain information regarding the contact with the role `host` and how to reach them via email, as well as the role `publisher` for citation purposes.
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Properties / Contacts]
+
 ==== WCMP properties
 
 * `properties.contacts[?(@.roles=="host")]`
 * `properties.contacts[?(@.roles=="host")].emails`
 * `properties.contacts[?(@.roles=="host")].contactInstructions`
 * `properties.contacts[?(@.roles=="publisher")]`
-
-==== WCMP reference
-
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Specification reference]
 
 ==== Rationale for measurement
 

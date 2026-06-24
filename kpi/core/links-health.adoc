@@ -1,5 +1,11 @@
 === Links health
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[Links and distribution information]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_10_properties_themes[Properties / Themes]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Properties / Contacts]
+
 ==== WCMP properties
 
 All properties with linked information (URLs).
@@ -8,12 +14,6 @@ All properties with linked information (URLs).
 * `properties.themes[*].concepts[*].url`
 * `properties.themes[*].scheme`
 * `properties.contacts[*].links[*].href`
-
-==== WCMP reference
-
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[Specification reference]
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_10_properties_themes[Specification reference]
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Specification reference]
 
 ==== Rationale for measurement
 
