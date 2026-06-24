@@ -1,5 +1,9 @@
 === Persistent identifiers
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_14_properties_persistent_identifiers[Properties / Persistent identifiers]
+
 ==== WCMP properties
 
 * `properties.externalIds`

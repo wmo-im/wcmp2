@@ -1,5 +1,9 @@
 === Time intervals
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_11_geospatial_and_temporal_extents[Geospatial and temporal extents]
+
 ==== WCMP properties
 
 * `time.interval`

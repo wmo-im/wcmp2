@@ -1,4 +1,9 @@
 === Good quality title
+
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[Properties / Title]
+
 ==== WCMP Properties
 
 * `properties.title`
@@ -23,9 +28,6 @@ The title should be as specific as possible. For example, if the product contain
 |===
 |Rule |Score
 
-|The title is present
-|1
-
 |The title has 3 words or more
 |1
 
@@ -48,5 +50,5 @@ a|The title _does not_ contain a bulletin header (regular expression: `[A-Z]{4}\
 |1
 |===
 
-*Total possible score: 8 (100%)*
+*Total possible score: 7 (100%)*
 

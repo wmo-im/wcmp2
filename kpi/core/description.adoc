@@ -1,5 +1,9 @@
 === Good quality description
 
+==== WCMP reference
+
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_8_properties_description[Properties / Description]
+
 ==== WCMP properties
 
 * `properties.description`
