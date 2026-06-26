@@ -2,13 +2,13 @@
 
 ==== WCMP reference
 
-* `link-to-WCMP-property-A`
-* `link-to-WCMP-property-B`
+* WCMP_PROPERTY_LINK[WCMP_PROPERTY_TITLE]
+// use more as needed
 
 ==== WCMP properties
 
 * `JSONPath1`
-* `JSONPath2`
+// use more as needed
 
 ==== Rationale for measurement
 
