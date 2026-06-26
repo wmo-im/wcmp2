@@ -11,9 +11,9 @@
 All properties with linked information (URLs).
 
 * `links[*].href`
-* `properties.themes[*].concepts[*].url`
+* `+properties.themes[*].concepts[*].url+`
 * `properties.themes[*].scheme`
-* `properties.contacts[*].links[*].href`
+* `+properties.contacts[*].links[*].href+`
 
 ==== Rationale for measurement
 

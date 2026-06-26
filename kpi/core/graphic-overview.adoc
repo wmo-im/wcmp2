@@ -53,5 +53,5 @@ Examples of catalogues displaying graphic overviews:
 
 |===
 
-*Total possible score: (present link + resolves + image file type) / (total graphic overviews * 3) (100%)
+*Total possible score: (present link + resolves + image file type) / (total graphic overviews * 3) (100%)*
 

@@ -1,9 +1,14 @@
 === my KPI
 
+==== WCMP reference
+
+* WCMP_PROPERTY_LINK[WCMP_PROPERTY_TITLE]
+// use more as needed
+
 ==== WCMP properties
 
 * `JSONPath1`
-* `JSONPath2`
+// use more as needed
 
 ==== Rationale for measurement
 
