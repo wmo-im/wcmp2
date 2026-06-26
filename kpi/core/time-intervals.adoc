@@ -11,7 +11,7 @@
 
 ==== Rationale for measurement
 
-Temporal information is a significant characteristic of weather, climate, and water data and is critical for users to know which time periods are covered by products and how often new products are received.
+Temporal information is a significant characteristic of weather, climate, and water data and is critical for users to know which time periods are covered by datasets and how often new datasets are received.
 
 ==== Measurement
 
@@ -47,5 +47,5 @@ A temporal interval and its associated resolution should be expressed for data g
 
 |===
 
-*Total possible score: (begin less than end + only one interval open + resolution) / (total intervals * 3) (100%)
+*Total possible score: (begin less than end + only one interval open + resolution) / (total intervals * 3) (100%)*
 
