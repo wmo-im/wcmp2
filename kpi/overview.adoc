@@ -8,7 +8,7 @@ The core driver of WCMP KPIs is continuous improvement and usability of discover
 
 === Scope
 
-This document is bound to the WCMP 2 specificationfootnote:[https://library.wmo.int/idurl/4/68731] and codelistsfootnote:[https://codes.wmo.int/wis]. Allother metadata specifications or representations are not in scope.
+This document is bound to the WCMP 2 specificationfootnote:[https://library.wmo.int/idurl/4/68731] and codelistsfootnote:[https://codes.wmo.int/wis]. All other metadata specifications or representations are not in scope.
 
 === Audience
 
