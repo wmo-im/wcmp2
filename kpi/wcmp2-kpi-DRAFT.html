@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-06-24</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-06-26</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.3.0-draft</p></td>
@@ -162,21 +162,16 @@ body {
 <div class="sect2">
 <h3 id="_purpose"><a class="anchor" href="#_purpose"></a>1.1. Purpose</h3>
 <div class="paragraph">
-<p>This document is intended to define Key Performance Indicators (KPIs) in
-support of the WMO Core Metadata Profile (WCMP). KPIs provide measurable
-and valuable quality assessment rules beyond the rulesets put
-forth by WCMP.</p>
+<p>This document is intended to define Key Performance Indicators (KPIs) in support of the WMO Core Metadata Profile (WCMP). KPIs provide measurable and valuable quality assessment rules beyond the rulesets put forth by WCMP.</p>
 </div>
 <div class="paragraph">
-<p>The core driver of WCMP KPIs is continuous improvement and usability of
-discovery metadata as part of the WMO Information System (WIS).<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
+<p>The core driver of WCMP KPIs is continuous improvement and usability of discovery metadata as part of the WMO Information System (WIS).<sup class="footnote">[<a id="_footnoteref_5" class="footnote" href="#_footnotedef_5" title="View footnote.">5</a>]</sup></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_scope"><a class="anchor" href="#_scope"></a>1.2. Scope</h3>
 <div class="paragraph">
-<p>This document is bound to the WCMP 2 specification and codelists. All
-other metadata specifications or representations are not in scope.</p>
+<p>This document is bound to the WCMP 2 specification<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup> and codelists<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup>. All other metadata specifications or representations are not in scope.</p>
 </div>
 </div>
 <div class="sect2">
@@ -210,8 +205,7 @@ other metadata specifications or representations are not in scope.</p>
 <div class="sect2">
 <h3 id="_how_to_use"><a class="anchor" href="#_how_to_use"></a>1.4. How to use</h3>
 <div class="paragraph">
-<p>The KPIs in this document are designed to help metadata providers curate discovery metadata and for GDCs to measure the quality
-of metadata from data providers.</p>
+<p>The KPIs in this document are designed to help metadata providers curate discovery metadata and for GDCs to measure the quality of metadata from data providers.</p>
 </div>
 <div class="paragraph">
 <p>To improve quality:</p>
@@ -231,16 +225,13 @@ and provide subsequent feedback to providers</p>
 <div class="sect2">
 <h3 id="_scoring"><a class="anchor" href="#_scoring"></a>1.5. Scoring</h3>
 <div class="paragraph">
-<p>Each KPI assesses a number of criteria associated with metadata quality,
-resulting in a raw score, as well as a percentage. This approach supports
-weighted rubric scoring.</p>
+<p>Each KPI assesses a number of criteria associated with metadata quality, resulting in a raw score, as well as a percentage. This approach supports weighted rubric scoring.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_reference_implementation"><a class="anchor" href="#_reference_implementation"></a>1.6. Reference implementation</h3>
 <div class="paragraph">
-<p>The TT-WISMD maintains pywcmp<sup class="footnote">[<a id="_footnoteref_6" class="footnote" href="#_footnotedef_6" title="View footnote.">6</a>]</sup>, as the
-reference WCMP validation utility, which includes:</p>
+<p>The TT-WISMD maintains pywcmp<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup>, as the reference WCMP validation utility, which includes:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -253,13 +244,10 @@ reference WCMP validation utility, which includes:</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>Documentation on installation, configuration and usage can be found on the
-pywcmp website.</p>
+<p>Documentation on installation, configuration and usage can be found on the pywcmp website.</p>
 </div>
 <div class="paragraph">
-<p>pywcmp is provided to the community as a resource with continuous
-improvement. Contributions are welcome and can be facilitated by the
-WMO.</p>
+<p>pywcmp is provided to the community as a resource with continuous improvement. Contributions are welcome and can be facilitated by the WMO.</p>
 </div>
 </div>
 <div class="sect2">
@@ -515,7 +503,7 @@ WMO.</p>
 <p>The title is the first element of metadata information displayed and helps with initial identification. Meaningful and relevant information makes it easier for users to understand the resource.</p>
 </div>
 <div class="paragraph">
-<p>In the context of WIS2 Global Discovery Catalogues, the product title and description are the two most relevant elements in the WCMP metadata record. These two elements are presented to the users in search results and on the product description page. They should highlight the product&#8217;s key characteristics to assist users with relevant search results.</p>
+<p>In the context of WIS2 Global Discovery Catalogues, the dataset title and description are the two most relevant elements in the WCMP metadata record. These two elements are presented to the users in search results and on the dataset description page. They should highlight the resource&#8217;s key characteristics to assist users with relevant search results.</p>
 </div>
 </div>
 <div class="sect3">
@@ -527,7 +515,7 @@ WMO.</p>
 <div class="sect3">
 <h4 id="_guidance"><a class="anchor" href="#_guidance"></a>2.2.5. Guidance</h4>
 <div class="paragraph">
-<p>The title should be as specific as possible. For example, if the product contains only one parameter, this can be stated in the title; however, if the product contains numerous parameters, a more general term should be used in the title, and the parameters should be stated elsewhere in the metadata record (description, themes, keywords, etc.).</p>
+<p>The title should be as specific as possible. For example, if the resource contains only one parameter, this can be stated in the title; however, if the resource contains numerous parameters, a more general term should be used in the title, and the parameters should be stated elsewhere in the metadata record (description, themes, keywords, etc.).</p>
 </div>
 </div>
 <div class="sect3">
@@ -708,10 +696,10 @@ WMO.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Dictionary by Merriam-Webster: America&#8217;s most-trusted online dictionary<sup class="footnote">[<a id="_footnoteref_7" class="footnote" href="#_footnotedef_7" title="View footnote.">7</a>]</sup></p>
+<p>Dictionary by Merriam-Webster: America&#8217;s most-trusted online dictionary<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup></p>
 </li>
 <li>
-<p>Cambridge Dictionary | English Dictionary, Translations &amp; Thesaurus<sup class="footnote">[<a id="_footnoteref_8" class="footnote" href="#_footnotedef_8" title="View footnote.">8</a>]</sup></p>
+<p>Cambridge Dictionary | English Dictionary, Translations &amp; Thesaurus<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p>
 </li>
 </ul>
 </div>
@@ -795,7 +783,7 @@ WMO.</p>
 <div class="sect3">
 <h4 id="_rationale_for_measurement_3"><a class="anchor" href="#_rationale_for_measurement_3"></a>2.4.3. Rationale for measurement</h4>
 <div class="paragraph">
-<p>Temporal information is a significant characteristic of weather, climate, and water data and is critical for users to know which time periods are covered by products and how often new products are received.</p>
+<p>Temporal information is a significant characteristic of weather, climate, and water data and is critical for users to know which time periods are covered by datasets and how often new datasets are received.</p>
 </div>
 </div>
 <div class="sect3">
@@ -851,7 +839,7 @@ WMO.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>*Total possible score: (begin less than end + only one interval open + resolution) / (total intervals * 3) (100%)</p>
+<p><strong>Total possible score: (begin less than end + only one interval open + resolution) / (total intervals * 3) (100%)</strong></p>
 </div>
 </div>
 </div>
@@ -886,7 +874,7 @@ WMO.</p>
 <div class="sect3">
 <h4 id="_measurement_4"><a class="anchor" href="#_measurement_4"></a>2.5.4. Measurement</h4>
 <div class="paragraph">
-<p>The presence of a <code>preview</code> link is checked to ensure that it contains a URL to a common web image file type.<sup class="footnote">[<a id="_footnoteref_9" class="footnote" href="#_footnotedef_9" title="View footnote.">9</a>]</sup></p>
+<p>The presence of a <code>preview</code> link is checked to ensure that it contains a URL to a common web image file type.<sup class="footnote">[<a id="_footnoteref_11" class="footnote" href="#_footnotedef_11" title="View footnote.">11</a>]</sup></p>
 </div>
 </div>
 <div class="sect3">
@@ -951,7 +939,7 @@ WMO.</p>
 </tbody>
 </table>
 <div class="paragraph">
-<p>*Total possible score: (present link + resolves + image file type) / (total graphic overviews * 3) (100%)</p>
+<p><strong>Total possible score: (present link + resolves + image file type) / (total graphic overviews * 3) (100%)</strong></p>
 </div>
 </div>
 </div>
@@ -984,13 +972,13 @@ WMO.</p>
 <p><code>links[*].href</code></p>
 </li>
 <li>
-<p><code>properties.themes[<strong>].concepts[</strong>].url</code></p>
+<p><code>properties.themes[*].concepts[*].url</code></p>
 </li>
 <li>
 <p><code>properties.themes[*].scheme</code></p>
 </li>
 <li>
-<p><code>properties.contacts[<strong>].links[</strong>].href</code></p>
+<p><code>properties.contacts[*].links[*].href</code></p>
 </li>
 </ul>
 </div>
@@ -1007,7 +995,7 @@ WMO.</p>
 <div class="sect3">
 <h4 id="_measurement_5"><a class="anchor" href="#_measurement_5"></a>2.6.4. Measurement</h4>
 <div class="paragraph">
-<p>The number of broken links in each individual metadata record.  Broken links include links which, when accessed, result in a 4xx or 5xx HTTP error.<sup class="footnote">[<a id="_footnoteref_10" class="footnote" href="#_footnotedef_10" title="View footnote.">10</a>]</sup></p>
+<p>The number of broken links in each individual metadata record.  Broken links include links which, when accessed, result in a 4xx or 5xx HTTP error.<sup class="footnote">[<a id="_footnoteref_12" class="footnote" href="#_footnotedef_12" title="View footnote.">12</a>]</sup></p>
 </div>
 <div class="paragraph">
 <p>Also being measured is the use of HTTPS (with a valid SSL certificate) as the link protocol throughout WIS Metadata.</p>
@@ -1403,24 +1391,30 @@ WMO.</p>
 <a href="#_footnoteref_5">5</a>. <a href="https://community.wmo.int/activity-areas/wmo-information-system-wis" class="bare">https://community.wmo.int/activity-areas/wmo-information-system-wis</a>
 </div>
 <div class="footnote" id="_footnotedef_6">
-<a href="#_footnoteref_6">6</a>. <a href="https://github.com/wmo-im/pywcmp" class="bare">https://github.com/wmo-im/pywcmp</a>
+<a href="#_footnoteref_6">6</a>. <a href="https://library.wmo.int/idurl/4/68731" class="bare">https://library.wmo.int/idurl/4/68731</a>
 </div>
 <div class="footnote" id="_footnotedef_7">
-<a href="#_footnoteref_7">7</a>. <a href="https://www.merriam-webster.com" class="bare">https://www.merriam-webster.com</a>
+<a href="#_footnoteref_7">7</a>. <a href="https://codes.wmo.int/wis" class="bare">https://codes.wmo.int/wis</a>
 </div>
 <div class="footnote" id="_footnotedef_8">
-<a href="#_footnoteref_8">8</a>. <a href="https://dictionary.cambridge.org" class="bare">https://dictionary.cambridge.org</a>
+<a href="#_footnoteref_8">8</a>. <a href="https://github.com/wmo-im/pywcmp" class="bare">https://github.com/wmo-im/pywcmp</a>
 </div>
 <div class="footnote" id="_footnotedef_9">
-<a href="#_footnoteref_9">9</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types" class="bare">https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types</a>
+<a href="#_footnoteref_9">9</a>. <a href="https://www.merriam-webster.com" class="bare">https://www.merriam-webster.com</a>
 </div>
 <div class="footnote" id="_footnotedef_10">
-<a href="#_footnoteref_10">10</a>. <a href="https://httpstatuses.com" class="bare">https://httpstatuses.com</a>
+<a href="#_footnoteref_10">10</a>. <a href="https://dictionary.cambridge.org" class="bare">https://dictionary.cambridge.org</a>
+</div>
+<div class="footnote" id="_footnotedef_11">
+<a href="#_footnoteref_11">11</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types" class="bare">https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types</a>
+</div>
+<div class="footnote" id="_footnotedef_12">
+<a href="#_footnoteref_12">12</a>. <a href="https://httpstatuses.com" class="bare">https://httpstatuses.com</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-06-24 10:19:19 UTC
+Last updated 2026-06-26 10:09:09 UTC
 </div>
 </div>
 </body>
