@@ -1,5 +1,10 @@
 === my KPI
 
+==== WCMP reference
+
+* `link-to-WCMP-property-A`
+* `link-to-WCMP-property-B`
+
 ==== WCMP properties
 
 * `JSONPath1`
