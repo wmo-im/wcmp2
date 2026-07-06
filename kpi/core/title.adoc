@@ -2,9 +2,9 @@
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[Properties / Title]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[1.7 Properties / Title]
 
-==== WCMP Properties
+==== WCMP properties
 
 * `properties.title`
 

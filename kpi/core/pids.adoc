@@ -2,7 +2,7 @@
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_14_properties_persistent_identifiers[Properties / Persistent identifiers]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_14_properties_persistent_identifiers[1.14 Properties / Persistent identifiers]
 
 ==== WCMP properties
 

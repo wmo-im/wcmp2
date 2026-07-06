@@ -2,7 +2,7 @@
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_11_geospatial_and_temporal_extents[Geospatial and temporal extents]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_11_geospatial_and_temporal_extents[1.11 Geospatial and temporal extents]
 
 ==== WCMP properties
 
@@ -36,7 +36,7 @@ A temporal interval and its associated resolution should be expressed for data g
 |===
 |Rule |Score
 
-|The begin is less than the end or open.
+|The begin date is before the end date, when there is an end date.
 |1
 
 |Only one of the interval extents may be open (begin or end but not both).

@@ -2,9 +2,9 @@
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[Links and distribution information]
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_10_properties_themes[Properties / Themes]
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Properties / Contacts]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[1.19 Links and distribution information]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_10_properties_themes[1.10 Properties / Themes]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[1.12 Properties / Contacts]
 
 ==== WCMP properties
 
@@ -25,7 +25,7 @@ HTTPS is increasingly becoming a requirement for numerous agencies as the sugges
 
 The number of broken links in each individual metadata record.  Broken links include links which, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com]
 
-Also being measured is the use of HTTPS (with a valid SSL certificate) as the link protocol throughout WIS Metadata.
+Also being measured is the use of HTTPS (with a valid SSL certificate) as the link protocol throughout WIS metadata.
 
 ==== Guidance
 

@@ -6,42 +6,35 @@ The table below provides an overview of all KPIs that may be used in the quality
 
 .Table. WCMP Key Performance Indicators
 |===
-|Name|Properties|Description
+|Name|Properties
 
-|Good quality title
+|<<_good_quality_title>>
 a|* ``properties.title``
-|See <<_good_quality_title>>
 
-|Good quality description
+|<<_good_quality_description>>
 a|* ``properties.description``
-|See <<_good_quality_description>>
 
-|Time intervals
+|<<_time_intervals>>
 a|* ``time.interval``
 * ``additionalElements.temporal.interval``
-|See <<_time_intervals>>
 
-|Graphic overview for metadata records
+|<<_graphic_overview>>
 a|* ``$.links[?(@.rel=="preview")]``
-|See <<_graphic_overview_for_metadata_records>>
 
-|Links health
+|<<_links_health>>
 a|* ``links[*].href``
 * ``properties.themes[].concepts[].url``
 * ``properties.themes[*].scheme``
 * ``properties.contacts[].links[].href``
-|See <<_links_health>>
 
-|Contacts
+|<<_contacts>>
 a|* ``properties.contacts[?(@.roles=="host")]``
 ``properties.contacts[?(@.roles=="host")].emails``
 ``properties.contacts[?(@.roles=="host")].contactInstructions``
 ``properties.contacts[?(@.roles=="publisher")]``
-|See <<_contacts>>
 
-|Persistent identifiers
+|<<_persistent_identifiers>>
 a|* ``properties.externalIds``
-|See <<_persistent_identifiers>>
 
 |===
 

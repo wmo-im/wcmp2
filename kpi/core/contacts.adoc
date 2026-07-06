@@ -4,7 +4,7 @@ Metadata records should contain information regarding the contact with the role 
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[Properties / Contacts]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_12_properties_contacts[1.12 Properties / Contacts]
 
 ==== WCMP properties
 
