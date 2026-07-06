@@ -18,7 +18,7 @@ The presence of a `preview` link is checked to ensure that it contains a URL to 
 
 ==== Guidance
 
-In addition to the presence of the graphic overview image it is also valuable to provide consistent image dimensions (e.g. 800x800 pixels) so all images are normalized, such that scaling and alignment of overview images can be applied consistently by web applications rendering search results.
+In addition to the presence of the graphic overview image it is also valuable to provide consistent image dimensions (e.g. 800x800 pixels) so that all images are normalized and scaling and alignment of overview images can be applied consistently by web applications rendering search results.
 
 Examples of catalogues displaying graphic overviews:
 

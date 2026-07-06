@@ -41,7 +41,7 @@ Add purpose of data resource where relevant (e.g. for survey data)::
 * Avoid citing external sources to this resource
 * Avoid copying text from a journal article verbatim because this can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced in the metadata record links.
 
-===== Spell checking recommendations
+===== Spell-checking recommendations
 
 * Dictionary by Merriam-Webster: America's most-trusted online dictionaryfootnote:[https://www.merriam-webster.com]
 * Cambridge Dictionary | English Dictionary, Translations & Thesaurusfootnote:[https://dictionary.cambridge.org]
