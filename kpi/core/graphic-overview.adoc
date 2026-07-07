@@ -1,8 +1,8 @@
-=== Graphic overview for metadata records
+=== Graphic overview
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[Links and distribution information]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_19_links_and_distribution_information[1.19 Links and distribution information]
 
 ==== WCMP properties
 
@@ -18,14 +18,14 @@ The presence of a `preview` link is checked to ensure that it contains a URL to 
 
 ==== Guidance
 
-In addition to the presence of the graphic overview image it would also be valuable to provide consistent image dimensions (e.g. 800x800 pixels) so all images are normalized and scaling/alignment of overview images can be applied consistently by web applications rendering search results.
+In addition to the presence of the graphic overview image it is also valuable to provide consistent image dimensions (e.g. 800x800 pixels) so that all images are normalized and scaling and alignment of overview images can be applied consistently by web applications rendering search results.
 
 Examples of catalogues displaying graphic overviews:
 
 * https://gisc.dwd.de[GISC DWD]
 * https://navigator.eumetsat.int/search?query=MSG%20RGB[EUMETSAT Product Navigator]
 
-===== Examples
+===== Example
 
 ```json
 {

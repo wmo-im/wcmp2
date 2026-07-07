@@ -2,9 +2,9 @@
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[Properties / Title]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_7_properties_title[1.7 Properties / Title]
 
-==== WCMP Properties
+==== WCMP properties
 
 * `properties.title`
 
@@ -40,7 +40,7 @@ The title should be as specific as possible. For example, if the resource contai
 |The words in title are represented in "Sentence case"
 |1
 
-|The title contains fewer than 3 acronyms (words with all upper case)
+|The title contains fewer than 3 acronyms (words with all uppercase letters)
 |1
 
 a|The title _does not_ contain a bulletin header (regular expression: `[A-Z]{4}\d{2}[\s_]*[A-Z]{4}`)

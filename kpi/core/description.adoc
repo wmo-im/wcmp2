@@ -2,7 +2,7 @@
 
 ==== WCMP reference
 
-* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_8_properties_description[Properties / Description]
+* https://wmo-im.github.io/wcmp2/standard/wcmp2-STABLE.html#_1_8_properties_description[1.8 Properties / Description]
 
 ==== WCMP properties
 
@@ -20,7 +20,7 @@ The description should neither be too short nor too long and should not contain 
 
 ==== Guidance
 
-The description should provide a clear and concise statement that enables the reader to understand the content of the dataset. For guidance when completing the description, consider the following:
+The description should provide a clear and concise statement that enables the reader to understand the content of the dataset. 
 
 ===== Relevant recommendations
 
@@ -33,7 +33,7 @@ Describe the contents of the resource and the key aspects or attributes that are
 Spell out uncommon acronyms only once::
 * Avoid jargon and unexplained abbreviations
 * Avoid spelling out commonly used acronyms which are already understood by the general public
-Write using present or past tenses::
+Write using present or past tense::
 * Avoid using future verb tense when possible
 Use simple paragraph(s) only::
 * Avoid including HTML and CSV tables or extra spaces to control display of text
@@ -41,7 +41,7 @@ Add purpose of data resource where relevant (e.g. for survey data)::
 * Avoid citing external sources to this resource
 * Avoid copying text from a journal article verbatim because this can lead to copyright violation concerns. Additionally, abstracts for journal articles are not intended to describe the provided resource and do not meet the metadata requirements. Related papers can be referenced in the metadata record links.
 
-===== Spell checking recommendations
+===== Spell-checking recommendations
 
 * Dictionary by Merriam-Webster: America's most-trusted online dictionaryfootnote:[https://www.merriam-webster.com]
 * Cambridge Dictionary | English Dictionary, Translations & Thesaurusfootnote:[https://dictionary.cambridge.org]
