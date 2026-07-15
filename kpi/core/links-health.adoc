@@ -23,7 +23,7 @@ HTTPS is increasingly becoming a requirement for numerous agencies as the sugges
 
 ==== Measurement
 
-The number of broken links in each individual metadata record.  Broken links include links that, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://httpstatuses.com]
+The number of broken links in each individual metadata record.  Broken links include links that, when accessed, result in a 4xx or 5xx HTTP error.footnote:[https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status]
 
 Also being measured is the use of HTTPS (with a valid SSL certificate) as the link protocol throughout WIS metadata.
 
@@ -31,7 +31,7 @@ Also being measured is the use of HTTPS (with a valid SSL certificate) as the li
 
 Ensure that all links resolve and are accessible via HTTPS.
 
-===== Examples
+==== Examples
 
 ```json
   "links": [

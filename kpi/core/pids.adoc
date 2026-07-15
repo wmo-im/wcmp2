@@ -21,7 +21,7 @@ Whether persistent identifier information is available, can be successfully iden
 * Provide a persistent identifier
 * Provide a 'Cite as' template as a link object with `rel="cite-as"`
 
-===== Examples 
+==== Examples
 
 ```json
 "properties": {

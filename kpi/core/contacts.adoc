@@ -33,7 +33,7 @@ The presence of a publisher role.
 * Specify a contact with a publisher role
 * Use ISO https://www.iso.org/iso-3166-country-codes.html[3166-1 alpha-3] codes to specify the `addresses.country` property.
 
-===== Examples
+==== Examples
 
 ```json
   "properties": {
