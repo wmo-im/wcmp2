@@ -21,7 +21,7 @@ The time interval is present and has a corresponding resolution.
 
 A temporal interval and its associated resolution should be expressed for data generated with a given frequency or cadence.  For example, ongoing hourly weather observations express a temporal interval with an "open-ended" end time (represented as `..`) and a `resolution` as an ISO 8601 Duration.
 
-===== Examples
+==== Examples
 
 ```json
 "time": {

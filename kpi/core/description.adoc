@@ -55,6 +55,7 @@ Add purpose of data resource where relevant (e.g. for survey data)::
     ...
 }
 ```
+
 ==== Rules
 
 .Good quality description implementation rules
