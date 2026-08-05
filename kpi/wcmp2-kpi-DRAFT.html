@@ -96,7 +96,7 @@ body {
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">World Meteorological Organization</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-07-07</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Date: 2026-08-05</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 2.3.0-draft</p></td>
@@ -510,7 +510,19 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_rules"><a class="anchor" href="#_rules"></a>2.2.6. Rules</h4>
+<h4 id="_examples"><a class="anchor" href="#_examples"></a>2.2.6. Examples</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">"properties": {
+    ...
+    "title": "Surface weather observations"
+    ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_rules"><a class="anchor" href="#_rules"></a>2.2.7. Rules</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 3. Good quality title rules</caption>
 <colgroup>
@@ -697,7 +709,7 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_examples"><a class="anchor" href="#_examples"></a>2.3.6. Examples</h4>
+<h4 id="_examples_2"><a class="anchor" href="#_examples_2"></a>2.3.6. Examples</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
@@ -788,8 +800,9 @@ and provide subsequent feedback to providers</p>
 <div class="paragraph">
 <p>A temporal interval and its associated resolution should be expressed for data generated with a given frequency or cadence.  For example, ongoing hourly weather observations express a temporal interval with an "open-ended" end time (represented as <code>..</code>) and a <code>resolution</code> as an ISO 8601 Duration.</p>
 </div>
-<div class="sect4">
-<h5 id="_examples_2"><a class="anchor" href="#_examples_2"></a>2.4.5.1. Examples</h5>
+</div>
+<div class="sect3">
+<h4 id="_examples_3"><a class="anchor" href="#_examples_3"></a>2.4.6. Examples</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"time": {
@@ -799,9 +812,8 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_rules_3"><a class="anchor" href="#_rules_3"></a>2.4.6. Rules</h4>
+<h4 id="_rules_3"><a class="anchor" href="#_rules_3"></a>2.4.7. Rules</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 5. Temporal information implementation rules</caption>
 <colgroup>
@@ -886,8 +898,9 @@ and provide subsequent feedback to providers</p>
 </li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="_example"><a class="anchor" href="#_example"></a>2.5.5.1. Example</h5>
+</div>
+<div class="sect3">
+<h4 id="_examples_4"><a class="anchor" href="#_examples_4"></a>2.5.6. Examples</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">{
@@ -899,9 +912,8 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_rules_4"><a class="anchor" href="#_rules_4"></a>2.5.6. Rules</h4>
+<h4 id="_rules_4"><a class="anchor" href="#_rules_4"></a>2.5.7. Rules</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 6. Graphic overview for metadata records implementation rules</caption>
 <colgroup>
@@ -997,8 +1009,9 @@ and provide subsequent feedback to providers</p>
 <div class="paragraph">
 <p>Ensure that all links resolve and are accessible via HTTPS.</p>
 </div>
-<div class="sect4">
-<h5 id="_examples_3"><a class="anchor" href="#_examples_3"></a>2.6.5.1. Examples</h5>
+</div>
+<div class="sect3">
+<h4 id="_examples_5"><a class="anchor" href="#_examples_5"></a>2.6.6. Examples</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">  "links": [
@@ -1042,9 +1055,8 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_rules_5"><a class="anchor" href="#_rules_5"></a>2.6.6. Rules</h4>
+<h4 id="_rules_5"><a class="anchor" href="#_rules_5"></a>2.6.7. Rules</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 7. Links health implementation rules</caption>
 <colgroup>
@@ -1146,8 +1158,9 @@ and provide subsequent feedback to providers</p>
 </li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="_examples_4"><a class="anchor" href="#_examples_4"></a>2.7.5.1. Examples</h5>
+</div>
+<div class="sect3">
+<h4 id="_examples_6"><a class="anchor" href="#_examples_6"></a>2.7.6. Examples</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">  "properties": {
@@ -1196,9 +1209,8 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_rules_6"><a class="anchor" href="#_rules_6"></a>2.7.6. Rules</h4>
+<h4 id="_rules_6"><a class="anchor" href="#_rules_6"></a>2.7.7. Rules</h4>
 <div class="paragraph">
 <p>By detecting the presence of the contact with the role <code>host</code>. See WCMP2, clause 7.</p>
 </div>
@@ -1292,8 +1304,9 @@ and provide subsequent feedback to providers</p>
 </li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="_examples_5"><a class="anchor" href="#_examples_5"></a>2.8.5.1. Examples</h5>
+</div>
+<div class="sect3">
+<h4 id="_examples_7"><a class="anchor" href="#_examples_7"></a>2.8.6. Examples</h4>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-json" data-lang="json">"properties": {
@@ -1326,9 +1339,8 @@ and provide subsequent feedback to providers</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="_rules_7"><a class="anchor" href="#_rules_7"></a>2.8.6. Rules</h4>
+<h4 id="_rules_7"><a class="anchor" href="#_rules_7"></a>2.8.7. Rules</h4>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 9. Persistent identifiers implementation rules</caption>
 <colgroup>
@@ -1400,12 +1412,12 @@ and provide subsequent feedback to providers</p>
 <a href="#_footnoteref_11">11</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types" class="bare">https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types#Common_image_file_types</a>
 </div>
 <div class="footnote" id="_footnotedef_12">
-<a href="#_footnoteref_12">12</a>. <a href="https://httpstatuses.com" class="bare">https://httpstatuses.com</a>
+<a href="#_footnoteref_12">12</a>. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status" class="bare">https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status</a>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2026-07-07 13:53:17 UTC
+Last updated 2026-08-05 12:25:45 UTC
 </div>
 </div>
 </body>
