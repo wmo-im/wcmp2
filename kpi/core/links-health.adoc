@@ -68,7 +68,7 @@ Ensure that all links resolve and are accessible via HTTPS.
       "type": "application/geo+json",
       "title": "Météo-France, Global Broker Service",
       "href": "mqtts://everyone:everyone@globalbroker.meteo.fr:8883",
-      "channel": "cache/a/wis2/deu/dwd/data/core/weather/analysis-prediction/forecast/model/#"
+      "channel": "cache/a/wis2/de-dwd/data/core/weather/prediction/forecast/#"
     }
   ]
 ```
